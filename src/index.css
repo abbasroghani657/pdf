@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap');
+
+:root {
+  --brand: #378ADD;
+  --brand-dark: #2563eb;
+  --brand-light: #eff6ff;
+  --brand-glow: rgba(55,138,221,0.15);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #378ADD 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium card hover */
+.tool-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -12px rgba(55,138,221,0.15), 0 0 0 1px rgba(55,138,221,0.2);
+}
+
+/* Stats counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.stat-item { animation: countUp 0.6s ease-out forwards; }
+
+/* Shimmer loading */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Processing progress bar */
+@keyframes progress-stripe {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+.progress-bar-animated {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.15) 0,
+    rgba(255,255,255,0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  background-size: 40px 100%;
+  animation: progress-stripe 0.75s linear infinite;
+}
+
+/* Drag-over glow */
+.drag-over {
+  border-color: #378ADD !important;
+  background-color: rgba(55,138,221,0.06) !important;
+  box-shadow: 0 0 0 4px rgba(55,138,221,0.12);
+}
+
+/* Mobile menu slide */
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+.mobile-drawer-enter { animation: slideInRight 0.3s cubic-bezier(0.4,0,0.2,1) forwards; }
+
+/* Fade-in modal */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.modal-enter { animation: fadeInScale 0.25s cubic-bezier(0.4,0,0.2,1) forwards; }
+
+/* Success bounce */
+@keyframes successBounce {
+  0%   { transform: scale(0.5); opacity: 0; }
+  60%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.success-icon { animation: successBounce 0.5s cubic-bezier(0.4,0,0.2,1) forwards; }
+
+/* Pulse dot */
+@keyframes pulseDot {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%     { transform: scale(1.4); opacity: 0.7; }
+}
+.pulse-dot { animation: pulseDot 1.2s ease-in-out infinite; }
+
+/* Testimonial scroll */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 30s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* Float */
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%     { transform: translateY(-8px); }
+}
+.float-anim { animation: float 3s ease-in-out infinite; }
+
+/* Trust badge pop in */
+@keyframes popIn {
+  from { opacity:0; transform: scale(0.8) translateY(8px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+.pop-in { animation: popIn 0.4s cubic-bezier(0.4,0,0.2,1) forwards; }
