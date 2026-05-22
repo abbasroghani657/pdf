@@ -1,7 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { clsx } from 'clsx';
-import { PDFDocument } from 'pdf-lib';
-import { saveAs } from 'file-saver';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function formatFileSize(bytes) {
@@ -17,98 +15,44 @@ function calcReduction(original, compressed) {
   return Math.max(0, Math.round(((original - compressed) / original) * 100));
 }
 
+const API_URL = http://:3005\;
+
 // ─── Compression levels ───────────────────────────────────────────────────────
 const LEVELS = [
   {
-    id: 'low',
-    label: 'Low',
-    desc: 'Best quality, smaller reduction',
-    icon: 'solar:battery-full-linear',
-    color: 'text-emerald-600',
-    bg: 'bg-emerald-50 border-emerald-200',
-    activeBg: 'bg-emerald-600',
-    expectedReduction: '10–25%',
-  },
-  {
-    id: 'medium',
-    label: 'Medium',
-    desc: 'Balanced quality & size',
-    icon: 'solar:battery-half-linear',
-    color: 'text-amber-600',
-    bg: 'bg-amber-50 border-amber-200',
-    activeBg: 'bg-amber-500',
-    expectedReduction: '25–50%',
-  },
-  {
-    id: 'high',
-    label: 'High',
-    desc: 'Maximum compression',
-    icon: 'solar:battery-low-linear',
+    id: 'extreme',
+    label: 'Extreme Compression',
+    desc: 'Less quality, high compression',
+    icon: 'solar:battery-charge-linear',
     color: 'text-red-500',
     bg: 'bg-red-50 border-red-200',
-    activeBg: 'bg-red-500',
-    expectedReduction: '40–70%',
+    expectedReduction: '50–80%',
   },
+  {
+    id: 'recommended',
+    label: 'Recommended Compression',
+    desc: 'Good quality, good compression',
+    icon: 'solar:star-fall-linear',
+    color: 'text-green-600',
+    bg: 'bg-green-50 border-green-200',
+    expectedReduction: '20–50%',
+  },
+  {
+    id: 'less',
+    label: 'Less compression',
+    desc: 'High quality, less compression',
+    icon: 'solar:shield-check-linear',
+    color: 'text-blue-500',
+    bg: 'bg-blue-50 border-blue-200',
+    expectedReduction: '5–20%',
+  }
 ];
-
-// ─── Core compression function ────────────────────────────────────────────────
-async function compressPDF(arrayBuffer, level) {
-  const pdfDoc = await PDFDocument.load(arrayBuffer, {
-    ignoreEncryption: true,
-    updateMetadata: false,
-  });
-
-  // Strip all metadata to save space
-  pdfDoc.setTitle('');
-  pdfDoc.setAuthor('');
-  pdfDoc.setSubject('');
-  pdfDoc.setKeywords([]);
-  pdfDoc.setProducer('PDFMaster');
-  pdfDoc.setCreator('PDFMaster');
-
-  const pages = pdfDoc.getPages();
-
-  // Remove unused objects & compress object streams based on level
-  const objectsCount = pages.length;
-
-  // Save with compression options
-  const saveOptions = {
-    useObjectStreams: true,          // compress cross-reference table
-    addDefaultPage: false,
-    objectsPerTick: objectsCount > 50 ? 50 : objectsCount,
-  };
-
-  // For high compression, remove annotations & form fields
-  if (level === 'high' || level === 'medium') {
-    for (const page of pages) {
-      try {
-        // Remove annotations to reduce size
-        const annots = page.node.lookup(page.node.get('Annots' ));
-        if (annots) page.node.delete('Annots');
-      } catch (_) { /* safe to ignore */ }
-    }
-  }
-
-  // For high compression, also remove embedded thumbnails, metadata streams
-  if (level === 'high') {
-    try {
-      const catalog = pdfDoc.catalog;
-      catalog.delete('Metadata');
-      catalog.delete('Outlines');
-      catalog.delete('Threads');
-      catalog.delete('AcroForm');
-    } catch (_) { /* safe to ignore */ }
-  }
-
-  const compressedBytes = await pdfDoc.save(saveOptions);
-  return compressedBytes;
-}
 
 // ─── Main Modal Component ─────────────────────────────────────────────────────
 export default function CompressPDFModal({ isOpen, onClose }) {
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error
   const [file, setFile] = useState(null);
-  const [level, setLevel] = useState('medium');
+  const [level, setLevel] = useState('recommended');
   const [progress, setProgress] = useState(0);
   const [progressLabel, setProgressLabel] = useState('');
   const [isDragging, setIsDragging] = useState(false);
@@ -122,7 +66,7 @@ export default function CompressPDFModal({ isOpen, onClose }) {
     if (isOpen) {
       setState('idle');
       setFile(null);
-      setLevel('medium');
+      setLevel('recommended');
       setProgress(0);
       setResult(null);
       setErrorMsg('');
@@ -158,40 +102,55 @@ export default function CompressPDFModal({ isOpen, onClose }) {
     setState('processing');
     setProgress(0);
 
-    // Animate progress (fake smooth progress while real work happens)
+    // Animate progress while backend works
     let p = 0;
     progressRef.current = setInterval(() => {
-      const inc = p < 40 ? 3 : p < 75 ? 1 : 0.4;
-      p = Math.min(p + inc, 88);
+      const inc = p < 40 ? 2 : p < 75 ? 0.8 : 0.3;
+      p = Math.min(p + inc, 92);
       setProgress(p);
       setProgressLabel(
-        p < 20 ? 'Reading PDF structure...' :
-        p < 45 ? 'Analyzing content streams...' :
-        p < 70 ? 'Removing redundant objects...' :
-        'Rewriting compressed file...'
+        p < 20 ? 'Uploading to server...' :
+        p < 45 ? 'Ghostscript analyzing structure...' :
+        p < 70 ? 'Optimizing image streams...' :
+        p < 88 ? 'Compressing fonts & metadata...' :
+        'Finalizing...'
       );
-    }, 80);
+    }, 100);
 
     try {
-      const arrayBuffer = await file.arrayBuffer();
-      const compressedBytes = await compressPDF(arrayBuffer, level);
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('tool', 'Compress PDF');
+      formData.append('level', level);
+
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({ error: 'Server error' }));
+        throw new Error(errData.error || `Server error (${response.status})`);
+      }
+
+      const blob = await response.blob();
+      const compressedBytes = new Uint8Array(await blob.arrayBuffer());
+
+      const originalSize  = parseInt(response.headers.get('X-Original-Size'))   || file.size;
+      const compressedSize = parseInt(response.headers.get('X-Compressed-Size')) || compressedBytes.byteLength;
 
       clearInterval(progressRef.current);
       setProgress(100);
       setProgressLabel('Done!');
 
       setTimeout(() => {
-        setResult({
-          bytes: compressedBytes,
-          originalSize: file.size,
-          compressedSize: compressedBytes.byteLength,
-        });
+        setResult({ bytes: compressedBytes, originalSize, compressedSize });
         setState('done');
       }, 300);
     } catch (err) {
       clearInterval(progressRef.current);
       console.error('Compression error:', err);
-      setErrorMsg('Could not compress this PDF. It may be encrypted or corrupted.');
+      setErrorMsg(err.message || 'Could not compress this PDF. It may be encrypted or corrupted.');
       setState('error');
     }
   };
@@ -199,11 +158,16 @@ export default function CompressPDFModal({ isOpen, onClose }) {
   const handleDownload = () => {
     if (!result) return;
     const blob = new Blob([result.bytes], { type: 'application/pdf' });
-    const safeOriginalName = file?.name ? file.name.replace(/[^a-zA-Z0-9.\-_]/g, '_') : 'document.pdf';
-    const baseName = safeOriginalName.replace(/\.pdf$/i, '');
-    const filename = `${baseName}_compressed.pdf`;
-    
-    saveAs(blob, filename);
+    const safeName = file?.name ? file.name.replace(/[^a-zA-Z0-9.\-_]/g, '_') : 'document.pdf';
+    const baseName = safeName.replace(/\.pdf$/i, '');
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${baseName}_compressed.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   const handleReset = () => {
@@ -322,7 +286,7 @@ export default function CompressPDFModal({ isOpen, onClose }) {
               {/* Compression level picker */}
               <div>
                 <p className="text-xs font-semibold text-gray-600 mb-2.5">Compression Level</p>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   {LEVELS.map((l) => (
                     <button
                       key={l.id}
@@ -433,6 +397,15 @@ export default function CompressPDFModal({ isOpen, onClose }) {
                   </p>
                 </div>
               </div>
+
+              {reduction < 5 && (
+                <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3 mt-4">
+                  <iconify-icon icon="solar:info-circle-bold" class="text-amber-500 text-lg shrink-0 mt-0.5"></iconify-icon>
+                  <p className="text-[11px] text-amber-800 font-medium">
+                    Is PDF mein compress karne layak content kam hai (jaise text-only PDF). Images hoti toh size zyada kam hota.
+                  </p>
+                </div>
+              )}
 
               {/* Action buttons */}
               <div className="flex gap-3">

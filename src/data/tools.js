@@ -251,6 +251,17 @@ export const TOOLS_DATA = [
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
   },
+  
+  // AI TOOLS
+  {
+    category: "ai",
+    title: "Chat with PDF",
+    desc: "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
+    icon: "solar:chat-square-linear",
+    iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
+    badge: { text: "AI" },
+    badgeClass: "bg-purple-100 text-purple-700 font-bold"
+  },
 
   // EDIT
   {
@@ -311,6 +322,15 @@ export const TOOLS_DATA = [
   },
   {
     category: "ai",
+    title: "Plagiarism check",
+    desc: "Compare your document against billions of web pages and academic databases.",
+    icon: "solar:shield-check-linear",
+    iconColorClass: "bg-blue-50 text-blue-600",
+    badge: { text: "Pro" },
+    badgeClass: "bg-blue-50 text-blue-600 border border-blue-100"
+  },
+  {
+    category: "ai",
     title: "Summarize PDF",
     desc: "Generate quick, accurate summaries of long documents in seconds.",
     icon: "solar:file-check-linear",
@@ -332,15 +352,6 @@ export const TOOLS_DATA = [
     title: "Extract data",
     desc: "Intelligently extract tables, values, and entities from invoices and forms.",
     icon: "solar:database-linear",
-    iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
-    badge: { text: "AI + New" },
-    badgeClass: "bg-purple-50 text-purple-600 border border-purple-100"
-  },
-  {
-    category: "ai",
-    title: "PDF plagiarism check",
-    desc: "Scan documents against billions of web pages to detect copied content.",
-    icon: "solar:shield-warning-linear",
     iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
     badge: { text: "AI + New" },
     badgeClass: "bg-purple-50 text-purple-600 border border-purple-100"

@@ -1,1 +1,30 @@
-node_modules
+node_modules/
+dist/
+uploads/
+server/uploads/
+scratch/
+
+# Environment variables (SENSITIVE - passwords, API keys)
+.env
+server/.env
+*.env
+
+# Test PDF files
+*.pdf
+test*.pdf
+test*.cjs
+fix_*.cjs
+revert_*.cjs
+update_*.cjs
+reenable_*.cjs
+analyze_*.cjs
+applyLimits.cjs
+build.log
+build_output.txt
+output.docx
+output*.pdf
+
+# Zip files
+*.zip
+server/out.zip
+server/out2.zip
