@@ -42,6 +42,7 @@ import SummarizePDFPage from './pages/SummarizePDFPage';
 import TranslatePDFPage from './pages/TranslatePDFPage';
 import ExtractDataPage from './pages/ExtractDataPage';
 import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
 function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
@@ -122,10 +123,10 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
         </div>
 
         <div className="p-4 border-t border-gray-100 space-y-3 pb-safe">
-          <button className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
+          <button onClick={() => { onNav('/pricing'); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
             Sign in
           </button>
-          <button className="w-full py-2.5 text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl transition-colors shadow-sm">
+          <button onClick={() => { onNav('/pricing'); onClose(); }} className="w-full py-2.5 text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl transition-colors shadow-sm">
             Go Premium — $4.99/mo
           </button>
         </div>
@@ -330,10 +331,10 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
-            <button className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
+            <button onClick={() => handleNavClick('/pricing')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
               Sign in
             </button>
-            <button className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
+            <button onClick={() => handleNavClick('/pricing')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
               Go Premium
             </button>
           </div>
@@ -382,10 +383,6 @@ export default function App() {
                       { name: 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
                       { name: 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
                       { name: 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: 'Extract Images', path: '/tools/extract-images', icon: SparklesIcon },
-                      { name: 'Protect PDF', path: '/tools/protect-pdf', icon: ShieldCheckIcon },
-                      { name: 'Unlock PDF', path: '/tools/unlock-pdf', icon: LockOpenIcon },
-                      { name: 'Redact PDF', path: '/tools/redact-pdf', icon: ScissorsIcon },
                       { name: 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
                       { name: 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
                     ].map(t => (
@@ -543,7 +540,7 @@ export default function App() {
             {isHome && (
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-xs font-semibold text-[#378ADD] mb-5">
                 <span className="pulse-dot w-1.5 h-1.5 bg-[#378ADD] rounded-full"></span>
-                50M+ documents processed this month
+                Thousands of documents processed securely
               </div>
             )}
 
@@ -557,7 +554,7 @@ export default function App() {
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
-              {isHome && '37+ tools. AI-powered. Faster than ILovePDF. No limits on free tier. Used by teams at Accenture, Deloitte & 2.4M+ professionals.'}
+              {isHome && '37+ tools. AI-powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.'}
               {isPricing && 'Get more done with PDFMaster Pro. No hidden fees, cancel anytime.'}
               {isCompare && 'Why millions are switching to the faster, smarter, and more affordable alternative.'}
             </p>
@@ -655,6 +652,7 @@ export default function App() {
             <Route path="/tools/plagiarism-check" element={<PlagiarismCheckPage />} />
             <Route path="/sign/:token" element={<SigningPage />} />
             <Route path="/tools/:toolSlug" element={<ToolPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </main>
@@ -711,11 +709,7 @@ export default function App() {
               </div>
               <div className="flex items-center gap-2 text-xs text-gray-400">
                 <iconify-icon icon="solar:lock-keyhole-linear" class="text-blue-400 text-base"></iconify-icon>
-                GDPR compliant
-              </div>
-              <div className="flex items-center gap-2 text-xs text-gray-400">
-                <iconify-icon icon="solar:cloud-check-linear" class="text-purple-400 text-base"></iconify-icon>
-                SOC 2 Type II
+                Privacy focused
               </div>
             </div>
           </div>
@@ -730,8 +724,8 @@ export default function App() {
         {[
           { label: 'Home', icon: 'solar:home-linear', path: '/' },
           { label: 'Merge', icon: 'solar:layers-linear', path: '/tools/merge-pdf' },
-          { label: 'Compress', icon: 'solar:archive-minimalistic-linear', path: '/tools/compress-pdf' },
           { label: 'Sign', icon: 'solar:pen-linear', path: '/tools/sign-pdf' },
+          { label: 'AI Chat', icon: 'solar:chat-round-linear', path: '/tools/chat-with-pdf' },
           { label: 'More', icon: 'solar:hamburger-menu-linear', path: null },
         ].map(item => (
           item.path ? (
