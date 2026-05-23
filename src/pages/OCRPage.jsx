@@ -216,7 +216,7 @@ export default function OCRPage() {
       setState('error');
       return;
     }
-    if (f.size > isPro ? 2000 * 1024 * 1024 : 10 * 1024 * 1024) {
+    if (f.size > (isPro ? 2000 * 1024 * 1024 : 10 * 1024 * 1024)) {
       setIsUpgradeOpen(true);
       return;
     }

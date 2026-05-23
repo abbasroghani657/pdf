@@ -105,7 +105,7 @@ export default function RequestSignaturePage() {
       toast.error('Please select a valid PDF file.');
       return;
     }
-    if (f.size > isPro ? 2000 * 1024 * 1024 : 10 * 1024 * 1024) {
+    if (f.size > (isPro ? 2000 * 1024 * 1024 : 10 * 1024 * 1024)) {
       setIsUpgradeOpen(true);
       return;
     }

@@ -65,7 +65,7 @@ export default function SplitPagesPage() {
       setUploadState('error');
       return;
     }
-    if (file.size > isPro ? 2000 * 1024 * 1024 : 10 * 1024 * 1024) {
+    if (file.size > (isPro ? 2000 * 1024 * 1024 : 10 * 1024 * 1024)) {
       setIsUpgradeOpen(true);
       return;
     }
