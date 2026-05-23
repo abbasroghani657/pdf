@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useDropzone } from 'react-dropzone';
 import { ArrowLeft, MessageSquare, FileText as FileIcon } from 'lucide-react';
+import { toast } from 'react-hot-toast';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
 import PDFViewer from '../components/ChatPDF/PDFViewer';
 import ChatPanel from '../components/ChatPDF/ChatPanel';
@@ -31,7 +32,16 @@ export default function ChatPDFPage() {
   }, [location.state]);
 
   const onDrop = useCallback(async (accepted) => {
-    if (accepted?.length > 0) { setFile(accepted[0]); setMessages([]); extractPDF(accepted[0]); }
+    if (accepted?.length > 0) { 
+      const file = accepted[0];
+      if (file.size > 10 * 1024 * 1024) {
+        toast.error('Free tier: 10MB limit. Upgrade to Pro for 1GB uploads!');
+        return;
+      }
+      setFile(file); 
+      setMessages([]); 
+      extractPDF(file); 
+    }
   }, []);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -80,7 +90,7 @@ export default function ChatPDFPage() {
       const res = await fetch(`/api/ai-chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userText, pdfContext: pdfContextRef.current, history: historyRef.current.slice(-8) })
+        body: JSON.stringify({ message: userText, pdfContext: pdfContextRef.current, history: historyRef.current.slice(-14) })
       });
       if (res.ok) {
         const data = await res.json();

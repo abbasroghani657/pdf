@@ -34,7 +34,12 @@ export default function PlagiarismCheckPage() {
 
   const onDrop = useCallback((accepted) => { 
     if (accepted?.length > 0) {
-      setFile(accepted[0]);
+      const file = accepted[0];
+      if (file.size > 10 * 1024 * 1024) {
+        toast.error('Free tier: 10MB limit. Upgrade to Pro for 1GB uploads!');
+        return;
+      }
+      setFile(file);
       setStep(2);
     }
   }, []);
