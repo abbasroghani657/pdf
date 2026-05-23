@@ -119,8 +119,13 @@ async function processNextJob() {
   } finally {
     // Clean up temporary files
     if (job.files) {
-      job.files.forEach(f => {
-        try { fs.unlinkSync(f.path); } catch(e){}
+        try { 
+          if (fs.existsSync(f.path)) {
+            fs.unlinkSync(f.path); 
+          }
+        } catch(e){
+          console.log('Cleanup warning:', e.message);
+        }
       });
     }
     activeJobs--;
@@ -471,6 +476,12 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
       case 'Compress PDF': {
         const reqLevel = req.body.level || 'recommended';
         const levelMap = {
+          // New standard names
+          'low': 'low',
+          'medium': 'medium',
+          'high': 'high',
+          'maximum': 'maximum',
+          // Backwards compatibility
           'less': 'low',
           'recommended': 'medium',
           'extreme': 'maximum'
@@ -995,8 +1006,9 @@ app.post('/api/send-signature-request', express.json({ limit: '50mb' }), async (
     const results = [];
 
     for (const signer of signers) {
-      const token = Math.random().toString(36).substr(2, 16);
-      const signingLink = `http://localhost:3000/sign/${token}`;
+      const token = crypto.randomBytes(32).toString('hex');
+      const baseUrl = process.env.APP_URL || 'http://localhost:3000';
+      const signingLink = `${baseUrl}/sign/${token}`;
 
       results.push({ token, name: signer.name, email: signer.email, status: 'sent', signingLink });
       
@@ -1581,6 +1593,13 @@ INSTRUCTIONS:
 - End complex answers with a follow-up suggestion.
 - Never make up information not present in the document.
 
+CONVERSATION STYLE:
+- Be conversational and friendly, remember context from previous messages.
+- If user says "thanks", "shukriya", or casual chat — respond naturally and warmly like "Khushi hui! Koi aur sawal ho to zaroor puchein 😊"
+- Don't always start with PDF — chat naturally first when appropriate.
+- Use short, readable paragraphs instead of walls of text.
+- Be warm and approachable, never robotic.
+
 PDF CONTENT:
 ${pdfContext.substring(0, 60000)}`;
 
@@ -1592,7 +1611,7 @@ ${pdfContext.substring(0, 60000)}`;
     try {
       console.log(`  → 🟢 Sending request to Gemini Flash (Key ${i + 1}/${geminiKeys.length})...`);
       const contents = [
-        ...history.slice(-10).map(h => ({ role: h.role === 'ai' ? 'model' : 'user', parts: [{ text: h.text }] })),
+        ...history.slice(-14).map(h => ({ role: h.role === 'ai' ? 'model' : 'user', parts: [{ text: h.text }] })),
         { role: 'user', parts: [{ text: `INSTRUCTIONS & DOCUMENT CONTEXT:\n${systemPrompt}\n\nUSER QUESTION:\n${message}` }] }
       ];
       const geminiRes = await fetch(
@@ -1666,86 +1685,7 @@ ${pdfContext.substring(0, 60000)}`;
   return res.json({ response: null, provider: 'fallback' });
 });
 
-// ─── Plagiarism Check Endpoint ───────────────────────────────────────────────
-app.post('/api/plagiarism-check', express.json({ limit: '50mb' }), async (req, res) => {
-  const { text, options } = req.body;
-  if (!text) return res.status(400).json({ error: 'text is required' });
 
-  const geminiKeys = Object.keys(process.env).filter(k => k.startsWith('GEMINI_API_KEY')).map(k => process.env[k]).filter(Boolean);
-  
-  if (geminiKeys.length === 0) {
-    return res.status(500).json({ error: 'No Gemini API keys found for plagiarism analysis' });
-  }
-
-  try {
-    const prompt = `You are a strict, world-class plagiarism detection AI.
-Analyze the following text for plagiarism against your training data (which represents the internet). 
-
-INSTRUCTIONS:
-1. Break the text into logical sentences/short paragraphs.
-2. For each chunk, determine its originality status:
-   - "Copied": 90-100% exact match with internet sources (e.g., Wikipedia).
-   - "Similar": 60-89% match, paraphrased content.
-   - "Quoted": Text inside quotes that is properly cited.
-   - "Original": 0-59% match, written by the user.
-3. If "Copied" or "Similar", you MUST provide a realistic 'sourceUrl' where this might exist (e.g., wikipedia.org, researchgate.net).
-4. Return the result strictly as a valid JSON array of objects.
-
-JSON FORMAT:
-[
-  {
-    "text": "The sentence...",
-    "status": "Original" | "Copied" | "Similar" | "Quoted",
-    "sourceUrl": "https://...", // Only if Copied or Similar
-    "matchPercentage": 85 // Number between 0 and 100
-  }
-]
-
-TEXT TO ANALYZE:
-${text.substring(0, 10000)} // Limit to 10k chars for safety
-`;
-
-    // Try Gemini Keys (using first available for simplicity, could rotate)
-    const key = geminiKeys[0];
-    const geminiRes = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${key}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ role: 'user', parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.1, responseMimeType: "application/json" }
-        })
-      }
-    );
-
-    if (!geminiRes.ok) {
-      throw new Error(`Gemini API Error: ${await geminiRes.text()}`);
-    }
-
-    const data = await geminiRes.json();
-    let resultText = data?.candidates?.[0]?.content?.parts?.[0]?.text || '[]';
-    
-    // Parse JSON
-    const analysis = JSON.parse(resultText);
-    
-    // Calculate Score
-    let originalCount = 0;
-    analysis.forEach(item => {
-       if (item.status === 'Original' || item.status === 'Quoted') {
-          originalCount++;
-       }
-    });
-    
-    const score = analysis.length > 0 ? Math.round((originalCount / analysis.length) * 100) : 100;
-
-    res.json({ score, analysis });
-
-  } catch (error) {
-    console.error('Plagiarism Check Error:', error);
-    res.status(500).json({ error: 'Failed to process plagiarism check', details: error.message });
-  }
-});
 
 // ─── Global Error Handler ─────────────────────────────────────────────────────
 app.use((err, req, res, next) => {

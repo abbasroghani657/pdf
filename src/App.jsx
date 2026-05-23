@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Routes, Route, Link, useNavigate, useLocation, useNavigationType } from 'react-router-dom';
 import { 
   DocumentTextIcon, SparklesIcon, DocumentDuplicateIcon, 
@@ -620,41 +620,43 @@ export default function App() {
         isFullscreenTool ? "flex flex-col overflow-hidden" : (!isTool ? "max-w-7xl px-4 sm:px-6 lg:px-8 pb-20" : ""),
         navProgress > 0 && navProgress < 100 ? "opacity-50" : "opacity-100"
       )}>
-        <Routes>
-          <Route path="/" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/compare" element={<ComparePage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/tools/compress-pdf" element={<CompressPage />} />
-          <Route path="/tools/delete-pages" element={<DeletePagesPage />} />
-          <Route path="/tools/split-pdf" element={<SplitPagesPage />} />
-          <Route path="/tools/protect-pdf" element={<ProtectPDFPage />} />
-          <Route path="/tools/unlock-pdf" element={<UnlockPDFPage />} />
-          <Route path="/tools/redact-pdf" element={<RedactPDFPage />} />
-          <Route path="/tools/rotate-pdf" element={<RotatePagesPage />} />
-          <Route path="/tools/reorder-pages" element={<ReorderPagesPage />} />
-          <Route path="/tools/add-blank-page" element={<BlankPagesPage />} />
-          <Route path="/tools/sign-pdf" element={<SignPDFPage />} />
-          <Route path="/tools/request-signature" element={<RequestSignaturePage />} />
-          <Route path="/tools/repair-pdf" element={<RepairPage />} />
-          <Route path="/tools/add-text-to-pdf" element={<AddTextPage />} />
-          <Route path="/tools/ocr-pdf" element={<OCRPage />} />
-          <Route path="/tools/flatten-pdf" element={<FlattenPDFPage />} />
-          <Route path="/tools/certificate-sign" element={<CertificateSignPage />} />
-          <Route path="/tools/edit-pdf" element={<EditPDFPage />} />
-          <Route path="/tools/watermark-pdf" element={<WatermarkPDFPage />} />
-          <Route path="/tools/pdf-forms" element={<FillPDFFormsPage />} />
-          <Route path="/tools/add-page-numbers" element={<PageNumbersPage />} />
-          <Route path="/tools/annotate-pdf" element={<AnnotatePDFPage />} />
-          <Route path="/tools/chat-with-pdf" element={<ChatPDFPage />} />
-          <Route path="/tools/summarize-pdf" element={<SummarizePDFPage />} />
-          <Route path="/tools/translate-pdf" element={<TranslatePDFPage />} />
-          <Route path="/tools/extract-data" element={<ExtractDataPage />} />
-          <Route path="/tools/plagiarism-check" element={<PlagiarismCheckPage />} />
-          <Route path="/sign/:token" element={<SigningPage />} />
-          <Route path="/tools/:toolSlug" element={<ToolPage />} />
-        </Routes>
+        <Suspense fallback={<div className="flex items-center justify-center min-h-[50vh]"><div className="w-8 h-8 border-4 border-[#378ADD] border-t-transparent rounded-full animate-spin"></div></div>}>
+          <Routes>
+            <Route path="/" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/compare" element={<ComparePage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/tools/compress-pdf" element={<CompressPage />} />
+            <Route path="/tools/delete-pages" element={<DeletePagesPage />} />
+            <Route path="/tools/split-pdf" element={<SplitPagesPage />} />
+            <Route path="/tools/protect-pdf" element={<ProtectPDFPage />} />
+            <Route path="/tools/unlock-pdf" element={<UnlockPDFPage />} />
+            <Route path="/tools/redact-pdf" element={<RedactPDFPage />} />
+            <Route path="/tools/rotate-pdf" element={<RotatePagesPage />} />
+            <Route path="/tools/reorder-pages" element={<ReorderPagesPage />} />
+            <Route path="/tools/add-blank-page" element={<BlankPagesPage />} />
+            <Route path="/tools/sign-pdf" element={<SignPDFPage />} />
+            <Route path="/tools/request-signature" element={<RequestSignaturePage />} />
+            <Route path="/tools/repair-pdf" element={<RepairPage />} />
+            <Route path="/tools/add-text-to-pdf" element={<AddTextPage />} />
+            <Route path="/tools/ocr-pdf" element={<OCRPage />} />
+            <Route path="/tools/flatten-pdf" element={<FlattenPDFPage />} />
+            <Route path="/tools/certificate-sign" element={<CertificateSignPage />} />
+            <Route path="/tools/edit-pdf" element={<EditPDFPage />} />
+            <Route path="/tools/watermark-pdf" element={<WatermarkPDFPage />} />
+            <Route path="/tools/pdf-forms" element={<FillPDFFormsPage />} />
+            <Route path="/tools/add-page-numbers" element={<PageNumbersPage />} />
+            <Route path="/tools/annotate-pdf" element={<AnnotatePDFPage />} />
+            <Route path="/tools/chat-with-pdf" element={<ChatPDFPage />} />
+            <Route path="/tools/summarize-pdf" element={<SummarizePDFPage />} />
+            <Route path="/tools/translate-pdf" element={<TranslatePDFPage />} />
+            <Route path="/tools/extract-data" element={<ExtractDataPage />} />
+            <Route path="/tools/plagiarism-check" element={<PlagiarismCheckPage />} />
+            <Route path="/sign/:token" element={<SigningPage />} />
+            <Route path="/tools/:toolSlug" element={<ToolPage />} />
+          </Routes>
+        </Suspense>
       </main>
 
       {/* ── FOOTER — hidden on all tool/editor routes ─────────────────── */}
