@@ -669,18 +669,12 @@ export default function App() {
               <p className="text-sm text-gray-500 leading-relaxed mb-5 max-w-xs">
                 The world's most powerful PDF toolkit. Free, fast, and secure. Trusted by professionals worldwide.
               </p>
-              <div className="flex items-center gap-3">
-                {['solar:twitter-linear', 'solar:github-linear', 'solar:linkedin-linear', 'solar:youtube-linear'].map((icon, i) => (
-                  <a key={i} href="#" className="w-9 h-9 rounded-xl border border-gray-200 flex items-center justify-center text-gray-500 hover:text-[#378ADD] hover:border-[#378ADD]/40 transition-all">
-                    <iconify-icon icon={icon} class="text-lg"></iconify-icon>
-                  </a>
-                ))}
-              </div>
+              {/* Social links hidden until accounts are created */}
             </div>
 
             {[
               { title: 'Tools', links: [{ label: 'Merge PDF', path: '/tools/merge-pdf' }, { label: 'Split PDF', path: '/tools/split-pdf' }, { label: 'Compress PDF', path: '/tools/compress-pdf' }, { label: 'PDF to Word', path: '/tools/pdf-to-word' }, { label: 'Sign PDF', path: '/tools/sign-pdf' }, { label: 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: 'Company', links: [{ label: 'About us', path: '#' }, { label: 'Pricing', path: '/pricing' }, { label: 'Compare', path: '/compare' }] },
+              { title: 'Company', links: [{ label: 'Pricing', path: '/pricing' }, { label: 'Compare', path: '/compare' }] },
               { title: 'Legal', links: [{ label: 'Privacy Policy', path: '/privacy' }, { label: 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>

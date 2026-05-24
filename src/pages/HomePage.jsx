@@ -9,7 +9,7 @@ const STATS = [
   { value: '37+', label: 'PDF tools available', icon: 'solar:box-bold' },
   { value: '100%', label: 'Free core tools', icon: 'solar:gift-bold' },
   { value: '256-bit', label: 'SSL encrypted', icon: 'solar:shield-check-bold' },
-  { value: '99.9%', label: 'Uptime SLA', icon: 'solar:cloud-check-bold' },
+  { value: 'No signup', label: 'Required', icon: 'solar:user-cross-bold' },
 ];
 
 const CATEGORIES = [
@@ -23,40 +23,6 @@ const CATEGORIES = [
 ];
 
 const TRUST_LOGOS = ['Lawyers', 'Accountants', 'Researchers', 'Educators', 'Developers', 'Businesses'];
-
-const TESTIMONIALS = [
-  { name: 'Ali Hassan', role: 'Freelance Designer', text: 'PDFMaster is the only tool I need for all my PDF work. Fast, clean, and completely free for daily use.', avatar: 'AH' },
-  { name: 'Sara K.', role: 'University Student', text: 'I use the merge and compress tools every week for my assignments. Way faster than anything else I\'ve tried.', avatar: 'SK' },
-  { name: 'James L.', role: 'Small Business Owner', text: 'The digital signing feature saved me so much time. No more printing just to sign and scan back.', avatar: 'JL' },
-  { name: 'Priya M.', role: 'HR Manager', text: 'We process contracts and forms daily. PDFMaster handles everything without any fuss.', avatar: 'PM' },
-  { name: 'Tom W.', role: 'Software Developer', text: 'Love the OCR tool — it accurately extracts text from scanned PDFs. Integrates perfectly into my workflow.', avatar: 'TW' },
-  { name: 'Aisha R.', role: 'Content Creator', text: 'Compressing PDFs for email attachments used to be a pain. Now it\'s just one click. Brilliant!', avatar: 'AR' },
-];
-
-function TestimonialMarquee() {
-  const doubled = [...TESTIMONIALS, ...TESTIMONIALS];
-  return (
-    <div className="overflow-hidden py-2">
-      <div className="marquee-track flex gap-5 w-max">
-        {doubled.map((t, i) => (
-          <div key={i} className="w-72 shrink-0 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
-            <div className="flex text-amber-400 text-xs mb-3">{'★★★★★'}</div>
-            <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">"{t.text}"</p>
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#378ADD] to-[#8b5cf6] flex items-center justify-center text-white text-xs font-bold shrink-0">
-                {t.avatar}
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-gray-900">{t.name}</p>
-                <p className="text-[10px] text-gray-400">{t.role}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function HomePage({ searchQuery, setSearchQuery }) {
   const { isPro } = useAuth();
@@ -168,23 +134,6 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
           </button>
         </div>
       )}
-
-      {/* Testimonials section */}
-      <div className="py-6">
-        <div className="text-center mb-8">
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Trusted by professionals worldwide</p>
-          <h2 className="text-2xl font-bold text-gray-900 tracking-tight">What our users say</h2>
-        </div>
-
-        {/* User type logos */}
-        <div className="flex flex-wrap items-center justify-center gap-8 mb-8 opacity-50">
-          {TRUST_LOGOS.map((logo, i) => (
-            <span key={i} className="text-sm font-bold text-gray-600 tracking-wider uppercase">{logo}</span>
-          ))}
-        </div>
-
-        <TestimonialMarquee />
-      </div>
 
       {/* Bottom CTA banner */}
       <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a5f] to-[#378ADD] p-8 md:p-12 text-center">

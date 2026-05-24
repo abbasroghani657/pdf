@@ -32,7 +32,7 @@ export default function ComparePage() {
                 { feature: 'Pro subscription price', us: '$4.99/mo', them: '$9.99/mo', winner: true },
                 { feature: 'Total tools available', us: '37+', them: '25', winner: true },
                 { feature: 'No signup required', us: '✓ Yes', them: '✗ No', winner: true, usClass: 'text-emerald-600', themClass: 'text-red-400' },
-                { feature: 'Processing speed', us: '2× Faster (Edge CDN)', them: 'Standard', winner: true },
+                { feature: 'Processing speed', us: 'Fast & Secure', them: 'Standard', winner: true },
                 { feature: 'API access on free plan', us: '✗ Pro only', them: '✗ Pro only', winner: false },
                 { feature: 'Batch processing', us: '✓ Yes', them: '✓ Yes', winner: false, usClass: 'text-emerald-600', themClass: 'text-emerald-500' },
                 { feature: 'File auto-delete', us: '2 hours', them: '2 hours', winner: false },
