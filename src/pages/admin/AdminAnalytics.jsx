@@ -1,4 +1,5 @@
 import React from 'react';
+import { clsx } from 'clsx';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Funnel, FunnelChart, LabelList } from 'recharts';
 
 const TRAFFIC_DATA = [
