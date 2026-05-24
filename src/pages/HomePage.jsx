@@ -6,10 +6,10 @@ import { slugify } from '../utils/slugify';
 import { useNavigate } from 'react-router-dom';
 
 const STATS = [
-  { value: '50M+', label: 'Documents processed', icon: 'solar:document-bold' },
-  { value: '2.4M+', label: 'Happy users', icon: 'solar:users-group-two-rounded-bold' },
-  { value: '37+', label: 'PDF tools', icon: 'solar:box-bold' },
-  { value: '99.9%', label: 'Uptime SLA', icon: 'solar:shield-check-bold' },
+  { value: '37+', label: 'PDF tools available', icon: 'solar:box-bold' },
+  { value: '100%', label: 'Free core tools', icon: 'solar:gift-bold' },
+  { value: '256-bit', label: 'SSL encrypted', icon: 'solar:shield-check-bold' },
+  { value: '99.9%', label: 'Uptime SLA', icon: 'solar:cloud-check-bold' },
 ];
 
 const CATEGORIES = [
@@ -22,15 +22,15 @@ const CATEGORIES = [
   { id: 'sign', label: 'eSign', icon: 'solar:pen-linear' },
 ];
 
-const TRUST_LOGOS = ['Accenture', 'Deloitte', 'KPMG', 'Infosys', 'Salesforce', 'WHO'];
+const TRUST_LOGOS = ['Lawyers', 'Accountants', 'Researchers', 'Educators', 'Developers', 'Businesses'];
 
 const TESTIMONIALS = [
-  { name: 'Sarah Chen', role: 'Head of Legal, Accenture', text: 'PDFMaster replaced 4 separate tools for our legal team. The AI summarizer alone saves us 2 hours a day.', avatar: 'SC' },
-  { name: 'Marcus Petrov', role: 'CTO, Fintech Startup', text: 'We process 10,000+ PDFs monthly via their API. Fastest, most reliable service we\'ve found.', avatar: 'MP' },
-  { name: 'Aisha Okonkwo', role: 'Research Director, WHO', text: 'Translating our reports into 12 languages while preserving formatting was a dream. PDFMaster made it trivial.', avatar: 'AO' },
-  { name: 'James Liu', role: 'Lead Architect, KPMG', text: 'Enterprise-grade security, audit logs, and team management. It fits perfectly into our compliance workflows.', avatar: 'JL' },
-  { name: 'Priya Mehta', role: 'Operations Manager, Deloitte', text: 'Went from 30 minutes to 30 seconds for our monthly report merges. Incredible time savings.', avatar: 'PM' },
-  { name: 'Tom Weber', role: 'Founder, DocuFlow AI', text: 'We built our entire document automation product on top of PDFMaster\'s API. Rock solid.', avatar: 'TW' },
+  { name: 'Ali Hassan', role: 'Freelance Designer', text: 'PDFMaster is the only tool I need for all my PDF work. Fast, clean, and completely free for daily use.', avatar: 'AH' },
+  { name: 'Sara K.', role: 'University Student', text: 'I use the merge and compress tools every week for my assignments. Way faster than anything else I\'ve tried.', avatar: 'SK' },
+  { name: 'James L.', role: 'Small Business Owner', text: 'The digital signing feature saved me so much time. No more printing just to sign and scan back.', avatar: 'JL' },
+  { name: 'Priya M.', role: 'HR Manager', text: 'We process contracts and forms daily. PDFMaster handles everything without any fuss.', avatar: 'PM' },
+  { name: 'Tom W.', role: 'Software Developer', text: 'Love the OCR tool — it accurately extracts text from scanned PDFs. Integrates perfectly into my workflow.', avatar: 'TW' },
+  { name: 'Aisha R.', role: 'Content Creator', text: 'Compressing PDFs for email attachments used to be a pain. Now it\'s just one click. Brilliant!', avatar: 'AR' },
 ];
 
 function TestimonialMarquee() {
@@ -176,7 +176,7 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
           <h2 className="text-2xl font-bold text-gray-900 tracking-tight">What our users say</h2>
         </div>
 
-        {/* Trust logos */}
+        {/* User type logos */}
         <div className="flex flex-wrap items-center justify-center gap-8 mb-8 opacity-50">
           {TRUST_LOGOS.map((logo, i) => (
             <span key={i} className="text-sm font-bold text-gray-600 tracking-wider uppercase">{logo}</span>

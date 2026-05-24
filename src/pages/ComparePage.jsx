@@ -72,7 +72,7 @@ export default function ComparePage() {
         {/* CTA */}
         <div className="text-center bg-gradient-to-br from-[#1e3a5f] to-[#378ADD] rounded-3xl p-10 text-white">
           <h3 className="text-xl font-bold mb-2">Ready to switch?</h3>
-          <p className="text-blue-100 text-sm mb-6">Join 2.4M+ professionals who chose the smarter PDF toolkit.</p>
+          <p className="text-blue-100 text-sm mb-6">Join professionals who chose the smarter PDF toolkit.</p>
           <button
             onClick={() => { navigate('/'); }}
             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#378ADD] rounded-xl font-semibold text-sm hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5"
