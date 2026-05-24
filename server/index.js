@@ -128,6 +128,7 @@ async function processNextJob() {
   } finally {
     // Clean up temporary files
     if (job.files) {
+      job.files.forEach(f => {
         try { 
           if (fs.existsSync(f.path)) {
             fs.unlinkSync(f.path); 
@@ -137,6 +138,7 @@ async function processNextJob() {
         }
       });
     }
+
     activeJobs--;
     processNextJob();
     
@@ -940,7 +942,7 @@ app.post('/api/process', upload.any(), async (req, res) => {
     id: jobId,
     status: 'queued',
     position,
-    req: { body: req.body }, // Only store what's needed
+    req: { body: req.body }, // Only store serializable request body data
     res: null,
     files,
     tool,
