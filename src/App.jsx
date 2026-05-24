@@ -695,7 +695,7 @@ export default function App() {
           </div>
 
           <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} PDFMaster Inc. All rights reserved.</p>
+            <p className="text-xs text-gray-400">© {new Date().getFullYear()} PDFMaster. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-gray-400">
                 <iconify-icon icon="solar:shield-check-linear" class="text-emerald-500 text-base"></iconify-icon>

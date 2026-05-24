@@ -59,7 +59,7 @@ export default function PricingPage() {
               </li>
             ))}
           </ul>
-          <button className="w-full py-2.5 px-4 border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+          <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="w-full py-2.5 px-4 border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
             Current plan
           </button>
         </div>
@@ -94,10 +94,9 @@ export default function PricingPage() {
               </li>
             ))}
           </ul>
-          <button className="w-full py-3 px-4 bg-[#378ADD] hover:bg-[#2b71b8] rounded-xl text-sm font-semibold text-white transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+          <button onClick={() => window.location.href = 'mailto:pro@pdfmaster.com?subject=Pro Plan'} className="w-full py-3 px-4 bg-[#378ADD] hover:bg-[#2b71b8] rounded-xl text-sm font-semibold text-white transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
             Get Pro — {pricingPeriod === 'annual' ? '$3.99' : '$4.99'}/mo
           </button>
-          <p className="text-center text-[11px] text-gray-400 mt-3">30-day money-back guarantee</p>
         </div>
 
         {/* Business */}
@@ -115,7 +114,6 @@ export default function PricingPage() {
               'Everything in Pro',
               'Team seats & management',
               'Shared workspaces',
-              'SSO / SAML integration',
               'Custom branding',
               'SLA 99.9% uptime guarantee',
               'Dedicated account manager',
@@ -126,7 +124,7 @@ export default function PricingPage() {
               </li>
             ))}
           </ul>
-          <button className="w-full py-2.5 px-4 border border-gray-200 rounded-xl text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+          <button onClick={() => window.location.href = 'mailto:sales@pdfmaster.com?subject=Business Plan'} className="w-full py-2.5 px-4 border border-gray-200 rounded-xl text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
             Contact Sales →
           </button>
         </div>
@@ -139,7 +137,7 @@ export default function PricingPage() {
           {[
             { q: 'Is my data secure?', a: 'All uploads are encrypted with 256-bit SSL. Files are automatically deleted from our servers within 2 hours of processing. We never share your data.' },
             { q: 'Can I cancel anytime?', a: 'Yes, absolutely. Cancel your subscription at any time with no penalties. You\'ll keep access until the end of your billing period.' },
-            { q: 'Do you offer a free trial for Pro?', a: 'Yes! Start a 7-day free trial of Pro with no credit card required. Full access to all features.' },
+            { q: 'Do you offer a free trial for Pro?', a: 'PDFMaster offers a free tier with no credit card required. Upgrade to Pro anytime for full access.' },
             { q: 'What file formats are supported?', a: 'We support PDF, Word (.doc/.docx), Excel (.xls/.xlsx), PowerPoint (.ppt/.pptx), images (JPG, PNG, WebP), HTML, and more.' },
           ].map((faq, i) => (
             <details key={i} className="group bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">

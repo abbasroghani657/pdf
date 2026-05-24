@@ -1,9 +1,11 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import { useAuth } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function UpgradeModal({ isOpen, onClose, featureName, limitMessage }) {
   const { upgradeToPro } = useAuth();
+  const navigate = useNavigate();
   if (!isOpen) return null;
 
   return (
@@ -52,8 +54,8 @@ export default function UpgradeModal({ isOpen, onClose, featureName, limitMessag
           <div className="space-y-3">
             <button 
               onClick={() => {
-                upgradeToPro();
                 onClose();
+                navigate('/pricing');
               }}
               className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-base font-bold shadow-lg shadow-indigo-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0"
             >

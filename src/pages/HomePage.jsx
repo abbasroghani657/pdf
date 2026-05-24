@@ -152,7 +152,7 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
             >
               View pricing
             </button>
-            <button className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-sm">
+            <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-sm">
               Try free — no card needed
             </button>
           </div>
