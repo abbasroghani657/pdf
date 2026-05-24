@@ -667,7 +667,7 @@ export default function App() {
                 <span className="font-bold text-base"><span className="text-[#378ADD]">PDF</span>Master</span>
               </div>
               <p className="text-sm text-gray-500 leading-relaxed mb-5 max-w-xs">
-                The world's most powerful PDF toolkit. Free, fast, and secure. Trusted by 2.4M+ professionals worldwide.
+                The world's most powerful PDF toolkit. Free, fast, and secure. Trusted by professionals worldwide.
               </p>
               <div className="flex items-center gap-3">
                 {['solar:twitter-linear', 'solar:github-linear', 'solar:linkedin-linear', 'solar:youtube-linear'].map((icon, i) => (
