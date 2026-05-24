@@ -43,6 +43,8 @@ import TranslatePDFPage from './pages/TranslatePDFPage';
 import ExtractDataPage from './pages/ExtractDataPage';
 import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
 import NotFoundPage from './pages/NotFoundPage';
+import AdminLayout from './pages/admin/AdminLayout';
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
 function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
@@ -237,6 +239,20 @@ export default function App() {
   const convertFromTools = TOOLS_DATA.filter(t => t.category === 'convert' && t.title.startsWith('PDF to'));
   const editSignSecurityTools = TOOLS_DATA.filter(t => t.category === 'edit' || t.category === 'sign' || t.category === 'security');
   const aiTools = TOOLS_DATA.filter(t => t.category === 'ai');
+
+  if (location.pathname.startsWith('/admin')) {
+    return (
+      <>
+        <Toaster position="top-right" />
+        <Routes>
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            {/* We will add more admin routes here later */}
+          </Route>
+        </Routes>
+      </>
+    );
+  }
 
   return (
     <div className="antialiased min-h-screen flex flex-col bg-[#f8fafc]">
