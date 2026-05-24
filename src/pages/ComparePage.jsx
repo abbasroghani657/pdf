@@ -22,7 +22,7 @@ export default function ComparePage() {
                     PDFMaster
                   </div>
                 </th>
-                <th className="py-4 px-6 text-sm font-semibold text-gray-400 w-[30%] border-l border-gray-100">ILovePDF</th>
+                <th className="py-4 px-6 text-sm font-semibold text-gray-400 w-[30%] border-l border-gray-100">Other Platforms</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
@@ -54,10 +54,10 @@ export default function ComparePage() {
         {/* Why us cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
           {[
-            { icon: 'solar:stars-bold', color: 'bg-fuchsia-50 text-fuchsia-600', title: 'AI-powered tools — free', desc: 'Chat with PDFs, auto-summarize, and translate documents. Features ILovePDF simply doesn\'t have.' },
+            { icon: 'solar:stars-bold', color: 'bg-fuchsia-50 text-fuchsia-600', title: 'AI-powered tools — free', desc: 'Chat with PDFs, auto-summarize, and translate documents. Features most competitors simply don\'t have.' },
             { icon: 'solar:box-minimalistic-bold', color: 'bg-blue-50 text-blue-600', title: 'Bigger free tier', desc: `Process files up to ${isPro ? '2GB' : '10MB'} without paying. Stop hitting paywalls for everyday tasks.` },
-            { icon: 'solar:wallet-bold', color: 'bg-amber-50 text-amber-600', title: 'Half the price', desc: 'Pro at $4.99/mo vs ILovePDF\'s $9.99. Same quality, half the cost.' },
-            { icon: 'solar:layers-bold', color: 'bg-emerald-50 text-emerald-600', title: '12 more tools', desc: 'The most comprehensive PDF suite available. If you need a PDF tool, we have it.' },
+            { icon: 'solar:wallet-bold', color: 'bg-amber-50 text-amber-600', title: 'Better value', desc: 'Pro at $4.99/mo vs competitors\' $9.99+. Better quality, half the cost.' },
+            { icon: 'solar:layers-bold', color: 'bg-emerald-50 text-emerald-600', title: 'More tools', desc: 'The most comprehensive PDF suite available. If you need a PDF tool, we have it.' },
           ].map((card, i) => (
             <div key={i} className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
               <div className={clsx('w-11 h-11 rounded-xl flex items-center justify-center mb-4', card.color)}>

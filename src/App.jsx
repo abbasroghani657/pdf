@@ -310,9 +310,10 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-1">
             {[
-              { path: '/', label: 'Tools' },
+              { path: '/', label: 'Home' },
+              { path: '/tools', label: 'Tools' },
               { path: '/pricing', label: 'Pricing' },
-              { path: '/compare', label: 'vs ILovePDF' },
+              { path: '/compare', label: 'Why Us?' },
             ].map(item => (
               <button
                 key={item.path}
@@ -550,7 +551,7 @@ export default function App() {
                   <span className="gradient-text"> PDF toolkit</span> — free</>
               )}
               {isPricing && 'Simple, transparent pricing'}
-              {isCompare && 'PDFMaster vs ILovePDF'}
+              {isCompare && 'PDFMaster vs Competitors'}
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
@@ -620,6 +621,7 @@ export default function App() {
         <Suspense fallback={<div className="flex items-center justify-center min-h-[50vh]"><div className="w-8 h-8 border-4 border-[#378ADD] border-t-transparent rounded-full animate-spin"></div></div>}>
           <Routes>
             <Route path="/" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
+            <Route path="/tools" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
