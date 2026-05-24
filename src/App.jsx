@@ -327,7 +327,7 @@ export default function App() {
                 {item.label}
               </button>
             ))}
-            <a href="#" className="px-3.5 py-1.5 rounded-lg text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 transition-colors">Blog</a>
+            {/* Blog link hidden until blog is ready */}
           </div>
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
@@ -567,7 +567,7 @@ export default function App() {
                   { icon: 'solar:user-cross-linear', label: 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
                   { icon: 'solar:shield-check-linear', label: '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
                   { icon: 'solar:devices-linear', label: 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:cloud-bolt-linear', label: 'Edge CDN', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
+                  { icon: 'solar:cloud-bold', label: 'Fast & Secure', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
                 ].map((pill, i) => (
                   <span
                     key={i}
