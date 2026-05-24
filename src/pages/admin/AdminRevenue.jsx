@@ -1,0 +1,152 @@
+import React from 'react';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
+
+const MRR_DATA = [
+  { name: 'Jan', mrr: 800 }, { name: 'Feb', mrr: 1200 }, 
+  { name: 'Mar', mrr: 1800 }, { name: 'Apr', mrr: 2900 }, 
+  { name: 'May', mrr: 4280 }
+];
+
+const PLAN_DATA = [
+  { name: 'Pro Monthly', value: 3200, color: '#378ADD' },
+  { name: 'Pro Annual', value: 800, color: '#8b5cf6' },
+  { name: 'Business', value: 280, color: '#f59e0b' },
+];
+
+export default function AdminRevenue() {
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <h1 className="text-2xl font-bold text-gray-900">Revenue Dashboard</h1>
+        <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
+          <iconify-icon icon="solar:document-text-linear"></iconify-icon> Export Report
+        </button>
+      </div>
+
+      {/* STATS */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { label: 'TODAY', value: '$142', trend: '+18%', color: 'text-emerald-500' },
+          { label: 'THIS MONTH', value: '$4,280', trend: '+23%', color: 'text-emerald-500' },
+          { label: 'LAST MONTH', value: '$3,950', trend: '+15%', color: 'text-emerald-500' },
+          { label: 'TOTAL (ALL TIME)', value: '$28,400', trend: 'Growing', color: 'text-blue-500' },
+        ].map((stat, i) => (
+          <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-10">
+              <iconify-icon icon="solar:wallet-money-bold" class="text-6xl text-[#378ADD]"></iconify-icon>
+            </div>
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{stat.label}</p>
+            <p className="text-3xl font-extrabold text-gray-900 mb-2">{stat.value}</p>
+            <p className={`text-sm font-semibold ${stat.color}`}>{stat.trend}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* MRR GROWTH */}
+        <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-6">MRR Growth (Monthly Recurring Revenue)</h2>
+          <div className="h-[300px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={MRR_DATA} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="colorMrr" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#94a3b8'}} dy={10} />
+                <YAxis axisLine={false} tickLine={false} tick={{fill: '#94a3b8'}} tickFormatter={(v) => `$${v}`} />
+                <Tooltip 
+                  contentStyle={{borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'}}
+                  formatter={(value) => [`$${value}`, 'MRR']}
+                />
+                <Area type="monotone" dataKey="mrr" stroke="#10b981" strokeWidth={4} fillOpacity={1} fill="url(#colorMrr)" />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        {/* REVENUE BREAKDOWN */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
+          <h2 className="text-lg font-bold text-gray-900 mb-6">Revenue Breakdown</h2>
+          <div className="h-[200px] w-full mb-6 relative">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie data={PLAN_DATA} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value">
+                  {PLAN_DATA.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip formatter={(value) => `$${value}`} />
+              </PieChart>
+            </ResponsiveContainer>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="text-center">
+                <p className="text-xs text-gray-400 font-bold uppercase">Total</p>
+                <p className="text-xl font-bold text-gray-900">$4,280</p>
+              </div>
+            </div>
+          </div>
+          <div className="space-y-4 flex-1">
+            {PLAN_DATA.map((plan, i) => (
+              <div key={i} className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full" style={{backgroundColor: plan.color}}></span>
+                  <span className="text-sm font-semibold text-gray-700">{plan.name}</span>
+                </div>
+                <span className="text-sm font-bold text-gray-900">${plan.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* TRANSACTIONS TABLE */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+          <h2 className="text-lg font-bold text-gray-900">Recent Transactions</h2>
+          <button className="text-sm font-semibold text-[#378ADD] hover:underline">View All</button>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm whitespace-nowrap">
+            <thead className="bg-gray-50/80 border-b border-gray-100 text-gray-500">
+              <tr>
+                <th className="py-3 px-6 font-semibold">Time</th>
+                <th className="py-3 px-6 font-semibold">User</th>
+                <th className="py-3 px-6 font-semibold">Plan</th>
+                <th className="py-3 px-6 font-semibold">Amount</th>
+                <th className="py-3 px-6 font-semibold">Status</th>
+                <th className="py-3 px-6 font-semibold text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-50">
+              {[
+                { time: '2:15 PM', user: 'sara@hot.com', plan: 'Pro Monthly', amount: '$4.99', status: 'Paid', statusCls: 'text-emerald-600 bg-emerald-50' },
+                { time: '1:30 PM', user: 'john@out.com', plan: 'Pro Annual', amount: '$44.99', status: 'Paid', statusCls: 'text-emerald-600 bg-emerald-50' },
+                { time: '11:00 AM', user: 'raza@gm.com', plan: 'Pro Monthly', amount: '$4.99', status: 'Failed', statusCls: 'text-red-600 bg-red-50' },
+                { time: '10:00 AM', user: 'ali@gm.com', plan: 'Pro Monthly', amount: '$4.99', status: 'Refunded', statusCls: 'text-gray-600 bg-gray-100' },
+              ].map((tx, i) => (
+                <tr key={i} className="hover:bg-gray-50/50">
+                  <td className="py-4 px-6 text-gray-500">{tx.time}</td>
+                  <td className="py-4 px-6 font-medium text-gray-900">{tx.user}</td>
+                  <td className="py-4 px-6 text-gray-600">{tx.plan}</td>
+                  <td className="py-4 px-6 font-bold text-gray-900">{tx.amount}</td>
+                  <td className="py-4 px-6">
+                    <span className={`px-2.5 py-1 rounded-md text-xs font-bold ${tx.statusCls}`}>
+                      {tx.status}
+                    </span>
+                  </td>
+                  <td className="py-4 px-6 text-right">
+                    <button className="text-sm font-medium text-gray-400 hover:text-gray-900 transition-colors">Details</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}

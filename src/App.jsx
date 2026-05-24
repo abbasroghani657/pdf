@@ -45,6 +45,15 @@ import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminUsers from './pages/admin/AdminUsers';
+import AdminRevenue from './pages/admin/AdminRevenue';
+import AdminJobs from './pages/admin/AdminJobs';
+import AdminTools from './pages/admin/AdminTools';
+import AdminAnalytics from './pages/admin/AdminAnalytics';
+import AdminSettings from './pages/admin/AdminSettings';
+import AdminSecurity from './pages/admin/AdminSecurity';
+import AdminEmails from './pages/admin/AdminEmails';
+import AdminSupport from './pages/admin/AdminSupport';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
 function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
@@ -247,7 +256,15 @@ export default function App() {
         <Routes>
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
-            {/* We will add more admin routes here later */}
+            <Route path="users" element={<AdminUsers />} />
+            <Route path="revenue" element={<AdminRevenue />} />
+            <Route path="jobs" element={<AdminJobs />} />
+            <Route path="tools" element={<AdminTools />} />
+            <Route path="analytics" element={<AdminAnalytics />} />
+            <Route path="settings" element={<AdminSettings />} />
+            <Route path="security" element={<AdminSecurity />} />
+            <Route path="emails" element={<AdminEmails />} />
+            <Route path="support" element={<AdminSupport />} />
           </Route>
         </Routes>
       </>
