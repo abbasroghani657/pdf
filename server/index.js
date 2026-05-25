@@ -11,13 +11,9 @@ const AdmZip = require('adm-zip');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
-const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 
 const app = express();
-
-// Connect to MongoDB
-connectDB();
 
 // Middleware
 app.use(express.json());

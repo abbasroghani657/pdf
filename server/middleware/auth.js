@@ -1,37 +1,42 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const supabase = require('../config/supabase');
 
 const protect = async (req, res, next) => {
   let token;
 
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
-    try {
-      token = req.headers.authorization.split(' ')[1];
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      
-      req.user = await User.findById(decoded.id).select('-password');
-      if (!req.user) {
-        return res.status(401).json({ message: 'Not authorized, user not found' });
-      }
-      
-      if (req.user.isBanned) {
+    token = req.headers.authorization.split(' ')[1];
+    
+    const { data: { user }, error } = await supabase.auth.getUser(token);
+
+    if (error || !user) {
+      return res.status(401).json({ message: 'Not authorized, token failed or expired.' });
+    }
+
+    // Attach user to req
+    req.user = user;
+
+    // Fetch custom user profile (isBanned, role, etc.) from public.users table
+    const { data: profile } = await supabase
+      .from('users')
+      .select('*')
+      .eq('id', user.id)
+      .single();
+
+    if (profile) {
+      req.user.profile = profile;
+      if (profile.is_banned) {
         return res.status(403).json({ message: 'Account banned. Please contact support.' });
       }
-
-      next();
-    } catch (error) {
-      console.error(error);
-      res.status(401).json({ message: 'Not authorized, token failed' });
     }
-  }
 
-  if (!token) {
+    next();
+  } else {
     res.status(401).json({ message: 'Not authorized, no token' });
   }
 };
 
 const admin = (req, res, next) => {
-  if (req.user && (req.user.role === 'admin' || req.user.role === 'superadmin')) {
+  if (req.user && req.user.profile && (req.user.profile.role === 'admin' || req.user.profile.role === 'superadmin')) {
     next();
   } else {
     res.status(403).json({ message: 'Not authorized as an admin' });
@@ -39,7 +44,7 @@ const admin = (req, res, next) => {
 };
 
 const superadmin = (req, res, next) => {
-  if (req.user && req.user.role === 'superadmin') {
+  if (req.user && req.user.profile && req.user.profile.role === 'superadmin') {
     next();
   } else {
     res.status(403).json({ message: 'Not authorized as superadmin' });
