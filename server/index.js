@@ -11,8 +11,16 @@ const AdmZip = require('adm-zip');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
+const connectDB = require('./config/db');
+const authRoutes = require('./routes/auth');
 
 const app = express();
+
+// Connect to MongoDB
+connectDB();
+
+// Middleware
+app.use(express.json());
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -27,6 +35,9 @@ app.use(cors({
   allowedHeaders: '*',
   exposedHeaders: ['Content-Disposition', 'Content-Length', 'X-Original-Size', 'X-Compressed-Size', 'X-Reduction-Pct', 'X-OCR-Pages', 'X-OCR-Accuracy', 'X-Fields-Flattened', 'X-Annots-Flattened']
 }));
+
+// Routes
+app.use('/api/auth', authRoutes);
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const GOTENBERG_URL   = process.env.GOTENBERG_URL   || 'http://localhost:3001'; // Office→PDF
