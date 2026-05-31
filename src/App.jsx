@@ -42,6 +42,7 @@ import SummarizePDFPage from './pages/SummarizePDFPage';
 import TranslatePDFPage from './pages/TranslatePDFPage';
 import ExtractDataPage from './pages/ExtractDataPage';
 import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
+import MergePDFPage from './pages/MergePDFPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -659,6 +660,7 @@ export default function App() {
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
+            <Route path="/tools/merge-pdf" element={<MergePDFPage />} />
             <Route path="/tools/compress-pdf" element={<CompressPage />} />
             <Route path="/tools/delete-pages" element={<DeletePagesPage />} />
             <Route path="/tools/split-pdf" element={<SplitPagesPage />} />
