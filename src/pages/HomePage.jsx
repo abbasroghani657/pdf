@@ -97,28 +97,28 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
             <div
               key={idx}
               onClick={() => openTool(tool)}
-              className="tool-card group bg-white border border-gray-100 rounded-2xl p-5 cursor-pointer relative flex flex-col min-h-[148px] shadow-sm hover:border-[#378ADD]/30"
-            >
-              {tool.badge && (
-                <span className={clsx(
-                  'absolute top-3.5 right-3.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full',
-                  tool.badgeClass || ''
-                )}>
-                  {tool.badge.text}
-                </span>
-              )}
-              <div className={clsx(
-                'w-11 h-11 rounded-xl flex items-center justify-center mb-3.5 transition-all duration-300 group-hover:scale-110 group-hover:shadow-md',
-                tool.iconColorClass
+              className="tool-card group bg-white border border-gray-100 rounded-2xl p-5 cursor-pointer relative flex flex-col min-h-[148px] shadow-sm hover:border-[#378ADD]/30 hover:shadow-lg transition-all duration-300"
+          >
+            {tool.badge && (
+              <span className={clsx(
+                'absolute top-3.5 right-3.5 text-[10px] font-bold px-2.5 py-0.5 rounded-full',
+                tool.badgeClass || ''
               )}>
-                <iconify-icon icon={tool.icon} class="text-xl" stroke-width="1.5"></iconify-icon>
-              </div>
-              <h3 className="text-sm font-semibold text-gray-900 tracking-tight mb-1">{tool.title}</h3>
-              <p className="text-xs text-gray-500 leading-relaxed flex-1">{tool.desc}</p>
-              <div className="mt-3 flex items-center text-[#378ADD] text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Use tool <iconify-icon icon="solar:arrow-right-linear" class="ml-1 transition-transform group-hover:translate-x-1 duration-200"></iconify-icon>
-              </div>
+                {tool.badge.text}
+              </span>
+            )}
+            <div className={clsx(
+              'w-12 h-12 rounded-xl flex items-center justify-center mb-3.5 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg',
+              tool.iconColorClass
+            )}>
+              <iconify-icon icon={tool.icon} class="text-2xl"></iconify-icon>
             </div>
+            <h3 className="text-sm font-semibold text-gray-900 tracking-tight mb-1">{tool.title}</h3>
+            <p className="text-xs text-gray-500 leading-relaxed flex-1">{tool.desc}</p>
+            <div className="mt-3 flex items-center text-[#378ADD] text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Use tool <iconify-icon icon="solar:arrow-right-bold" class="ml-1 transition-transform group-hover:translate-x-1 duration-200"></iconify-icon>
+            </div>
+          </div>
           ))}
         </div>
       ) : (

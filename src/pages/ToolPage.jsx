@@ -175,7 +175,7 @@ export default function ToolPage() {
     <div className="max-w-5xl mx-auto px-4 py-6 md:py-8 animate-fade-in">
       <div className="text-center mb-6">
         <div className={clsx('w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4', tool.iconColorClass)}>
-          <iconify-icon icon={tool.icon} class="text-3xl" stroke-width="1.5"></iconify-icon>
+          <iconify-icon icon={tool.icon} class="text-4xl"></iconify-icon>
         </div>
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{tool.title}</h1>
         <p className="text-gray-500 max-w-lg mx-auto text-sm">{tool.desc}</p>

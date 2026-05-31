@@ -4,7 +4,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PDF to Word",
     desc: "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    icon: "solar:document-text-linear",
+    icon: "solar:document-text-bold-duotone",
     iconColorClass: "bg-blue-50 text-blue-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -13,7 +13,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "Word to PDF",
     desc: "Make DOC and DOCX files easy to read by converting them to PDF.",
-    icon: "solar:file-text-linear",
+    icon: "solar:file-text-bold-duotone",
     iconColorClass: "bg-blue-50 text-blue-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -22,7 +22,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PDF to Excel",
     desc: "Pull data straight from PDFs into Excel spreadsheets in a few seconds.",
-    icon: "solar:chart-square-linear",
+    icon: "solar:chart-2-bold-duotone",
     iconColorClass: "bg-emerald-50 text-emerald-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -31,7 +31,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "Excel to PDF",
     desc: "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    icon: "solar:document-add-linear",
+    icon: "solar:table-bold-duotone",
     iconColorClass: "bg-emerald-50 text-emerald-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -40,7 +40,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PDF to JPG",
     desc: "Convert each PDF page into a JPG or extract all images contained.",
-    icon: "solar:gallery-linear",
+    icon: "solar:gallery-bold-duotone",
     iconColorClass: "bg-amber-50 text-amber-500",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -49,7 +49,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "JPG to PDF",
     desc: "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    icon: "solar:images-linear",
+    icon: "solar:image-bold-duotone",
     iconColorClass: "bg-amber-50 text-amber-500",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -58,7 +58,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PDF to PowerPoint",
     desc: "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    icon: "solar:presentation-graph-linear",
+    icon: "solar:presentation-graph-bold-duotone",
     iconColorClass: "bg-orange-50 text-orange-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -67,7 +67,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PowerPoint to PDF",
     desc: "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    icon: "solar:play-circle-linear",
+    icon: "solar:monitor-bold-duotone",
     iconColorClass: "bg-orange-50 text-orange-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -76,7 +76,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PDF to HTML",
     desc: "Convert your PDF documents to HTML web pages perfectly.",
-    icon: "solar:code-square-linear",
+    icon: "solar:code-bold-duotone",
     iconColorClass: "bg-indigo-50 text-indigo-500",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -85,7 +85,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "HTML to PDF",
     desc: "Convert webpages in HTML to PDF format directly from URL or file.",
-    icon: "solar:global-linear",
+    icon: "solar:global-bold-duotone",
     iconColorClass: "bg-indigo-50 text-indigo-500",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -94,7 +94,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "PDF to Text",
     desc: "Extract text from your PDF files to create editable TXT documents.",
-    icon: "solar:text-linear",
+    icon: "solar:text-bold-duotone",
     iconColorClass: "bg-gray-100 text-gray-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -105,7 +105,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Merge PDF",
     desc: "Combine PDFs in the order you want with the easiest PDF merger available.",
-    icon: "solar:documents-linear",
+    icon: "solar:layers-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -114,7 +114,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Split PDF",
     desc: "Separate one page or a whole set for easy conversion into independent PDF files.",
-    icon: "solar:scissors-linear",
+    icon: "solar:scissors-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -123,7 +123,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Rotate PDF",
     desc: "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    icon: "solar:restart-linear",
+    icon: "solar:refresh-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -132,7 +132,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Delete pages",
     desc: "Remove pages from a PDF document in a flash.",
-    icon: "solar:trash-bin-trash-linear",
+    icon: "solar:trash-bin-minimalistic-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -141,7 +141,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Reorder pages",
     desc: "Change the page order of your PDF document via drag and drop.",
-    icon: "solar:sort-from-bottom-to-top-linear",
+    icon: "solar:sort-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -150,7 +150,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Add blank page",
     desc: "Insert a blank page anywhere within your PDF document.",
-    icon: "solar:file-plus-linear",
+    icon: "solar:file-plus-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -161,7 +161,7 @@ export const TOOLS_DATA = [
     category: "optimize",
     title: "Compress PDF",
     desc: "Reduce file size while optimizing for maximal PDF quality.",
-    icon: "solar:minimize-square-linear",
+    icon: "solar:zip-file-bold-duotone",
     iconColorClass: "bg-green-50 text-green-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -170,7 +170,7 @@ export const TOOLS_DATA = [
     category: "optimize",
     title: "Repair PDF",
     desc: "Repair a damaged PDF and recover data from corrupt files.",
-    icon: "solar:wrench-linear",
+    icon: "solar:tools-bold-duotone",
     iconColorClass: "bg-green-50 text-green-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -179,7 +179,7 @@ export const TOOLS_DATA = [
     category: "optimize",
     title: "OCR PDF",
     desc: "Make text in scanned PDFs selectable, searchable and editable.",
-    icon: "solar:scanner-linear",
+    icon: "solar:scanner-bold-duotone",
     iconColorClass: "bg-green-50 text-green-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -188,7 +188,7 @@ export const TOOLS_DATA = [
     category: "optimize",
     title: "Flatten PDF",
     desc: "Merge all layers, forms, and annotations into a single non-editable layer.",
-    icon: "solar:layers-minimalistic-linear",
+    icon: "solar:layers-minimalistic-bold-duotone",
     iconColorClass: "bg-green-50 text-green-600",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -199,7 +199,7 @@ export const TOOLS_DATA = [
     category: "security",
     title: "Protect PDF",
     desc: "Encrypt your PDF with a password to prevent unauthorized access.",
-    icon: "solar:lock-keyhole-linear",
+    icon: "solar:shield-keyhole-bold-duotone",
     iconColorClass: "bg-red-50 text-red-500",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -208,7 +208,7 @@ export const TOOLS_DATA = [
     category: "security",
     title: "Unlock PDF",
     desc: "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    icon: "solar:lock-unlocked-linear",
+    icon: "solar:lock-unlocked-bold-duotone",
     iconColorClass: "bg-red-50 text-red-500",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -217,7 +217,7 @@ export const TOOLS_DATA = [
     category: "security",
     title: "Redact PDF",
     desc: "Permanently remove sensitive information or hidden data from your PDFs.",
-    icon: "solar:eye-closed-linear",
+    icon: "solar:eye-closed-bold-duotone",
     iconColorClass: "bg-red-50 text-red-500",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -228,7 +228,7 @@ export const TOOLS_DATA = [
     category: "sign",
     title: "Sign PDF",
     desc: "Sign yourself or request electronic signatures from others.",
-    icon: "solar:pen-linear",
+    icon: "solar:pen-bold-duotone",
     iconColorClass: "bg-violet-50 text-violet-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -237,7 +237,7 @@ export const TOOLS_DATA = [
     category: "sign",
     title: "Request signature",
     desc: "Send documents to clients to be signed legally online.",
-    icon: "solar:user-speak-rounded-linear",
+    icon: "solar:user-speak-bold-duotone",
     iconColorClass: "bg-violet-50 text-violet-600",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -246,18 +246,18 @@ export const TOOLS_DATA = [
     category: "sign",
     title: "Certificate sign",
     desc: "Add a cryptographic digital signature to your PDF.",
-    icon: "solar:diploma-linear",
+    icon: "solar:diploma-bold-duotone",
     iconColorClass: "bg-violet-50 text-violet-600",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
   },
-  
+
   // AI TOOLS
   {
     category: "ai",
     title: "Chat with PDF",
     desc: "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    icon: "solar:chat-square-linear",
+    icon: "solar:chat-round-dots-bold-duotone",
     iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
     badge: { text: "AI" },
     badgeClass: "bg-purple-100 text-purple-700 font-bold"
@@ -268,7 +268,7 @@ export const TOOLS_DATA = [
     category: "edit",
     title: "Edit PDF",
     desc: "Add text, images, shapes or freehand annotations to a PDF document.",
-    icon: "solar:pen-new-square-linear",
+    icon: "solar:pen-new-square-bold-duotone",
     iconColorClass: "bg-yellow-50 text-yellow-600",
     badge: { text: "Popular" },
     badgeClass: "bg-red-50 text-red-600"
@@ -277,7 +277,7 @@ export const TOOLS_DATA = [
     category: "edit",
     title: "Watermark PDF",
     desc: "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    icon: "solar:stamp-linear",
+    icon: "solar:waterdrops-bold-duotone",
     iconColorClass: "bg-yellow-50 text-yellow-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -286,7 +286,7 @@ export const TOOLS_DATA = [
     category: "edit",
     title: "PDF forms",
     desc: "Fill out PDF forms quickly and accurately online.",
-    icon: "solar:checklist-minimalistic-linear",
+    icon: "solar:document-add-bold-duotone",
     iconColorClass: "bg-yellow-50 text-yellow-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -295,7 +295,7 @@ export const TOOLS_DATA = [
     category: "edit",
     title: "Add page numbers",
     desc: "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    icon: "solar:sort-by-time-linear",
+    icon: "solar:hashtag-bold-duotone",
     iconColorClass: "bg-yellow-50 text-yellow-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -304,19 +304,18 @@ export const TOOLS_DATA = [
     category: "edit",
     title: "Annotate PDF",
     desc: "Highlight, underline, strikethrough text and add comments.",
-    icon: "solar:notes-linear",
+    icon: "solar:notes-bold-duotone",
     iconColorClass: "bg-yellow-50 text-yellow-600",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
   },
 
-  // AI TOOLS
-
+  // AI TOOLS (continued)
   {
     category: "ai",
     title: "Plagiarism check",
     desc: "Compare your document against billions of web pages and academic databases.",
-    icon: "solar:shield-check-linear",
+    icon: "solar:shield-check-bold-duotone",
     iconColorClass: "bg-blue-50 text-blue-600",
     badge: { text: "Pro" },
     badgeClass: "bg-blue-50 text-blue-600 border border-blue-100"
@@ -325,7 +324,7 @@ export const TOOLS_DATA = [
     category: "ai",
     title: "Summarize PDF",
     desc: "Generate quick, accurate summaries of long documents in seconds.",
-    icon: "solar:file-check-linear",
+    icon: "solar:list-bold-duotone",
     iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
     badge: { text: "AI + New" },
     badgeClass: "bg-purple-50 text-purple-600 border border-purple-100"
@@ -334,7 +333,7 @@ export const TOOLS_DATA = [
     category: "ai",
     title: "Translate PDF",
     desc: "Translate full documents while preserving original formatting and layout.",
-    icon: "solar:global-linear",
+    icon: "solar:translation-bold-duotone",
     iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
     badge: { text: "AI + New" },
     badgeClass: "bg-purple-50 text-purple-600 border border-purple-100"
@@ -343,7 +342,7 @@ export const TOOLS_DATA = [
     category: "ai",
     title: "Extract data",
     desc: "Intelligently extract tables, values, and entities from invoices and forms.",
-    icon: "solar:database-linear",
+    icon: "solar:database-bold-duotone",
     iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
     badge: { text: "AI + New" },
     badgeClass: "bg-purple-50 text-purple-600 border border-purple-100"
