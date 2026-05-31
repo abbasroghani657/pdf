@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
 import pdfWorkerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
 import clsx from 'clsx';
+import { processWithQueue } from '../utils/queueApi';
 
 // Use the bundled local worker (no CDN needed)
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
@@ -309,15 +310,9 @@ export default function MergePDFPage() {
       formData.append('tool', 'Merge PDF');
       pdfs.forEach((pdf) => formData.append('file', pdf.file, pdf.name));
 
-      const res = await fetch(`${API_BASE}/api/process`, {
-        method: 'POST',
-        body: formData,
+      const res = await processWithQueue(`${API_BASE}/api/process`, formData, (status) => {
+        // We can update state if needed based on queue position
       });
-
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || 'Merge failed');
-      }
 
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
