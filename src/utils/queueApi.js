@@ -1,4 +1,4 @@
-export async function processWithQueue(url, formData, onProgress, returnJson = false) {
+export async function processWithQueue(url, formData, onProgress, returnJson = false, returnUrlOnly = false) {
   const response = await fetch(url, { method: 'POST', body: formData });
   
   if (!response.ok) {
@@ -29,7 +29,10 @@ export async function processWithQueue(url, formData, onProgress, returnJson = f
         if (onProgress) onProgress({ type: 'queued', position: stat.position });
       } else if (stat.status === 'done') {
         if (returnJson) return stat.data;
-        const dlRes = await fetch(`/api/download/${jobId}`);
+        const dlUrl = `/api/download/${jobId}`;
+        if (returnUrlOnly) return { url: dlUrl };
+        
+        const dlRes = await fetch(dlUrl);
         if (!dlRes.ok) throw new Error('Failed to download result');
         return dlRes; // Return the full response object
       }

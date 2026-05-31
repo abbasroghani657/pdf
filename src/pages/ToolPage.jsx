@@ -28,7 +28,7 @@ export default function ToolPage() {
 
   const [uploadState, setUploadState] = useState('idle'); // idle | dragging | selected | processing | done | error
   const [selectedFiles, setSelectedFiles] = useState([]);
-  const [processedBlob, setProcessedBlob] = useState(null);
+  const [processedUrl, setProcessedUrl] = useState(null);
   const [progress, setProgress] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -135,10 +135,9 @@ export default function ToolPage() {
         } else if (status.type === 'processing') {
            setQueuePosition(null);
         }
-      });
+      }, false, true);
 
-      const blob = await response.blob();
-      setProcessedBlob(blob);
+      setProcessedUrl(response.url);
 
       clearInterval(progressIntervalRef.current);
       setProgress(100);
@@ -152,39 +151,19 @@ export default function ToolPage() {
   };
 
   const handleDownload = () => {
-    if (!processedBlob) return;
-    const safeOriginalName = selectedFiles[0]?.name ? selectedFiles[0].name.replace(/[^a-zA-Z0-9.\-_]/g, '_') : 'document';
-    const safeToolName = tool?.title ? tool.title.toLowerCase().replace(/[^a-z0-9]/g, '_') : 'tool';
+    if (!processedUrl) return;
     
-    let finalExt = processedBlob.type === 'application/zip' ? '.zip' : null;
-    if (!finalExt) {
-        finalExt = '.pdf';
-        if (tool?.title === 'PDF to Excel') finalExt = '.xlsx';
-        if (tool?.title === 'PDF to Word') finalExt = '.docx';
-        if (tool?.title === 'PDF to PowerPoint') finalExt = '.pptx';
-        if (tool?.title === 'PDF to JPG') finalExt = '.jpg';
-        if (tool?.title === 'PDF to HTML') finalExt = '.html';
-        if (tool?.title === 'PDF to Text') finalExt = '.txt';
-    }
+    // Tell browser to natively navigate to the download URL
+    // This allows IDM or Chrome to download it directly without empty Blob bugs
+    window.location.assign(processedUrl);
     
-    const baseName = safeOriginalName.replace(/\.[^/.]+$/, "");
-    const filename = `pdfmaster_${safeToolName}_${baseName}${finalExt}`;
-    
-    const url = URL.createObjectURL(processedBlob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
     toast.success('File downloaded successfully!');
   };
 
   const handleReset = () => {
     setUploadState('idle');
     setSelectedFiles([]);
-    setProcessedBlob(null);
+    setProcessedUrl(null);
     setProgress(0);
     setErrorMsg('');
     if (fileInputRef.current) fileInputRef.current.value = '';

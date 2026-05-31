@@ -312,15 +312,11 @@ export default function MergePDFPage() {
 
       const res = await processWithQueue(`${API_BASE}/api/process`, formData, (status) => {
         // We can update state if needed based on queue position
-      });
+      }, false, true);
 
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'merged_document.pdf';
-      a.click();
-      URL.revokeObjectURL(url);
+      // Tell browser to natively navigate to the download URL
+      // This allows IDM or Chrome to download it directly without empty Blob bugs
+      window.location.assign(res.url);
 
       toast.success('PDFs merged successfully!');
       setTimeout(() => setStep(2), 1500);
