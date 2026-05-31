@@ -227,11 +227,42 @@ def pdf_to_html():
         import fitz
         doc = fitz.open(input_path)
         
-        # Simple HTML concatenation of all pages
-        html_content = "<html><head><meta charset='utf-8'></head><body>\n"
+        # Generate a professional HTML wrapper with CSS for paper-like pages
+        html_content = """<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Converted PDF</title>
+<style>
+  body {
+    background-color: #f1f5f9;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  /* PyMuPDF creates a wrapper div for each page */
+  body > div {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative !important;
+    border: 1px solid #e2e8f0;
+  }
+  /* Hide the manual HR we added before, just in case */
+  hr { display: none; }
+</style>
+</head>
+<body>
+"""
         for page in doc:
+            # get_text("html") returns an absolute positioned div for the page
             html_content += page.get_text("html")
-            html_content += "<hr/>\n"
+        
         html_content += "</body></html>"
         
         with open(output_path, "w", encoding="utf-8") as out:
