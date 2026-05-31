@@ -311,15 +311,7 @@ export const TOOLS_DATA = [
   },
 
   // AI TOOLS
-  {
-    category: "ai",
-    title: "Chat with PDF",
-    desc: "Ask questions, get summaries, and interact directly with your PDF documents.",
-    icon: "solar:chat-round-line-linear",
-    iconColorClass: "bg-fuchsia-50 text-fuchsia-600",
-    badge: { text: "AI + New" },
-    badgeClass: "bg-purple-50 text-purple-600 border border-purple-100"
-  },
+
   {
     category: "ai",
     title: "Plagiarism check",
