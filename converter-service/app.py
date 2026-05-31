@@ -241,27 +241,30 @@ def pdf_to_html():
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  /* PyMuPDF creates a wrapper div for each page */
-  body > div {
+  .page {
     background-color: #ffffff;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     border-radius: 8px;
     overflow: hidden;
-    position: relative !important;
     border: 1px solid #e2e8f0;
+    max-width: 100%;
   }
-  /* Hide the manual HR we added before, just in case */
-  hr { display: none; }
+  .page svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+  }
 </style>
 </head>
 <body>
 """
         for page in doc:
-            # get_text("html") returns an absolute positioned div for the page
-            html_content += page.get_text("html")
+            # Convert page to vector SVG for 100% visual perfection
+            svg = page.get_svg_image(matrix=fitz.Matrix(1.5, 1.5))
+            html_content += f'<div class="page">{svg}</div>\\n'
         
         html_content += "</body></html>"
         
