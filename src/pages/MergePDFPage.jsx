@@ -1,11 +1,14 @@
 import { useState, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist';
+import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
+import pdfWorkerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
 import clsx from 'clsx';
 
-// Use the bundled worker
-GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`;
+// Use the bundled local worker (no CDN needed)
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+
+const { getDocument } = pdfjsLib;
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3005';
 
