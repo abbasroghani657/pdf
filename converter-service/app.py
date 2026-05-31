@@ -115,11 +115,11 @@ def pdf_to_pptx():
     
     try:
         file.save(input_path)
-        from pdf2image import convert_from_path
+        import fitz
         from pptx import Presentation
         from pptx.util import Inches
         
-        images = convert_from_path(input_path, dpi=150, fmt='jpeg')
+        doc = fitz.open(input_path)
         prs = Presentation()
         
         # Set slide size to A4 landscape
@@ -128,13 +128,16 @@ def pdf_to_pptx():
         
         blank_layout = prs.slide_layouts[6]  # blank layout
         
-        for i, img in enumerate(images):
+        for i in range(len(doc)):
+            page = doc[i]
+            pix = page.get_pixmap(dpi=150)
             img_path = os.path.join(img_dir, f'page_{i}.jpg')
-            img.save(img_path, 'JPEG', quality=85)
+            pix.save(img_path)
             
             slide = prs.slides.add_slide(blank_layout)
             slide.shapes.add_picture(img_path, 0, 0, prs.slide_width, prs.slide_height)
         
+        doc.close()
         prs.save(output_path)
         return send_file(
             output_path,
@@ -152,7 +155,7 @@ def pdf_to_pptx():
         try: shutil.rmtree(img_dir)
         except: pass
 
-# ── PDF → JPG (pdf2image) ──────────────────────────────────────────────────────
+# ── PDF → JPG (PyMuPDF) ──────────────────────────────────────────────────────
 @app.route('/pdf-to-jpg', methods=['POST'])
 def pdf_to_jpg():
     if 'file' not in request.files:
@@ -164,12 +167,15 @@ def pdf_to_jpg():
     
     try:
         file.save(input_path)
-        from pdf2image import convert_from_path
-        images = convert_from_path(input_path, dpi=150, fmt='jpeg')
+        import fitz
+        doc = fitz.open(input_path)
         
-        if len(images) == 1:
+        if len(doc) == 1:
+            page = doc[0]
+            pix = page.get_pixmap(dpi=150)
             output_path = os.path.join(UPLOAD_DIR, f'{job_id}_output.jpg')
-            images[0].save(output_path, 'JPEG', quality=90)
+            pix.save(output_path)
+            doc.close()
             return send_file(
                 output_path,
                 as_attachment=True,
@@ -180,13 +186,15 @@ def pdf_to_jpg():
             import zipfile
             zip_path = os.path.join(UPLOAD_DIR, f'{job_id}_output.zip')
             with zipfile.ZipFile(zip_path, 'w') as zipf:
-                for i, img in enumerate(images):
+                for i in range(len(doc)):
+                    page = doc[i]
+                    pix = page.get_pixmap(dpi=150)
                     img_name = f'page_{i+1}.jpg'
                     img_path = os.path.join(UPLOAD_DIR, f'{job_id}_{img_name}')
-                    img.save(img_path, 'JPEG', quality=90)
+                    pix.save(img_path)
                     zipf.write(img_path, arcname=img_name)
                     os.remove(img_path)  # clean up temp image
-                    
+            doc.close()
             return send_file(
                 zip_path,
                 as_attachment=True,
