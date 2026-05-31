@@ -31,7 +31,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "Excel to PDF",
     desc: "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    icon: "solar:table-bold-duotone",
+    icon: "solar:chart-square-bold-duotone",
     iconColorClass: "bg-emerald-50 text-emerald-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -49,7 +49,7 @@ export const TOOLS_DATA = [
     category: "convert",
     title: "JPG to PDF",
     desc: "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    icon: "solar:image-bold-duotone",
+    icon: "solar:camera-bold-duotone",
     iconColorClass: "bg-amber-50 text-amber-500",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
@@ -150,7 +150,7 @@ export const TOOLS_DATA = [
     category: "organize",
     title: "Add blank page",
     desc: "Insert a blank page anywhere within your PDF document.",
-    icon: "solar:file-plus-bold-duotone",
+    icon: "solar:add-square-bold-duotone",
     iconColorClass: "bg-cyan-50 text-cyan-600",
     badge: { text: "New" },
     badgeClass: "bg-blue-50 text-blue-600"
@@ -170,7 +170,7 @@ export const TOOLS_DATA = [
     category: "optimize",
     title: "Repair PDF",
     desc: "Repair a damaged PDF and recover data from corrupt files.",
-    icon: "solar:tools-bold-duotone",
+    icon: "solar:settings-bold-duotone",
     iconColorClass: "bg-green-50 text-green-600",
     badge: { text: "Free" },
     badgeClass: "bg-emerald-50 text-emerald-600"
