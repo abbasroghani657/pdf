@@ -377,7 +377,11 @@ export default function SplitPagesPage() {
               </div>
               <div>
                 <p className="text-xl font-bold text-gray-900">Done! PDF has been split.</p>
-                <p className="text-sm text-gray-500 mt-2">Your files have been packed into a ZIP file.</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  {processedBlob?.type === 'application/zip' 
+                    ? 'Your files have been packed into a ZIP file.'
+                    : 'Your custom PDF file is ready to download.'}
+                </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
@@ -385,7 +389,7 @@ export default function SplitPagesPage() {
                   className="flex-1 py-4 bg-[#378ADD] hover:bg-[#2b71b8] text-white rounded-2xl text-base font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2.5"
                 >
                   <iconify-icon icon="solar:download-minimalistic-bold" class="text-xl"></iconify-icon>
-                  Download ZIP
+                  {processedBlob?.type === 'application/zip' ? 'Download ZIP' : 'Download PDF'}
                 </button>
                 <button
                   onClick={handleReset}
