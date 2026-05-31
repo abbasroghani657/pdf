@@ -163,9 +163,9 @@ function SummaryBar({ pdfs }) {
         { label: 'Total Pages', value: totalPages || '—', icon: 'solar:document-bold', color: 'text-emerald-600 bg-emerald-50' },
         { label: 'Total Size', value: totalSize > 0 ? `${(totalSize / 1024).toFixed(0)} KB` : '—', icon: 'solar:database-bold', color: 'text-purple-600 bg-purple-50' },
       ].map(stat => (
-        <div key={stat.label} className="bg-white rounded-2xl p-3 sm:p-4 border border-gray-100 flex items-center gap-3 shadow-sm">
-          <div className={clsx('w-9 h-9 rounded-xl flex items-center justify-center shrink-0', stat.color)}>
-            <iconify-icon icon={stat.icon} class="text-lg" />
+        <div key={stat.label} className="bg-white rounded-2xl p-2 sm:p-4 border border-gray-100 flex flex-col sm:flex-row items-center gap-1 sm:gap-3 shadow-sm text-center sm:text-left">
+          <div className={clsx('w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center shrink-0', stat.color)}>
+            <iconify-icon icon={stat.icon} class="text-base sm:text-lg" />
           </div>
           <div>
             <p className="text-lg font-bold text-gray-900 leading-none">{stat.value}</p>

@@ -42,7 +42,6 @@ self.onmessage = async (e) => {
           const pdfBytes = await newPdf.save();
           zip.file(`${baseName}_page_${i + 1}.pdf`, pdfBytes);
           
-          // Report progress
           self.postMessage({ type: 'progress', progress: Math.round(((i + 1) / numPages) * 100) });
         }
       } else if (options.mode === 'fixed') {
@@ -63,34 +62,41 @@ self.onmessage = async (e) => {
           self.postMessage({ type: 'progress', progress: Math.round((i / numPages) * 100) });
         }
       } else if (options.mode === 'custom' && options.customRanges) {
+        // Create ONE single PDF for custom ranges
+        const newPdf = await PDFDocument.create();
         const ranges = options.customRanges.split(',').map((s) => s.trim());
-        let part = 1;
+        const allIndices = new Set();
+        
         for (const range of ranges) {
-          const newPdf = await PDFDocument.create();
-          const indices = [];
           if (range.includes('-')) {
             const [start, end] = range.split('-').map(Number);
             for (let i = start; i <= end; i++) {
-              if (i >= 1 && i <= numPages) indices.push(i - 1);
+              if (i >= 1 && i <= numPages) allIndices.add(i - 1);
             }
           } else {
             const i = Number(range);
-            if (i >= 1 && i <= numPages) indices.push(i - 1);
+            if (i >= 1 && i <= numPages) allIndices.add(i - 1);
           }
-          if (indices.length > 0) {
-            const copiedPages = await newPdf.copyPages(pdfDoc, indices);
-            copiedPages.forEach((p) => newPdf.addPage(p));
-            const pdfBytes = await newPdf.save();
-            zip.file(`${baseName}_custom_${part}.pdf`, pdfBytes);
-            part++;
-          }
+        }
+        
+        const indicesArray = Array.from(allIndices).sort((a, b) => a - b);
+        if (indicesArray.length > 0) {
+          const copiedPages = await newPdf.copyPages(pdfDoc, indicesArray);
+          copiedPages.forEach((p) => newPdf.addPage(p));
+          const pdfBytes = await newPdf.save();
+          const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+          self.postMessage({ success: true, blob, isZip: false });
+          return; // Exit early, no ZIP needed
+        } else {
+          throw new Error('No valid pages found in the specified range.');
         }
       }
 
+      // If we reach here, it's 'all' or 'fixed' mode which uses ZIP
       const zipBlob = await zip.generateAsync({ type: 'blob' }, (metadata) => {
          self.postMessage({ type: 'progress', progress: Math.round(metadata.percent) });
       });
-      self.postMessage({ success: true, blob: zipBlob });
+      self.postMessage({ success: true, blob: zipBlob, isZip: true });
     }
     else if (tool === 'Add Text') {
       const file = files[0];

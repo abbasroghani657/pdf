@@ -161,8 +161,11 @@ export default function SplitPagesPage() {
     const url = URL.createObjectURL(processedBlob);
     const a = document.createElement('a');
     a.href = url;
-    // The backend will return a ZIP file containing the split PDFs
-    a.download = `pdfmaster_split_${selectedFile.name.replace('.pdf', '')}.zip`;
+    
+    // Check blob type to determine if it's a ZIP or a single PDF
+    const ext = processedBlob.type === 'application/zip' ? '.zip' : '.pdf';
+    a.download = `pdfmaster_split_${selectedFile.name.replace('.pdf', '')}${ext}`;
+    
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
