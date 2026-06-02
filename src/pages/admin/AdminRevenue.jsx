@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
+import api from '../../utils/api';
+import { toast } from 'react-hot-toast';
 
 const MRR_DATA = [
   { name: 'Jan', mrr: 800 }, { name: 'Feb', mrr: 1200 }, 
@@ -14,22 +16,55 @@ const PLAN_DATA = [
 ];
 
 export default function AdminRevenue() {
+  const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState({ totalRevenue: '$0.00', proUsersCount: 0 });
+  const [transactions, setTransactions] = useState([]);
+
+  const fetchRevenueData = async () => {
+    setLoading(true);
+    try {
+      const res = await api.get('/admin/revenue');
+      if (res.data.success) {
+        setStats(res.data.stats);
+        setTransactions(res.data.transactions);
+      }
+    } catch (error) {
+      console.error('Failed to fetch revenue:', error);
+      toast.error('Failed to load revenue data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchRevenueData();
+  }, []);
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h1 className="text-2xl font-bold text-gray-900">Revenue Dashboard</h1>
-        <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
-          <iconify-icon icon="solar:document-text-linear"></iconify-icon> Export Report
-        </button>
+        <div className="flex gap-3">
+          <button 
+            onClick={fetchRevenueData}
+            disabled={loading}
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm disabled:opacity-50"
+          >
+            <iconify-icon icon={loading ? "line-md:loading-twotone-loop" : "solar:refresh-linear"}></iconify-icon> Refresh
+          </button>
+          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
+            <iconify-icon icon="solar:document-text-linear"></iconify-icon> Export Report
+          </button>
+        </div>
       </div>
 
       {/* STATS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { label: 'TODAY', value: '$142', trend: '+18%', color: 'text-emerald-500' },
-          { label: 'THIS MONTH', value: '$4,280', trend: '+23%', color: 'text-emerald-500' },
-          { label: 'LAST MONTH', value: '$3,950', trend: '+15%', color: 'text-emerald-500' },
-          { label: 'TOTAL (ALL TIME)', value: '$28,400', trend: 'Growing', color: 'text-blue-500' },
+          { label: 'TODAY', value: loading ? '...' : '$0.00', trend: '0%', color: 'text-gray-400' },
+          { label: 'THIS MONTH', value: loading ? '...' : stats.totalRevenue, trend: 'Active', color: 'text-emerald-500' },
+          { label: 'PRO SUBSCRIBERS', value: loading ? '...' : stats.proUsersCount.toString(), trend: 'Active', color: 'text-blue-500' },
+          { label: 'TOTAL (ALL TIME)', value: loading ? '...' : stats.totalRevenue, trend: 'Growing', color: 'text-emerald-500' },
         ].map((stat, i) => (
           <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
@@ -45,7 +80,7 @@ export default function AdminRevenue() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* MRR GROWTH */}
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-6">MRR Growth (Monthly Recurring Revenue)</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-6">MRR Growth (Mocked Graph)</h2>
           <div className="h-[300px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={MRR_DATA} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -70,7 +105,7 @@ export default function AdminRevenue() {
 
         {/* REVENUE BREAKDOWN */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
-          <h2 className="text-lg font-bold text-gray-900 mb-6">Revenue Breakdown</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-6">Revenue Breakdown (Mocked Graph)</h2>
           <div className="h-[200px] w-full mb-6 relative">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -85,7 +120,7 @@ export default function AdminRevenue() {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-center">
                 <p className="text-xs text-gray-400 font-bold uppercase">Total</p>
-                <p className="text-xl font-bold text-gray-900">$4,280</p>
+                <p className="text-xl font-bold text-gray-900">{stats.totalRevenue}</p>
               </div>
             </div>
           </div>
@@ -106,14 +141,14 @@ export default function AdminRevenue() {
       {/* TRANSACTIONS TABLE */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-          <h2 className="text-lg font-bold text-gray-900">Recent Transactions</h2>
+          <h2 className="text-lg font-bold text-gray-900">Recent Real Transactions</h2>
           <button className="text-sm font-semibold text-[#378ADD] hover:underline">View All</button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm whitespace-nowrap">
             <thead className="bg-gray-50/80 border-b border-gray-100 text-gray-500">
               <tr>
-                <th className="py-3 px-6 font-semibold">Time</th>
+                <th className="py-3 px-6 font-semibold">Date</th>
                 <th className="py-3 px-6 font-semibold">User</th>
                 <th className="py-3 px-6 font-semibold">Plan</th>
                 <th className="py-3 px-6 font-semibold">Amount</th>
@@ -122,14 +157,16 @@ export default function AdminRevenue() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
-              {[
-                { time: '2:15 PM', user: 'sara@hot.com', plan: 'Pro Monthly', amount: '$4.99', status: 'Paid', statusCls: 'text-emerald-600 bg-emerald-50' },
-                { time: '1:30 PM', user: 'john@out.com', plan: 'Pro Annual', amount: '$44.99', status: 'Paid', statusCls: 'text-emerald-600 bg-emerald-50' },
-                { time: '11:00 AM', user: 'raza@gm.com', plan: 'Pro Monthly', amount: '$4.99', status: 'Failed', statusCls: 'text-red-600 bg-red-50' },
-                { time: '10:00 AM', user: 'ali@gm.com', plan: 'Pro Monthly', amount: '$4.99', status: 'Refunded', statusCls: 'text-gray-600 bg-gray-100' },
-              ].map((tx, i) => (
+              {loading ? (
+                <tr>
+                  <td colSpan="6" className="py-10 text-center text-gray-500">
+                    <iconify-icon icon="line-md:loading-twotone-loop" class="text-3xl text-[#378ADD]"></iconify-icon>
+                    <p className="mt-2">Loading transactions...</p>
+                  </td>
+                </tr>
+              ) : transactions.map((tx, i) => (
                 <tr key={i} className="hover:bg-gray-50/50">
-                  <td className="py-4 px-6 text-gray-500">{tx.time}</td>
+                  <td className="py-4 px-6 text-gray-500">{new Date(tx.time).toLocaleDateString()}</td>
                   <td className="py-4 px-6 font-medium text-gray-900">{tx.user}</td>
                   <td className="py-4 px-6 text-gray-600">{tx.plan}</td>
                   <td className="py-4 px-6 font-bold text-gray-900">{tx.amount}</td>
@@ -143,6 +180,11 @@ export default function AdminRevenue() {
                   </td>
                 </tr>
               ))}
+              {!loading && transactions.length === 0 && (
+                <tr>
+                  <td colSpan="6" className="py-10 text-center text-gray-500">No transactions found.</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

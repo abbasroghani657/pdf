@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import api from '../../utils/api';
+import { toast } from 'react-hot-toast';
 
 const REVENUE_DATA = [
   { name: 'May 1', value: 120 }, { name: 'May 5', value: 180 }, 
@@ -15,32 +17,57 @@ const TOP_TOOLS = [
   { name: 'Translate PDF', uses: 312 },
 ];
 
-const RECENT_SIGNUPS = [
-  { email: 'ali.hassan@example.com', time: '2 mins ago', plan: 'Pro', country: 'PK' },
-  { email: 'sara.k@example.com', time: '15 mins ago', plan: 'Free', country: 'UK' },
-  { email: 'john.smith@example.com', time: '1 hour ago', plan: 'Pro', country: 'US' },
-  { email: 'ahmed.r@example.com', time: '3 hours ago', plan: 'Business', country: 'PK' },
-  { email: 'maria.g@example.com', time: '5 hours ago', plan: 'Free', country: 'IN' },
-];
-
 export default function AdminDashboard() {
+  const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState({
+    totalUsers: 0,
+    proUsers: 0,
+    newToday: 0,
+    totalRevenue: '$0.00'
+  });
+  const [recentSignups, setRecentSignups] = useState([]);
+
+  const fetchDashboardData = async () => {
+    setLoading(true);
+    try {
+      const res = await api.get('/admin/dashboard-stats');
+      if (res.data.success) {
+        setStats(res.data.stats);
+        setRecentSignups(res.data.recentSignups);
+      }
+    } catch (error) {
+      console.error('Failed to fetch admin stats:', error);
+      toast.error('Failed to load dashboard data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchDashboardData();
+  }, []);
+
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-900">Dashboard Overview</h1>
-        <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
-          <iconify-icon icon="solar:refresh-linear"></iconify-icon>
-          Refresh Data
+        <button 
+          onClick={fetchDashboardData}
+          disabled={loading}
+          className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm disabled:opacity-50"
+        >
+          <iconify-icon icon={loading ? "line-md:loading-twotone-loop" : "solar:refresh-linear"}></iconify-icon>
+          {loading ? 'Refreshing...' : 'Refresh Data'}
         </button>
       </div>
 
       {/* STATS CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { title: 'Total Revenue', value: '$4,280', trend: '+23%', color: 'from-emerald-500 to-teal-400', icon: 'solar:wallet-money-bold' },
-          { title: 'Total Users', value: '12,450', trend: '+15%', color: 'from-[#378ADD] to-indigo-500', icon: 'solar:users-group-rounded-bold' },
-          { title: 'New Today', value: '247', trend: '+5%', color: 'from-amber-400 to-orange-400', icon: 'solar:user-plus-bold' },
-          { title: 'Pro Subscribers', value: '892', trend: '+12%', color: 'from-purple-500 to-pink-500', icon: 'solar:crown-star-bold' },
+          { title: 'Total Revenue', value: stats.totalRevenue, trend: '+0%', color: 'from-emerald-500 to-teal-400', icon: 'solar:wallet-money-bold' },
+          { title: 'Total Users', value: stats.totalUsers, trend: '+0%', color: 'from-[#378ADD] to-indigo-500', icon: 'solar:users-group-rounded-bold' },
+          { title: 'New Today', value: stats.newToday, trend: '+0%', color: 'from-amber-400 to-orange-400', icon: 'solar:user-plus-bold' },
+          { title: 'Pro Subscribers', value: stats.proUsers, trend: '+0%', color: 'from-purple-500 to-pink-500', icon: 'solar:crown-star-bold' },
         ].map((stat, i) => (
           <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-5">
             <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center text-white shadow-md shrink-0`}>
@@ -49,7 +76,9 @@ export default function AdminDashboard() {
             <div>
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">{stat.title}</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-gray-900">{stat.value}</span>
+                <span className="text-2xl font-bold text-gray-900">
+                  {loading ? '...' : stat.value}
+                </span>
                 <span className="text-xs font-bold text-emerald-500 bg-emerald-50 px-2 py-0.5 rounded-md">{stat.trend}</span>
               </div>
             </div>
@@ -61,7 +90,7 @@ export default function AdminDashboard() {
         {/* REVENUE CHART */}
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg font-bold text-gray-900">Revenue (Last 30 Days)</h2>
+            <h2 className="text-lg font-bold text-gray-900">Revenue (Mock Data)</h2>
             <select className="text-sm border-none bg-gray-50 font-medium rounded-lg px-3 py-1.5 focus:ring-0 cursor-pointer text-gray-600">
               <option>Last 30 Days</option>
               <option>This Year</option>
@@ -117,37 +146,42 @@ export default function AdminDashboard() {
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
             <h2 className="text-lg font-bold text-gray-900 mb-4">Recent Signups</h2>
             <div className="space-y-4">
-              {RECENT_SIGNUPS.map((user, i) => (
-                <div key={i} className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-[#378ADD] flex items-center justify-center font-bold text-xs">
-                      {user.email.charAt(0).toUpperCase()}
+              {loading ? (
+                <div className="text-center py-4 text-gray-400">Loading...</div>
+              ) : recentSignups.length === 0 ? (
+                <div className="text-center py-4 text-gray-400">No recent signups</div>
+              ) : (
+                recentSignups.map((user, i) => (
+                  <div key={i} className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-blue-100 text-[#378ADD] flex items-center justify-center font-bold text-xs">
+                        {user.email.charAt(0).toUpperCase()}
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900 truncate max-w-[120px]">{user.email}</p>
+                        <p className="text-xs text-gray-500">
+                          {new Date(user.created_at).toLocaleDateString()}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-900 truncate max-w-[120px]">{user.email}</p>
-                      <p className="text-xs text-gray-500">{user.time}</p>
-                    </div>
+                    <span className={`px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${
+                      user.plan === 'Pro' ? 'bg-purple-100 text-purple-700' :
+                      user.plan === 'Business' ? 'bg-amber-100 text-amber-700' :
+                      'bg-gray-100 text-gray-600'
+                    }`}>
+                      {user.plan}
+                    </span>
                   </div>
-                  <span className={`px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${
-                    user.plan === 'Pro' ? 'bg-purple-100 text-purple-700' :
-                    user.plan === 'Business' ? 'bg-amber-100 text-amber-700' :
-                    'bg-gray-100 text-gray-600'
-                  }`}>
-                    {user.plan}
-                  </span>
-                </div>
-              ))}
+                ))
+              )}
             </div>
-            <button className="w-full mt-5 py-2 text-sm font-semibold text-[#378ADD] hover:bg-blue-50 rounded-lg transition-colors">
-              View All Users →
-            </button>
           </div>
         </div>
       </div>
 
       {/* TOP TOOLS */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-lg font-bold text-gray-900 mb-6">Top Tools Today</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-6">Top Tools Today (Mock Data)</h2>
         <div className="h-[250px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={TOP_TOOLS} margin={{ top: 0, right: 0, left: -20, bottom: 0 }} layout="vertical">

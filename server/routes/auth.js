@@ -115,4 +115,55 @@ router.get('/me', protect, async (req, res) => {
   });
 });
 
+// @desc    Send password reset email via Supabase
+// @route   POST /api/auth/forgot-password
+// @access  Public
+router.post('/forgot-password', async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email) return res.status(400).json({ message: 'Email is required.' });
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password`,
+    });
+
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }
+
+    // Always return success to prevent email enumeration attacks
+    res.json({ message: 'If an account with that email exists, a reset link has been sent.' });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// @desc    Update user profile (name, country)
+// @route   PUT /api/auth/profile
+// @access  Private
+router.put('/profile', protect, async (req, res) => {
+  try {
+    const { name, country } = req.body;
+    const userId = req.user.id;
+
+    const { data, error } = await supabase
+      .from('users')
+      .update({ name, country })
+      .eq('id', userId)
+      .select()
+      .single();
+
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }
+
+    res.json({ profile: data });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 module.exports = router;

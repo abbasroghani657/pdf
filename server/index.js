@@ -12,11 +12,13 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
 const authRoutes = require('./routes/auth');
+const paymentsRoutes = require('./routes/payments');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
 
 // Middleware
-app.use(express.json());
+app.use(express.json({ limit: '100mb' }));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -34,6 +36,8 @@ app.use(cors({
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/payments', paymentsRoutes);
+app.use('/api/admin', adminRoutes);
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const GOTENBERG_URL   = process.env.GOTENBERG_URL   || 'http://localhost:3001'; // Office→PDF

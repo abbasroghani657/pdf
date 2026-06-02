@@ -45,7 +45,7 @@ export default function ToolPage() {
     }
     setUploadState('idle');
     setSelectedFiles([]);
-    setProcessedBlob(null);
+    setProcessedUrl(null);
     setProgress(0);
     setIsDragging(false);
     setErrorMsg('');
@@ -100,7 +100,7 @@ export default function ToolPage() {
         
         worker.onmessage = (e) => {
           if (e.data.success) {
-            setProcessedBlob(e.data.blob);
+            setProcessedUrl(URL.createObjectURL(e.data.blob));
             clearInterval(progressIntervalRef.current);
             setProgress(100);
             setTimeout(() => setUploadState('done'), 200);

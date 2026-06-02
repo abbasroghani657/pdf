@@ -55,9 +55,16 @@ import AdminSettings from './pages/admin/AdminSettings';
 import AdminSecurity from './pages/admin/AdminSecurity';
 import AdminEmails from './pages/admin/AdminEmails';
 import AdminSupport from './pages/admin/AdminSupport';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import DashboardPage from './pages/DashboardPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import PaymentSuccessPage from './pages/PaymentSuccessPage';
+import MockCheckoutPage from './pages/MockCheckoutPage';
+import { useAuth } from './contexts/AuthContext';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
-function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
+function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
   const links = [
     { id: '/', label: 'All Tools', icon: 'solar:box-linear' },
     { id: '/pricing', label: 'Pricing', icon: 'solar:tag-price-linear' },
@@ -135,12 +142,34 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
         </div>
 
         <div className="p-4 border-t border-gray-100 space-y-3 pb-safe">
-          <button onClick={() => { onNav('/pricing'); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
-            Sign in
-          </button>
-          <button onClick={() => { onNav('/pricing'); onClose(); }} className="w-full py-2.5 text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl transition-colors shadow-sm">
-            Go Premium — $4.99/mo
-          </button>
+          {user ? (
+            <>
+              <div className="flex items-center gap-3 px-2 mb-4">
+                <div className="w-10 h-10 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center font-bold text-lg">
+                  {user.profile?.name?.[0]?.toUpperCase() || user.email[0].toUpperCase()}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold text-gray-900 truncate">{user.profile?.name || 'User'}</p>
+                  <p className="text-xs text-gray-500 truncate">{user.email}</p>
+                </div>
+              </div>
+              <button onClick={() => { onNav('/dashboard'); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
+                Dashboard
+              </button>
+              <button onClick={() => { logout(); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-red-600 border border-red-100 hover:bg-red-50 rounded-xl transition-colors">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <button onClick={() => { onNav('/login'); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
+                Log in
+              </button>
+              <button onClick={() => { onNav('/register'); onClose(); }} className="w-full py-2.5 text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl transition-colors shadow-sm">
+                Sign up free
+              </button>
+            </>
+          )}
         </div>
       </div>
     </>
@@ -149,6 +178,7 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav }) {
 
 // ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function App() {
+  const { user, logout } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -366,12 +396,30 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
-            <button onClick={() => handleNavClick('/pricing')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
-              Sign in
-            </button>
-            <button onClick={() => handleNavClick('/pricing')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
-              Go Premium
-            </button>
+            {user ? (
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleNavClick('/dashboard')}>
+                  <div className="w-8 h-8 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center font-bold text-sm group-hover:bg-indigo-200 transition-colors">
+                    {user.profile?.name?.[0]?.toUpperCase() || user.email[0].toUpperCase()}
+                  </div>
+                  <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
+                    {user.profile?.name || 'Dashboard'}
+                  </span>
+                </div>
+                <button onClick={logout} className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors">
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <>
+                <button onClick={() => handleNavClick('/login')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
+                  Sign in
+                </button>
+                <button onClick={() => handleNavClick('/register')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
+                  Sign up
+                </button>
+              </>
+            )}
           </div>
 
           <button
@@ -555,6 +603,8 @@ export default function App() {
         onClose={() => setIsMobileMenuOpen(false)}
         pathname={location.pathname}
         onNav={handleNavClick}
+        user={user}
+        logout={logout}
       />}
 
       {/* ── HERO / HEADER ──────────────────────────────────────────────────── */}
@@ -656,6 +706,12 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/tools" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/payment-success" element={<PaymentSuccessPage />} />
+            <Route path="/mock-checkout" element={<MockCheckoutPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />

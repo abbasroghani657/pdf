@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
+import api from '../../utils/api';
+import { toast } from 'react-hot-toast';
 
 const BANNED_IPS = [
   { ip: '103.xxx.xxx.x', reason: 'Abuse (500 req/min)', date: '25/05/2026', by: 'Ahmed' },
@@ -7,24 +9,49 @@ const BANNED_IPS = [
   { ip: '185.xx.xxx.x', reason: 'DDoS attempt', date: '20/05/2026', by: 'System' },
 ];
 
-const ADMINS = [
-  { name: 'Zaheer A.', email: 'admin@pdfmaster.com', role: 'Super Admin', lastLogin: 'Just now', twoFA: true },
-  { name: 'Sara Khan', email: 'sara@pdfmaster.com', role: 'Admin', lastLogin: '2 hours ago', twoFA: true },
-  { name: 'Ali Support', email: 'support@pdfmaster.com', role: 'Support', lastLogin: '1 day ago', twoFA: false },
-];
-
-const AUDIT_LOG = [
-  { time: 'Today, 2:15 PM', admin: 'Zaheer A.', action: 'Banned IP 103.xxx.xxx.x', type: 'security' },
-  { time: 'Today, 1:30 PM', admin: 'Sara Khan', action: 'Upgraded user ali@gm.com to Pro', type: 'user' },
-  { time: 'Today, 11:00 AM', admin: 'Zaheer A.', action: 'Changed Pro Monthly price to $4.99', type: 'settings' },
-  { time: 'Yesterday, 4:00 PM', admin: 'System', action: 'Auto-banned 185.xx.xxx.x (DDoS)', type: 'system' },
-];
-
 export default function AdminSecurity() {
+  const [loading, setLoading] = useState(true);
+  const [logs, setLogs] = useState([]);
+  const [admins, setAdmins] = useState([]);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const [logsRes, usersRes] = await Promise.all([
+        api.get('/admin/security/logs').catch(() => ({ data: { success: false }})),
+        api.get('/admin/users').catch(() => ({ data: { success: false }}))
+      ]);
+
+      if (logsRes.data && logsRes.data.success) {
+        setLogs(logsRes.data.logs);
+      }
+      
+      if (usersRes.data && usersRes.data.success) {
+        const adminUsers = usersRes.data.users.filter(u => u.role === 'admin' || u.role === 'superadmin');
+        setAdmins(adminUsers);
+      }
+    } catch (error) {
+      console.error('Failed to fetch security data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h1 className="text-2xl font-bold text-gray-900">Security & Access</h1>
+        <button 
+          onClick={fetchData}
+          disabled={loading}
+          className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm disabled:opacity-50"
+        >
+          <iconify-icon icon={loading ? "line-md:loading-twotone-loop" : "solar:refresh-linear"}></iconify-icon> Refresh
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -103,17 +130,26 @@ export default function AdminSecurity() {
               </div>
             </div>
             <div className="space-y-3 mt-4">
-              {ADMINS.map((admin, i) => (
-                <div key={i} className="flex items-center justify-between p-3 border border-gray-100 rounded-xl hover:bg-gray-50 transition-colors">
-                  <div className="flex flex-col">
-                    <span className="text-sm font-bold text-gray-900 flex items-center gap-2">
-                      {admin.name} 
-                      <span className={clsx("px-2 py-0.5 rounded text-[10px] uppercase tracking-wider", admin.role === 'Super Admin' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700')}>{admin.role}</span>
-                    </span>
-                    <span className="text-xs text-gray-500 mt-0.5">{admin.email} • Last: {admin.lastLogin}</span>
+              {admins.length === 0 && !loading && (
+                <p className="text-sm text-gray-500 text-center py-4">No admins found.</p>
+              )}
+              {admins.map((admin, i) => (
+                <div key={admin.id || i} className="flex items-center justify-between p-3 border border-gray-100 rounded-xl hover:bg-gray-50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-[#378ADD] font-bold text-xs shrink-0">
+                      {(admin.name || admin.email || 'A').charAt(0).toUpperCase()}
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold text-gray-900 flex items-center gap-2">
+                        {admin.name || 'Unknown Admin'}
+                        <span className={clsx("px-2 py-0.5 rounded text-[10px] uppercase tracking-wider", admin.role === 'superadmin' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700')}>
+                          {admin.role === 'superadmin' ? 'Super Admin' : 'Admin'}
+                        </span>
+                      </span>
+                      <span className="text-xs text-gray-500 mt-0.5">{admin.email}</span>
+                    </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    {!admin.twoFA && <span className="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded">No 2FA</span>}
                     <button className="text-gray-400 hover:text-gray-700"><iconify-icon icon="solar:pen-bold" class="text-lg"></iconify-icon></button>
                   </div>
                 </div>
@@ -125,7 +161,7 @@ export default function AdminSecurity() {
         {/* BANNED IPS */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
           <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-            <h2 className="text-lg font-bold text-gray-900">Banned IPs</h2>
+            <h2 className="text-lg font-bold text-gray-900">Banned IPs (Mocked)</h2>
             <button className="text-sm font-bold text-red-600 hover:underline flex items-center gap-1">
               <iconify-icon icon="solar:shield-minus-bold"></iconify-icon> Add Ban
             </button>
@@ -159,35 +195,36 @@ export default function AdminSecurity() {
 
       {/* AUDIT LOG */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <div className="p-6 border-b border-gray-100">
+        <div className="p-6 border-b border-gray-100 flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900">Audit Log (Admin Actions)</h2>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm whitespace-nowrap">
             <tbody className="divide-y divide-gray-50">
-              {AUDIT_LOG.map((log, i) => (
-                <tr key={i} className="hover:bg-gray-50/50">
-                  <td className="py-4 px-6 text-gray-500 w-48">{log.time}</td>
-                  <td className="py-4 px-6 font-bold text-gray-900 w-48">{log.admin}</td>
+              {logs.length === 0 && !loading && (
+                <tr>
+                  <td colSpan="4" className="py-8 text-center text-gray-500">
+                    No security logs found.
+                  </td>
+                </tr>
+              )}
+              {logs.map((log) => (
+                <tr key={log.id} className="hover:bg-gray-50/50">
+                  <td className="py-4 px-6 text-gray-500 w-48">{new Date(log.created_at).toLocaleString()}</td>
+                  <td className="py-4 px-6 font-bold text-gray-900 w-48">{log.user_email || 'System'}</td>
                   <td className="py-4 px-6 text-gray-700">{log.action}</td>
                   <td className="py-4 px-6 text-right">
                     <span className={clsx(
                       "px-2 py-1 rounded text-[10px] uppercase font-bold tracking-wider",
-                      log.type === 'security' ? 'bg-red-50 text-red-600' :
-                      log.type === 'user' ? 'bg-blue-50 text-blue-600' :
-                      log.type === 'settings' ? 'bg-gray-100 text-gray-600' :
-                      'bg-purple-50 text-purple-600'
+                      log.status === 'error' ? 'bg-red-50 text-red-600' : 'bg-emerald-50 text-emerald-600'
                     )}>
-                      {log.type}
+                      {log.status || 'success'}
                     </span>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
-        <div className="p-4 bg-gray-50 border-t border-gray-100 text-center">
-          <button className="text-sm font-bold text-[#378ADD] hover:underline">View Full Audit Log</button>
         </div>
       </div>
     </div>

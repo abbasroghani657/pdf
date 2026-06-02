@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, Outlet, useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
+import { useAuth } from '../../contexts/AuthContext';
 
 const ADMIN_MENU = [
   { path: '/admin', icon: 'solar:pie-chart-2-bold', label: 'Dashboard' },
@@ -18,7 +19,29 @@ const ADMIN_MENU = [
 export default function AdminLayout() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Admin access guard — wait for user to fully load before checking
+  useEffect(() => {
+    // If user is loaded AND profile is loaded AND role is NOT admin → redirect
+    if (user !== undefined && user !== null && user.profile && !['admin', 'superadmin'].includes(user.profile.role)) {
+      navigate('/');
+    }
+    // If user is null (not logged in) → redirect to login
+    if (user === null) {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+
+  const initials = user?.profile?.name
+    ? user.profile.name.slice(0, 2).toUpperCase()
+    : (user?.email?.[0] || 'A').toUpperCase();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   return (
     <div className="min-h-screen bg-[#f3f4f6] flex font-sans text-gray-900">
@@ -66,14 +89,23 @@ export default function AdminLayout() {
           })}
         </div>
 
+        {/* Real user info at bottom */}
         <div className="p-4 border-t border-white/10">
-          <div className="flex items-center gap-3 px-4 py-3 bg-white/5 rounded-xl cursor-pointer hover:bg-white/10 transition-colors">
-            <div className="w-9 h-9 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-sm">Z</div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-bold text-white truncate">Zaheer A.</p>
-              <p className="text-xs text-slate-400 truncate">Super Admin</p>
+          <div className="flex items-center gap-3 px-3 py-3 bg-white/5 rounded-xl">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#378ADD] to-indigo-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+              {initials}
             </div>
-            <iconify-icon icon="solar:logout-2-outline" class="text-slate-400 hover:text-red-400 text-lg"></iconify-icon>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-bold text-white truncate">{user?.profile?.name || 'Admin'}</p>
+              <p className="text-xs text-slate-400 truncate capitalize">{user?.profile?.role || 'admin'}</p>
+            </div>
+            <button 
+              onClick={handleLogout}
+              title="Logout"
+              className="text-slate-400 hover:text-red-400 transition-colors"
+            >
+              <iconify-icon icon="solar:logout-2-outline" class="text-lg"></iconify-icon>
+            </button>
           </div>
         </div>
       </aside>
