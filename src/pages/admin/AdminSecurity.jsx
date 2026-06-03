@@ -3,16 +3,11 @@ import { clsx } from 'clsx';
 import api from '../../utils/api';
 import { toast } from 'react-hot-toast';
 
-const BANNED_IPS = [
-  { ip: '103.xxx.xxx.x', reason: 'Abuse (500 req/min)', date: '25/05/2026', by: 'Ahmed' },
-  { ip: '45.xxx.xxx.xx', reason: 'Spam accounts', date: '24/05/2026', by: 'Sara' },
-  { ip: '185.xx.xxx.x', reason: 'DDoS attempt', date: '20/05/2026', by: 'System' },
-];
-
 export default function AdminSecurity() {
   const [loading, setLoading] = useState(true);
   const [logs, setLogs] = useState([]);
   const [admins, setAdmins] = useState([]);
+  const [bannedUsers, setBannedUsers] = useState([]);
 
   const fetchData = async () => {
     setLoading(true);
@@ -24,6 +19,7 @@ export default function AdminSecurity() {
 
       if (logsRes.data && logsRes.data.success) {
         setLogs(logsRes.data.logs);
+        setBannedUsers(logsRes.data.bannedUsers || []);
       }
       
       if (usersRes.data && usersRes.data.success) {
@@ -87,28 +83,12 @@ export default function AdminSecurity() {
         </div>
 
         {/* SUSPICIOUS ACTIVITY */}
-        <div className="bg-red-50 rounded-2xl shadow-sm border border-red-100 p-6">
-          <h2 className="text-lg font-bold text-red-900 mb-4 flex items-center gap-2">
-            <iconify-icon icon="solar:danger-triangle-bold" class="text-xl"></iconify-icon>
-            Suspicious Activity Alerts
-          </h2>
-          <div className="space-y-3">
-            <div className="bg-white p-4 rounded-xl border border-red-200 shadow-sm">
-              <p className="text-sm font-bold text-gray-900">IP: 103.xxx.xxx.x</p>
-              <p className="text-xs text-red-600 mt-0.5">500 requests in 5 minutes (Today)</p>
-              <div className="flex gap-2 mt-3">
-                <button className="px-3 py-1.5 bg-red-600 text-white text-xs font-bold rounded-lg hover:bg-red-700">Ban IP</button>
-                <button className="px-3 py-1.5 bg-gray-100 text-gray-700 text-xs font-bold rounded-lg hover:bg-gray-200 border border-gray-200">Whitelist</button>
-              </div>
-            </div>
-            <div className="bg-white p-4 rounded-xl border border-red-200 shadow-sm">
-              <p className="text-sm font-bold text-gray-900">User: spam@xxx.com</p>
-              <p className="text-xs text-red-600 mt-0.5">Multiple accounts from same IP (Yesterday)</p>
-              <div className="flex gap-2 mt-3">
-                <button className="px-3 py-1.5 bg-red-600 text-white text-xs font-bold rounded-lg hover:bg-red-700">Ban User</button>
-              </div>
-            </div>
+        <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 flex flex-col items-center justify-center text-center">
+          <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4">
+            <iconify-icon icon="solar:shield-check-bold" class="text-3xl"></iconify-icon>
           </div>
+          <h2 className="text-lg font-bold text-emerald-800 mb-2">No Suspicious Activity</h2>
+          <p className="text-sm text-emerald-600">All systems are secure. Rate limiting and access controls are functioning normally.</p>
         </div>
       </div>
 
@@ -158,10 +138,10 @@ export default function AdminSecurity() {
           </div>
         </div>
 
-        {/* BANNED IPS */}
+        {/* BANNED USERS / IPS */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
           <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-            <h2 className="text-lg font-bold text-gray-900">Banned IPs (Mocked)</h2>
+            <h2 className="text-lg font-bold text-gray-900">Banned Users & IPs</h2>
             <button className="text-sm font-bold text-red-600 hover:underline flex items-center gap-1">
               <iconify-icon icon="solar:shield-minus-bold"></iconify-icon> Add Ban
             </button>
@@ -170,18 +150,25 @@ export default function AdminSecurity() {
             <table className="w-full text-left text-sm whitespace-nowrap">
               <thead className="bg-gray-50/80 border-b border-gray-100 text-gray-500">
                 <tr>
-                  <th className="py-3 px-6 font-semibold">IP Address</th>
+                  <th className="py-3 px-6 font-semibold">User / IP</th>
                   <th className="py-3 px-6 font-semibold">Reason</th>
                   <th className="py-3 px-6 font-semibold">Date</th>
                   <th className="py-3 px-6 font-semibold text-right">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
-                {BANNED_IPS.map((ban, i) => (
+                {bannedUsers.length === 0 && !loading && (
+                  <tr>
+                    <td colSpan="4" className="py-8 text-center text-gray-500">
+                      No banned users found.
+                    </td>
+                  </tr>
+                )}
+                {bannedUsers.map((ban, i) => (
                   <tr key={i} className="hover:bg-gray-50/50">
-                    <td className="py-3 px-6 font-bold text-gray-900">{ban.ip}</td>
-                    <td className="py-3 px-6 text-gray-600">{ban.reason}</td>
-                    <td className="py-3 px-6 text-gray-400 text-xs">{ban.date}</td>
+                    <td className="py-3 px-6 font-bold text-gray-900">{ban.email || ban.name || 'Unknown'}</td>
+                    <td className="py-3 px-6 text-gray-600">Violation of TOS</td>
+                    <td className="py-3 px-6 text-gray-400 text-xs">{new Date(ban.created_at).toLocaleDateString()}</td>
                     <td className="py-3 px-6 text-right">
                       <button className="text-xs font-bold text-gray-500 hover:text-gray-900 px-3 py-1.5 border border-gray-200 rounded-lg">Unban</button>
                     </td>

@@ -3,20 +3,6 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import api from '../../utils/api';
 import { toast } from 'react-hot-toast';
 
-const REVENUE_DATA = [
-  { name: 'May 1', value: 120 }, { name: 'May 5', value: 180 }, 
-  { name: 'May 10', value: 250 }, { name: 'May 15', value: 210 }, 
-  { name: 'May 20', value: 340 }, { name: 'May 25', value: 420 },
-];
-
-const TOP_TOOLS = [
-  { name: 'Compress PDF', uses: 847 },
-  { name: 'Chat PDF', uses: 634 },
-  { name: 'OCR PDF', uses: 521 },
-  { name: 'Merge PDF', uses: 489 },
-  { name: 'Translate PDF', uses: 312 },
-];
-
 export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({
@@ -26,6 +12,8 @@ export default function AdminDashboard() {
     totalRevenue: '$0.00'
   });
   const [recentSignups, setRecentSignups] = useState([]);
+  const [revenueData, setRevenueData] = useState([]);
+  const [topTools, setTopTools] = useState([]);
 
   const fetchDashboardData = async () => {
     setLoading(true);
@@ -34,6 +22,8 @@ export default function AdminDashboard() {
       if (res.data.success) {
         setStats(res.data.stats);
         setRecentSignups(res.data.recentSignups);
+        setRevenueData(res.data.revenueGraphData || []);
+        setTopTools(res.data.topToolsData || []);
       }
     } catch (error) {
       console.error('Failed to fetch admin stats:', error);
@@ -90,56 +80,55 @@ export default function AdminDashboard() {
         {/* REVENUE CHART */}
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg font-bold text-gray-900">Revenue (Mock Data)</h2>
-            <select className="text-sm border-none bg-gray-50 font-medium rounded-lg px-3 py-1.5 focus:ring-0 cursor-pointer text-gray-600">
-              <option>Last 30 Days</option>
-              <option>This Year</option>
-            </select>
+            <h2 className="text-lg font-bold text-gray-900">Revenue</h2>
+            <span className="text-xs text-gray-400 font-medium">Last 30 days</span>
           </div>
-          <div className="h-[300px] w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={REVENUE_DATA} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#378ADD" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#378ADD" stopOpacity={0}/>
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 12}} dy={10} />
-                <YAxis axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 12}} />
-                <Tooltip 
-                  contentStyle={{borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'}}
-                  itemStyle={{color: '#0f172a', fontWeight: 'bold'}}
-                />
-                <Area type="monotone" dataKey="value" stroke="#378ADD" strokeWidth={3} fillOpacity={1} fill="url(#colorRevenue)" />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
+          {loading ? (
+            <div className="h-[300px] flex items-center justify-center text-gray-400">
+              <iconify-icon icon="line-md:loading-twotone-loop" class="text-3xl text-[#378ADD]"></iconify-icon>
+            </div>
+          ) : revenueData.length === 0 ? (
+            <div className="h-[300px] flex flex-col items-center justify-center gap-3 text-gray-400">
+              <iconify-icon icon="solar:wallet-money-linear" class="text-5xl"></iconify-icon>
+              <p className="text-sm font-medium">No revenue data yet.</p>
+              <p className="text-xs text-gray-400">Revenue will appear here after the first payment.</p>
+            </div>
+          ) : (
+            <div className="h-[300px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={revenueData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#378ADD" stopOpacity={0.3}/>
+                      <stop offset="95%" stopColor="#378ADD" stopOpacity={0}/>
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
+                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 12}} dy={10} />
+                  <YAxis axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 12}} tickFormatter={(v) => `$${v}`} />
+                  <Tooltip 
+                    contentStyle={{borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'}}
+                    itemStyle={{color: '#0f172a', fontWeight: 'bold'}}
+                    formatter={(value) => [`$${value}`, 'Revenue']}
+                  />
+                  <Area type="monotone" dataKey="value" stroke="#378ADD" strokeWidth={3} fillOpacity={1} fill="url(#colorRevenue)" />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+          )}
         </div>
 
         {/* ALERTS & RECENT */}
         <div className="space-y-6">
           {/* ALERTS */}
-          <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
-            <h2 className="text-sm font-bold text-red-800 uppercase tracking-wider mb-4 flex items-center gap-2">
-              <iconify-icon icon="solar:danger-triangle-bold" class="text-lg"></iconify-icon>
-              Action Required (2)
-            </h2>
-            <div className="space-y-3">
-              <div className="bg-white/60 p-3 rounded-xl border border-red-200 text-sm text-red-900 flex gap-3">
-                <iconify-icon icon="solar:shield-warning-bold" class="text-red-500 text-xl shrink-0"></iconify-icon>
-                <div>
-                  <span className="font-bold">Suspicious IP Detected:</span> 103.xxx.xxx.x has hit rate limits 5 times.
-                </div>
-              </div>
-              <div className="bg-white/60 p-3 rounded-xl border border-red-200 text-sm text-red-900 flex gap-3">
-                <iconify-icon icon="solar:server-bold" class="text-red-500 text-xl shrink-0"></iconify-icon>
-                <div>
-                  <span className="font-bold">Python Service:</span> Memory usage above 85% for 10 minutes.
-                </div>
-              </div>
+          <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 flex flex-col items-center justify-center text-center">
+            <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-3">
+              <iconify-icon icon="solar:shield-check-bold" class="text-2xl"></iconify-icon>
             </div>
+            <h2 className="text-sm font-bold text-emerald-800 uppercase tracking-wider mb-1">
+              System Secure
+            </h2>
+            <p className="text-xs text-emerald-600 font-medium">No alerts or actions required at this time.</p>
           </div>
 
           {/* RECENT SIGNUPS */}
@@ -181,21 +170,30 @@ export default function AdminDashboard() {
 
       {/* TOP TOOLS */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-lg font-bold text-gray-900 mb-6">Top Tools Today (Mock Data)</h2>
-        <div className="h-[250px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={TOP_TOOLS} margin={{ top: 0, right: 0, left: -20, bottom: 0 }} layout="vertical">
-              <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f1f5f9" />
-              <XAxis type="number" axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 12}} />
-              <YAxis dataKey="name" type="category" axisLine={false} tickLine={false} tick={{fill: '#475569', fontSize: 13, fontWeight: 500}} width={120} />
-              <Tooltip 
-                cursor={{fill: '#f8fafc'}}
-                contentStyle={{borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'}}
-              />
-              <Bar dataKey="uses" fill="#378ADD" radius={[0, 4, 4, 0]} barSize={24} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        <h2 className="text-lg font-bold text-gray-900 mb-6">Top Tools Today</h2>
+        {loading ? (
+          <div className="h-[250px] flex items-center justify-center text-gray-400">Loading...</div>
+        ) : topTools.length === 0 ? (
+          <div className="h-[250px] flex flex-col items-center justify-center gap-2 text-gray-400">
+            <iconify-icon icon="solar:chart-2-linear" class="text-4xl"></iconify-icon>
+            <p className="text-sm font-medium">No tool usage recorded yet.</p>
+          </div>
+        ) : (
+          <div className="h-[250px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={topTools} margin={{ top: 0, right: 0, left: -20, bottom: 0 }} layout="vertical">
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f1f5f9" />
+                <XAxis type="number" axisLine={false} tickLine={false} tick={{fill: '#94a3b8', fontSize: 12}} />
+                <YAxis dataKey="name" type="category" axisLine={false} tickLine={false} tick={{fill: '#475569', fontSize: 13, fontWeight: 500}} width={120} />
+                <Tooltip 
+                  cursor={{fill: '#f8fafc'}}
+                  contentStyle={{borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'}}
+                />
+                <Bar dataKey="uses" fill="#378ADD" radius={[0, 4, 4, 0]} barSize={24} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        )}
       </div>
     </div>
   );

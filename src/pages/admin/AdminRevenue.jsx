@@ -3,22 +3,12 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import api from '../../utils/api';
 import { toast } from 'react-hot-toast';
 
-const MRR_DATA = [
-  { name: 'Jan', mrr: 800 }, { name: 'Feb', mrr: 1200 }, 
-  { name: 'Mar', mrr: 1800 }, { name: 'Apr', mrr: 2900 }, 
-  { name: 'May', mrr: 4280 }
-];
-
-const PLAN_DATA = [
-  { name: 'Pro Monthly', value: 3200, color: '#378ADD' },
-  { name: 'Pro Annual', value: 800, color: '#8b5cf6' },
-  { name: 'Business', value: 280, color: '#f59e0b' },
-];
-
 export default function AdminRevenue() {
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({ totalRevenue: '$0.00', proUsersCount: 0 });
   const [transactions, setTransactions] = useState([]);
+  const [mrrData, setMrrData] = useState([]);
+  const [planData, setPlanData] = useState([]);
 
   const fetchRevenueData = async () => {
     setLoading(true);
@@ -27,6 +17,8 @@ export default function AdminRevenue() {
       if (res.data.success) {
         setStats(res.data.stats);
         setTransactions(res.data.transactions);
+        setMrrData(res.data.mrrData || []);
+        setPlanData(res.data.planData || []);
       }
     } catch (error) {
       console.error('Failed to fetch revenue:', error);
@@ -61,10 +53,10 @@ export default function AdminRevenue() {
       {/* STATS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { label: 'TODAY', value: loading ? '...' : '$0.00', trend: '0%', color: 'text-gray-400' },
-          { label: 'THIS MONTH', value: loading ? '...' : stats.totalRevenue, trend: 'Active', color: 'text-emerald-500' },
-          { label: 'PRO SUBSCRIBERS', value: loading ? '...' : stats.proUsersCount.toString(), trend: 'Active', color: 'text-blue-500' },
-          { label: 'TOTAL (ALL TIME)', value: loading ? '...' : stats.totalRevenue, trend: 'Growing', color: 'text-emerald-500' },
+          { label: 'TODAY', value: loading ? '...' : stats.revenueToday || '$0.00', trend: '0%', color: 'text-gray-400' },
+          { label: 'THIS MONTH', value: loading ? '...' : stats.revenueThisMonth || '$0.00', trend: 'Active', color: 'text-emerald-500' },
+          { label: 'PRO SUBSCRIBERS', value: loading ? '...' : (stats.proUsersCount || 0).toString(), trend: 'Active', color: 'text-blue-500' },
+          { label: 'TOTAL (ALL TIME)', value: loading ? '...' : stats.totalRevenue || '$0.00', trend: 'Growing', color: 'text-emerald-500' },
         ].map((stat, i) => (
           <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
@@ -80,10 +72,10 @@ export default function AdminRevenue() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* MRR GROWTH */}
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-6">MRR Growth (Mocked Graph)</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-6">MRR Growth</h2>
           <div className="h-[300px] w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={MRR_DATA} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+              <AreaChart data={mrrData.length > 0 ? mrrData : [{name: 'Loading', mrr: 0}]} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorMrr" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
@@ -95,7 +87,7 @@ export default function AdminRevenue() {
                 <YAxis axisLine={false} tickLine={false} tick={{fill: '#94a3b8'}} tickFormatter={(v) => `$${v}`} />
                 <Tooltip 
                   contentStyle={{borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'}}
-                  formatter={(value) => [`$${value}`, 'MRR']}
+                  formatter={(value) => [`$${value}`, 'Revenue']}
                 />
                 <Area type="monotone" dataKey="mrr" stroke="#10b981" strokeWidth={4} fillOpacity={1} fill="url(#colorMrr)" />
               </AreaChart>
@@ -105,12 +97,12 @@ export default function AdminRevenue() {
 
         {/* REVENUE BREAKDOWN */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
-          <h2 className="text-lg font-bold text-gray-900 mb-6">Revenue Breakdown (Mocked Graph)</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-6">Revenue Breakdown</h2>
           <div className="h-[200px] w-full mb-6 relative">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie data={PLAN_DATA} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value">
-                  {PLAN_DATA.map((entry, index) => (
+                <Pie data={planData.length > 0 ? planData : [{name: 'No data', value: 1, color: '#e2e8f0'}]} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value">
+                  {planData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
@@ -125,7 +117,7 @@ export default function AdminRevenue() {
             </div>
           </div>
           <div className="space-y-4 flex-1">
-            {PLAN_DATA.map((plan, i) => (
+            {planData.map((plan, i) => (
               <div key={i} className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full" style={{backgroundColor: plan.color}}></span>
