@@ -63,7 +63,10 @@ export default function AdminEmails() {
               <h2 className="text-lg font-bold text-gray-900">Bulk Campaigns</h2>
               <p className="text-sm text-gray-500 mt-1">Send marketing emails or announcements to specific user segments.</p>
             </div>
-            <button className="flex items-center justify-center gap-2 px-6 py-2.5 bg-[#378ADD] text-white rounded-xl text-sm font-bold hover:bg-blue-600 transition-colors shadow-sm shadow-blue-500/30">
+            <button 
+              onClick={() => toast('Campaign builder coming soon', { icon: '🚧' })}
+              className="flex items-center justify-center gap-2 px-6 py-2.5 bg-[#378ADD] text-white rounded-xl text-sm font-bold hover:bg-blue-600 transition-colors shadow-sm shadow-blue-500/30"
+            >
               <iconify-icon icon="solar:pen-new-square-bold"></iconify-icon>
               New Campaign
             </button>
@@ -147,7 +150,10 @@ export default function AdminEmails() {
               <h3 className="font-bold text-gray-900 mb-1">Create Custom Template</h3>
               <p className="text-sm text-gray-500">Design your own HTML email templates for API usage or custom events.</p>
             </div>
-            <button className="px-4 py-2 border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 shadow-sm">
+            <button 
+              onClick={() => toast('Template editor coming soon', { icon: '🚧' })}
+              className="px-4 py-2 border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 shadow-sm"
+            >
               + New Template
             </button>
           </div>

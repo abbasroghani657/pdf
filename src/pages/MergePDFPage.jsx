@@ -11,7 +11,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 
 const { getDocument } = pdfjsLib;
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3005';
+
 
 // ── Step indicator ─────────────────────────────────────────────────────────────
 function StepIndicator({ step }) {
@@ -310,7 +310,7 @@ export default function MergePDFPage() {
       formData.append('tool', 'Merge PDF');
       pdfs.forEach((pdf) => formData.append('file', pdf.file, pdf.name));
 
-      const res = await processWithQueue(`${API_BASE}/api/process`, formData, (status) => {
+      const res = await processWithQueue(`/api/process`, formData, (status) => {
         // We can update state if needed based on queue position
       }, false, true);
 

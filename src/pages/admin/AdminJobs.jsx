@@ -101,7 +101,6 @@ export default function AdminJobs() {
             {[
               { name: 'Python Service', key: 'python' },
               { name: 'Gotenberg', key: 'gotenberg' },
-              { name: 'Gemini API', key: null },
               { name: 'Database', key: 'database' },
             ].map((service, i) => {
               const isOnline = service.key === null ? true : serviceHealth[service.key];

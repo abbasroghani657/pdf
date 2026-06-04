@@ -152,27 +152,15 @@ export default function AdminAnalytics() {
         </div>
 
         {/* DEMOGRAPHICS */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 grid grid-cols-2 gap-6">
-          <div>
-            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Device Split</h2>
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm"><span className="text-gray-500">Desktop (Default)</span><span className="font-bold">{stats.visitors > 0 ? '100%' : '0%'}</span></div>
-              <div className="flex justify-between text-sm"><span className="text-gray-500">Mobile</span><span className="font-bold">0%</span></div>
-            </div>
-            <div className="w-full h-2 flex rounded-full overflow-hidden mt-3 bg-gray-100">
-              {stats.visitors > 0 && <div className="bg-blue-500" style={{width: '100%'}}></div>}
-            </div>
-          </div>
-          <div>
-            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Top Referrers</h2>
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm"><span className="text-gray-500">Direct</span><span className="font-bold">{stats.visitors > 0 ? '100%' : '0%'}</span></div>
-              <div className="flex justify-between text-sm"><span className="text-gray-500">Google / Search</span><span className="font-bold">0%</span></div>
-            </div>
-            <div className="w-full h-2 flex rounded-full overflow-hidden mt-3 bg-gray-100">
-              {stats.visitors > 0 && <div className="bg-emerald-500" style={{width: '100%'}}></div>}
-            </div>
-          </div>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center justify-center min-h-[200px] text-center">
+          <iconify-icon icon="solar:chart-square-bold-duotone" class="text-4xl text-[#378ADD] opacity-50 mb-3"></iconify-icon>
+          <h2 className="text-base font-bold text-gray-900 mb-1">Advanced Demographics</h2>
+          <p className="text-sm text-gray-500 mb-4 max-w-sm">
+            Device split, referrers, and deeper demographic insights will be available once Google Analytics is integrated.
+          </p>
+          <span className="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-lg border border-blue-100">
+            Coming Soon
+          </span>
         </div>
       </div>
     </div>

@@ -66,6 +66,7 @@ CREATE TABLE IF NOT EXISTS public.tool_usage (
   tool_name     TEXT NOT NULL,
   file_size     BIGINT DEFAULT 0,       -- in bytes
   status        TEXT DEFAULT 'success' CHECK (status IN ('success', 'error', 'cancelled')),
+  error_message TEXT,
   ip_address    TEXT,
   created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
