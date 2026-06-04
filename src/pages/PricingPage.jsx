@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { clsx } from 'clsx';
 
 export default function PricingPage() {
-  const { isPro } = useAuth();
+  const { isPro, upgradeToPro } = useAuth();
   const [pricingPeriod, setPricingPeriod] = useState('monthly'); // monthly | annual
 
   return (
@@ -94,7 +94,12 @@ export default function PricingPage() {
               </li>
             ))}
           </ul>
-          <button onClick={() => window.location.href = 'mailto:pro@pdfmaster.com?subject=Pro Plan'} className="w-full py-3 px-4 bg-[#378ADD] hover:bg-[#2b71b8] rounded-xl text-sm font-semibold text-white transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+          <button onClick={() => {
+            if (!isPro) {
+              upgradeToPro(pricingPeriod);
+            }
+          }} 
+          className="w-full py-3 px-4 bg-[#378ADD] hover:bg-[#2b71b8] rounded-xl text-sm font-semibold text-white transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
             Get Pro — {pricingPeriod === 'annual' ? '$3.99' : '$4.99'}/mo
           </button>
         </div>

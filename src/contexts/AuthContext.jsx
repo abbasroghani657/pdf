@@ -77,14 +77,14 @@ export function AuthProvider({ children }) {
   };
 
   // Redirect user to Stripe Checkout for Pro upgrade
-  const upgradeToPro = async () => {
+  const upgradeToPro = async (plan = 'monthly') => {
     if (!user) {
       toast.error('Please log in first to upgrade.');
       return;
     }
     
     try {
-      const res = await api.post('/payments/create-checkout-session');
+      const res = await api.post('/payments/create-checkout-session', { plan });
       if (res.data.url) {
         // Redirect to Stripe hosted checkout page
         window.location.href = res.data.url;

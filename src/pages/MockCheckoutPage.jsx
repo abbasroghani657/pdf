@@ -7,6 +7,7 @@ import { toast } from 'react-hot-toast';
 export default function MockCheckoutPage() {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get('session_id');
+  const plan = searchParams.get('plan') || 'monthly';
   const navigate = useNavigate();
   const { user } = useAuth();
   
@@ -29,7 +30,7 @@ export default function MockCheckoutPage() {
       // Simulate network delay to feel like a real payment gateway
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      const res = await api.post('/payments/mock-webhook');
+      const res = await api.post('/payments/mock-webhook', { plan });
       if (res.data.success) {
         navigate(`/payment-success?session_id=${sessionId}`);
       } else {
@@ -71,7 +72,7 @@ export default function MockCheckoutPage() {
             </div>
             <div className="text-right">
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Amount</p>
-              <p className="text-2xl font-extrabold text-[#378ADD] mt-1">$4.99<span className="text-sm text-gray-500 font-medium">/mo</span></p>
+              <p className="text-2xl font-extrabold text-[#378ADD] mt-1">{plan === 'annual' ? '$47.88' : '$4.99'}<span className="text-sm text-gray-500 font-medium">{plan === 'annual' ? '/yr' : '/mo'}</span></p>
             </div>
           </div>
 
@@ -138,7 +139,7 @@ export default function MockCheckoutPage() {
                 <iconify-icon icon="line-md:loading-twotone-loop" class="text-xl"></iconify-icon>
               ) : (
                 <span className="flex items-center gap-2">
-                  Pay $4.99
+                  Pay {plan === 'annual' ? '$47.88' : '$4.99'}
                   <iconify-icon icon="solar:arrow-right-line-duotone" class="text-lg group-hover:translate-x-1 transition-transform"></iconify-icon>
                 </span>
               )}
