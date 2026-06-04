@@ -18,6 +18,8 @@ export default function AdminSecurity() {
   const [showAddAdmin, setShowAddAdmin] = useState(false);
   const [showAddBan, setShowAddBan] = useState(false);
   const [newAdminEmail, setNewAdminEmail] = useState('');
+  const [newAdminRole, setNewAdminRole] = useState('admin');
+  const [addingAdmin, setAddingAdmin] = useState(false);
   const [newBanEmail, setNewBanEmail] = useState('');
   const [editingRole, setEditingRole] = useState(null);
 
@@ -67,19 +69,30 @@ export default function AdminSecurity() {
 
   const handleAddAdmin = async () => {
     if (!newAdminEmail.trim()) return toast.error('Enter an email address.');
+    setAddingAdmin(true);
     try {
       const usersRes = await api.get('/admin/users');
-      const target = usersRes.data.users?.find(u => u.email === newAdminEmail.trim());
-      if (!target) return toast.error('User not found with that email.');
-      await api.put(`/admin/users/${target.id}/role`, { role: 'admin' }).catch(() => {
-        throw new Error('Role update not available');
-      });
-      toast.success(`${newAdminEmail} promoted to Admin!`);
+      const target = usersRes.data.users?.find(u => u.email.toLowerCase() === newAdminEmail.trim().toLowerCase());
+      if (!target) return toast.error('No account found with that email. Ask the user to sign up first.');
+      if (target.role === newAdminRole) return toast.error(`This user is already a ${newAdminRole}.`);
+
+      const res = await api.put(`/admin/users/${target.id}/role`, { role: newAdminRole });
+      const roleLabel = newAdminRole === 'superadmin' ? 'Super Admin' : 'Admin';
+
+      if (res.data.emailSent) {
+        toast.success(`✅ ${target.email} promoted to ${roleLabel}! Invitation email sent.`, { duration: 5000 });
+      } else {
+        toast.success(`✅ ${target.email} role updated to ${roleLabel}.`);
+      }
+
       setNewAdminEmail('');
+      setNewAdminRole('admin');
       setShowAddAdmin(false);
       fetchData();
     } catch (e) {
-      toast.error(e.message || 'Failed to add admin.');
+      toast.error(e.response?.data?.message || e.message || 'Failed to add admin.');
+    } finally {
+      setAddingAdmin(false);
     }
   };
 
@@ -209,25 +222,82 @@ export default function AdminSecurity() {
                 onClick={() => setShowAddAdmin(v => !v)}
                 className="text-sm font-bold text-[#378ADD] hover:underline flex items-center gap-1"
               >
-                <iconify-icon icon="solar:user-plus-bold"></iconify-icon> Add Admin
+                <iconify-icon icon="solar:user-plus-bold"></iconify-icon>
+                {showAddAdmin ? 'Cancel' : 'Add Admin'}
               </button>
             )}
           </div>
+
+          {/* ── Add Admin Modal ────────────────────────────────── */}
           {showAddAdmin && isSuperAdmin && (
-            <div className="px-6 pt-4 flex gap-2">
-              <input
-                type="email"
-                placeholder="user@email.com"
-                value={newAdminEmail}
-                onChange={e => setNewAdminEmail(e.target.value)}
-                className="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]"
-              />
-              <button
-                onClick={handleAddAdmin}
-                className="px-4 py-2 bg-[#378ADD] text-white text-sm font-bold rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                Add
-              </button>
+            <div className="mx-6 my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100 space-y-4">
+              <div className="flex items-center gap-2 mb-1">
+                <iconify-icon icon="solar:user-plus-bold" class="text-[#378ADD] text-xl"></iconify-icon>
+                <h3 className="text-sm font-bold text-gray-900">Invite a New Admin</h3>
+              </div>
+              <p className="text-xs text-gray-500">The user must already have a PDFMaster account. An invitation email will be sent automatically.</p>
+
+              <div className="space-y-3">
+                <div>
+                  <label className="text-xs font-bold text-gray-600 block mb-1">User Email</label>
+                  <input
+                    type="email"
+                    placeholder="user@example.com"
+                    value={newAdminEmail}
+                    onChange={e => setNewAdminEmail(e.target.value)}
+                    onKeyDown={e => e.key === 'Enter' && handleAddAdmin()}
+                    className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-[#378ADD] focus:border-[#378ADD] bg-white"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-xs font-bold text-gray-600 block mb-1">Assign Role</label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => setNewAdminRole('admin')}
+                      className={clsx(
+                        'flex items-center gap-2 p-3 rounded-xl border-2 text-sm font-semibold transition-all',
+                        newAdminRole === 'admin'
+                          ? 'border-[#378ADD] bg-blue-50 text-[#378ADD]'
+                          : 'border-gray-200 bg-white text-gray-500 hover:border-gray-300'
+                      )}
+                    >
+                      <iconify-icon icon="solar:shield-user-bold"></iconify-icon>
+                      <div className="text-left">
+                        <div>Admin</div>
+                        <div className="text-[10px] font-normal opacity-70">Full access, no settings</div>
+                      </div>
+                    </button>
+                    <button
+                      onClick={() => setNewAdminRole('superadmin')}
+                      className={clsx(
+                        'flex items-center gap-2 p-3 rounded-xl border-2 text-sm font-semibold transition-all',
+                        newAdminRole === 'superadmin'
+                          ? 'border-purple-500 bg-purple-50 text-purple-700'
+                          : 'border-gray-200 bg-white text-gray-500 hover:border-gray-300'
+                      )}
+                    >
+                      <iconify-icon icon="solar:crown-bold"></iconify-icon>
+                      <div className="text-left">
+                        <div>Super Admin</div>
+                        <div className="text-[10px] font-normal opacity-70">All access including settings</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleAddAdmin}
+                  disabled={addingAdmin || !newAdminEmail.trim()}
+                  className="w-full py-2.5 bg-[#378ADD] text-white text-sm font-bold rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                  {addingAdmin ? (
+                    <><iconify-icon icon="line-md:loading-twotone-loop"></iconify-icon> Sending Invitation...</>
+                  ) : (
+                    <><iconify-icon icon="solar:letter-bold"></iconify-icon> Grant Access & Send Email</>
+                  )}
+                </button>
+              </div>
             </div>
           )}
           <div className="p-6 space-y-4 flex-1">

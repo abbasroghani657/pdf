@@ -2,6 +2,75 @@ const express = require('express');
 const router = express.Router();
 const supabase = require('../config/supabase');
 const { protect, admin, superadmin } = require('../middleware/auth');
+const nodemailer = require('nodemailer');
+
+// ─── Shared mail transporter ───────────────────────────────────────────────────
+function getTransporter() {
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+}
+
+async function sendRoleInvitationEmail({ toEmail, toName, newRole, assignedByName, siteUrl }) {
+  const roleLabel = newRole === 'superadmin' ? 'Super Admin' : 'Admin';
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background:#f3f4f6; margin:0; padding:0; }
+    .wrap { max-width:560px; margin:40px auto; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.08); }
+    .header { background:linear-gradient(135deg,#378ADD,#8b5cf6); padding:36px 32px; text-align:center; }
+    .header img { width:44px; height:44px; border-radius:10px; }
+    .header h1 { color:#fff; font-size:22px; margin:12px 0 0; }
+    .body { padding:32px; }
+    .badge { display:inline-block; background:${newRole === 'superadmin' ? '#7c3aed' : '#1e40af'}; color:#fff; padding:4px 14px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:20px; }
+    .body h2 { color:#111827; font-size:20px; margin:0 0 12px; }
+    .body p  { color:#4b5563; font-size:15px; line-height:1.7; margin:0 0 16px; }
+    .cta { text-align:center; margin:28px 0; }
+    .btn { background:linear-gradient(135deg,#378ADD,#8b5cf6); color:#fff!important; text-decoration:none; padding:14px 36px; border-radius:10px; font-size:15px; font-weight:700; display:inline-block; }
+    .info-box { background:#f0f9ff; border:1px solid #bae6fd; border-radius:10px; padding:16px 20px; margin:20px 0; }
+    .info-box p { color:#0c4a6e; margin:0; font-size:14px; }
+    .footer { text-align:center; padding:20px 32px; border-top:1px solid #f3f4f6; color:#9ca3af; font-size:12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>PDFMaster Admin Panel</h1>
+    </div>
+    <div class="body">
+      <span class="badge">${roleLabel} Invitation</span>
+      <h2>You've been granted ${roleLabel} access!</h2>
+      <p>Hi${toName ? ` <strong>${toName}</strong>` : ''},</p>
+      <p><strong>${assignedByName}</strong> has assigned you the <strong>${roleLabel}</strong> role on PDFMaster. You can now access the Admin Panel to manage users, tools, and platform operations.</p>
+      <div class="info-box">
+        <p><strong>Your new role:</strong> ${roleLabel}</p>
+        <p style="margin-top:8px"><strong>Assigned by:</strong> ${assignedByName}</p>
+      </div>
+      <div class="cta">
+        <a href="${siteUrl}/admin" class="btn">Open Admin Panel →</a>
+      </div>
+      <p style="font-size:13px;color:#6b7280">If you did not expect this invitation, please contact support immediately at <a href="mailto:${process.env.EMAIL_USER}">${process.env.EMAIL_USER}</a>.</p>
+    </div>
+    <div class="footer">© ${new Date().getFullYear()} PDFMaster. All rights reserved.</div>
+  </div>
+</body>
+</html>`;
+
+  const transporter = getTransporter();
+  await transporter.sendMail({
+    from: `"PDFMaster Admin" <${process.env.EMAIL_USER}>`,
+    to: toEmail,
+    subject: `🎉 You've been made a ${roleLabel} on PDFMaster`,
+    html,
+  });
+}
 
 // @desc    Get Admin Dashboard Analytics
 // @route   GET /api/admin/dashboard-stats
@@ -156,29 +225,61 @@ router.put('/users/:id/pro', protect, admin, async (req, res) => {
   }
 });
 
-// @desc    Update user role (Add Admin)
+// @desc    Update user role (Add Admin / Super Admin)
 // @route   PUT /api/admin/users/:id/role
 // @access  Private/SuperAdmin
 router.put('/users/:id/role', protect, superadmin, async (req, res) => {
   try {
     const { role } = req.body;
-    if (!['user','admin','superadmin'].includes(role)) {
+    if (!['user', 'admin', 'superadmin'].includes(role)) {
       return res.status(400).json({ message: 'Invalid role' });
     }
+
+    // Fetch target user info
+    const { data: targetUser, error: fetchErr } = await supabase
+      .from('users').select('id, email, name, role')
+      .eq('id', req.params.id).single();
+
+    if (fetchErr || !targetUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Prevent demoting your own superadmin
+    if (req.user.id === req.params.id && role !== 'superadmin') {
+      return res.status(400).json({ message: 'You cannot demote your own superadmin account.' });
+    }
+
+    // Update role in DB
     const { data, error } = await supabase
-      .from('users')
-      .update({ role })
-      .eq('id', req.params.id)
-      .select()
-      .single();
-      
+      .from('users').update({ role })
+      .eq('id', req.params.id).select().single();
+
     if (error) throw error;
-    res.json({ success: true, user: data });
+
+    // Send invitation email (non-critical)
+    if (role !== 'user') {
+      try {
+        const assignerName = req.user?.profile?.name || req.user?.email || 'Super Admin';
+        const siteUrl = process.env.APP_URL || 'http://localhost:3000';
+        await sendRoleInvitationEmail({
+          toEmail: targetUser.email,
+          toName: targetUser.name,
+          newRole: role,
+          assignedByName: assignerName,
+          siteUrl,
+        });
+      } catch (mailErr) {
+        console.warn('[Role Invite Email] Failed to send:', mailErr.message);
+      }
+    }
+
+    res.json({ success: true, user: data, emailSent: role !== 'user' });
   } catch (error) {
     console.error('[Admin Update Role Error]:', error);
     res.status(500).json({ message: 'Failed to update role' });
   }
 });
+
 
 // @desc    Get Revenue Data
 // @route   GET /api/admin/revenue
