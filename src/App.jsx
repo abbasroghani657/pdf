@@ -64,6 +64,7 @@ import MockCheckoutPage from './pages/MockCheckoutPage';
 import { useAuth } from './contexts/AuthContext';
 import AcceptInvite from './pages/AcceptInvite';
 import InviteResponse from './pages/InviteResponse';
+import ProtectedRoute from './components/ProtectedRoute';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
 function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
@@ -287,17 +288,19 @@ export default function App() {
       <>
         <Toaster position="top-right" />
         <Routes>
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<AdminDashboard />} />
-            <Route path="users" element={<AdminUsers />} />
-            <Route path="revenue" element={<AdminRevenue />} />
-            <Route path="jobs" element={<AdminJobs />} />
-            <Route path="tools" element={<AdminTools />} />
-            <Route path="analytics" element={<AdminAnalytics />} />
-            <Route path="settings" element={<AdminSettings />} />
-            <Route path="security" element={<AdminSecurity />} />
-            <Route path="emails" element={<AdminEmails />} />
-            <Route path="support" element={<AdminSupport />} />
+          <Route element={<ProtectedRoute requireAdmin={true} />}>
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="users" element={<AdminUsers />} />
+              <Route path="revenue" element={<AdminRevenue />} />
+              <Route path="jobs" element={<AdminJobs />} />
+              <Route path="tools" element={<AdminTools />} />
+              <Route path="analytics" element={<AdminAnalytics />} />
+              <Route path="settings" element={<AdminSettings />} />
+              <Route path="security" element={<AdminSecurity />} />
+              <Route path="emails" element={<AdminEmails />} />
+              <Route path="support" element={<AdminSupport />} />
+            </Route>
           </Route>
         </Routes>
       </>
@@ -710,7 +713,9 @@ export default function App() {
             <Route path="/tools" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/dashboard" element={<DashboardPage />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/dashboard" element={<DashboardPage />} />
+            </Route>
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />

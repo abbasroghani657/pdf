@@ -178,4 +178,47 @@ router.put('/profile', protect, async (req, res) => {
   }
 });
 
+// @desc    Get user-specific usage stats (files processed, storage saved)
+// @route   GET /api/auth/stats
+// @access  Private
+router.get('/stats', protect, async (req, res) => {
+  try {
+    const userId = req.user.id;
+
+    // Count total tool usage jobs for this user
+    const { count: filesProcessed } = await supabase
+      .from('tool_usage')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', userId);
+
+    // Sum bytes_saved (compression savings) for this user
+    const { data: savingsData } = await supabase
+      .from('tool_usage')
+      .select('bytes_saved')
+      .eq('user_id', userId)
+      .not('bytes_saved', 'is', null);
+
+    const totalBytesSaved = savingsData
+      ? savingsData.reduce((acc, row) => acc + (Number(row.bytes_saved) || 0), 0)
+      : 0;
+
+    // Format bytes saved into human-readable string
+    const formatBytes = (bytes) => {
+      if (bytes === 0) return '0 B';
+      if (bytes < 1024) return `${bytes} B`;
+      if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+      return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    };
+
+    res.json({
+      success: true,
+      filesProcessed: filesProcessed || 0,
+      storageSaved: formatBytes(totalBytesSaved),
+    });
+  } catch (error) {
+    console.error('[User Stats Error]:', error);
+    res.status(500).json({ message: 'Failed to fetch user stats.' });
+  }
+});
+
 module.exports = router;

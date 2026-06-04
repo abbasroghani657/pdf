@@ -9,6 +9,7 @@ export default function AdminSupport() {
   const [activeTicket, setActiveTicket] = useState(null);
   const [reply, setReply] = useState('');
   const [filterStatus, setFilterStatus] = useState('open');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const fetchTickets = async () => {
     setLoading(true);
@@ -59,9 +60,17 @@ export default function AdminSupport() {
   }, []);
 
   const filteredTickets = tickets.filter(t => {
-    if (filterStatus === 'open') return t.status === 'open' || t.status === 'pending';
-    if (filterStatus === 'closed') return t.status === 'closed' || t.status === 'resolved';
-    return true;
+    const matchesStatus = filterStatus === 'open'
+      ? (t.status === 'open' || t.status === 'pending')
+      : filterStatus === 'closed'
+      ? (t.status === 'closed' || t.status === 'resolved')
+      : true;
+    const q = searchQuery.toLowerCase();
+    const matchesSearch = !q ||
+      (t.subject || '').toLowerCase().includes(q) ||
+      (t.user_email || '').toLowerCase().includes(q) ||
+      (t.message || '').toLowerCase().includes(q);
+    return matchesStatus && matchesSearch;
   });
 
   const openCount = tickets.filter(t => t.status === 'open' || t.status === 'pending').length;
@@ -92,6 +101,8 @@ export default function AdminSupport() {
             <input 
               type="text" 
               placeholder="Search tickets..." 
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3 py-2 bg-gray-50 border-transparent rounded-lg text-sm focus:ring-[#378ADD] focus:bg-white"
             />
           </div>

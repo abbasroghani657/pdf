@@ -14,16 +14,29 @@ export default function AdminDashboard() {
   const [recentSignups, setRecentSignups] = useState([]);
   const [revenueData, setRevenueData] = useState([]);
   const [topTools, setTopTools] = useState([]);
+  const [trends, setTrends] = useState({ revenue: null, users: null, newToday: null, pro: null });
 
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
       const res = await api.get('/admin/dashboard-stats');
       if (res.data.success) {
-        setStats(res.data.stats);
+        const s = res.data.stats;
+        setStats(s);
         setRecentSignups(res.data.recentSignups);
         setRevenueData(res.data.revenueGraphData || []);
         setTopTools(res.data.topToolsData || []);
+
+        // Compute real trend labels from data
+        const newTodayTrend = s.newToday > 0 ? `+${s.newToday} today` : 'None today';
+        const proRate = s.totalUsers > 0 ? ((s.proUsers / s.totalUsers) * 100).toFixed(0) : 0;
+        const proTrend = `${proRate}% of users`;
+        setTrends({
+          revenue: s.totalRevenue === '$0.00' ? 'No sales yet' : 'All time',
+          users: `Total registered`,
+          newToday: newTodayTrend,
+          pro: proTrend,
+        });
       }
     } catch (error) {
       console.error('Failed to fetch admin stats:', error);
@@ -54,10 +67,10 @@ export default function AdminDashboard() {
       {/* STATS CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { title: 'Total Revenue', value: stats.totalRevenue, trend: '+0%', color: 'from-emerald-500 to-teal-400', icon: 'solar:wallet-money-bold' },
-          { title: 'Total Users', value: stats.totalUsers, trend: '+0%', color: 'from-[#378ADD] to-indigo-500', icon: 'solar:users-group-rounded-bold' },
-          { title: 'New Today', value: stats.newToday, trend: '+0%', color: 'from-amber-400 to-orange-400', icon: 'solar:user-plus-bold' },
-          { title: 'Pro Subscribers', value: stats.proUsers, trend: '+0%', color: 'from-purple-500 to-pink-500', icon: 'solar:crown-star-bold' },
+          { title: 'Total Revenue', value: stats.totalRevenue, trend: trends.revenue, color: 'from-emerald-500 to-teal-400', icon: 'solar:wallet-money-bold' },
+          { title: 'Total Users', value: stats.totalUsers, trend: trends.users, color: 'from-[#378ADD] to-indigo-500', icon: 'solar:users-group-rounded-bold' },
+          { title: 'New Today', value: stats.newToday, trend: trends.newToday, color: 'from-amber-400 to-orange-400', icon: 'solar:user-plus-bold' },
+          { title: 'Pro Subscribers', value: stats.proUsers, trend: trends.pro, color: 'from-purple-500 to-pink-500', icon: 'solar:crown-star-bold' },
         ].map((stat, i) => (
           <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-5">
             <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center text-white shadow-md shrink-0`}>

@@ -13,11 +13,6 @@ const QUICK_TOOLS = [
   { label: 'Protect PDF', icon: 'solar:lock-password-bold', color: 'text-red-600 bg-red-50', path: '/tools/protect-pdf' },
 ];
 
-const STAT_CARDS = [
-  { label: 'Files Processed', value: '—', icon: 'solar:document-bold', color: 'bg-blue-500', sub: 'All time' },
-  { label: 'Storage Saved', value: '—', icon: 'solar:database-bold', color: 'bg-emerald-500', sub: 'Compressed' },
-  { label: 'Current Plan', value: null, icon: 'solar:crown-bold', color: 'bg-amber-500', sub: 'Upgrade for more' },
-];
 
 export default function DashboardPage() {
   const { user, isPro, logout, upgradeToPro, updateProfile } = useAuth();
@@ -26,6 +21,7 @@ export default function DashboardPage() {
   const [editForm, setEditForm] = useState({ name: '', country: '' });
   const [isSaving, setIsSaving] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [userStats, setUserStats] = useState({ filesProcessed: '—', storageSaved: '—' });
 
   useEffect(() => {
     if (!user) navigate('/login');
@@ -34,6 +30,15 @@ export default function DashboardPage() {
         name: user.profile?.name || '',
         country: user.profile?.country || ''
       });
+      // Fetch real usage stats
+      api.get('/auth/stats').then(res => {
+        if (res.data.success) {
+          setUserStats({
+            filesProcessed: res.data.filesProcessed,
+            storageSaved: res.data.storageSaved,
+          });
+        }
+      }).catch(() => {}); // Silently fail — stats are non-critical
     }
   }, [user, navigate]);
 
@@ -90,7 +95,11 @@ export default function DashboardPage() {
 
         {/* ── Stats Row ────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-          {STAT_CARDS.map((card, i) => (
+          {[
+            { label: 'Files Processed', value: userStats.filesProcessed, icon: 'solar:document-bold', color: 'bg-blue-500', sub: 'All time' },
+            { label: 'Storage Saved', value: userStats.storageSaved, icon: 'solar:database-bold', color: 'bg-emerald-500', sub: 'Compressed' },
+            { label: 'Current Plan', value: null, icon: 'solar:crown-bold', color: 'bg-amber-500', sub: 'Upgrade for more' },
+          ].map((card, i) => (
             <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex items-center gap-4">
               <div className={clsx('w-12 h-12 rounded-xl flex items-center justify-center text-white shrink-0', card.color)}>
                 <iconify-icon icon={card.icon} class="text-2xl"></iconify-icon>

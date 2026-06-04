@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken');
 const supabase = require('../config/supabase');
 
 const protect = async (req, res, next) => {
@@ -8,48 +7,45 @@ const protect = async (req, res, next) => {
     token = req.headers.authorization.split(' ')[1];
 
     try {
-      // ✅ Decode JWT locally — NO network call to Supabase needed
-      // This avoids ETIMEDOUT errors caused by ISP restrictions in Pakistan
-      const decoded = jwt.decode(token);
-
-      if (!decoded || !decoded.sub) {
-        return res.status(401).json({ message: 'Not authorized, invalid token.' });
+      // ✅ Securely verify token with Supabase (makes a network call or uses Supabase client)
+      const { data: authData, error: authError } = await supabase.auth.getUser(token);
+      
+      if (authError || !authData.user) {
+        return res.status(401).json({ message: 'Not authorized, invalid or expired token.' });
       }
 
-      // Check token expiry manually
-      if (decoded.exp && decoded.exp < Math.floor(Date.now() / 1000)) {
-        return res.status(401).json({ message: 'Not authorized, token expired.' });
-      }
+      const userId = authData.user.id;
 
-      // Attach basic user info from token payload
+      // Attach basic user info
       req.user = {
-        id: decoded.sub,
-        email: decoded.email,
-        role: decoded.role,
+        id: userId,
+        email: authData.user.email,
       };
 
-      // Try to fetch profile from DB (optional — don't fail if network is down)
-      try {
-        const { data: profile } = await supabase
-          .from('users')
-          .select('*')
-          .eq('id', decoded.sub)
-          .single();
+      // Fetch profile from DB (Mandatory for security & role checking)
+      const { data: profile, error: dbErr } = await supabase
+        .from('users')
+        .select('*')
+        .eq('id', userId)
+        .single();
 
-        if (profile) {
-          req.user.profile = profile;
-          if (profile.is_banned) {
-            return res.status(403).json({ message: 'Account banned. Please contact support.' });
-          }
-        }
-      } catch (dbErr) {
-        // Profile fetch failed (network issue) — continue with basic user info
-        console.warn('[Auth] Could not fetch user profile from DB (network issue):', dbErr.message);
+      if (dbErr) {
+        console.error('[Auth] Database error while fetching profile:', dbErr.message);
+        return res.status(500).json({ message: 'Internal server error verifying user profile.' });
       }
 
+      if (!profile) {
+         return res.status(401).json({ message: 'User profile not found.' });
+      }
+
+      if (profile.is_banned) {
+        return res.status(403).json({ message: 'Account banned. Please contact support.' });
+      }
+
+      req.user.profile = profile;
       next();
     } catch (err) {
-      console.error('[Auth] Token decode error:', err.message);
+      console.error('[Auth] Token verification error:', err.message);
       return res.status(401).json({ message: 'Not authorized, token failed.' });
     }
   } else {
