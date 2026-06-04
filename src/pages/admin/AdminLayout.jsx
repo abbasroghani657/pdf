@@ -19,20 +19,18 @@ const ADMIN_MENU = [
 export default function AdminLayout() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { user, logout } = useAuth();
+  const { user, loading, logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Admin access guard — wait for user to fully load before checking
   useEffect(() => {
-    // If user is loaded AND profile is loaded AND role is NOT admin → redirect
-    if (user !== undefined && user !== null && user.profile && !['admin', 'superadmin'].includes(user.profile.role)) {
+    if (loading) return;
+    if (!user) {
+      navigate('/login');
+    } else if (user?.profile && !['admin', 'superadmin'].includes(user.profile.role)) {
       navigate('/');
     }
-    // If user is null (not logged in) → redirect to login
-    if (user === null) {
-      navigate('/login');
-    }
-  }, [user, navigate]);
+  }, [user, loading, navigate]);
 
   const initials = user?.profile?.name
     ? user.profile.name.slice(0, 2).toUpperCase()
