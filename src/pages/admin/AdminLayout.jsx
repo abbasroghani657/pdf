@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, Outlet, useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { useAuth } from '../../contexts/AuthContext';
+import api from '../../utils/api';
+import { formatDistanceToNow } from 'date-fns';
 
 const ADMIN_MENU = [
   { path: '/admin', icon: 'solar:pie-chart-2-bold', label: 'Dashboard' },
@@ -21,6 +23,21 @@ export default function AdminLayout() {
   const navigate = useNavigate();
   const { user, loading, logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  const fetchNotifications = async () => {
+    try {
+      const res = await api.get('/admin/notifications');
+      if (res.data.success) {
+        setNotifications(res.data.notifications);
+        setUnreadCount(res.data.notifications.length);
+      }
+    } catch (error) {
+      console.error('Failed to fetch notifications', error);
+    }
+  };
 
   // Admin access guard — wait for user to fully load before checking
   useEffect(() => {
@@ -29,6 +46,11 @@ export default function AdminLayout() {
       navigate('/login');
     } else if (user?.profile && !['admin', 'superadmin'].includes(user.profile.role)) {
       navigate('/');
+    } else {
+      fetchNotifications();
+      // Optional: Polling every 60 seconds
+      const interval = setInterval(fetchNotifications, 60000);
+      return () => clearInterval(interval);
     }
   }, [user, loading, navigate]);
 
@@ -126,10 +148,65 @@ export default function AdminLayout() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="relative p-2 text-gray-400 hover:text-gray-600 transition-colors">
-              <iconify-icon icon="solar:bell-bing-bold" class="text-xl"></iconify-icon>
-              <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
-            </button>
+            <div className="relative">
+              <button 
+                onClick={() => {
+                  setShowNotifications(!showNotifications);
+                  if (!showNotifications) setUnreadCount(0); // Mark as read on open
+                }}
+                className="relative p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <iconify-icon icon="solar:bell-bing-bold" class="text-xl"></iconify-icon>
+                {unreadCount > 0 && (
+                  <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
+                )}
+              </button>
+
+              {/* Notifications Dropdown */}
+              {showNotifications && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setShowNotifications(false)}></div>
+                  <div className="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-gray-100 z-50 overflow-hidden">
+                    <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-gray-50/50">
+                      <h3 className="font-bold text-gray-900">Notifications</h3>
+                      <button className="text-xs text-[#378ADD] hover:underline font-semibold">Mark all read</button>
+                    </div>
+                    <div className="max-h-[400px] overflow-y-auto custom-scrollbar">
+                      {notifications.length === 0 ? (
+                        <div className="p-6 text-center text-gray-500 text-sm">No new notifications</div>
+                      ) : (
+                        <div className="divide-y divide-gray-50">
+                          {notifications.map((notif) => (
+                            <div key={notif.id} className="p-4 hover:bg-gray-50 transition-colors flex gap-3">
+                              <div className={clsx(
+                                "w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-white",
+                                notif.type === 'success' ? "bg-emerald-500" :
+                                notif.type === 'error' ? "bg-red-500" : "bg-blue-500"
+                              )}>
+                                <iconify-icon icon={
+                                  notif.type === 'success' ? "solar:wallet-money-bold" :
+                                  notif.type === 'error' ? "solar:danger-triangle-bold" : "solar:user-plus-bold"
+                                }></iconify-icon>
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm font-bold text-gray-900 truncate">{notif.title}</p>
+                                <p className="text-xs text-gray-600 truncate">{notif.message}</p>
+                                <p className="text-[10px] text-gray-400 mt-1 font-medium">
+                                  {formatDistanceToNow(new Date(notif.time), { addSuffix: true })}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <Link to="/admin/jobs" onClick={() => setShowNotifications(false)} className="block p-3 text-center text-xs font-bold text-gray-500 hover:bg-gray-50 hover:text-gray-900 border-t border-gray-100 transition-colors">
+                      View all activities
+                    </Link>
+                  </div>
+                </>
+              )}
+            </div>
             <a href="/" target="_blank" className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-semibold text-gray-700 transition-colors">
               View Site
               <iconify-icon icon="solar:square-top-down-linear"></iconify-icon>

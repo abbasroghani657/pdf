@@ -603,4 +603,80 @@ router.get('/health', protect, admin, async (req, res) => {
   res.json({ success: true, python: pythonOk, gotenberg: gotenbergOk, database: dbOk });
 });
 
+// @desc    Get real-time notifications
+// @route   GET /api/admin/notifications
+// @access  Private/Admin
+router.get('/notifications', protect, admin, async (req, res) => {
+  try {
+    const notifications = [];
+
+    // 1. Recent Payments
+    const { data: payments } = await supabase
+      .from('payments')
+      .select('id, user_email, amount, created_at')
+      .order('created_at', { ascending: false })
+      .limit(3);
+
+    if (payments) {
+      payments.forEach(p => {
+        notifications.push({
+          id: `pay_${p.id}`,
+          title: 'New Payment',
+          message: `${p.user_email} paid $${p.amount}`,
+          type: 'success',
+          time: p.created_at
+        });
+      });
+    }
+
+    // 2. Recent Errors
+    const { data: errors } = await supabase
+      .from('tool_usage')
+      .select('id, tool_name, created_at')
+      .eq('status', 'error')
+      .order('created_at', { ascending: false })
+      .limit(3);
+
+    if (errors) {
+      errors.forEach(e => {
+        notifications.push({
+          id: `err_${e.id}`,
+          title: 'Tool Error',
+          message: `${e.tool_name} failed during processing`,
+          type: 'error',
+          time: e.created_at
+        });
+      });
+    }
+
+    // 3. New Users
+    const { data: users } = await supabase
+      .from('users')
+      .select('id, email, created_at')
+      .order('created_at', { ascending: false })
+      .limit(3);
+
+    if (users) {
+      users.forEach(u => {
+        notifications.push({
+          id: `usr_${u.id}`,
+          title: 'New User Registration',
+          message: `${u.email} joined the platform`,
+          type: 'info',
+          time: u.created_at
+        });
+      });
+    }
+
+    // Sort by time descending and take top 5
+    notifications.sort((a, b) => new Date(b.time) - new Date(a.time));
+    const topNotifications = notifications.slice(0, 5);
+
+    res.json({ success: true, notifications: topNotifications });
+  } catch (error) {
+    console.error('[Admin Notifications Error]:', error);
+    res.status(500).json({ message: 'Failed to fetch notifications' });
+  }
+});
+
 module.exports = router;
