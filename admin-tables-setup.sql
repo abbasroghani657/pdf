@@ -250,8 +250,41 @@ GRANT ALL ON public.audit_logs TO service_role;
 GRANT ALL ON public.email_logs TO service_role;
 GRANT ALL ON public.platform_settings TO service_role;
 GRANT ALL ON public.payments TO service_role;
+GRANT ALL ON public.admin_invitations TO service_role;
 GRANT SELECT ON public.tools_config TO authenticated, anon;
 GRANT INSERT, SELECT ON public.support_tickets TO authenticated;
+
+
+-- ============================================================
+-- 9. ADMIN INVITATIONS TABLE
+-- Token-based pending invitations for Admin/SuperAdmin roles
+-- ============================================================
+CREATE TABLE IF NOT EXISTS public.admin_invitations (
+  id               UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  token            TEXT UNIQUE NOT NULL DEFAULT encode(gen_random_bytes(32), 'hex'),
+  invited_email    TEXT NOT NULL,
+  invited_user_id  UUID REFERENCES public.users(id) ON DELETE CASCADE,
+  role             TEXT NOT NULL DEFAULT 'admin'
+                   CHECK (role IN ('admin', 'superadmin')),
+  invited_by_id    UUID,
+  invited_by_name  TEXT,
+  site_url         TEXT,
+  status           TEXT NOT NULL DEFAULT 'pending'
+                   CHECK (status IN ('pending', 'accepted', 'expired')),
+  expires_at       TIMESTAMPTZ NOT NULL DEFAULT (NOW() + INTERVAL '48 hours'),
+  accepted_at      TIMESTAMPTZ,
+  created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE public.admin_invitations ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Service role can manage invitations"
+  ON public.admin_invitations FOR ALL
+  USING (true);
+
+CREATE INDEX IF NOT EXISTS idx_invitations_token  ON public.admin_invitations(token);
+CREATE INDEX IF NOT EXISTS idx_invitations_email  ON public.admin_invitations(invited_email);
+CREATE INDEX IF NOT EXISTS idx_invitations_status ON public.admin_invitations(status);
 
 
 -- ============================================================

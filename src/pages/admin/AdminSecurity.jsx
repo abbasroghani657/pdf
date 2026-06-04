@@ -71,26 +71,18 @@ export default function AdminSecurity() {
     if (!newAdminEmail.trim()) return toast.error('Enter an email address.');
     setAddingAdmin(true);
     try {
-      const usersRes = await api.get('/admin/users');
-      const target = usersRes.data.users?.find(u => u.email.toLowerCase() === newAdminEmail.trim().toLowerCase());
-      if (!target) return toast.error('No account found with that email. Ask the user to sign up first.');
-      if (target.role === newAdminRole) return toast.error(`This user is already a ${newAdminRole}.`);
-
-      const res = await api.put(`/admin/users/${target.id}/role`, { role: newAdminRole });
+      const res = await api.post('/admin/invitations', {
+        email: newAdminEmail.trim(),
+        role: newAdminRole,
+      });
       const roleLabel = newAdminRole === 'superadmin' ? 'Super Admin' : 'Admin';
-
-      if (res.data.emailSent) {
-        toast.success(`✅ ${target.email} promoted to ${roleLabel}! Invitation email sent.`, { duration: 5000 });
-      } else {
-        toast.success(`✅ ${target.email} role updated to ${roleLabel}.`);
-      }
-
+      toast.success(`✅ Invitation sent to ${newAdminEmail}! They must accept it within 48 hours to become ${roleLabel}.`, { duration: 6000 });
       setNewAdminEmail('');
       setNewAdminRole('admin');
       setShowAddAdmin(false);
       fetchData();
     } catch (e) {
-      toast.error(e.response?.data?.message || e.message || 'Failed to add admin.');
+      toast.error(e.response?.data?.message || e.message || 'Failed to send invitation.');
     } finally {
       setAddingAdmin(false);
     }

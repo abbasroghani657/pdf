@@ -62,6 +62,8 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import PaymentSuccessPage from './pages/PaymentSuccessPage';
 import MockCheckoutPage from './pages/MockCheckoutPage';
 import { useAuth } from './contexts/AuthContext';
+import AcceptInvite from './pages/AcceptInvite';
+import InviteResponse from './pages/InviteResponse';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
 function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
@@ -712,6 +714,8 @@ export default function App() {
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
+            <Route path="/accept-invite/:token" element={<AcceptInvite />} />
+            <Route path="/invite-response" element={<InviteResponse />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />

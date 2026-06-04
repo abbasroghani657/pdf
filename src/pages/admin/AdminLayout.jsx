@@ -31,12 +31,23 @@ export default function AdminLayout() {
     try {
       const res = await api.get('/admin/notifications');
       if (res.data.success) {
-        setNotifications(res.data.notifications);
-        setUnreadCount(res.data.notifications.length);
+        const readAt = localStorage.getItem('admin_notifications_read_at');
+        let filtered = res.data.notifications;
+        if (readAt) {
+          filtered = filtered.filter(n => new Date(n.time) > new Date(readAt));
+        }
+        setNotifications(filtered);
+        setUnreadCount(filtered.length);
       }
     } catch (error) {
       console.error('Failed to fetch notifications', error);
     }
+  };
+
+  const handleMarkAllRead = () => {
+    localStorage.setItem('admin_notifications_read_at', new Date().toISOString());
+    setNotifications([]);
+    setUnreadCount(0);
   };
 
   // Admin access guard — wait for user to fully load before checking
@@ -172,34 +183,46 @@ export default function AdminLayout() {
                   <div className="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-gray-100 z-50 overflow-hidden">
                     <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-gray-50/50">
                       <h3 className="font-bold text-gray-900">Notifications</h3>
-                      <button className="text-xs text-[#378ADD] hover:underline font-semibold">Mark all read</button>
+                      <button onClick={handleMarkAllRead} className="text-xs text-[#378ADD] hover:underline font-semibold">Mark all read</button>
                     </div>
                     <div className="max-h-[400px] overflow-y-auto custom-scrollbar">
                       {notifications.length === 0 ? (
                         <div className="p-6 text-center text-gray-500 text-sm">No new notifications</div>
                       ) : (
                         <div className="divide-y divide-gray-50">
-                          {notifications.map((notif) => (
-                            <div key={notif.id} className="p-4 hover:bg-gray-50 transition-colors flex gap-3">
-                              <div className={clsx(
-                                "w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-white",
-                                notif.type === 'success' ? "bg-emerald-500" :
-                                notif.type === 'error' ? "bg-red-500" : "bg-blue-500"
-                              )}>
-                                <iconify-icon icon={
-                                  notif.type === 'success' ? "solar:wallet-money-bold" :
-                                  notif.type === 'error' ? "solar:danger-triangle-bold" : "solar:user-plus-bold"
-                                }></iconify-icon>
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm font-bold text-gray-900 truncate">{notif.title}</p>
-                                <p className="text-xs text-gray-600 truncate">{notif.message}</p>
-                                <p className="text-[10px] text-gray-400 mt-1 font-medium">
-                                  {formatDistanceToNow(new Date(notif.time), { addSuffix: true })}
-                                </p>
-                              </div>
-                            </div>
-                          ))}
+                          {notifications.map((notif) => {
+                            let targetPath = '/admin';
+                            if (notif.type === 'success') targetPath = '/admin/revenue';
+                            if (notif.type === 'error') targetPath = '/admin/jobs';
+                            if (notif.type === 'info') targetPath = '/admin/users';
+
+                            return (
+                              <Link 
+                                key={notif.id} 
+                                to={targetPath}
+                                onClick={() => setShowNotifications(false)}
+                                className="p-4 hover:bg-gray-50 transition-colors flex gap-3 block"
+                              >
+                                <div className={clsx(
+                                  "w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-white",
+                                  notif.type === 'success' ? "bg-emerald-500" :
+                                  notif.type === 'error' ? "bg-red-500" : "bg-blue-500"
+                                )}>
+                                  <iconify-icon icon={
+                                    notif.type === 'success' ? "solar:wallet-money-bold" :
+                                    notif.type === 'error' ? "solar:danger-triangle-bold" : "solar:user-plus-bold"
+                                  }></iconify-icon>
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-sm font-bold text-gray-900 truncate">{notif.title}</p>
+                                  <p className="text-xs text-gray-600 truncate">{notif.message}</p>
+                                  <p className="text-[10px] text-gray-400 mt-1 font-medium">
+                                    {formatDistanceToNow(new Date(notif.time), { addSuffix: true })}
+                                  </p>
+                                </div>
+                              </Link>
+                            );
+                          })}
                         </div>
                       )}
                     </div>

@@ -225,7 +225,237 @@ router.put('/users/:id/pro', protect, admin, async (req, res) => {
   }
 });
 
-// @desc    Update user role (Add Admin / Super Admin)
+// @desc    Send Admin Invitation (does NOT change role immediately)
+// @route   POST /api/admin/invitations
+// @access  Private/SuperAdmin
+router.post('/invitations', protect, superadmin, async (req, res) => {
+  try {
+    const { email, role } = req.body;
+    if (!email || !['admin', 'superadmin'].includes(role)) {
+      return res.status(400).json({ message: 'Valid email and role (admin/superadmin) are required.' });
+    }
+
+    // Find user by email
+    const { data: targetUser, error: userErr } = await supabase
+      .from('users').select('id, email, name, role').eq('email', email.toLowerCase().trim()).single();
+
+    if (userErr || !targetUser) {
+      return res.status(404).json({ message: 'No account found with that email. The user must sign up first.' });
+    }
+
+    if (targetUser.role === role) {
+      return res.status(400).json({ message: `This user is already a ${role}.` });
+    }
+
+    // Expire any existing pending invitations for this user
+    await supabase.from('admin_invitations')
+      .update({ status: 'expired' })
+      .eq('invited_email', email.toLowerCase().trim())
+      .eq('status', 'pending');
+
+    // Create invitation token
+    const crypto = require('crypto');
+    const token = crypto.randomBytes(32).toString('hex');
+    const expiresAt = new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString();
+    const assignerName = req.user?.profile?.name || req.user?.email || 'Super Admin';
+    const siteUrl = process.env.APP_URL || 'http://localhost:3000';
+
+    const { error: insertErr } = await supabase.from('admin_invitations').insert({
+      token,
+      invited_email: email.toLowerCase().trim(),
+      invited_user_id: targetUser.id,
+      role,
+      invited_by_id: req.user.id,
+      invited_by_name: assignerName,
+      site_url: siteUrl,
+      status: 'pending',
+      expires_at: expiresAt,
+    });
+
+    if (insertErr) throw insertErr;
+
+    // Send beautiful invitation email
+    const roleLabel = role === 'superadmin' ? 'Super Admin' : 'Admin';
+    const acceptUrl = `${siteUrl}/accept-invite/${token}`;
+    const declineUrl = `${siteUrl}/accept-invite/${token}?action=decline`;
+
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Invitation</title>
+</head>
+<body style="font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background-color: #f0f4f8; margin: 0; padding: 40px 20px;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+    
+    <!-- HEADER -->
+    <tr>
+      <td style="background: #0f172a; padding: 48px 32px; text-align: center;">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="center">
+              <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #378ADD, #8b5cf6); background-color: #378ADD; border-radius: 14px; text-align: center; line-height: 56px; margin: 0 auto 20px;">
+                <span style="color: #ffffff; font-size: 28px; font-weight: 800; font-family: Arial, sans-serif;">P</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <h1 style="color: #ffffff; font-size: 26px; font-weight: 700; margin: 0;">PDFMaster Admin Panel</h1>
+              <p style="color: #94a3b8; font-size: 15px; margin: 8px 0 0;">You have a new admin role invitation</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- BODY -->
+    <tr>
+      <td style="padding: 40px 32px;">
+        <div style="text-align: left;">
+          <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 24px; ${role === 'superadmin' ? 'background-color: #f3e8ff; color: #7c3aed;' : 'background-color: #dbeafe; color: #1d4ed8;'}">
+            ${role === 'superadmin' ? '👑' : '🛡️'} &nbsp;${roleLabel} Invitation
+          </span>
+          <h2 style="color: #0f172a; font-size: 24px; font-weight: 700; margin: 0 0 16px;">You're invited to join the team!</h2>
+          <p style="color: #475569; font-size: 16px; line-height: 1.6; margin: 0 0 16px;">Hi <strong>${targetUser.name || targetUser.email}</strong>,</p>
+          <p style="color: #475569; font-size: 16px; line-height: 1.6; margin: 0 0 24px;"><strong>${assignerName}</strong> would like to grant you <strong>${roleLabel}</strong> access on the PDFMaster platform. Please review the details below and accept or decline this invitation.</p>
+        </div>
+
+        <!-- INFO CARD -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin: 0 0 32px;">
+          <tr>
+            <td style="padding: 20px 24px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 14px; font-weight: 600;">Invited By</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a; font-size: 15px; font-weight: 700; text-align: right;">${assignerName}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 14px; font-weight: 600;">Your New Role</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #0f172a; font-size: 15px; font-weight: 700; text-align: right;">${roleLabel}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 14px; font-weight: 600;">Your Account</td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #378ADD; font-size: 15px; font-weight: 700; text-align: right;">${targetUser.email}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; color: #64748b; font-size: 14px; font-weight: 600;">Invitation Expires</td>
+                  <td style="padding: 12px 0; color: #0f172a; font-size: 15px; font-weight: 700; text-align: right;">48 hours from now</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <!-- CTA AREA -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
+          <tr>
+            <td align="center">
+              <a href="${acceptUrl}" style="display: inline-block; background-color: #378ADD; color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 700; box-shadow: 0 4px 15px rgba(55,138,221,0.35);">
+                ✅ Accept Invitation
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding-top: 16px;">
+              <a href="${declineUrl}" style="color: #94a3b8; text-decoration: none; font-size: 14px;">No thanks, decline this invitation</a>
+            </td>
+          </tr>
+        </table>
+
+        <!-- WARNING BOX -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px;">
+          <tr>
+            <td style="padding: 16px 20px; color: #9a3412; font-size: 13px; line-height: 1.6;">
+              ⚠️ <strong>Security Notice:</strong> If you did not expect this invitation or don't recognize the sender, please ignore this email and contact <a href="mailto:${process.env.EMAIL_USER}" style="color: #c2410c; text-decoration: underline;">${process.env.EMAIL_USER}</a> immediately. Your account role will NOT change unless you click Accept.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 24px 32px; text-align: center;">
+        <p style="color: #94a3b8; font-size: 13px; margin: 0;">© ${new Date().getFullYear()} PDFMaster · This link expires in 48 hours · Do not share this email</p>
+      </td>
+    </tr>
+
+  </table>
+</body>
+</html>`;
+
+    try {
+      const transporter = getTransporter();
+      await transporter.sendMail({
+        from: `"PDFMaster Admin" <${process.env.EMAIL_USER}>`,
+        to: targetUser.email,
+        subject: `🛡️ Admin Invitation: ${assignerName} wants to make you a ${roleLabel} on PDFMaster`,
+        html,
+      });
+    } catch (mailErr) {
+      console.warn('[Invitation Email] Failed:', mailErr.message);
+      // Still return success — invitation is in DB, user can check later
+    }
+
+    res.json({ success: true, message: `Invitation sent to ${targetUser.email}. They must accept it within 48 hours.` });
+  } catch (error) {
+    console.error('[Admin Invitation Error]:', error);
+    res.status(500).json({ message: 'Failed to send invitation.' });
+  }
+});
+
+
+// @desc    Accept or Decline Admin Invitation (public — no auth needed)
+// @route   GET /api/admin/invitations/:token/accept
+// @access  Public (via email link)
+router.get('/invitations/:token/:action', async (req, res) => {
+  const { token, action } = req.params;
+  const isDecline = action === 'decline';
+
+  try {
+    const { data: invite, error } = await supabase
+      .from('admin_invitations')
+      .select('*')
+      .eq('token', token)
+      .single();
+
+    if (error || !invite) {
+      return res.redirect(`${process.env.APP_URL || 'http://localhost:3000'}/invite-response?status=invalid`);
+    }
+
+    if (invite.status !== 'pending') {
+      return res.redirect(`${process.env.APP_URL || 'http://localhost:3000'}/invite-response?status=${invite.status}`);
+    }
+
+    if (new Date(invite.expires_at) < new Date()) {
+      await supabase.from('admin_invitations').update({ status: 'expired' }).eq('token', token);
+      return res.redirect(`${process.env.APP_URL || 'http://localhost:3000'}/invite-response?status=expired`);
+    }
+
+    if (isDecline) {
+      await supabase.from('admin_invitations').update({ status: 'expired' }).eq('token', token);
+      return res.redirect(`${process.env.APP_URL || 'http://localhost:3000'}/invite-response?status=declined`);
+    }
+
+    // Accept: Update user role + mark invitation accepted
+    await supabase.from('users').update({ role: invite.role }).eq('id', invite.invited_user_id);
+    await supabase.from('admin_invitations').update({
+      status: 'accepted',
+      accepted_at: new Date().toISOString()
+    }).eq('token', token);
+
+    res.redirect(`${process.env.APP_URL || 'http://localhost:3000'}/invite-response?status=accepted&role=${invite.role}`);
+  } catch (err) {
+    console.error('[Invitation Accept Error]:', err);
+    res.redirect(`${process.env.APP_URL || 'http://localhost:3000'}/invite-response?status=error`);
+  }
+});
+
+
+// @desc    Update user role directly (kept for inline role edit from admin list)
 // @route   PUT /api/admin/users/:id/role
 // @access  Private/SuperAdmin
 router.put('/users/:id/role', protect, superadmin, async (req, res) => {
@@ -234,52 +464,18 @@ router.put('/users/:id/role', protect, superadmin, async (req, res) => {
     if (!['user', 'admin', 'superadmin'].includes(role)) {
       return res.status(400).json({ message: 'Invalid role' });
     }
-
-    // Fetch target user info
-    const { data: targetUser, error: fetchErr } = await supabase
-      .from('users').select('id, email, name, role')
-      .eq('id', req.params.id).single();
-
-    if (fetchErr || !targetUser) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-
-    // Prevent demoting your own superadmin
     if (req.user.id === req.params.id && role !== 'superadmin') {
       return res.status(400).json({ message: 'You cannot demote your own superadmin account.' });
     }
-
-    // Update role in DB
     const { data, error } = await supabase
-      .from('users').update({ role })
-      .eq('id', req.params.id).select().single();
-
+      .from('users').update({ role }).eq('id', req.params.id).select().single();
     if (error) throw error;
-
-    // Send invitation email (non-critical)
-    if (role !== 'user') {
-      try {
-        const assignerName = req.user?.profile?.name || req.user?.email || 'Super Admin';
-        const siteUrl = process.env.APP_URL || 'http://localhost:3000';
-        await sendRoleInvitationEmail({
-          toEmail: targetUser.email,
-          toName: targetUser.name,
-          newRole: role,
-          assignedByName: assignerName,
-          siteUrl,
-        });
-      } catch (mailErr) {
-        console.warn('[Role Invite Email] Failed to send:', mailErr.message);
-      }
-    }
-
-    res.json({ success: true, user: data, emailSent: role !== 'user' });
+    res.json({ success: true, user: data });
   } catch (error) {
     console.error('[Admin Update Role Error]:', error);
     res.status(500).json({ message: 'Failed to update role' });
   }
 });
-
 
 // @desc    Get Revenue Data
 // @route   GET /api/admin/revenue

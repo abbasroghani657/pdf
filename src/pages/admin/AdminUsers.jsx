@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import api from '../../utils/api';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function AdminUsers() {
   const [users, setUsers] = useState([]);
@@ -9,6 +10,8 @@ export default function AdminUsers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterPlan, setFilterPlan] = useState('All');
   const [actionLoading, setActionLoading] = useState({});
+  const { user: currentUser } = useAuth();
+  const isSuperAdmin = currentUser?.role === 'superadmin';
 
   const fetchUsers = async () => {
     setLoading(true);
@@ -49,6 +52,18 @@ export default function AdminUsers() {
       toast.error('Failed to update Pro status.');
     } finally {
       setActionLoading(prev => ({ ...prev, [`pro-${user.id}`]: false }));
+    }
+  };
+
+  const handleInviteAdmin = async (userEmail, role) => {
+    setActionLoading(prev => ({ ...prev, [`invite-${userEmail}`]: true }));
+    try {
+      const res = await api.post('/admin/invitations', { email: userEmail, role });
+      toast.success(res.data.message || 'Invitation sent successfully!');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to send invitation');
+    } finally {
+      setActionLoading(prev => ({ ...prev, [`invite-${userEmail}`]: false }));
     }
   };
 
@@ -160,7 +175,11 @@ export default function AdminUsers() {
                             {user.name || 'Unknown User'}
                             {user.country && <span className="text-xs px-1.5 py-0.5 bg-gray-100 rounded text-gray-500 font-semibold">{user.country}</span>}
                           </p>
-                          <p className="text-gray-500 text-xs">{user.email}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="text-gray-500 text-xs">{user.email}</p>
+                            {user.role === 'superadmin' && <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-purple-100 text-purple-700">Super Admin</span>}
+                            {user.role === 'admin' && <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-blue-100 text-blue-700">Admin</span>}
+                          </div>
                         </div>
                       </div>
                     </td>
@@ -180,6 +199,15 @@ export default function AdminUsers() {
                     </td>
                     <td className="py-4 px-6 text-right">
                       <div className="flex items-center justify-end gap-2">
+                        {isSuperAdmin && user.role !== 'superadmin' && user.role !== 'admin' && (
+                          <button
+                            onClick={() => handleInviteAdmin(user.email, 'admin')}
+                            disabled={!!actionLoading[`invite-${user.email}`]}
+                            className="px-3 py-1.5 rounded-lg text-xs font-bold border border-[#378ADD]/30 text-[#378ADD] bg-[#378ADD]/5 hover:bg-[#378ADD]/10 transition-colors disabled:opacity-50"
+                          >
+                            {actionLoading[`invite-${user.email}`] ? <iconify-icon icon="line-md:loading-twotone-loop"></iconify-icon> : 'Invite Admin'}
+                          </button>
+                        )}
                         <button
                           onClick={() => handleProToggle(user)}
                           disabled={!!actionLoading[`pro-${user.id}`]}
