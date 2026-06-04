@@ -13,6 +13,11 @@ const QUICK_TOOLS = [
   { label: 'Protect PDF', icon: 'solar:lock-password-bold', color: 'text-red-600 bg-red-50', path: '/tools/protect-pdf' },
 ];
 
+const COUNTRIES = [
+  "United States", "United Kingdom", "Canada", "Australia", 
+  "India", "Pakistan", "Germany", "France", "Japan", "Brazil", "Other"
+];
+
 
 export default function DashboardPage() {
   const { user, isPro, logout, upgradeToPro, updateProfile } = useAuth();
@@ -210,6 +215,31 @@ export default function DashboardPage() {
                 </div>
               )}
             </div>
+            {/* ── Recent Activity ──────────────────────────────────────── */}
+            <div className="lg:col-span-3 bg-white rounded-3xl border border-gray-100 shadow-sm p-6">
+              <h2 className="text-base font-extrabold text-gray-900 mb-4 flex items-center gap-2">
+                <iconify-icon icon="solar:history-bold" class="text-[#378ADD] text-xl"></iconify-icon>
+                Recently Used Tools
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { tool: 'Merge PDF', time: '2 hours ago', icon: 'solar:layers-bold', color: 'text-blue-600 bg-blue-50', path: '/tools/merge-pdf' },
+                  { tool: 'Compress PDF', time: 'Yesterday', icon: 'solar:zip-file-bold', color: 'text-emerald-600 bg-emerald-50', path: '/tools/compress-pdf' },
+                  { tool: 'Protect PDF', time: '3 days ago', icon: 'solar:lock-password-bold', color: 'text-red-600 bg-red-50', path: '/tools/protect-pdf' },
+                ].map((act, i) => (
+                  <Link key={i} to={act.path} className="flex items-center gap-4 p-3 rounded-2xl border border-gray-50 hover:bg-gray-50 hover:border-gray-200 transition-all cursor-pointer">
+                    <div className={clsx('w-10 h-10 rounded-xl flex items-center justify-center', act.color)}>
+                      <iconify-icon icon={act.icon} class="text-xl"></iconify-icon>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-bold text-gray-900">{act.tool}</p>
+                      <p className="text-xs text-gray-500">{act.time}</p>
+                    </div>
+                    <iconify-icon icon="solar:alt-arrow-right-linear" class="text-gray-400"></iconify-icon>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
@@ -283,13 +313,17 @@ export default function DashboardPage() {
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 pointer-events-none">
                       <iconify-icon icon="solar:global-linear" class="text-lg"></iconify-icon>
                     </div>
-                    <input
-                      type="text"
+                    <select
                       value={editForm.country}
                       onChange={e => setEditForm(p => ({...p, country: e.target.value}))}
-                      className="w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
-                      placeholder="Your country"
-                    />
+                      className="w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors appearance-none bg-white"
+                    >
+                      <option value="" disabled>Select your country</option>
+                      {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
+                    </select>
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 pointer-events-none">
+                      <iconify-icon icon="solar:alt-arrow-down-linear" class="text-lg"></iconify-icon>
+                    </div>
                   </div>
                 </div>
                 <div className="flex gap-3 pt-2">
@@ -374,11 +408,13 @@ export default function DashboardPage() {
               ))}
             </div>
 
-            <div className="mt-6 pt-5 border-t border-gray-100">
-              <p className="text-xs text-gray-400">
-                Payment processing via Stripe (coming soon). All transactions are secure and encrypted.
-              </p>
-            </div>
+            {!isPro && (
+              <div className="mt-6 pt-5 border-t border-gray-100">
+                <p className="text-xs text-gray-400">
+                  Payment processing via Stripe (coming soon). All transactions are secure and encrypted.
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -294,10 +294,13 @@ export default function AdminSecurity() {
           )}
           <div className="p-6 space-y-4 flex-1">
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-200">
-              <span className="text-sm font-bold text-gray-900">Require 2FA for all admins</span>
-              <div className="relative inline-block w-10 align-middle select-none transition duration-200 ease-in">
-                <input type="checkbox" name="toggle2fa" id="toggle2fa" defaultChecked className="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer" />
-                <label htmlFor="toggle2fa" className="toggle-label block overflow-hidden h-5 rounded-full bg-[#378ADD] cursor-pointer"></label>
+              <span className="text-sm font-bold text-gray-900 flex items-center gap-2">
+                Require 2FA for all admins
+                <span className="px-2 py-0.5 bg-gray-200 text-gray-500 rounded text-[10px] font-bold uppercase tracking-wider">Coming Soon</span>
+              </span>
+              <div className="relative inline-block w-10 align-middle select-none transition duration-200 ease-in opacity-50 cursor-not-allowed">
+                <input type="checkbox" name="toggle2fa" id="toggle2fa" disabled className="toggle-checkbox absolute block w-5 h-5 rounded-full bg-gray-300 border-4 appearance-none cursor-not-allowed" />
+                <label htmlFor="toggle2fa" className="toggle-label block overflow-hidden h-5 rounded-full bg-gray-200 cursor-not-allowed"></label>
               </div>
             </div>
             <div className="space-y-3 mt-4">
