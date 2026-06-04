@@ -129,7 +129,7 @@ export default function AdminJobs() {
                   <p className="text-sm font-semibold text-red-900">{job.tool_name} Failed</p>
                   <p className="text-xs text-red-700 mt-0.5">{job.user?.email || 'anon'} • at {new Date(job.created_at).toLocaleTimeString()}</p>
                   <div className="flex items-center gap-3 mt-3">
-                    <button className="text-xs font-bold bg-white text-red-700 px-3 py-1.5 rounded-lg border border-red-200 hover:bg-red-50">View Details</button>
+                    <button onClick={() => toast('Detailed logs view coming soon', { icon: '🚧' })} className="text-xs font-bold bg-white text-red-700 px-3 py-1.5 rounded-lg border border-red-200 hover:bg-red-50">View Details</button>
                   </div>
                 </div>
               ))}

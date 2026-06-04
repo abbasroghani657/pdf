@@ -11,7 +11,7 @@ export default function AdminUsers() {
   const [filterPlan, setFilterPlan] = useState('All');
   const [actionLoading, setActionLoading] = useState({});
   const { user: currentUser } = useAuth();
-  const isSuperAdmin = currentUser?.role === 'superadmin';
+  const isSuperAdmin = currentUser?.profile?.role === 'superadmin';
 
   const fetchUsers = async () => {
     setLoading(true);

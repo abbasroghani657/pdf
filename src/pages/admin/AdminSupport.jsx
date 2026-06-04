@@ -209,7 +209,7 @@ export default function AdminSupport() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <button className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-xs font-bold rounded-lg hover:bg-gray-50 shadow-sm">View User</button>
+                <button onClick={() => window.location.href = '/admin/users'} className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-xs font-bold rounded-lg hover:bg-gray-50 shadow-sm">View User</button>
                 {(activeTicket.status === 'open' || activeTicket.status === 'pending') ? (
                   <button 
                     onClick={() => handleCloseTicket(activeTicket.id, activeTicket.status)}
