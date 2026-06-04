@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const supabase = require('../config/supabase');
-const { protect, admin } = require('../middleware/auth');
+const { protect, admin, superadmin } = require('../middleware/auth');
 
 // @desc    Get Admin Dashboard Analytics
 // @route   GET /api/admin/dashboard-stats
@@ -158,8 +158,8 @@ router.put('/users/:id/pro', protect, admin, async (req, res) => {
 
 // @desc    Update user role (Add Admin)
 // @route   PUT /api/admin/users/:id/role
-// @access  Private/Admin
-router.put('/users/:id/role', protect, admin, async (req, res) => {
+// @access  Private/SuperAdmin
+router.put('/users/:id/role', protect, superadmin, async (req, res) => {
   try {
     const { role } = req.body;
     if (!['user','admin','superadmin'].includes(role)) {
@@ -455,8 +455,8 @@ router.get('/settings', protect, admin, async (req, res) => {
 
 // @desc    Update Platform Settings
 // @route   PUT /api/admin/settings
-// @access  Private/Admin
-router.put('/settings', protect, admin, async (req, res) => {
+// @access  Private/SuperAdmin
+router.put('/settings', protect, superadmin, async (req, res) => {
   try {
     const { settings } = req.body;
     const updates = Object.entries(settings).map(([key, value]) =>

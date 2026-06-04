@@ -89,7 +89,10 @@ export default function AdminLayout() {
         </div>
 
         <div className="flex-1 overflow-y-auto py-6 px-4 space-y-1 custom-scrollbar">
-          {ADMIN_MENU.map((item) => {
+          {ADMIN_MENU.filter(item => {
+            if (item.path === '/admin/settings' && user?.profile?.role !== 'superadmin') return false;
+            return true;
+          }).map((item) => {
             const isActive = location.pathname === item.path;
             return (
               <Link
@@ -200,8 +203,8 @@ export default function AdminLayout() {
                         </div>
                       )}
                     </div>
-                    <Link to="/admin/jobs" onClick={() => setShowNotifications(false)} className="block p-3 text-center text-xs font-bold text-gray-500 hover:bg-gray-50 hover:text-gray-900 border-t border-gray-100 transition-colors">
-                      View all activities
+                    <Link to="/admin/security" onClick={() => setShowNotifications(false)} className="block p-3 text-center text-xs font-bold text-gray-500 hover:bg-gray-50 hover:text-gray-900 border-t border-gray-100 transition-colors">
+                      View Audit Logs & Security
                     </Link>
                   </div>
                 </>

@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import api from '../../utils/api';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function AdminSettings() {
+  const { user } = useAuth();
+  const isSuperAdmin = user?.profile?.role === 'superadmin';
+
   const [activeTab, setActiveTab] = useState('general');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -66,6 +70,26 @@ export default function AdminSettings() {
   const updateSetting = (key, value) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
+
+  if (!isSuperAdmin) {
+    return (
+      <div className="flex flex-col items-center justify-center py-20 text-center space-y-4">
+        <div className="w-16 h-16 bg-red-100 text-red-500 rounded-full flex items-center justify-center">
+          <iconify-icon icon="solar:shield-warning-bold" class="text-3xl"></iconify-icon>
+        </div>
+        <h2 className="text-xl font-bold text-gray-900">Access Restricted</h2>
+        <p className="text-gray-500 max-w-sm">Only Super Admins can access and modify platform settings.</p>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <iconify-icon icon="line-md:loading-twotone-loop" class="text-3xl text-[#378ADD]"></iconify-icon>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">

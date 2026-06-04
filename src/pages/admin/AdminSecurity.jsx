@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import api from '../../utils/api';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function AdminSecurity() {
+  const { user } = useAuth();
+  const isSuperAdmin = user?.profile?.role === 'superadmin';
+
   const [loading, setLoading] = useState(true);
   const [logs, setLogs] = useState([]);
   const [admins, setAdmins] = useState([]);
@@ -170,13 +174,15 @@ export default function AdminSecurity() {
                 type="number"
                 value={rateLimits.ai}
                 onChange={e => setRateLimits(prev => ({ ...prev, ai: e.target.value }))}
-                className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]"
+                disabled={!isSuperAdmin}
+                className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD] disabled:bg-gray-100 disabled:text-gray-400"
               />
             </div>
             <button
               onClick={handleSaveRateLimits}
-              disabled={savingRates}
-              className="w-full py-2 bg-gray-50 text-[#378ADD] font-bold text-sm rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-50"
+              disabled={savingRates || !isSuperAdmin}
+              title={!isSuperAdmin ? "Only Super Admin can change rate limits" : ""}
+              className="w-full py-2 bg-gray-50 text-[#378ADD] font-bold text-sm rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {savingRates ? 'Saving...' : 'Save Rate Limits'}
             </button>
@@ -198,14 +204,16 @@ export default function AdminSecurity() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
           <div className="p-6 border-b border-gray-100 flex items-center justify-between">
             <h2 className="text-lg font-bold text-gray-900">Admin Accounts</h2>
-            <button
-              onClick={() => setShowAddAdmin(v => !v)}
-              className="text-sm font-bold text-[#378ADD] hover:underline flex items-center gap-1"
-            >
-              <iconify-icon icon="solar:user-plus-bold"></iconify-icon> Add Admin
-            </button>
+            {isSuperAdmin && (
+              <button
+                onClick={() => setShowAddAdmin(v => !v)}
+                className="text-sm font-bold text-[#378ADD] hover:underline flex items-center gap-1"
+              >
+                <iconify-icon icon="solar:user-plus-bold"></iconify-icon> Add Admin
+              </button>
+            )}
           </div>
-          {showAddAdmin && (
+          {showAddAdmin && isSuperAdmin && (
             <div className="px-6 pt-4 flex gap-2">
               <input
                 type="email"
@@ -264,14 +272,17 @@ export default function AdminSecurity() {
                       <span className="text-xs text-gray-500 mt-0.5">{admin.email}</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <button
-                      onClick={() => setEditingRole(admin.id)}
-                      className="text-gray-400 hover:text-gray-700"
-                    >
-                      <iconify-icon icon="solar:pen-bold" class="text-lg"></iconify-icon>
-                    </button>
-                  </div>
+                  {isSuperAdmin && admin.id !== user?.id && (
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={() => setEditingRole(admin.id)}
+                        className="text-gray-400 hover:text-gray-700 transition-colors"
+                        title="Edit Role"
+                      >
+                        <iconify-icon icon="solar:pen-bold" class="text-lg"></iconify-icon>
+                      </button>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
