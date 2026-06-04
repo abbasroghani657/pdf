@@ -48,8 +48,11 @@ export default function AdminSupport() {
     try {
       await api.post(`/admin/support/tickets/${activeTicket.id}/reply`, { message: reply });
       toast.success('Reply sent!');
+      // Update the active ticket locally to show the reply without closing
+      const updatedTicket = { ...activeTicket, admin_reply: reply, replied_at: new Date().toISOString() };
+      setActiveTicket(updatedTicket);
+      setTickets(tickets.map(t => t.id === activeTicket.id ? updatedTicket : t));
       setReply('');
-      handleCloseTicket(activeTicket.id, activeTicket.status); // auto-close after reply
     } catch (error) {
       toast.error('Failed to send reply');
     }

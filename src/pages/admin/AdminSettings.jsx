@@ -225,10 +225,13 @@ export default function AdminSettings() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-700">Currency</label>
-                  <select className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]">
-                    <option>USD ($)</option>
-                    <option>PKR (Rs)</option>
-                    <option>EUR (€)</option>
+                  <select 
+                    value={settings.currency || 'USD'}
+                    onChange={e => updateSetting('currency', e.target.value)}
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]">
+                    <option value="USD">USD ($)</option>
+                    <option value="PKR">PKR (Rs)</option>
+                    <option value="EUR">EUR (€)</option>
                   </select>
                 </div>
               </div>
@@ -287,25 +290,39 @@ export default function AdminSettings() {
           {activeTab === 'apikeys' && (
             <div className="space-y-6 max-w-2xl">
               <h2 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Third-Party API Keys</h2>
-              <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800 font-medium flex items-start gap-2">
-                <iconify-icon icon="solar:shield-warning-bold" class="text-xl shrink-0 mt-0.5 text-amber-600"></iconify-icon>
-                These keys are stored in your server's <code className="bg-amber-100 px-1 rounded">.env</code> file, not in the database. Edit them there directly to avoid security risks.
-              </div>
-              {[
-                { name: 'Stripe Secret Key',      val: 'sk_live_*****' },
-                { name: 'Stripe Webhook Secret',  val: 'whsec_*****' },
-                { name: 'Gemini AI Key',          val: 'AIzaSy*****' },
-                { name: 'Groq Key',               val: 'gsk_*****' },
-                { name: 'JazzCash Merchant ID',   val: 'MC*****' },
-              ].map((key, i) => (
-                <div key={i} className="flex items-end gap-4">
-                  <div className="flex-1 space-y-2">
-                    <label className="text-sm font-bold text-gray-700">{key.name}</label>
-                    <input type="password" defaultValue={key.val} className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:bg-white focus:ring-[#378ADD] focus:border-[#378ADD]" />
-                  </div>
-                  <button className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-200 transition-colors">Test</button>
+              <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3">
+                <iconify-icon icon="solar:shield-warning-bold" class="text-2xl text-amber-600 shrink-0 mt-0.5"></iconify-icon>
+                <div>
+                  <p className="text-sm font-bold text-amber-800 mb-1">API Keys are managed via server environment variables</p>
+                  <p className="text-sm text-amber-700">
+                    For security, API keys are stored in your server's <code className="bg-amber-100 px-1 rounded font-mono">.env</code> file and are <strong>never</strong> exposed through this UI. To update a key, edit the <code className="bg-amber-100 px-1 rounded font-mono">server/.env</code> file directly and restart the server.
+                  </p>
                 </div>
-              ))}
+              </div>
+              <div className="space-y-3">
+                {[
+                  { name: 'Stripe Secret Key',      hint: 'sk_live_••••••••••••••••••••••' },
+                  { name: 'Stripe Webhook Secret',  hint: 'whsec_••••••••••••••••••••••' },
+                  { name: 'Gemini AI Key',          hint: 'AIzaSy••••••••••••••••••••••' },
+                  { name: 'Groq API Key',           hint: 'gsk_••••••••••••••••••••••••' },
+                  { name: 'CloudConvert API Key',   hint: 'eyJ0eXAi••••••••••••••••••••' },
+                ].map((key, i) => (
+                  <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 border border-gray-200 rounded-xl">
+                    <iconify-icon icon="solar:key-bold" class="text-xl text-gray-400 shrink-0"></iconify-icon>
+                    <div className="flex-1">
+                      <p className="text-sm font-bold text-gray-700">{key.name}</p>
+                      <p className="text-xs font-mono text-gray-400 mt-0.5">{key.hint}</p>
+                    </div>
+                    <span className="text-xs font-bold text-gray-400 bg-gray-100 px-2 py-1 rounded">Read-only</span>
+                  </div>
+                ))}
+              </div>
+              <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl">
+                <p className="text-sm font-semibold text-blue-800 flex items-center gap-2">
+                  <iconify-icon icon="solar:info-circle-bold" class="text-lg"></iconify-icon>
+                  To update keys: Open <code className="bg-blue-100 px-1 rounded font-mono">server/.env</code> → edit value → restart server with <code className="bg-blue-100 px-1 rounded font-mono">npm run start:all</code>
+                </p>
+              </div>
             </div>
           )}
 

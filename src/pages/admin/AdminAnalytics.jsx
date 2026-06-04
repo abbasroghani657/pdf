@@ -58,19 +58,21 @@ export default function AdminAnalytics() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Visitors', value: loading ? '...' : stats.visitors.toLocaleString(), trend: '+12%' },
-          { label: 'Sessions', value: loading ? '...' : stats.sessions.toLocaleString(), trend: '+8%' },
-          { label: 'Page Views', value: loading ? '...' : stats.pageViews.toLocaleString(), trend: '+21%' },
-          { label: 'Bounce Rate', value: '34%', trend: '-2%' },
-          { label: 'Avg Session', value: '4m 23s', trend: '+1m' },
-          { label: 'New Users', value: loading ? '...' : stats.newUsers.toLocaleString(), trend: '+5%' },
+          { label: 'Visitors', value: loading ? '...' : stats.visitors.toLocaleString(), trend: stats.visitors > 0 ? `+${stats.visitors}` : null },
+          { label: 'Sessions', value: loading ? '...' : stats.sessions.toLocaleString(), trend: stats.sessions > 0 ? `+${stats.sessions}` : null },
+          { label: 'Page Views', value: loading ? '...' : stats.pageViews.toLocaleString(), trend: stats.pageViews > 0 ? `+${stats.pageViews}` : null },
+          { label: 'New Users', value: loading ? '...' : stats.newUsers.toLocaleString(), trend: stats.newUsers > 0 ? `+${stats.newUsers}` : null },
         ].map((stat, i) => (
           <div key={i} className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{stat.label}</p>
             <p className="text-xl font-bold text-gray-900 mb-1">{stat.value}</p>
-            <p className={clsx("text-xs font-bold", stat.trend.startsWith('+') ? "text-emerald-500" : "text-emerald-500")}>{stat.trend}</p>
+            {stat.trend ? (
+              <p className={clsx("text-xs font-bold", stat.trend.startsWith('-') ? "text-red-500" : "text-emerald-500")}>{stat.trend}</p>
+            ) : (
+              <p className="text-xs font-bold text-gray-300">No data yet</p>
+            )}
           </div>
         ))}
       </div>
