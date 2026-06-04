@@ -60,6 +60,25 @@ export default function AdminUsers() {
     return matchesSearch && matchesPlan;
   });
 
+  const handleExportCSV = () => {
+    const headers = ['Name', 'Email', 'Plan', 'Country', 'Joined'];
+    const rows = filteredUsers.map(u => [
+      u.name || '',
+      u.email || '',
+      u.is_pro ? 'Pro' : 'Free',
+      u.country || '',
+      new Date(u.created_at).toLocaleDateString()
+    ]);
+    const csv = [headers, ...rows].map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `pdfmaster_users_${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -72,7 +91,10 @@ export default function AdminUsers() {
           >
             <iconify-icon icon={loading ? 'line-md:loading-twotone-loop' : 'solar:refresh-linear'}></iconify-icon> Refresh
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
+          <button
+            onClick={handleExportCSV}
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm"
+          >
             <iconify-icon icon="solar:export-linear"></iconify-icon> Export CSV
           </button>
         </div>

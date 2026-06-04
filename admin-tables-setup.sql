@@ -215,16 +215,41 @@ CREATE INDEX IF NOT EXISTS idx_tickets_status      ON public.support_tickets(sta
 CREATE INDEX IF NOT EXISTS idx_tickets_user        ON public.support_tickets(user_id);
 CREATE INDEX IF NOT EXISTS idx_audit_logs_created  ON public.audit_logs(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_email_logs_sent     ON public.email_logs(sent_at DESC);
+CREATE INDEX IF NOT EXISTS idx_payments_created    ON public.payments(created_at DESC);
 
 
 -- ============================================================
--- 7. GRANT PERMISSIONS
+-- 7. PAYMENTS TABLE
+-- Tracks all Pro upgrade purchases (real & mock Stripe)
+-- ============================================================
+CREATE TABLE IF NOT EXISTS public.payments (
+  id                UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id           UUID REFERENCES public.users(id) ON DELETE SET NULL,
+  user_email        TEXT,
+  plan              TEXT NOT NULL DEFAULT 'Pro Monthly',
+  amount            NUMERIC(10,2) NOT NULL DEFAULT 4.99,
+  status            TEXT NOT NULL DEFAULT 'completed'
+                    CHECK (status IN ('completed', 'pending', 'failed', 'refunded')),
+  stripe_session_id TEXT,
+  created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE public.payments ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Service role can read all payments"
+  ON public.payments FOR SELECT
+  USING (true);
+
+
+-- ============================================================
+-- 8. GRANT PERMISSIONS
 -- ============================================================
 GRANT ALL ON public.tools_config TO service_role;
 GRANT ALL ON public.support_tickets TO service_role;
 GRANT ALL ON public.audit_logs TO service_role;
 GRANT ALL ON public.email_logs TO service_role;
 GRANT ALL ON public.platform_settings TO service_role;
+GRANT ALL ON public.payments TO service_role;
 GRANT SELECT ON public.tools_config TO authenticated, anon;
 GRANT INSERT, SELECT ON public.support_tickets TO authenticated;
 
@@ -232,3 +257,4 @@ GRANT INSERT, SELECT ON public.support_tickets TO authenticated;
 -- ============================================================
 -- DONE! All admin tables created successfully.
 -- ============================================================
+

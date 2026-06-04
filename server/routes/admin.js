@@ -59,13 +59,14 @@ router.get('/dashboard-stats', protect, admin, async (req, res) => {
     })).slice(-14);
 
     // 6. Top Tools
-    const { data: usageData } = await supabase.from('tool_usage').select('tool_id');
+    const { data: usageData } = await supabase.from('tool_usage').select('tool_name');
     const toolMap = {};
     if (usageData) {
       usageData.forEach(u => {
         // Humanize the slug e.g. "merge-pdf" -> "Merge PDF"
-        const toolName = (u.tool_id || 'unknown').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        const toolName = (u.tool_name || 'unknown').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
         toolMap[toolName] = (toolMap[toolName] || 0) + 1;
+
       });
     }
     
@@ -524,16 +525,16 @@ router.get('/emails', protect, admin, async (req, res) => {
     // Returning mock data to keep the UI functional until the DB tables are created.
     
     const mockCampaigns = [
-      { id: 1, name: 'Welcome Series - Day 1', subject: 'Welcome to PDFMaster!', status: 'active', sent: 1240, open_rate: 45.2, created_at: new Date().toISOString() },
-      { id: 2, name: 'Pro Upgrade Promo', subject: 'Unlock Pro Features - 20% OFF', status: 'draft', sent: 0, open_rate: 0, created_at: new Date().toISOString() },
-      { id: 3, name: 'Inactive Users Reactivation', subject: 'We miss you at PDFMaster', status: 'completed', sent: 850, open_rate: 12.4, created_at: new Date(Date.now() - 86400000 * 5).toISOString() }
+      { id: 1, name: 'Welcome Series - Day 1', subject: 'Welcome to PDFMaster!', status: 'active', sent_count: 1240, open_rate: '45.2%', click_rate: '8.1%', audience: 'All Users', created_at: new Date().toISOString() },
+      { id: 2, name: 'Pro Upgrade Promo', subject: 'Unlock Pro Features - 20% OFF', status: 'draft', sent_count: 0, open_rate: '0%', click_rate: '0%', audience: 'Free Users', created_at: new Date().toISOString() },
+      { id: 3, name: 'Inactive Users Reactivation', subject: 'We miss you at PDFMaster', status: 'completed', sent_count: 850, open_rate: '12.4%', click_rate: '3.2%', audience: 'Inactive Users', created_at: new Date(Date.now() - 86400000 * 5).toISOString() }
     ];
 
     const mockTemplates = [
-      { id: 1, name: 'Welcome Email', type: 'transactional', updated_at: new Date().toISOString() },
-      { id: 2, name: 'Password Reset', type: 'transactional', updated_at: new Date().toISOString() },
-      { id: 3, name: 'Subscription Success', type: 'transactional', updated_at: new Date().toISOString() },
-      { id: 4, name: 'Monthly Newsletter', type: 'marketing', updated_at: new Date().toISOString() }
+      { id: 1, name: 'Welcome Email', status: 'active', updated_at: new Date().toISOString() },
+      { id: 2, name: 'Password Reset', status: 'active', updated_at: new Date().toISOString() },
+      { id: 3, name: 'Subscription Success', status: 'active', updated_at: new Date().toISOString() },
+      { id: 4, name: 'Monthly Newsletter', status: 'draft', updated_at: new Date().toISOString() }
     ];
 
     res.json({ 
@@ -545,6 +546,37 @@ router.get('/emails', protect, admin, async (req, res) => {
     console.error('[Admin Emails Error]:', error);
     res.status(500).json({ message: 'Failed to fetch emails' });
   }
+});
+
+// @desc    Health check for services
+// @route   GET /api/admin/health
+// @access  Private/Admin
+router.get('/health', protect, admin, async (req, res) => {
+  const checkService = async (url) => {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 3000);
+      const response = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeout);
+      return response.ok;
+    } catch {
+      return false;
+    }
+  };
+
+  const [pythonOk, gotenbergOk] = await Promise.all([
+    checkService((process.env.CONVERTER_URL || 'http://localhost:3006') + '/health'),
+    checkService((process.env.GOTENBERG_URL || 'http://localhost:3001') + '/health')
+  ]);
+
+  // Check DB
+  let dbOk = false;
+  try {
+    const { error } = await supabase.from('users').select('id', { head: true, count: 'exact' });
+    dbOk = !error;
+  } catch { dbOk = false; }
+
+  res.json({ success: true, python: pythonOk, gotenberg: gotenbergOk, database: dbOk });
 });
 
 module.exports = router;

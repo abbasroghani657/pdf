@@ -12,14 +12,27 @@ export default function AdminJobs() {
     doneToday: 0,
     errors: 0
   });
+  const [serviceHealth, setServiceHealth] = useState({
+    python: null, gotenberg: null, database: null
+  });
 
   const fetchJobs = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/jobs');
-      if (res.data.success) {
-        setJobs(res.data.jobs);
-        setStats(res.data.stats);
+      const [jobsRes, healthRes] = await Promise.all([
+        api.get('/admin/jobs'),
+        api.get('/admin/health').catch(() => ({ data: {} }))
+      ]);
+      if (jobsRes.data.success) {
+        setJobs(jobsRes.data.jobs);
+        setStats(jobsRes.data.stats);
+      }
+      if (healthRes.data) {
+        setServiceHealth({
+          python: healthRes.data.python,
+          gotenberg: healthRes.data.gotenberg,
+          database: healthRes.data.database
+        });
       }
     } catch (error) {
       console.error('Failed to fetch jobs:', error);
@@ -31,8 +44,6 @@ export default function AdminJobs() {
 
   useEffect(() => {
     fetchJobs();
-    
-    // Auto-refresh every 30 seconds
     const interval = setInterval(fetchJobs, 30000);
     return () => clearInterval(interval);
   }, []);
@@ -88,19 +99,23 @@ export default function AdminJobs() {
           {/* SERVICE STATUS */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex items-center gap-4 overflow-x-auto custom-scrollbar">
             {[
-              { name: 'Python Service', status: 'online' },
-              { name: 'Gotenberg', status: 'online' },
-              { name: 'Gemini API', status: 'online' },
-              { name: 'Database', status: 'online' },
-            ].map((service, i) => (
-              <div key={i} className="flex-1 min-w-[120px] bg-gray-50 rounded-xl p-3 border border-gray-100">
-                <p className="text-xs font-bold text-gray-500 mb-2 truncate">{service.name}</p>
-                <div className="flex items-center gap-2 text-xs font-semibold">
-                  <span className={clsx("w-2 h-2 rounded-full", service.status === 'online' ? 'bg-emerald-500' : 'bg-amber-500')}></span>
-                  {service.status === 'online' ? 'Operational' : 'Warning'}
+              { name: 'Python Service', key: 'python' },
+              { name: 'Gotenberg', key: 'gotenberg' },
+              { name: 'Gemini API', key: null },
+              { name: 'Database', key: 'database' },
+            ].map((service, i) => {
+              const isOnline = service.key === null ? true : serviceHealth[service.key];
+              const isUnknown = service.key !== null && serviceHealth[service.key] === null;
+              return (
+                <div key={i} className="flex-1 min-w-[120px] bg-gray-50 rounded-xl p-3 border border-gray-100">
+                  <p className="text-xs font-bold text-gray-500 mb-2 truncate">{service.name}</p>
+                  <div className="flex items-center gap-2 text-xs font-semibold">
+                    <span className={clsx("w-2 h-2 rounded-full", isUnknown ? 'bg-gray-300 animate-pulse' : isOnline ? 'bg-emerald-500' : 'bg-red-500')}></span>
+                    {isUnknown ? 'Checking...' : isOnline ? 'Operational' : 'Offline'}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* ERROR LOGS */}

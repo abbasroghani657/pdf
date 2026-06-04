@@ -29,6 +29,7 @@ router.post('/create-checkout-session', protect, async (req, res) => {
 router.post('/mock-webhook', protect, async (req, res) => {
   try {
     const userId = req.user.id;
+    const userEmail = req.user.email;
     
     console.log(`[MOCK PAYMENT] Payment successful for user ${userId}. Updating to Pro plan.`);
     
@@ -44,6 +45,23 @@ router.post('/mock-webhook', protect, async (req, res) => {
     if (error) {
       console.error('Failed to update user to Pro in Supabase:', error);
       return res.status(500).json({ success: false, message: 'Database update failed' });
+    }
+
+    // Insert payment record into payments table for Revenue Dashboard
+    const { error: paymentError } = await supabase
+      .from('payments')
+      .insert({
+        user_id: userId,
+        user_email: userEmail,
+        plan: 'Pro Monthly',
+        amount: 4.99,
+        status: 'completed',
+        stripe_session_id: 'mock_' + Math.random().toString(36).substr(2, 9)
+      });
+
+    if (paymentError) {
+      // Non-critical: log but don't fail the request
+      console.warn('[PAYMENT RECORD] Could not insert payment record (payments table may not exist yet):', paymentError.message);
     }
 
     res.json({ success: true, message: 'User upgraded to Pro successfully' });

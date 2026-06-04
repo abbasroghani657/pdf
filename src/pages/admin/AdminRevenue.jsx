@@ -32,6 +32,25 @@ export default function AdminRevenue() {
     fetchRevenueData();
   }, []);
 
+  const handleExportReport = () => {
+    const headers = ['Date', 'User', 'Plan', 'Amount', 'Status'];
+    const rows = transactions.map(tx => [
+      new Date(tx.time).toLocaleDateString(),
+      tx.user || '',
+      tx.plan || '',
+      tx.amount || '',
+      tx.status || ''
+    ]);
+    const csv = [headers, ...rows].map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `pdfmaster_revenue_${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -44,7 +63,10 @@ export default function AdminRevenue() {
           >
             <iconify-icon icon={loading ? "line-md:loading-twotone-loop" : "solar:refresh-linear"}></iconify-icon> Refresh
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
+          <button
+            onClick={handleExportReport}
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors shadow-sm"
+          >
             <iconify-icon icon="solar:document-text-linear"></iconify-icon> Export Report
           </button>
         </div>
@@ -134,7 +156,7 @@ export default function AdminRevenue() {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900">Recent Real Transactions</h2>
-          <button className="text-sm font-semibold text-[#378ADD] hover:underline">View All</button>
+          <span className="text-xs text-gray-400">Showing last {transactions.length} transactions</span>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm whitespace-nowrap">
@@ -168,7 +190,10 @@ export default function AdminRevenue() {
                     </span>
                   </td>
                   <td className="py-4 px-6 text-right">
-                    <button className="text-sm font-medium text-gray-400 hover:text-gray-900 transition-colors">Details</button>
+                    <button
+                      onClick={() => navigator.clipboard.writeText(tx.user).then(() => toast.success('Email copied!'))}
+                      className="text-sm font-medium text-gray-400 hover:text-gray-900 transition-colors"
+                    >Copy Email</button>
                   </td>
                 </tr>
               ))}

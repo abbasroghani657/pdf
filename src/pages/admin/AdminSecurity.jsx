@@ -8,6 +8,13 @@ export default function AdminSecurity() {
   const [logs, setLogs] = useState([]);
   const [admins, setAdmins] = useState([]);
   const [bannedUsers, setBannedUsers] = useState([]);
+  const [savingRates, setSavingRates] = useState(false);
+  const [actionLoading, setActionLoading] = useState({});
+  const [rateLimits, setRateLimits] = useState({ global: 100, perTool: 10, ai: 5 });
+  const [showAddAdmin, setShowAddAdmin] = useState(false);
+  const [showAddBan, setShowAddBan] = useState(false);
+  const [newAdminEmail, setNewAdminEmail] = useState('');
+  const [newBanEmail, setNewBanEmail] = useState('');
 
   const fetchData = async () => {
     setLoading(true);
@@ -33,9 +40,72 @@ export default function AdminSecurity() {
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  useEffect(() => { fetchData(); }, []);
+
+  const handleSaveRateLimits = async () => {
+    setSavingRates(true);
+    try {
+      await api.put('/admin/settings', {
+        settings: {
+          rate_limit_global: String(rateLimits.global),
+          rate_limit_per_tool: String(rateLimits.perTool),
+          rate_limit_ai: String(rateLimits.ai),
+        }
+      });
+      toast.success('Rate limits saved!');
+    } catch {
+      toast.error('Failed to save rate limits.');
+    } finally {
+      setSavingRates(false);
+    }
+  };
+
+  const handleAddAdmin = async () => {
+    if (!newAdminEmail.trim()) return toast.error('Enter an email address.');
+    try {
+      const usersRes = await api.get('/admin/users');
+      const target = usersRes.data.users?.find(u => u.email === newAdminEmail.trim());
+      if (!target) return toast.error('User not found with that email.');
+      await api.put(`/admin/users/${target.id}/role`, { role: 'admin' }).catch(() => {
+        throw new Error('Role update not available');
+      });
+      toast.success(`${newAdminEmail} promoted to Admin!`);
+      setNewAdminEmail('');
+      setShowAddAdmin(false);
+      fetchData();
+    } catch (e) {
+      toast.error(e.message || 'Failed to add admin.');
+    }
+  };
+
+  const handleAddBan = async () => {
+    if (!newBanEmail.trim()) return toast.error('Enter an email address.');
+    try {
+      const usersRes = await api.get('/admin/users');
+      const target = usersRes.data.users?.find(u => u.email === newBanEmail.trim());
+      if (!target) return toast.error('User not found with that email.');
+      await api.put(`/admin/users/${target.id}/ban`, { is_banned: true });
+      toast.success(`${newBanEmail} has been banned.`);
+      setNewBanEmail('');
+      setShowAddBan(false);
+      fetchData();
+    } catch {
+      toast.error('Failed to ban user.');
+    }
+  };
+
+  const handleUnban = async (ban) => {
+    setActionLoading(prev => ({ ...prev, [`unban-${ban.id}`]: true }));
+    try {
+      await api.put(`/admin/users/${ban.id}/ban`, { is_banned: false });
+      setBannedUsers(prev => prev.filter(u => u.id !== ban.id));
+      toast.success(`${ban.email} has been unbanned.`);
+    } catch {
+      toast.error('Failed to unban user.');
+    } finally {
+      setActionLoading(prev => ({ ...prev, [`unban-${ban.id}`]: false }));
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -60,24 +130,43 @@ export default function AdminSecurity() {
                 <p className="text-sm font-bold text-gray-900">Global Limit</p>
                 <p className="text-xs text-gray-500">Max requests per IP per 15 minutes</p>
               </div>
-              <input type="number" defaultValue="100" className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]" />
+              <input
+                type="number"
+                value={rateLimits.global}
+                onChange={e => setRateLimits(prev => ({ ...prev, global: e.target.value }))}
+                className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]"
+              />
             </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-bold text-gray-900">Per Tool Limit</p>
                 <p className="text-xs text-gray-500">Max process requests per minute</p>
               </div>
-              <input type="number" defaultValue="10" className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]" />
+              <input
+                type="number"
+                value={rateLimits.perTool}
+                onChange={e => setRateLimits(prev => ({ ...prev, perTool: e.target.value }))}
+                className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]"
+              />
             </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-bold text-gray-900">AI Endpoints</p>
                 <p className="text-xs text-gray-500">Max Chat/Summarize requests per minute</p>
               </div>
-              <input type="number" defaultValue="5" className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]" />
+              <input
+                type="number"
+                value={rateLimits.ai}
+                onChange={e => setRateLimits(prev => ({ ...prev, ai: e.target.value }))}
+                className="w-24 px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-center focus:ring-[#378ADD] focus:border-[#378ADD]"
+              />
             </div>
-            <button className="w-full py-2 bg-gray-50 text-[#378ADD] font-bold text-sm rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
-              Save Rate Limits
+            <button
+              onClick={handleSaveRateLimits}
+              disabled={savingRates}
+              className="w-full py-2 bg-gray-50 text-[#378ADD] font-bold text-sm rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors disabled:opacity-50"
+            >
+              {savingRates ? 'Saving...' : 'Save Rate Limits'}
             </button>
           </div>
         </div>
@@ -97,10 +186,30 @@ export default function AdminSecurity() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
           <div className="p-6 border-b border-gray-100 flex items-center justify-between">
             <h2 className="text-lg font-bold text-gray-900">Admin Accounts</h2>
-            <button className="text-sm font-bold text-[#378ADD] hover:underline flex items-center gap-1">
+            <button
+              onClick={() => setShowAddAdmin(v => !v)}
+              className="text-sm font-bold text-[#378ADD] hover:underline flex items-center gap-1"
+            >
               <iconify-icon icon="solar:user-plus-bold"></iconify-icon> Add Admin
             </button>
           </div>
+          {showAddAdmin && (
+            <div className="px-6 pt-4 flex gap-2">
+              <input
+                type="email"
+                placeholder="user@email.com"
+                value={newAdminEmail}
+                onChange={e => setNewAdminEmail(e.target.value)}
+                className="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]"
+              />
+              <button
+                onClick={handleAddAdmin}
+                className="px-4 py-2 bg-[#378ADD] text-white text-sm font-bold rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          )}
           <div className="p-6 space-y-4 flex-1">
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-200">
               <span className="text-sm font-bold text-gray-900">Require 2FA for all admins</span>
@@ -130,7 +239,12 @@ export default function AdminSecurity() {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <button className="text-gray-400 hover:text-gray-700"><iconify-icon icon="solar:pen-bold" class="text-lg"></iconify-icon></button>
+                    <button
+                      onClick={() => toast('To edit admin roles, use the Supabase dashboard → Table Editor → users table.', { icon: 'ℹ️' })}
+                      className="text-gray-400 hover:text-gray-700"
+                    >
+                      <iconify-icon icon="solar:pen-bold" class="text-lg"></iconify-icon>
+                    </button>
                   </div>
                 </div>
               ))}
@@ -142,10 +256,30 @@ export default function AdminSecurity() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
           <div className="p-6 border-b border-gray-100 flex items-center justify-between">
             <h2 className="text-lg font-bold text-gray-900">Banned Users & IPs</h2>
-            <button className="text-sm font-bold text-red-600 hover:underline flex items-center gap-1">
+            <button
+              onClick={() => setShowAddBan(v => !v)}
+              className="text-sm font-bold text-red-600 hover:underline flex items-center gap-1"
+            >
               <iconify-icon icon="solar:shield-minus-bold"></iconify-icon> Add Ban
             </button>
           </div>
+          {showAddBan && (
+            <div className="px-6 pt-4 flex gap-2">
+              <input
+                type="email"
+                placeholder="user@email.com"
+                value={newBanEmail}
+                onChange={e => setNewBanEmail(e.target.value)}
+                className="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-red-400 focus:border-red-400"
+              />
+              <button
+                onClick={handleAddBan}
+                className="px-4 py-2 bg-red-500 text-white text-sm font-bold rounded-lg hover:bg-red-600 transition-colors"
+              >
+                Ban
+              </button>
+            </div>
+          )}
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm whitespace-nowrap">
               <thead className="bg-gray-50/80 border-b border-gray-100 text-gray-500">
@@ -165,12 +299,18 @@ export default function AdminSecurity() {
                   </tr>
                 )}
                 {bannedUsers.map((ban, i) => (
-                  <tr key={i} className="hover:bg-gray-50/50">
+                  <tr key={ban.id || i} className="hover:bg-gray-50/50">
                     <td className="py-3 px-6 font-bold text-gray-900">{ban.email || ban.name || 'Unknown'}</td>
                     <td className="py-3 px-6 text-gray-600">Violation of TOS</td>
                     <td className="py-3 px-6 text-gray-400 text-xs">{new Date(ban.created_at).toLocaleDateString()}</td>
                     <td className="py-3 px-6 text-right">
-                      <button className="text-xs font-bold text-gray-500 hover:text-gray-900 px-3 py-1.5 border border-gray-200 rounded-lg">Unban</button>
+                      <button
+                        onClick={() => handleUnban(ban)}
+                        disabled={actionLoading[`unban-${ban.id}`]}
+                        className="text-xs font-bold text-gray-500 hover:text-gray-900 px-3 py-1.5 border border-gray-200 rounded-lg disabled:opacity-50"
+                      >
+                        {actionLoading[`unban-${ban.id}`] ? '...' : 'Unban'}
+                      </button>
                     </td>
                   </tr>
                 ))}
