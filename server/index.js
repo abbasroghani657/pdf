@@ -139,9 +139,36 @@ async function processNextJob() {
     const result = await executeTool(req, mockRes, files, tool, baseName, newFilename, contentType);
     job.status = 'done';
     job.result = result; // { buffer, contentType, newFilename, customHeaders }
+    
+    // Log successful usage to Supabase
+    try {
+      const supabase = require('./config/supabase');
+      const userId = job.req.body?.userId || null;
+      await supabase.from('tool_usage').insert({
+        user_id: userId,
+        tool_name: tool,
+        file_size: files?.[0]?.size || 0,
+        status: 'success'
+      });
+    } catch(e) { /* non-critical */ }
+    
   } catch (err) {
     job.status = 'error';
     job.error = err.message;
+    
+    // Log failed usage to Supabase
+    try {
+      const supabase = require('./config/supabase');
+      const userId = job.req?.body?.userId || null;
+      await supabase.from('tool_usage').insert({
+        user_id: userId,
+        tool_name: job.tool,
+        file_size: job.files?.[0]?.size || 0,
+        status: 'error',
+        error_message: err.message
+      });
+    } catch(e) { /* non-critical */ }
+    
   } finally {
     // Clean up temporary files
     if (job.files) {

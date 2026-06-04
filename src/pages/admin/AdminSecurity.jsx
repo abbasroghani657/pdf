@@ -15,6 +15,7 @@ export default function AdminSecurity() {
   const [showAddBan, setShowAddBan] = useState(false);
   const [newAdminEmail, setNewAdminEmail] = useState('');
   const [newBanEmail, setNewBanEmail] = useState('');
+  const [editingRole, setEditingRole] = useState(null);
 
   const fetchData = async () => {
     setLoading(true);
@@ -75,6 +76,17 @@ export default function AdminSecurity() {
       fetchData();
     } catch (e) {
       toast.error(e.message || 'Failed to add admin.');
+    }
+  };
+
+  const handleRoleChange = async (userId, newRole) => {
+    try {
+      await api.put(`/admin/users/${userId}/role`, { role: newRole });
+      toast.success('Role updated successfully.');
+      setEditingRole(null);
+      fetchData();
+    } catch (e) {
+      toast.error('Failed to update role.');
     }
   };
 
@@ -231,16 +243,30 @@ export default function AdminSecurity() {
                     <div className="flex flex-col">
                       <span className="text-sm font-bold text-gray-900 flex items-center gap-2">
                         {admin.name || 'Unknown Admin'}
-                        <span className={clsx("px-2 py-0.5 rounded text-[10px] uppercase tracking-wider", admin.role === 'superadmin' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700')}>
-                          {admin.role === 'superadmin' ? 'Super Admin' : 'Admin'}
-                        </span>
+                        {editingRole === admin.id ? (
+                          <select
+                            defaultValue={admin.role}
+                            onChange={(e) => handleRoleChange(admin.id, e.target.value)}
+                            onBlur={() => setEditingRole(null)}
+                            autoFocus
+                            className="text-xs px-2 py-0.5 rounded border border-gray-300 ml-2"
+                          >
+                            <option value="user">User (Demote)</option>
+                            <option value="admin">Admin</option>
+                            <option value="superadmin">Super Admin</option>
+                          </select>
+                        ) : (
+                          <span className={clsx("px-2 py-0.5 rounded text-[10px] uppercase tracking-wider", admin.role === 'superadmin' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700')}>
+                            {admin.role === 'superadmin' ? 'Super Admin' : 'Admin'}
+                          </span>
+                        )}
                       </span>
                       <span className="text-xs text-gray-500 mt-0.5">{admin.email}</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <button
-                      onClick={() => toast('To edit admin roles, use the Supabase dashboard → Table Editor → users table.', { icon: 'ℹ️' })}
+                      onClick={() => setEditingRole(admin.id)}
                       className="text-gray-400 hover:text-gray-700"
                     >
                       <iconify-icon icon="solar:pen-bold" class="text-lg"></iconify-icon>

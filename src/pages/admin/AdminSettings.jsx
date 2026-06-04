@@ -15,8 +15,11 @@ export default function AdminSettings() {
     pro_monthly_price: '4.99',
     pro_annual_price: '44.99',
     free_file_size_limit: '10',
+    free_daily_uses: '5',
     pro_file_size_limit: '100',
     support_email: 'support@pdfmaster.com',
+    meta_title: 'PDFMaster — Free PDF Tools Online',
+    meta_description: 'Edit, compress, merge, sign and convert PDFs for free. No installation needed.',
   });
 
   const TABS = [
@@ -226,7 +229,12 @@ export default function AdminSettings() {
                   </div>
                   <div className="space-y-1">
                     <label className="text-xs font-bold text-gray-500">Per-tool Daily Uses</label>
-                    <input type="number" defaultValue="5" className="w-full px-3 py-1.5 border border-gray-200 rounded text-sm focus:ring-[#378ADD] focus:border-[#378ADD]" />
+                    <input 
+                      type="number" 
+                      value={settings.free_daily_uses}
+                      onChange={e => updateSetting('free_daily_uses', e.target.value)}
+                      className="w-full px-3 py-1.5 border border-gray-200 rounded text-sm focus:ring-[#378ADD] focus:border-[#378ADD]" 
+                    />
                   </div>
                 </div>
               </div>
@@ -282,11 +290,21 @@ export default function AdminSettings() {
               <h2 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">SEO & Legal</h2>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700">Default Meta Title</label>
-                <input type="text" defaultValue="PDFMaster — Free PDF Tools Online" className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]" />
+                <input 
+                  type="text" 
+                  value={settings.meta_title}
+                  onChange={e => updateSetting('meta_title', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]" 
+                />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700">Default Meta Description</label>
-                <textarea rows="3" defaultValue="Edit, compress, merge, sign and convert PDFs for free. No installation needed." className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]"></textarea>
+                <textarea 
+                  rows="3" 
+                  value={settings.meta_description}
+                  onChange={e => updateSetting('meta_description', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-[#378ADD] focus:border-[#378ADD]"
+                ></textarea>
               </div>
               <div className="pt-4 flex gap-4">
                 <button className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-200 transition-colors">Edit Terms of Service</button>

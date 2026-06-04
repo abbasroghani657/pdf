@@ -156,6 +156,30 @@ router.put('/users/:id/pro', protect, admin, async (req, res) => {
   }
 });
 
+// @desc    Update user role (Add Admin)
+// @route   PUT /api/admin/users/:id/role
+// @access  Private/Admin
+router.put('/users/:id/role', protect, admin, async (req, res) => {
+  try {
+    const { role } = req.body;
+    if (!['user','admin','superadmin'].includes(role)) {
+      return res.status(400).json({ message: 'Invalid role' });
+    }
+    const { data, error } = await supabase
+      .from('users')
+      .update({ role })
+      .eq('id', req.params.id)
+      .select()
+      .single();
+      
+    if (error) throw error;
+    res.json({ success: true, user: data });
+  } catch (error) {
+    console.error('[Admin Update Role Error]:', error);
+    res.status(500).json({ message: 'Failed to update role' });
+  }
+});
+
 // @desc    Get Revenue Data
 // @route   GET /api/admin/revenue
 // @access  Private/Admin
