@@ -79,7 +79,15 @@ VALUES
   ('Compare PDF',         'compare-pdf',        'Analyze',           TRUE, TRUE,  3),
   ('Extract Text',        'extract-text',       'Analyze',           TRUE, FALSE, 5),
   ('Extract Images',      'extract-images',     'Analyze',           TRUE, FALSE, 5),
-  ('PDF Metadata',        'pdf-metadata',       'Analyze',           TRUE, FALSE, 5)
+  ('PDF Metadata',        'pdf-metadata',       'Analyze',           TRUE, FALSE, 5),
+  ('PowerPoint to PDF',  'powerpoint-to-pdf',  'Convert',   TRUE, FALSE, 5),
+  ('PDF to HTML',        'pdf-to-html',         'Convert',   TRUE, FALSE, 5),
+  ('PDF to Text',        'pdf-to-text',         'Convert',   TRUE, FALSE, 5),
+  ('Add blank page',     'add-blank-page',      'Organize',  TRUE, FALSE, 10),
+  ('Repair PDF',         'repair-pdf',          'Optimize',  TRUE, FALSE, 5),
+  ('Certificate sign',   'certificate-sign',    'Sign',      TRUE, TRUE,  3),
+  ('PDF forms',          'pdf-forms',           'Edit',      TRUE, FALSE, 5),
+  ('Extract data',       'extract-data',        'AI',        TRUE, TRUE,  3)
 ON CONFLICT (slug) DO NOTHING;
 
 
@@ -270,7 +278,7 @@ CREATE TABLE IF NOT EXISTS public.admin_invitations (
   invited_by_name  TEXT,
   site_url         TEXT,
   status           TEXT NOT NULL DEFAULT 'pending'
-                   CHECK (status IN ('pending', 'accepted', 'expired')),
+                   CHECK (status IN ('pending', 'accepted', 'declined', 'expired')),
   expires_at       TIMESTAMPTZ NOT NULL DEFAULT (NOW() + INTERVAL '48 hours'),
   accepted_at      TIMESTAMPTZ,
   created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
