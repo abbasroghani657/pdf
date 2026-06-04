@@ -14,8 +14,7 @@ const QUICK_TOOLS = [
 ];
 
 const COUNTRIES = [
-  "United States", "United Kingdom", "Canada", "Australia", 
-  "India", "Pakistan", "Germany", "France", "Japan", "Brazil", "Other"
+  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
 ];
 
 
@@ -26,7 +25,7 @@ export default function DashboardPage() {
   const [editForm, setEditForm] = useState({ name: '', country: '' });
   const [isSaving, setIsSaving] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [userStats, setUserStats] = useState({ filesProcessed: '—', storageSaved: '—' });
+  const [userStats, setUserStats] = useState({ filesProcessed: '—', storageSaved: '—', recentTools: [] });
 
   useEffect(() => {
     if (!user) navigate('/login');
@@ -41,6 +40,7 @@ export default function DashboardPage() {
           setUserStats({
             filesProcessed: res.data.filesProcessed,
             storageSaved: res.data.storageSaved,
+            recentTools: res.data.recentTools || []
           });
         }
       }).catch(() => {}); // Silently fail — stats are non-critical
@@ -222,22 +222,40 @@ export default function DashboardPage() {
                 Recently Used Tools
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {[
-                  { tool: 'Merge PDF', time: '2 hours ago', icon: 'solar:layers-bold', color: 'text-blue-600 bg-blue-50', path: '/tools/merge-pdf' },
-                  { tool: 'Compress PDF', time: 'Yesterday', icon: 'solar:zip-file-bold', color: 'text-emerald-600 bg-emerald-50', path: '/tools/compress-pdf' },
-                  { tool: 'Protect PDF', time: '3 days ago', icon: 'solar:lock-password-bold', color: 'text-red-600 bg-red-50', path: '/tools/protect-pdf' },
-                ].map((act, i) => (
-                  <Link key={i} to={act.path} className="flex items-center gap-4 p-3 rounded-2xl border border-gray-50 hover:bg-gray-50 hover:border-gray-200 transition-all cursor-pointer">
-                    <div className={clsx('w-10 h-10 rounded-xl flex items-center justify-center', act.color)}>
-                      <iconify-icon icon={act.icon} class="text-xl"></iconify-icon>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-bold text-gray-900">{act.tool}</p>
-                      <p className="text-xs text-gray-500">{act.time}</p>
-                    </div>
-                    <iconify-icon icon="solar:alt-arrow-right-linear" class="text-gray-400"></iconify-icon>
-                  </Link>
-                ))}
+                {userStats.recentTools && userStats.recentTools.length > 0 ? (
+                  userStats.recentTools.map((act, i) => {
+                    const matchedTool = QUICK_TOOLS.find(t => t.path.includes(act.name.toLowerCase().replace('_', '-'))) 
+                      || { label: act.name.replace(/-/g, ' ').toUpperCase(), icon: 'solar:widget-bold', color: 'text-gray-600 bg-gray-50', path: `/tools/${act.name}` };
+                    
+                    const timeAgo = (dateStr) => {
+                      const diff = new Date() - new Date(dateStr);
+                      const minutes = Math.floor(diff / 60000);
+                      if (minutes < 60) return `${minutes || 1} mins ago`;
+                      const hours = Math.floor(minutes / 60);
+                      if (hours < 24) return `${hours} hours ago`;
+                      return `${Math.floor(hours / 24)} days ago`;
+                    };
+
+                    return (
+                      <Link key={i} to={matchedTool.path} className="flex items-center gap-4 p-3 rounded-2xl border border-gray-50 hover:bg-gray-50 hover:border-gray-200 transition-all cursor-pointer">
+                        <div className={clsx('w-10 h-10 rounded-xl flex items-center justify-center', matchedTool.color)}>
+                          <iconify-icon icon={matchedTool.icon} class="text-xl"></iconify-icon>
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-sm font-bold text-gray-900">{matchedTool.label}</p>
+                          <p className="text-xs text-gray-500">{timeAgo(act.time)}</p>
+                        </div>
+                        <iconify-icon icon="solar:alt-arrow-right-linear" class="text-gray-400"></iconify-icon>
+                      </Link>
+                    );
+                  })
+                ) : (
+                  <div className="col-span-3 py-6 flex flex-col items-center justify-center text-gray-400 gap-2">
+                    <iconify-icon icon="solar:ghost-smile-bold" class="text-4xl opacity-50"></iconify-icon>
+                    <p className="text-sm font-semibold">No recent activity</p>
+                    <p className="text-xs text-gray-400">Tools you use will show up here.</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

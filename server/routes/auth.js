@@ -210,10 +210,30 @@ router.get('/stats', protect, async (req, res) => {
       return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
     };
 
+    // Fetch last 15 tool usages to find the latest 3 unique tools
+    const { data: recentActivity } = await supabase
+      .from('tool_usage')
+      .select('tool_name, created_at')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false })
+      .limit(15);
+
+    const recentToolsMap = new Map();
+    if (recentActivity) {
+      for (const row of recentActivity) {
+        if (!recentToolsMap.has(row.tool_name)) {
+          recentToolsMap.set(row.tool_name, row.created_at);
+        }
+        if (recentToolsMap.size >= 3) break;
+      }
+    }
+    const recentTools = Array.from(recentToolsMap.entries()).map(([name, time]) => ({ name, time }));
+
     res.json({
       success: true,
       filesProcessed: filesProcessed || 0,
       storageSaved: formatBytes(totalBytesSaved),
+      recentTools
     });
   } catch (error) {
     console.error('[User Stats Error]:', error);
