@@ -11,6 +11,7 @@ const AdmZip = require('adm-zip');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
+const { startSubscriptionCron } = require('./jobs/subscriptionCron');
 const authRoutes = require('./routes/auth');
 const paymentsRoutes = require('./routes/payments');
 const adminRoutes = require('./routes/admin');
@@ -1755,5 +1756,8 @@ const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`🐍 Python Converter    → ${CONVERTER_URL}  (PDF → Word/Excel/PPT/JPG)`);
   console.log(`💰 CloudConvert Cost   → $0 (NOT USED — 100% FREE!)`);
   console.log(`💡 Health check        → http://localhost:${PORT}/api/health\n`);
+  
+  // Start the daily cron job for checking Pro subscriptions
+  startSubscriptionCron();
 });
 server.timeout = 600000; // 10 minutes timeout for heavy OCR tasks

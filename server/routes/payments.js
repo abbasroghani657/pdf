@@ -33,12 +33,19 @@ router.post('/mock-webhook', protect, async (req, res) => {
     
     console.log(`[MOCK PAYMENT] Payment successful for user ${userId}. Updating to Pro plan.`);
     
+    // Calculate 30 days from now for expiration
+    const startedAt = new Date();
+    const expiresAt = new Date();
+    expiresAt.setDate(expiresAt.getDate() + 30);
+
     // Update user to Pro in Supabase
     const { error } = await supabase
       .from('users')
       .update({ 
         is_pro: true, 
-        plan: 'Pro'
+        plan: 'Pro',
+        pro_started_at: startedAt.toISOString(),
+        pro_expires_at: expiresAt.toISOString()
       })
       .eq('id', userId);
       

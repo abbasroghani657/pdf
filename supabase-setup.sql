@@ -15,6 +15,8 @@ CREATE TABLE IF NOT EXISTS public.users (
   role          TEXT NOT NULL DEFAULT 'user' CHECK (role IN ('user', 'admin', 'superadmin')),
   is_pro        BOOLEAN NOT NULL DEFAULT FALSE,
   plan          TEXT NOT NULL DEFAULT 'Free' CHECK (plan IN ('Free', 'Pro', 'Enterprise')),
+  pro_started_at TIMESTAMPTZ,
+  pro_expires_at TIMESTAMPTZ,
   is_banned     BOOLEAN NOT NULL DEFAULT FALSE,
   last_login    TIMESTAMPTZ,
   created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
