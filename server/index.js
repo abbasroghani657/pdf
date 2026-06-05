@@ -138,7 +138,7 @@ async function processNextJob() {
       json: (obj) => { throw new Error(obj.error || 'Job failed'); }
     };
     
-    const result = await executeTool(req, mockRes, files, tool, baseName, newFilename, contentType);
+    const result = await executeTool(req, mockRes, files, tool, baseName, newFilename, contentType, job.isPro);
     job.status = 'done';
     job.result = result; // { buffer, contentType, newFilename, customHeaders }
     
@@ -222,7 +222,7 @@ app.get('/api/download/:id', (req, res) => {
 });
 
 // ─── Execute Tool Logic (Extracted from /api/process) ──────────────────────────
-async function executeTool(req, res, files, tool, baseName, newFilename, contentType) {
+async function executeTool(req, res, files, tool, baseName, newFilename, contentType, isPro = false) {
   let processedBuffer;
   const file = files.find(f => f.fieldname === 'file') || files[0];
 
@@ -235,11 +235,13 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
     const file = files.find(f => f.fieldname === 'file') || files[0];
     if (!file) return res.status(400).json({ error: 'Main file missing' });
     
-    // ─── SaaS Monetization: 10MB Free-Tier Limit ────────────────────────────────
+    // ─── SaaS Monetization: Pro = 1GB, Free = 10MB ──────────────────────────────
     const totalSize = files.reduce((acc, f) => acc + f.size, 0);
-    if (totalSize > 10 * 1024 * 1024) {
+    const maxSize = isPro ? 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 1GB pro, 10MB free
+    if (totalSize > maxSize) {
       files.forEach(f => { try { fs.unlinkSync(f.path); } catch(e){} });
-      return res.status(413).json({ error: 'File size exceeds the 10MB free tier limit. Upgrade to Pro for up to 1GB uploads.' });
+      const limitLabel = isPro ? '1GB' : '10MB';
+      return res.status(413).json({ error: `File size exceeds the ${limitLabel} limit. ${!isPro ? 'Upgrade to Pro for up to 1GB uploads.' : ''}` });
     }
     // ────────────────────────────────────────────────────────────────────────────
     
@@ -957,6 +959,12 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
   }
 } // End of executeTool
 
+const aiRateLimit = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: (req) => req.user?.profile?.is_pro ? 1000 : 0, // 1000 for Pro, 0 for Free/Guests
+  message: { error: 'This is a Pro feature. Please upgrade to Pro for unlimited access.' }
+});
+
 // ─── Main API Route (Queued) ──────────────────────────────────────────────────
 app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
   const files = req.files;
@@ -992,6 +1000,7 @@ app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
     status: 'queued',
     position,
     req: { body: req.body }, // Only store serializable request body data
+    isPro: req.user?.profile?.is_pro || false,
     res: null,
     files,
     tool,
@@ -1008,7 +1017,7 @@ app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
 });
 
 // ─── Plagiarism Check ──────────────────────────────────────────────────────────
-app.post('/api/plagiarism-check', express.json({ limit: '50mb' }), async (req, res) => {
+app.post('/api/plagiarism-check', protectOptional, aiRateLimit, express.json({ limit: '50mb' }), async (req, res) => {
   const { text, options } = req.body;
   if (!text) return res.status(400).json({ error: 'No text provided for plagiarism check' });
 
@@ -1630,7 +1639,7 @@ app.get('/api/health', async (req, res) => {
 
 // ─── AI Chat Endpoint — Multi-API Fallback ───────────────────────────────────
 // Priority: Google Gemini 2.0 Flash → Groq Llama 3 → Client Fallback
-app.post('/api/ai-chat', express.json({ limit: '50mb' }), async (req, res) => {
+app.post('/api/ai-chat', protectOptional, aiRateLimit, express.json({ limit: '50mb' }), async (req, res) => {
   const { message, pdfContext, history = [], customSystemPrompt } = req.body;
   if (!message || (!pdfContext && !customSystemPrompt)) return res.status(400).json({ error: 'message and pdfContext required' });
 

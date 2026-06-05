@@ -6,6 +6,7 @@ import { ExclamationCircleIcon, ArrowPathIcon, EyeSlashIcon, EyeIcon } from '@he
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
+import { processWithQueue } from '../utils/queueApi';
 
 export default function ProtectPDFPage() {
   const { isPro } = useAuth();
@@ -112,18 +113,9 @@ export default function ProtectPDFPage() {
       formData.append('allow_modify', allowModify);
       formData.append('allow_annotate', allowAnnotate);
 
-      const API_URL = '/api/process';
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        body: formData,
+      const data = await processWithQueue(formData, (status) => {
+        if (status === 'processing' && state !== 'processing') setState('processing');
       });
-
-      if (!response.ok) {
-        const errData = await response.json().catch(() => ({}));
-        throw new Error(errData.error || `Server error (${response.status})`);
-      }
-
-      const data = await response.json();
       
       if (!data.base64) {
         throw new Error('Received invalid data from server.');

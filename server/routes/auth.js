@@ -255,21 +255,14 @@ router.post('/reset-password', async (req, res) => {
       return res.status(400).json({ message: 'Password must be at least 8 characters.' });
     }
 
-    // Use the recovery token to set the session, then update the password
-    const { data: sessionData, error: sessionError } = await supabase.auth.setSession({
-      access_token: accessToken,
-      refresh_token: accessToken, // recovery tokens act as both
-    });
+    // Verify the access token directly and get the user ID
+    const { data: userData, error: userError } = await supabaseAdmin.auth.getUser(accessToken);
 
-    if (sessionError) {
+    if (userError || !userData?.user) {
       return res.status(400).json({ message: 'Invalid or expired reset link. Please request a new one.' });
     }
 
-    // Update the password using the user's ID from the session
-    const userId = sessionData.user?.id;
-    if (!userId) {
-      return res.status(400).json({ message: 'Could not identify user from reset token.' });
-    }
+    const userId = userData.user.id;
 
     const { error: updateError } = await supabaseAdmin.auth.admin.updateUserById(userId, { password });
     if (updateError) {
