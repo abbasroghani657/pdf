@@ -959,7 +959,6 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
         console.log(`  ✅ Unlock done`);
         break;
       }
-    }
 
       // ── DEFAULT: passthrough ──────────────────────────────────────────────
       default: {
