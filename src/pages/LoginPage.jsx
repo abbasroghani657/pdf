@@ -6,6 +6,7 @@ import { clsx } from 'clsx';
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -74,13 +75,20 @@ export default function LoginPage() {
                   <iconify-icon icon="solar:lock-password-linear" class="text-lg"></iconify-icon>
                 </div>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#378ADD] focus:border-[#378ADD] sm:text-sm transition-colors"
+                  className="appearance-none block w-full pl-10 pr-10 py-3 border border-gray-200 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#378ADD] focus:border-[#378ADD] sm:text-sm transition-colors"
                   placeholder="••••••••"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none"
+                >
+                  <iconify-icon icon={showPassword ? "solar:eye-closed-linear" : "solar:eye-linear"} class="text-lg"></iconify-icon>
+                </button>
               </div>
             </div>
 

@@ -111,14 +111,23 @@ export default function ResetPasswordPage() {
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                   Confirm Password
                 </label>
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="Re-enter your password"
-                  required
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-all"
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder="Re-enter your password"
+                    required
+                    className="w-full pl-4 pr-10 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-all"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none"
+                  >
+                    <iconify-icon icon={showPassword ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg" />
+                  </button>
+                </div>
               </div>
 
               {/* Password strength indicator */}

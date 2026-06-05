@@ -28,6 +28,7 @@ export default function CertificateSignPage() {
   const [certType, setCertType] = useState(''); // 'self', 'pfx', 'trusted'
   const [pfxFile, setPfxFile] = useState(null);
   const [pfxPassword, setPfxPassword] = useState('');
+  const [showPfxPassword, setShowPfxPassword] = useState(false);
   
   const [certInfo, setCertInfo] = useState({
     name: '',
@@ -355,7 +356,22 @@ export default function CertificateSignPage() {
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Password</label>
-                    <input type="password" value={pfxPassword} onChange={e => setPfxPassword(e.target.value)} placeholder="••••••••" className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm font-medium" />
+                    <div className="relative">
+                      <input 
+                        type={showPfxPassword ? "text" : "password"} 
+                        value={pfxPassword} 
+                        onChange={e => setPfxPassword(e.target.value)} 
+                        placeholder="••••••••" 
+                        className="w-full pl-3 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm font-medium" 
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPfxPassword(!showPfxPassword)}
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none"
+                      >
+                        <iconify-icon icon={showPfxPassword ? "solar:eye-closed-linear" : "solar:eye-linear"} class="text-lg"></iconify-icon>
+                      </button>
+                    </div>
                   </div>
                 </>
               )}
