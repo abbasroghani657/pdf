@@ -779,9 +779,9 @@ router.get('/analytics', protect, admin, async (req, res) => {
     const { count: proUsersCount } = await supabase.from('users').select('*', { count: 'exact', head: true }).eq('is_pro', true);
 
     const stats = {
-      visitors: (usersCount || 0) * 12,
-      sessions: (toolsCount || 0) * 2,
-      pageViews: (toolsCount || 0) * 5,
+      visitors: usersCount || 0,
+      sessions: toolsCount || 0,
+      pageViews: toolsCount || 0,
       newUsers: usersCount || 0
     };
 
@@ -845,18 +845,8 @@ router.get('/emails', protect, admin, async (req, res) => {
     // Note: Tables 'email_campaigns' and 'email_templates' do not exist in the setup script.
     // Returning mock data to keep the UI functional until the DB tables are created.
     
-    const mockCampaigns = [
-      { id: 1, name: 'Welcome Series - Day 1', subject: 'Welcome to PDFMaster!', status: 'active', sent_count: 1240, open_rate: '45.2%', click_rate: '8.1%', audience: 'All Users', created_at: new Date().toISOString() },
-      { id: 2, name: 'Pro Upgrade Promo', subject: 'Unlock Pro Features - 20% OFF', status: 'draft', sent_count: 0, open_rate: '0%', click_rate: '0%', audience: 'Free Users', created_at: new Date().toISOString() },
-      { id: 3, name: 'Inactive Users Reactivation', subject: 'We miss you at PDFMaster', status: 'completed', sent_count: 850, open_rate: '12.4%', click_rate: '3.2%', audience: 'Inactive Users', created_at: new Date(Date.now() - 86400000 * 5).toISOString() }
-    ];
-
-    const mockTemplates = [
-      { id: 1, name: 'Welcome Email', status: 'active', updated_at: new Date().toISOString() },
-      { id: 2, name: 'Password Reset', status: 'active', updated_at: new Date().toISOString() },
-      { id: 3, name: 'Subscription Success', status: 'active', updated_at: new Date().toISOString() },
-      { id: 4, name: 'Monthly Newsletter', status: 'draft', updated_at: new Date().toISOString() }
-    ];
+    const mockCampaigns = [];
+    const mockTemplates = [];
 
     res.json({ 
       success: true, 

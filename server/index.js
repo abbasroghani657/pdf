@@ -164,7 +164,7 @@ async function processNextJob() {
     // Log successful usage to Supabase
     try {
       const supabase = require('./config/supabase');
-      const userId = job.req.body?.userId || null;
+      const userId = job.userId || null;
       await supabase.from('tool_usage').insert({
         user_id: userId,
         tool_name: tool,
@@ -180,7 +180,7 @@ async function processNextJob() {
     // Log failed usage to Supabase
     try {
       const supabase = require('./config/supabase');
-      const userId = job.req?.body?.userId || null;
+      const userId = job.userId || null;
       await supabase.from('tool_usage').insert({
         user_id: userId,
         tool_name: job.tool,
