@@ -45,6 +45,18 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const loginWithOAuth = async (provider) => {
+    try {
+      const res = await api.post(`/auth/oauth/${provider}`);
+      if (res.data.url) {
+        window.location.href = res.data.url;
+      }
+    } catch (error) {
+      toast.error(`Failed to initiate ${provider} login.`);
+      console.error(error);
+    }
+  };
+
   const register = async (userData) => {
     try {
       const res = await api.post('/auth/register', userData);
@@ -112,6 +124,7 @@ export function AuthProvider({ children }) {
       loading, 
       isPro, 
       login, 
+      loginWithOAuth,
       register,
       updateProfile,
       logout,

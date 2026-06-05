@@ -13,7 +13,7 @@ export default function RegisterPage() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const { register } = useAuth();
+  const { register, loginWithOAuth } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -177,10 +177,10 @@ export default function RegisterPage() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3">
-              <button className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+              <button onClick={() => loginWithOAuth('google')} className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
                 <iconify-icon icon="logos:google-icon" class="text-lg"></iconify-icon>
               </button>
-              <button className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+              <button onClick={() => loginWithOAuth('github')} className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
                 <iconify-icon icon="logos:github-icon" class="text-lg"></iconify-icon>
               </button>
             </div>

@@ -159,6 +159,77 @@ router.post('/forgot-password', authLimiter, async (req, res) => {
   }
 });
 
+// @desc    Initiate OAuth login (Google, GitHub)
+// @route   POST /api/auth/oauth/:provider
+// @access  Public
+router.post('/oauth/:provider', authLimiter, async (req, res) => {
+  try {
+    const { provider } = req.params;
+    const allowedProviders = ['google', 'github'];
+
+    if (!allowedProviders.includes(provider)) {
+      return res.status(400).json({ message: 'Invalid OAuth provider.' });
+    }
+
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo: `${process.env.FRONTEND_URL || 'http://localhost:3000'}/auth/callback`,
+      },
+    });
+
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }
+
+    res.json({ url: data.url });
+  } catch (error) {
+    console.error('[OAuth Error]:', error);
+    res.status(500).json({ message: 'Server error initiating OAuth' });
+  }
+});
+
+// @desc    Sync OAuth user to public.users table
+// @route   POST /api/auth/oauth/sync
+// @access  Private (Requires valid Supabase token)
+router.post('/oauth/sync', protect, async (req, res) => {
+  try {
+    const user = req.user;
+    
+    // Check if user already exists in public.users
+    const { data: existingUser } = await supabaseAdmin
+      .from('users')
+      .select('id')
+      .eq('id', user.id)
+      .single();
+
+    if (!existingUser) {
+      // Create user profile
+      const { error: dbError } = await supabaseAdmin
+        .from('users')
+        .insert([{
+          id: user.id,
+          email: user.email,
+          name: user.user_metadata?.full_name || user.user_metadata?.name || user.email.split('@')[0],
+          country: 'Unknown',
+          role: 'user',
+          is_pro: false,
+          plan: 'Free'
+        }]);
+
+      if (dbError) {
+        console.error('Error creating OAuth user profile:', dbError);
+        return res.status(500).json({ message: 'Failed to sync user profile.' });
+      }
+    }
+
+    res.json({ success: true });
+  } catch (error) {
+    console.error('[OAuth Sync Error]:', error);
+    res.status(500).json({ message: 'Server error during OAuth sync' });
+  }
+});
+
 // @desc    Update user profile (name, country)
 // @route   PUT /api/auth/profile
 // @access  Private

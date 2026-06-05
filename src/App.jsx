@@ -60,6 +60,7 @@ import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import OAuthCallbackPage from './pages/OAuthCallbackPage';
 import PaymentSuccessPage from './pages/PaymentSuccessPage';
 import MockCheckoutPage from './pages/MockCheckoutPage';
 import { useAuth } from './contexts/AuthContext';
@@ -731,6 +732,7 @@ export default function App() {
             </Route>
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/auth/callback" element={<OAuthCallbackPage />} />
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
             <Route path="/accept-invite/:token" element={<AcceptInvite />} />
