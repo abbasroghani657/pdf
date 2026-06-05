@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import DOMPurify from 'dompurify';
 import { Send, Bot, User, Mic, FileText, List, HelpCircle, Globe, AlertTriangle, BookOpen, Table } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -47,7 +48,7 @@ export default function ChatPanel({ messages, isTyping, onSendMessage, onQuickAc
           </button>
         );
       }
-      return <span key={i} dangerouslySetInnerHTML={{ __html: part.replace(/\n/g, '<br/>') }} />;
+      return <span key={i} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(part.replace(/\n/g, '<br/>')) }} />;
     });
   };
 

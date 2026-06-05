@@ -244,9 +244,9 @@ CREATE TABLE IF NOT EXISTS public.payments (
 
 ALTER TABLE public.payments ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Service role can read all payments"
+CREATE POLICY "Users can view their own payments"
   ON public.payments FOR SELECT
-  USING (true);
+  USING (auth.uid() = user_id);
 
 
 -- ============================================================

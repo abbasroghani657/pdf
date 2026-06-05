@@ -61,11 +61,17 @@ const upload = multer({
   dest: 'uploads/',
   limits: { fileSize: 100 * 1024 * 1024 }, // 100MB
   fileFilter: (req, file, cb) => {
-    const allowed = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp'];
+    const allowed = [
+      'application/pdf', 'image/jpeg', 'image/png', 'image/webp',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+      'application/msword', 'text/html'
+    ];
     if (allowed.includes(file.mimetype)) {
       cb(null, true);
     } else {
-      cb(new Error('Invalid file type. Only PDF, JPG, PNG, and WebP are allowed.'));
+      cb(new Error('Invalid file type. Only PDF, Office Docs, Images, and HTML are allowed.'));
     }
   }
 });
