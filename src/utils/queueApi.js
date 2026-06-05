@@ -1,5 +1,15 @@
 export async function processWithQueue(url, formData, onProgress, returnJson = false, returnUrlOnly = false) {
-  const response = await fetch(url, { method: 'POST', body: formData });
+  const token = localStorage.getItem('pdfmaster_token');
+  const headers = token ? { Authorization: `Bearer ${token}` } : {};
+  
+  if (token && !formData.has('userId')) {
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      if (payload.sub) formData.append('userId', payload.sub);
+    } catch(e) {}
+  }
+
+  const response = await fetch(url, { method: 'POST', body: formData, headers });
   
   if (!response.ok) {
     let errStr = 'Backend API error';

@@ -12,6 +12,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
 const { startSubscriptionCron } = require('./jobs/subscriptionCron');
+const { protect, protectOptional } = require('./middleware/auth');
 const authRoutes = require('./routes/auth');
 const paymentsRoutes = require('./routes/payments');
 const adminRoutes = require('./routes/admin');
@@ -957,7 +958,7 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
 } // End of executeTool
 
 // ─── Main API Route (Queued) ──────────────────────────────────────────────────
-app.post('/api/process', upload.any(), async (req, res) => {
+app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
   const files = req.files;
   const { tool } = req.body;
   console.log(`\n📨 Incoming request for: ${tool} | files attached: ${files ? files.length : 0}`);
@@ -968,11 +969,14 @@ app.post('/api/process', upload.any(), async (req, res) => {
   const file = files.find(f => f.fieldname === 'file') || files[0];
   if (!file) return res.status(400).json({ error: 'Main file missing' });
   
-  // ─── SaaS Monetization: 10MB Free-Tier Limit ────────────────────────────────
+  // ─── SaaS Monetization: Pro = 1GB, Free = 10MB ──────────────────────────────
+  const isPro = req.user?.profile?.is_pro || false;
+  const maxSize = isPro ? 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 1GB pro, 10MB free
   const totalSize = files.reduce((acc, f) => acc + f.size, 0);
-  if (totalSize > 10 * 1024 * 1024) {
+  if (totalSize > maxSize) {
     files.forEach(f => { try { fs.unlinkSync(f.path); } catch(e){} });
-    return res.status(413).json({ error: 'File size exceeds the 10MB free tier limit. Upgrade to Pro for up to 1GB uploads.' });
+    const limitLabel = isPro ? '1GB' : '10MB';
+    return res.status(413).json({ error: `File size exceeds the ${limitLabel} limit. ${!isPro ? 'Upgrade to Pro for up to 1GB uploads.' : ''}` });
   }
   
   const baseName = file.originalname.replace(/\.[^/.]+$/, '');

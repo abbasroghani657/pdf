@@ -398,7 +398,19 @@ export default function DashboardPage() {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-gray-900">{isPro ? 'PDFMaster Pro' : 'PDFMaster Free'}</p>
-                <p className="text-sm text-gray-500">{isPro ? '$4.99/month · Active' : 'No active subscription'}</p>
+                <p className="text-sm text-gray-500">
+                  {isPro
+                    ? user?.profile?.plan === 'Pro Annual'
+                      ? '$47.88/year · Active'
+                      : '$4.99/month · Active'
+                    : 'No active subscription'
+                  }
+                </p>
+                {isPro && user?.profile?.pro_expires_at && (
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    Renews: {new Date(user.profile.pro_expires_at).toLocaleDateString()}
+                  </p>
+                )}
               </div>
               {isPro ? (
                 <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Active</span>

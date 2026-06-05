@@ -94,3 +94,35 @@ const superadmin = (req, res, next) => {
 
 module.exports = { protect, admin, superadmin };
 
+// Optional auth middleware — attaches req.user if valid token exists,
+// but does NOT block the request if no token is provided.
+// Used for /api/process so free users can still use tools but Pro limits apply.
+const protectOptional = async (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer')) {
+    return next(); // No token — continue as guest
+  }
+
+  const token = authHeader.split(' ')[1];
+  try {
+    const result = await withTimeout(supabase.auth.getUser(token), 4000, 'auth.getUser');
+    if (result.error || !result.data?.user) return next();
+
+    const userId = result.data.user.id;
+    req.user = { id: userId, email: result.data.user.email };
+
+    const { data: profile } = await withTimeout(
+      supabase.from('users').select('*').eq('id', userId).single(),
+      5000, 'db.profile'
+    );
+    if (profile && !profile.is_banned) {
+      req.user.profile = profile;
+    }
+  } catch (e) {
+    // Silently ignore — user proceeds as unauthenticated
+  }
+  next();
+};
+
+module.exports = { protect, admin, superadmin, protectOptional };
+

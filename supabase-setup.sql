@@ -66,7 +66,8 @@ CREATE TABLE IF NOT EXISTS public.tool_usage (
   id            BIGSERIAL PRIMARY KEY,
   user_id       UUID REFERENCES public.users(id) ON DELETE CASCADE,
   tool_name     TEXT NOT NULL,
-  file_size     BIGINT DEFAULT 0,       -- in bytes
+  file_size     BIGINT DEFAULT 0,       -- in bytes, original file size
+  bytes_saved   BIGINT DEFAULT 0,       -- in bytes, saved after compression (compression tool only)
   status        TEXT DEFAULT 'success' CHECK (status IN ('success', 'error', 'cancelled')),
   error_message TEXT,
   ip_address    TEXT,
