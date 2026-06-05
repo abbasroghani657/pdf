@@ -1,40 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { createClient } from '@supabase/supabase-js';
+import api from '../utils/api';
 import { toast } from 'react-hot-toast';
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
 
 export default function ResetPasswordPage() {
   const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isValidSession, setIsValidSession] = useState(false);
-  const [checkingSession, setCheckingSession] = useState(true);
+  const [accessToken, setAccessToken] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
-    // Supabase embeds the recovery token in the URL hash
-    // When the user clicks the reset email link, Supabase automatically
-    // sets the session from the URL hash — we just need to check for it.
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'PASSWORD_RECOVERY') {
-        setIsValidSession(true);
-      }
-      setCheckingSession(false);
-    });
+    // Supabase embeds access_token in URL hash when user clicks reset link
+    // e.g. /reset-password#access_token=xxx&type=recovery
+    const hash = window.location.hash;
+    const params = new URLSearchParams(hash.replace('#', ''));
+    const token = params.get('access_token');
+    const type = params.get('type');
 
-    // Also check if there's already an active session with recovery type
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) setIsValidSession(true);
-      setCheckingSession(false);
-    });
-
-    return () => subscription.unsubscribe();
+    if (token && type === 'recovery') {
+      setAccessToken(token);
+    }
   }, []);
 
   const handleReset = async (e) => {
@@ -51,25 +38,15 @@ export default function ResetPasswordPage() {
 
     setIsLoading(true);
     try {
-      const { error } = await supabase.auth.updateUser({ password });
-      if (error) throw error;
-
+      await api.post('/auth/reset-password', { accessToken, password });
       toast.success('Password updated successfully! Please log in.');
       setTimeout(() => navigate('/login'), 1500);
     } catch (error) {
-      toast.error(error.message || 'Failed to reset password. Link may have expired.');
+      toast.error(error.response?.data?.message || 'Failed to reset password. Link may have expired.');
     } finally {
       setIsLoading(false);
     }
   };
-
-  if (checkingSession) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="w-10 h-10 border-4 border-[#378ADD] border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-white flex items-center justify-center px-4 py-12">
@@ -86,7 +63,7 @@ export default function ResetPasswordPage() {
           <p className="text-sm text-gray-500 mt-2">Choose a strong password for your account</p>
         </div>
 
-        {!isValidSession ? (
+        {!accessToken ? (
           // Invalid / expired link
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
             <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -104,7 +81,7 @@ export default function ResetPasswordPage() {
             </Link>
           </div>
         ) : (
-          // Valid session — show form
+          // Valid token — show form
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
             <form onSubmit={handleReset} className="space-y-5">
               <div>
@@ -144,7 +121,7 @@ export default function ResetPasswordPage() {
                 />
               </div>
 
-              {/* Password strength hint */}
+              {/* Password strength indicator */}
               {password && (
                 <div className="flex gap-1.5">
                   {[...Array(4)].map((_, i) => (

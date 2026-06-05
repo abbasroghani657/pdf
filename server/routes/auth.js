@@ -241,4 +241,46 @@ router.get('/stats', protect, async (req, res) => {
   }
 });
 
+// @desc    Reset password using Supabase recovery token from email link
+// @route   POST /api/auth/reset-password
+// @access  Public (token from email hash)
+router.post('/reset-password', async (req, res) => {
+  try {
+    const { accessToken, password } = req.body;
+
+    if (!accessToken || !password) {
+      return res.status(400).json({ message: 'Access token and new password are required.' });
+    }
+    if (password.length < 8) {
+      return res.status(400).json({ message: 'Password must be at least 8 characters.' });
+    }
+
+    // Use the recovery token to set the session, then update the password
+    const { data: sessionData, error: sessionError } = await supabase.auth.setSession({
+      access_token: accessToken,
+      refresh_token: accessToken, // recovery tokens act as both
+    });
+
+    if (sessionError) {
+      return res.status(400).json({ message: 'Invalid or expired reset link. Please request a new one.' });
+    }
+
+    // Update the password using the user's ID from the session
+    const userId = sessionData.user?.id;
+    if (!userId) {
+      return res.status(400).json({ message: 'Could not identify user from reset token.' });
+    }
+
+    const { error: updateError } = await supabaseAdmin.auth.admin.updateUserById(userId, { password });
+    if (updateError) {
+      return res.status(400).json({ message: updateError.message || 'Failed to update password.' });
+    }
+
+    res.json({ success: true, message: 'Password updated successfully.' });
+  } catch (error) {
+    console.error('[Reset Password Error]:', error);
+    res.status(500).json({ message: 'Server error. Please try again.' });
+  }
+});
+
 module.exports = router;
