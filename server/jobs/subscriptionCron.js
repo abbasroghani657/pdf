@@ -3,14 +3,18 @@ const supabase = require('../config/supabase');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+if (!process.env.SMTP_USER || !process.env.SMTP_PASS || process.env.SMTP_USER === 'test@example.com') {
+  throw new Error('CRON ERROR: SMTP_USER and SMTP_PASS must be configured. Refusing to use fallback credentials.');
+}
+
 // Setup Nodemailer transporter
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
   port: process.env.SMTP_PORT || 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: process.env.SMTP_USER || 'test@example.com', 
-    pass: process.env.SMTP_PASS || 'password', 
+    user: process.env.SMTP_USER, 
+    pass: process.env.SMTP_PASS, 
   },
 });
 

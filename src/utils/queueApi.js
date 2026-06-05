@@ -27,7 +27,7 @@ export async function processWithQueue(url, formData, onProgress, returnJson = f
     
     while (true) {
       await new Promise(resolve => setTimeout(resolve, 2000)); // Poll every 2s
-      const statRes = await fetch(`/api/job/${jobId}`);
+      const statRes = await fetch(`/api/job/${jobId}`, { headers });
       if (!statRes.ok) throw new Error('Failed to check job status');
       
       const stat = await statRes.json();
@@ -42,7 +42,7 @@ export async function processWithQueue(url, formData, onProgress, returnJson = f
         const dlUrl = `/api/download/${jobId}`;
         if (returnUrlOnly) return { url: dlUrl };
         
-        const dlRes = await fetch(dlUrl);
+        const dlRes = await fetch(dlUrl, { headers });
         if (!dlRes.ok) throw new Error('Failed to download result');
         return dlRes; // Return the full response object
       }

@@ -17,7 +17,12 @@ const authRoutes = require('./routes/auth');
 const paymentsRoutes = require('./routes/payments');
 const adminRoutes = require('./routes/admin');
 
+const helmet = require('helmet');
+
 const app = express();
+
+// Security Headers
+app.use(helmet());
 
 // Ensure uploads directory exists
 const uploadsDir = path.join(__dirname, 'uploads');
@@ -36,9 +41,9 @@ const limiter = rateLimit({
 
 app.use('/api/', limiter);
 app.use(cors({
-  origin: '*',
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: '*',
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
   exposedHeaders: ['Content-Disposition', 'Content-Length', 'X-Original-Size', 'X-Compressed-Size', 'X-Reduction-Pct', 'X-OCR-Pages', 'X-OCR-Accuracy', 'X-Fields-Flattened', 'X-Annots-Flattened']
 }));
 
@@ -54,7 +59,15 @@ const CONVERTER_URL   = process.env.CONVERTER_URL   || 'http://localhost:3006'; 
 // Configure multer
 const upload = multer({
   dest: 'uploads/',
-  limits: { fileSize: 100 * 1024 * 1024 } // 100MB
+  limits: { fileSize: 100 * 1024 * 1024 }, // 100MB
+  fileFilter: (req, file, cb) => {
+    const allowed = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp'];
+    if (allowed.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new Error('Invalid file type. Only PDF, JPG, PNG, and WebP are allowed.'));
+    }
+  }
 });
 
 // ─── Helper: Gotenberg — Any Office/Image file → PDF (FREE) ───────────────────
@@ -204,10 +217,15 @@ app.get('/api/job/:id', (req, res) => {
   res.json({ status: job.status, position: job.position, error: job.error });
 });
 
-app.get('/api/download/:id', (req, res) => {
+app.get('/api/download/:id', protectOptional, (req, res) => {
   const job = JOBS.get(req.params.id);
   if (!job || job.status !== 'done') return res.status(404).json({ error: 'Result not available' });
   
+  // Verify ownership
+  if (job.userId && (!req.user || req.user.id !== job.userId)) {
+    return res.status(403).json({ error: 'Unauthorized to download this file.' });
+  }
+
   const { buffer, contentType, newFilename, customHeaders } = job.result;
   res.setHeader('Content-Type', contentType);
   res.setHeader('Content-Disposition', `attachment; filename="${newFilename}"`);
@@ -871,14 +889,7 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
         break;
       }
 
-      // ── DEFAULT: passthrough ──────────────────────────────────────────────
-      default: {
-        console.log(`  → ⚠️  No handler for: "${tool}", passing through`);
-        processedBuffer = fs.readFileSync(file.path);
-        newFilename = file.originalname;
-        contentType = file.mimetype || 'application/octet-stream';
-        break;
-      }
+
       // ── Protect PDF (Python) ────────────────────────────────────────────
       case 'Protect PDF': {
         console.log(`  → 🔒 Python Protect PDF`);
@@ -944,6 +955,16 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
       }
     }
 
+      // ── DEFAULT: passthrough ──────────────────────────────────────────────
+      default: {
+        console.log(`  → ⚠️  No handler for: "${tool}", passing through`);
+        processedBuffer = fs.readFileSync(file.path);
+        newFilename = file.originalname;
+        contentType = file.mimetype || 'application/octet-stream';
+        break;
+      }
+    }
+
     return { buffer: processedBuffer, contentType, newFilename, customHeaders: res.customHeaders || {}, jsonResponse: {
         filename: newFilename,
         contentType: contentType,
@@ -1001,6 +1022,7 @@ app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
     position,
     req: { body: req.body }, // Only store serializable request body data
     isPro: req.user?.profile?.is_pro || false,
+    userId: req.user?.id || null,
     res: null,
     files,
     tool,
@@ -1233,7 +1255,7 @@ app.post('/api/complete-signing/:token', express.json({ limit: '50mb' }), async 
             </div>
             <div style="background:#faf5ff;border:1px solid #e9d5ff;border-radius:12px;padding:16px;margin-bottom:24px">
               <p style="margin:0;font-size:13px;color:#5b21b6;line-height:1.7">
-                🔐 <strong>Audit Trail:</strong> This signature is legally binding. The signer's IP address, device information, and exact timestamp have been recorded.
+                🔐 <strong>Audit Trail:</strong> This is a visual certificate stamp. The signer's IP address, device information, and exact timestamp have been recorded for audit purposes.
               </p>
             </div>
           </div>
@@ -1496,6 +1518,8 @@ app.post('/api/complete-signing/:token', express.json({ limit: '50mb' }), async 
 
     await transporter.sendMail(mailOptions);
     request.status = 'signed'; // update status instead of deleting immediately
+    delete request.fileBase64; // Memory cleanup
+    setTimeout(() => pendingRequests.delete(token), 7 * 24 * 60 * 60 * 1000); // Clean up after 7 days
     console.log(`✅ Signing notification sent to requester: ${request.requesterEmail}`);
     res.json({ success: true });
   } catch (err) {

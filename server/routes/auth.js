@@ -3,6 +3,13 @@ const router = express.Router();
 const supabase = require('../config/supabase');
 const { createClient } = require('@supabase/supabase-js');
 const { protect } = require('../middleware/auth');
+const rateLimit = require('express-rate-limit');
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // Limit each IP to 5 requests per windowMs for auth routes
+  message: { message: 'Too many attempts. Please try again after 15 minutes.' }
+});
 
 // Dedicated admin-only supabase client that ALWAYS uses service_role key
 // This ensures it never inherits a user session and bypasses RLS
@@ -15,7 +22,7 @@ const supabaseAdmin = createClient(
 // @desc    Register a new user via Supabase
 // @route   POST /api/auth/register
 // @access  Public
-router.post('/register', async (req, res) => {
+router.post('/register', authLimiter, async (req, res) => {
   try {
     const { name, email, password, country } = req.body;
 
@@ -75,7 +82,7 @@ router.post('/register', async (req, res) => {
 // @desc    Login user via Supabase
 // @route   POST /api/auth/login
 // @access  Public
-router.post('/login', async (req, res) => {
+router.post('/login', authLimiter, async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -130,7 +137,7 @@ router.get('/me', protect, async (req, res) => {
 // @desc    Send password reset email via Supabase
 // @route   POST /api/auth/forgot-password
 // @access  Public
-router.post('/forgot-password', async (req, res) => {
+router.post('/forgot-password', authLimiter, async (req, res) => {
   try {
     const { email } = req.body;
     if (!email) return res.status(400).json({ message: 'Email is required.' });
