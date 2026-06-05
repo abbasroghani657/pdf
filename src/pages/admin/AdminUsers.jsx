@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -16,7 +16,7 @@ export default function AdminUsers() {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/users');
+      const res = await adminApi.get('/admin/users');
       if (res.data.success) setUsers(res.data.users);
     } catch {
       toast.error('Failed to load users');
@@ -31,7 +31,7 @@ export default function AdminUsers() {
     const newBanned = !user.is_banned;
     setActionLoading(prev => ({ ...prev, [`ban-${user.id}`]: true }));
     try {
-      await api.put(`/admin/users/${user.id}/ban`, { is_banned: newBanned });
+      await adminApi.put(`/admin/users/${user.id}/ban`, { is_banned: newBanned });
       setUsers(prev => prev.map(u => u.id === user.id ? { ...u, is_banned: newBanned } : u));
       toast.success(newBanned ? `${user.email} banned.` : `${user.email} unbanned.`);
     } catch {
@@ -45,7 +45,7 @@ export default function AdminUsers() {
     const newPro = !user.is_pro;
     setActionLoading(prev => ({ ...prev, [`pro-${user.id}`]: true }));
     try {
-      await api.put(`/admin/users/${user.id}/pro`, { is_pro: newPro });
+      await adminApi.put(`/admin/users/${user.id}/pro`, { is_pro: newPro });
       setUsers(prev => prev.map(u => u.id === user.id ? { ...u, is_pro: newPro, plan: newPro ? 'Pro' : 'Free' } : u));
       toast.success(newPro ? `Pro granted to ${user.email}.` : `Pro revoked from ${user.email}.`);
     } catch {
@@ -58,7 +58,7 @@ export default function AdminUsers() {
   const handleInviteAdmin = async (userEmail, role) => {
     setActionLoading(prev => ({ ...prev, [`invite-${userEmail}`]: true }));
     try {
-      const res = await api.post('/admin/invitations', { email: userEmail, role });
+      const res = await adminApi.post('/admin/invitations', { email: userEmail, role });
       toast.success(res.data.message || 'Invitation sent successfully!');
     } catch (err) {
       toast.error(err.response?.data?.message || 'Failed to send invitation');

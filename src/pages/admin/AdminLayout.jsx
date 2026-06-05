@@ -2,20 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, Outlet, useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { useAuth } from '../../contexts/AuthContext';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { formatDistanceToNow } from 'date-fns';
 
+const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
+
 const ADMIN_MENU = [
-  { path: '/admin', icon: 'solar:pie-chart-2-bold', label: 'Dashboard' },
-  { path: '/admin/users', icon: 'solar:users-group-rounded-bold', label: 'Users' },
-  { path: '/admin/revenue', icon: 'solar:wallet-money-bold', label: 'Revenue' },
-  { path: '/admin/jobs', icon: 'solar:document-text-bold', label: 'PDF Jobs' },
-  { path: '/admin/tools', icon: 'solar:box-bold', label: 'Tools Control' },
-  { path: '/admin/analytics', icon: 'solar:graph-bold', label: 'Analytics' },
-  { path: '/admin/settings', icon: 'solar:settings-bold', label: 'Settings' },
-  { path: '/admin/security', icon: 'solar:shield-warning-bold', label: 'Security' },
-  { path: '/admin/emails', icon: 'solar:letter-bold', label: 'Emails' },
-  { path: '/admin/support', icon: 'solar:chat-square-call-bold', label: 'Support' },
+  { path: `${PORTAL}`, icon: 'solar:pie-chart-2-bold', label: 'Dashboard' },
+  { path: `${PORTAL}/users`, icon: 'solar:users-group-rounded-bold', label: 'Users' },
+  { path: `${PORTAL}/revenue`, icon: 'solar:wallet-money-bold', label: 'Revenue' },
+  { path: `${PORTAL}/jobs`, icon: 'solar:document-text-bold', label: 'PDF Jobs' },
+  { path: `${PORTAL}/tools`, icon: 'solar:box-bold', label: 'Tools Control' },
+  { path: `${PORTAL}/analytics`, icon: 'solar:graph-bold', label: 'Analytics' },
+  { path: `${PORTAL}/settings`, icon: 'solar:settings-bold', label: 'Settings' },
+  { path: `${PORTAL}/security`, icon: 'solar:shield-warning-bold', label: 'Security' },
+  { path: `${PORTAL}/emails`, icon: 'solar:letter-bold', label: 'Emails' },
+  { path: `${PORTAL}/support`, icon: 'solar:chat-square-call-bold', label: 'Support' },
 ];
 
 export default function AdminLayout() {
@@ -29,7 +31,7 @@ export default function AdminLayout() {
 
   const fetchNotifications = async () => {
     try {
-      const res = await api.get('/admin/notifications');
+      const res = await adminApi.get('/admin/notifications');
       if (res.data.success) {
         const readAt = localStorage.getItem('admin_notifications_read_at');
         let filtered = res.data.notifications;

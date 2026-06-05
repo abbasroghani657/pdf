@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ export default function AdminSupport() {
   const fetchTickets = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/support/tickets');
+      const res = await adminApi.get('/admin/support/tickets');
       if (res.data.success) {
         setTickets(res.data.tickets);
         if (res.data.tickets.length > 0 && !activeTicket) {
@@ -34,7 +34,7 @@ export default function AdminSupport() {
   const handleCloseTicket = async (ticketId, currentStatus) => {
     try {
       const newStatus = currentStatus === 'open' ? 'closed' : 'open';
-      await api.put(`/admin/support/tickets/${ticketId}`, { status: newStatus });
+      await adminApi.put(`/admin/support/tickets/${ticketId}`, { status: newStatus });
       setTickets(tickets.map(t => t.id === ticketId ? { ...t, status: newStatus } : t));
       if (activeTicket?.id === ticketId) {
         setActiveTicket(prev => ({ ...prev, status: newStatus }));
@@ -48,7 +48,7 @@ export default function AdminSupport() {
   const handleSendReply = async () => {
     if (!reply.trim() || !activeTicket) return;
     try {
-      await api.post(`/admin/support/tickets/${activeTicket.id}/reply`, { message: reply });
+      await adminApi.post(`/admin/support/tickets/${activeTicket.id}/reply`, { message: reply });
       toast.success('Reply sent!');
       // Update the active ticket locally to show the reply without closing
       const updatedTicket = { ...activeTicket, admin_reply: reply, replied_at: new Date().toISOString() };

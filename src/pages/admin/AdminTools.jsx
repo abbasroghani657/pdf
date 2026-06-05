@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 
 export default function AdminTools() {
@@ -12,7 +12,7 @@ export default function AdminTools() {
   const fetchTools = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/tools');
+      const res = await adminApi.get('/admin/tools');
       if (res.data.success) {
         setTools(res.data.tools);
       }
@@ -39,7 +39,7 @@ export default function AdminTools() {
         maintenance_mode: field === 'maintenance_mode' ? !currentValue : tools.find(t => t.id === id).maintenance_mode
       };
       
-      await api.put(`/admin/tools/${id}`, payload);
+      await adminApi.put(`/admin/tools/${id}`, payload);
       toast.success('Tool updated successfully');
     } catch (error) {
       // Revert on error

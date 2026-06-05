@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 
 export default function AdminEmails() {
@@ -12,7 +12,7 @@ export default function AdminEmails() {
   const fetchEmails = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/emails');
+      const res = await adminApi.get('/admin/emails');
       if (res.data.success) {
         setCampaigns(res.data.campaigns || []);
         setTemplates(res.data.templates || []);

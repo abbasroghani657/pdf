@@ -50,7 +50,30 @@ app.use(cors({
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/payments', paymentsRoutes);
-app.use('/api/admin', adminRoutes);
+
+// ── Admin Secret Key Middleware ────────────────────────────────────────────────
+// Returns 404 (not 403) to not reveal that an admin API exists at all.
+// Any scanner/attacker hitting /api/admin gets a generic 404.
+const adminKeyLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 30, // Stricter: 30 admin requests per 15 min per IP
+  message: { error: 'Too many admin requests.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+const validateAdminKey = (req, res, next) => {
+  const key = req.headers['x-admin-key'];
+  if (!process.env.ADMIN_SECRET_KEY || key !== process.env.ADMIN_SECRET_KEY) {
+    // Return 404 — makes admin API invisible to scanners
+    return res.status(404).json({ message: 'Not found.' });
+  }
+  // Log all admin panel access for audit trail
+  console.log(`[ADMIN ACCESS] ${new Date().toISOString()} | IP: ${req.ip} | ${req.method} ${req.path}`);
+  next();
+};
+
+app.use('/api/admin', adminKeyLimiter, validateAdminKey, adminRoutes);
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const GOTENBERG_URL   = process.env.GOTENBERG_URL   || 'http://localhost:3001'; // Office→PDF

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 
 export default function AdminDashboard() {
@@ -19,7 +19,7 @@ export default function AdminDashboard() {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/dashboard-stats');
+      const res = await adminApi.get('/admin/dashboard-stats');
       if (res.data.success) {
         const s = res.data.stats;
         setStats(s);

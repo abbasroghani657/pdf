@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 
 export default function AdminRevenue() {
@@ -13,7 +13,7 @@ export default function AdminRevenue() {
   const fetchRevenueData = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/revenue');
+      const res = await adminApi.get('/admin/revenue');
       if (res.data.success) {
         setStats(res.data.stats);
         setTransactions(res.data.transactions);

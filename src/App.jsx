@@ -67,6 +67,8 @@ import AcceptInvite from './pages/AcceptInvite';
 import InviteResponse from './pages/InviteResponse';
 import ProtectedRoute from './components/ProtectedRoute';
 
+const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
+
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
 function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
   const links = [
@@ -412,6 +414,16 @@ export default function App() {
                     {user.profile?.name || 'Dashboard'}
                   </span>
                 </div>
+                {['admin', 'superadmin'].includes(user.profile?.role) && (
+                  <button
+                    onClick={() => handleNavClick(PORTAL)}
+                    className="text-xs font-bold text-violet-600 border border-violet-200 bg-violet-50 hover:bg-violet-100 rounded-lg px-3 py-1.5 transition-colors flex items-center gap-1"
+                    title="Admin Panel"
+                  >
+                    <iconify-icon icon="solar:shield-keyhole-bold" class="text-sm"></iconify-icon>
+                    Admin
+                  </button>
+                )}
                 <button onClick={logout} className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors">
                   Logout
                 </button>
@@ -757,6 +769,22 @@ export default function App() {
             <Route path="/sign/:token" element={<SigningPage />} />
             <Route path="/tools/:toolSlug" element={<ToolPage />} />
             <Route path="*" element={<NotFoundPage />} />
+
+            {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
+            <Route element={<ProtectedRoute requireAdmin />}>
+              <Route path={PORTAL} element={<AdminLayout />}>
+                <Route index element={<AdminDashboard />} />
+                <Route path="users" element={<AdminUsers />} />
+                <Route path="revenue" element={<AdminRevenue />} />
+                <Route path="jobs" element={<AdminJobs />} />
+                <Route path="tools" element={<AdminTools />} />
+                <Route path="analytics" element={<AdminAnalytics />} />
+                <Route path="settings" element={<AdminSettings />} />
+                <Route path="security" element={<AdminSecurity />} />
+                <Route path="emails" element={<AdminEmails />} />
+                <Route path="support" element={<AdminSupport />} />
+              </Route>
+            </Route>
           </Routes>
         </Suspense>
       </main>

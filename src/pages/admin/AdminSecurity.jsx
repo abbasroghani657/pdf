@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -27,8 +27,8 @@ export default function AdminSecurity() {
     setLoading(true);
     try {
       const [logsRes, usersRes] = await Promise.all([
-        api.get('/admin/security/logs').catch(() => ({ data: { success: false }})),
-        api.get('/admin/users').catch(() => ({ data: { success: false }}))
+        adminApi.get('/admin/security/logs').catch(() => ({ data: { success: false }})),
+        adminApi.get('/admin/users').catch(() => ({ data: { success: false }}))
       ]);
 
       if (logsRes.data && logsRes.data.success) {
@@ -52,7 +52,7 @@ export default function AdminSecurity() {
   const handleSaveRateLimits = async () => {
     setSavingRates(true);
     try {
-      await api.put('/admin/settings', {
+      await adminApi.put('/admin/settings', {
         settings: {
           rate_limit_global: String(rateLimits.global),
           rate_limit_per_tool: String(rateLimits.perTool),
@@ -71,7 +71,7 @@ export default function AdminSecurity() {
     if (!newAdminEmail.trim()) return toast.error('Enter an email address.');
     setAddingAdmin(true);
     try {
-      const res = await api.post('/admin/invitations', {
+      const res = await adminApi.post('/admin/invitations', {
         email: newAdminEmail.trim(),
         role: newAdminRole,
       });
@@ -90,7 +90,7 @@ export default function AdminSecurity() {
 
   const handleRoleChange = async (userId, newRole) => {
     try {
-      await api.put(`/admin/users/${userId}/role`, { role: newRole });
+      await adminApi.put(`/admin/users/${userId}/role`, { role: newRole });
       toast.success('Role updated successfully.');
       setEditingRole(null);
       fetchData();
@@ -102,10 +102,10 @@ export default function AdminSecurity() {
   const handleAddBan = async () => {
     if (!newBanEmail.trim()) return toast.error('Enter an email address.');
     try {
-      const usersRes = await api.get('/admin/users');
+      const usersRes = await adminApi.get('/admin/users');
       const target = usersRes.data.users?.find(u => u.email === newBanEmail.trim());
       if (!target) return toast.error('User not found with that email.');
-      await api.put(`/admin/users/${target.id}/ban`, { is_banned: true });
+      await adminApi.put(`/admin/users/${target.id}/ban`, { is_banned: true });
       toast.success(`${newBanEmail} has been banned.`);
       setNewBanEmail('');
       setShowAddBan(false);
@@ -118,7 +118,7 @@ export default function AdminSecurity() {
   const handleUnban = async (ban) => {
     setActionLoading(prev => ({ ...prev, [`unban-${ban.id}`]: true }));
     try {
-      await api.put(`/admin/users/${ban.id}/ban`, { is_banned: false });
+      await adminApi.put(`/admin/users/${ban.id}/ban`, { is_banned: false });
       setBannedUsers(prev => prev.filter(u => u.id !== ban.id));
       toast.success(`${ban.email} has been unbanned.`);
     } catch {

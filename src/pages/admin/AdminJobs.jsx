@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 
 export default function AdminJobs() {
@@ -20,8 +20,8 @@ export default function AdminJobs() {
     setLoading(true);
     try {
       const [jobsRes, healthRes] = await Promise.all([
-        api.get('/admin/jobs'),
-        api.get('/admin/health').catch(() => ({ data: {} }))
+        adminApi.get('/admin/jobs'),
+        adminApi.get('/admin/health').catch(() => ({ data: {} }))
       ]);
       if (jobsRes.data.success) {
         setJobs(jobsRes.data.jobs);

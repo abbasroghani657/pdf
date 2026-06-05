@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Funnel, FunnelChart, LabelList } from 'recharts';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 
 
@@ -21,7 +21,7 @@ export default function AdminAnalytics() {
   const fetchAnalytics = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/analytics');
+      const res = await adminApi.get('/admin/analytics');
       if (res.data.success) {
         setStats(res.data.stats);
         setTrafficData(res.data.trafficData || []);

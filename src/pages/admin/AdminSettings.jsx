@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import api from '../../utils/api';
+import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -37,7 +37,7 @@ export default function AdminSettings() {
   const fetchSettings = async () => {
     setLoading(true);
     try {
-      const res = await api.get('/admin/settings');
+      const res = await adminApi.get('/admin/settings');
       if (res.data.success) {
         const settingsObj = {};
         res.data.settings.forEach(s => { settingsObj[s.key] = s.value; });
@@ -54,7 +54,7 @@ export default function AdminSettings() {
   const saveSettings = async () => {
     setSaving(true);
     try {
-      await api.put('/admin/settings', { settings });
+      await adminApi.put('/admin/settings', { settings });
       toast.success('Settings saved successfully!');
     } catch (error) {
       toast.error('Failed to save settings. Make sure to run the SQL script first.');
