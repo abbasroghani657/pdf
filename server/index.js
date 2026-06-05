@@ -43,7 +43,7 @@ app.use('/api/', limiter);
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:5173',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'X-Admin-Key'],
   exposedHeaders: ['Content-Disposition', 'Content-Length', 'X-Original-Size', 'X-Compressed-Size', 'X-Reduction-Pct', 'X-OCR-Pages', 'X-OCR-Accuracy', 'X-Fields-Flattened', 'X-Annots-Flattened']
 }));
 
