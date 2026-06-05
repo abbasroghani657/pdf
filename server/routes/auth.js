@@ -199,11 +199,14 @@ router.post('/oauth/sync', protect, async (req, res) => {
     // Check if user already exists in public.users
     const { data: existingUser } = await supabaseAdmin
       .from('users')
-      .select('id')
+      .select('id, country')
       .eq('id', user.id)
       .single();
 
+    let isNewUser = false;
+
     if (!existingUser) {
+      isNewUser = true;
       // Create user profile
       const { error: dbError } = await supabaseAdmin
         .from('users')
@@ -221,9 +224,11 @@ router.post('/oauth/sync', protect, async (req, res) => {
         console.error('Error creating OAuth user profile:', dbError);
         return res.status(500).json({ message: 'Failed to sync user profile.' });
       }
+    } else if (existingUser.country === 'Unknown') {
+      isNewUser = true;
     }
 
-    res.json({ success: true });
+    res.json({ success: true, isNewUser });
   } catch (error) {
     console.error('[OAuth Sync Error]:', error);
     res.status(500).json({ message: 'Server error during OAuth sync' });
