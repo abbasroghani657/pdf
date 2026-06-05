@@ -92,7 +92,7 @@ export default function AdminLayout() {
         sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
         <div className="p-6 border-b border-white/10 flex items-center justify-between">
-          <Link to="/admin" className="flex items-center gap-3">
+          <Link to={PORTAL} className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-[#378ADD] to-[#8b5cf6] rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">P</div>
             <span className="font-bold text-lg tracking-tight">Admin<span className="text-[#378ADD]">Panel</span></span>
           </Link>
@@ -103,7 +103,7 @@ export default function AdminLayout() {
 
         <div className="flex-1 overflow-y-auto py-6 px-4 space-y-1 custom-scrollbar">
           {ADMIN_MENU.filter(item => {
-            if (item.path === '/admin/settings' && user?.profile?.role !== 'superadmin') return false;
+            if (item.path === `${PORTAL}/settings` && user?.profile?.role !== 'superadmin') return false;
             return true;
           }).map((item) => {
             const isActive = location.pathname === item.path;
@@ -193,10 +193,10 @@ export default function AdminLayout() {
                       ) : (
                         <div className="divide-y divide-gray-50">
                           {notifications.map((notif) => {
-                            let targetPath = '/admin';
-                            if (notif.type === 'success') targetPath = '/admin/revenue';
-                            if (notif.type === 'error') targetPath = '/admin/jobs';
-                            if (notif.type === 'info') targetPath = '/admin/users';
+                            let targetPath = PORTAL;
+                            if (notif.type === 'success') targetPath = `${PORTAL}/revenue`;
+                            if (notif.type === 'error') targetPath = `${PORTAL}/jobs`;
+                            if (notif.type === 'info') targetPath = `${PORTAL}/users`;
 
                             return (
                               <Link 
@@ -228,7 +228,7 @@ export default function AdminLayout() {
                         </div>
                       )}
                     </div>
-                    <Link to="/admin/security" onClick={() => setShowNotifications(false)} className="block p-3 text-center text-xs font-bold text-gray-500 hover:bg-gray-50 hover:text-gray-900 border-t border-gray-100 transition-colors">
+                    <Link to={`${PORTAL}/security`} onClick={() => setShowNotifications(false)} className="block p-3 text-center text-xs font-bold text-gray-500 hover:bg-gray-50 hover:text-gray-900 border-t border-gray-100 transition-colors">
                       View Audit Logs & Security
                     </Link>
                   </div>

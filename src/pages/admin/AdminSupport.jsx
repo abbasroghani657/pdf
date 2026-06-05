@@ -4,6 +4,8 @@ import adminApi from '../../utils/adminApi';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
+const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
+
 export default function AdminSupport() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
@@ -211,7 +213,7 @@ export default function AdminSupport() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={() => navigate('/admin/users')} className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-xs font-bold rounded-lg hover:bg-gray-50 shadow-sm">View User</button>
+                <button onClick={() => navigate(`${PORTAL}/users`)} className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-xs font-bold rounded-lg hover:bg-gray-50 shadow-sm">View User</button>
                 {(activeTicket.status === 'open' || activeTicket.status === 'pending') ? (
                   <button 
                     onClick={() => handleCloseTicket(activeTicket.id, activeTicket.status)}
