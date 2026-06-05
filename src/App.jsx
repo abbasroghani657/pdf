@@ -768,9 +768,11 @@ export default function App() {
             <Route path="/tools/plagiarism-check" element={<PlagiarismCheckPage />} />
             <Route path="/sign/:token" element={<SigningPage />} />
             <Route path="/tools/:toolSlug" element={<ToolPage />} />
-            <Route path="*" element={<NotFoundPage />} />
 
             {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
+            {/* OLD /admin path is explicitly blocked — returns 404 */}
+            <Route path="/admin" element={<NotFoundPage />} />
+            <Route path="/admin/*" element={<NotFoundPage />} />
             <Route element={<ProtectedRoute requireAdmin />}>
               <Route path={PORTAL} element={<AdminLayout />}>
                 <Route index element={<AdminDashboard />} />
@@ -785,6 +787,9 @@ export default function App() {
                 <Route path="support" element={<AdminSupport />} />
               </Route>
             </Route>
+
+            {/* Catch-all 404 */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </main>
