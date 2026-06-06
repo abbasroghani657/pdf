@@ -250,7 +250,7 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="mt-8 flex">
               <motion.button 
                 whileHover={{ y: -2 }} 
                 whileTap={{ scale: 0.98 }}
@@ -258,16 +258,7 @@ export default function RegisterPage() {
                 className="w-full inline-flex justify-center items-center gap-2 py-3.5 px-4 border border-slate-200 rounded-2xl shadow-sm bg-white text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all"
               >
                 <iconify-icon icon="logos:google-icon" class="text-xl"></iconify-icon>
-                Google
-              </motion.button>
-              <motion.button 
-                whileHover={{ y: -2 }} 
-                whileTap={{ scale: 0.98 }}
-                onClick={() => loginWithOAuth('github')} 
-                className="w-full inline-flex justify-center items-center gap-2 py-3.5 px-4 border border-slate-200 rounded-2xl shadow-sm bg-white text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all"
-              >
-                <iconify-icon icon="logos:github-icon" class="text-xl"></iconify-icon>
-                GitHub
+                Continue with Google
               </motion.button>
             </div>
           </div>

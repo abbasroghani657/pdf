@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import api from '../utils/api';
+import { supabase } from '../lib/supabase';
 
 const AuthContext = createContext();
 
@@ -47,10 +48,15 @@ export function AuthProvider({ children }) {
 
   const loginWithOAuth = async (provider) => {
     try {
-      const res = await api.post(`/auth/oauth/${provider}`);
-      if (res.data.url) {
-        window.location.href = res.data.url;
-      }
+      // Use browser-side Supabase client — PKCE flow handled automatically.
+      // The browser generates code_verifier, stores in localStorage, then redirects.
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider,
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
+      if (error) throw error;
     } catch (error) {
       toast.error(`Failed to initiate ${provider} login.`);
       console.error(error);
