@@ -189,36 +189,6 @@ router.post('/oauth/exchange', async (req, res) => {
   }
 });
 
-// @desc    Initiate OAuth login (Google, GitHub)
-// @route   POST /api/auth/oauth/:provider
-// @access  Public
-router.post('/oauth/:provider', authLimiter, async (req, res) => {
-  try {
-    const { provider } = req.params;
-    const allowedProviders = ['google', 'github'];
-
-    if (!allowedProviders.includes(provider)) {
-      return res.status(400).json({ message: 'Invalid OAuth provider.' });
-    }
-
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider,
-      options: {
-        redirectTo: `${process.env.FRONTEND_URL || 'http://localhost:3000'}/auth/callback`,
-      },
-    });
-
-    if (error) {
-      return res.status(400).json({ message: error.message });
-    }
-
-    res.json({ url: data.url });
-  } catch (error) {
-    console.error('[OAuth Error]:', error);
-    res.status(500).json({ message: 'Server error initiating OAuth' });
-  }
-});
-
 // @desc    Sync OAuth user to public.users table
 // @route   POST /api/auth/oauth/sync
 // @access  Private (Requires valid Supabase token)
@@ -262,6 +232,36 @@ router.post('/oauth/sync', protect, async (req, res) => {
   } catch (error) {
     console.error('[OAuth Sync Error]:', error);
     res.status(500).json({ message: 'Server error during OAuth sync' });
+  }
+});
+
+// @desc    Initiate OAuth login (Google, GitHub)
+// @route   POST /api/auth/oauth/:provider
+// @access  Public
+router.post('/oauth/:provider', authLimiter, async (req, res) => {
+  try {
+    const { provider } = req.params;
+    const allowedProviders = ['google', 'github'];
+
+    if (!allowedProviders.includes(provider)) {
+      return res.status(400).json({ message: 'Invalid OAuth provider.' });
+    }
+
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo: `${process.env.FRONTEND_URL || 'http://localhost:3000'}/auth/callback`,
+      },
+    });
+
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }
+
+    res.json({ url: data.url });
+  } catch (error) {
+    console.error('[OAuth Error]:', error);
+    res.status(500).json({ message: 'Server error initiating OAuth' });
   }
 });
 
