@@ -8,7 +8,7 @@ import { toast } from 'react-hot-toast';
 
 export default function OAuthCallbackPage() {
   const navigate = useNavigate();
-  const { fetchUser } = useAuth();
+  const { fetchUser, user } = useAuth();
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
   const [country, setCountry] = useState('');
   const [isSaving, setIsSaving] = useState(false);
@@ -53,9 +53,11 @@ export default function OAuthCallbackPage() {
       if (syncRes.data.isNewUser) {
         setNeedsOnboarding(true);
       } else {
-        await fetchUser();
+        if (!user) {
+          await fetchUser();
+        }
         toast.success('Successfully signed in!');
-        navigate('/');
+        navigate('/', { replace: true });
       }
     } catch (err) {
       console.error('[OAuthCallback] Sync failed:', err);

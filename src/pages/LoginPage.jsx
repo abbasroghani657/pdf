@@ -11,11 +11,23 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { login, loginWithOAuth, user } = useAuth();
+  const { login, loginWithOAuth, user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || '/';
+
+  React.useEffect(() => {
+    if (user && !authLoading) {
+      // ✅ Admin/Superadmin ko portal pe redirect karo
+      const role = user?.profile?.role;
+      if (role === 'admin' || role === 'superadmin') {
+        navigate(PORTAL, { replace: true });
+      } else {
+        navigate(from, { replace: true });
+      }
+    }
+  }, [user, authLoading, navigate, from]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

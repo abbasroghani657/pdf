@@ -12,10 +12,22 @@ export default function RegisterPage() {
     password: '',
     country: ''
   });
-  const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const { register, loginWithOAuth } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const { register, loginWithOAuth, user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (user && !authLoading) {
+      const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
+      const role = user?.profile?.role;
+      if (role === 'admin' || role === 'superadmin') {
+        navigate(PORTAL, { replace: true });
+      } else {
+        navigate('/', { replace: true });
+      }
+    }
+  }, [user, authLoading, navigate]);
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
