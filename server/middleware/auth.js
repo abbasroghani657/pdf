@@ -22,7 +22,7 @@ const protect = async (req, res, next) => {
       try {
         const result = await withTimeout(
           supabase.auth.getUser(token),
-          4000,
+          15000, // Increased timeout to 15s to accommodate slower internet connections
           'auth.getUser'
         );
         authData = result.data;
@@ -45,7 +45,7 @@ const protect = async (req, res, next) => {
       try {
         const { data, error: dbErr } = await withTimeout(
           supabase.from('users').select('*').eq('id', userId).single(),
-          5000,
+          15000, // Increased timeout to 15s
           'db.profile'
         );
         if (dbErr) {
@@ -105,7 +105,7 @@ const protectOptional = async (req, res, next) => {
 
   const token = authHeader.split(' ')[1];
   try {
-    const result = await withTimeout(supabase.auth.getUser(token), 4000, 'auth.getUser');
+    const result = await withTimeout(supabase.auth.getUser(token), 15000, 'auth.getUser');
     if (result.error || !result.data?.user) return next();
 
     const userId = result.data.user.id;
@@ -113,7 +113,7 @@ const protectOptional = async (req, res, next) => {
 
     const { data: profile } = await withTimeout(
       supabase.from('users').select('*').eq('id', userId).single(),
-      5000, 'db.profile'
+      15000, 'db.profile'
     );
     if (profile && !profile.is_banned) {
       req.user.profile = profile;

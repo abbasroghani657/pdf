@@ -59,7 +59,8 @@ export default function OAuthCallbackPage() {
       }
     } catch (err) {
       console.error('[OAuthCallback] Sync failed:', err);
-      setError('Could not complete sign-in. Please try again.');
+      const msg = err.response?.data?.message || 'Could not complete sign-in. Please try again.';
+      setError(msg);
     }
   };
 
