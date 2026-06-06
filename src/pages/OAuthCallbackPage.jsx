@@ -3,9 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import api from '../utils/api';
 import { supabase } from '../lib/supabase';
 import CountrySelector from '../components/CountrySelector';
+import { useAuth } from '../contexts/AuthContext';
+import { toast } from 'react-hot-toast';
 
 export default function OAuthCallbackPage() {
   const navigate = useNavigate();
+  const { fetchUser } = useAuth();
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
   const [country, setCountry] = useState('');
   const [isSaving, setIsSaving] = useState(false);
@@ -50,7 +53,9 @@ export default function OAuthCallbackPage() {
       if (syncRes.data.isNewUser) {
         setNeedsOnboarding(true);
       } else {
-        window.location.href = '/';
+        await fetchUser();
+        toast.success('Successfully signed in!');
+        navigate('/');
       }
     } catch (err) {
       console.error('[OAuthCallback] Sync failed:', err);
@@ -65,7 +70,9 @@ export default function OAuthCallbackPage() {
     setIsSaving(true);
     try {
       await api.put('/auth/profile', { country });
-      window.location.href = '/';
+      await fetchUser();
+      toast.success('Welcome to PDFMaster!');
+      navigate('/');
     } catch (err) {
       console.error('[OAuthCallback] Save country failed:', err);
       setIsSaving(false);

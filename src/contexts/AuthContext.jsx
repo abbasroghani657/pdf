@@ -9,23 +9,25 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const fetchUser = async () => {
+    const token = localStorage.getItem('pdfmaster_token');
+    if (token) {
+      try {
+        // Fetch fresh user profile from backend
+        const res = await api.get('/auth/me');
+        setUser({ ...res.data.user, profile: res.data.profile });
+        return true;
+      } catch (error) {
+        console.error('Session validation failed:', error);
+        logout(); // Clear invalid token
+      }
+    }
+    return false;
+  };
+
   // Initialize auth state from localStorage and validate with server
   useEffect(() => {
-    const initAuth = async () => {
-      const token = localStorage.getItem('pdfmaster_token');
-      if (token) {
-        try {
-          // Fetch fresh user profile from backend
-          const res = await api.get('/auth/me');
-          setUser({ ...res.data.user, profile: res.data.profile });
-        } catch (error) {
-          console.error('Session validation failed:', error);
-          logout(); // Clear invalid token
-        }
-      }
-      setLoading(false);
-    };
-    initAuth();
+    fetchUser().finally(() => setLoading(false));
   }, []);
 
   const login = async (email, password) => {
@@ -135,7 +137,8 @@ export function AuthProvider({ children }) {
       updateProfile,
       logout,
       upgradeToPro, 
-      downgradeToFree 
+      downgradeToFree,
+      fetchUser
     }}>
       {!loading && children}
     </AuthContext.Provider>
