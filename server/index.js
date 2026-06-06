@@ -1,5 +1,18 @@
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
+
+// ─── Startup Validation — Critical ENV Variables ──────────────────────────────
+// Server WILL NOT start if these are missing. Fail fast = clear error message.
+const REQUIRED_ENV = ['SUPABASE_URL', 'SUPABASE_KEY', 'ADMIN_SECRET_KEY'];
+const missingEnv = REQUIRED_ENV.filter(key => !process.env[key]);
+if (missingEnv.length > 0) {
+  console.error('\n❌ FATAL: Missing required environment variables:');
+  missingEnv.forEach(key => console.error(`   → ${key}`));
+  console.error('\n📋 Copy server/.env.example to server/.env and fill in the values.\n');
+  process.exit(1);
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 const express = require('express');
 const cors = require('cors');
 const multer = require('multer');

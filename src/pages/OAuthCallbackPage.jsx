@@ -12,7 +12,32 @@ export default function OAuthCallbackPage() {
 
   useEffect(() => {
     const handleOAuthCallback = async () => {
-      // Supabase returns access_token in the URL hash
+      // 1. Check for PKCE code in query params
+      const searchParams = new URLSearchParams(window.location.search);
+      const code = searchParams.get('code');
+
+      if (code) {
+        try {
+          // Exchange code for session via backend
+          const res = await api.post('/auth/oauth/exchange', { code });
+          localStorage.setItem('pdfmaster_token', res.data.access_token);
+          
+          // Sync user to public.users
+          const syncRes = await api.post('/auth/oauth/sync');
+          if (syncRes.data.isNewUser) {
+            setNeedsOnboarding(true);
+          } else {
+            window.location.href = '/';
+          }
+          return; // Exit after successful PKCE flow
+        } catch (error) {
+          console.error('Failed to exchange code or sync OAuth user:', error);
+          navigate('/login');
+          return;
+        }
+      }
+
+      // 2. Fallback to implicit flow (hash)
       const hash = window.location.hash;
       if (!hash) {
         navigate('/login');

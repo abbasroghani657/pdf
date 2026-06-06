@@ -287,29 +287,6 @@ export default function App() {
   const editSignSecurityTools = TOOLS_DATA.filter(t => t.category === 'edit' || t.category === 'sign' || t.category === 'security');
   const aiTools = TOOLS_DATA.filter(t => t.category === 'ai');
 
-  if (location.pathname.startsWith('/admin')) {
-    return (
-      <>
-        <Toaster position="top-right" />
-        <Routes>
-          <Route element={<ProtectedRoute requireAdmin={true} />}>
-            <Route path="/admin" element={<AdminLayout />}>
-              <Route index element={<AdminDashboard />} />
-              <Route path="users" element={<AdminUsers />} />
-              <Route path="revenue" element={<AdminRevenue />} />
-              <Route path="jobs" element={<AdminJobs />} />
-              <Route path="tools" element={<AdminTools />} />
-              <Route path="analytics" element={<AdminAnalytics />} />
-              <Route path="settings" element={<AdminSettings />} />
-              <Route path="security" element={<AdminSecurity />} />
-              <Route path="emails" element={<AdminEmails />} />
-              <Route path="support" element={<AdminSupport />} />
-            </Route>
-          </Route>
-        </Routes>
-      </>
-    );
-  }
 
   return (
     <div className="antialiased min-h-screen flex flex-col bg-[#f8fafc]">

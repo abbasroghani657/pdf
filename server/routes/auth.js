@@ -7,8 +7,10 @@ const rateLimit = require('express-rate-limit');
 
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 requests per windowMs for auth routes
-  message: { message: 'Too many attempts. Please try again after 15 minutes.' }
+  max: 10, // 10 attempts per 15 min — safe for OAuth + blocks brute force
+  message: { message: 'Too many attempts. Please try again after 15 minutes.' },
+  standardHeaders: true, // Return rate limit info in headers
+  legacyHeaders: false,
 });
 
 // Dedicated admin-only supabase client that ALWAYS uses service_role key
@@ -30,6 +32,10 @@ router.post('/register', authLimiter, async (req, res) => {
       return res.status(400).json({ message: 'Name, email and password are required.' });
     }
 
+    if (password.length < 8) {
+      return res.status(400).json({ message: 'Password must be at least 8 characters.' });
+    }
+
     // 1. Create user in Supabase Auth using admin API (uses service_role, no session switch)
     const { data: authData, error: authError } = await supabaseAdmin.auth.admin.createUser({
       email,
@@ -48,7 +54,7 @@ router.post('/register', authLimiter, async (req, res) => {
     if (user) {
       const { error: dbError } = await supabaseAdmin
         .from('users')
-        .insert([{
+        .upsert([{
           id: user.id,
           email: user.email,
           name: name,
@@ -56,7 +62,7 @@ router.post('/register', authLimiter, async (req, res) => {
           role: 'user',
           is_pro: false,
           plan: 'Free'
-        }]);
+        }], { onConflict: 'id' });
 
       if (dbError) {
         console.error('Error creating user profile in DB:', dbError);
@@ -67,7 +73,7 @@ router.post('/register', authLimiter, async (req, res) => {
     }
 
     res.status(201).json({
-      message: 'Registration successful! Please check your email to verify your account.',
+      message: 'Account created successfully! You can now log in.',
       user: authData.user,
       session: null // No auto-login after registration; user must log in
     });
@@ -159,6 +165,30 @@ router.post('/forgot-password', authLimiter, async (req, res) => {
   }
 });
 
+// @desc    Exchange PKCE code for session
+// @route   POST /api/auth/oauth/exchange
+// @access  Public
+router.post('/oauth/exchange', async (req, res) => {
+  try {
+    const { code } = req.body;
+    if (!code) return res.status(400).json({ message: 'Code is required.' });
+
+    const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+    
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }
+
+    res.json({
+      access_token: data.session.access_token,
+      user: data.user
+    });
+  } catch (error) {
+    console.error('[OAuth Exchange Error]:', error);
+    res.status(500).json({ message: 'Server error during token exchange' });
+  }
+});
+
 // @desc    Initiate OAuth login (Google, GitHub)
 // @route   POST /api/auth/oauth/:provider
 // @access  Public
@@ -210,7 +240,7 @@ router.post('/oauth/sync', protect, async (req, res) => {
       // Create user profile
       const { error: dbError } = await supabaseAdmin
         .from('users')
-        .insert([{
+        .upsert([{
           id: user.id,
           email: user.email,
           name: user.user_metadata?.full_name || user.user_metadata?.name || user.email.split('@')[0],
@@ -218,7 +248,7 @@ router.post('/oauth/sync', protect, async (req, res) => {
           role: 'user',
           is_pro: false,
           plan: 'Free'
-        }]);
+        }], { onConflict: 'id' });
 
       if (dbError) {
         console.error('Error creating OAuth user profile:', dbError);
@@ -327,7 +357,7 @@ router.get('/stats', protect, async (req, res) => {
 // @desc    Reset password using Supabase recovery token from email link
 // @route   POST /api/auth/reset-password
 // @access  Public (token from email hash)
-router.post('/reset-password', async (req, res) => {
+router.post('/reset-password', authLimiter, async (req, res) => {
   try {
     const { accessToken, password } = req.body;
 

@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
       setUser({ ...user, profile });
       
       toast.success('Welcome back!');
-      return true;
+      return { ...user, profile }; // ✅ Full user object return — admin redirect ke liye
     } catch (error) {
       const msg = error.response?.data?.message || 'Login failed. Please check your credentials.';
       toast.error(msg);

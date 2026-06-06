@@ -17,6 +17,7 @@ const supabase = createClient(
     auth: {
       autoRefreshToken: false,
       persistSession: false,
+      flowType: 'implicit',
     },
     global: {
       fetch: fetch
