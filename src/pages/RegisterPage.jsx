@@ -220,7 +220,7 @@ export default function RegisterPage() {
                 type="submit"
                 disabled={isLoading || !name || !email || !password || !country}
                 className={clsx(
-                  'w-full flex justify-center items-center py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 shadow-lg shadow-red-500/25 transition-all mt-4',
+                  'w-full flex justify-center items-center py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg shadow-blue-500/25 transition-all mt-4',
                   (isLoading || !name || !email || !password || !country) && 'opacity-70 cursor-not-allowed'
                 )}
               >
