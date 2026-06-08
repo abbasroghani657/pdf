@@ -21,6 +21,40 @@ const supabaseAdmin = createClient(
   { auth: { autoRefreshToken: false, persistSession: false } }
 );
 
+// @desc    Check if email exists for smart auth flow
+// @route   POST /api/auth/check-email
+// @access  Public
+router.post('/check-email', authLimiter, async (req, res) => {
+  const startTime = Date.now();
+  try {
+    const { email } = req.body;
+    if (!email) {
+      return res.status(400).json({ message: 'Email is required.' });
+    }
+
+    const { data } = await supabaseAdmin
+      .from('users')
+      .select('id, name')
+      .eq('email', email.toLowerCase().trim())
+      .maybeSingle();
+
+    const exists = !!data;
+
+    // Timing attack prevention: enforce a consistent response time (approx 300ms)
+    // whether the email exists in the database or not.
+    const elapsedTime = Date.now() - startTime;
+    const targetTime = 300;
+    if (elapsedTime < targetTime) {
+      await new Promise(resolve => setTimeout(resolve, targetTime - elapsedTime));
+    }
+
+    res.json({ exists, name: data?.name });
+  } catch (error) {
+    console.error('[Check Email Error]:', error);
+    res.status(500).json({ message: 'Server error checking email' });
+  }
+});
+
 // @desc    Register a new user via Supabase
 // @route   POST /api/auth/register
 // @access  Public
