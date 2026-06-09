@@ -34,7 +34,9 @@ export default function DashboardPage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteInput, setDeleteInput] = useState('');
-  const [showPwd, setShowPwd] = useState(false);
+  const [showCurrentPwd, setShowCurrentPwd] = useState(false);
+  const [showNewPwd, setShowNewPwd] = useState(false);
+  const [showConfirmPwd, setShowConfirmPwd] = useState(false);
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
@@ -440,7 +442,7 @@ export default function DashboardPage() {
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Current Password</label>
                     <div className="relative">
                       <input
-                        type={showPwd ? "text" : "password"}
+                        type={showCurrentPwd ? "text" : "password"}
                         required
                         value={pwdForm.currentPassword}
                         onChange={e => setPwdForm(p => ({...p, currentPassword: e.target.value}))}
@@ -449,10 +451,10 @@ export default function DashboardPage() {
                       />
                       <button
                         type="button"
-                        onClick={() => setShowPwd(!showPwd)}
+                        onClick={() => setShowCurrentPwd(!showCurrentPwd)}
                         className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
                       >
-                        <iconify-icon icon={showPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
+                        <iconify-icon icon={showCurrentPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
                       </button>
                     </div>
                   </div>
@@ -461,7 +463,7 @@ export default function DashboardPage() {
                       <label className="block text-sm font-semibold text-gray-700 mb-1">New Password</label>
                       <div className="relative">
                         <input
-                          type={showPwd ? "text" : "password"}
+                          type={showNewPwd ? "text" : "password"}
                           required
                           minLength={8}
                           value={pwdForm.newPassword}
@@ -471,10 +473,10 @@ export default function DashboardPage() {
                         />
                         <button
                           type="button"
-                          onClick={() => setShowPwd(!showPwd)}
+                          onClick={() => setShowNewPwd(!showNewPwd)}
                           className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
                         >
-                          <iconify-icon icon={showPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
+                          <iconify-icon icon={showNewPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
                         </button>
                       </div>
                     </div>
@@ -482,7 +484,7 @@ export default function DashboardPage() {
                       <label className="block text-sm font-semibold text-gray-700 mb-1">Confirm Password</label>
                       <div className="relative">
                         <input
-                          type={showPwd ? "text" : "password"}
+                          type={showConfirmPwd ? "text" : "password"}
                           required
                           minLength={8}
                           value={pwdForm.confirmPassword}
@@ -492,10 +494,10 @@ export default function DashboardPage() {
                         />
                         <button
                           type="button"
-                          onClick={() => setShowPwd(!showPwd)}
+                          onClick={() => setShowConfirmPwd(!showConfirmPwd)}
                           className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
                         >
-                          <iconify-icon icon={showPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
+                          <iconify-icon icon={showConfirmPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
                         </button>
                       </div>
                     </div>
