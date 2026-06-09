@@ -60,42 +60,54 @@ export default function RegisterPage() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[560px] h-[560px] bg-violet-600/15 rounded-full blur-[120px] pointer-events-none" />
 
         {/* Logo */}
-        <div className="relative z-10 p-12">
-          <Link to="/" className="inline-flex items-center gap-3 group">
-            <div className="w-11 h-11 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-xl shadow-blue-500/25 group-hover:scale-105 transition-transform">P</div>
-            <span className="font-extrabold text-2xl tracking-tight text-white">
+        <div className="relative z-10 px-10 pt-8 pb-0">
+          <Link to="/" className="inline-flex items-center gap-2.5 group">
+            <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">P</div>
+            <span className="font-extrabold text-xl tracking-tight text-white">
               PDF<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Master</span>
             </span>
           </Link>
         </div>
 
         {/* Headline */}
-        <div className="relative z-10 px-12 max-w-md">
-          <p className="text-xs font-bold tracking-widest text-blue-400 uppercase mb-4">The PDF platform</p>
-          <h1 className="text-4xl font-extrabold text-white leading-tight mb-5">
+        <div className="relative z-10 px-10">
+          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">The PDF Platform</p>
+          <h1 className="text-3xl font-extrabold text-white leading-tight mb-3">
             Every PDF tool<br/>you'll ever need.
           </h1>
-          <p className="text-slate-400 leading-relaxed text-sm mb-10">
-            Convert, compress, merge, sign, and protect documents — all in one place. Trusted by 2 million+ professionals.
+          <p className="text-slate-400 leading-relaxed text-sm mb-6">
+            Convert, compress, merge, sign, and protect<br/>documents — all in one place.
           </p>
 
-          {/* Social proof */}
-          <div className="space-y-3">
+          {/* Checkmarks */}
+          <div className="space-y-2.5 mb-7">
             {[
-              { icon: '⚡', text: '37 PDF tools in one platform' },
-              { icon: '🔒', text: 'Files deleted after processing' },
-              { icon: '🤖', text: 'AI-powered: Summarize, Translate, Chat' },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 text-sm text-slate-300">
-                <span className="text-base">{item.icon}</span>
-                <span>{item.text}</span>
+              '40+ PDF tools',
+              'Files deleted after processing',
+              'AI-powered: Chat, Summarize, Translate',
+            ].map((text, i) => (
+              <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
+                <div className="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center shrink-0">
+                  <span className="text-blue-300 text-xs font-bold">✓</span>
+                </div>
+                <span>{text}</span>
               </div>
+            ))}
+          </div>
+
+          {/* Trust badges row */}
+          <div className="flex items-center gap-3 flex-wrap mb-1">
+            {['256-bit Encryption', 'AI-Powered', 'Privacy First'].map((badge, i) => (
+              <span key={i} className={`text-[11px] font-semibold text-slate-400 ${i < 2 ? "after:content-['|'] after:ml-3 after:text-slate-600" : ''}`}>
+                {badge}
+              </span>
             ))}
           </div>
         </div>
 
-        <div className="relative z-10 p-12">
-          <p className="text-slate-600 text-xs">© {new Date().getFullYear()} PDFMaster · All rights reserved.</p>
+        <div className="relative z-10 px-10 pb-7">
+          <p className="text-slate-500 text-xs mb-1">Trusted by professionals worldwide.</p>
+          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} PDFMaster · All rights reserved.</p>
         </div>
       </motion.div>
 
