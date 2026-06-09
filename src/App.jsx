@@ -284,6 +284,9 @@ export default function App() {
   // Auth pages: full-screen, no navbar/footer
   const isAuthPage = ['/login', '/register', '/forgot-password', '/reset-password'].includes(location.pathname);
 
+  // Admin portal: also full-screen, no public navbar/footer
+  const isAdminPage = location.pathname.startsWith(PORTAL);
+
   const organizeOptimizeTools = TOOLS_DATA.filter(t => t.category === 'organize' || t.category === 'optimize');
   const convertToTools = TOOLS_DATA.filter(t => t.category === 'convert' && t.title.endsWith('to PDF'));
   const convertFromTools = TOOLS_DATA.filter(t => t.category === 'convert' && t.title.startsWith('PDF to'));
@@ -342,7 +345,7 @@ export default function App() {
       )}
 
       {/* ── NAVBAR ─────────────────────────────────────────────────────────── */}
-      {!isFullscreenTool && !isAuthPage && <header className={clsx(
+      {!isFullscreenTool && !isAuthPage && !isAdminPage && <header className={clsx(
         'sticky top-0 z-40 transition-all duration-300 flex flex-col',
         scrolled
           ? 'bg-white/95 backdrop-blur-lg shadow-sm'
@@ -597,7 +600,7 @@ export default function App() {
         </div>
       </header>}
 
-      {!isFullscreenTool && !isAuthPage && <MobileDrawer
+      {!isFullscreenTool && !isAuthPage && !isAdminPage && <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         pathname={location.pathname}
@@ -607,7 +610,7 @@ export default function App() {
       />}
 
       {/* ── HERO / HEADER ──────────────────────────────────────────────────── */}
-      {!isTool && !isAuthPage && (
+      {!isTool && !isAuthPage && !isAdminPage && (
         <header className={clsx(
           'w-full text-center transition-all duration-500 relative overflow-hidden',
           isHome ? 'pt-16 pb-10' : 'pt-12 pb-6'
@@ -697,7 +700,7 @@ export default function App() {
       {/* ── MAIN CONTENT ───────────────────────────────────────────────────── */}
       <main className={clsx(
         "flex-1 w-full mx-auto transition-opacity duration-300",
-        isAuthPage ? "flex flex-col" :
+        (isAuthPage || isAdminPage) ? "flex flex-col" :
         isFullscreenTool ? "flex flex-col overflow-hidden" : (!isTool ? "max-w-7xl px-4 sm:px-6 lg:px-8 pb-20" : ""),
         navProgress > 0 && navProgress < 100 ? "opacity-50" : "opacity-100"
       )}>
@@ -776,8 +779,8 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* ── FOOTER — hidden on all tool/editor routes and auth pages ─── */}
-      <footer className="bg-white border-t border-gray-100 mt-auto" style={{ display: location.pathname.startsWith('/tools/') || location.pathname.startsWith('/sign/') || isAuthPage ? 'none' : undefined }}>
+      {/* ── FOOTER — hidden on all tool/editor routes, auth pages, and admin pages ─── */}
+      <footer className="bg-white border-t border-gray-100 mt-auto" style={{ display: location.pathname.startsWith('/tools/') || location.pathname.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
             <div className="lg:col-span-2">
@@ -832,7 +835,7 @@ export default function App() {
       {/* ── MOBILE BOTTOM NAV BAR ─────────────────────────────────────────── */}
       <nav 
         className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 flex items-center justify-around pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
-        style={{ display: location.pathname.startsWith('/tools/') || location.pathname.startsWith('/sign/') || isAuthPage ? 'none' : undefined }}
+        style={{ display: location.pathname.startsWith('/tools/') || location.pathname.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}
       >
         {[
           { label: 'Home', icon: 'solar:home-linear', path: '/' },

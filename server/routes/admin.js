@@ -863,13 +863,11 @@ router.get('/emails', protect, admin, async (req, res) => {
 // @route   GET /api/admin/health
 // @access  Private/Admin
 router.get('/health', protect, admin, async (req, res) => {
+  const axios = require('axios');
   const checkService = async (url) => {
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 3000);
-      const response = await fetch(url, { signal: controller.signal });
-      clearTimeout(timeout);
-      return response.ok;
+      const response = await axios.get(url, { timeout: 3000 });
+      return response.status === 200;
     } catch {
       return false;
     }

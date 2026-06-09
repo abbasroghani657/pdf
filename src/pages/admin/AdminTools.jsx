@@ -18,7 +18,7 @@ export default function AdminTools() {
       }
     } catch (error) {
       console.error('Failed to fetch tools:', error);
-      toast.error('Failed to load tools config. Run the database SQL script.');
+      toast.error('Failed to load tools config: ' + (error.response?.data?.message || error.message));
     } finally {
       setLoading(false);
     }

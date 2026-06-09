@@ -441,5 +441,84 @@ router.post('/reset-password', authLimiter, async (req, res) => {
     res.status(500).json({ message: 'Server error. Please try again.' });
   }
 });
- 
+
+// @desc    Change password
+// @route   PUT /api/auth/change-password
+// @access  Private
+router.put('/change-password', protect, async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user.id;
+
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ message: 'Current and new passwords are required.' });
+    }
+    if (newPassword.length < 8) {
+      return res.status(400).json({ message: 'New password must be at least 8 characters.' });
+    }
+
+    // Supabase requires logging in to verify the current password
+    // First fetch the user's email since we need it for sign in
+    const { data: userProfile, error: profileError } = await supabaseAdmin
+      .from('users')
+      .select('email, auth_provider')
+      .eq('id', userId)
+      .single();
+
+    if (profileError || !userProfile) {
+      return res.status(404).json({ message: 'User not found.' });
+    }
+
+    if (userProfile.auth_provider !== 'email') {
+      return res.status(400).json({ message: `Cannot change password. Account uses ${userProfile.auth_provider} sign-in.` });
+    }
+
+    const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
+      email: userProfile.email,
+      password: currentPassword,
+    });
+
+    if (signInError) {
+      return res.status(400).json({ message: 'Incorrect current password.' });
+    }
+
+    // Now update the password
+    const { error: updateError } = await supabaseAdmin.auth.admin.updateUserById(userId, { password: newPassword });
+
+    if (updateError) {
+      return res.status(400).json({ message: updateError.message || 'Failed to update password.' });
+    }
+
+    // Log the user out of all sessions for security (optional, but good practice)
+    res.json({ success: true, message: 'Password updated successfully.' });
+  } catch (error) {
+    console.error('[Change Password Error]:', error);
+    res.status(500).json({ message: 'Server error. Please try again.' });
+  }
+});
+
+// @desc    Delete user account
+// @route   DELETE /api/auth/delete-account
+// @access  Private
+router.delete('/delete-account', protect, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    // Delete user from auth.users (cascade deletes public.users profile usually if configured)
+    const { error } = await supabaseAdmin.auth.admin.deleteUser(userId);
+    
+    if (error) {
+      console.error('[Delete Account Auth Error]:', error);
+      return res.status(400).json({ message: 'Failed to delete account. Please contact support.' });
+    }
+    
+    // Fallback: manually delete from public.users if cascade isn't setup
+    await supabaseAdmin.from('users').delete().eq('id', userId);
+
+    res.json({ success: true, message: 'Account deleted successfully.' });
+  } catch (error) {
+    console.error('[Delete Account Error]:', error);
+    res.status(500).json({ message: 'Server error. Please try again.' });
+  }
+});
+
 module.exports = router;

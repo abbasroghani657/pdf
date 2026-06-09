@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { clsx } from 'clsx';
 import api from '../utils/api';
+import { toast } from 'react-hot-toast';
 
 const QUICK_TOOLS = [
   { label: 'Merge PDF', icon: 'solar:layers-bold', color: 'text-blue-600 bg-blue-50', path: '/tools/merge-pdf' },
@@ -26,6 +27,47 @@ export default function DashboardPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [userStats, setUserStats] = useState({ filesProcessed: '—', storageSaved: '—', recentTools: [] });
+  
+  // New States for Profile Tab
+  const [pwdForm, setPwdForm] = useState({ currentPassword: '', newPassword: '', confirmPassword: '' });
+  const [isChangingPwd, setIsChangingPwd] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const handleChangePassword = async (e) => {
+    e.preventDefault();
+    if (pwdForm.newPassword !== pwdForm.confirmPassword) {
+      return toast.error('New passwords do not match!');
+    }
+    setIsChangingPwd(true);
+    try {
+      const res = await api.put('/auth/change-password', {
+        currentPassword: pwdForm.currentPassword,
+        newPassword: pwdForm.newPassword
+      });
+      toast.success(res.data.message || 'Password changed successfully!');
+      setPwdForm({ currentPassword: '', newPassword: '', confirmPassword: '' });
+    } catch (error) {
+      toast.error(error.response?.data?.message || 'Failed to change password.');
+    } finally {
+      setIsChangingPwd(false);
+    }
+  };
+
+  const handleDeleteAccount = async () => {
+    if (!window.confirm('Are you absolutely sure you want to delete your account? This action cannot be undone and all your data will be permanently removed.')) {
+      return;
+    }
+    setIsDeleting(true);
+    try {
+      await api.delete('/auth/delete-account');
+      toast.success('Account deleted successfully.');
+      logout();
+      navigate('/');
+    } catch (error) {
+      toast.error(error.response?.data?.message || 'Failed to delete account.');
+      setIsDeleting(false);
+    }
+  };
 
   useEffect(() => {
     if (!user) navigate('/login');
@@ -305,7 +347,9 @@ export default function DashboardPage() {
                   try {
                     await updateProfile(editForm);
                     setIsEditing(false);
-                  } catch(_) {}
+                  } catch(error) {
+                    toast.error(error.message || 'Failed to update profile');
+                  }
                   finally { setIsSaving(false); }
                 }}
                 className="space-y-4 border-t border-gray-100 pt-5"
@@ -382,6 +426,86 @@ export default function DashboardPage() {
                 ))}
               </div>
             )}
+
+            {/* ── Change Password Section ────────────────────────────── */}
+            {user.auth_provider === 'email' && (
+              <div className="mt-8 border-t border-gray-100 pt-8">
+                <h3 className="text-base font-extrabold text-gray-900 mb-4 flex items-center gap-2">
+                  <iconify-icon icon="solar:lock-password-bold" class="text-gray-400"></iconify-icon>
+                  Change Password
+                </h3>
+                <form onSubmit={handleChangePassword} className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Current Password</label>
+                    <input
+                      type="password"
+                      required
+                      value={pwdForm.currentPassword}
+                      onChange={e => setPwdForm(p => ({...p, currentPassword: e.target.value}))}
+                      className="w-full px-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
+                      placeholder="Enter current password"
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1">New Password</label>
+                      <input
+                        type="password"
+                        required
+                        minLength={8}
+                        value={pwdForm.newPassword}
+                        onChange={e => setPwdForm(p => ({...p, newPassword: e.target.value}))}
+                        className="w-full px-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
+                        placeholder="At least 8 characters"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1">Confirm Password</label>
+                      <input
+                        type="password"
+                        required
+                        minLength={8}
+                        value={pwdForm.confirmPassword}
+                        onChange={e => setPwdForm(p => ({...p, confirmPassword: e.target.value}))}
+                        className="w-full px-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
+                        placeholder="Confirm new password"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isChangingPwd || !pwdForm.currentPassword || !pwdForm.newPassword || !pwdForm.confirmPassword}
+                    className="py-2.5 px-5 bg-gray-900 hover:bg-black text-white font-bold rounded-xl text-sm transition-all disabled:opacity-60 flex items-center justify-center gap-2"
+                  >
+                    {isChangingPwd ? 'Updating...' : 'Update Password'}
+                  </button>
+                </form>
+              </div>
+            )}
+
+            {/* ── Danger Zone ─────────────────────────────────────────── */}
+            <div className="mt-8 border-t border-red-100 pt-8">
+              <h3 className="text-base font-extrabold text-red-600 mb-2 flex items-center gap-2">
+                <iconify-icon icon="solar:danger-triangle-bold" class="text-red-500"></iconify-icon>
+                Danger Zone
+              </h3>
+              <div className="bg-red-50 border border-red-100 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <p className="font-bold text-red-900 text-sm">Delete Account</p>
+                  <p className="text-xs text-red-700 mt-1 max-w-sm">
+                    Permanently remove your account and all associated data. This action is irreversible.
+                  </p>
+                </div>
+                <button
+                  onClick={handleDeleteAccount}
+                  disabled={isDeleting}
+                  className="shrink-0 px-4 py-2.5 bg-white text-red-600 border border-red-200 font-bold rounded-xl text-sm hover:bg-red-600 hover:text-white transition-all disabled:opacity-50"
+                >
+                  {isDeleting ? 'Deleting...' : 'Delete Account'}
+                </button>
+              </div>
+            </div>
+
           </div>
         )}
 
