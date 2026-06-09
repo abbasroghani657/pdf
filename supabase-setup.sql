@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS public.users (
   email         TEXT NOT NULL UNIQUE,
   name          TEXT,
   country       TEXT DEFAULT 'Unknown',
+  auth_provider TEXT NOT NULL DEFAULT 'email' CHECK (auth_provider IN ('email', 'google', 'github')),
   role          TEXT NOT NULL DEFAULT 'user' CHECK (role IN ('user', 'admin', 'superadmin')),
   is_pro        BOOLEAN NOT NULL DEFAULT FALSE,
   plan          TEXT NOT NULL DEFAULT 'Free' CHECK (plan IN ('Free', 'Pro', 'Enterprise')),

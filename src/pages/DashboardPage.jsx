@@ -32,6 +32,8 @@ export default function DashboardPage() {
   const [pwdForm, setPwdForm] = useState({ currentPassword: '', newPassword: '', confirmPassword: '' });
   const [isChangingPwd, setIsChangingPwd] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [deleteInput, setDeleteInput] = useState('');
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
@@ -54,9 +56,6 @@ export default function DashboardPage() {
   };
 
   const handleDeleteAccount = async () => {
-    if (!window.confirm('Are you absolutely sure you want to delete your account? This action cannot be undone and all your data will be permanently removed.')) {
-      return;
-    }
     setIsDeleting(true);
     try {
       await api.delete('/auth/delete-account');
@@ -66,6 +65,7 @@ export default function DashboardPage() {
     } catch (error) {
       toast.error(error.response?.data?.message || 'Failed to delete account.');
       setIsDeleting(false);
+      setShowDeleteModal(false);
     }
   };
 
@@ -428,7 +428,7 @@ export default function DashboardPage() {
             )}
 
             {/* ── Change Password Section ────────────────────────────── */}
-            {user.auth_provider === 'email' && (
+            {user?.profile?.auth_provider === 'email' && (
               <div className="mt-8 border-t border-gray-100 pt-8">
                 <h3 className="text-base font-extrabold text-gray-900 mb-4 flex items-center gap-2">
                   <iconify-icon icon="solar:lock-password-bold" class="text-gray-400"></iconify-icon>
@@ -497,7 +497,7 @@ export default function DashboardPage() {
                   </p>
                 </div>
                 <button
-                  onClick={handleDeleteAccount}
+                  onClick={() => setShowDeleteModal(true)}
                   disabled={isDeleting}
                   className="shrink-0 px-4 py-2.5 bg-white text-red-600 border border-red-200 font-bold rounded-xl text-sm hover:bg-red-600 hover:text-white transition-all disabled:opacity-50"
                 >
@@ -505,6 +505,54 @@ export default function DashboardPage() {
                 </button>
               </div>
             </div>
+
+            {/* ── Delete Confirmation Modal ───────────────────────────── */}
+            {showDeleteModal && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/40 backdrop-blur-sm">
+                <div className="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl border border-red-100 animate-in fade-in zoom-in-95 duration-200">
+                  <div className="flex items-center gap-3 text-red-600 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                      <iconify-icon icon="solar:danger-triangle-bold" class="text-2xl"></iconify-icon>
+                    </div>
+                    <h3 className="text-xl font-black">Delete Account?</h3>
+                  </div>
+                  
+                  <div className="space-y-3 mb-6 text-sm text-gray-600">
+                    <p>This action is <strong>permanent</strong> and cannot be undone.</p>
+                    <ul className="space-y-1 list-disc pl-5">
+                      <li>All your files and processing history will be deleted.</li>
+                      <li>Your subscription will be immediately cancelled.</li>
+                      <li>You will lose access to all Pro features.</li>
+                    </ul>
+                    <p className="pt-2 text-gray-800 font-medium">Please type <strong>DELETE</strong> to confirm.</p>
+                  </div>
+                  
+                  <input
+                    type="text"
+                    value={deleteInput}
+                    onChange={(e) => setDeleteInput(e.target.value)}
+                    placeholder="Type DELETE"
+                    className="w-full px-4 py-3 border border-red-200 rounded-xl text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all font-mono"
+                  />
+                  
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => { setShowDeleteModal(false); setDeleteInput(''); }}
+                      className="flex-1 px-4 py-3 bg-gray-50 hover:bg-gray-100 text-gray-700 font-bold rounded-xl text-sm transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleDeleteAccount}
+                      disabled={deleteInput !== 'DELETE' || isDeleting}
+                      className="flex-1 px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isDeleting ? 'Deleting...' : 'Yes, delete it'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
           </div>
         )}
