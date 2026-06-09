@@ -76,7 +76,7 @@ export default function RegisterPage() {
             Every PDF tool<br/>you'll ever need.
           </h1>
           <p className="text-slate-400 leading-relaxed text-sm mb-6">
-            Convert, compress, merge, sign, and protect<br/>documents — all in one place.
+            Convert, compress, merge, sign, and protect<br/>documents in one place.
           </p>
 
           {/* Checkmarks */}
