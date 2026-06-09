@@ -479,6 +479,7 @@ router.put('/change-password', protect, async (req, res) => {
     });
 
     if (signInError) {
+      console.error('[Change Password] signInError:', signInError);
       return res.status(400).json({ message: 'Incorrect current password.' });
     }
 
@@ -486,6 +487,7 @@ router.put('/change-password', protect, async (req, res) => {
     const { error: updateError } = await supabaseAdmin.auth.admin.updateUserById(userId, { password: newPassword });
 
     if (updateError) {
+      console.error('[Change Password] updateError:', updateError);
       return res.status(400).json({ message: updateError.message || 'Failed to update password.' });
     }
 
