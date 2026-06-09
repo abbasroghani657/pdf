@@ -168,7 +168,7 @@ export default function RegisterPage() {
                     autoFocus
                     value={name}
                     onChange={(e) => { setName(e.target.value); setRegisterError(''); }}
-                    placeholder="John Doe"
+                    placeholder="Enter your full name"
                     className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                   />
                 </div>
