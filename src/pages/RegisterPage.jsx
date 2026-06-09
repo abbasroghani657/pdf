@@ -20,7 +20,9 @@ export default function RegisterPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from?.pathname || '/';
+  const AUTH_PAGES = ['/login', '/register', '/forgot-password', '/reset-password', '/auth/callback'];
+  const rawFrom = location.state?.from?.pathname;
+  const from = (rawFrom && !AUTH_PAGES.includes(rawFrom)) ? rawFrom : '/';
 
   // If already logged in, redirect
   useEffect(() => {

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function ProtectedRoute({ requireAdmin }) {
   const { user, loading } = useAuth();
+  const location = useLocation();
 
   if (loading) {
     return (
@@ -14,7 +15,8 @@ export default function ProtectedRoute({ requireAdmin }) {
   }
 
   if (!user) {
-    return <Navigate to="/login" replace />;
+    // Pass current location so login can redirect back after auth
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
   if (requireAdmin && !['admin', 'superadmin'].includes(user.profile?.role)) {

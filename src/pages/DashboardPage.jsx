@@ -34,6 +34,7 @@ export default function DashboardPage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteInput, setDeleteInput] = useState('');
+  const [showPwd, setShowPwd] = useState(false);
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
@@ -437,39 +438,66 @@ export default function DashboardPage() {
                 <form onSubmit={handleChangePassword} className="space-y-4">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Current Password</label>
-                    <input
-                      type="password"
-                      required
-                      value={pwdForm.currentPassword}
-                      onChange={e => setPwdForm(p => ({...p, currentPassword: e.target.value}))}
-                      className="w-full px-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
-                      placeholder="Enter current password"
-                    />
+                    <div className="relative">
+                      <input
+                        type={showPwd ? "text" : "password"}
+                        required
+                        value={pwdForm.currentPassword}
+                        onChange={e => setPwdForm(p => ({...p, currentPassword: e.target.value}))}
+                        className="w-full px-3 py-3 pr-10 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
+                        placeholder="Enter current password"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPwd(!showPwd)}
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                      >
+                        <iconify-icon icon={showPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
+                      </button>
+                    </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-1">New Password</label>
-                      <input
-                        type="password"
-                        required
-                        minLength={8}
-                        value={pwdForm.newPassword}
-                        onChange={e => setPwdForm(p => ({...p, newPassword: e.target.value}))}
-                        className="w-full px-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
-                        placeholder="At least 8 characters"
-                      />
+                      <div className="relative">
+                        <input
+                          type={showPwd ? "text" : "password"}
+                          required
+                          minLength={8}
+                          value={pwdForm.newPassword}
+                          onChange={e => setPwdForm(p => ({...p, newPassword: e.target.value}))}
+                          className="w-full px-3 py-3 pr-10 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
+                          placeholder="At least 8 characters"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPwd(!showPwd)}
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                        >
+                          <iconify-icon icon={showPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
+                        </button>
+                      </div>
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-1">Confirm Password</label>
-                      <input
-                        type="password"
-                        required
-                        minLength={8}
-                        value={pwdForm.confirmPassword}
-                        onChange={e => setPwdForm(p => ({...p, confirmPassword: e.target.value}))}
-                        className="w-full px-3 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
-                        placeholder="Confirm new password"
-                      />
+                      <div className="relative">
+                        <input
+                          type={showPwd ? "text" : "password"}
+                          required
+                          minLength={8}
+                          value={pwdForm.confirmPassword}
+                          onChange={e => setPwdForm(p => ({...p, confirmPassword: e.target.value}))}
+                          className="w-full px-3 py-3 pr-10 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] transition-colors"
+                          placeholder="Confirm new password"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPwd(!showPwd)}
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                        >
+                          <iconify-icon icon={showPwd ? 'solar:eye-closed-linear' : 'solar:eye-linear'} class="text-lg"></iconify-icon>
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <button
