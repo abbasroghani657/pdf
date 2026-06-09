@@ -145,11 +145,11 @@ export default function PricingPage() {
             <h3 className="text-xl font-bold text-white mb-2">Pro</h3>
             <p className="text-slate-400 text-sm mb-6 h-10">For professionals who need unlimited access and advanced AI tools.</p>
             <div className="mb-2 flex items-baseline gap-1">
-              <span className="text-5xl font-black text-white">${isAnnual ? '3.99' : '4.99'}</span>
-              <span className="text-slate-400 font-medium">/month</span>
+              <span className="text-5xl font-black text-white">${isAnnual ? '47.88' : '4.99'}</span>
+              <span className="text-slate-400 font-medium">{isAnnual ? '/year' : '/month'}</span>
             </div>
             <p className="text-xs text-blue-300/80 mb-6 font-medium h-4">
-              {isAnnual ? 'Billed $47.88 annually (Save 20%)' : 'Billed monthly. Cancel anytime.'}
+              {isAnnual ? 'Equivalent to $3.99/month (Save 20%)' : 'Billed monthly. Cancel anytime.'}
             </p>
             
             <button 
@@ -192,8 +192,8 @@ export default function PricingPage() {
             <h3 className="text-xl font-bold text-slate-900 mb-2">Business</h3>
             <p className="text-slate-500 text-sm mb-6 h-10">For teams and organizations requiring custom branding and API.</p>
             <div className="mb-6 flex items-baseline gap-1">
-              <span className="text-5xl font-black text-slate-900">${isAnnual ? '11.99' : '14.99'}</span>
-              <span className="text-slate-500 font-medium">/user/mo</span>
+              <span className="text-5xl font-black text-slate-900">${isAnnual ? '143.88' : '14.99'}</span>
+              <span className="text-slate-500 font-medium">{isAnnual ? '/user/year' : '/user/mo'}</span>
             </div>
             <button 
               onClick={() => window.location.href = 'mailto:sales@pdfmaster.com?subject=Business Plan Inquiry'}
