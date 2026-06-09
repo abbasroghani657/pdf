@@ -232,7 +232,7 @@ export default function RegisterPage() {
 
               <div className="text-center mt-6 text-sm text-slate-600">
                 Already have an account?{' '}
-                <Link to="/login" className="font-semibold text-red-500 hover:text-red-600 transition-colors">
+                <Link to="/login" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
                   Log in
                 </Link>
               </div>

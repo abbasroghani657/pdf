@@ -204,7 +204,7 @@ export default function LoginPage() {
               </div>
 
               <div className="flex items-center justify-center pt-1 pb-1">
-                <Link to="/forgot-password" className="text-sm font-semibold text-red-500 hover:text-red-600 transition-colors">
+                <Link to="/forgot-password" className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
                   Forgot your password?
                 </Link>
               </div>
@@ -225,7 +225,7 @@ export default function LoginPage() {
 
               <div className="text-center mt-6 text-sm text-slate-600">
                 Don't have an account?{' '}
-                <Link to="/register" className="font-semibold text-red-500 hover:text-red-600 transition-colors">
+                <Link to="/register" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
                   Create an account
                 </Link>
               </div>
