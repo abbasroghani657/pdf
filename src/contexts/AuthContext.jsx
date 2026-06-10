@@ -95,23 +95,35 @@ export function AuthProvider({ children }) {
       const formData = new FormData();
       formData.append('avatar', file);
       
-      const res = await api.post('/auth/upload-avatar', formData);
+      const token = localStorage.getItem('pdfmaster_token');
+      const res = await fetch('/api/auth/upload-avatar', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+        body: formData
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.message || 'Failed to upload avatar');
+      }
       
       // Update the user state with the new avatar_url
       setUser(prev => ({
         ...prev,
         user_metadata: {
           ...prev.user_metadata,
-          avatar_url: res.data.avatar_url
+          avatar_url: data.avatar_url
         }
       }));
       
       toast.success('Profile picture updated!');
-      return res.data.avatar_url;
+      return data.avatar_url;
     } catch (error) {
-      const msg = error.response?.data?.message || 'Failed to upload avatar.';
-      toast.error(msg);
-      throw new Error(msg);
+      toast.error(error.message || 'Failed to upload avatar.');
+      throw error;
     }
   };
 

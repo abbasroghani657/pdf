@@ -355,6 +355,7 @@ router.post('/upload-avatar', protect, (req, res, next) => {
   upload.single('avatar')(req, res, (err) => {
     if (err) {
       console.error('[Multer Error]:', err);
+      fs.writeFileSync(path.join(__dirname, '../error_log.txt'), '[Multer Error] ' + err.toString());
       return res.status(400).json({ message: err.message });
     }
     next();
@@ -376,12 +377,14 @@ router.post('/upload-avatar', protect, (req, res, next) => {
 
     if (error) {
       console.error('[Supabase Auth Update Error]:', error);
+      fs.writeFileSync(path.join(__dirname, '../error_log.txt'), '[Supabase Auth Error] ' + JSON.stringify(error));
       return res.status(400).json({ message: error.message });
     }
 
     res.json({ avatar_url: avatarUrl });
   } catch (error) {
     console.error('[Upload Avatar Catch Error]:', error);
+    fs.writeFileSync(path.join(__dirname, '../error_log.txt'), '[Catch Error] ' + error.toString());
     res.status(500).json({ message: error.message || 'Server error uploading avatar' });
   }
 });
