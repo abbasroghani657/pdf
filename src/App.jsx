@@ -610,7 +610,7 @@ export default function App() {
       />}
 
       {/* ── HERO / HEADER ──────────────────────────────────────────────────── */}
-      {!isTool && !isAuthPage && !isAdminPage && (
+      {!isTool && !isAuthPage && !isAdminPage && !isPricing && (
         <header className={clsx(
           'w-full text-center transition-all duration-500 relative overflow-hidden',
           isHome ? 'pt-16 pb-10' : 'pt-12 pb-6'
