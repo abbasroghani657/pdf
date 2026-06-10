@@ -221,15 +221,26 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* ── LOGOS / TRUST BADGES ───────────────────────────────────── */}
+      {/* ── SECURITY & TRUST BADGES ───────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 mt-20">
-        <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by forward-thinking teams</p>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-          <iconify-icon icon="logos:google" class="text-3xl"></iconify-icon>
-          <iconify-icon icon="logos:microsoft" class="text-3xl"></iconify-icon>
-          <iconify-icon icon="logos:airbnb" class="text-3xl"></iconify-icon>
-          <iconify-icon icon="logos:uber" class="text-3xl"></iconify-icon>
-          <iconify-icon icon="logos:netflix" class="text-3xl"></iconify-icon>
+        <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Enterprise-Grade Security</p>
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+          <div className="flex items-center gap-3 text-slate-500">
+            <iconify-icon icon="solar:shield-check-bold-duotone" class="text-3xl text-emerald-500"></iconify-icon>
+            <span className="text-sm font-semibold">256-bit SSL</span>
+          </div>
+          <div className="flex items-center gap-3 text-slate-500">
+            <iconify-icon icon="solar:trash-bin-trash-bold-duotone" class="text-3xl text-[#378ADD]"></iconify-icon>
+            <span className="text-sm font-semibold">Auto-Deletion</span>
+          </div>
+          <div className="flex items-center gap-3 text-slate-500">
+            <iconify-icon icon="solar:lock-keyhole-bold-duotone" class="text-3xl text-purple-500"></iconify-icon>
+            <span className="text-sm font-semibold">100% Private</span>
+          </div>
+          <div className="flex items-center gap-3 text-slate-500">
+            <iconify-icon icon="solar:server-square-bold-duotone" class="text-3xl text-indigo-500"></iconify-icon>
+            <span className="text-sm font-semibold">99.9% Uptime</span>
+          </div>
         </div>
       </div>
 
