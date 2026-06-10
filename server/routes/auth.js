@@ -351,7 +351,15 @@ const upload = multer({
 // @desc    Upload user avatar
 // @route   POST /api/auth/upload-avatar
 // @access  Private
-router.post('/upload-avatar', protect, upload.single('avatar'), async (req, res) => {
+router.post('/upload-avatar', protect, (req, res, next) => {
+  upload.single('avatar')(req, res, (err) => {
+    if (err) {
+      console.error('[Multer Error]:', err);
+      return res.status(400).json({ message: err.message });
+    }
+    next();
+  });
+}, async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ message: 'No file uploaded' });
@@ -367,13 +375,14 @@ router.post('/upload-avatar', protect, upload.single('avatar'), async (req, res)
     });
 
     if (error) {
+      console.error('[Supabase Auth Update Error]:', error);
       return res.status(400).json({ message: error.message });
     }
 
     res.json({ avatar_url: avatarUrl });
   } catch (error) {
-    console.error('[Upload Avatar Error]:', error);
-    res.status(500).json({ message: 'Server error uploading avatar' });
+    console.error('[Upload Avatar Catch Error]:', error);
+    res.status(500).json({ message: error.message || 'Server error uploading avatar' });
   }
 });
 

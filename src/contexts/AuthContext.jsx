@@ -95,9 +95,7 @@ export function AuthProvider({ children }) {
       const formData = new FormData();
       formData.append('avatar', file);
       
-      const res = await api.post('/auth/upload-avatar', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      const res = await api.post('/auth/upload-avatar', formData);
       
       // Update the user state with the new avatar_url
       setUser(prev => ({
