@@ -20,7 +20,7 @@ const COUNTRIES = [
 
 
 export default function DashboardPage() {
-  const { user, isPro, logout, upgradeToPro, updateProfile } = useAuth();
+  const { user, isPro, logout, upgradeToPro, updateProfile, uploadAvatar } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
   const [editForm, setEditForm] = useState({ name: '', country: '' });
@@ -37,6 +37,21 @@ export default function DashboardPage() {
   const [showCurrentPwd, setShowCurrentPwd] = useState(false);
   const [showNewPwd, setShowNewPwd] = useState(false);
   const [showConfirmPwd, setShowConfirmPwd] = useState(false);
+  const [uploadingAvatar, setUploadingAvatar] = useState(false);
+
+  const handleAvatarChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    setUploadingAvatar(true);
+    try {
+      await uploadAvatar(file);
+    } catch (error) {
+      // Error handled in context
+    } finally {
+      setUploadingAvatar(false);
+    }
+  };
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
@@ -105,8 +120,16 @@ export default function DashboardPage() {
 
         {/* ── Profile Header ─────────────────────────────────────── */}
         <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#378ADD] to-indigo-600 text-white flex items-center justify-center font-bold text-2xl shadow-lg shadow-blue-200">
-            {initials}
+          <div className="relative group w-16 h-16 rounded-2xl bg-gradient-to-br from-[#378ADD] to-indigo-600 text-white flex items-center justify-center font-bold text-2xl shadow-lg shadow-blue-200 overflow-hidden shrink-0">
+            {user.user_metadata?.avatar_url ? (
+              <img src={user.user_metadata.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
+            ) : (
+              initials
+            )}
+            <label className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
+              <iconify-icon icon={uploadingAvatar ? "line-md:loading-twotone-loop" : "solar:camera-bold"} class="text-white text-xl"></iconify-icon>
+              <input type="file" accept="image/*" className="hidden" onChange={handleAvatarChange} disabled={uploadingAvatar} />
+            </label>
           </div>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-3 mb-1">

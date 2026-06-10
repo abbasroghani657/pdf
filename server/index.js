@@ -39,12 +39,17 @@ app.use(helmet());
 
 // Ensure uploads directory exists
 const uploadsDir = path.join(__dirname, 'uploads');
+const avatarsDir = path.join(__dirname, 'uploads/avatars');
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
+}
+if (!fs.existsSync(avatarsDir)) {
+  fs.mkdirSync(avatarsDir, { recursive: true });
 }
 
 // Middleware
 app.use(express.json({ limit: '100mb' }));
+app.use('/api/avatars', express.static(avatarsDir));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes

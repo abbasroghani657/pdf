@@ -90,6 +90,33 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const uploadAvatar = async (file) => {
+    try {
+      const formData = new FormData();
+      formData.append('avatar', file);
+      
+      const res = await api.post('/auth/upload-avatar', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      });
+      
+      // Update the user state with the new avatar_url
+      setUser(prev => ({
+        ...prev,
+        user_metadata: {
+          ...prev.user_metadata,
+          avatar_url: res.data.avatar_url
+        }
+      }));
+      
+      toast.success('Profile picture updated!');
+      return res.data.avatar_url;
+    } catch (error) {
+      const msg = error.response?.data?.message || 'Failed to upload avatar.';
+      toast.error(msg);
+      throw new Error(msg);
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem('pdfmaster_token');
     setUser(null);
@@ -135,6 +162,7 @@ export function AuthProvider({ children }) {
       loginWithOAuth,
       register,
       updateProfile,
+      uploadAvatar,
       logout,
       upgradeToPro, 
       downgradeToFree,

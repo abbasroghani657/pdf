@@ -38,7 +38,7 @@ const protect = async (req, res, next) => {
       }
 
       const userId = authData.user.id;
-      req.user = { id: userId, email: authData.user.email };
+      req.user = { id: userId, email: authData.user.email, user_metadata: authData.user?.user_metadata || {} };
 
       // Fetch profile from DB — also with timeout (mandatory for role & ban checks)
       let profile;

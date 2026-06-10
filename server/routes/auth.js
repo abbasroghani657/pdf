@@ -318,6 +318,65 @@ router.post('/oauth/:provider', authLimiter, async (req, res) => {
   }
 });
  
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    const avatarsDir = path.join(__dirname, '../uploads/avatars');
+    if (!fs.existsSync(avatarsDir)) {
+      fs.mkdirSync(avatarsDir, { recursive: true });
+    }
+    cb(null, avatarsDir);
+  },
+  filename: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    cb(null, `avatar_${req.user.id}_${Date.now()}${ext}`);
+  }
+});
+
+const upload = multer({ 
+  storage,
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith('image/')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only images are allowed'));
+    }
+  }
+});
+
+// @desc    Upload user avatar
+// @route   POST /api/auth/upload-avatar
+// @access  Private
+router.post('/upload-avatar', protect, upload.single('avatar'), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ message: 'No file uploaded' });
+    }
+
+    const userId = req.user.id;
+    // For local dev proxy or direct URL
+    const APP_URL = process.env.APP_URL || 'http://localhost:3000';
+    const avatarUrl = `${APP_URL}/api/avatars/${req.file.filename}`;
+
+    const { data, error } = await supabaseAdmin.auth.admin.updateUserById(userId, {
+      user_metadata: { avatar_url: avatarUrl }
+    });
+
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }
+
+    res.json({ avatar_url: avatarUrl });
+  } catch (error) {
+    console.error('[Upload Avatar Error]:', error);
+    res.status(500).json({ message: 'Server error uploading avatar' });
+  }
+});
+
 // @desc    Update user profile (name, country)
 // @route   PUT /api/auth/profile
 // @access  Private
