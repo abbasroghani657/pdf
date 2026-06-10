@@ -624,13 +624,6 @@ export default function App() {
           )}
 
           <div className="relative max-w-4xl mx-auto px-4">
-            {isHome && (
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-xs font-semibold text-[#378ADD] mb-5">
-                <span className="pulse-dot w-1.5 h-1.5 bg-[#378ADD] rounded-full"></span>
-                Thousands of documents processed securely
-              </div>
-            )}
-
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4">
               {isHome && (
                 <> The most powerful<br className="hidden sm:block" />
