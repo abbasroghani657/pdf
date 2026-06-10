@@ -627,14 +627,14 @@ export default function App() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4">
               {isHome && (
                 <> The most powerful<br className="hidden sm:block" />
-                  <span className="gradient-text"> PDF toolkit</span> — free</>
+                  <span className="gradient-text"> PDF toolkit</span> free</>
               )}
               {isPricing && 'Simple, transparent pricing'}
               {isCompare && 'PDFMaster vs Competitors'}
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
-              {isHome && '37+ tools. AI-powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.'}
+              {isHome && '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.'}
               {isPricing && 'Get more done with PDFMaster Pro. No hidden fees, cancel anytime.'}
               {isCompare && 'Why millions are switching to the faster, smarter, and more affordable alternative.'}
             </p>
@@ -642,8 +642,8 @@ export default function App() {
             {isHome && (
               <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
                 {[
-                  { icon: 'solar:stars-linear', label: 'AI-powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
-                  { icon: 'solar:layers-linear', label: '37+ tools', cls: 'bg-blue-50 text-blue-600 border-blue-100' },
+                  { icon: 'solar:stars-linear', label: 'AI powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
+                  { icon: 'solar:widget-5-linear', label: '37+ tools', cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
                   { icon: 'solar:user-cross-linear', label: 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
                   { icon: 'solar:shield-check-linear', label: '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
                   { icon: 'solar:devices-linear', label: 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
