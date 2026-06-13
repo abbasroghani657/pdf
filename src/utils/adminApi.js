@@ -13,7 +13,7 @@ import axios from 'axios';
  * The key is defense-in-depth to stop automated scanners, not authenticated humans.
  */
 const adminApi = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
     'X-Admin-Key': import.meta.env.VITE_ADMIN_SECRET_KEY || '',

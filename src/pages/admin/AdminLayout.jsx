@@ -128,9 +128,13 @@ export default function AdminLayout() {
         {/* Real user info at bottom */}
         <div className="p-4 border-t border-white/10">
           <div className="flex items-center gap-3 px-3 py-3 bg-white/5 rounded-xl">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#378ADD] to-indigo-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
-              {initials}
-            </div>
+            {user?.user_metadata?.avatar_url || user?.profile?.avatar_url ? (
+              <img src={user?.user_metadata?.avatar_url || user?.profile?.avatar_url} alt="Admin" className="w-9 h-9 rounded-full object-cover shrink-0 border border-white/20" />
+            ) : (
+              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#378ADD] to-indigo-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                {initials}
+              </div>
+            )}
             <div className="flex-1 min-w-0">
               <p className="text-sm font-bold text-white truncate">{user?.profile?.name || 'Admin'}</p>
               <p className="text-xs text-slate-400 truncate capitalize">{user?.profile?.role || 'admin'}</p>

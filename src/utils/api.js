@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api', // This proxies to the backend running on port 3005 in dev
+  baseURL: import.meta.env.VITE_API_URL || '/api', // Proxies in dev, absolute URL in prod
   headers: {
     'Content-Type': 'application/json',
   },

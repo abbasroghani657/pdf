@@ -135,13 +135,16 @@ export function AuthProvider({ children }) {
 
   // Redirect user to Stripe Checkout for Pro upgrade
   const upgradeToPro = async (plan = 'monthly') => {
+    // Type guard/Sanitization
+    const validPlan = (typeof plan === 'string' && ['monthly', 'yearly'].includes(plan)) ? plan : 'monthly';
+    
     if (!user) {
       toast.error('Please log in first to upgrade.');
       return;
     }
     
     try {
-      const res = await api.post('/payments/create-checkout-session', { plan });
+      const res = await api.post('/payments/create-checkout-session', { plan: validPlan });
       if (res.data.url) {
         // Redirect to Stripe hosted checkout page
         window.location.href = res.data.url;
@@ -149,14 +152,26 @@ export function AuthProvider({ children }) {
         toast.error('Could not initiate payment. Please try again.');
       }
     } catch (error) {
-      console.error('Checkout error:', error);
-      toast.error('Payment system is currently unavailable.');
+      console.error('Checkout error status:', error.response?.status);
+      console.error('Checkout error data:', error.response?.data);
+      console.error('Checkout error message:', error.message);
+      const serverMsg = error.response?.data?.error || error.response?.data?.message;
+      toast.error(serverMsg || 'Payment system is currently unavailable.');
     }
   };
 
-  const downgradeToFree = () => {
+  const downgradeToFree = async () => {
     if (!user) return;
-    toast.error('Subscription cancellation must be done via the Customer Portal (Coming Soon).');
+    try {
+      const res = await api.post('/payments/create-portal-session');
+      if (res.data.url) {
+        window.location.href = res.data.url;
+      } else {
+        toast.error('Could not open subscription portal. Please try again.');
+      }
+    } catch (error) {
+      toast.error('Could not open subscription portal. Please try again.');
+    }
   };
 
   // Determine isPro status. Fallback to localStorage if no user for demo purposes, 

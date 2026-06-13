@@ -48,8 +48,16 @@ if (!fs.existsSync(avatarsDir)) {
 }
 
 // Middleware
+app.use('/api/payments/webhook', express.raw({ type: 'application/json' }));
 app.use(express.json({ limit: '100mb' }));
 app.use('/api/avatars', express.static(avatarsDir));
+
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'X-Admin-Key'],
+  exposedHeaders: ['Content-Disposition', 'Content-Length', 'X-Original-Size', 'X-Compressed-Size', 'X-Reduction-Pct', 'X-OCR-Pages', 'X-OCR-Accuracy', 'X-Fields-Flattened', 'X-Annots-Flattened']
+}));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -58,12 +66,6 @@ const limiter = rateLimit({
 });
 
 app.use('/api/', limiter);
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'X-Admin-Key'],
-  exposedHeaders: ['Content-Disposition', 'Content-Length', 'X-Original-Size', 'X-Compressed-Size', 'X-Reduction-Pct', 'X-OCR-Pages', 'X-OCR-Accuracy', 'X-Fields-Flattened', 'X-Annots-Flattened']
-}));
 
 // Routes
 app.use('/api/auth', authRoutes);

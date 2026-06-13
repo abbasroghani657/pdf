@@ -391,9 +391,13 @@ export default function App() {
             {user ? (
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleNavClick('/dashboard')}>
-                  <div className="w-8 h-8 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center font-bold text-sm group-hover:bg-indigo-200 transition-colors">
-                    {user.profile?.name?.[0]?.toUpperCase() || user.email[0].toUpperCase()}
-                  </div>
+                  {user.user_metadata?.avatar_url || user.profile?.avatar_url ? (
+                    <img src={user.user_metadata?.avatar_url || user.profile?.avatar_url} alt="Profile" className="w-8 h-8 rounded-full object-cover border-2 border-transparent group-hover:border-[#378ADD] transition-colors" />
+                  ) : (
+                    <div className="w-8 h-8 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center font-bold text-sm group-hover:bg-indigo-200 transition-colors">
+                      {user.profile?.name?.[0]?.toUpperCase() || user.email[0].toUpperCase()}
+                    </div>
+                  )}
                   <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
                     {user.profile?.name || 'Dashboard'}
                   </span>

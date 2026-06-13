@@ -20,14 +20,15 @@ const COUNTRIES = [
 
 
 export default function DashboardPage() {
-  const { user, isPro, logout, upgradeToPro, updateProfile, uploadAvatar } = useAuth();
+  const { user, isPro, logout, upgradeToPro, updateProfile, uploadAvatar, downgradeToFree } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
   const [editForm, setEditForm] = useState({ name: '', country: '' });
   const [isSaving, setIsSaving] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [userStats, setUserStats] = useState({ filesProcessed: '—', storageSaved: '—', recentTools: [] });
-  
+  const [isOpeningPortal, setIsOpeningPortal] = useState(false);
+
   // New States for Profile Tab
   const [pwdForm, setPwdForm] = useState({ currentPassword: '', newPassword: '', confirmPassword: '' });
   const [isChangingPwd, setIsChangingPwd] = useState(false);
@@ -149,7 +150,7 @@ export default function DashboardPage() {
           <div className="flex gap-3 mt-2 sm:mt-0">
             {!isPro && (
               <button
-                onClick={upgradeToPro}
+                onClick={() => upgradeToPro('monthly')}
                 className="flex items-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold rounded-xl transition-all shadow-sm shadow-amber-200 hover:-translate-y-px"
               >
                 <iconify-icon icon="solar:crown-bold" class="text-base"></iconify-icon>
@@ -271,7 +272,7 @@ export default function DashboardPage() {
               </ul>
               {!isPro && (
                 <button
-                  onClick={upgradeToPro}
+                  onClick={() => upgradeToPro('monthly')}
                   className="w-full py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-amber-200 hover:-translate-y-0.5"
                 >
                   Upgrade — $4.99/mo
@@ -585,7 +586,7 @@ export default function DashboardPage() {
                     value={deleteInput}
                     onChange={(e) => setDeleteInput(e.target.value)}
                     placeholder="Type DELETE"
-                    className="w-full px-4 py-3 border border-red-200 rounded-xl text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all font-mono"
+                      className="w-full px-4 py-3 border border-red-200 rounded-xl text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all font-mono"
                   />
                   
                   <div className="flex gap-3">
@@ -614,12 +615,9 @@ export default function DashboardPage() {
         {activeTab === 'billing' && (
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 max-w-2xl">
             <h2 className="text-base font-extrabold text-gray-900 mb-6">Billing & Subscription</h2>
-            <div className={clsx(
-              'rounded-2xl p-5 mb-6 flex items-center gap-4',
-              isPro ? 'bg-amber-50 border border-amber-100' : 'bg-gray-50 border border-gray-100'
-            )}>
-              <div className={clsx('w-12 h-12 rounded-xl flex items-center justify-center', isPro ? 'bg-amber-100' : 'bg-gray-100')}>
-                <iconify-icon icon="solar:crown-bold" class={clsx('text-2xl', isPro ? 'text-amber-500' : 'text-gray-400')}></iconify-icon>
+            <div className={`rounded-2xl p-5 mb-6 flex items-center gap-4 ${isPro ? 'bg-amber-50 border border-amber-100' : 'bg-gray-50 border border-gray-100'}`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${isPro ? 'bg-amber-100' : 'bg-gray-100'}`}>
+                <iconify-icon icon="solar:crown-bold" class={`text-2xl ${isPro ? 'text-amber-500' : 'text-gray-400'}`}></iconify-icon>
               </div>
               <div className="flex-1">
                 <p className="font-bold text-gray-900">{isPro ? 'PDFMaster Pro' : 'PDFMaster Free'}</p>
@@ -640,11 +638,29 @@ export default function DashboardPage() {
               {isPro ? (
                 <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Active</span>
               ) : (
-                <button onClick={upgradeToPro} className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold rounded-xl transition-colors">
+                <button onClick={() => upgradeToPro('monthly')} className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold rounded-xl transition-colors">
                   Upgrade
                 </button>
               )}
             </div>
+
+            {/* Manage Subscription — only shown to Pro users */}
+            {isPro && (
+              <div className="mb-6 p-5 bg-blue-50 border border-blue-100 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">Manage Your Subscription</p>
+                  <p className="text-xs text-gray-500 mt-1">Update payment method, view invoices, or cancel your plan via the LemonSqueezy portal.</p>
+                </div>
+                <button
+                  onClick={async () => { setIsOpeningPortal(true); await downgradeToFree(); setIsOpeningPortal(false); }}
+                  disabled={isOpeningPortal}
+                  className="shrink-0 flex items-center gap-2 px-4 py-2.5 bg-white text-gray-700 border border-gray-200 font-bold rounded-xl text-sm hover:bg-gray-50 transition-all disabled:opacity-50 shadow-sm"
+                >
+                  <iconify-icon icon={isOpeningPortal ? 'line-md:loading-twotone-loop' : 'solar:settings-bold'} class="text-base"></iconify-icon>
+                  {isOpeningPortal ? 'Opening...' : 'Manage Subscription'}
+                </button>
+              </div>
+            )}
 
             <div className="space-y-3">
               <h3 className="text-sm font-bold text-gray-700">What's included:</h3>
@@ -658,7 +674,7 @@ export default function DashboardPage() {
                 <div key={i} className="grid grid-cols-3 gap-4 text-sm p-3 rounded-xl bg-gray-50">
                   <span className="font-semibold text-gray-700">{row.feature}</span>
                   <span className="text-gray-500 text-center">{row.free}</span>
-                  <span className={clsx('text-center font-semibold', isPro ? 'text-emerald-600' : 'text-gray-700')}>{row.pro}</span>
+                  <span className={`text-center font-semibold ${isPro ? 'text-emerald-600' : 'text-gray-700'}`}>{row.pro}</span>
                 </div>
               ))}
             </div>

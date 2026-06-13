@@ -6,8 +6,8 @@ export default function PaymentSuccessPage() {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get('session_id');
   const navigate = useNavigate();
-  const { user } = useAuth();
-  const [countdown, setCountdown] = useState(5);
+  const { fetchUser } = useAuth();
+  const [countdown, setCountdown] = useState(6);
 
   useEffect(() => {
     if (!sessionId) {
@@ -15,12 +15,19 @@ export default function PaymentSuccessPage() {
       return;
     }
 
+    // Give Stripe webhook 2 seconds to process, then refresh user data
+    const webhookDelay = setTimeout(async () => {
+      try {
+        await fetchUser(); // Refresh Pro status from DB
+      } catch (e) {
+        // Non-critical — user can still see success page
+      }
+    }, 2000);
+
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          // Instead of hard navigation, we can just navigate normally and let AuthContext fetch updated user
-          // But a hard reload ensures the new token/profile is fetched if backend updated it via webhook
           window.location.href = '/dashboard';
           return 0;
         }
@@ -28,8 +35,11 @@ export default function PaymentSuccessPage() {
       });
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, [sessionId, navigate]);
+    return () => {
+      clearTimeout(webhookDelay);
+      clearInterval(timer);
+    };
+  }, [sessionId, navigate, fetchUser]);
 
   return (
     <div className="min-h-[80vh] flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-[#f8fafc]">
@@ -40,9 +50,14 @@ export default function PaymentSuccessPage() {
         </div>
         
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight mb-2">Welcome to Pro!</h2>
-        <p className="text-base text-gray-500 mb-8">
+        <p className="text-base text-gray-500 mb-4">
           Your payment was successful. You now have unlimited access to all PDFMaster premium features.
         </p>
+
+        <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-2xl mb-6 flex items-center justify-center gap-2">
+          <iconify-icon icon="solar:check-circle-bold" class="text-xl text-emerald-500"></iconify-icon>
+          <span className="text-sm font-semibold text-emerald-700">Payment confirmed by Stripe</span>
+        </div>
 
         <div className="p-4 bg-gray-50 rounded-2xl mb-8 flex items-center justify-center gap-3">
           <iconify-icon icon="line-md:loading-twotone-loop" class="text-xl text-[#378ADD]"></iconify-icon>
