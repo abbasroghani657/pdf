@@ -1,4 +1,11 @@
 const supabase = require('../config/supabase');
+const { createClient } = require('@supabase/supabase-js');
+
+const supabaseAdmin = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY,
+  { auth: { autoRefreshToken: false, persistSession: false } }
+);
 
 // Wrap a promise with a timeout — prevents socket hang up when Supabase is slow
 const withTimeout = (promise, ms, label) =>
@@ -44,7 +51,7 @@ const protect = async (req, res, next) => {
       let profile;
       try {
         const { data, error: dbErr } = await withTimeout(
-          supabase.from('users').select('*').eq('id', userId).single(),
+          supabaseAdmin.from('users').select('*').eq('id', userId).maybeSingle(),
           15000, // Increased timeout to 15s
           'db.profile'
         );
@@ -129,7 +136,7 @@ const protectOptional = async (req, res, next) => {
     req.user = { id: userId, email: result.data.user.email };
 
     const { data: profile } = await withTimeout(
-      supabase.from('users').select('*').eq('id', userId).single(),
+      supabaseAdmin.from('users').select('*').eq('id', userId).maybeSingle(),
       15000, 'db.profile'
     );
     if (profile && !profile.is_banned) {

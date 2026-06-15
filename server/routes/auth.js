@@ -253,7 +253,7 @@ router.post('/oauth/sync', protectAuthOnly, async (req, res) => {
       .from('users')
       .select('id, country')
       .eq('id', user.id)
-      .single();
+      .maybeSingle();
  
     let isNewUser = false;
  
