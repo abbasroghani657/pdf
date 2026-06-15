@@ -76,6 +76,25 @@ const protect = async (req, res, next) => {
   }
 };
 
+const protectAuthOnly = async (req, res, next) => {
+  let token;
+  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+    token = req.headers.authorization.split(' ')[1];
+    try {
+      const result = await withTimeout(supabase.auth.getUser(token), 15000, 'auth.getUser');
+      if (result.error || !result.data?.user) {
+        return res.status(401).json({ message: 'Not authorized, invalid token.' });
+      }
+      req.user = { id: result.data.user.id, email: result.data.user.email, user_metadata: result.data.user?.user_metadata || {} };
+      next();
+    } catch (err) {
+      return res.status(401).json({ message: 'Not authorized, token failed.' });
+    }
+  } else {
+    res.status(401).json({ message: 'Not authorized, no token' });
+  }
+};
+
 const admin = (req, res, next) => {
   if (req.user && req.user.profile && (req.user.profile.role === 'admin' || req.user.profile.role === 'superadmin')) {
     next();
@@ -91,8 +110,6 @@ const superadmin = (req, res, next) => {
     res.status(403).json({ message: 'Not authorized as superadmin' });
   }
 };
-
-module.exports = { protect, admin, superadmin };
 
 // Optional auth middleware — attaches req.user if valid token exists,
 // but does NOT block the request if no token is provided.
@@ -124,5 +141,5 @@ const protectOptional = async (req, res, next) => {
   next();
 };
 
-module.exports = { protect, admin, superadmin, protectOptional };
+module.exports = { protect, protectAuthOnly, admin, superadmin, protectOptional };
 

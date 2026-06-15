@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const supabase = require('../config/supabase');
 const { createClient } = require('@supabase/supabase-js');
-const { protect } = require('../middleware/auth');
+const { protect, protectAuthOnly } = require('../middleware/auth');
 const rateLimit = require('express-rate-limit');
  
 const authLimiter = rateLimit({
@@ -244,7 +244,7 @@ router.post('/oauth/exchange', async (req, res) => {
 // @desc    Sync OAuth user to public.users table
 // @route   POST /api/auth/oauth/sync
 // @access  Private (Requires valid Supabase token)
-router.post('/oauth/sync', protect, async (req, res) => {
+router.post('/oauth/sync', protectAuthOnly, async (req, res) => {
   try {
     const user = req.user;
     
