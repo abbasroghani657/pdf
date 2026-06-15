@@ -248,7 +248,7 @@ router.post('/oauth/sync', protectAuthOnly, async (req, res) => {
   try {
     const user = req.user;
     
-    // Check if user already exists in public.users
+    // Check if user already exists in public.users by ID
     const { data: existingUser } = await supabaseAdmin
       .from('users')
       .select('id, country')
@@ -258,6 +258,20 @@ router.post('/oauth/sync', protectAuthOnly, async (req, res) => {
     let isNewUser = false;
  
     if (!existingUser) {
+      // Check if email already exists to prevent unique constraint violation
+      const { data: emailUser } = await supabaseAdmin
+        .from('users')
+        .select('id, auth_provider')
+        .eq('email', user.email)
+        .maybeSingle();
+
+      if (emailUser) {
+        // Email exists but ID is different!
+        return res.status(400).json({ 
+          message: `This email is already registered using ${emailUser.auth_provider}. Please log in using your original method.` 
+        });
+      }
+
       isNewUser = true;
       // Create user profile
       const { error: dbError } = await supabaseAdmin
@@ -275,7 +289,7 @@ router.post('/oauth/sync', protectAuthOnly, async (req, res) => {
  
       if (dbError) {
         console.error('Error creating OAuth user profile:', dbError);
-        return res.status(500).json({ message: 'Failed to sync user profile.' });
+        return res.status(500).json({ message: 'Failed to sync user profile. Database error: ' + dbError.message });
       }
     } else if (existingUser.country === 'Unknown') {
       isNewUser = true;
