@@ -60,14 +60,8 @@ export default function PDFTrendsPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 pt-16 pb-24 font-sans">
         
         {/* HERO SECTION */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16 text-center animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/50 text-[#378ADD] text-sm font-semibold mb-6 border border-blue-200">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#378ADD]"></span>
-            </span>
-            2025-2026 Industry Report
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 mb-16 text-center animate-fade-in-up">
+
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
             Global PDF Trends <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-indigo-600">2026</span>
           </h1>
