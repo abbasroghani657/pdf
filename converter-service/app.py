@@ -97,7 +97,7 @@ def pdf_to_xlsx():
                 # Setup page for printing/PDF export (Landscape + Fit to 1 page wide)
                 ws.page_setup.orientation = ws.ORIENTATION_LANDSCAPE
                 ws.page_setup.fitToWidth = 1
-                ws.page_setup.fitToHeight = 0
+                ws.page_setup.fitToHeight = False
                 
                 clean_page = page.filter(filter_chars)
                 
@@ -158,6 +158,18 @@ def pdf_to_xlsx():
                                     ws.append([line])
                     except Exception:
                         pass
+                
+                # Global Worksheet Formatting: Column Widths & Text Wrapping
+                from openpyxl.utils import get_column_letter
+                from openpyxl.styles import Alignment
+                wrap_align = Alignment(wrap_text=True, vertical='top')
+                
+                for col_idx in range(1, 10):
+                    ws.column_dimensions[get_column_letter(col_idx)].width = 25
+                    
+                for row in ws.iter_rows():
+                    for cell in row:
+                        cell.alignment = wrap_align
         
         wb.save(output_path)
         return send_file(
