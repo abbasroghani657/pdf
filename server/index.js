@@ -314,15 +314,16 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
   try {
     const { tool } = req.body;
 
-    if (!files || files.length === 0) return res.status(400).json({ error: 'No file uploaded' });
+    const isUrlMode = tool === 'HTML to PDF' && req.body.url;
+    if (!isUrlMode && (!files || files.length === 0)) return res.status(400).json({ error: 'No file uploaded' });
     if (!tool)  return res.status(400).json({ error: 'Tool type not specified' });
 
-    const file = files.find(f => f.fieldname === 'file') || files[0];
-    if (!file) return res.status(400).json({ error: 'Main file missing' });
+    const file = isUrlMode ? null : (files.find(f => f.fieldname === 'file') || files[0]);
+    if (!isUrlMode && !file) return res.status(400).json({ error: 'Main file missing' });
     
     // ─── SaaS Monetization: Pro = 1GB, Free = 10MB ──────────────────────────────
-    const totalSize = files.reduce((acc, f) => acc + f.size, 0);
-    const maxSize = isPro ? 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 1GB pro, 10MB free
+    const totalSize = files ? files.reduce((acc, f) => acc + f.size, 0) : 0;
+    const maxSize = isPro ? 2 * 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 2GB pro, 10MB free
     if (totalSize > maxSize) {
       files.forEach(f => { try { fs.unlinkSync(f.path); } catch(e){} });
       const limitLabel = isPro ? '1GB' : '10MB';
@@ -330,14 +331,18 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
     }
     // ────────────────────────────────────────────────────────────────────────────
     
-    console.log(`  → File: ${file.originalname} (${(file.size / 1024).toFixed(1)} KB)`);
+    if (!isUrlMode) {
+      console.log(`  → File: ${file.originalname} (${(file.size / 1024).toFixed(1)} KB)`);
+    } else {
+      console.log(`  → URL: ${req.body.url}`);
+    }
     console.log(`  → Tool: ${tool}`);
-    console.log(`\n🔧 [${tool}] — Processing ${files.length} file(s)`);
+    console.log(`\n🔧 [${tool}] — Processing ${files ? files.length : 0} file(s)`);
 
     let processedBuffer;
-    let newFilename = `processed_${file.originalname}`;
+    let newFilename = isUrlMode ? 'webpage_converted.pdf' : `processed_${file.originalname}`;
     let contentType = 'application/pdf';
-    const baseName = file.originalname.replace(/\.[^/.]+$/, '');
+    const baseName = isUrlMode ? 'webpage' : file.originalname.replace(/\.[^/.]+$/, '');
 
     switch (tool) {
 
@@ -1130,7 +1135,7 @@ app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
   }
   
   const baseName = isUrlMode ? 'webpage' : file.originalname.replace(/\.[^/.]+$/, '');
-  let newFilename = `processed_${file.originalname}`;
+  let newFilename = isUrlMode ? 'webpage_converted.pdf' : `processed_${file.originalname}`;
   let contentType = 'application/pdf';
 
   // Create Job
