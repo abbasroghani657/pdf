@@ -57,10 +57,10 @@ export default function PDFTrendsPage() {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 pt-16 pb-24 font-sans">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 pt-0 pb-24 font-sans">
         
         {/* HERO SECTION */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 mb-16 text-center animate-fade-in-up">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-0 mb-12 text-center animate-fade-in-up">
 
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
             Global PDF Trends <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-indigo-600">2026</span>
