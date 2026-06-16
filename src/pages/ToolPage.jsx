@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import UpgradeModal from '../components/UpgradeModal';
 import { clsx } from 'clsx';
 import { saveAs } from 'file-saver';
@@ -9,6 +9,7 @@ import { processWithQueue } from '../utils/queueApi';
 import { toast } from 'react-hot-toast';
 import PrivacyBadge from '../components/PrivacyBadge';
 import { useAuth } from '../contexts/AuthContext';
+import SEOHead from '../components/SEOHead';
 
 // ─── FILE SIZE FORMATTER ──────────────────────────────────────────────────────
 function formatFileSize(bytes) {
@@ -18,13 +19,93 @@ function formatFileSize(bytes) {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
+// ─── DYNAMIC SEO CONTENT INJECTOR ─────────────────────────────────────────────
+function injectPlatformContext(text, platform) {
+  if (!platform || !text) return text;
+  const p = platform.toLowerCase();
+  
+  let result = text;
+  if (p === 'mac') {
+    result = result.replace(/your device/gi, 'your Mac');
+    result = result.replace(/your computer/gi, 'your Mac');
+    result = result.replace(/any device/gi, 'any Mac or Apple device');
+    result = result.replace(/web browser/gi, 'Safari or Chrome browser');
+  } else if (p === 'windows') {
+    result = result.replace(/your device/gi, 'your Windows PC');
+    result = result.replace(/your computer/gi, 'your Windows PC');
+    result = result.replace(/any device/gi, 'any Windows device');
+    result = result.replace(/web browser/gi, 'Edge or Chrome browser');
+  } else if (p === 'iphone') {
+    result = result.replace(/your device/gi, 'your iPhone');
+    result = result.replace(/your computer/gi, 'your iPhone');
+    result = result.replace(/any device/gi, 'any iOS device');
+    result = result.replace(/web browser/gi, 'Safari browser');
+    result = result.replace(/drag and drop/gi, 'select');
+    result = result.replace(/dragging/gi, 'selecting');
+  } else if (p === 'android') {
+    result = result.replace(/your device/gi, 'your Android phone');
+    result = result.replace(/your computer/gi, 'your Android device');
+    result = result.replace(/any device/gi, 'any Android device');
+    result = result.replace(/web browser/gi, 'Chrome browser');
+    result = result.replace(/drag and drop/gi, 'select');
+    result = result.replace(/dragging/gi, 'selecting');
+  }
+  return result;
+}
 
-export default function ToolPage() {
-  const { toolSlug } = useParams();
+import { useTranslation } from 'react-i18next';
+
+// ─── TOOL TITLE TRANSLATION DICTIONARY ─────────────────────────────────────────
+const esTitles = {
+  'Merge PDF': 'Unir PDF',
+  'Split PDF': 'Dividir PDF',
+  'Compress PDF': 'Comprimir PDF',
+  'PDF to Word': 'PDF a Word',
+  'Word to PDF': 'Word a PDF',
+  'PDF to JPG': 'PDF a JPG',
+  'JPG to PDF': 'JPG a PDF',
+  'Edit PDF': 'Editar PDF',
+  'Sign PDF': 'Firmar PDF',
+  'Watermark PDF': 'Marca de agua PDF',
+  'Unlock PDF': 'Desbloquear PDF',
+  'Extract Data': 'Extraer datos',
+  'Translate PDF': 'Traducir PDF',
+  'Chat with PDF': 'Chatear con PDF',
+  'Plagiarism Check': 'Comprobar plagio'
+};
+
+export default function ToolPage({ lang = 'en', hideSEO = false }) {
+  const { toolSlug, platform } = useParams();
   const navigate = useNavigate();
   const { isPro } = useAuth();
+  const { t, i18n } = useTranslation();
+  
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang, i18n]);
   
   const tool = TOOLS_DATA.find((t) => slugify(t.title) === toolSlug);
+
+  const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
+  
+  // Dynamic Translation Logic
+  const localizedTitle = lang === 'es' ? (esTitles[tool?.title] || tool?.title) : tool?.title;
+  const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
+
+  const dynamicSteps = (tool?.howToSteps || [
+    `Select or drag and drop your file into the ${tool?.title} tool.`,
+    'Wait a few seconds while our secure cloud servers process your file.',
+    'Once completed, download your newly processed file instantly.'
+  ]).map(step => injectPlatformContext(step, platform));
+
+  const dynamicFaqs = (tool?.faqs || [
+    { question: `Is it safe to use the ${tool?.title} tool?`, answer: `Yes, absolutely. We use 256-bit SSL encryption to ensure your files are completely secure. All files are automatically deleted from our servers within 2 hours.` },
+    { question: `Do I need to install any software?`, answer: `No. PDFMaster is a cloud-based platform. You can use our ${tool?.title} tool directly from your web browser on any device, including Windows, Mac, iOS, and Android.` },
+    { question: `Are there any limits on file size?`, answer: `Free users can process files up to 10MB. If you need to process larger files (up to 2GB), you can upgrade to our Pro plan.` }
+  ]).map(faq => ({
+    question: injectPlatformContext(faq.question, platform),
+    answer: injectPlatformContext(faq.answer, platform)
+  }));
 
   const [uploadState, setUploadState] = useState('idle'); // idle | dragging | selected | processing | done | error
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -172,14 +253,26 @@ export default function ToolPage() {
   if (!tool) return null;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6 md:py-8 animate-fade-in">
-      <div className="text-center mb-6">
-        <div className={clsx('w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4', tool.iconColorClass)}>
-          <iconify-icon icon={tool.icon} class="text-4xl"></iconify-icon>
+    <>
+      {!hideSEO && (
+        <SEOHead 
+          lang={lang}
+          title={`${displayTitle} Online`} 
+          description={tool?.desc || ''} 
+          url={`/tools/${toolSlug}${platform ? '/' + platform : ''}`} 
+          toolName={displayTitle}
+          howToSteps={dynamicSteps}
+          faqs={dynamicFaqs}
+        />
+      )}
+      <div className="max-w-5xl mx-auto px-4 py-6 md:py-8 animate-fade-in">
+        <div className="text-center mb-6">
+          <div className={clsx('w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4', tool.iconColorClass)}>
+            <iconify-icon icon={tool.icon} class="text-4xl"></iconify-icon>
+          </div>
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{displayTitle}</h1>
+          <p className="text-gray-500 max-w-lg mx-auto text-sm">{tool.desc}</p>
         </div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{tool.title}</h1>
-        <p className="text-gray-500 max-w-lg mx-auto text-sm">{tool.desc}</p>
-      </div>
 
       <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden w-full max-w-4xl mx-auto">
         <div className="px-6 py-6 md:px-10 md:py-8">
@@ -213,14 +306,14 @@ export default function ToolPage() {
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
               <p className="text-xl font-bold text-gray-900 mb-1">
-                {isDragging ? 'Drop your file here' : 'Drag & drop your file here'}
+                {isDragging ? t('dropFileHere') : t('dragDropHere')}
               </p>
-              <p className="text-sm text-gray-500 mb-6">or click to browse — PDF, up to {isPro ? '2GB' : '10MB'}</p>
+              <p className="text-sm text-gray-500 mb-6">{t('orClickBrowse')} {isPro ? '2GB' : '10MB'}</p>
               <button
                 type="button"
                 className="bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0 relative z-0 pointer-events-none"
               >
-                Choose file
+                {t('chooseFile')}
               </button>
               <PrivacyBadge />
             </div>
@@ -256,7 +349,7 @@ export default function ToolPage() {
                 className="w-full py-4 bg-[#378ADD] hover:bg-[#2b71b8] text-white rounded-2xl text-base font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2"
               >
                 <iconify-icon icon="solar:magic-stick-3-bold" class="text-xl"></iconify-icon>
-                Process with {tool.title}
+                {t('processWith')} {localizedTitle}
               </button>
             </div>
           )}
@@ -342,10 +435,10 @@ export default function ToolPage() {
                   onClick={handleReset}
                   className="flex-1 py-4 bg-[#378ADD] hover:bg-[#2b71b8] text-white rounded-2xl text-base font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  Try again
+                  {t('tryAgain')}
                 </button>
                 <button className="flex-1 py-4 border-2 border-[#378ADD] text-[#378ADD] hover:bg-blue-50 rounded-2xl text-base font-semibold transition-colors">
-                  Go Pro (1GB)
+                  {t('goPro')}
                 </button>
               </div>
             </div>
@@ -360,11 +453,11 @@ export default function ToolPage() {
               </span>
               <span className="flex items-center gap-2">
                 <iconify-icon icon="solar:trash-bin-trash-linear" class="text-lg"></iconify-icon>
-                Auto-deleted in 2h
+                {t('autoDeleted')}
               </span>
               <span className="flex items-center gap-2">
                 <iconify-icon icon="solar:eye-closed-linear" class="text-lg"></iconify-icon>
-                Private
+                {t('private')}
               </span>
             </div>
           )}
@@ -379,6 +472,8 @@ export default function ToolPage() {
         featureName={tool.title} 
         limitMessage="Files over 10MB require a Pro account. Upgrade to Pro for up to 1GB file uploads."
       />
-    </div>
+
+      </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 import { TOOLS_DATA } from '../data/tools';
 import { slugify } from '../utils/slugify';
 import { useNavigate } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 // ── Category config with color themes ──────────────────────────────────────────
 const CATEGORIES = [
@@ -64,6 +65,7 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
 
   return (
     <div className="space-y-6">
+      <SEOHead />
 
       {/* ── Category Filter Tabs ─────────────────────────────────────────────── */}
       <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">

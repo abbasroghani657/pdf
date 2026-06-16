@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /x-portal-9f3a/
+
+Sitemap: https://www.theylovepdf.com/sitemap.xml

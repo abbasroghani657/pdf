@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import PricingPage from './pages/PricingPage';
 import ComparePage from './pages/ComparePage';
 import ToolPage from './pages/ToolPage';
+import ToolRenderer from './pages/ToolRenderer';
 import CompressPage from './pages/CompressPage';
 import DeletePagesPage from './pages/DeletePagesPage';
 import SplitPagesPage from './pages/SplitPagesPage';
@@ -58,6 +59,8 @@ import AdminSupport from './pages/admin/AdminSupport';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import OAuthCallbackPage from './pages/OAuthCallbackPage';
@@ -265,13 +268,22 @@ export default function App() {
   }, [location.pathname, location.key, navType]);
 
   const handleNavClick = (path) => {
-    navigate(path);
+    // If we are currently in Spanish context and navigating to a tool route, preserve /es prefix
+    let finalPath = path;
+    if (location.pathname.startsWith('/es/') || location.pathname === '/es') {
+      if (path.startsWith('/tools/')) {
+        finalPath = `/es${path}`;
+      }
+    }
+    navigate(finalPath);
   };
 
-  const isHome = location.pathname === '/';
-  const isPricing = location.pathname === '/pricing';
-  const isCompare = location.pathname === '/compare';
-  const isTool = location.pathname.startsWith('/tools/');
+  const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : location.pathname;
+
+  const isHome = pathToCheck === '/';
+  const isPricing = pathToCheck === '/pricing';
+  const isCompare = pathToCheck === '/compare';
+  const isTool = pathToCheck.startsWith('/tools/');
   // These tools render their own full-screen layout with their own topbar
   const isFullscreenTool = [
     '/tools/edit-pdf',
@@ -279,10 +291,15 @@ export default function App() {
     '/tools/pdf-forms',
     '/tools/add-page-numbers',
     '/tools/annotate-pdf',
-  ].includes(location.pathname);
+    '/tools/chat-with-pdf',
+    '/tools/summarize-pdf',
+    '/tools/translate-pdf',
+    '/tools/extract-data',
+    '/tools/plagiarism-check'
+  ].includes(pathToCheck);
 
   // Auth pages: full-screen, no navbar/footer
-  const isAuthPage = ['/login', '/register', '/forgot-password', '/reset-password'].includes(location.pathname);
+  const isAuthPage = ['/login', '/register', '/forgot-password', '/reset-password'].includes(pathToCheck);
 
   // Admin portal: also full-screen, no public navbar/footer
   const isAdminPage = location.pathname.startsWith(PORTAL);
@@ -719,37 +736,15 @@ export default function App() {
             <Route path="/invite-response" element={<InviteResponse />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/compare" element={<ComparePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
-            <Route path="/tools/merge-pdf" element={<MergePDFPage />} />
-            <Route path="/tools/compress-pdf" element={<CompressPage />} />
-            <Route path="/tools/delete-pages" element={<DeletePagesPage />} />
-            <Route path="/tools/split-pdf" element={<SplitPagesPage />} />
-            <Route path="/tools/protect-pdf" element={<ProtectPDFPage />} />
-            <Route path="/tools/unlock-pdf" element={<UnlockPDFPage />} />
-            <Route path="/tools/redact-pdf" element={<RedactPDFPage />} />
-            <Route path="/tools/rotate-pdf" element={<RotatePagesPage />} />
-            <Route path="/tools/reorder-pages" element={<ReorderPagesPage />} />
-            <Route path="/tools/add-blank-page" element={<BlankPagesPage />} />
-            <Route path="/tools/sign-pdf" element={<SignPDFPage />} />
-            <Route path="/tools/request-signature" element={<RequestSignaturePage />} />
-            <Route path="/tools/repair-pdf" element={<RepairPage />} />
-            <Route path="/tools/add-text-to-pdf" element={<AddTextPage />} />
-            <Route path="/tools/ocr-pdf" element={<OCRPage />} />
-            <Route path="/tools/flatten-pdf" element={<FlattenPDFPage />} />
-            <Route path="/tools/certificate-sign" element={<CertificateSignPage />} />
-            <Route path="/tools/edit-pdf" element={<EditPDFPage />} />
-            <Route path="/tools/watermark-pdf" element={<WatermarkPDFPage />} />
-            <Route path="/tools/pdf-forms" element={<FillPDFFormsPage />} />
-            <Route path="/tools/add-page-numbers" element={<PageNumbersPage />} />
-            <Route path="/tools/annotate-pdf" element={<AnnotatePDFPage />} />
-            <Route path="/tools/chat-with-pdf" element={<ChatPDFPage />} />
-            <Route path="/tools/summarize-pdf" element={<SummarizePDFPage />} />
-            <Route path="/tools/translate-pdf" element={<TranslatePDFPage />} />
-            <Route path="/tools/extract-data" element={<ExtractDataPage />} />
-            <Route path="/tools/plagiarism-check" element={<PlagiarismCheckPage />} />
+            <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
+            <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
+            <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
+            <Route path="/es/tools/:toolSlug/:platform" element={<ToolRenderer lang="es" />} />
             <Route path="/sign/:token" element={<SigningPage />} />
-            <Route path="/tools/:toolSlug" element={<ToolPage />} />
 
             {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
             {/* OLD /admin path is explicitly blocked — returns 404 */}
@@ -777,7 +772,7 @@ export default function App() {
       </main>
 
       {/* ── FOOTER — hidden on all tool/editor routes, auth pages, and admin pages ─── */}
-      <footer className="bg-white border-t border-gray-100 mt-auto" style={{ display: location.pathname.startsWith('/tools/') || location.pathname.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}>
+      <footer className="bg-white border-t border-gray-100 mt-auto" style={{ display: pathToCheck.startsWith('/tools/') || pathToCheck.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
             <div className="lg:col-span-2">
@@ -793,7 +788,7 @@ export default function App() {
 
             {[
               { title: 'Tools', links: [{ label: 'Merge PDF', path: '/tools/merge-pdf' }, { label: 'Split PDF', path: '/tools/split-pdf' }, { label: 'Compress PDF', path: '/tools/compress-pdf' }, { label: 'PDF to Word', path: '/tools/pdf-to-word' }, { label: 'Sign PDF', path: '/tools/sign-pdf' }, { label: 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: 'Company', links: [{ label: 'Pricing', path: '/pricing' }, { label: 'Compare', path: '/compare' }] },
+              { title: 'Company', links: [{ label: 'Pricing', path: '/pricing' }, { label: 'Compare', path: '/compare' }, { label: 'About Us', path: '/about' }, { label: 'Contact', path: '/contact' }] },
               { title: 'Legal', links: [{ label: 'Privacy Policy', path: '/privacy' }, { label: 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>
@@ -832,7 +827,7 @@ export default function App() {
       {/* ── MOBILE BOTTOM NAV BAR ─────────────────────────────────────────── */}
       <nav 
         className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 flex items-center justify-around pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
-        style={{ display: location.pathname.startsWith('/tools/') || location.pathname.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}
+        style={{ display: pathToCheck.startsWith('/tools/') || pathToCheck.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}
       >
         {[
           { label: 'Home', icon: 'solar:home-linear', path: '/' },
