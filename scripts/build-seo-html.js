@@ -170,7 +170,8 @@ allRoutes.forEach(route => {
 
 // Also create HTML for static pages
 const staticRoutes = [
-  '/pricing', '/compare', '/about', '/contact', '/privacy', '/terms', '/pdf-trends-2026'
+  '/pricing', '/compare', '/about', '/contact', '/privacy', '/terms', '/pdf-trends-2026',
+  '/es', '/es/pricing', '/es/compare', '/es/about', '/es/contact', '/es/privacy', '/es/terms', '/es/pdf-trends-2026'
 ];
 
 staticRoutes.forEach(route => {
@@ -178,5 +179,8 @@ staticRoutes.forEach(route => {
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'index.html'), baseHtml); // simple fallback
 });
+
+// Generate 404 fallback for Vercel
+fs.writeFileSync(path.join(DIST_DIR, '404.html'), baseHtml);
 
 console.log('✅ Static SEO HTML generation complete! 0 crashes guaranteed.');

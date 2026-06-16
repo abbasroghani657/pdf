@@ -17,7 +17,15 @@ const staticRoutes = [
   '/contact',
   '/privacy',
   '/terms',
-  '/pdf-trends-2026'
+  '/pdf-trends-2026',
+  '/es',
+  '/es/pricing',
+  '/es/compare',
+  '/es/about',
+  '/es/contact',
+  '/es/privacy',
+  '/es/terms',
+  '/es/pdf-trends-2026'
 ];
 
 const platforms = ['mac', 'windows', 'iphone', 'android'];
