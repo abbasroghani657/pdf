@@ -17,8 +17,9 @@ export default function PDFTrendsPage() {
           "sameAs": "https://www.theylovepdf.com"
         },
         "citation": [
-          "Adobe Inc. The Document Cloud and the 2.5 Trillion PDFs.",
-          "PDF Association. State of the PDF Industry Report.",
+          "Phil Ydens, Adobe VP of Engineering. Industry estimates via PDF Association.",
+          "Smallpdf / TechHQ Industry Reports.",
+          "CloudFiles / AIIM International. Paper-Free Progress.",
           "Global Market Insights. PDF Editor Software Market Size."
         ],
         "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -151,13 +152,13 @@ export default function PDFTrendsPage() {
             </p>
             <ul className="space-y-4 text-sm text-gray-500">
               <li id="source-1">
-                <strong className="text-gray-700">[1] Adobe Inc. (2020)</strong> — <i>The Document Cloud and the 2.5 Trillion PDFs</i>. Adobe MAX Keynote presentation highlighting the total estimated PDFs stored globally.
+                <strong className="text-gray-700">[1] Phil Ydens, Adobe VP of Engineering (via PDF Association)</strong> — Industry estimates originating from Adobe Document Cloud telemetry highlighting the total estimated 2.5 Trillion PDFs stored globally.
               </li>
               <li id="source-2">
-                <strong className="text-gray-700">[2] PDF Association (2022)</strong> — <i>State of the PDF Industry Report</i>. Annual analysis of document telemetrics indicating over 290 billion PDFs opened annually.
+                <strong className="text-gray-700">[2] Smallpdf / TechHQ Industry Reports</strong> — Analysis of document telemetrics indicating over 290 billion new PDFs are created and opened annually.
               </li>
               <li id="source-3">
-                <strong className="text-gray-700">[3] AIIM International (2023)</strong> — <i>Paper-Free Progress: Measuring Outcomes</i>. Survey of enterprise adoption indicating 98% reliance on PDF formats for immutable record keeping.
+                <strong className="text-gray-700">[3] CloudFiles / AIIM International</strong> — Survey of enterprise adoption indicating 98% reliance on PDF formats for immutable record keeping and external communication.
               </li>
               <li id="source-4">
                 <strong className="text-gray-700">[4] Global Market Insights (2024)</strong> — <i>PDF Editor Software Market Size By Deployment, Forecast 2024–2032</i>.

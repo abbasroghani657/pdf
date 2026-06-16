@@ -83,7 +83,7 @@ console.log(`Generating SEO HTML for ${allRoutes.length} tool pages...`);
 allRoutes.forEach(route => {
   const { path: routePath, lang, tool, platform } = route;
   
-  const displayTitle = tool.title; 
+  const displayTitle = lang === 'es' ? tool.title : tool.title; // tool is already esTool for spanish routes!
   const displayDesc = tool.desc; 
   
   const title = `${displayTitle} ${platform ? 'for ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''} - PDFMaster`;
