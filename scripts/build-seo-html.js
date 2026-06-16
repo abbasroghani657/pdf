@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { TOOLS_DATA } from '../src/data/tools.js';
+import { TOOLS_DATA_ES } from '../src/data/tools-es.js';
 import { slugify } from '../src/utils/slugify.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -21,8 +22,9 @@ const platforms = ['mac', 'windows', 'iphone', 'android'];
 function generateToolPages() {
   const routes = [];
   
-  TOOLS_DATA.forEach(tool => {
+  TOOLS_DATA.forEach((tool, index) => {
     const slug = slugify(tool.title);
+    const esTool = TOOLS_DATA_ES[index] || tool;
     
     // English
     routes.push({
@@ -46,7 +48,7 @@ function generateToolPages() {
     routes.push({
       path: `/es/tools/${slug}`,
       lang: 'es',
-      tool,
+      tool: esTool,
       platform: null
     });
 
@@ -55,7 +57,7 @@ function generateToolPages() {
       routes.push({
         path: `/es/tools/${slug}/${platform}`,
         lang: 'es',
-        tool,
+        tool: esTool,
         platform
       });
     });
@@ -81,15 +83,17 @@ console.log(`Generating SEO HTML for ${allRoutes.length} tool pages...`);
 allRoutes.forEach(route => {
   const { path: routePath, lang, tool, platform } = route;
   
-  // Try to load ES translations if they exist, otherwise fallback
-  // In Phase 5 we will provide full translations, but we'll mock it for the script structure for now
-  // Assuming src/data/tools-es.js exports TOOLS_DATA_ES
-  
-  const displayTitle = lang === 'es' ? tool.title : tool.title; // Will replace with actual translation later
+  const displayTitle = tool.title; 
   const displayDesc = tool.desc; 
   
-  const title = `${displayTitle} ${platform ? 'for ' + platform : ''} - PDFMaster`;
+  const title = `${displayTitle} ${platform ? 'for ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''} - PDFMaster`;
   const desc = injectContext(displayDesc, platform, lang === 'es');
+
+  const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang === 'es')) : [];
+  const dynamicFaqs = (tool.faqs && tool.faqs.length > 0) ? tool.faqs.map(faq => ({
+    question: injectContext(faq.question, platform, lang === 'es'),
+    answer: injectContext(faq.answer, platform, lang === 'es')
+  })) : [];
 
   // Generate Schemas
   const schemas = [];
@@ -100,25 +104,56 @@ allRoutes.forEach(route => {
     "@type": "WebApplication",
     "name": title,
     "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": platform ? platform : "All",
+    "operatingSystem": platform ? (platform.charAt(0).toUpperCase() + platform.slice(1)) : "All",
     "description": desc,
     "url": `https://www.theylovepdf.com${routePath}`
   });
+
+  // HowTo Schema
+  if (dynamicSteps.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": `How to use ${displayTitle} ${platform ? 'on ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''}`,
+      "description": desc,
+      "step": dynamicSteps.map((step, index) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "text": step
+      }))
+    });
+  }
+
+  // FAQPage Schema
+  if (dynamicFaqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": dynamicFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    });
+  }
 
   // Inject into HTML
   let finalHtml = baseHtml;
   
   // Replace language
-  finalHtml = finalHtml.replace('<html lang="en">', `<html lang="${lang}">`);
+  finalHtml = finalHtml.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
   
   // Replace Title
   finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${title}</title>`);
   
-  // Replace Meta Description
-  finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${desc}">`);
+  // Replace Meta Description - Fixing regex to allow space and self closing slash
+  finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${desc}" />`);
   
   // Inject JSON-LD right before </head>
-  const scriptTag = `<script type="application/ld+json">${JSON.stringify(schemas)}</script>`;
+  const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n</script>`;
   finalHtml = finalHtml.replace('</head>', `  ${scriptTag}\n  </head>`);
   
   // Inject Hreflang
