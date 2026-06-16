@@ -1,10 +1,15 @@
 const supabase = require('../config/supabase');
 const { createClient } = require('@supabase/supabase-js');
 
+const WebSocket = require('ws');
+
 const supabaseAdmin = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY,
-  { auth: { autoRefreshToken: false, persistSession: false } }
+  { 
+    auth: { autoRefreshToken: false, persistSession: false },
+    realtime: { transport: WebSocket }
+  }
 );
 
 // Wrap a promise with a timeout — prevents socket hang up when Supabase is slow
