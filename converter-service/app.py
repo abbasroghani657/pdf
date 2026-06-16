@@ -66,20 +66,42 @@ def pdf_to_xlsx():
     try:
         file.save(input_path)
         import pdfplumber, openpyxl
+        from openpyxl.styles import Font, Border, Side
         
         wb = openpyxl.Workbook()
         wb.remove(wb.active)  # remove default sheet
         
+        bold_font = Font(bold=True)
+        thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), 
+                             top=Side(style='thin'), bottom=Side(style='thin'))
+        
+        # Filter to ignore large watermark text like "PAID" stamps
+        def filter_chars(obj):
+            if obj.get("object_type") == "char":
+                if obj.get("size", 0) > 24:
+                    return False
+            return True
+
         with pdfplumber.open(input_path) as pdf:
             for page_num, page in enumerate(pdf.pages, 1):
                 ws = wb.create_sheet(title=f'Page {page_num}')
                 
-                tables = page.find_tables()
+                clean_page = page.filter(filter_chars)
+                
+                # Tweak table detection strategy to prevent column shifting
+                table_settings = {
+                    "vertical_strategy": "lines",
+                    "horizontal_strategy": "lines",
+                    "intersection_tolerance": 15,
+                    "snap_tolerance": 5
+                }
+                
+                tables = clean_page.find_tables(table_settings)
                 tables.sort(key=lambda t: t.bbox[1])  # sort by top Y
                 
                 current_y = 0
-                page_width = page.width
-                page_height = page.height
+                page_width = clean_page.width
+                page_height = clean_page.height
                 
                 for table in tables:
                     t_x0, t_top, t_x1, t_bottom = table.bbox
@@ -87,29 +109,35 @@ def pdf_to_xlsx():
                     # Extract text above the table
                     if t_top > current_y + 1:
                         try:
-                            # Use bounding box for the region above the table
-                            top_crop = page.crop((0, current_y, page_width, t_top))
+                            top_crop = clean_page.crop((0, current_y, page_width, t_top))
                             text = top_crop.extract_text()
                             if text:
                                 for line in text.split('\n'):
                                     if line.strip():
                                         ws.append([line])
-                            ws.append([])  # blank row for spacing
+                            ws.append([])  # blank row
                         except Exception:
                             pass
                     
                     # Extract the table itself
                     table_data = table.extract()
-                    for row in table_data:
-                        ws.append([cell or '' for cell in row])
-                    ws.append([])  # blank row after table
+                    for r_idx, row in enumerate(table_data):
+                        clean_row = [cell.replace('\n', ' ') if cell else '' for cell in row]
+                        ws.append(clean_row)
+                        # Apply formatting
+                        for c_idx in range(len(clean_row)):
+                            cell_obj = ws.cell(row=ws.max_row, column=c_idx + 1)
+                            cell_obj.border = thin_border
+                            if r_idx == 0:
+                                cell_obj.font = bold_font
                     
+                    ws.append([])  # blank row after table
                     current_y = t_bottom
                 
-                # Extract text below the last table (or the whole page if no tables)
+                # Extract text below the last table
                 if current_y < page_height - 1:
                     try:
-                        bottom_crop = page.crop((0, current_y, page_width, page_height))
+                        bottom_crop = clean_page.crop((0, current_y, page_width, page_height))
                         text = bottom_crop.extract_text()
                         if text:
                             for line in text.split('\n'):
