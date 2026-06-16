@@ -76,7 +76,7 @@ app.use('/api/payments', paymentsRoutes);
 // Any scanner/attacker hitting /api/admin gets a generic 404.
 const adminKeyLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 30, // Stricter: 30 admin requests per 15 min per IP
+  max: 500, // Increased to 500 to prevent locking out the admin during active use
   message: { error: 'Too many admin requests.' },
   standardHeaders: true,
   legacyHeaders: false,
