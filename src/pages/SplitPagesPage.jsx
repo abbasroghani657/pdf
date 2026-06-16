@@ -104,6 +104,50 @@ export default function SplitPagesPage() {
   const handleSplit = async () => {
     if (!selectedFile) return;
     
+    // ── Validate custom ranges before processing ──
+    if (splitMode === 'custom') {
+      const ranges = customRanges.split(',').map(s => s.trim()).filter(Boolean);
+      if (ranges.length === 0) {
+        setErrorMsg('Please enter at least one page range (e.g. 1-3, 5).');
+        setUploadState('error');
+        return;
+      }
+      for (const range of ranges) {
+        if (range.includes('-')) {
+          const [startStr, endStr] = range.split('-');
+          const start = Number(startStr);
+          const end = Number(endStr);
+          if (isNaN(start) || isNaN(end) || start < 1 || end < 1) {
+            setErrorMsg(`Invalid range "${range}". Pages must be positive numbers.`);
+            setUploadState('error');
+            return;
+          }
+          if (start > end) {
+            setErrorMsg(`Invalid range "${range}". Start page (${start}) cannot be greater than end page (${end}).`);
+            setUploadState('error');
+            return;
+          }
+          if (totalPages > 0 && start > totalPages) {
+            setErrorMsg(`Invalid range "${range}". This PDF only has ${totalPages} pages.`);
+            setUploadState('error');
+            return;
+          }
+        } else {
+          const page = Number(range);
+          if (isNaN(page) || page < 1) {
+            setErrorMsg(`Invalid page number "${range}". Must be a positive number.`);
+            setUploadState('error');
+            return;
+          }
+          if (totalPages > 0 && page > totalPages) {
+            setErrorMsg(`Page ${page} does not exist. This PDF only has ${totalPages} pages.`);
+            setUploadState('error');
+            return;
+          }
+        }
+      }
+    }
+    
     setUploadState('processing');
     setProgress(0);
     

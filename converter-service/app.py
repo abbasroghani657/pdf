@@ -272,7 +272,7 @@ def pdf_to_xlsx():
             try: os.remove(p)
             except: pass
 
-# ── PDF → PPTX (pdf2image + python-pptx) ──────────────────────────────────────
+# ── PDF → PPTX (hybrid: editable text boxes + background image) ─────────────
 @app.route('/pdf-to-pptx', methods=['POST'])
 def pdf_to_pptx():
     if 'file' not in request.files:
@@ -287,27 +287,84 @@ def pdf_to_pptx():
     
     try:
         file.save(input_path)
-        import fitz
+        import fitz, pdfplumber
         from pptx import Presentation
-        from pptx.util import Inches
+        from pptx.util import Inches, Pt, Emu
+        from pptx.dml.color import RGBColor
+        from pptx.enum.text import PP_ALIGN
+        import io
         
         doc = fitz.open(input_path)
         prs = Presentation()
         
-        # Set slide size to A4 landscape
-        prs.slide_width  = Inches(11.69)
-        prs.slide_height = Inches(8.27)
+        # Standard widescreen 16:9
+        SLIDE_W = Inches(13.33)
+        SLIDE_H = Inches(7.5)
+        prs.slide_width  = SLIDE_W
+        prs.slide_height = SLIDE_H
         
         blank_layout = prs.slide_layouts[6]  # blank layout
         
-        for i in range(len(doc)):
-            page = doc[i]
-            pix = page.get_pixmap(dpi=150)
-            img_path = os.path.join(img_dir, f'page_{i}.jpg')
-            pix.save(img_path)
-            
-            slide = prs.slides.add_slide(blank_layout)
-            slide.shapes.add_picture(img_path, 0, 0, prs.slide_width, prs.slide_height)
+        with pdfplumber.open(input_path) as pdf_plumber:
+            for i, fitz_page in enumerate(doc):
+                page_plumber = pdf_plumber.pages[i] if i < len(pdf_plumber.pages) else None
+                
+                # Render page as background image (for visual fidelity)
+                pix = fitz_page.get_pixmap(dpi=120)
+                img_path = os.path.join(img_dir, f'page_{i}.jpg')
+                pix.save(img_path)
+                
+                slide = prs.slides.add_slide(blank_layout)
+                
+                # Add background image (fills slide)
+                slide.shapes.add_picture(img_path, 0, 0, SLIDE_W, SLIDE_H)
+                
+                # Extract text words with positions from pdfplumber
+                if page_plumber:
+                    words = page_plumber.extract_words(
+                        x_tolerance=5, y_tolerance=5,
+                        keep_blank_chars=False, use_text_flow=True
+                    )
+                    
+                    if words:
+                        pdf_w = page_plumber.width
+                        pdf_h = page_plumber.height
+                        
+                        # Group words into lines by y-position
+                        lines = {}
+                        for w in words:
+                            y_key = round(w['top'] / 5) * 5  # Group by 5pt bands
+                            if y_key not in lines:
+                                lines[y_key] = []
+                            lines[y_key].append(w)
+                        
+                        for y_key, line_words in sorted(lines.items()):
+                            line_words.sort(key=lambda w: w['x0'])
+                            line_text = ' '.join(w['text'] for w in line_words)
+                            
+                            # Calculate position scaled to slide dimensions
+                            x0 = line_words[0]['x0'] / pdf_w * float(SLIDE_W)
+                            y0 = line_words[0]['top'] / pdf_h * float(SLIDE_H)
+                            w_pts = (line_words[-1]['x1'] - line_words[0]['x0']) / pdf_w * float(SLIDE_W)
+                            h_pts = max(Inches(0.3), (line_words[0]['bottom'] - line_words[0]['top']) / pdf_h * float(SLIDE_H))
+                            
+                            # Ensure box stays within slide
+                            w_pts = max(Inches(0.5), min(w_pts, SLIDE_W - x0))
+                            
+                            # Estimate font size
+                            font_size_pt = max(8, round((line_words[0]['bottom'] - line_words[0]['top']) / pdf_h * 72 * 1.2))
+                            
+                            txBox = slide.shapes.add_textbox(int(x0), int(y0), int(w_pts), int(h_pts))
+                            txBox.name = f"text_{i}_{y_key}"
+                            tf = txBox.text_frame
+                            tf.word_wrap = False
+                            p = tf.paragraphs[0]
+                            run = p.add_run()
+                            run.text = line_text
+                            run.font.size = Pt(font_size_pt)
+                            # Transparent background so image shows through
+                            txBox.fill.background()
+                            txBox.line.fill.background()
         
         doc.close()
         prs.save(output_path)
@@ -318,6 +375,7 @@ def pdf_to_pptx():
             mimetype='application/vnd.openxmlformats-officedocument.presentationml.presentation'
         )
     except Exception as e:
+        import traceback; traceback.print_exc()
         return jsonify({'error': str(e)}), 500
     finally:
         import shutil
@@ -326,6 +384,7 @@ def pdf_to_pptx():
             except: pass
         try: shutil.rmtree(img_dir)
         except: pass
+
 
 # ── PDF → JPG (PyMuPDF) ──────────────────────────────────────────────────────
 @app.route('/pdf-to-jpg', methods=['POST'])

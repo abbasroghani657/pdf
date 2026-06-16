@@ -537,15 +537,47 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
         break;
       }
 
-      // ── GOTENBERG: Office / Image → PDF (FREE ✅) ─────────────────────────
+      // ── GOTENBERG: Office → PDF (FREE ✅) ─────────────────────
       case 'Word to PDF':
       case 'Excel to PDF':
       case 'PowerPoint to PDF':
-      case 'JPG to PDF':
       case 'HTML to PDF': {
-        console.log(`  → 🐳 Gotenberg (LibreOffice): ${tool}`);
-        processedBuffer = await convertToPdfWithGotenberg(file.path, file.originalname);
+        console.log(`  → 🐳 Gotenberg (LibreOffice/Chromium): ${tool}`);
+        if (req.body.url) {
+          const urlForm = new FormData();
+          urlForm.append('url', req.body.url);
+          const urlRes = await fetch(`${GOTENBERG_URL}/forms/chromium/convert/url`, {
+            method: 'POST', body: urlForm, headers: urlForm.getHeaders()
+          });
+          if (!urlRes.ok) throw new Error(`Gotenberg Error (${urlRes.status}): ${await urlRes.text()}`);
+          processedBuffer = Buffer.from(await urlRes.arrayBuffer());
+        } else {
+          processedBuffer = await convertToPdfWithGotenberg(file.path, file.originalname);
+        }
         newFilename = `${baseName}.pdf`;
+        contentType = 'application/pdf';
+        break;
+      }
+
+      // ── GOTENBERG: Multiple Images → One Combined PDF (FREE ✅) ──────────
+      case 'JPG to PDF': {
+        console.log(`  → 🐳 Gotenberg: ${files.length} image(s) → combined PDF`);
+        const imgForm = new FormData();
+        // Send ALL uploaded image files to Gotenberg in one request
+        for (const imgFile of files) {
+          imgForm.append('files', fs.createReadStream(imgFile.path), imgFile.originalname);
+        }
+        const imgResponse = await fetch(`${GOTENBERG_URL}/forms/libreoffice/convert`, {
+          method: 'POST',
+          body: imgForm,
+          headers: imgForm.getHeaders(),
+        });
+        if (!imgResponse.ok) {
+          const errText = await imgResponse.text();
+          throw new Error(`Gotenberg Error (${imgResponse.status}): ${errText}`);
+        }
+        processedBuffer = Buffer.from(await imgResponse.arrayBuffer());
+        newFilename = `combined_images.pdf`;
         contentType = 'application/pdf';
         break;
       }
@@ -609,8 +641,29 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
       // ── PYTHON SERVICE: PDF → Text (FREE ✅) ─────────────────────────────
       case 'PDF to Text': {
         console.log(`  → 🐍 Python PyMuPDF: PDF → Text`);
-        const result = await convertFromPdfFree(file.path, file.originalname, '/pdf-to-txt');
-        processedBuffer = result.buffer;
+        const txtResult = await convertFromPdfFree(file.path, file.originalname, '/pdf-to-txt');
+        // Check if extracted text is empty (scanned PDF) → fallback to OCR
+        const txtContent = txtResult.buffer.toString('utf-8');
+        const hasRealContent = txtContent.replace(/--- Page \d+ ---/g, '').trim().length > 20;
+        if (!hasRealContent) {
+          console.log(`  → 🔍 Empty text detected, falling back to OCR...`);
+          const ocrForm = new FormData();
+          ocrForm.append('file', fs.createReadStream(file.path), file.originalname);
+          ocrForm.append('mode', 'text');
+          const ocrCtrl = new AbortController();
+          const ocrTimer = setTimeout(() => ocrCtrl.abort(), 120000);
+          try {
+            const ocrRes = await fetch(`${CONVERTER_URL}/ocr-pdf`, {
+              method: 'POST', body: ocrForm,
+              headers: ocrForm.getHeaders(), signal: ocrCtrl.signal
+            });
+            processedBuffer = ocrRes.ok
+              ? Buffer.from(await ocrRes.arrayBuffer())
+              : Buffer.from('⚠ This appears to be a scanned PDF. Text could not be extracted.\n\nTip: Use the OCR tool for better results with scanned documents.');
+          } finally { clearTimeout(ocrTimer); }
+        } else {
+          processedBuffer = txtResult.buffer;
+        }
         newFilename = `${baseName}_converted.txt`;
         contentType = 'text/plain';
         break;
@@ -1058,23 +1111,25 @@ app.post('/api/process', protectOptional, upload.any(), async (req, res) => {
   const { tool } = req.body;
   console.log(`\n📨 Incoming request for: ${tool} | files attached: ${files ? files.length : 0}`);
   
-  if (!files || files.length === 0) return res.status(400).json({ error: 'No file uploaded' });
   if (!tool)  return res.status(400).json({ error: 'Tool type not specified' });
   
-  const file = files.find(f => f.fieldname === 'file') || files[0];
-  if (!file) return res.status(400).json({ error: 'Main file missing' });
+  const isUrlMode = tool === 'HTML to PDF' && req.body.url;
+  if (!isUrlMode && (!files || files.length === 0)) return res.status(400).json({ error: 'No file uploaded' });
+  
+  const file = isUrlMode ? null : (files.find(f => f.fieldname === 'file') || files[0]);
+  if (!isUrlMode && !file) return res.status(400).json({ error: 'Main file missing' });
   
   // ─── SaaS Monetization: Pro = 1GB, Free = 10MB ──────────────────────────────
   const isPro = req.user?.profile?.is_pro || false;
-  const maxSize = isPro ? 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 1GB pro, 10MB free
-  const totalSize = files.reduce((acc, f) => acc + f.size, 0);
+  const maxSize = isPro ? 2 * 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 2GB pro, 10MB free
+  const totalSize = files ? files.reduce((acc, f) => acc + f.size, 0) : 0;
   if (totalSize > maxSize) {
-    files.forEach(f => { try { fs.unlinkSync(f.path); } catch(e){} });
+    if (files) files.forEach(f => { try { fs.unlinkSync(f.path); } catch(e){} });
     const limitLabel = isPro ? '1GB' : '10MB';
     return res.status(413).json({ error: `File size exceeds the ${limitLabel} limit. ${!isPro ? 'Upgrade to Pro for up to 1GB uploads.' : ''}` });
   }
   
-  const baseName = file.originalname.replace(/\.[^/.]+$/, '');
+  const baseName = isUrlMode ? 'webpage' : file.originalname.replace(/\.[^/.]+$/, '');
   let newFilename = `processed_${file.originalname}`;
   let contentType = 'application/pdf';
 

@@ -108,6 +108,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
   }));
 
   const [uploadState, setUploadState] = useState('idle'); // idle | dragging | selected | processing | done | error
+  const [urlInput, setUrlInput] = useState('');
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [processedUrl, setProcessedUrl] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -162,6 +163,32 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
   const handleDragLeave = (e) => { e.preventDefault(); setIsDragging(false); };
 
   const handleProcess = async () => {
+    // ── Handle URL mode for HTML to PDF ──
+    if (tool.title === 'HTML to PDF' && urlInput.trim()) {
+      setUploadState('processing');
+      setProgress(0);
+      progressIntervalRef.current = setInterval(() => setProgress(p => Math.min(p + 5, 90)), 300);
+      try {
+        const formData = new FormData();
+        formData.append('tool', tool.title);
+        formData.append('url', urlInput.trim());
+        const response = await processWithQueue('/api/process', formData, (status) => {
+          if (status.type === 'queued') setQueuePosition(status.position);
+          else if (status.type === 'processing') setQueuePosition(null);
+        }, false, true);
+        setProcessedUrl(response.url);
+        clearInterval(progressIntervalRef.current);
+        setProgress(100);
+        setTimeout(() => setUploadState('done'), 200);
+      } catch (err) {
+        console.error(err);
+        setErrorMsg(err.message || 'Failed to process URL');
+        clearInterval(progressIntervalRef.current);
+        setUploadState('error');
+      }
+      return;
+    }
+
     if (selectedFiles.length === 0) return;
     setUploadState('processing');
     setProgress(0);
@@ -259,6 +286,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
   const handleReset = () => {
     setUploadState('idle');
     setSelectedFiles([]);
+    setUrlInput('');
     setProcessedUrl(null);
     setProgress(0);
     setErrorMsg('');
@@ -293,6 +321,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
         <div className="px-6 py-6 md:px-10 md:py-8">
           {/* IDLE / DRAG STATE */}
           {(uploadState === 'idle' || uploadState === 'dragging') && (
+            <>
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
@@ -308,7 +337,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
               <input
                 ref={fileInputRef}
                 type="file"
-                multiple={tool.title === 'Merge PDF'}
+                multiple={tool.title === 'Merge PDF' || tool.title === 'JPG to PDF'}
                 accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.html,.txt"
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                 onChange={handleInputChange}
@@ -332,6 +361,29 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
               </button>
               <PrivacyBadge />
             </div>
+            {tool.title === 'HTML to PDF' && (
+              <div className="mt-6 border-t border-gray-100 pt-6">
+                <p className="text-sm font-bold text-gray-700 mb-3 text-center">OR ENTER A WEBPAGE URL</p>
+                <div className="flex gap-3 max-w-lg mx-auto">
+                  <input
+                    type="url"
+                    placeholder="https://example.com"
+                    value={urlInput}
+                    onChange={(e) => setUrlInput(e.target.value)}
+                    className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#378ADD] transition-shadow text-sm"
+                    onKeyDown={(e) => e.key === 'Enter' && urlInput && handleProcess()}
+                  />
+                  <button
+                    onClick={handleProcess}
+                    disabled={!urlInput.trim()}
+                    className="px-6 py-3 bg-[#378ADD] text-white font-semibold rounded-xl disabled:opacity-50 hover:bg-[#2b71b8] transition-colors"
+                  >
+                    Convert
+                  </button>
+                </div>
+              </div>
+            )}
+            </>
           )}
 
           {/* SELECTED STATE */}
