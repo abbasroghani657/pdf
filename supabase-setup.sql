@@ -1,5 +1,5 @@
 -- ============================================================
--- PDFMaster — Supabase Database Setup Script
+-- TheyLovePDF — Supabase Database Setup Script
 -- Run this in your Supabase Project → SQL Editor
 -- ============================================================
 

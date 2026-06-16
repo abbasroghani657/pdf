@@ -12,7 +12,7 @@ export default function PrivacyPage() {
 
       <div className="prose prose-indigo prose-lg max-w-none text-gray-600">
         <p>
-          At PDFMaster, we take your privacy seriously. This Privacy Policy explains how we collect, use,
+          At TheyLovePDF, we take your privacy seriously. This Privacy Policy explains how we collect, use,
           disclose, and safeguard your information when you visit our website and use our PDF tools. 
           Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, 
           please do not access the site.
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. GDPR and CCPA Compliance</h2>
         <p>
           If you are a resident of the European Economic Area (EEA) or California, you have certain data protection rights. 
-          PDFMaster aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
+          TheyLovePDF aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
           If you wish to be informed what Personal Data we hold about you and if you want it to be removed from our systems, 
           please contact us.
         </p>
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
           If you have questions or comments about this Privacy Policy, please contact us at:
         </p>
         <p className="mt-2 font-medium text-indigo-600">
-          support@pdfmaster.com
+          support@theylovepdf.com
         </p>
       </div>
     </div>

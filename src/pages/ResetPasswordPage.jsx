@@ -57,7 +57,7 @@ export default function ResetPasswordPage() {
             <div className="w-10 h-10 bg-[#378ADD] rounded-xl flex items-center justify-center shadow-lg">
               <iconify-icon icon="solar:document-bold-duotone" class="text-white text-xl" />
             </div>
-            <span className="text-xl font-black text-gray-900">PDFMaster</span>
+            <span className="text-xl font-black text-gray-900">TheyLovePDF</span>
           </Link>
           <h1 className="text-2xl font-bold text-gray-900">Set new password</h1>
           <p className="text-sm text-gray-500 mt-2">Choose a strong password for your account</p>

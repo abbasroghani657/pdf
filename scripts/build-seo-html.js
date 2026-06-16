@@ -86,7 +86,7 @@ allRoutes.forEach(route => {
   const displayTitle = lang === 'es' ? tool.title : tool.title; // tool is already esTool for spanish routes!
   const displayDesc = tool.desc; 
   
-  const title = `${displayTitle} ${platform ? 'for ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''} - PDFMaster`;
+  const title = `${displayTitle} ${platform ? 'for ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''} - TheyLovePDF`;
   const desc = injectContext(displayDesc, platform, lang === 'es');
 
   const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang === 'es')) : [];

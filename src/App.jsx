@@ -71,6 +71,7 @@ import { useAuth } from './contexts/AuthContext';
 import AcceptInvite from './pages/AcceptInvite';
 import InviteResponse from './pages/InviteResponse';
 import ProtectedRoute from './components/ProtectedRoute';
+import Logo from './components/Logo';
 
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
@@ -107,10 +108,7 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
         isOpen ? 'translate-x-0' : 'translate-x-full'
       )}>
         <div className="flex items-center justify-between h-14 px-5 border-b border-gray-100">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#378ADD] rounded flex items-center justify-center text-white font-bold text-xs">P</div>
-            <span className="font-semibold text-sm"><span className="text-[#378ADD]">PDF</span>Master</span>
-          </div>
+          <Logo size="sm" />
           <button onClick={onClose} className="p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
             <iconify-icon icon="solar:close-linear" class="text-xl"></iconify-icon>
           </button>
@@ -373,13 +371,10 @@ export default function App() {
         <div className="border-b border-gray-200/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
           <div
-            className="flex items-center gap-2 cursor-pointer shrink-0"
+            className="cursor-pointer shrink-0"
             onClick={() => handleNavClick('/')}
           >
-            <div className="w-7 h-7 bg-[#378ADD] rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">P</div>
-            <span className="font-bold text-base tracking-tight">
-              <span className="text-[#378ADD]">PDF</span><span className="text-gray-900">Master</span>
-            </span>
+            <Logo />
           </div>
 
           <div className="hidden md:flex items-center gap-1">
@@ -652,12 +647,12 @@ export default function App() {
                   <span className="gradient-text"> PDF toolkit</span> free</>
               )}
               {isPricing && 'Simple, transparent pricing'}
-              {isCompare && 'PDFMaster vs Competitors'}
+              {isCompare && 'TheyLovePDF vs Competitors'}
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
               {isHome && '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.'}
-              {isPricing && 'Get more done with PDFMaster Pro. No hidden fees, cancel anytime.'}
+              {isPricing && 'Get more done with TheyLovePDF Pro. No hidden fees, cancel anytime.'}
               {isCompare && 'Why millions are switching to the faster, smarter, and more affordable alternative.'}
             </p>
 
@@ -778,9 +773,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 bg-[#378ADD] rounded-lg flex items-center justify-center text-white font-bold text-sm">P</div>
-                <span className="font-bold text-base"><span className="text-[#378ADD]">PDF</span>Master</span>
+              <div className="mb-4">
+                <Logo />
               </div>
               <p className="text-sm text-gray-500 leading-relaxed mb-5 max-w-xs">
                 The world's most powerful PDF toolkit. Free, fast, and secure. Trusted by professionals worldwide.
@@ -811,7 +805,7 @@ export default function App() {
           </div>
 
           <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} PDFMaster. All rights reserved.</p>
+            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-gray-400">
                 <iconify-icon icon="solar:shield-check-linear" class="text-emerald-500 text-base"></iconify-icon>

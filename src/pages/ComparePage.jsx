@@ -19,7 +19,7 @@ export default function ComparePage() {
                 <th className="py-4 px-6 text-sm font-bold text-[#378ADD] w-[30%] border-l border-gray-100 bg-blue-50/30">
                   <div className="flex items-center gap-2">
                     <div className="w-5 h-5 bg-[#378ADD] rounded flex items-center justify-center text-white font-bold text-[10px]">P</div>
-                    PDFMaster
+                    TheyLovePDF
                   </div>
                 </th>
                 <th className="py-4 px-6 text-sm font-semibold text-gray-400 w-[30%] border-l border-gray-100">Other Platforms</th>
@@ -77,7 +77,7 @@ export default function ComparePage() {
             onClick={() => { navigate('/'); }}
             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#378ADD] rounded-xl font-semibold text-sm hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-0.5"
           >
-            Try PDFMaster for free
+            Try TheyLovePDF for free
             <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
           </button>
         </div>

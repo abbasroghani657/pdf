@@ -100,7 +100,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
 
   const dynamicFaqs = (tool?.faqs || [
     { question: `Is it safe to use the ${tool?.title} tool?`, answer: `Yes, absolutely. We use 256-bit SSL encryption to ensure your files are completely secure. All files are automatically deleted from our servers within 2 hours.` },
-    { question: `Do I need to install any software?`, answer: `No. PDFMaster is a cloud-based platform. You can use our ${tool?.title} tool directly from your web browser on any device, including Windows, Mac, iOS, and Android.` },
+    { question: `Do I need to install any software?`, answer: `No. TheyLovePDF is a cloud-based platform. You can use our ${tool?.title} tool directly from your web browser on any device, including Windows, Mac, iOS, and Android.` },
     { question: `Are there any limits on file size?`, answer: `Free users can process files up to 10MB. If you need to process larger files (up to 2GB), you can upgrade to our Pro plan.` }
   ]).map(faq => ({
     question: injectPlatformContext(faq.question, platform),

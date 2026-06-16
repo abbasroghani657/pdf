@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { clsx } from 'clsx';
+import { toast } from 'react-hot-toast';
+import Logo from '../components/Logo';
 import { motion } from 'framer-motion';
 
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
@@ -68,11 +70,8 @@ export default function LoginPage() {
 
         {/* Logo */}
         <div className="relative z-10 px-10 pt-8 pb-0">
-          <Link to="/" className="inline-flex items-center gap-2.5 group">
-            <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">P</div>
-            <span className="font-extrabold text-xl tracking-tight text-white">
-              PDF<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Master</span>
-            </span>
+          <Link to="/" className="inline-block group">
+            <Logo invert={true} className="group-hover:scale-105 transition-transform" />
           </Link>
         </div>
 
@@ -114,7 +113,7 @@ export default function LoginPage() {
 
         <div className="relative z-10 px-10 pb-7">
           <p className="text-slate-500 text-xs mb-1">Trusted by professionals worldwide.</p>
-          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} PDFMaster · All rights reserved.</p>
+          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · All rights reserved.</p>
         </div>
       </motion.div>
 
@@ -124,9 +123,8 @@ export default function LoginPage() {
 
           {/* Mobile logo */}
           <div className="lg:hidden flex justify-center mb-10">
-            <Link to="/" className="inline-flex items-center gap-2.5">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-lg">P</div>
-              <span className="font-extrabold text-xl tracking-tight text-slate-900">PDF<span className="text-blue-600">Master</span></span>
+            <Link to="/" className="inline-block mb-6 sm:hidden">
+              <Logo size="sm" />
             </Link>
           </div>
 

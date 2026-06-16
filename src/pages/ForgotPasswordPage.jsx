@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { clsx } from 'clsx';
 import api from '../utils/api';
 import { toast } from 'react-hot-toast';
+import Logo from '../components/Logo';
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
@@ -29,7 +30,7 @@ export default function ForgotPasswordPage() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <Link to="/" className="inline-flex items-center gap-2 mb-6">
           <div className="w-10 h-10 bg-[#378ADD] rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">P</div>
-          <span className="font-bold text-2xl"><span className="text-[#378ADD]">PDF</span>Master</span>
+          <Logo />
         </Link>
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Reset your password</h2>
         <p className="mt-2 text-sm text-gray-500">

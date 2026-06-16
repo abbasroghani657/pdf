@@ -229,7 +229,7 @@ export default function SigningPage() {
         <div style={{ width: '40px', height: '40px', background: 'linear-gradient(135deg, #5b21b6, #7c3aed)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{ color: 'white', fontWeight: '900', fontSize: '18px' }}>P</span>
         </div>
-        <span style={{ fontWeight: '800', fontSize: '20px', color: '#1f2937' }}>PDFMaster</span>
+        <span style={{ fontWeight: '800', fontSize: '20px', color: '#1f2937' }}>TheyLovePDF</span>
       </div>
 
       {/* ─── LOADING STEP ─── */}
@@ -642,7 +642,7 @@ export default function SigningPage() {
       )}
 
       <p style={{ marginTop: '24px', color: '#9ca3af', fontSize: '12px' }}>
-        Powered by <strong style={{ color: '#7c3aed' }}>PDFMaster</strong> — Secure Electronic Signatures
+        Powered by <strong style={{ color: '#7c3aed' }}>TheyLovePDF</strong> — Secure Electronic Signatures
       </p>
     </div>
   );

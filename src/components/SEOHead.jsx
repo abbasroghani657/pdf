@@ -12,7 +12,7 @@ export default function SEOHead({
   howToSteps = [],
   faqs = []
 }) {
-  const siteName = 'PDFMaster';
+  const siteName = 'TheyLovePDF';
   const defaultDescription = 'The world\'s most powerful PDF toolkit. Free, fast, and secure. 37+ tools including merge, split, compress, sign, OCR, and AI chat.';
   
   const metaTitle = title ? `${title} - ${siteName}` : `${siteName} — Free PDF Tools Online`;

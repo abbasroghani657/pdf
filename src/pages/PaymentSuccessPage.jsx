@@ -51,7 +51,7 @@ export default function PaymentSuccessPage() {
         
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight mb-2">Welcome to Pro!</h2>
         <p className="text-base text-gray-500 mb-4">
-          Your payment was successful. You now have unlimited access to all PDFMaster premium features.
+          Your payment was successful. You now have unlimited access to all TheyLovePDF premium features.
         </p>
 
         <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-2xl mb-6 flex items-center justify-center gap-2">

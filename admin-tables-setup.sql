@@ -1,5 +1,5 @@
 -- ============================================================
--- PDFMaster — Admin Panel Database Tables
+-- TheyLovePDF — Admin Panel Database Tables
 -- Run this ENTIRE script in your Supabase SQL Editor
 -- (Dashboard → SQL Editor → New Query → Paste → Run)
 -- ============================================================
@@ -40,7 +40,7 @@ CREATE POLICY "Anyone can read tool config"
   ON public.tools_config FOR SELECT
   USING (true);
 
--- Seed all PDFMaster tools
+-- Seed all TheyLovePDF tools
 INSERT INTO public.tools_config (name, slug, category, is_active, requires_pro, free_daily_limit)
 VALUES
   ('Compress PDF',        'compress-pdf',       'Optimize',          TRUE, FALSE, 10),
@@ -207,10 +207,10 @@ VALUES
   ('pro_annual_price',   '44.99',  'Pro plan annual price in USD'),
   ('free_file_size_limit', '10',   'Free tier max file size in MB'),
   ('pro_file_size_limit',  '100',  'Pro tier max file size in MB'),
-  ('site_name',          'PDFMaster', 'Platform name'),
+  ('site_name',          'TheyLovePDF', 'Platform name'),
   ('maintenance_mode',   'false',  'Global maintenance mode toggle'),
   ('allow_registrations', 'true',  'Allow new user registrations'),
-  ('support_email',      'support@pdfmaster.com', 'Public support email')
+  ('support_email',      'support@theylovepdf.com', 'Public support email')
 ON CONFLICT (key) DO NOTHING;
 
 

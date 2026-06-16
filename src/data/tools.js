@@ -650,7 +650,7 @@ export const TOOLS_DATA = [
         "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
       },
       {
-        "question": "Can PDFMaster recover my password if I forget it?",
+        "question": "Can TheyLovePDF recover my password if I forget it?",
         "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
       },
       {
@@ -737,7 +737,7 @@ export const TOOLS_DATA = [
     "faqs": [
       {
         "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with PDFMaster are legally binding in most countries and jurisdictions."
+        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
       },
       {
         "question": "Can I save my signature for later?",
@@ -767,7 +767,7 @@ export const TOOLS_DATA = [
     "faqs": [
       {
         "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a PDFMaster account."
+        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
       },
       {
         "question": "How do I know when it's signed?",

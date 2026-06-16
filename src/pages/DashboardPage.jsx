@@ -620,7 +620,7 @@ export default function DashboardPage() {
                 <iconify-icon icon="solar:crown-bold" class={`text-2xl ${isPro ? 'text-amber-500' : 'text-gray-400'}`}></iconify-icon>
               </div>
               <div className="flex-1">
-                <p className="font-bold text-gray-900">{isPro ? 'PDFMaster Pro' : 'PDFMaster Free'}</p>
+                <p className="font-bold text-gray-900">{isPro ? 'TheyLovePDF Pro' : 'TheyLovePDF Free'}</p>
                 <p className="text-sm text-gray-500">
                   {isPro
                     ? user?.profile?.plan === 'Pro Annual'

@@ -59,7 +59,7 @@ export default function UpgradeModal({ isOpen, onClose, featureName, limitMessag
               }}
               className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-base font-bold shadow-lg shadow-indigo-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0"
             >
-              Get PDFMaster Pro
+              Get TheyLovePDF Pro
             </button>
             <p className="text-xs text-center text-gray-400 font-medium">Starting at just $4.99/month. Cancel anytime.</p>
           </div>

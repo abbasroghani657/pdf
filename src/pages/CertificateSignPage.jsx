@@ -5,6 +5,7 @@ import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import clsx from 'clsx';
 import UpgradeModal from '../components/UpgradeModal';
+import Logo from '../components/Logo';
 import { useToolSession } from '../hooks/useToolSession';
 
 export default function CertificateSignPage() {
@@ -263,10 +264,7 @@ export default function CertificateSignPage() {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900 tracking-tight">PDF<span className="text-indigo-600">Master</span></span>
+            <Logo size="sm" />
           </Link>
         </div>
       </header>

@@ -18,8 +18,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const SITE_NAME = process.env.SITE_NAME || 'PDFMaster';
-const SENDER_EMAIL = process.env.SMTP_USER || 'no-reply@pdfmaster.com';
+const SITE_NAME = process.env.SITE_NAME || 'TheyLovePDF';
+const SENDER_EMAIL = process.env.SMTP_USER || 'no-reply@theylovepdf.com';
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
 
 async function checkSubscriptions() {

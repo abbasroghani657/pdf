@@ -76,7 +76,7 @@ export default function PDFTrendsPage() {
         "@type": "Dataset",
         "name": "Global PDF Usage Statistics and Market Trends 2026",
         "description": "A comprehensive dataset of global Portable Document Format (PDF) usage, market valuation, creation rates, and business adoption metrics compiled for 2025-2026.",
-        "creator": { "@type": "Organization", "name": "PDFMaster Research", "sameAs": "https://www.theylovepdf.com" },
+        "creator": { "@type": "Organization", "name": "TheyLovePDF Research", "sameAs": "https://www.theylovepdf.com" },
         "citation": [
           "Phil Ydens, Adobe VP of Engineering. Industry estimates via PDF Association.",
           "Smallpdf / TechHQ Industry Reports.",
@@ -91,8 +91,8 @@ export default function PDFTrendsPage() {
         "@type": "Article",
         "headline": "Global PDF Trends 2026: Statistics & Market Outlook",
         "description": "Discover verified 2025-2026 statistics on PDF usage worldwide, including total volume, annual growth, and market valuation.",
-        "author": { "@type": "Organization", "name": "PDFMaster" },
-        "publisher": { "@type": "Organization", "name": "PDFMaster" }
+        "author": { "@type": "Organization", "name": "TheyLovePDF" },
+        "publisher": { "@type": "Organization", "name": "TheyLovePDF" }
       }
     ]
   };
@@ -117,7 +117,7 @@ export default function PDFTrendsPage() {
   return (
     <>
       <Helmet>
-        <title>Global PDF Trends 2026: Statistics & Market Outlook | PDFMaster</title>
+        <title>Global PDF Trends 2026: Statistics & Market Outlook | TheyLovePDF</title>
         <meta name="description" content="Discover verified 2025-2026 statistics on PDF usage worldwide. Learn about total PDF volume, annual growth rates, and market valuation in this comprehensive data report." />
         <link rel="canonical" href="https://www.theylovepdf.com/pdf-trends-2026" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

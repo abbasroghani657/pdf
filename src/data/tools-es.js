@@ -650,7 +650,7 @@ export const TOOLS_DATA_ES = [
         "answer": "Utilizamos un cifrado robusto AES de 256 bits, que es el estándar de la industria para proteger documentos altamente sensibles y confidenciales."
       },
       {
-        "question": "¿Puede PDFMaster recuperar mi contraseña si la olvido?",
+        "question": "¿Puede TheyLovePDF recuperar mi contraseña si la olvido?",
         "answer": "No. Su contraseña nunca se guarda en nuestros servidores. Si lo pierde, el documento no podrá descifrarse. ¡Por favor mantenlo a salvo!"
       },
       {
@@ -737,7 +737,7 @@ export const TOOLS_DATA_ES = [
     "faqs": [
       {
         "question": "¿Son legales las firmas electrónicas?",
-        "answer": "Sí, las firmas electrónicas creadas con PDFMaster son legalmente vinculantes en la mayoría de los países y jurisdicciones."
+        "answer": "Sí, las firmas electrónicas creadas con TheyLovePDF son legalmente vinculantes en la mayoría de los países y jurisdicciones."
       },
       {
         "question": "¿Puedo guardar mi firma para más tarde?",
@@ -767,7 +767,7 @@ export const TOOLS_DATA_ES = [
     "faqs": [
       {
         "question": "¿Los destinatarios necesitan una cuenta para firmar?",
-        "answer": "No, los destinatarios pueden firmar el documento de forma segura directamente desde su enlace de correo electrónico sin necesidad de crear una cuenta PDFMaster."
+        "answer": "No, los destinatarios pueden firmar el documento de forma segura directamente desde su enlace de correo electrónico sin necesidad de crear una cuenta TheyLovePDF."
       },
       {
         "question": "¿Cómo sé cuándo está firmado?",

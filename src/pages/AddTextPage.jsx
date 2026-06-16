@@ -40,7 +40,7 @@ export default function AddTextPage() {
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
   const [file, setFile] = useState(null);
-  const [text, setText] = useState('PDFMaster.com');
+  const [text, setText] = useState('TheyLovePDF.com');
   const [fontSize, setFontSize] = useState(30);
   const [opacity, setOpacity] = useState(1);
   const [position, setPosition] = useState('center');
@@ -66,7 +66,7 @@ export default function AddTextPage() {
       const blob = new Blob([bytes], { type: 'application/pdf' });
       const f = new File([blob], fileName, { type: 'application/pdf' });
       setFile(f);
-      setText(s?.text || 'PDFMaster.com');
+      setText(s?.text || 'TheyLovePDF.com');
       setFontSize(s?.fontSize || 30);
       setOpacity(s?.opacity || 1);
       setPosition(s?.position || 'center');

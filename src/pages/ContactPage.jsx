@@ -5,8 +5,8 @@ export default function ContactPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16 animate-fade-in">
       <SEOHead 
-        title="Contact PDFMaster" 
-        description="Get in touch with the PDFMaster team for support, business inquiries, or API access." 
+        title="Contact TheyLovePDF" 
+        description="Get in touch with the TheyLovePDF team for support, business inquiries, or API access." 
         url="/contact"
       />
       

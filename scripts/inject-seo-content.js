@@ -267,7 +267,7 @@ const SEO_CONTENT = {
     ],
     faqs: [
       { question: "What kind of encryption is used?", answer: "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents." },
-      { question: "Can PDFMaster recover my password if I forget it?", answer: "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!" },
+      { question: "Can TheyLovePDF recover my password if I forget it?", answer: "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!" },
       { question: "Does protecting a PDF prevent printing?", answer: "Yes, encryption locks the document from being opened, printed, or edited without the correct password." }
     ]
   },
@@ -302,7 +302,7 @@ const SEO_CONTENT = {
       "Place your signature on the document, click apply, and download it."
     ],
     faqs: [
-      { question: "Are electronic signatures legal?", answer: "Yes, electronic signatures created with PDFMaster are legally binding in most countries and jurisdictions." },
+      { question: "Are electronic signatures legal?", answer: "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions." },
       { question: "Can I save my signature for later?", answer: "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future." },
       { question: "Can I add text dates and initials?", answer: "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields." }
     ]
@@ -314,7 +314,7 @@ const SEO_CONTENT = {
       "Send the request. We will email them a secure link to sign the document online."
     ],
     faqs: [
-      { question: "Do recipients need an account to sign?", answer: "No, recipients can securely sign the document directly from their email link without needing to create a PDFMaster account." },
+      { question: "Do recipients need an account to sign?", answer: "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account." },
       { question: "How do I know when it's signed?", answer: "You will receive an automated email notification the moment all parties have completed signing the document." },
       { question: "Is there an audit trail?", answer: "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance." }
     ]

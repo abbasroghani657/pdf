@@ -511,7 +511,7 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
         const pdfDoc = await PDFDocument.load(fs.readFileSync(file.path), { ignoreEncryption: true });
         const pages = pdfDoc.getPages();
         if (pages.length > 0) {
-          pages[0].drawText(`PDFMaster — ${tool}`, { x: 10, y: 10, size: 10 });
+          pages[0].drawText(`TheyLovePDF — ${tool}`, { x: 10, y: 10, size: 10 });
         }
         processedBuffer = Buffer.from(await pdfDoc.save());
         newFilename = `${baseName}_${tool.replace(/\s+/g, '_')}.pdf`;
@@ -657,8 +657,8 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
           pdfDoc.setAuthor('');
           pdfDoc.setSubject('');
           pdfDoc.setKeywords([]);
-          pdfDoc.setProducer('PDFMaster');
-          pdfDoc.setCreator('PDFMaster');
+          pdfDoc.setProducer('TheyLovePDF');
+          pdfDoc.setCreator('TheyLovePDF');
 
           const pages = pdfDoc.getPages();
 
@@ -1139,7 +1139,7 @@ app.post('/api/send-signature-request', express.json({ limit: '50mb' }), async (
       auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
     });
 
-    const fromName = process.env.EMAIL_FROM_NAME || 'PDFMaster';
+    const fromName = process.env.EMAIL_FROM_NAME || 'TheyLovePDF';
     const doc = fileName || 'Document';
     const sender = senderName || 'Someone';
     const results = [];
@@ -1272,7 +1272,7 @@ app.post('/api/complete-signing/:token', express.json({ limit: '50mb' }), async 
       auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
     });
 
-    const fromName = process.env.EMAIL_FROM_NAME || 'PDFMaster';
+    const fromName = process.env.EMAIL_FROM_NAME || 'TheyLovePDF';
     const signedAt = new Date().toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' });
 
     const mailOptions = {
@@ -1654,7 +1654,7 @@ app.post('/api/certificate-sign', express.json({ limit: '100mb' }), async (req, 
 
     // Embed metadata into the PDF to simulate digital lock
     if (settings.lockPdf) {
-      pdfDoc.setAuthor(certInfo.name || 'PDFMaster Auto-Signer');
+      pdfDoc.setAuthor(certInfo.name || 'TheyLovePDF Auto-Signer');
       pdfDoc.setSubject(`Digitally Signed - Reason: ${settings.reason}`);
       pdfDoc.setCreationDate(new Date());
       pdfDoc.setModificationDate(new Date());
@@ -1836,7 +1836,7 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3005;
 const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`\n✅ PDFMaster API        → http://localhost:${PORT}`);
+  console.log(`\n✅ TheyLovePDF API        → http://localhost:${PORT}`);
   console.log(`🐳 Gotenberg           → ${GOTENBERG_URL}  (Office/Image → PDF)`);
   console.log(`🐍 Python Converter    → ${CONVERTER_URL}  (PDF → Word/Excel/PPT/JPG)`);
   console.log(`💰 CloudConvert Cost   → $0 (NOT USED — 100% FREE!)`);

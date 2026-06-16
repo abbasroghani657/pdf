@@ -248,7 +248,7 @@ export default function RequestSignaturePage() {
           order,
           deadline,
           customMessage,
-          senderName: 'PDFMaster User',
+          senderName: 'TheyLovePDF User',
           requesterEmail: 'abbasroghani869@gmail.com',
           fileBase64,
           fields
@@ -679,7 +679,7 @@ export default function RequestSignaturePage() {
                       
                       <button 
                         onClick={() => {
-                          navigator.clipboard.writeText(`https://pdfmaster.com/sign/${req.name.toLowerCase().replace(/\s/g, '')}-req123`);
+                          navigator.clipboard.writeText(`https://theylovepdf.com/sign/${req.name.toLowerCase().replace(/\s/g, '')}-req123`);
                           toast.success('Signing link copied to clipboard!');
                         }}
                         className="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded text-xs font-semibold text-gray-700 transition-colors flex items-center gap-1.5"
@@ -713,7 +713,7 @@ export default function RequestSignaturePage() {
               <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">server/.env</p>
               <pre className="text-emerald-400 text-sm font-mono whitespace-pre-wrap leading-relaxed">{`EMAIL_USER=your_gmail@gmail.com
 EMAIL_PASS=your_16_char_app_password
-EMAIL_FROM_NAME=PDFMaster`}</pre>
+EMAIL_FROM_NAME=TheyLovePDF`}</pre>
             </div>
 
             <div className="bg-blue-50 rounded-2xl p-5 text-left mb-8 max-w-lg mx-auto">

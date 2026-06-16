@@ -12,7 +12,7 @@ export default function TermsPage() {
 
       <div className="prose prose-indigo prose-lg max-w-none text-gray-600">
         <p>
-          Welcome to PDFMaster. These Terms of Service ("Terms") govern your use of the PDFMaster website 
+          Welcome to TheyLovePDF. These Terms of Service ("Terms") govern your use of the TheyLovePDF website 
           and the services we offer. By accessing or using our services, you agree to be bound by these Terms.
         </p>
 
@@ -25,9 +25,9 @@ export default function TermsPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Description of Service</h2>
         <p>
-          PDFMaster provides users with access to a rich collection of resources, including various PDF manipulation tools 
+          TheyLovePDF provides users with access to a rich collection of resources, including various PDF manipulation tools 
           such as conversion, compression, merging, splitting, and signing (the "Service"). You understand and agree that the 
-          Service is provided "AS-IS" and that PDFMaster assumes no responsibility for the timeliness, deletion, mis-delivery, 
+          Service is provided "AS-IS" and that TheyLovePDF assumes no responsibility for the timeliness, deletion, mis-delivery, 
           or failure to store any user communications or personalization settings.
         </p>
 
@@ -51,14 +51,14 @@ export default function TermsPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Modifications to Service</h2>
         <p>
-          PDFMaster reserves the right at any time and from time to time to modify or discontinue, temporarily or permanently, 
-          the Service (or any part thereof) with or without notice. You agree that PDFMaster shall not be liable to you or to 
+          TheyLovePDF reserves the right at any time and from time to time to modify or discontinue, temporarily or permanently, 
+          the Service (or any part thereof) with or without notice. You agree that TheyLovePDF shall not be liable to you or to 
           any third party for any modification, suspension or discontinuance of the Service.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Limitation of Liability</h2>
         <p>
-          You expressly understand and agree that PDFMaster shall not be liable for any direct, indirect, incidental, special, 
+          You expressly understand and agree that TheyLovePDF shall not be liable for any direct, indirect, incidental, special, 
           consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data 
           or other intangible losses resulting from the use or the inability to use the service.
         </p>

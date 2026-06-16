@@ -126,7 +126,7 @@ export default function InviteResponse() {
             </Link>
 
             <p className="text-center text-xs text-gray-400">
-              © {new Date().getFullYear()} PDFMaster · Secure Admin System
+              © {new Date().getFullYear()} TheyLovePDF · Secure Admin System
             </p>
           </div>
         </div>

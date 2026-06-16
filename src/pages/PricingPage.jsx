@@ -196,7 +196,7 @@ export default function PricingPage() {
               <span className="text-slate-500 font-medium">{isAnnual ? '/user/year' : '/user/mo'}</span>
             </div>
             <button 
-              onClick={() => window.location.href = 'mailto:sales@pdfmaster.com?subject=Business Plan Inquiry'}
+              onClick={() => window.location.href = 'mailto:sales@theylovepdf.com?subject=Business Plan Inquiry'}
               className="w-full py-3.5 rounded-xl text-sm font-bold bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50 transition-colors mb-8"
             >
               Contact Sales

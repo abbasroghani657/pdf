@@ -227,7 +227,7 @@ export default function AdminSecurity() {
                 <iconify-icon icon="solar:user-plus-bold" class="text-[#378ADD] text-xl"></iconify-icon>
                 <h3 className="text-sm font-bold text-gray-900">Invite a New Admin</h3>
               </div>
-              <p className="text-xs text-gray-500">The user must already have a PDFMaster account. An invitation email will be sent automatically.</p>
+              <p className="text-xs text-gray-500">The user must already have a TheyLovePDF account. An invitation email will be sent automatically.</p>
 
               <div className="space-y-3">
                 <div>

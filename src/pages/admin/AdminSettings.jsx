@@ -12,8 +12,8 @@ export default function AdminSettings() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [settings, setSettings] = useState({
-    site_name: 'PDFMaster',
-    site_url: 'https://pdfmaster.com',
+    site_name: 'TheyLovePDF',
+    site_url: 'https://theylovepdf.com',
     maintenance_mode: 'false',
     maintenance_message: "We'll be right back in 2 hours!",
     pro_monthly_price: '4.99',
@@ -21,8 +21,8 @@ export default function AdminSettings() {
     free_file_size_limit: '10',
     free_daily_uses: '5',
     pro_file_size_limit: '100',
-    support_email: 'support@pdfmaster.com',
-    meta_title: 'PDFMaster — Free PDF Tools Online',
+    support_email: 'support@theylovepdf.com',
+    meta_title: 'TheyLovePDF — Free PDF Tools Online',
     meta_description: 'Edit, compress, merge, sign and convert PDFs for free. No installation needed.',
   });
 

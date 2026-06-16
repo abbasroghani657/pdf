@@ -42,13 +42,13 @@ async function sendRoleInvitationEmail({ toEmail, toName, newRole, assignedByNam
 <body>
   <div class="wrap">
     <div class="header">
-      <h1>PDFMaster Admin Panel</h1>
+      <h1>TheyLovePDF Admin Panel</h1>
     </div>
     <div class="body">
       <span class="badge">${roleLabel} Invitation</span>
       <h2>You've been granted ${roleLabel} access!</h2>
       <p>Hi${toName ? ` <strong>${toName}</strong>` : ''},</p>
-      <p><strong>${assignedByName}</strong> has assigned you the <strong>${roleLabel}</strong> role on PDFMaster. You can now access the Admin Panel to manage users, tools, and platform operations.</p>
+      <p><strong>${assignedByName}</strong> has assigned you the <strong>${roleLabel}</strong> role on TheyLovePDF. You can now access the Admin Panel to manage users, tools, and platform operations.</p>
       <div class="info-box">
         <p><strong>Your new role:</strong> ${roleLabel}</p>
         <p style="margin-top:8px"><strong>Assigned by:</strong> ${assignedByName}</p>
@@ -58,16 +58,16 @@ async function sendRoleInvitationEmail({ toEmail, toName, newRole, assignedByNam
       </div>
       <p style="font-size:13px;color:#6b7280">If you did not expect this invitation, please contact support immediately at <a href="mailto:${process.env.EMAIL_USER}">${process.env.EMAIL_USER}</a>.</p>
     </div>
-    <div class="footer">© ${new Date().getFullYear()} PDFMaster. All rights reserved.</div>
+    <div class="footer">© ${new Date().getFullYear()} TheyLovePDF. All rights reserved.</div>
   </div>
 </body>
 </html>`;
 
   const transporter = getTransporter();
   await transporter.sendMail({
-    from: `"PDFMaster Admin" <${process.env.EMAIL_USER}>`,
+    from: `"TheyLovePDF Admin" <${process.env.EMAIL_USER}>`,
     to: toEmail,
-    subject: `🎉 You've been made a ${roleLabel} on PDFMaster`,
+    subject: `🎉 You've been made a ${roleLabel} on TheyLovePDF`,
     html,
   });
 }
@@ -303,7 +303,7 @@ router.post('/invitations', protect, superadmin, async (req, res) => {
           </tr>
           <tr>
             <td align="center">
-              <h1 style="color: #ffffff; font-size: 26px; font-weight: 700; margin: 0;">PDFMaster Admin Panel</h1>
+              <h1 style="color: #ffffff; font-size: 26px; font-weight: 700; margin: 0;">TheyLovePDF Admin Panel</h1>
               <p style="color: #94a3b8; font-size: 15px; margin: 8px 0 0;">You have a new admin role invitation</p>
             </td>
           </tr>
@@ -320,7 +320,7 @@ router.post('/invitations', protect, superadmin, async (req, res) => {
           </span>
           <h2 style="color: #0f172a; font-size: 24px; font-weight: 700; margin: 0 0 16px;">You're invited to join the team!</h2>
           <p style="color: #475569; font-size: 16px; line-height: 1.6; margin: 0 0 16px;">Hi <strong>${targetUser.name || targetUser.email}</strong>,</p>
-          <p style="color: #475569; font-size: 16px; line-height: 1.6; margin: 0 0 24px;"><strong>${assignerName}</strong> would like to grant you <strong>${roleLabel}</strong> access on the PDFMaster platform. Please review the details below and accept or decline this invitation.</p>
+          <p style="color: #475569; font-size: 16px; line-height: 1.6; margin: 0 0 24px;"><strong>${assignerName}</strong> would like to grant you <strong>${roleLabel}</strong> access on the TheyLovePDF platform. Please review the details below and accept or decline this invitation.</p>
         </div>
 
         <!-- INFO CARD -->
@@ -379,7 +379,7 @@ router.post('/invitations', protect, superadmin, async (req, res) => {
     <!-- FOOTER -->
     <tr>
       <td style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 24px 32px; text-align: center;">
-        <p style="color: #94a3b8; font-size: 13px; margin: 0;">© ${new Date().getFullYear()} PDFMaster · This link expires in 48 hours · Do not share this email</p>
+        <p style="color: #94a3b8; font-size: 13px; margin: 0;">© ${new Date().getFullYear()} TheyLovePDF · This link expires in 48 hours · Do not share this email</p>
       </td>
     </tr>
 
@@ -390,9 +390,9 @@ router.post('/invitations', protect, superadmin, async (req, res) => {
     try {
       const transporter = getTransporter();
       await transporter.sendMail({
-        from: `"PDFMaster Admin" <${process.env.EMAIL_USER}>`,
+        from: `"TheyLovePDF Admin" <${process.env.EMAIL_USER}>`,
         to: targetUser.email,
-        subject: `🛡️ Admin Invitation: ${assignerName} wants to make you a ${roleLabel} on PDFMaster`,
+        subject: `🛡️ Admin Invitation: ${assignerName} wants to make you a ${roleLabel} on TheyLovePDF`,
         html,
       });
     } catch (mailErr) {

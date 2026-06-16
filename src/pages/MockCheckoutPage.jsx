@@ -59,7 +59,7 @@ export default function MockCheckoutPage() {
               <span className="font-bold text-xl text-[#1e293b]">P</span>
             </div>
           </div>
-          <h2 className="text-xl font-bold relative z-10">PDFMaster Payment System</h2>
+          <h2 className="text-xl font-bold relative z-10">TheyLovePDF Payment System</h2>
           <p className="text-sm text-slate-300 mt-1 relative z-10">Development Testing Gateway</p>
         </div>
 
@@ -68,7 +68,7 @@ export default function MockCheckoutPage() {
           <div className="flex justify-between items-center mb-6 pb-6 border-b border-gray-100">
             <div>
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Subscription</p>
-              <p className="text-lg font-extrabold text-gray-900 mt-1">PDFMaster Pro</p>
+              <p className="text-lg font-extrabold text-gray-900 mt-1">TheyLovePDF Pro</p>
             </div>
             <div className="text-right">
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Amount</p>
@@ -147,7 +147,7 @@ export default function MockCheckoutPage() {
             
             <div className="text-center mt-4">
               <Link to="/dashboard" className="text-xs font-semibold text-gray-400 hover:text-gray-600">
-                Cancel and return to PDFMaster
+                Cancel and return to TheyLovePDF
               </Link>
             </div>
           </form>

@@ -74,7 +74,7 @@ export default function OAuthCallbackPage() {
     try {
       await api.put('/auth/profile', { country });
       await fetchUser();
-      toast.success('Welcome to PDFMaster!');
+      toast.success('Welcome to TheyLovePDF!');
       navigate('/');
     } catch (err) {
       console.error('[OAuthCallback] Save country failed:', err);
@@ -109,7 +109,7 @@ export default function OAuthCallbackPage() {
           <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">👋</div>
           <h2 className="text-2xl font-extrabold text-gray-900 text-center mb-2">Almost there!</h2>
           <p className="text-gray-500 text-sm text-center mb-8">
-            Select your country to complete your PDFMaster profile.
+            Select your country to complete your TheyLovePDF profile.
           </p>
 
           <form onSubmit={handleSaveCountry} className="space-y-6">
