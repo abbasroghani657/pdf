@@ -127,12 +127,18 @@ const superadmin = (req, res, next) => {
 // but does NOT block the request if no token is provided.
 // Used for /api/process so free users can still use tools but Pro limits apply.
 const protectOptional = async (req, res, next) => {
+  let token;
   const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith('Bearer')) {
+  if (authHeader && authHeader.startsWith('Bearer')) {
+    token = authHeader.split(' ')[1];
+  } else if (req.query.token) {
+    token = req.query.token;
+  }
+
+  if (!token) {
     return next(); // No token — continue as guest
   }
 
-  const token = authHeader.split(' ')[1];
   try {
     const result = await withTimeout(supabase.auth.getUser(token), 15000, 'auth.getUser');
     if (result.error || !result.data?.user) return next();

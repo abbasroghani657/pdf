@@ -40,7 +40,10 @@ export async function processWithQueue(url, formData, onProgress, returnJson = f
       } else if (stat.status === 'done') {
         if (returnJson) return stat.data;
         const dlUrl = `/api/download/${jobId}`;
-        if (returnUrlOnly) return { url: dlUrl };
+        if (returnUrlOnly) {
+          const dlUrlWithToken = token ? `${dlUrl}?token=${token}` : dlUrl;
+          return { url: dlUrlWithToken };
+        }
         
         const dlRes = await fetch(dlUrl, { headers });
         if (!dlRes.ok) throw new Error('Failed to download result');
