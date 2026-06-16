@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
 import { slugify } from '../utils/slugify';
 import SEOHead from '../components/SEOHead';
 import ToolPage from './ToolPage'; 
@@ -72,7 +73,8 @@ export default function ToolRenderer({ lang = 'en' }) {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
 
-  const tool = TOOLS_DATA.find((t) => slugify(t.title) === toolSlug);
+  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
+  const tool = toolDataList.find(t => slugify(t.title) === toolSlug);
   
   const esTitles = {
     'Merge PDF': 'Unir PDF',
@@ -95,6 +97,7 @@ export default function ToolRenderer({ lang = 'en' }) {
   const localizedTitle = lang === 'es' ? (esTitles[tool?.title] || tool?.title) : tool?.title;
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
+  const currentUrl = `/tools/${toolSlug}${platform ? '/' + platform : ''}`;
 
   const dynamicSteps = (tool?.howToSteps || [
     `Select or drag and drop your file into the ${tool?.title} tool.`,
@@ -113,9 +116,9 @@ export default function ToolRenderer({ lang = 'en' }) {
     <div className="flex flex-col min-h-screen relative">
       <SEOHead 
         lang={lang}
-        title={`${displayTitle} Online`} 
+        title={displayTitle} 
         description={tool?.desc || ''} 
-        url={`/tools/${toolSlug}${platform ? '/' + platform : ''}`} 
+        url={currentUrl} 
         toolName={displayTitle}
         howToSteps={dynamicSteps}
         faqs={dynamicFaqs}
