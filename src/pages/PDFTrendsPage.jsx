@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const sources = [
-  { id: 1, cite: 'Phil Ydens, Adobe VP of Engineering (via PDF Association)', text: 'Industry estimates from Adobe Document Cloud telemetry — 2.5 trillion PDFs stored globally.' },
-  { id: 2, cite: 'Smallpdf / TechHQ Industry Reports', text: 'Telemetrics analysis indicating 290 billion+ PDFs created and opened annually.' },
-  { id: 3, cite: 'CloudFiles / AIIM International', text: 'Enterprise adoption survey — 98% reliance on PDF for immutable records and external communication.' },
-  { id: 4, cite: 'Global Market Insights (2024)', text: 'PDF Editor Software Market Size by Deployment, Forecast 2024–2032.' },
+  { id: 1, cite: 'Phil Ydens, Adobe VP of Engineering (via PDF Association)', text: 'Industry estimates originating from Adobe Document Cloud telemetry highlighting the total estimated 2.5 Trillion PDFs stored globally.' },
+  { id: 2, cite: 'Smallpdf / TechHQ Industry Reports', text: 'Analysis of document telemetrics indicating over 290 billion new PDFs are created and opened annually.' },
+  { id: 3, cite: 'CloudFiles / AIIM International', text: 'Survey of enterprise adoption indicating 98% reliance on PDF formats for immutable record keeping and external communication.' },
+  { id: 4, cite: 'Global Market Insights (2024)', text: 'PDF Editor Software Market Size By Deployment, Forecast 2024–2032.' },
 ];
 
 function useCountUp(target, duration = 1800, start = false) {
@@ -27,14 +27,14 @@ function useCountUp(target, duration = 1800, start = false) {
   return count;
 }
 
-function StatBar({ value, max = 100, color }) {
+function StatBar({ value, max = 100, color, bgClass = 'bg-gray-100' }) {
   const [width, setWidth] = useState(0);
   useEffect(() => {
     const t = setTimeout(() => setWidth((value / max) * 100), 300);
     return () => clearTimeout(t);
   }, [value, max]);
   return (
-    <div className="h-1 bg-white/10 rounded-full overflow-hidden mt-3">
+    <div className={`h-1.5 ${bgClass} rounded-full overflow-hidden mt-4`}>
       <div
         className="h-full rounded-full transition-all duration-1000 ease-out"
         style={{ width: `${width}%`, backgroundColor: color }}
@@ -50,18 +50,19 @@ function ProjectionBar({ year, value, max, label, delay }) {
     return () => clearTimeout(t);
   }, [value, max, delay]);
   return (
-    <div className="flex items-center gap-4">
-      <span className="w-10 text-white/30 text-xs shrink-0 text-right" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+    <div className="flex items-center gap-4 group">
+      <span className="w-12 text-gray-500 font-medium text-sm shrink-0 text-right">
         {year}
       </span>
-      <div className="flex-1 h-7 bg-white/5 rounded-lg overflow-hidden relative">
+      <div className="flex-1 h-8 bg-gray-100 rounded-lg overflow-hidden relative shadow-inner">
         <div
-          className="h-full rounded-lg transition-all duration-1000 ease-out"
+          className="h-full rounded-lg transition-all duration-1000 ease-out flex items-center shadow-md"
           style={{ width: `${width}%`, background: 'linear-gradient(90deg, #378ADD, #60a5fa)' }}
-        />
-        <span className="absolute inset-y-0 left-3 flex items-center text-white/60 text-xs" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-          {label}
-        </span>
+        >
+           <span className="absolute left-3 text-white font-semibold text-xs drop-shadow-sm whitespace-nowrap opacity-0 transition-opacity duration-500 group-hover:opacity-100 sm:opacity-100">
+             {label}
+           </span>
+        </div>
       </div>
     </div>
   );
@@ -122,48 +123,36 @@ export default function PDFTrendsPage() {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      {/* ── Google Fonts ── */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');`}</style>
-
-      {/* Main container with primary brand blue integrated into dark theme */}
-      <div className="min-h-screen bg-[#0a0a0f] pt-0 pb-24" style={{ fontFamily: "'Inter', sans-serif" }}>
+      {/* Main container with bright, light premium aesthetic */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/40 to-indigo-50/30 pt-0 pb-24 font-sans text-gray-900">
 
         {/* ── HERO ── */}
-        <section ref={heroRef} className="relative overflow-hidden border-b border-white/8">
-          <div className="absolute inset-0 opacity-[0.035]" style={{ backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[120px]" style={{ background: 'radial-gradient(ellipse, #378ADD 0%, transparent 70%)' }} />
+        <section ref={heroRef} className="relative overflow-hidden border-b border-gray-200">
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#000000 1px, transparent 1px), linear-gradient(90deg, #000000 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full opacity-30 blur-[120px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, #378ADD 0%, transparent 70%)' }} />
 
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-24">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="px-3 py-1 rounded-full text-xs tracking-widest uppercase border" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#378ADD', borderColor: '#378ADD40', background: '#378ADD12' }}>
-                Data Report · 2026
-              </span>
-              <span className="w-8 h-px bg-white/20" />
-              <span className="text-white/30 text-xs" style={{ fontFamily: "'JetBrains Mono', monospace" }}>PDF Association · Adobe · Smallpdf</span>
-            </div>
-
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tight mb-8" style={{ fontWeight: 700 }}>
-              Global PDF
-              <br />
-              <span style={{ color: '#378ADD' }}>Trends</span>
-              <span className="text-white/20"> 2026</span>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 text-center">
+            
+            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-6">
+              Global PDF <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-indigo-600">Trends</span> <span className="text-gray-400 font-light">2026</span>
             </h1>
 
-            <p className="text-white/50 text-lg md:text-xl max-w-2xl leading-relaxed mb-12" style={{ fontWeight: 300 }}>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-16">
               The Portable Document Format remains the cornerstone of global digital infrastructure.
-              Verified statistics on scale, growth, and the future of digital documents.
+              Explore our verified statistics on the scale, growth, and future of digital documents.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8 border border-white/8 rounded-2xl overflow-hidden shadow-lg shadow-[#378ADD]/5">
+            {/* Quick Stats Banner */}
+            <div className="grid grid-cols-2 md:grid-cols-4 bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg shadow-blue-900/5 max-w-5xl mx-auto divide-x divide-y md:divide-y-0 divide-gray-100">
               {[
-                { v: `${(trillionCount / 1000).toFixed(1)}T+`, l: 'PDFs in existence' },
-                { v: `${billionCount}B`,                        l: 'Created annually' },
-                { v: `${adoptionCount}%`,                       l: 'Business adoption' },
-                { v: `$${(marketCount / 100).toFixed(2)}B`,     l: 'Market size 2024' },
+                { v: `${(trillionCount / 1000).toFixed(1)}T+`, l: 'PDFs in existence', c: 'text-[#378ADD]' },
+                { v: `${billionCount}B`,                        l: 'Created annually', c: 'text-emerald-500' },
+                { v: `${adoptionCount}%`,                       l: 'Business adoption', c: 'text-purple-500' },
+                { v: `$${(marketCount / 100).toFixed(2)}B`,     l: 'Market size 2024', c: 'text-orange-500' },
               ].map((s, i) => (
-                <div key={i} className="bg-[#0f0f17] px-6 py-5 flex flex-col gap-1">
-                  <span className="text-white text-2xl md:text-3xl" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700 }}>{s.v}</span>
-                  <span className="text-white/35 text-xs uppercase tracking-wider" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{s.l}</span>
+                <div key={i} className="px-6 py-8 flex flex-col items-center justify-center bg-white hover:bg-gray-50/50 transition-colors">
+                  <span className={`text-4xl md:text-5xl font-black mb-2 tracking-tight ${s.c}`}>{s.v}</span>
+                  <span className="text-gray-500 text-sm font-medium uppercase tracking-wider">{s.l}</span>
                 </div>
               ))}
             </div>
@@ -171,102 +160,116 @@ export default function PDFTrendsPage() {
         </section>
 
         {/* ── DEFINITION CARD (AEO) ── */}
-        <section className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
-          <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
-            <div>
-              <p className="text-white/25 text-xs uppercase tracking-widest mb-2" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Key Finding</p>
-              <h2 className="text-white/90 text-2xl md:text-3xl leading-tight" style={{ fontWeight: 600 }}>
-                What is the total number of PDFs in the world?
-              </h2>
-            </div>
-            <div className="border border-white/10 rounded-2xl p-6 bg-white/[0.02] shadow-sm">
-              <p className="text-white/60 text-base md:text-lg leading-relaxed">
-                As of 2025, there are over{' '}
-                <strong className="text-white" style={{ fontFamily: "'JetBrains Mono', monospace" }}>2.5 trillion PDFs<sup className="text-[10px] text-white/40 ml-0.5">[1]</sup></strong>{' '}
-                in existence worldwide. More than{' '}
-                <strong className="text-white" style={{ fontFamily: "'JetBrains Mono', monospace" }}>290 billion new PDFs<sup className="text-[10px] text-white/40 ml-0.5">[2]</sup></strong>{' '}
-                are created annually — a 12% year-over-year growth rate. Additionally,{' '}
-                <strong className="text-white">98% of businesses</strong> utilize PDF as their default format for external communications, making it the second most-served file type on the internet after JPEG.
-              </p>
-            </div>
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-xl shadow-blue-900/5 border border-gray-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-8 -mt-8 opacity-50"></div>
+            <p className="text-[#378ADD] text-sm uppercase font-bold tracking-widest mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#378ADD] animate-pulse"></span>
+              Key Finding
+            </p>
+            <h2 className="text-gray-900 text-2xl md:text-3xl font-extrabold mb-6">
+              What is the total number of PDFs in the world?
+            </h2>
+            <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+              As of 2025, there are over{' '}
+              <strong className="text-[#378ADD] font-extrabold">2.5 trillion PDFs<sup className="text-xs ml-0.5">[1]</sup></strong>{' '}
+              in existence worldwide. More than{' '}
+              <strong className="text-[#378ADD] font-extrabold">290 billion new PDFs<sup className="text-xs ml-0.5">[2]</sup></strong>{' '}
+              are created annually — a 12% year-over-year growth rate. Additionally,{' '}
+              <strong className="text-gray-900 font-bold">98% of businesses</strong> utilize PDF as their default format for external communications, making it the second most-served file type on the internet after JPEG images.
+            </p>
           </div>
         </section>
 
         {/* ── BENTO GRID ── */}
-        <section className="max-w-7xl mx-auto px-6 lg:px-10 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-            {/* Total Volume — large */}
-            <div className="md:col-span-7 relative rounded-3xl overflow-hidden border border-white/8 group cursor-default" style={{ background: 'linear-gradient(135deg, #0d1f3c 0%, #0a1628 60%, #050c18 100%)' }}>
-              <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full opacity-30 blur-[80px] group-hover:opacity-50 transition-opacity duration-700" style={{ background: '#378ADD' }} />
-              <div className="relative p-8 md:p-10 h-full flex flex-col justify-between min-h-[280px]">
+            {/* Total Volume — large accent box */}
+            <div className="md:col-span-7 bg-gradient-to-br from-[#378ADD] to-blue-700 rounded-[2rem] p-8 md:p-12 text-white relative overflow-hidden shadow-xl shadow-blue-500/20 group hover:-translate-y-1 transition-transform duration-300">
+              <div className="absolute -top-24 -right-24 w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+              <div className="relative h-full flex flex-col justify-between min-h-[300px]">
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-[#378ADD] text-xs uppercase tracking-widest" style={{ fontFamily: "'JetBrains Mono', monospace" }}>01 — Total Global Volume</span>
-                    <sup className="text-white/25 text-xs" style={{ fontFamily: "'JetBrains Mono', monospace" }}>[1]</sup>
+                  <div className="flex items-center justify-between mb-8">
+                    <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">01 — Global Volume</span>
+                    <sup className="text-blue-100 font-medium text-sm bg-blue-800/50 px-2 py-0.5 rounded">[1]</sup>
                   </div>
-                  <div className="text-white leading-none mb-4" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(3rem, 8vw, 5.5rem)', fontWeight: 700 }}>2.5T+</div>
-                  <p className="text-white/40 text-sm max-w-xs leading-relaxed">PDF files currently in existence across all global digital infrastructure.</p>
+                  <div className="text-6xl md:text-8xl font-black tracking-tighter mb-4 drop-shadow-sm">2.5T+</div>
+                  <p className="text-blue-100 text-lg max-w-sm leading-relaxed font-medium">Estimated total PDF files currently in existence across all global digital infrastructure.</p>
                 </div>
-                <StatBar value={90} max={100} color="#378ADD" />
+                <StatBar value={90} max={100} color="#ffffff" bgClass="bg-blue-900/40" />
               </div>
             </div>
 
             {/* Creation Rate */}
-            <div className="md:col-span-5 rounded-3xl border border-white/8 bg-[#0f0f17] group cursor-default overflow-hidden relative">
-              <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full opacity-20 blur-[60px] group-hover:opacity-40 transition-opacity duration-700" style={{ background: '#22c55e' }} />
-              <div className="relative p-8 h-full flex flex-col justify-between min-h-[280px]">
+            <div className="md:col-span-5 bg-white rounded-[2rem] border border-gray-100 p-8 md:p-10 shadow-sm group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-700 bg-emerald-500" />
+              <div className="relative h-full flex flex-col justify-between min-h-[300px]">
                 <div>
-                  <span className="text-[#22c55e] text-xs uppercase tracking-widest" style={{ fontFamily: "'JetBrains Mono', monospace" }}>02 — Annual Creation Rate</span>
-                  <div className="text-white mt-4 leading-none mb-3" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 700 }}>290B</div>
-                  <p className="text-white/40 text-sm leading-relaxed">New PDFs created per year</p>
+                  <span className="text-emerald-500 text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+                    <span className="w-8 h-px bg-emerald-200"></span>
+                    02 — Annual Creation
+                  </span>
+                  <div className="text-5xl md:text-6xl text-gray-900 font-black mt-6 tracking-tight">290B</div>
+                  <p className="text-gray-500 mt-2 font-medium">New PDFs created per year</p>
                 </div>
                 <div>
-                  <span className="px-3 py-1 rounded-full text-xs mt-4 inline-block" style={{ fontFamily: "'JetBrains Mono', monospace", background: '#22c55e15', color: '#22c55e', border: '1px solid #22c55e30' }}>↑ +12% YoY</span>
-                  <StatBar value={72} max={100} color="#22c55e" />
+                  <span className="px-4 py-1.5 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-600">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                    +12% YoY Growth
+                  </span>
+                  <StatBar value={72} max={100} color="#10b981" />
                 </div>
               </div>
             </div>
 
             {/* Business Adoption */}
-            <div className="md:col-span-4 rounded-3xl border border-white/8 bg-[#0f0f17] group cursor-default overflow-hidden relative">
-              <div className="absolute -top-12 -left-12 w-40 h-40 rounded-full opacity-15 blur-[50px] group-hover:opacity-35 transition-opacity duration-700" style={{ background: '#a78bfa' }} />
-              <div className="relative p-8 h-full flex flex-col justify-between min-h-[220px]">
+            <div className="md:col-span-4 bg-white rounded-[2rem] border border-gray-100 p-8 shadow-sm group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute -top-12 -left-12 w-40 h-40 rounded-full opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-700 bg-purple-500" />
+              <div className="relative h-full flex flex-col justify-between min-h-[240px]">
                 <div>
-                  <span className="text-[#a78bfa] text-xs uppercase tracking-widest" style={{ fontFamily: "'JetBrains Mono', monospace" }}>03 — Business Adoption <sup className="text-white/25">[3]</sup></span>
-                  <div className="text-white mt-4 leading-none" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 700 }}>98%</div>
+                  <span className="text-purple-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2 mb-4">
+                    <span className="w-6 h-px bg-purple-200"></span> 03 — Business Adoption <sup className="text-purple-300">[3]</sup>
+                  </span>
+                  <div className="text-5xl text-gray-900 font-black tracking-tight">98%</div>
                 </div>
                 <div>
-                  <p className="text-white/40 text-sm leading-relaxed mt-3">Of enterprises use PDF as their default external documentation format.</p>
-                  <StatBar value={98} max={100} color="#a78bfa" />
+                  <p className="text-gray-500 text-sm font-medium leading-relaxed mb-4">Of enterprises use PDF as their default external format.</p>
+                  <StatBar value={98} max={100} color="#a855f7" />
                 </div>
               </div>
             </div>
 
             {/* Market Size */}
-            <div className="md:col-span-4 rounded-3xl border border-white/8 bg-[#0f0f17] group cursor-default overflow-hidden relative">
-              <div className="absolute -bottom-12 -right-12 w-40 h-40 rounded-full opacity-15 blur-[50px] group-hover:opacity-35 transition-opacity duration-700" style={{ background: '#f97316' }} />
-              <div className="relative p-8 h-full flex flex-col justify-between min-h-[220px]">
+            <div className="md:col-span-4 bg-white rounded-[2rem] border border-gray-100 p-8 shadow-sm group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute -bottom-12 -right-12 w-40 h-40 rounded-full opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-700 bg-orange-500" />
+              <div className="relative h-full flex flex-col justify-between min-h-[240px]">
                 <div>
-                  <span className="text-[#f97316] text-xs uppercase tracking-widest" style={{ fontFamily: "'JetBrains Mono', monospace" }}>04 — Market Size 2024 <sup className="text-white/25">[4]</sup></span>
-                  <div className="text-white mt-4 leading-none" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700 }}>$2.15B</div>
+                  <span className="text-orange-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2 mb-4">
+                    <span className="w-6 h-px bg-orange-200"></span> 04 — Market Size '24 <sup className="text-orange-300">[4]</sup>
+                  </span>
+                  <div className="text-5xl text-gray-900 font-black tracking-tight">$2.15B</div>
                 </div>
                 <div>
-                  <p className="text-white/40 text-sm leading-relaxed mt-3">Projected to reach <span className="text-white/70">$5.7B</span> by 2033 at 11.5% CAGR.</p>
+                  <p className="text-gray-500 text-sm font-medium leading-relaxed mb-4">Projected to reach <strong className="text-gray-900">$5.7B</strong> by 2033 (11.5% CAGR).</p>
                   <StatBar value={38} max={100} color="#f97316" />
                 </div>
               </div>
             </div>
 
             {/* Internet Rank */}
-            <div className="md:col-span-4 rounded-3xl border border-white/8 bg-[#0f0f17] group cursor-default overflow-hidden relative">
-              <div className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 blur-[40px] group-hover:opacity-25 transition-opacity duration-700" style={{ background: '#e2e8f0' }} />
-              <div className="relative p-8 h-full flex flex-col justify-between min-h-[220px]">
+            <div className="md:col-span-4 bg-gray-900 rounded-[2rem] border border-gray-800 p-8 shadow-xl shadow-gray-900/10 group hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 rounded-full opacity-10 blur-3xl group-hover:opacity-20 transition-opacity duration-700 bg-white" />
+              <div className="relative h-full flex flex-col justify-between min-h-[240px]">
                 <div>
-                  <span className="text-white/30 text-xs uppercase tracking-widest" style={{ fontFamily: "'JetBrains Mono', monospace" }}>05 — Internet File Share</span>
-                  <div className="text-white mt-4 leading-none" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 700 }}>#2</div>
+                  <span className="text-gray-400 text-xs font-bold uppercase tracking-widest flex items-center gap-2 mb-4">
+                    <span className="w-6 h-px bg-gray-600"></span> 05 — Web File Share
+                  </span>
+                  <div className="text-5xl text-white font-black tracking-tight">#2</div>
                 </div>
-                <p className="text-white/40 text-sm leading-relaxed mt-3">Most-served filetype on the Web, behind only JPEG image formats.</p>
+                <p className="text-gray-400 text-sm font-medium leading-relaxed">
+                  Most-served filetype on the Web, trailing only behind JPEG images.
+                </p>
               </div>
             </div>
 
@@ -274,15 +277,17 @@ export default function PDFTrendsPage() {
         </section>
 
         {/* ── PROJECTION TIMELINE ── */}
-        <section className="border-t border-white/8">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-            <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start">
+        <section className="bg-white border-y border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-center">
               <div>
-                <p className="text-white/25 text-xs uppercase tracking-widest mb-3" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Market Projection</p>
-                <h2 className="text-white text-2xl md:text-3xl leading-tight" style={{ fontWeight: 600 }}>From $2.15B to $5.7B by 2033</h2>
-                <p className="text-white/40 text-sm mt-4 leading-relaxed">The PDF software market is expanding at 11.5% CAGR driven by enterprise digitisation, compliance mandates, and cloud-native document workflows.</p>
+                <p className="text-[#378ADD] text-sm font-bold uppercase tracking-widest mb-3">Market Projection</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">From $2.15B to <br/><span className="text-[#378ADD]">$5.7B by 2033</span></h2>
+                <p className="text-gray-500 text-lg mt-6 leading-relaxed">
+                  The PDF software market is expanding at an 11.5% CAGR driven by enterprise digitisation, stringent compliance mandates, and cloud-native document workflows.
+                </p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-4 bg-gray-50 p-6 md:p-8 rounded-3xl border border-gray-100 shadow-inner">
                 {[
                   { year: '2024', value: 2.15, max: 5.7, label: '$2.15B' },
                   { year: '2025', value: 2.4,  max: 5.7, label: '$2.40B (est.)' },
@@ -298,43 +303,47 @@ export default function PDFTrendsPage() {
         </section>
 
         {/* ── SOURCES ── */}
-        <section className="border-t border-white/8">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
-            <p className="text-white/25 text-xs uppercase tracking-widest mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Sources & Methodology</p>
-            <p className="text-white/40 text-sm max-w-3xl mb-8 leading-relaxed">Statistics aggregated from leading industry analysts and enterprise PDF software providers to provide an accurate overview of the document management ecosystem.</p>
-            <div className="grid md:grid-cols-2 gap-4">
-              {sources.map(s => (
-                <div key={s.id} id={`source-${s.id}`} className="flex gap-4 p-4 rounded-xl border border-white/6 bg-white/[0.015]">
-                  <span className="shrink-0 w-6 h-6 flex items-center justify-center rounded bg-white/8 text-white/30 text-xs" style={{ fontFamily: "'JetBrains Mono', monospace" }}>{s.id}</span>
-                  <div>
-                    <p className="text-white/70 text-sm" style={{ fontWeight: 500 }}>{s.cite}</p>
-                    <p className="text-white/35 text-xs mt-1 leading-relaxed">{s.text}</p>
-                  </div>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Sources & Methodology</h2>
+            <p className="text-gray-500 text-lg leading-relaxed">
+              Statistics aggregated from leading industry analysts and enterprise PDF software providers to provide an accurate overview of the document management ecosystem.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {sources.map(s => (
+              <div key={s.id} id={`source-${s.id}`} className="flex gap-5 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <span className="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-blue-50 text-[#378ADD] font-bold text-sm">
+                  {s.id}
+                </span>
+                <div>
+                  <p className="text-gray-900 font-bold mb-1.5">{s.cite}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{s.text}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* ── CTA ── */}
-        <section className="border-t border-white/8">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
-            <div className="relative rounded-3xl overflow-hidden border border-[#378ADD]/20 p-10 md:p-16 text-center" style={{ background: 'linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%)' }}>
-              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(#378ADD 1px, transparent 1px), linear-gradient(90deg, #378ADD 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-              <div className="relative">
-                <p className="text-[#378ADD]/80 text-xs uppercase tracking-widest mb-4" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Join the ecosystem</p>
-                <h2 className="text-white text-4xl md:text-6xl mb-3" style={{ fontWeight: 700 }}>
-                  2.5 Trillion<sup className="text-white/20 text-xl ml-1 align-top">[1]</sup>
-                </h2>
-                <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">PDFs are circulating the world right now. Work with them faster using our secure, lightning-fast tools.</p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link to="/tools/merge-pdf" className="px-8 py-3.5 rounded-xl text-white text-sm transition-all hover:-translate-y-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", background: '#378ADD', fontWeight: 600 }}>
-                    Merge PDFs →
-                  </Link>
-                  <Link to="/tools/compress-pdf" className="px-8 py-3.5 rounded-xl text-white/70 text-sm border border-white/15 bg-white/5 transition-all hover:bg-white/10 hover:-translate-y-0.5" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 500 }}>
-                    Compress PDFs
-                  </Link>
-                </div>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+          <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#0d1f3c] to-[#0a1628] p-10 md:p-20 text-center shadow-2xl">
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(#378ADD 1px, transparent 1px), linear-gradient(90deg, #378ADD 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="relative z-10">
+              <p className="text-[#378ADD] text-sm font-bold uppercase tracking-widest mb-6">Join the ecosystem</p>
+              <h2 className="text-white text-5xl md:text-7xl font-black mb-6 tracking-tight">
+                2.5 Trillion<sup className="text-white/40 text-2xl md:text-4xl ml-2 align-top">[1]</sup>
+              </h2>
+              <p className="text-blue-100/70 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">
+                PDFs are circulating the world right now. Work with them faster using our secure, lightning-fast tools.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link to="/tools/merge-pdf" className="px-8 py-4 rounded-xl text-white font-bold bg-[#378ADD] hover:bg-blue-600 transition-all hover:-translate-y-1 shadow-lg shadow-blue-500/30 text-lg">
+                  Merge PDFs →
+                </Link>
+                <Link to="/tools/compress-pdf" className="px-8 py-4 rounded-xl text-white font-bold border-2 border-white/20 hover:bg-white/10 transition-all hover:-translate-y-1 text-lg">
+                  Compress PDFs
+                </Link>
               </div>
             </div>
           </div>
