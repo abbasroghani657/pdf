@@ -98,6 +98,8 @@ def pdf_to_xlsx():
                 ws.page_setup.orientation = ws.ORIENTATION_LANDSCAPE
                 ws.page_setup.fitToWidth = 1
                 ws.page_setup.fitToHeight = False
+                # Ensure page breaks are respected at row level
+                ws.sheet_properties.pageSetUpPr.fitToPage = True
                 
                 clean_page = page.filter(filter_chars)
                 
@@ -116,7 +118,31 @@ def pdf_to_xlsx():
                 page_width = clean_page.width
                 page_height = clean_page.height
                 
-                for table in tables:
+                # Track column widths automatically
+                col_max_widths = {}
+                
+                from openpyxl.worksheet.pagebreak import Break
+                from openpyxl.utils import get_column_letter
+                from openpyxl.styles import Alignment
+                wrap_align = Alignment(wrap_text=True, vertical='top')
+                
+                def update_col_widths(row_data):
+                    for i, val in enumerate(row_data):
+                        col = i + 1
+                        length = max(len(str(val)) if val else 0, 10)
+                        if col not in col_max_widths or col_max_widths[col] < length:
+                            col_max_widths[col] = length
+                
+                def append_row(data, is_header=False):
+                    ws.append(data)
+                    update_col_widths(data)
+                    for c_idx, val in enumerate(data):
+                        cell_obj = ws.cell(row=ws.max_row, column=c_idx + 1)
+                        cell_obj.alignment = wrap_align
+                        if is_header:
+                            cell_obj.font = bold_font
+                
+                for table_idx, table in enumerate(tables):
                     t_x0, t_top, t_x1, t_bottom = table.bbox
                     
                     # Extract text above the table
@@ -127,22 +153,30 @@ def pdf_to_xlsx():
                             if text:
                                 for line in text.split('\n'):
                                     if line.strip():
-                                        ws.append([line])
+                                        append_row([line])
                             ws.append([])  # blank row
                         except Exception:
                             pass
                     
+                    # Add a manual page break BEFORE every table (except the first one)
+                    # so the entire table block stays together on a page. 
+                    # LibreOffice/Gotenberg respects these row breaks.
+                    if table_idx > 0 and ws.max_row > 1:
+                        ws.row_breaks.append(Break(id=ws.max_row))
+                    
                     # Extract the table itself
                     table_data = table.extract()
+                    num_cols = max(len(r) for r in table_data) if table_data else 1
+                    
                     for r_idx, row in enumerate(table_data):
                         clean_row = [cell.replace('\n', ' ') if cell else '' for cell in row]
-                        ws.append(clean_row)
-                        # Apply formatting
+                        # Pad short rows so all rows have same column count
+                        while len(clean_row) < num_cols:
+                            clean_row.append('')
+                        append_row(clean_row, is_header=(r_idx == 0))
+                        # Apply borders separately
                         for c_idx in range(len(clean_row)):
-                            cell_obj = ws.cell(row=ws.max_row, column=c_idx + 1)
-                            cell_obj.border = thin_border
-                            if r_idx == 0:
-                                cell_obj.font = bold_font
+                            ws.cell(row=ws.max_row, column=c_idx + 1).border = thin_border
                     
                     ws.append([])  # blank row after table
                     current_y = t_bottom
@@ -155,21 +189,19 @@ def pdf_to_xlsx():
                         if text:
                             for line in text.split('\n'):
                                 if line.strip():
-                                    ws.append([line])
+                                    append_row([line])
                     except Exception:
                         pass
                 
-                # Global Worksheet Formatting: Column Widths & Text Wrapping
-                from openpyxl.utils import get_column_letter
-                from openpyxl.styles import Alignment
-                wrap_align = Alignment(wrap_text=True, vertical='top')
+                # Apply auto-fit column widths (capped at 40 chars wide)
+                for col_idx, max_len in col_max_widths.items():
+                    ws.column_dimensions[get_column_letter(col_idx)].width = min(max_len + 4, 45)
                 
-                for col_idx in range(1, 10):
-                    ws.column_dimensions[get_column_letter(col_idx)].width = 25
-                    
+                # Ensure any remaining rows also have wrap alignment
                 for row in ws.iter_rows():
                     for cell in row:
-                        cell.alignment = wrap_align
+                        if not cell.alignment or not cell.alignment.wrap_text:
+                            cell.alignment = wrap_align
         
         wb.save(output_path)
         return send_file(
