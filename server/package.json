@@ -27,7 +27,8 @@
     "node-signpdf": "^3.0.0",
     "nodemailer": "^8.0.7",
     "pdf-lib": "^1.17.1",
-    "stripe": "^22.2.0"
+    "stripe": "^22.2.0",
+    "ws": "^8.21.0"
   },
   "devDependencies": {
     "pg": "^8.21.0"

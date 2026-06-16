@@ -13,12 +13,17 @@ const authLimiter = rateLimit({
   legacyHeaders: false,
 });
  
+const WebSocket = require('ws');
+
 // Dedicated admin-only supabase client that ALWAYS uses service_role key
 // This ensures it never inherits a user session and bypasses RLS
 const supabaseAdmin = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY,
-  { auth: { autoRefreshToken: false, persistSession: false } }
+  { 
+    auth: { autoRefreshToken: false, persistSession: false },
+    realtime: { transport: WebSocket }
+  }
 );
  
 // @desc    Check if email exists for smart auth flow

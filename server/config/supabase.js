@@ -10,6 +10,8 @@ if (!supabaseUrl || !supabaseKey) {
   console.warn('⚠️  Supabase environment variables missing. Auth features will not work. Add SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY to server/.env');
 }
 
+const WebSocket = require('ws');
+
 const supabase = createClient(
   supabaseUrl || 'https://placeholder.supabase.co', 
   supabaseKey || 'placeholder',
@@ -21,6 +23,9 @@ const supabase = createClient(
     },
     global: {
       fetch: fetch
+    },
+    realtime: {
+      transport: WebSocket
     }
   }
 );
