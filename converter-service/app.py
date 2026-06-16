@@ -94,6 +94,11 @@ def pdf_to_xlsx():
             for page_num, page in enumerate(pdf.pages, 1):
                 ws = wb.create_sheet(title=f'Page {page_num}')
                 
+                # Setup page for printing/PDF export (Landscape + Fit to 1 page wide)
+                ws.page_setup.orientation = ws.ORIENTATION_LANDSCAPE
+                ws.page_setup.fitToWidth = 1
+                ws.page_setup.fitToHeight = 0
+                
                 clean_page = page.filter(filter_chars)
                 
                 # Tweak table detection strategy to prevent column shifting

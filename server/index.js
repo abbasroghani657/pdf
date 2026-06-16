@@ -124,6 +124,11 @@ async function convertToPdfWithGotenberg(filePath, originalName) {
   const form = new FormData();
   form.append('files', fs.createReadStream(filePath), originalName);
 
+  // If it's an Excel file, force landscape mode so columns don't get truncated
+  if (originalName.toLowerCase().match(/\.(xlsx|xls|csv)$/)) {
+    form.append('landscape', 'true');
+  }
+
   const response = await fetch(`${GOTENBERG_URL}/forms/libreoffice/convert`, {
     method: 'POST',
     body: form,
