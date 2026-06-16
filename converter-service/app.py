@@ -73,18 +73,50 @@ def pdf_to_xlsx():
         with pdfplumber.open(input_path) as pdf:
             for page_num, page in enumerate(pdf.pages, 1):
                 ws = wb.create_sheet(title=f'Page {page_num}')
-                tables = page.extract_tables()
                 
-                if tables:
-                    for table in tables:
-                        for row in table:
-                            ws.append([cell or '' for cell in row])
-                        ws.append([])  # blank row between tables
-                else:
-                    # No tables — extract raw text
-                    text = page.extract_text() or ''
-                    for line in text.split('\n'):
-                        ws.append([line])
+                tables = page.find_tables()
+                tables.sort(key=lambda t: t.bbox[1])  # sort by top Y
+                
+                current_y = 0
+                page_width = page.width
+                page_height = page.height
+                
+                for table in tables:
+                    t_x0, t_top, t_x1, t_bottom = table.bbox
+                    
+                    # Extract text above the table
+                    if t_top > current_y + 1:
+                        try:
+                            # Use bounding box for the region above the table
+                            top_crop = page.crop((0, current_y, page_width, t_top))
+                            text = top_crop.extract_text()
+                            if text:
+                                for line in text.split('\n'):
+                                    if line.strip():
+                                        ws.append([line])
+                            ws.append([])  # blank row for spacing
+                        except Exception:
+                            pass
+                    
+                    # Extract the table itself
+                    table_data = table.extract()
+                    for row in table_data:
+                        ws.append([cell or '' for cell in row])
+                    ws.append([])  # blank row after table
+                    
+                    current_y = t_bottom
+                
+                # Extract text below the last table (or the whole page if no tables)
+                if current_y < page_height - 1:
+                    try:
+                        bottom_crop = page.crop((0, current_y, page_width, page_height))
+                        text = bottom_crop.extract_text()
+                        if text:
+                            for line in text.split('\n'):
+                                if line.strip():
+                                    ws.append([line])
+                    except Exception:
+                        pass
         
         wb.save(output_path)
         return send_file(
