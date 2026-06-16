@@ -272,7 +272,7 @@ def pdf_to_xlsx():
             try: os.remove(p)
             except: pass
 
-# ── PDF → PPTX (hybrid: editable text boxes + background image) ─────────────
+# ── PDF → PPTX (Native Editable Shapes using PyMuPDF) ────────────────────────
 @app.route('/pdf-to-pptx', methods=['POST'])
 def pdf_to_pptx():
     if 'file' not in request.files:
@@ -282,92 +282,79 @@ def pdf_to_pptx():
     job_id = str(uuid.uuid4())
     input_path  = os.path.join(UPLOAD_DIR, f'{job_id}_input.pdf')
     output_path = os.path.join(UPLOAD_DIR, f'{job_id}_output.pptx')
-    img_dir     = os.path.join(UPLOAD_DIR, job_id)
-    os.makedirs(img_dir, exist_ok=True)
     
     try:
         file.save(input_path)
-        import fitz, pdfplumber
+        import fitz
         from pptx import Presentation
-        from pptx.util import Inches, Pt, Emu
+        from pptx.util import Pt
         from pptx.dml.color import RGBColor
-        from pptx.enum.text import PP_ALIGN
         import io
         
         doc = fitz.open(input_path)
         prs = Presentation()
-        
-        # Standard widescreen 16:9
-        SLIDE_W = Inches(13.33)
-        SLIDE_H = Inches(7.5)
-        prs.slide_width  = SLIDE_W
-        prs.slide_height = SLIDE_H
-        
         blank_layout = prs.slide_layouts[6]  # blank layout
         
-        with pdfplumber.open(input_path) as pdf_plumber:
-            for i, fitz_page in enumerate(doc):
-                page_plumber = pdf_plumber.pages[i] if i < len(pdf_plumber.pages) else None
-                
-                # Render page as background image (for visual fidelity)
-                pix = fitz_page.get_pixmap(dpi=120)
-                img_path = os.path.join(img_dir, f'page_{i}.jpg')
-                pix.save(img_path)
-                
-                slide = prs.slides.add_slide(blank_layout)
-                
-                # Add background image (fills slide)
-                slide.shapes.add_picture(img_path, 0, 0, SLIDE_W, SLIDE_H)
-                
-                # Extract text words with positions from pdfplumber
-                if page_plumber:
-                    words = page_plumber.extract_words(
-                        x_tolerance=5, y_tolerance=5,
-                        keep_blank_chars=False, use_text_flow=True
-                    )
+        # Set slide dimensions to match first page of PDF precisely
+        if len(doc) > 0:
+            prs.slide_width = Pt(doc[0].rect.width)
+            prs.slide_height = Pt(doc[0].rect.height)
+            
+        for page in doc:
+            slide = prs.slides.add_slide(blank_layout)
+            page_dict = page.get_text("dict")
+            blocks = page_dict.get("blocks", [])
+            
+            for b in blocks:
+                if b["type"] == 0:  # Text block
+                    x0, y0, x1, y1 = b["bbox"]
+                    # Add extra width padding to prevent unwanted word wrapping
+                    txBox = slide.shapes.add_textbox(Pt(x0), Pt(y0), Pt(x1 - x0 + 20), Pt(y1 - y0 + 10))
+                    tf = txBox.text_frame
+                    tf.word_wrap = False
+                    tf.clear()  # Clear default paragraph
                     
-                    if words:
-                        pdf_w = page_plumber.width
-                        pdf_h = page_plumber.height
+                    # Margin fixes to align text perfectly to bbox
+                    tf.margin_left = Pt(0)
+                    tf.margin_top = Pt(0)
+                    
+                    for line in b.get("lines", []):
+                        p = tf.add_paragraph()
+                        p.space_before = Pt(0)
+                        p.space_after = Pt(0)
                         
-                        # Group words into lines by y-position
-                        lines = {}
-                        for w in words:
-                            y_key = round(w['top'] / 5) * 5  # Group by 5pt bands
-                            if y_key not in lines:
-                                lines[y_key] = []
-                            lines[y_key].append(w)
-                        
-                        for y_key, line_words in sorted(lines.items()):
-                            line_words.sort(key=lambda w: w['x0'])
-                            line_text = ' '.join(w['text'] for w in line_words)
-                            
-                            # Calculate position scaled to slide dimensions
-                            x0 = line_words[0]['x0'] / pdf_w * float(SLIDE_W)
-                            y0 = line_words[0]['top'] / pdf_h * float(SLIDE_H)
-                            w_pts = (line_words[-1]['x1'] - line_words[0]['x0']) / pdf_w * float(SLIDE_W)
-                            h_pts = max(Inches(0.3), (line_words[0]['bottom'] - line_words[0]['top']) / pdf_h * float(SLIDE_H))
-                            
-                            # Ensure box stays within slide
-                            w_pts = max(Inches(0.5), min(w_pts, SLIDE_W - x0))
-                            
-                            # Estimate font size
-                            font_size_pt = max(8, round((line_words[0]['bottom'] - line_words[0]['top']) / pdf_h * 72 * 1.2))
-                            
-                            txBox = slide.shapes.add_textbox(int(x0), int(y0), int(w_pts), int(h_pts))
-                            txBox.name = f"text_{i}_{y_key}"
-                            tf = txBox.text_frame
-                            tf.word_wrap = False
-                            p = tf.paragraphs[0]
+                        for span in line.get("spans", []):
                             run = p.add_run()
-                            run.text = line_text
-                            run.font.size = Pt(font_size_pt)
-                            # Transparent background so image shows through
-                            txBox.fill.background()
-                            txBox.line.fill.background()
+                            run.text = span["text"]
+                            
+                            f_size = max(4, min(144, span["size"]))
+                            run.font.size = Pt(f_size)
+                            
+                            # Clean font name
+                            font_name = span.get("font", "Arial")
+                            font_name = font_name.split(",")[0].split("-")[0]
+                            run.font.name = font_name
+                            
+                            # Map integer color to RGB
+                            color_int = span.get("color", 0)
+                            r = (color_int >> 16) & 255
+                            g = (color_int >> 8) & 255
+                            b_c = color_int & 255
+                            run.font.color.rgb = RGBColor(r, g, b_c)
+                            
+                elif b["type"] == 1:  # Image block
+                    x0, y0, x1, y1 = b["bbox"]
+                    image_bytes = b.get("image")
+                    if image_bytes:
+                        try:
+                            img_stream = io.BytesIO(image_bytes)
+                            slide.shapes.add_picture(img_stream, Pt(x0), Pt(y0), Pt(x1 - x0), Pt(y1 - y0))
+                        except Exception:
+                            pass
         
         doc.close()
         prs.save(output_path)
+        
         return send_file(
             output_path,
             as_attachment=True,
@@ -382,8 +369,6 @@ def pdf_to_pptx():
         for p in [input_path, output_path]:
             try: os.remove(p)
             except: pass
-        try: shutil.rmtree(img_dir)
-        except: pass
 
 
 # ── PDF → JPG (PyMuPDF) ──────────────────────────────────────────────────────
