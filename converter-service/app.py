@@ -75,10 +75,18 @@ def pdf_to_xlsx():
         thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), 
                              top=Side(style='thin'), bottom=Side(style='thin'))
         
-        # Filter to ignore large watermark text like "PAID" stamps
+        # Filter to ignore large watermark text and diagonal stamps like "PAID"
         def filter_chars(obj):
             if obj.get("object_type") == "char":
-                if obj.get("size", 0) > 24:
+                # Filter by diagonal rotation
+                up = obj.get("up")
+                if up:
+                    # If both x and y components of the 'up' vector are non-zero,
+                    # the text is rotated diagonally. We ignore it.
+                    if abs(up[0]) > 0.01 and abs(up[1]) > 0.01:
+                        return False
+                # Also fallback to size filter
+                if obj.get("size", 0) > 40:
                     return False
             return True
 
