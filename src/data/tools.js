@@ -62,7 +62,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "PDF to Excel",
-    "desc": "Pull data straight from PDFs into Excel spreadsheets in a few seconds.",
+    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
     "icon": "solar:chart-2-bold-duotone",
     "iconColorClass": "bg-emerald-50 text-emerald-600",
     "badge": {

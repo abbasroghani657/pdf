@@ -147,20 +147,33 @@ async function convertFromPdfFree(filePath, originalName, endpoint) {
   const form = new FormData();
   form.append('file', fs.createReadStream(filePath), originalName);
 
-  const response = await fetch(`${CONVERTER_URL}${endpoint}`, {
-    method: 'POST',
-    body: form,
-    headers: form.getHeaders(),
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 120000); // 2 min timeout
 
-  if (!response.ok) {
-    const errText = await response.text();
-    throw new Error(`Converter Error (${response.status}): ${errText}`);
+  try {
+    const response = await fetch(`${CONVERTER_URL}${endpoint}`, {
+      method: 'POST',
+      body: form,
+      headers: form.getHeaders(),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error(`Converter Error (${response.status}): ${errText}`);
+    }
+    return {
+      buffer: Buffer.from(await response.arrayBuffer()),
+      contentType: response.headers.get('content-type')
+    };
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      throw new Error('Conversion timed out after 2 minutes. Please try a smaller file.');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
   }
-  return {
-    buffer: Buffer.from(await response.arrayBuffer()),
-    contentType: response.headers.get('content-type')
-  };
 }
 
 // ─── Queue System for Heavy PDF Operations ──────────────────────────────────────

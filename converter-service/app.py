@@ -52,6 +52,44 @@ def pdf_to_docx():
             try: os.remove(p)
             except: pass
 
+# ── OCR fallback: Scanned PDF → XLSX via Tesseract ───────────────────────────
+def ocr_pdf_to_xlsx(input_path, output_path):
+    """Use OCR to extract data from scanned/image PDFs into Excel."""
+    import fitz, pytesseract, openpyxl, shutil
+    from PIL import Image
+    from openpyxl.styles import Font, Alignment
+    
+    tess_cmd = shutil.which('tesseract')
+    if tess_cmd:
+        pytesseract.pytesseract.tesseract_cmd = tess_cmd
+    
+    wb = openpyxl.Workbook()
+    wb.remove(wb.active)
+    doc = fitz.open(input_path)
+    
+    for page_num, page in enumerate(doc, 1):
+        ws = wb.create_sheet(title=f'Page {page_num}')
+        ws.append(['⚠ This PDF appears to be scanned/image-based. OCR was used for extraction — accuracy may vary.'])
+        ws.cell(1, 1).font = Font(bold=True, color='FF8800')
+        ws.append([])
+        
+        mat = fitz.Matrix(2, 2)
+        pix = page.get_pixmap(matrix=mat, alpha=False)
+        img = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
+        
+        # Use psm 6 for uniform block of text
+        raw = pytesseract.image_to_string(img, config='--psm 6')
+        for line in raw.split('\n'):
+            stripped = line.strip()
+            if stripped:
+                # Try to split by multiple spaces (column separator)
+                parts = [p.strip() for p in stripped.split('  ') if p.strip()]
+                ws.append(parts if len(parts) > 1 else [stripped])
+    
+    doc.close()
+    wb.save(output_path)
+
+
 # ── PDF → XLSX (pdfplumber + openpyxl) ────────────────────────────────────────
 @app.route('/pdf-to-xlsx', methods=['POST'])
 def pdf_to_xlsx():
@@ -65,8 +103,27 @@ def pdf_to_xlsx():
     
     try:
         file.save(input_path)
+        
+        # ── Scanned PDF Detection ─────────────────────────────────────────────
+        # Check if the PDF has any extractable text. If not, it's a scanned PDF.
         import pdfplumber, openpyxl
         from openpyxl.styles import Font, Border, Side
+        
+        is_scanned = False
+        with pdfplumber.open(input_path) as _probe:
+            total_chars = sum(len(p.extract_text() or '') for p in _probe.pages)
+            if total_chars < 20:  # Less than 20 chars across whole doc = scanned
+                is_scanned = True
+        
+        if is_scanned:
+            # Use OCR fallback for scanned/image-based PDFs
+            ocr_pdf_to_xlsx(input_path, output_path)
+            return send_file(
+                output_path,
+                as_attachment=True,
+                download_name='converted.xlsx',
+                mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            )
         
         wb = openpyxl.Workbook()
         wb.remove(wb.active)  # remove default sheet
@@ -689,13 +746,11 @@ def ocr_pdf():
         num_pages   = len(doc)
         confidence  = 95      # default estimate
         
-        # Hardcode Tesseract path for Windows (fallback if not in PATH)
-        tess_path1 = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-        tess_path2 = r'C:\Users\Zaheer Abbas\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
-        if os.path.exists(tess_path1):
-            pytesseract.pytesseract.tesseract_cmd = tess_path1
-        elif os.path.exists(tess_path2):
-            pytesseract.pytesseract.tesseract_cmd = tess_path2
+        # Use shutil.which to find tesseract on any OS (Linux VPS / Windows)
+        import shutil
+        tess_cmd = shutil.which('tesseract')
+        if tess_cmd:
+            pytesseract.pytesseract.tesseract_cmd = tess_cmd
 
         # ── Mode: Extract plain TEXT ───────────────────────────────────────────
         if mode == 'text':
