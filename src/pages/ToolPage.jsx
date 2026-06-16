@@ -231,14 +231,29 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
     }
   };
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!processedUrl) return;
-    
-    // Tell browser to natively navigate to the download URL
-    // This allows IDM or Chrome to download it directly without empty Blob bugs
-    window.location.assign(processedUrl);
-    
-    toast.success('File downloaded successfully!');
+    try {
+      const token = localStorage.getItem('pdfmaster_token');
+      const headers = token ? { Authorization: `Bearer ${token}` } : {};
+      const res = await fetch(processedUrl, { headers });
+      if (!res.ok) throw new Error('Download failed');
+      const blob = await res.blob();
+      const contentDisposition = res.headers.get('Content-Disposition') || '';
+      const match = contentDisposition.match(/filename="?([^"]+)"?/);
+      const filename = match ? match[1] : 'converted_file';
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+      toast.success('File downloaded successfully!');
+    } catch (err) {
+      toast.error('Download failed. Please try again.');
+    }
   };
 
   const handleReset = () => {
