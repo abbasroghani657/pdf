@@ -309,7 +309,6 @@ app.get('/api/download/:id', protectOptional, (req, res) => {
 // ─── Execute Tool Logic (Extracted from /api/process) ──────────────────────────
 async function executeTool(req, res, files, tool, baseName, newFilename, contentType, isPro = false) {
   let processedBuffer;
-  const file = files.find(f => f.fieldname === 'file') || files[0];
 
   try {
     const { tool } = req.body;
