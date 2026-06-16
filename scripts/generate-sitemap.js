@@ -17,6 +17,7 @@ const staticRoutes = [
   '/contact',
   '/privacy',
   '/terms',
+  '/pdf-trends-2026',
   '/login',
   '/register'
 ];

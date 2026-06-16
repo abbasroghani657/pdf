@@ -18,7 +18,7 @@ TOOLS_DATA.forEach(t => {
     esToolRoutes.push(`${esBaseSlug}/${platform}`);
   });
 });
-const routes = ['/', '/pricing', '/compare', '/about', '/contact', '/privacy', '/terms', ...toolRoutes, ...esToolRoutes];
+const routes = ['/', '/pricing', '/compare', '/about', '/contact', '/privacy', '/terms', '/pdf-trends-2026', ...toolRoutes, ...esToolRoutes];
 
 // https://vitejs.dev/config/
 export default defineConfig({

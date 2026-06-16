@@ -45,6 +45,7 @@ import ExtractDataPage from './pages/ExtractDataPage';
 import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
 import MergePDFPage from './pages/MergePDFPage';
 import NotFoundPage from './pages/NotFoundPage';
+import PDFTrendsPage from './pages/PDFTrendsPage';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUsers from './pages/admin/AdminUsers';
@@ -740,6 +741,7 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
+            <Route path="/pdf-trends-2026" element={<PDFTrendsPage />} />
             <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
             <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
             <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
@@ -788,7 +790,7 @@ export default function App() {
 
             {[
               { title: 'Tools', links: [{ label: 'Merge PDF', path: '/tools/merge-pdf' }, { label: 'Split PDF', path: '/tools/split-pdf' }, { label: 'Compress PDF', path: '/tools/compress-pdf' }, { label: 'PDF to Word', path: '/tools/pdf-to-word' }, { label: 'Sign PDF', path: '/tools/sign-pdf' }, { label: 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: 'Company', links: [{ label: 'Pricing', path: '/pricing' }, { label: 'Compare', path: '/compare' }, { label: 'About Us', path: '/about' }, { label: 'Contact', path: '/contact' }] },
+              { title: 'Company', links: [{ label: 'About Us', path: '/about' }, { label: 'Contact', path: '/contact' }, { label: 'Pricing', path: '/pricing' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
               { title: 'Legal', links: [{ label: 'Privacy Policy', path: '/privacy' }, { label: 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>
