@@ -25,7 +25,7 @@ export default function ComparePage() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                { feature: 'Free file size limit', us: '10 MB', them: '15 MB', winner: false },
+                { feature: 'Free file size limit', us: '10 MB', them: '5 MB', winner: false },
                 { feature: 'AI-powered tools', us: '✓ Yes (5 tools)', them: '✗ No', winner: true, usClass: 'text-emerald-600', themClass: 'text-red-400' },
                 { feature: 'Pro subscription price', us: '$4.99/mo', them: '$9.99/mo', winner: true },
                 { feature: 'Total tools available', us: '37+', them: '25', winner: true },
