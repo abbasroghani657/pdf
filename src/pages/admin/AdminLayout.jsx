@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 import { useAuth } from '../../contexts/AuthContext';
 import adminApi from '../../utils/adminApi';
 import { formatDistanceToNow } from 'date-fns';
+import Logo from '../../components/Logo';
 
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
@@ -93,8 +94,7 @@ export default function AdminLayout() {
       )}>
         <div className="p-6 border-b border-white/10 flex items-center justify-between">
           <Link to={PORTAL} className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-[#378ADD] to-[#8b5cf6] rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm">P</div>
-            <span className="font-bold text-lg tracking-tight">Admin<span className="text-[#378ADD]">Panel</span></span>
+            <Logo invert={true} />
           </Link>
           <button onClick={() => setSidebarOpen(false)} className="md:hidden text-gray-400 hover:text-white">
             <iconify-icon icon="solar:close-circle-bold" class="text-2xl"></iconify-icon>

@@ -2,6 +2,7 @@ import { useAuth } from '../contexts/AuthContext';
 import React from 'react';
 import { clsx } from 'clsx';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../components/Logo';
 
 export default function ComparePage() {
   const { isPro } = useAuth();
@@ -16,11 +17,8 @@ export default function ComparePage() {
             <thead>
               <tr className="bg-gray-50/60 border-b border-gray-100">
                 <th className="py-4 px-6 text-sm font-semibold text-gray-500 w-2/5">Feature</th>
-                <th className="py-4 px-6 text-sm font-bold text-[#378ADD] w-[30%] border-l border-gray-100 bg-blue-50/30">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-[#378ADD] rounded flex items-center justify-center text-white font-bold text-[10px]">P</div>
-                    TheyLovePDF
-                  </div>
+                <th className="py-4 px-6 w-[30%] border-l border-gray-100 bg-blue-50/30">
+                  <Logo size="sm" />
                 </th>
                 <th className="py-4 px-6 text-sm font-semibold text-gray-400 w-[30%] border-l border-gray-100">Other Platforms</th>
               </tr>
