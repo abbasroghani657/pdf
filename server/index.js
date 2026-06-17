@@ -567,7 +567,7 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
           method: 'POST',
           body: htmlForm,
           headers: htmlForm.getHeaders(),
-          signal: AbortSignal.timeout(90000), // 90s timeout for slow pages
+          signal: AbortSignal.timeout(200000), // 200s timeout — matches Python subprocess
         });
         if (!htmlRes.ok) {
           const errText = await htmlRes.text();

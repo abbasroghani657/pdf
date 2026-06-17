@@ -52,7 +52,8 @@ def pdf_to_docx():
             try: os.remove(p)
             except: pass
 
-# ── HTML → PDF (wkhtmltopdf with WeasyPrint fallback) ───────────────────────
+
+# ── HTML → PDF (wkhtmltopdf + xvfb-run for headless, WeasyPrint fallback) ────
 @app.route('/html-to-pdf', methods=['POST'])
 def html_to_pdf():
     job_id = str(uuid.uuid4())
@@ -63,8 +64,9 @@ def html_to_pdf():
         import shutil
         url = request.form.get('url', '').strip()
         wk = shutil.which('wkhtmltopdf')
+        xvfb = shutil.which('xvfb-run')  # headless display wrapper
 
-        # Shared fast wkhtmltopdf flags
+        # Shared wkhtmltopdf flags
         WK_FLAGS = [
             '--quiet',
             '--disable-smart-shrinking',
@@ -73,44 +75,61 @@ def html_to_pdf():
             '--no-stop-slow-scripts',
             '--load-error-handling', 'ignore',
             '--load-media-error-handling', 'ignore',
-            '--javascript-delay', '500',   # wait 500ms for JS, not 2000ms default
+            '--javascript-delay', '500',
             '--image-quality', '80',
         ]
 
-        if url:
-            # ── URL mode ──────────────────────────────────────────────────────
-            if wk:
-                result = subprocess.run(
-                    [wk] + WK_FLAGS + [url, output_path],
-                    timeout=180, capture_output=True
-                )
-                if result.returncode != 0:
-                    # fallback to weasyprint on wkhtmltopdf error
-                    from weasyprint import HTML
-                    HTML(url=url).write_pdf(output_path)
+        def run_wkhtmltopdf(source):
+            """Run wkhtmltopdf, using xvfb-run on headless servers."""
+            if xvfb and wk:
+                cmd = [xvfb, '-a', '--server-args=-screen 0 1280x1024x24', wk] + WK_FLAGS + [source, output_path]
+            elif wk:
+                cmd = [wk] + WK_FLAGS + [source, output_path]
             else:
-                from weasyprint import HTML
-                HTML(url=url).write_pdf(output_path)
-        else:
-            # ── File mode ─────────────────────────────────────────────────────
+                return False, 'wkhtmltopdf not found'
+
+            result = subprocess.run(cmd, timeout=180, capture_output=True)
+            if result.returncode != 0:
+                err = result.stderr.decode('utf-8', errors='replace').strip()
+                return False, err or f'wkhtmltopdf exited with code {result.returncode}'
+            return True, None
+
+        def weasyprint_convert(source, is_url=False):
+            """WeasyPrint fallback (CSS-only, no JS)."""
+            from weasyprint import HTML
+            if is_url:
+                HTML(url=source).write_pdf(output_path)
+            else:
+                HTML(filename=source).write_pdf(output_path)
+
+        source = url if url else None
+        is_url = bool(url)
+
+        if not is_url:
             if 'file' not in request.files:
                 return jsonify({'error': 'No file or URL provided'}), 400
             file = request.files['file']
             input_path = os.path.join(UPLOAD_DIR, f'{job_id}_input.html')
             file.save(input_path)
+            source = input_path
 
-            if wk:
-                result = subprocess.run(
-                    [wk] + WK_FLAGS + [input_path, output_path],
-                    timeout=180, capture_output=True
-                )
-                if result.returncode != 0:
-                    # fallback to weasyprint
-                    from weasyprint import HTML
-                    HTML(filename=input_path).write_pdf(output_path)
-            else:
-                from weasyprint import HTML
-                HTML(filename=input_path).write_pdf(output_path)
+        # Try wkhtmltopdf first
+        if wk:
+            ok, err = run_wkhtmltopdf(source)
+            if not ok:
+                # wkhtmltopdf failed → try WeasyPrint
+                try:
+                    weasyprint_convert(source, is_url)
+                except Exception as wp_err:
+                    raise Exception(
+                        f'wkhtmltopdf failed: {err} | WeasyPrint also failed: {wp_err}'
+                    )
+        else:
+            # No wkhtmltopdf → WeasyPrint directly
+            try:
+                weasyprint_convert(source, is_url)
+            except Exception as wp_err:
+                raise Exception(f'WeasyPrint error: {wp_err}')
 
         return send_file(
             output_path,
