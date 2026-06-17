@@ -33,6 +33,7 @@ const adminRoutes = require('./routes/admin');
 const helmet = require('helmet');
 
 const app = express();
+app.set('trust proxy', 1); // Trust first proxy (Nginx/Cloudflare) to fix rate-limiter IPs
 
 // Security Headers
 app.use(helmet());
