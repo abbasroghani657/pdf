@@ -314,9 +314,20 @@ export default function MergePDFPage() {
         // We can update state if needed based on queue position
       }, false, true);
 
-      // Tell browser to natively navigate to the download URL
-      // This allows IDM or Chrome to download it directly without empty Blob bugs
-      window.location.assign(res.url);
+      // Fetch the file and trigger a real browser download
+      const token = localStorage.getItem('pdfmaster_token');
+      const headers = token ? { Authorization: `Bearer ${token}` } : {};
+      const downloadRes = await fetch(res.url, { headers });
+      if (!downloadRes.ok) throw new Error('Download failed');
+      const blob = await downloadRes.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = 'merged.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
 
       toast.success('PDFs merged successfully!');
       setTimeout(() => setStep(2), 1500);
