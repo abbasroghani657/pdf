@@ -66,12 +66,13 @@ def html_to_pdf():
         wk = shutil.which('wkhtmltopdf')
         xvfb = shutil.which('xvfb-run')  # headless display wrapper
 
-        # Shared wkhtmltopdf flags
+        # Shared wkhtmltopdf flags for high-quality layout
         WK_FLAGS = [
             '--quiet',
-            '--disable-smart-shrinking',
             '--page-size', 'A4',
             '--encoding', 'UTF-8',
+            '--enable-local-file-access',
+            '--print-media-type',
             '--no-stop-slow-scripts',
             '--load-error-handling', 'ignore',
             '--load-media-error-handling', 'ignore',
