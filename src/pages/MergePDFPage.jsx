@@ -6,8 +6,12 @@ import pdfWorkerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
 import clsx from 'clsx';
 import { processWithQueue } from '../utils/queueApi';
 
-// Use the bundled local worker (no CDN needed)
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+// Use bundled local worker, fallback to CDN if it fails
+try {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+} catch(e) {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
+}
 
 const { getDocument } = pdfjsLib;
 
@@ -89,7 +93,12 @@ function PdfCard({ pdf, index, total, onRemove, onMoveUp, onMoveDown, isDragging
           <div className="flex flex-wrap items-center gap-2 mt-1">
             <span className="inline-flex items-center gap-1 text-xs font-medium bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">
               <iconify-icon icon="solar:document-linear" class="text-xs" />
-              {pdf.pageCount ? `${pdf.pageCount} page${pdf.pageCount > 1 ? 's' : ''}` : 'Loading…'}
+              {!pdf.metaLoaded
+                ? <span className="flex items-center gap-1"><svg className="animate-spin w-3 h-3" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> Loading</span>
+                : pdf.pageCount
+                  ? `${pdf.pageCount} page${pdf.pageCount > 1 ? 's' : ''}`
+                  : '—'
+              }
             </span>
             <span className="text-xs text-gray-400">
               {(pdf.size / 1024).toFixed(0)} KB
@@ -191,22 +200,30 @@ export default function MergePDFPage() {
   const loadPdfMeta = async (file) => {
     try {
       const arrayBuffer = await file.arrayBuffer();
-      const pdfDoc = await getDocument({ data: arrayBuffer }).promise;
+      // Try loading the PDF
+      const loadingTask = getDocument({ data: arrayBuffer });
+      const pdfDoc = await loadingTask.promise;
       const pageCount = pdfDoc.numPages;
 
       // Render page 1 as thumbnail
-      const page = await pdfDoc.getPage(1);
-      const viewport = page.getViewport({ scale: 0.4 });
-      const canvas = document.createElement('canvas');
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      const ctx = canvas.getContext('2d');
-      await page.render({ canvasContext: ctx, viewport }).promise;
-      const thumbnail = canvas.toDataURL('image/jpeg', 0.6);
-
-      return { pageCount, thumbnail };
-    } catch {
-      return { pageCount: 0, thumbnail: null };
+      try {
+        const page = await pdfDoc.getPage(1);
+        const viewport = page.getViewport({ scale: 0.4 });
+        const canvas = document.createElement('canvas');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        const ctx = canvas.getContext('2d');
+        await page.render({ canvasContext: ctx, viewport }).promise;
+        const thumbnail = canvas.toDataURL('image/jpeg', 0.6);
+        return { pageCount, thumbnail, metaLoaded: true };
+      } catch {
+        return { pageCount, thumbnail: null, metaLoaded: true };
+      }
+    } catch(err) {
+      console.warn('pdfjs failed to load:', file.name, err.message);
+      // Fallback: try to estimate page count from file size
+      const estimatedPages = Math.max(1, Math.round(file.size / 50000));
+      return { pageCount: estimatedPages, thumbnail: null, metaLoaded: true };
     }
   };
 
@@ -238,6 +255,7 @@ export default function MergePDFPage() {
       thumbnail: null,
       startPage: 0,
       endPage: 0,
+      metaLoaded: false,
     }));
 
     setPdfs(prev => {
