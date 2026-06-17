@@ -70,6 +70,11 @@ def html_to_pdf():
         WK_FLAGS = [
             '--quiet',
             '--page-size', 'A4',
+            '--orientation', 'Portrait',
+            '--margin-top', '10mm',
+            '--margin-bottom', '10mm',
+            '--margin-left', '10mm',
+            '--margin-right', '10mm',
             '--encoding', 'UTF-8',
             '--enable-local-file-access',
             '--print-media-type',
@@ -77,7 +82,10 @@ def html_to_pdf():
             '--load-error-handling', 'ignore',
             '--load-media-error-handling', 'ignore',
             '--javascript-delay', '500',
-            '--image-quality', '80',
+            '--image-quality', '92',
+            '--dpi', '150',
+            '--zoom', '1',
+            '--minimum-font-size', '6',
         ]
 
         def run_wkhtmltopdf(source):

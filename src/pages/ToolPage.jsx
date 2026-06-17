@@ -116,6 +116,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
   const [errorMsg, setErrorMsg] = useState('');
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
   const [queuePosition, setQueuePosition] = useState(null);
+  const [isDownloading, setIsDownloading] = useState(false);
   const fileInputRef = useRef(null);
   const progressIntervalRef = useRef(null);
 
@@ -259,7 +260,8 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
   };
 
   const handleDownload = async () => {
-    if (!processedUrl) return;
+    if (!processedUrl || isDownloading) return;
+    setIsDownloading(true);
     try {
       const token = localStorage.getItem('pdfmaster_token');
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
@@ -280,6 +282,8 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
       toast.success('File downloaded successfully!');
     } catch (err) {
       toast.error('Download failed. Please try again.');
+    } finally {
+      setIsDownloading(false);
     }
   };
 
@@ -472,10 +476,28 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
                   onClick={handleDownload}
-                  className="flex-1 py-4 bg-[#378ADD] hover:bg-[#2b71b8] text-white rounded-2xl text-base font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2.5"
+                  disabled={isDownloading}
+                  className={clsx(
+                    'flex-1 py-4 text-white rounded-2xl text-base font-semibold shadow-md transition-all flex items-center justify-center gap-2.5',
+                    isDownloading
+                      ? 'bg-[#2b71b8] cursor-not-allowed opacity-90'
+                      : 'bg-[#378ADD] hover:bg-[#2b71b8] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0'
+                  )}
                 >
-                  <iconify-icon icon="solar:download-minimalistic-bold" class="text-xl"></iconify-icon>
-                  Download
+                  {isDownloading ? (
+                    <>
+                      <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                      </svg>
+                      Preparing download...
+                    </>
+                  ) : (
+                    <>
+                      <iconify-icon icon="solar:download-minimalistic-bold" class="text-xl"></iconify-icon>
+                      Download
+                    </>
+                  )}
                 </button>
                 <button
                   onClick={handleReset}
