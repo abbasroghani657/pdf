@@ -52,6 +52,77 @@ def pdf_to_docx():
             try: os.remove(p)
             except: pass
 
+# ── HTML → PDF (WeasyPrint or subprocess wkhtmltopdf fallback) ──────────────
+@app.route('/html-to-pdf', methods=['POST'])
+def html_to_pdf():
+    job_id = str(uuid.uuid4())
+    output_path = os.path.join(UPLOAD_DIR, f'{job_id}_output.pdf')
+    input_path = None
+
+    try:
+        url = request.form.get('url', '').strip()
+
+        if url:
+            # ── URL mode: use wkhtmltopdf or weasyprint ──────────────────────
+            # Try wkhtmltopdf first (best quality for URLs)
+            import shutil
+            wk = shutil.which('wkhtmltopdf')
+            if wk:
+                result = subprocess.run(
+                    [wk, '--quiet', '--disable-smart-shrinking',
+                     '--page-size', 'A4', '--encoding', 'UTF-8', url, output_path],
+                    timeout=60, capture_output=True
+                )
+                if result.returncode != 0:
+                    raise Exception(f'wkhtmltopdf failed: {result.stderr.decode()}')
+            else:
+                # Fallback: weasyprint
+                try:
+                    from weasyprint import HTML
+                    HTML(url=url).write_pdf(output_path)
+                except ImportError:
+                    raise Exception('Neither wkhtmltopdf nor weasyprint is installed on the server.')
+        else:
+            # ── File mode: HTML file upload ──────────────────────────────────
+            if 'file' not in request.files:
+                return jsonify({'error': 'No file or URL provided'}), 400
+            file = request.files['file']
+            input_path = os.path.join(UPLOAD_DIR, f'{job_id}_input.html')
+            file.save(input_path)
+
+            import shutil
+            wk = shutil.which('wkhtmltopdf')
+            if wk:
+                result = subprocess.run(
+                    [wk, '--quiet', '--disable-smart-shrinking',
+                     '--page-size', 'A4', '--encoding', 'UTF-8', input_path, output_path],
+                    timeout=60, capture_output=True
+                )
+                if result.returncode != 0:
+                    raise Exception(f'wkhtmltopdf failed: {result.stderr.decode()}')
+            else:
+                try:
+                    from weasyprint import HTML
+                    HTML(filename=input_path).write_pdf(output_path)
+                except ImportError:
+                    raise Exception('Neither wkhtmltopdf nor weasyprint is installed on the server.')
+
+        return send_file(
+            output_path,
+            as_attachment=True,
+            download_name='converted.pdf',
+            mimetype='application/pdf'
+        )
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        for p in [input_path, output_path]:
+            if p:
+                try: os.remove(p)
+                except: pass
+
+
 # ── OCR fallback: Scanned PDF → XLSX via Tesseract ───────────────────────────
 def ocr_pdf_to_xlsx(input_path, output_path):
     """Use OCR to extract data from scanned/image PDFs into Excel."""

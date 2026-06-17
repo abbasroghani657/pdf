@@ -541,29 +541,45 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
         break;
       }
 
-      // ── GOTENBERG: Office → PDF (FREE ✅) ─────────────────────
+      // ── GOTENBERG: Office → PDF (Word, Excel, PowerPoint) ─────────────────
       case 'Word to PDF':
       case 'Excel to PDF':
-      case 'PowerPoint to PDF':
-      case 'HTML to PDF': {
-        console.log(`  → 🐳 Gotenberg (LibreOffice/Chromium): ${tool}`);
-        if (req.body.url) {
-          const urlForm = new FormData();
-          urlForm.append('url', req.body.url);
-          const urlRes = await fetch(`${GOTENBERG_URL}/forms/chromium/convert/url`, {
-            method: 'POST', body: urlForm, headers: urlForm.getHeaders()
-          });
-          if (!urlRes.ok) throw new Error(`Gotenberg Error (${urlRes.status}): ${await urlRes.text()}`);
-          processedBuffer = Buffer.from(await urlRes.arrayBuffer());
-        } else {
-          processedBuffer = await convertToPdfWithGotenberg(file.path, file.originalname);
-        }
+      case 'PowerPoint to PDF': {
+        console.log(`  → 🐳 Gotenberg (LibreOffice): ${tool}`);
+        processedBuffer = await convertToPdfWithGotenberg(file.path, file.originalname);
         newFilename = `${baseName}.pdf`;
         contentType = 'application/pdf';
         break;
       }
 
-      // ── GOTENBERG: Multiple Images → One Combined PDF (FREE ✅) ──────────
+      // ── HTML → PDF (via Python WeasyPrint/wkhtmltopdf) ───────────────────
+      case 'HTML to PDF': {
+        console.log(`  → 🐍 Python Converter: HTML/URL → PDF`);
+        const htmlForm = new FormData();
+        if (req.body.url) {
+          // URL mode — just pass the URL
+          htmlForm.append('url', req.body.url);
+        } else {
+          // File mode — pass the HTML file
+          htmlForm.append('file', fs.createReadStream(file.path), file.originalname);
+        }
+        const htmlRes = await fetch(`${CONVERTER_URL}/html-to-pdf`, {
+          method: 'POST',
+          body: htmlForm,
+          headers: htmlForm.getHeaders(),
+          signal: AbortSignal.timeout(90000), // 90s timeout for slow pages
+        });
+        if (!htmlRes.ok) {
+          const errText = await htmlRes.text();
+          throw new Error(`HTML to PDF Error (${htmlRes.status}): ${errText}`);
+        }
+        processedBuffer = Buffer.from(await htmlRes.arrayBuffer());
+        newFilename = `${baseName}.pdf`;
+        contentType = 'application/pdf';
+        break;
+      }
+
+      // ── GOTENBERG: Office → PDF (Word, Excel, PowerPoint) ─────────────────
       case 'JPG to PDF': {
         console.log(`  → 🐳 Gotenberg: ${files.length} image(s) → combined PDF`);
         const imgForm = new FormData();
