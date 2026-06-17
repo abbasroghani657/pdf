@@ -52,7 +52,7 @@ def pdf_to_docx():
             try: os.remove(p)
             except: pass
 
-# ── HTML → PDF (WeasyPrint or subprocess wkhtmltopdf fallback) ──────────────
+# ── HTML → PDF (wkhtmltopdf with WeasyPrint fallback) ───────────────────────
 @app.route('/html-to-pdf', methods=['POST'])
 def html_to_pdf():
     job_id = str(uuid.uuid4())
@@ -60,52 +60,57 @@ def html_to_pdf():
     input_path = None
 
     try:
+        import shutil
         url = request.form.get('url', '').strip()
+        wk = shutil.which('wkhtmltopdf')
+
+        # Shared fast wkhtmltopdf flags
+        WK_FLAGS = [
+            '--quiet',
+            '--disable-smart-shrinking',
+            '--page-size', 'A4',
+            '--encoding', 'UTF-8',
+            '--no-stop-slow-scripts',
+            '--load-error-handling', 'ignore',
+            '--load-media-error-handling', 'ignore',
+            '--javascript-delay', '500',   # wait 500ms for JS, not 2000ms default
+            '--image-quality', '80',
+        ]
 
         if url:
-            # ── URL mode: use wkhtmltopdf or weasyprint ──────────────────────
-            # Try wkhtmltopdf first (best quality for URLs)
-            import shutil
-            wk = shutil.which('wkhtmltopdf')
+            # ── URL mode ──────────────────────────────────────────────────────
             if wk:
                 result = subprocess.run(
-                    [wk, '--quiet', '--disable-smart-shrinking',
-                     '--page-size', 'A4', '--encoding', 'UTF-8', url, output_path],
-                    timeout=60, capture_output=True
+                    [wk] + WK_FLAGS + [url, output_path],
+                    timeout=180, capture_output=True
                 )
                 if result.returncode != 0:
-                    raise Exception(f'wkhtmltopdf failed: {result.stderr.decode()}')
-            else:
-                # Fallback: weasyprint
-                try:
+                    # fallback to weasyprint on wkhtmltopdf error
                     from weasyprint import HTML
                     HTML(url=url).write_pdf(output_path)
-                except ImportError:
-                    raise Exception('Neither wkhtmltopdf nor weasyprint is installed on the server.')
+            else:
+                from weasyprint import HTML
+                HTML(url=url).write_pdf(output_path)
         else:
-            # ── File mode: HTML file upload ──────────────────────────────────
+            # ── File mode ─────────────────────────────────────────────────────
             if 'file' not in request.files:
                 return jsonify({'error': 'No file or URL provided'}), 400
             file = request.files['file']
             input_path = os.path.join(UPLOAD_DIR, f'{job_id}_input.html')
             file.save(input_path)
 
-            import shutil
-            wk = shutil.which('wkhtmltopdf')
             if wk:
                 result = subprocess.run(
-                    [wk, '--quiet', '--disable-smart-shrinking',
-                     '--page-size', 'A4', '--encoding', 'UTF-8', input_path, output_path],
-                    timeout=60, capture_output=True
+                    [wk] + WK_FLAGS + [input_path, output_path],
+                    timeout=180, capture_output=True
                 )
                 if result.returncode != 0:
-                    raise Exception(f'wkhtmltopdf failed: {result.stderr.decode()}')
-            else:
-                try:
+                    # fallback to weasyprint
                     from weasyprint import HTML
                     HTML(filename=input_path).write_pdf(output_path)
-                except ImportError:
-                    raise Exception('Neither wkhtmltopdf nor weasyprint is installed on the server.')
+            else:
+                from weasyprint import HTML
+                HTML(filename=input_path).write_pdf(output_path)
 
         return send_file(
             output_path,
