@@ -1,19 +1,15 @@
 /**
  * Shared pdfjs-dist setup utility.
  * Import this ONCE at the top of any component that uses pdfjs.
- * 
- * Uses the Vite ?url import to get the correct hashed worker URL in production.
+ *
+ * Sets up the worker using a CDN URL built from the INSTALLED version
+ * so the main library and worker always match exactly.
  */
 import * as pdfjsLib from 'pdfjs-dist';
-import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
-try {
-  pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
-} catch (e) {
-  // CDN fallback matching the installed pdfjs-dist version
-  pdfjsLib.GlobalWorkerOptions.workerSrc =
-    `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
-}
+// Use CDN worker URL built from installed version — guaranteed to match
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 export { pdfjsLib };
 export default pdfjsLib;
