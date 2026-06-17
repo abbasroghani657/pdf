@@ -1,14 +1,9 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
-import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
+// pdfjs legacy — uses Vite ?url worker for correct production builds
+import { pdfjsLib } from '../utils/pdfjs-legacy-setup.js';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
-  import.meta.url
-).toString();
-
 export default function SigningPage() {
   const { isPro } = useAuth();
   const { token } = useParams();
@@ -647,3 +642,4 @@ export default function SigningPage() {
     </div>
   );
 }
+

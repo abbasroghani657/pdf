@@ -5,12 +5,8 @@ import { useAuth } from '../contexts/AuthContext';
 import UpgradeModal from '../components/UpgradeModal';
 import { useToolSession } from '../hooks/useToolSession';
 
-// ── pdfjs setup ──────────────────────────────────────────────────────────────
-import * as pdfjsLib from 'pdfjs-dist';
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).href;
+// pdfjs — uses Vite ?url worker for correct production builds
+import { pdfjsLib } from '../utils/pdfjs-setup.js';
 
 
 // ── Thumbnail ─────────────────────────────────────────────────────────────────
@@ -405,3 +401,4 @@ export default function RotatePagesPage() {
     </div>
   );
 }
+

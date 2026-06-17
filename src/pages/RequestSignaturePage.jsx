@@ -5,12 +5,8 @@ import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import UpgradeModal from '../components/UpgradeModal';
 import { useToolSession } from '../hooks/useToolSession';
-import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
-  import.meta.url
-).toString();
+// pdfjs legacy — uses Vite ?url worker for correct production builds
+import { pdfjsLib } from '../utils/pdfjs-legacy-setup.js';
 
 function formatFileSize(bytes) {
   if (bytes === 0) return '0 B';
@@ -751,3 +747,4 @@ EMAIL_FROM_NAME=TheyLovePDF`}</pre>
     </div>
   );
 }
+

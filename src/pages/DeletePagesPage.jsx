@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+﻿import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { PDFDocument } from 'pdf-lib';
 import { TOOLS_DATA } from '../data/tools';
 import { useAuth } from '../contexts/AuthContext';
@@ -6,11 +6,7 @@ import UpgradeModal from '../components/UpgradeModal';
 import { useToolSession } from '../hooks/useToolSession';
 
 // ── pdfjs setup ──────────────────────────────────────────────────────────────
-import * as pdfjsLib from 'pdfjs-dist';
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).href;
+import { pdfjsLib } from '../utils/pdfjs-setup.js';
 
 
 // ── Page Canvas ───────────────────────────────────────────────────────────────
@@ -491,3 +487,4 @@ export default function DeletePagesPage() {
     </div>
   );
 }
+

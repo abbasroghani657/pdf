@@ -4,12 +4,8 @@ import { clsx } from 'clsx';
 import { useAuth } from '../contexts/AuthContext';
 import UpgradeModal from '../components/UpgradeModal';
 import { useToolSession } from '../hooks/useToolSession';
-import * as pdfjsLib from 'pdfjs-dist';
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).href;
+// pdfjs — uses Vite ?url worker for correct production builds
+import { pdfjsLib } from '../utils/pdfjs-setup.js';
 
 function formatFileSize(bytes) {
   if (!bytes || bytes === 0) return '0 B';
@@ -475,3 +471,4 @@ export default function SplitPagesPage() {
     </div>
   );
 }
+
