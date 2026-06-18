@@ -1,3 +1,6 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
@@ -563,7 +566,7 @@ export default function WatermarkPDFPage() {
               <div className="w-24 h-24 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6"><iconify-icon icon="solar:stamp-bold" class="text-5xl"></iconify-icon></div>
               <h2 className="text-2xl font-bold mb-2 text-center text-gray-900">Add Watermark</h2>
               <p className="text-center text-gray-500 mb-8 px-4 text-sm">Stamp text or image onto your PDF instantly.</p>
-              <button onClick={() => fileInputRef.current.click()} className="w-full bg-indigo-600 text-white font-bold text-lg py-4 rounded-2xl shadow-lg">Select PDF File</button>
+              <button onClick={() => fileInputRef.current.click()} className="w-full bg-indigo-600 text-white font-bold text-lg py-4 rounded-2xl shadow-lg">{lang === 'es' ? 'Seleccionar archivo PDF' : 'Select PDF File'}</button>
            </div>
          )}
          

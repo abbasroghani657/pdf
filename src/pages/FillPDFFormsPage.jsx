@@ -1,3 +1,6 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';

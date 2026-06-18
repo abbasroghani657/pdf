@@ -1,3 +1,6 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import UpgradeModal from '../components/UpgradeModal';
@@ -729,7 +732,7 @@ export default function EditPDFPage() {
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 shadow-sm bg-white text-indigo-600 group-hover:scale-110 group-hover:shadow-md">
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
-              <p className="text-xl font-bold text-gray-900 mb-1">Drag & drop your PDF here</p>
+              <p className="text-xl font-bold text-gray-900 mb-1">{lang === 'es' ? 'Arrastra y suelta tu PDF aquí' : 'Drag & drop your PDF here'}</p>
               <p className="text-sm text-gray-500 mb-6">or click to browse — PDF only, up to 2GB (Free for Testing)</p>
               <span className="bg-indigo-600 text-white hover:bg-indigo-700 rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-indigo-500/30 transition-all pointer-events-none">
                 Select PDF File

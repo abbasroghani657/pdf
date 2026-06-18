@@ -1,6 +1,9 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 ﻿import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { PDFDocument } from 'pdf-lib';
-import { TOOLS_DATA } from '../data/tools';
+
 import { useAuth } from '../contexts/AuthContext';
 import UpgradeModal from '../components/UpgradeModal';
 import { useToolSession } from '../hooks/useToolSession';

@@ -78,6 +78,11 @@ export default function ToolRenderer({ lang = 'en' }) {
   const tool = toolDataList[enToolIndex];
   
   const localizedTitle = tool?.title;
+
+  const Component = customTools[toolSlug] 
+    ? React.cloneElement(customTools[toolSlug], { lang, toolSlug }) 
+    : <ToolPage lang={lang} hideSEO={true} />;
+    
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
   const currentUrl = `/tools/${toolSlug}${platform ? '/' + platform : ''}`;
@@ -93,7 +98,6 @@ export default function ToolRenderer({ lang = 'en' }) {
     answer: injectPlatformContext(faq.answer, platform)
   }));
 
-  const Component = customTools[toolSlug] || <ToolPage lang={lang} hideSEO={true} />;
 
   return (
     <div className="flex flex-col min-h-screen relative">

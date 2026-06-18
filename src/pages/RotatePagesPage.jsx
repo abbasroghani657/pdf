@@ -1,3 +1,6 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { PDFDocument, degrees } from 'pdf-lib';
 import { clsx } from 'clsx';

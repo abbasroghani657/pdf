@@ -1,3 +1,6 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
@@ -291,7 +294,7 @@ export default function CertificateSignPage() {
               <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <iconify-icon icon="solar:upload-bold" width="24"></iconify-icon>
               </div>
-              <p className="text-base font-bold text-gray-700">Select PDF File</p>
+              <p className="text-base font-bold text-gray-700">{lang === 'es' ? 'Seleccionar archivo PDF' : 'Select PDF File'}</p>
               <p className="text-xs text-gray-400 mt-1">Maximum file size: 10MB (Free) / 1GB (Pro)</p>
             </label>
           </div>

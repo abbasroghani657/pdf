@@ -455,9 +455,9 @@ export default function App() {
         <div className="hidden lg:flex border-b border-gray-200/70 bg-white/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-center gap-10 w-full">
             {[
-              { label: 'MERGE PDF', path: '/tools/merge-pdf' },
-              { label: 'SPLIT PDF', path: '/tools/split-pdf' },
-              { label: 'COMPRESS PDF', path: '/tools/compress-pdf' },
+              { label: isEs ? 'UNIR PDF' : 'MERGE PDF', path: '/tools/merge-pdf' },
+              { label: isEs ? 'DIVIDIR PDF' : 'SPLIT PDF', path: '/tools/split-pdf' },
+              { label: isEs ? 'COMPRIMIR PDF' : 'COMPRESS PDF', path: '/tools/compress-pdf' },
             ].map(link => (
               <button
                 key={link.path}
@@ -473,14 +473,14 @@ export default function App() {
             
             <div className="relative group h-full flex items-center">
               <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3">
-                CONVERT PDF
+                {isEs ? 'CONVERTIR PDF' : 'CONVERT PDF'}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover:rotate-180"></iconify-icon>
               </button>
 
               <div className="absolute top-[48px] left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-6 flex gap-8">
                 {/* Column 1 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">CONVERT TO PDF</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-1">
                     {[
                       { name: 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
@@ -505,7 +505,7 @@ export default function App() {
 
                 {/* Column 2 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">CONVERT FROM PDF</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-1">
                     {[
                       { name: 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
@@ -535,15 +535,15 @@ export default function App() {
                 onClick={() => handleNavClick('/')}
                 className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3"
               >
-                ALL PDF TOOLS
+                {isEs ? 'TODAS LAS HERRAMIENTAS' : 'ALL PDF TOOLS'}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover/all:rotate-180"></iconify-icon>
               </button>
 
               <div className="absolute top-[48px] right-0 w-[900px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover/all:opacity-100 group-hover/all:visible transition-all duration-200 z-50 p-6 flex gap-6">
                 
-                {/* Column 1: ORGANIZE & OPTIMIZE */}
+                {/* Column 1: {isEs ? 'ORGANIZAR Y OPTIMIZAR' : 'ORGANIZE & OPTIMIZE'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">ORGANIZE & OPTIMIZE</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'ORGANIZAR Y OPTIMIZAR' : 'ORGANIZE & OPTIMIZE'}</p>
                   <div className="space-y-0.5">
                     {organizeOptimizeTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -556,9 +556,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Column 2: CONVERT TO PDF */}
+                {/* Column 2: {isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">CONVERT TO PDF</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-0.5 mb-6">
                     {convertToTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -569,7 +569,7 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">AI TOOLS</p>
+                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">{isEs ? 'HERRAMIENTAS IA' : 'AI TOOLS'}</p>
                   <div className="space-y-0.5">
                     {aiTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-purple-50 transition-colors text-left group/item">
@@ -582,9 +582,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Column 3: CONVERT FROM PDF */}
+                {/* Column 3: {isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">CONVERT FROM PDF</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-0.5">
                     {convertFromTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -597,9 +597,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Column 4: EDIT & SECURITY */}
+                {/* Column 4: {isEs ? 'EDICIÓN Y SEGURIDAD' : 'EDIT & SECURITY'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">EDIT & SECURITY</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'EDICIÓN Y SEGURIDAD' : 'EDIT & SECURITY'}</p>
                   <div className="space-y-0.5">
                     {editSignSecurityTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">

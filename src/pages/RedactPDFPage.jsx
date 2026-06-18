@@ -1,3 +1,6 @@
+import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
+import { slugify } from '../utils/slugify';
 import React, { useState, useRef } from 'react';
 import { EyeSlashIcon, DocumentArrowUpIcon, DocumentIcon, CheckCircleIcon, SparklesIcon, TrashIcon, AdjustmentsHorizontalIcon, PhoneIcon, EnvelopeIcon, IdentificationIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 import { clsx } from 'clsx';
