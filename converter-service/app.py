@@ -823,6 +823,7 @@ def repair_pdf():
             gs_cmd = [
                 'gs', '-dNOPAUSE', '-dBATCH', '-sDEVICE=pdfwrite',
                 '-dPDFSETTINGS=/default', 
+                '-dColorConversionStrategy=/LeaveColorUnchanged',
                 f'-sOutputFile={output_path}', input_path
             ]
             subprocess.run(gs_cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=120)
@@ -833,6 +834,7 @@ def repair_pdf():
             gs_cmd = [
                 'gs', '-dNOPAUSE', '-dBATCH', '-sDEVICE=pdfwrite',
                 '-dPDFSETTINGS=/printer', '-dPrinted=false',
+                '-dColorConversionStrategy=/LeaveColorUnchanged',
                 '-dCompatibilityLevel=1.4', 
                 f'-sOutputFile={output_path}', input_path
             ]
@@ -845,6 +847,7 @@ def repair_pdf():
             gs_cmd = [
                 'gs', '-dNOPAUSE', '-dBATCH', '-sDEVICE=pdfwrite',
                 '-dPDFSETTINGS=/screen',
+                '-dColorConversionStrategy=/LeaveColorUnchanged',
                 f'-sOutputFile={output_path}', input_path
             ]
             subprocess.run(gs_cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=120)
