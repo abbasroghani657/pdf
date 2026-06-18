@@ -62,7 +62,13 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
     tools: filteredTools.filter(t => t.category === section.id),
   })).filter(s => s.tools.length > 0);
 
-  const openTool = (tool) => navigate('/tools/' + slugify(tool.title));
+  const openTool = (tool) => {
+    const toolIndex = toolDataList.findIndex(t => t === tool);
+    const enTool = TOOLS_DATA[toolIndex];
+    const slug = slugify(enTool ? enTool.title : tool.title);
+    const prefix = lang === 'es' ? '/es' : '';
+    navigate(`${prefix}/tools/${slug}`);
+  };
 
   const isSearching = searchQuery.trim().length > 0;
 
