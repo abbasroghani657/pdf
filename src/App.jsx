@@ -278,6 +278,7 @@ export default function App() {
   };
 
   const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : location.pathname;
+  const isEs = location.pathname.startsWith('/es');
 
   const isHome = pathToCheck === '/';
   const isPricing = pathToCheck === '/pricing';
@@ -643,17 +644,22 @@ export default function App() {
           <div className="relative max-w-4xl mx-auto px-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4">
               {isHome && (
-                <> The most powerful<br className="hidden sm:block" />
-                  <span className="gradient-text"> PDF toolkit</span> free</>
+                isEs ? (
+                  <> El kit de herramientas PDF<br className="hidden sm:block" />
+                    <span className="gradient-text"> más potente</span> gratis</>
+                ) : (
+                  <> The most powerful<br className="hidden sm:block" />
+                    <span className="gradient-text"> PDF toolkit</span> free</>
+                )
               )}
-              {isPricing && 'Simple, transparent pricing'}
-              {isCompare && 'TheyLovePDF vs Competitors'}
+              {isPricing && (isEs ? 'Precios simples y transparentes' : 'Simple, transparent pricing')}
+              {isCompare && (isEs ? 'TheyLovePDF vs Competidores' : 'TheyLovePDF vs Competitors')}
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
-              {isHome && '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.'}
-              {isPricing && 'Get more done with TheyLovePDF Pro. No hidden fees, cancel anytime.'}
-              {isCompare && 'Why millions are switching to the faster, smarter, and more affordable alternative.'}
+              {isHome && (isEs ? 'Más de 37 herramientas. Desarrollado por IA. Sin límites en el nivel gratuito. Confiado por profesionales de todo el mundo.' : '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.')}
+              {isPricing && (isEs ? 'Haga más con TheyLovePDF Pro. Sin cargos ocultos, cancele en cualquier momento.' : 'Get more done with TheyLovePDF Pro. No hidden fees, cancel anytime.')}
+              {isCompare && (isEs ? 'Por qué millones están cambiando a la alternativa más rápida, inteligente y asequible.' : 'Why millions are switching to the faster, smarter, and more affordable alternative.')}
             </p>
 
             {isHome && (
@@ -688,7 +694,7 @@ export default function App() {
                 </div>
                 <input
                   type="text"
-                  placeholder="Search tools... compress, merge, sign..."
+                  placeholder={isEs ? 'Buscar herramientas... comprimir, unir, firmar...' : 'Search tools... compress, merge, sign...'}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-white border border-gray-200 rounded-full py-3 pl-11 pr-10 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] shadow-sm transition-all"

@@ -2,6 +2,7 @@ import { useAuth } from '../contexts/AuthContext';
 import React, { useState } from 'react';
 import { clsx } from 'clsx';
 import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
 import { slugify } from '../utils/slugify';
 import { useNavigate } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -40,12 +41,14 @@ const SECTION_ORDER = [
   { id: 'ai',       title: 'AI-Powered Tools',   desc: 'Intelligent automation for your documents' },
 ];
 
-export default function HomePage({ searchQuery, setSearchQuery }) {
+export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
   const { isPro } = useAuth();
   const [activeCategory, setActiveCategory] = useState('all');
   const navigate = useNavigate();
 
-  const filteredTools = TOOLS_DATA.filter(tool => {
+  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
+
+  const filteredTools = toolDataList.filter(tool => {
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
     const matchesSearch =
       tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -63,13 +66,28 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
 
   const isSearching = searchQuery.trim().length > 0;
 
+  const translatedCategories = CATEGORIES.map(c => {
+    if (lang !== 'es') return c;
+    const labels = {
+      'all': 'Todas',
+      'convert': 'Convertir',
+      'organize': 'Organizar',
+      'optimize': 'Optimizar',
+      'security': 'Seguridad',
+      'edit': 'Editar',
+      'sign': 'Firmar',
+      'ai': 'IA Tools'
+    };
+    return { ...c, label: labels[c.id] };
+  });
+
   return (
     <div className="space-y-6">
       <SEOHead />
 
       {/* ── Category Filter Tabs ─────────────────────────────────────────────── */}
       <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
-        {CATEGORIES.map(tab => (
+        {translatedCategories.map(tab => (
           <button
             key={tab.id}
             onClick={() => setActiveCategory(tab.id)}
@@ -96,7 +114,7 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
           {filteredTools.length > 0 ? (
             <>
               <p className="text-sm text-gray-500">
-                <span className="font-semibold text-gray-900">{filteredTools.length}</span> tools found for "<span className="text-[#378ADD]">{searchQuery}</span>"
+                <span className="font-semibold text-gray-900">{filteredTools.length}</span> {lang === 'es' ? 'herramientas encontradas para' : 'tools found for'} "<span className="text-[#378ADD]">{searchQuery}</span>"
               </p>
               <div className="tools-grid">
                 {filteredTools.map((tool, idx) => (
@@ -105,7 +123,7 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
               </div>
             </>
           ) : (
-            <EmptyState setSearchQuery={setSearchQuery} setActiveCategory={setActiveCategory} />
+            <EmptyState setSearchQuery={setSearchQuery} setActiveCategory={setActiveCategory} lang={lang} />
           )}
         </>
       )}
@@ -116,11 +134,11 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
           {filteredTools.length > 0 ? (
             <div className="tools-grid">
               {filteredTools.map((tool, idx) => (
-                <ToolCard key={idx} tool={tool} onClick={() => openTool(tool)} />
+                <ToolCard key={idx} tool={tool} onClick={() => openTool(tool)} lang={lang} />
               ))}
             </div>
           ) : (
-            <EmptyState setSearchQuery={setSearchQuery} setActiveCategory={setActiveCategory} />
+            <EmptyState setSearchQuery={setSearchQuery} setActiveCategory={setActiveCategory} lang={lang} />
           )}
         </>
       )}
@@ -137,11 +155,13 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
         <div className="relative">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-xs font-bold text-white mb-4 border border-white/20">
             <iconify-icon icon="solar:stars-bold" class="text-yellow-300 text-sm"></iconify-icon>
-            PRO PLAN
+            PLAN PRO
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Ready for unlimited power?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            {lang === 'es' ? '¿Listo para un poder ilimitado?' : 'Ready for unlimited power?'}
+          </h2>
           <p className="text-blue-100 text-sm mb-7 max-w-md mx-auto">
-            Unlock all 37+ tools, 2GB file sizes, batch processing, API access, and zero ads for just $4.99/month.
+            {lang === 'es' ? 'Desbloquee más de 37 herramientas, tamaños de archivo de 2 GB, procesamiento por lotes, acceso API y cero anuncios por solo $4.99/mes.' : 'Unlock all 37+ tools, 2GB file sizes, batch processing, API access, and zero ads for just $4.99/month.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
@@ -149,14 +169,14 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#378ADD] font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg text-sm hover:-translate-y-0.5 active:translate-y-0"
             >
               <iconify-icon icon="solar:crown-bold" class="text-base text-amber-500"></iconify-icon>
-              View Pricing
+              {lang === 'es' ? 'Ver Precios' : 'View Pricing'}
             </button>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-sm"
             >
               <iconify-icon icon="solar:play-bold" class="text-base"></iconify-icon>
-              Try free — no card needed
+              {lang === 'es' ? 'Pruébalo gratis — no requiere tarjeta' : 'Try free — no card needed'}
             </button>
           </div>
           {/* Trust pills */}
@@ -180,7 +200,7 @@ export default function HomePage({ searchQuery, setSearchQuery }) {
 }
 
 // ── Tool Card Component (Exact iLovePDF Style) ────────────────────────────────
-function ToolCard({ tool, onClick }) {
+function ToolCard({ tool, onClick, lang }) {
   const gradient = CATEGORY_GRADIENTS[tool.category];
   const iconColor = gradient ? gradient.from : '#378ADD';
 
@@ -233,19 +253,19 @@ function ToolCard({ tool, onClick }) {
 }
 
 // ── Empty State ───────────────────────────────────────────────────────────────
-function EmptyState({ setSearchQuery, setActiveCategory }) {
+function EmptyState({ setSearchQuery, setActiveCategory, lang }) {
   return (
     <div className="py-20 text-center bg-white rounded-2xl border border-gray-100 shadow-sm">
       <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
         <iconify-icon icon="solar:file-remove-bold-duotone" class="text-3xl text-gray-400"></iconify-icon>
       </div>
-      <h3 className="text-base font-bold text-gray-900">No tools found</h3>
-      <p className="text-sm text-gray-500 mt-1">Try a different search term or category.</p>
+      <h3 className="text-base font-bold text-gray-900">{lang === 'es' ? 'No se encontraron herramientas' : 'No tools found'}</h3>
+      <p className="text-sm text-gray-500 mt-1">{lang === 'es' ? 'Pruebe con un término de búsqueda o categoría diferente.' : 'Try a different search term or category.'}</p>
       <button
         onClick={() => { setSearchQuery(''); setActiveCategory('all'); }}
         className="mt-5 px-5 py-2 bg-[#378ADD] text-white text-xs font-bold rounded-xl hover:bg-[#2b71b8] transition-colors shadow-sm"
       >
-        Clear filters
+        {lang === 'es' ? 'Borrar filtros' : 'Clear filters'}
       </button>
     </div>
   );
