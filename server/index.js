@@ -818,22 +818,16 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
             throw new Error(errMsg);
           }
           
-          // Set headers for the repaired file
-          res.set({
-            'Content-Type': 'application/pdf',
-            'Content-Disposition': `attachment; filename="${baseName}_repaired.pdf"`,
-            'Access-Control-Expose-Headers': 'Content-Disposition'
-          });
-
-          // Read response into buffer and send directly
-          const buffer = Buffer.from(await resp.arrayBuffer());
-          res.send(buffer);
-          console.log(`  ✅ Python repair sent.`);
-          return; // Crucial: exit early as we've already sent the response via pipe
+          processedBuffer = Buffer.from(await resp.arrayBuffer());
+          console.log(`  ✅ Python repair done.`);
         } catch (err) {
           console.log(`  ⚠️  Python failed (${err.message}).`);
           throw new Error(`Repair failed: ${err.message}`);
         }
+
+        newFilename = `${baseName}_repaired.pdf`;
+        contentType = 'application/pdf';
+        break;
       }
 
       // ── OCR PDF (Python Tesseract) ────────────────────────────────────────────
