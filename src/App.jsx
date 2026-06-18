@@ -267,15 +267,16 @@ export default function App() {
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, [location.pathname, location.key, navType]);
 
-  const handleNavClick = (path) => {
-    // If we are currently in Spanish context and navigating to a tool route, preserve /es prefix
-    let finalPath = path;
+  const getNavPath = (path) => {
     if (location.pathname.startsWith('/es/') || location.pathname === '/es') {
-      if (path.startsWith('/tools/')) {
-        finalPath = `/es${path}`;
-      }
+      if (path === '/') return '/es';
+      if (!path.startsWith('/es')) return `/es${path}`;
     }
-    navigate(finalPath);
+    return path;
+  };
+
+  const handleNavClick = (path) => {
+    navigate(getNavPath(path));
   };
 
   const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : location.pathname;
@@ -801,9 +802,9 @@ export default function App() {
             </div>
 
             {[
-              { title: 'Tools', links: [{ label: 'Merge PDF', path: '/tools/merge-pdf' }, { label: 'Split PDF', path: '/tools/split-pdf' }, { label: 'Compress PDF', path: '/tools/compress-pdf' }, { label: 'PDF to Word', path: '/tools/pdf-to-word' }, { label: 'Sign PDF', path: '/tools/sign-pdf' }, { label: 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: 'Company', links: [{ label: 'About Us', path: '/about' }, { label: 'Contact', path: '/contact' }, { label: 'Pricing', path: '/pricing' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
-              { title: 'Legal', links: [{ label: 'Privacy Policy', path: '/privacy' }, { label: 'Terms of Service', path: '/terms' }] },
+              { title: isEs ? 'Herramientas' : 'Tools', links: [{ label: isEs ? 'Unir PDF' : 'Merge PDF', path: '/tools/merge-pdf' }, { label: isEs ? 'Dividir PDF' : 'Split PDF', path: '/tools/split-pdf' }, { label: isEs ? 'Comprimir PDF' : 'Compress PDF', path: '/tools/compress-pdf' }, { label: isEs ? 'PDF a Word' : 'PDF to Word', path: '/tools/pdf-to-word' }, { label: isEs ? 'Firmar PDF' : 'Sign PDF', path: '/tools/sign-pdf' }, { label: isEs ? 'Editar PDF' : 'Edit PDF', path: '/tools/edit-pdf' }] },
+              { title: isEs ? 'Compañía' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : 'Pricing', path: '/pricing' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
+              { title: isEs ? 'Legal' : 'Legal', links: [{ label: isEs ? 'Política de privacidad' : 'Privacy Policy', path: '/privacy' }, { label: isEs ? 'Términos de servicio' : 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>
                 <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">{col.title}</p>
@@ -811,7 +812,7 @@ export default function App() {
                   {col.links.map((link, j) => (
                     <li key={j}>
                       {link.path.startsWith('/') ? (
-                        <Link to={link.path} className="text-sm text-gray-500 hover:text-[#378ADD] transition-colors">{link.label}</Link>
+                        <Link to={getNavPath(link.path)} className="text-sm text-gray-500 hover:text-[#378ADD] transition-colors">{link.label}</Link>
                       ) : (
                         <a href={link.path} className="text-sm text-gray-500 hover:text-[#378ADD] transition-colors">{link.label}</a>
                       )}
@@ -844,11 +845,11 @@ export default function App() {
         style={{ display: pathToCheck.startsWith('/tools/') || pathToCheck.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}
       >
         {[
-          { label: 'Home', icon: 'solar:home-linear', path: '/' },
-          { label: 'Merge', icon: 'solar:layers-linear', path: '/tools/merge-pdf' },
-          { label: 'Sign', icon: 'solar:pen-linear', path: '/tools/sign-pdf' },
-          { label: 'AI Chat', icon: 'solar:chat-round-linear', path: '/tools/chat-with-pdf' },
-          { label: 'More', icon: 'solar:hamburger-menu-linear', path: null },
+          { label: isEs ? 'Inicio' : 'Home', icon: 'solar:home-linear', path: '/' },
+          { label: isEs ? 'Unir' : 'Merge', icon: 'solar:layers-linear', path: '/tools/merge-pdf' },
+          { label: isEs ? 'Firmar' : 'Sign', icon: 'solar:pen-linear', path: '/tools/sign-pdf' },
+          { label: isEs ? 'Chat de IA' : 'AI Chat', icon: 'solar:chat-round-linear', path: '/tools/chat-with-pdf' },
+          { label: isEs ? 'Más' : 'More', icon: 'solar:hamburger-menu-linear', path: null },
         ].map(item => (
           item.path ? (
             <button
