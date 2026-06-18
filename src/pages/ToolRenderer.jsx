@@ -73,34 +73,17 @@ export default function ToolRenderer({ lang = 'en' }) {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
 
+  const enToolIndex = TOOLS_DATA.findIndex(t => slugify(t.title) === toolSlug);
   const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
-  const tool = toolDataList.find(t => slugify(t.title) === toolSlug);
+  const tool = toolDataList[enToolIndex];
   
-  const esTitles = {
-    'Merge PDF': 'Unir PDF',
-    'Split PDF': 'Dividir PDF',
-    'Compress PDF': 'Comprimir PDF',
-    'PDF to Word': 'PDF a Word',
-    'Word to PDF': 'Word a PDF',
-    'PDF to JPG': 'PDF a JPG',
-    'JPG to PDF': 'JPG a PDF',
-    'Edit PDF': 'Editar PDF',
-    'Sign PDF': 'Firmar PDF',
-    'Watermark PDF': 'Marca de agua PDF',
-    'Unlock PDF': 'Desbloquear PDF',
-    'Extract Data': 'Extraer datos',
-    'Translate PDF': 'Traducir PDF',
-    'Chat with PDF': 'Chatear con PDF',
-    'Plagiarism Check': 'Comprobar plagio'
-  };
-
-  const localizedTitle = lang === 'es' ? (esTitles[tool?.title] || tool?.title) : tool?.title;
+  const localizedTitle = tool?.title;
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
   const currentUrl = `/tools/${toolSlug}${platform ? '/' + platform : ''}`;
 
   const dynamicSteps = (tool?.howToSteps || [
-    `Select or drag and drop your file into the ${tool?.title} tool.`,
+    `Select or drag and drop your file into the ${localizedTitle} tool.`,
     `Click on the process button.`,
     `Download your processed file.`
   ]).map(step => injectPlatformContext(step, platform));

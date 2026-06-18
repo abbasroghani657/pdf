@@ -4,6 +4,7 @@ import UpgradeModal from '../components/UpgradeModal';
 import { clsx } from 'clsx';
 import { saveAs } from 'file-saver';
 import { TOOLS_DATA } from '../data/tools';
+import { TOOLS_DATA_ES } from '../data/tools-es';
 import { slugify } from '../utils/slugify';
 import { processWithQueue } from '../utils/queueApi';
 import { toast } from 'react-hot-toast';
@@ -55,25 +56,6 @@ function injectPlatformContext(text, platform) {
 
 import { useTranslation } from 'react-i18next';
 
-// ─── TOOL TITLE TRANSLATION DICTIONARY ─────────────────────────────────────────
-const esTitles = {
-  'Merge PDF': 'Unir PDF',
-  'Split PDF': 'Dividir PDF',
-  'Compress PDF': 'Comprimir PDF',
-  'PDF to Word': 'PDF a Word',
-  'Word to PDF': 'Word a PDF',
-  'PDF to JPG': 'PDF a JPG',
-  'JPG to PDF': 'JPG a PDF',
-  'Edit PDF': 'Editar PDF',
-  'Sign PDF': 'Firmar PDF',
-  'Watermark PDF': 'Marca de agua PDF',
-  'Unlock PDF': 'Desbloquear PDF',
-  'Extract Data': 'Extraer datos',
-  'Translate PDF': 'Traducir PDF',
-  'Chat with PDF': 'Chatear con PDF',
-  'Plagiarism Check': 'Comprobar plagio'
-};
-
 export default function ToolPage({ lang = 'en', hideSEO = false }) {
   const { toolSlug, platform } = useParams();
   const navigate = useNavigate();
@@ -84,23 +66,25 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
   
-  const tool = TOOLS_DATA.find((t) => slugify(t.title) === toolSlug);
+  const toolIndex = TOOLS_DATA.findIndex((t) => slugify(t.title) === toolSlug);
+  const tool = TOOLS_DATA[toolIndex];
+  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
+  const displayTool = toolDataList[toolIndex];
 
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   
-  // Dynamic Translation Logic
-  const localizedTitle = lang === 'es' ? (esTitles[tool?.title] || tool?.title) : tool?.title;
+  const localizedTitle = displayTool?.title;
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
 
-  const dynamicSteps = (tool?.howToSteps || [
-    `Select or drag and drop your file into the ${tool?.title} tool.`,
+  const dynamicSteps = (displayTool?.howToSteps || [
+    `Select or drag and drop your file into the ${localizedTitle} tool.`,
     'Wait a few seconds while our secure cloud servers process your file.',
     'Once completed, download your newly processed file instantly.'
   ]).map(step => injectPlatformContext(step, platform));
 
-  const dynamicFaqs = (tool?.faqs || [
-    { question: `Is it safe to use the ${tool?.title} tool?`, answer: `Yes, absolutely. We use 256-bit SSL encryption to ensure your files are completely secure. All files are automatically deleted from our servers within 2 hours.` },
-    { question: `Do I need to install any software?`, answer: `No. TheyLovePDF is a cloud-based platform. You can use our ${tool?.title} tool directly from your web browser on any device, including Windows, Mac, iOS, and Android.` },
+  const dynamicFaqs = (displayTool?.faqs || [
+    { question: `Is it safe to use the ${localizedTitle} tool?`, answer: `Yes, absolutely. We use 256-bit SSL encryption to ensure your files are completely secure. All files are automatically deleted from our servers within 2 hours.` },
+    { question: `Do I need to install any software?`, answer: `No. TheyLovePDF is a cloud-based platform. You can use our ${localizedTitle} tool directly from your web browser on any device, including Windows, Mac, iOS, and Android.` },
     { question: `Are there any limits on file size?`, answer: `Free users can process files up to 10MB. If you need to process larger files (up to 2GB), you can upgrade to our Pro plan.` }
   ]).map(faq => ({
     question: injectPlatformContext(faq.question, platform),
@@ -305,7 +289,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
         <SEOHead 
           lang={lang}
           title={`${displayTitle} Online`} 
-          description={tool?.desc || ''} 
+          description={displayTool?.desc || ''} 
           url={`/tools/${toolSlug}${platform ? '/' + platform : ''}`} 
           toolName={displayTitle}
           howToSteps={dynamicSteps}
@@ -318,7 +302,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
             <iconify-icon icon={tool.icon} class="text-4xl"></iconify-icon>
           </div>
           <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{displayTitle}</h1>
-          <p className="text-gray-500 max-w-lg mx-auto text-sm">{tool.desc}</p>
+          <p className="text-gray-500 max-w-lg mx-auto text-sm">{displayTool?.desc}</p>
         </div>
 
       <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden w-full max-w-4xl mx-auto">
@@ -363,7 +347,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
               >
                 {t('chooseFile')}
               </button>
-              <PrivacyBadge />
+              <PrivacyBadge lang={lang} />
             </div>
             {tool.title === 'HTML to PDF' && (
               <div className="mt-6 border-t border-gray-100 pt-6">
