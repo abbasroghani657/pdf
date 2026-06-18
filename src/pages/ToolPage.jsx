@@ -351,7 +351,9 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
             </div>
             {tool.title === 'HTML to PDF' && (
               <div className="mt-6 border-t border-gray-100 pt-6">
-                <p className="text-sm font-bold text-gray-700 mb-3 text-center">OR ENTER A WEBPAGE URL</p>
+                <p className="text-sm font-bold text-gray-700 mb-3 text-center">
+                  {lang === 'es' ? 'O INGRESE UNA URL WEB' : 'OR ENTER A WEBPAGE URL'}
+                </p>
                 <div className="flex gap-3 max-w-lg mx-auto">
                   <input
                     type="url"
@@ -366,7 +368,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                     disabled={!urlInput.trim()}
                     className="px-6 py-3 bg-[#378ADD] text-white font-semibold rounded-xl disabled:opacity-50 hover:bg-[#2b71b8] transition-colors"
                   >
-                    Convert
+                    {lang === 'es' ? 'Convertir' : 'Convert'}
                   </button>
                 </div>
               </div>
@@ -418,7 +420,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-base font-semibold text-gray-900 truncate">
-                    {selectedFiles.length > 1 ? `${selectedFiles.length} files` : selectedFiles[0]?.name}
+                    {selectedFiles.length > 1 ? t('filesCount', { count: selectedFiles.length }) : selectedFiles[0]?.name}
                   </p>
                   <p className="text-sm text-gray-500 mt-0.5">
                     {formatFileSize(selectedFiles.reduce((acc, f) => acc + f.size, 0))}
@@ -430,7 +432,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <div className="flex items-center justify-between text-sm font-medium">
                   <span className="text-gray-600 flex items-center gap-2">
                     <span className="pulse-dot w-2.5 h-2.5 bg-[#378ADD] rounded-full inline-block"></span>
-                    {queuePosition ? `You are #${queuePosition} in queue...` : 'Processing...'}
+                    {queuePosition ? t('inQueue', { count: queuePosition }) : t('processingMsg')}
                   </span>
                   <span className="text-[#378ADD] text-lg font-bold">{Math.round(progress)}%</span>
                 </div>
@@ -441,7 +443,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                   />
                 </div>
                 <p className="text-xs text-gray-400 font-medium pt-1">
-                  {progress < 30 ? 'Uploading & validating file...' : progress < 60 ? 'Analyzing document structure...' : progress < 85 ? 'Applying transformation...' : 'Finalizing output...'}
+                  {progress < 30 ? t('uploadingValidating') : progress < 60 ? t('analyzingDoc') : progress < 85 ? t('applyingTransform') : t('finalizingOutput')}
                 </p>
               </div>
             </div>
@@ -454,8 +456,8 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <iconify-icon icon="solar:check-circle-bold" class="text-5xl text-emerald-500"></iconify-icon>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">Done! Your file is ready.</p>
-                <p className="text-sm text-gray-500 mt-2">File will be automatically deleted in 2 hours for privacy.</p>
+                <p className="text-xl font-bold text-gray-900">{t('doneReady')}</p>
+                <p className="text-sm text-gray-500 mt-2">{t('autoDeletePrivacy')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
@@ -474,12 +476,12 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                       </svg>
-                      Preparing download...
+                      {t('preparingDownload')}
                     </>
                   ) : (
                     <>
                       <iconify-icon icon="solar:download-minimalistic-bold" class="text-xl"></iconify-icon>
-                      Download
+                      {t('downloadBtn')}
                     </>
                   )}
                 </button>
@@ -487,7 +489,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                   onClick={handleReset}
                   className="flex-1 py-4 border-2 border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 rounded-2xl text-base font-semibold transition-all"
                 >
-                  Process another
+                  {t('processAnother')}
                 </button>
               </div>
             </div>
@@ -500,8 +502,8 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <iconify-icon icon="solar:close-circle-bold" class="text-5xl text-red-500"></iconify-icon>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">Something went wrong</p>
-                <p className="text-sm text-gray-500 mt-2">{errorMsg}</p>
+                <p className="text-xl font-bold text-gray-900">{t('errorTitle')}</p>
+                <p className="text-sm text-red-500 mt-2 max-w-sm mx-auto">{errorMsg}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button

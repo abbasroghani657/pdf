@@ -19,7 +19,20 @@ const resources = {
       "autoDeleted": "Auto-deleted in 2h",
       "private": "Private",
       "tryAgain": "Try again",
-      "goPro": "Go Pro (1GB)"
+      "goPro": "Go Pro (1GB)",
+      "filesCount": "{{count}} files",
+      "inQueue": "You are #{{count}} in queue...",
+      "processingMsg": "Processing...",
+      "uploadingValidating": "Uploading & validating file...",
+      "analyzingDoc": "Analyzing document structure...",
+      "applyingTransform": "Applying transformation...",
+      "finalizingOutput": "Finalizing output...",
+      "doneReady": "Done! Your file is ready.",
+      "autoDeletePrivacy": "File will be automatically deleted in 2 hours for privacy.",
+      "preparingDownload": "Preparing download...",
+      "downloadBtn": "Download",
+      "processAnother": "Process another",
+      "errorTitle": "Oops! Something went wrong."
     }
   },
   es: {
@@ -38,7 +51,20 @@ const resources = {
       "autoDeleted": "Eliminación automática en 2h",
       "private": "Privado",
       "tryAgain": "Intentar de nuevo",
-      "goPro": "Hazte Pro (1GB)"
+      "goPro": "Hazte Pro (1GB)",
+      "filesCount": "{{count}} archivos",
+      "inQueue": "Estás en la posición #{{count}} en la fila...",
+      "processingMsg": "Procesando...",
+      "uploadingValidating": "Subiendo y validando el archivo...",
+      "analyzingDoc": "Analizando la estructura del documento...",
+      "applyingTransform": "Aplicando transformación...",
+      "finalizingOutput": "Finalizando el proceso...",
+      "doneReady": "¡Listo! Tu archivo está preparado.",
+      "autoDeletePrivacy": "El archivo se eliminará automáticamente en 2 horas por privacidad.",
+      "preparingDownload": "Preparando la descarga...",
+      "downloadBtn": "Descargar",
+      "processAnother": "Procesar otro",
+      "errorTitle": "¡Vaya! Algo salió mal."
     }
   }
 };
