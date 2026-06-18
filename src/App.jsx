@@ -737,6 +737,17 @@ export default function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/pdf-trends-2026" element={<PDFTrendsPage />} />
+
+            {/* Spanish Static Routes */}
+            <Route path="/es" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="es" />} />
+            <Route path="/es/pricing" element={<PricingPage lang="es" />} />
+            <Route path="/es/compare" element={<ComparePage lang="es" />} />
+            <Route path="/es/about" element={<AboutPage lang="es" />} />
+            <Route path="/es/contact" element={<ContactPage lang="es" />} />
+            <Route path="/es/privacy" element={<PrivacyPage lang="es" />} />
+            <Route path="/es/terms" element={<TermsPage lang="es" />} />
+            <Route path="/es/pdf-trends-2026" element={<PDFTrendsPage lang="es" />} />
+
             <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
             <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
             <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
