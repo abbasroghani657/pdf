@@ -10,7 +10,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 import UpgradeModal from '../components/UpgradeModal';
 
-export default function WatermarkPDFPage() {
+export default function WatermarkPDFPage({ lang = 'en' }) {
   const [file, setFile] = useState(null);
   const [fileBytes, setFileBytes] = useState(null);
   const [pdfDoc, setPdfDoc] = useState(null);

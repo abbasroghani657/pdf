@@ -29,7 +29,7 @@ const LANGUAGES = [
   'Welsh', 'Xhosa', 'Yiddish', 'Yoruba', 'Zulu'
 ];
 
-export default function TranslatePDFPage() {
+export default function TranslatePDFPage({ lang = 'en' }) {
   const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);

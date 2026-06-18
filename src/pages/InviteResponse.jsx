@@ -70,7 +70,7 @@ const STATES = {
   },
 };
 
-export default function InviteResponse() {
+export default function InviteResponse({ lang = 'en' }) {
   const [searchParams] = useSearchParams();
   const statusKey = searchParams.get('status') || 'error';
   const role = searchParams.get('role') || 'admin';

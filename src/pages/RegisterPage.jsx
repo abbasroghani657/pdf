@@ -12,7 +12,7 @@ import CountrySelector from '../components/CountrySelector';
 
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
-export default function RegisterPage() {
+export default function RegisterPage({ lang = 'en' }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');

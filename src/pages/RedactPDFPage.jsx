@@ -11,7 +11,7 @@ import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 
-export default function RedactPDFPage() {
+export default function RedactPDFPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);

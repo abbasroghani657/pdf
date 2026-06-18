@@ -22,7 +22,7 @@ const POSITIONS = [
   { id: 'bottom-right', label: 'Bottom-Right', icon: '↘️' }
 ];
 
-export default function PageNumbersPage() {
+export default function PageNumbersPage({ lang = 'en' }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [step, setStep] = useState('UPLOAD'); // UPLOAD, FORMAT, POSITION, TYPO, NUMBERING, PREVIEW, PROCESSING, SUCCESS
   

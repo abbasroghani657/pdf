@@ -58,7 +58,7 @@ const FLATTEN_MODES = [
   },
 ];
 
-export default function FlattenPDFPage() {
+export default function FlattenPDFPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [state, setState] = useState('idle');
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);

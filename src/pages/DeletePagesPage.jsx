@@ -110,7 +110,7 @@ function Thumbnail({ pdfDoc, pageNum, marked, onToggle, onClick }) {
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function DeletePagesPage() {
+export default function DeletePagesPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const tool = TOOLS_DATA.find(t => t.title === 'Delete pages');
 

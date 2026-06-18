@@ -27,7 +27,7 @@ const SIGNER_COLORS = [
   'bg-rose-500 border-rose-600 text-rose-50'
 ];
 
-export default function RequestSignaturePage() {
+export default function RequestSignaturePage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
 

@@ -102,7 +102,7 @@ function Thumbnail({ pdfDoc, pageNum, rotation, isSelected, onRotatePage, onSele
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function RotatePagesPage() {
+export default function RotatePagesPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [phase, setPhase] = useState('idle'); // idle | loading | editor | processing | done | error
   const [fileName, setFileName] = useState('');

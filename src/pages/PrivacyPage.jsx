@@ -4,7 +4,7 @@ import { slugify } from '../utils/slugify';
 import { useAuth } from '../contexts/AuthContext';
 import React from 'react';
 
-export default function PrivacyPage() {
+export default function PrivacyPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 md:py-20 animate-fade-in font-sans">

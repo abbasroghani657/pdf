@@ -107,7 +107,7 @@ function InsertButton({ onInsert, position }) {
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function BlankPagesPage() {
+export default function BlankPagesPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [phase, setPhase] = useState('idle'); // idle | loading | editor | processing | done | error
   const [fileName, setFileName] = useState('');

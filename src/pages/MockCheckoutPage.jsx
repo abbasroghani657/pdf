@@ -7,7 +7,7 @@ import { useAuth } from '../contexts/AuthContext';
 import api from '../utils/api';
 import { toast } from 'react-hot-toast';
 
-export default function MockCheckoutPage() {
+export default function MockCheckoutPage({ lang = 'en' }) {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get('session_id');
   const plan = searchParams.get('plan') || 'monthly';

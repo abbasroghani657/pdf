@@ -8,7 +8,7 @@ import api from '../utils/api';
 import { toast } from 'react-hot-toast';
 import Logo from '../components/Logo';
 
-export default function ForgotPasswordPage() {
+export default function ForgotPasswordPage({ lang = 'en' }) {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);

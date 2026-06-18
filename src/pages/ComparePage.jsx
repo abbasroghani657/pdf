@@ -7,7 +7,7 @@ import { clsx } from 'clsx';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../components/Logo';
 
-export default function ComparePage() {
+export default function ComparePage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
 

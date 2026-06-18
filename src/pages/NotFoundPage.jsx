@@ -4,7 +4,7 @@ import { slugify } from '../utils/slugify';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function NotFoundPage() {
+export default function NotFoundPage({ lang = 'en' }) {
   const navigate = useNavigate();
 
   return (

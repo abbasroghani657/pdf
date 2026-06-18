@@ -19,7 +19,7 @@ const LANGUAGES = [
   'Russian', 'Portuguese', 'Italian', 'Dutch', 'Turkish', 'Bengali', 'Punjabi', 'Tamil', 'Telugu', 'Marathi'
 ];
 
-export default function SummarizePDFPage() {
+export default function SummarizePDFPage({ lang = 'en' }) {
   const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);

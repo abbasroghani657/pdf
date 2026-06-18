@@ -177,7 +177,7 @@ const SearchableLanguageSelect = ({ value, onChange }) => {
   );
 };
 
-export default function OCRPage() {
+export default function OCRPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);

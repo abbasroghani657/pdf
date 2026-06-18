@@ -25,7 +25,7 @@ const MOCK_PROFILE = {
   city: 'Peshawar'
 };
 
-export default function FillPDFFormsPage() {
+export default function FillPDFFormsPage({ lang = 'en' }) {
   const [file, setFile] = useState(null);
   const [fileBytes, setFileBytes] = useState(null);
   

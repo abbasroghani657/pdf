@@ -60,7 +60,7 @@ const LEVELS = [
   }
 ];
 
-export default function CompressPage() {
+export default function CompressPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error

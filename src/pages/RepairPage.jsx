@@ -49,7 +49,7 @@ const LEVELS = [
   }
 ];
 
-export default function RepairPage() {
+export default function RepairPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error

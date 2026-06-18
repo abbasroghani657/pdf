@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { pdfjsLib } from '../utils/pdfjs-legacy-setup.js';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
-export default function SigningPage() {
+export default function SigningPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const { token } = useParams();
   const [step, setStep] = useState('LOADING'); // LOADING -> ERROR -> VIEW -> SIGN -> ADJUST -> DONE

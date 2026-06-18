@@ -22,7 +22,7 @@ const COUNTRIES = [
 ];
 
 
-export default function DashboardPage() {
+export default function DashboardPage({ lang = 'en' }) {
   const { user, isPro, logout, upgradeToPro, updateProfile, uploadAvatar, downgradeToFree } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');

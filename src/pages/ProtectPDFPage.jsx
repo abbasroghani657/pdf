@@ -11,7 +11,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 import { processWithQueue } from '../utils/queueApi';
 
-export default function ProtectPDFPage() {
+export default function ProtectPDFPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);

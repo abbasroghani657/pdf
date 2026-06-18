@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import api from '../utils/api';
 import { toast } from 'react-hot-toast';
 
-export default function ResetPasswordPage() {
+export default function ResetPasswordPage({ lang = 'en' }) {
   const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');

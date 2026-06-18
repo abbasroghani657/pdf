@@ -12,7 +12,7 @@ import PDFViewer from '../components/ChatPDF/PDFViewer';
 import ChatPanel from '../components/ChatPDF/ChatPanel';
 import { PDFAIEngine } from '../components/ChatPDF/PDFAIEngine';
 
-export default function ChatPDFPage() {
+export default function ChatPDFPage({ lang = 'en' }) {
   const [file, setFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [progress, setProgress] = useState(0);

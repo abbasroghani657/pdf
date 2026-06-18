@@ -190,7 +190,7 @@ function SummaryBar({ pdfs }) {
 }
 
 // ── MAIN PAGE ──────────────────────────────────────────────────────────────────
-export default function MergePDFPage() {
+export default function MergePDFPage({ lang = 'en' }) {
   const navigate = useNavigate();
   const [pdfs, setPdfs] = useState([]);
   const [step, setStep] = useState(1);

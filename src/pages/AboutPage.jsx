@@ -4,7 +4,7 @@ import { slugify } from '../utils/slugify';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-export default function AboutPage() {
+export default function AboutPage({ lang = 'en' }) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16 animate-fade-in">
       <SEOHead 

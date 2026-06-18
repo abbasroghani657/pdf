@@ -4,7 +4,7 @@ import { slugify } from '../utils/slugify';
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 
-export default function AcceptInvite() {
+export default function AcceptInvite({ lang = 'en' }) {
   const { token } = useParams();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();

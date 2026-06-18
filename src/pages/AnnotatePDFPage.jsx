@@ -15,7 +15,7 @@ import PropertiesPanel from '../components/AnnotatePDF/PropertiesPanel';
 import MobileBottomSheet from '../components/AnnotatePDF/MobileBottomSheet';
 import CommentThread from '../components/AnnotatePDF/CommentThread';
 
-export default function AnnotatePDFPage() {
+export default function AnnotatePDFPage({ lang = 'en' }) {
   const [file, setFile] = useState(null);
   const [activeTool, setActiveTool] = useState('select');
   const [selectedAnnotation, setSelectedAnnotation] = useState(null);
@@ -305,9 +305,9 @@ export default function AnnotatePDFPage() {
               <input {...getInputProps()} />
               <div className="text-5xl mb-4">📄</div>
               <p className="text-xl font-semibold text-gray-900 mb-1">
-                {isDragActive ? 'Drop it here!' : 'Drop your PDF here'}
+                {isDragActive ? (lang === 'es' ? '¡Suéltalo aquí!' : 'Drop it here!') : (lang === 'es' ? 'Arrastra tu PDF aquí' : 'Drop your PDF here')}
               </p>
-              <p className="text-gray-400 mb-6">or click to browse</p>
+              <p className="text-gray-400 mb-6">{lang === 'es' ? 'o haz clic para buscar' : 'or click to browse'}</p>
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-md shadow-indigo-500/30 inline-block">
                 Choose PDF File
               </span>
@@ -315,7 +315,7 @@ export default function AnnotatePDFPage() {
 
             {/* Feature pills */}
             <div className="flex flex-wrap gap-2 justify-center pt-2">
-              {['🖍️ Highlight', '✍️ Draw', '📌 Sticky Note', '💬 Comment', '🔷 Shapes', '↩️ Undo/Redo'].map(f => (
+              {(lang === 'es' ? ['🖍️ Resaltar', '✍️ Dibujar', '📌 Nota', '💬 Comentario', '🔷 Formas', '↩️ Deshacer/Rehacer'] : ['🖍️ Highlight', '✍️ Draw', '📌 Sticky Note', '💬 Comment', '🔷 Shapes', '↩️ Undo/Redo']).map(f => (
                 <span key={f} className="bg-white border border-gray-200 rounded-full px-3 py-1 text-sm text-gray-600 shadow-sm">{f}</span>
               ))}
             </div>

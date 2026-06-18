@@ -280,7 +280,7 @@ function DataPanel({ extractStatus, progress, extractedData, confidence, onExpor
 }
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
-export default function ExtractDataPage() {
+export default function ExtractDataPage({ lang = 'en' }) {
   const [file, setFile]           = useState(null);
   const [mobileTab, setMobileTab] = useState('config');
   const [docType, setDocType]     = useState('invoice');

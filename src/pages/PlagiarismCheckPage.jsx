@@ -14,7 +14,7 @@ import { toast } from 'react-hot-toast';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
-export default function PlagiarismCheckPage() {
+export default function PlagiarismCheckPage({ lang = 'en' }) {
   const [file, setFile] = useState(null);
   const [step, setStep] = useState(1); // 1: Upload, 2: Options, 3: Scanning, 4: Results
   const [progress, setProgress] = useState(0);

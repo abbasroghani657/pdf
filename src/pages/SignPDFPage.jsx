@@ -11,7 +11,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerSrc;
 
 const STEPS = ['Upload', 'Signature', 'Place', 'Sign'];
 
-export default function SignPDFPage() {
+export default function SignPDFPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [step, setStep] = useState(0);
   const [file, setFile] = useState(null);

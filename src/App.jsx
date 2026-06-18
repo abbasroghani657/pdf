@@ -380,10 +380,10 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-1">
             {[
-              { path: '/', label: 'Home' },
-              { path: '/tools', label: 'Tools' },
-              { path: '/pricing', label: 'Pricing' },
-              { path: '/compare', label: 'Why Us?' },
+              { path: '/', label: isEs ? 'Inicio' : 'Home' },
+              { path: '/tools', label: isEs ? 'Herramientas' : 'Tools' },
+              { path: '/pricing', label: isEs ? 'Precios' : 'Pricing' },
+              { path: '/compare', label: isEs ? '¿Por qué nosotros?' : 'Why Us?' },
             ].map(item => (
               <button
                 key={item.path}
@@ -413,7 +413,7 @@ export default function App() {
                     </div>
                   )}
                   <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    {user.profile?.name || 'Dashboard'}
+                    {user.profile?.name || (isEs ? 'Panel' : 'Dashboard')}
                   </span>
                 </div>
                 {['admin', 'superadmin'].includes(user.profile?.role) && (
@@ -423,20 +423,19 @@ export default function App() {
                     title="Admin Panel"
                   >
                     <iconify-icon icon="solar:shield-keyhole-bold" class="text-sm"></iconify-icon>
-                    Admin
-                  </button>
+                    {isEs ? 'Administrador' : 'Admin'}</button>
                 )}
                 <button onClick={logout} className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors">
-                  Logout
+                  {isEs ? 'Cerrar sesión' : 'Logout'}
                 </button>
               </div>
             ) : (
               <>
                 <button onClick={() => handleNavClick('/login')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
-                  Sign in
+                  {isEs ? 'Iniciar sesión' : 'Sign in'}
                 </button>
                 <button onClick={() => handleNavClick('/register')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
-                  Sign up
+                  {isEs ? 'Registrarse' : 'Sign up'}
                 </button>
               </>
             )}
@@ -665,12 +664,12 @@ export default function App() {
             {isHome && (
               <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
                 {[
-                  { icon: 'solar:stars-linear', label: 'AI powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
-                  { icon: 'solar:widget-5-linear', label: '37+ tools', cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
-                  { icon: 'solar:user-cross-linear', label: 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
-                  { icon: 'solar:shield-check-linear', label: '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:devices-linear', label: 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:cloud-bold', label: 'Fast & Secure', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
+                  { icon: 'solar:stars-linear', label: isEs ? 'Con IA' : 'AI powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
+                  { icon: 'solar:widget-5-linear', label: isEs ? 'Más de 37 herramientas' : '37+ tools', cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
+                  { icon: 'solar:user-cross-linear', label: isEs ? 'Sin registro' : 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
+                  { icon: 'solar:shield-check-linear', label: isEs ? 'SSL de 256 bits' : '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
+                  { icon: 'solar:devices-linear', label: isEs ? 'Todos los dispositivos' : 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
+                  { icon: 'solar:cloud-bold', label: isEs ? 'Rápido y seguro' : 'Fast & Secure', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
                 ].map((pill, i) => (
                   <span
                     key={i}

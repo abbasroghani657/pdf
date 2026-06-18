@@ -18,7 +18,7 @@ function formatFileSize(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
-export default function SplitPagesPage() {
+export default function SplitPagesPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const fileInputRef = useRef(null);

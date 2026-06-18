@@ -41,7 +41,7 @@ const CUSTOM_FONTS = {
 
 const ALL_FONTS = Object.keys(CUSTOM_FONTS);
 
-export default function EditPDFPage() {
+export default function EditPDFPage({ lang = 'en' }) {
   // ----- Core State -----
   const [file, setFile] = useState(null);
   const [fileBytes, setFileBytes] = useState(null);

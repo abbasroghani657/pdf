@@ -81,7 +81,7 @@ function Thumbnail({ pdfDoc, pageNum, orderIndex, draggedIdx, dragOverIdx, onDra
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function ReorderPagesPage() {
+export default function ReorderPagesPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const [phase, setPhase] = useState('idle'); // idle | loading | editor | processing | done | error
   const [fileName, setFileName] = useState('');

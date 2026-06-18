@@ -37,7 +37,7 @@ const COLORS = [
   { id: 'white', value: '#FFFFFF', label: 'White' },
 ];
 
-export default function AddTextPage() {
+export default function AddTextPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error

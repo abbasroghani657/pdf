@@ -7,7 +7,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { clsx } from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function PricingPage() {
+export default function PricingPage({ lang = 'en' }) {
   const { user, isPro, upgradeToPro } = useAuth();
   const [isAnnual, setIsAnnual] = useState(true);
   const navigate = useNavigate();

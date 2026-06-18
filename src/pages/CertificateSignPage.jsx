@@ -11,7 +11,7 @@ import UpgradeModal from '../components/UpgradeModal';
 import Logo from '../components/Logo';
 import { useToolSession } from '../hooks/useToolSession';
 
-export default function CertificateSignPage() {
+export default function CertificateSignPage({ lang = 'en' }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
 
