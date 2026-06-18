@@ -749,6 +749,20 @@ def compress_pdf():
 
         # ── Return result ─────────────────────────────────────────────────────
         compressed_size = os.path.getsize(output_path)
+        
+        if compressed_size >= original_size:
+            response = send_file(
+                input_path,
+                as_attachment=True,
+                download_name='compressed.pdf',
+                mimetype='application/pdf'
+            )
+            response.headers['X-Original-Size']   = str(original_size)
+            response.headers['X-Compressed-Size'] = str(original_size)
+            response.headers['X-Reduction-Pct']   = '0'
+            response.headers['Access-Control-Expose-Headers'] = 'X-Original-Size, X-Compressed-Size, X-Reduction-Pct'
+            return response
+
         reduction_pct   = round((1 - compressed_size / original_size) * 100, 1) if original_size > 0 else 0
 
         response = send_file(

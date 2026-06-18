@@ -11,7 +11,7 @@ import { useToolSession } from '../hooks/useToolSession';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function formatFileSize(bytes) {
-  if (!bytes || bytes === 0) return '0 B';
+  if (!bytes || bytes <= 0) return '0 B';
   const k = 1024;
   const sizes = ['B', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -407,7 +407,7 @@ export default function CompressPage() {
                   <div className="h-2.5 bg-green-200/50 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-green-500 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${100 - reduction}%` }}
+                      style={{ width: `${reduction}%` }}
                     />
                   </div>
                   <p className="text-xs text-gray-500 font-medium mt-3 text-center">
@@ -420,7 +420,7 @@ export default function CompressPage() {
                 <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3 mt-5">
                   <iconify-icon icon="solar:info-circle-bold" class="text-amber-500 text-xl shrink-0 mt-0.5"></iconify-icon>
                   <p className="text-sm text-amber-800 font-medium">
-                    Is PDF mein compress karne layak content kam hai (jaise text-only PDF). Images hoti toh size zyada kam hota.
+                    This PDF has limited compression potential (text-only content). PDFs with images compress significantly more.
                   </p>
                 </div>
               )}

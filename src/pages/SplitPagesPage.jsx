@@ -204,7 +204,7 @@ export default function SplitPagesPage() {
     
     // Check blob type to determine if it's a ZIP or a single PDF
     const ext = processedBlob.type === 'application/zip' ? '.zip' : '.pdf';
-    a.download = `pdfmaster_split_${selectedFile.name.replace('.pdf', '')}${ext}`;
+    a.download = `TheyLovePDF_split_${selectedFile.name.replace('.pdf', '')}${ext}`;
     
     document.body.appendChild(a);
     a.click();
