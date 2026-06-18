@@ -825,9 +825,10 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
             'Access-Control-Expose-Headers': 'Content-Disposition'
           });
 
-          // Pipe the stream directly to the response
-          resp.body.pipe(res);
-          console.log(`  ✅ Python repair streaming started.`);
+          // Read response into buffer and send directly
+          const buffer = Buffer.from(await resp.arrayBuffer());
+          res.send(buffer);
+          console.log(`  ✅ Python repair sent.`);
           return; // Crucial: exit early as we've already sent the response via pipe
         } catch (err) {
           console.log(`  ⚠️  Python failed (${err.message}).`);
