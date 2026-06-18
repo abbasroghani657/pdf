@@ -122,12 +122,13 @@ export default function RepairPage() {
     let currentProgress = 0;
     progressRef.current = setInterval(() => {
       currentProgress += Math.random() * 8;
-      if (currentProgress > 40 && progressLabel.includes('Diagnosing')) {
+      
+      if (currentProgress > 70) {
+        setProgressLabel('Recovering content streams...');
+      } else if (currentProgress > 40) {
         setProgressLabel('Rebuilding cross-reference table...');
       }
-      if (currentProgress > 70 && progressLabel.includes('Rebuilding')) {
-        setProgressLabel('Recovering content streams...');
-      }
+      
       if (currentProgress > 90) currentProgress = 90;
       setProgress(currentProgress);
     }, 400);

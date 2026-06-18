@@ -809,7 +809,14 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
             // No signal timeout here, let it run
           });
 
-          if (!resp.ok) throw new Error(`Python service: ${resp.status}`);
+          if (!resp.ok) {
+            let errMsg = `Python service: ${resp.status}`;
+            try {
+              const errData = await resp.json();
+              if (errData?.error) errMsg = errData.error;
+            } catch (_) {}
+            throw new Error(errMsg);
+          }
           
           // Set headers for the repaired file
           res.set({
@@ -824,7 +831,7 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
           return; // Crucial: exit early as we've already sent the response via pipe
         } catch (err) {
           console.log(`  ⚠️  Python failed (${err.message}).`);
-          throw new Error('Repair failed. The PDF might be too severely corrupted.');
+          throw new Error(`Repair failed: ${err.message}`);
         }
       }
 

@@ -800,6 +800,15 @@ def repair_pdf():
     file.save(input_path)
     
     try:
+        # Helper to validate output
+        def validate_output():
+            if not os.path.exists(output_path) or os.path.getsize(output_path) < 100:
+                raise Exception("Output file is empty or invalid")
+            with open(output_path, 'rb') as f:
+                header = f.read(1024)
+                if b'%PDF-' not in header:
+                    raise Exception("Output file is not a valid PDF")
+
         # Step 1: Base attempt based on level
         if level == 'basic':
             # Basic: Fast repair with PyMuPDF
@@ -807,6 +816,7 @@ def repair_pdf():
             doc = fitz.open(input_path, filetype="pdf")
             doc.save(output_path, clean=True, garbage=1)
             doc.close()
+            validate_output()
             
         elif level == 'deep':
             # Deep: Ghostscript default rewrite
@@ -816,16 +826,18 @@ def repair_pdf():
                 f'-sOutputFile={output_path}', input_path
             ]
             subprocess.run(gs_cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=120)
+            validate_output()
             
         elif level == 'full':
-            # Full Recovery: Robust Ghostscript rewrite
+            # Full Recovery: Robust Ghostscript rewrite (Highest Quality)
             gs_cmd = [
                 'gs', '-dNOPAUSE', '-dBATCH', '-sDEVICE=pdfwrite',
-                '-dPDFSETTINGS=/screen', '-dPrinted=false',
+                '-dPDFSETTINGS=/printer', '-dPrinted=false',
                 '-dCompatibilityLevel=1.4', 
                 f'-sOutputFile={output_path}', input_path
             ]
             subprocess.run(gs_cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=120)
+            validate_output()
 
     except Exception as base_err:
         # Step 2: Fallback 1 - Ghostscript basic rewrite
@@ -836,6 +848,7 @@ def repair_pdf():
                 f'-sOutputFile={output_path}', input_path
             ]
             subprocess.run(gs_cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=120)
+            validate_output()
         except Exception:
             # Step 3: Fallback 2 - PyMuPDF force open
             try:
@@ -843,6 +856,7 @@ def repair_pdf():
                 doc = fitz.open(input_path, filetype="pdf")
                 doc.save(output_path, clean=True, garbage=2)
                 doc.close()
+                validate_output()
             except Exception:
                 # Step 4: ULTIMATE FALLBACK - Image-based Reconstruction
                 # If the PDF structure is 100% broken, we try to render pages as images 
@@ -858,6 +872,7 @@ def repair_pdf():
                             output_path, "PDF", resolution=100.0, 
                             save_all=True, append_images=images[1:]
                         )
+                        validate_output()
                     else:
                         raise Exception("No pages could be rendered.")
                 except Exception as final_err:
