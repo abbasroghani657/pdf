@@ -33,6 +33,7 @@ import WatermarkPDFPage from './pages/WatermarkPDFPage';
 import FillPDFFormsPage from './pages/FillPDFFormsPage';
 import PageNumbersPage from './pages/PageNumbersPage';
 import { TOOLS_DATA } from './data/tools';
+import { TOOLS_DATA_ES } from './data/tools-es';
 import { slugify } from './utils/slugify';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -304,11 +305,12 @@ export default function App() {
   // Admin portal: also full-screen, no public navbar/footer
   const isAdminPage = location.pathname.startsWith(PORTAL);
 
-  const organizeOptimizeTools = TOOLS_DATA.filter(t => t.category === 'organize' || t.category === 'optimize');
-  const convertToTools = TOOLS_DATA.filter(t => t.category === 'convert' && t.title.endsWith('to PDF'));
-  const convertFromTools = TOOLS_DATA.filter(t => t.category === 'convert' && t.title.startsWith('PDF to'));
-  const editSignSecurityTools = TOOLS_DATA.filter(t => t.category === 'edit' || t.category === 'sign' || t.category === 'security');
-  const aiTools = TOOLS_DATA.filter(t => t.category === 'ai');
+  const currentToolsData = isEs ? TOOLS_DATA_ES : TOOLS_DATA;
+  const organizeOptimizeTools = currentToolsData.filter(t => t.category === 'organize' || t.category === 'optimize');
+  const convertToTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.endsWith('to PDF') || t.title.endsWith('a PDF')));
+  const convertFromTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.startsWith('PDF to') || t.title.startsWith('PDF a')));
+  const editSignSecurityTools = currentToolsData.filter(t => t.category === 'edit' || t.category === 'sign' || t.category === 'security');
+  const aiTools = currentToolsData.filter(t => t.category === 'ai');
 
 
   return (
@@ -482,11 +484,11 @@ export default function App() {
                   <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-1">
                     {[
-                      { name: 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
+                      { name: isEs ? 'JPG a PDF' : 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: isEs ? 'WORD a PDF' : 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: isEs ? 'POWERPOINT a PDF' : 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: isEs ? 'EXCEL a PDF' : 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: isEs ? 'HTML a PDF' : 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
                     ].map(t => (
                       <button
                         key={t.name}
@@ -507,12 +509,12 @@ export default function App() {
                   <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-1">
                     {[
-                      { name: 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: 'PDF to WORD', path: '/tools/pdf-to-word', icon: 'solar:document-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: 'PDF to POWERPOINT', path: '/tools/pdf-to-powerpoint', icon: 'solar:presentation-graph-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: 'PDF to EXCEL', path: '/tools/pdf-to-excel', icon: 'solar:chart-square-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: 'PDF to PDF/A', path: '/tools/pdf-to-pdf-a', icon: 'solar:shield-check-linear', color: 'text-gray-600 bg-gray-100' },
-                      { name: 'Sign PDF', path: '/tools/sign-pdf', icon: 'solar:pen-linear', color: 'text-violet-600 bg-violet-50' },
+                      { name: isEs ? 'PDF a JPG' : 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: isEs ? 'PDF a WORD' : 'PDF to WORD', path: '/tools/pdf-to-word', icon: 'solar:document-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: isEs ? 'PDF a POWERPOINT' : 'PDF to POWERPOINT', path: '/tools/pdf-to-powerpoint', icon: 'solar:presentation-graph-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: isEs ? 'PDF a EXCEL' : 'PDF to EXCEL', path: '/tools/pdf-to-excel', icon: 'solar:chart-square-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: isEs ? 'PDF a PDF/A' : 'PDF to PDF/A', path: '/tools/pdf-to-pdf-a', icon: 'solar:shield-check-linear', color: 'text-gray-600 bg-gray-100' },
+                      { name: isEs ? 'Firmar PDF' : 'Sign PDF', path: '/tools/sign-pdf', icon: 'solar:pen-linear', color: 'text-violet-600 bg-violet-50' },
                     ].map(t => (
                       <button
                         key={t.name}
