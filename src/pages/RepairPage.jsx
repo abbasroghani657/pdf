@@ -196,7 +196,7 @@ export default function RepairPage() {
     <div className="w-full max-w-5xl mx-auto space-y-6 pt-4 pb-8 animate-in fade-in duration-500">
       <div className="text-center space-y-3 mb-6">
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/20 mb-2">
-          <iconify-icon icon="solar:bandaids-bold" class="text-3xl"></iconify-icon>
+          <iconify-icon icon="solar:wrench-bold" class="text-3xl"></iconify-icon>
         </div>
         <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Repair PDF</h1>
         <p className="text-sm text-gray-500 max-w-2xl mx-auto">
@@ -220,7 +220,7 @@ export default function RepairPage() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Select corrupted PDF</h3>
             <p className="text-sm text-gray-500 mb-6 max-w-sm text-center">
-              Drag and drop your damaged PDF here, or click to browse. Max size 100MB.
+              Drag and drop your damaged PDF here, or click to browse. Max size {isPro ? '2GB' : '10MB'}.
             </p>
             <input type="file" ref={fileInputRef} className="hidden" accept=".pdf" onChange={(e) => handleFileSelect(e.target.files[0])} />
             <button
@@ -282,7 +282,7 @@ export default function RepairPage() {
               onClick={handleRepair}
               className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-base font-bold shadow-sm transition-all hover:shadow-md flex items-center justify-center gap-2"
             >
-              <iconify-icon icon="solar:bandaids-bold" class="text-xl"></iconify-icon>
+              <iconify-icon icon="solar:wrench-bold" class="text-xl"></iconify-icon>
               Repair PDF Now
             </button>
           </div>
