@@ -368,7 +368,7 @@ export default function RepairPage() {
         isOpen={isUpgradeOpen} 
         onClose={() => setIsUpgradeOpen(false)} 
         featureName="PDF Repair" 
-        limitMessage="Files over 10MB require a Pro account for repair. Upgrade to Pro for up to 1GB file uploads."
+        limitMessage="Files over 10MB require a Pro account for repair. Upgrade to Pro for up to 2GB file uploads."
       />
     </div>
   );
