@@ -57,7 +57,19 @@ const OCR_MODES = [
     outputExt: '.xlsx',
     outputMime: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
   },
-
+  {
+    id: 'arabic',
+    label: 'Arabic / Urdu (RTL)',
+    desc: 'Specialized engine for Arabic, Urdu and RTL languages',
+    icon: 'solar:text-square-bold',
+    color: 'text-rose-600',
+    bg: 'bg-rose-50 border-rose-200',
+    activeBorder: 'border-rose-500',
+    tag: 'RTL',
+    tagCls: 'bg-rose-100 text-rose-700',
+    outputExt: '.pdf',
+    outputMime: 'application/pdf',
+  },
 ];
 
 const LANGUAGES = [
@@ -365,7 +377,7 @@ export default function OCRPage({ lang = 'en' }) {
                 <p className="text-xl font-bold text-gray-900 mb-1">
                   {isDragging ? 'Drop your scanned PDF' : 'Drag & drop your scanned PDF'}
                 </p>
-                <p className="text-sm text-gray-500 mb-6">PDF only · up to 20 MB for free users · works on any scanned document</p>
+                <p className="text-sm text-gray-500 mb-6">PDF only · up to 10 MB for free users · works on any scanned document</p>
                 <button type="button" className="bg-blue-600 text-white hover:bg-blue-700 rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0 relative z-0 pointer-events-none">
                   Choose PDF File
                 </button>

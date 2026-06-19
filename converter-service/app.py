@@ -937,7 +937,7 @@ def ocr_pdf():
             txt_path = output_path + '.txt'
             full_text = ''
             for page_num, page in enumerate(doc):
-                mat   = fitz.Matrix(2, 2)   # 2x zoom = 150 dpi equivalent
+                mat   = fitz.Matrix(4.17, 4.17)   # ~300 dpi equivalent for better accuracy
                 pix   = page.get_pixmap(matrix=mat, alpha=False)
                 img   = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
                 data  = pytesseract.image_to_data(img, lang=lang, output_type=pytesseract.Output.DICT)
@@ -966,7 +966,7 @@ def ocr_pdf():
             wb.remove(wb.active)
 
             for page_num, page in enumerate(doc):
-                mat  = fitz.Matrix(2, 2)
+                mat  = fitz.Matrix(4.17, 4.17)
                 pix  = page.get_pixmap(matrix=mat, alpha=False)
                 img  = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
                 raw  = pytesseract.image_to_string(img, lang=lang, config='--psm 6')
@@ -990,8 +990,6 @@ def ocr_pdf():
             # Dynamically detect RTL languages to apply special layout config
             rtl_langs = ['ara', 'urd', 'heb']
             if any(r in lang for r in rtl_langs):
-                if 'ara' in lang or 'urd' in lang:
-                    lang = 'ara+urd' if 'urd' not in lang else lang
                 tess_config = '--psm 6 --oem 1'
             else:
                 tess_config = '--psm 6'
@@ -1001,7 +999,7 @@ def ocr_pdf():
             out_doc = fitz.open()
 
             for page_num, page in enumerate(doc):
-                mat  = fitz.Matrix(2, 2)
+                mat  = fitz.Matrix(4.17, 4.17)
                 pix  = page.get_pixmap(matrix=mat, alpha=False)
                 img  = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
 
