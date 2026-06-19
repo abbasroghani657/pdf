@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { clsx } from 'clsx';
 import { TOOLS_DATA } from '../data/tools';
 import { TOOLS_DATA_ES } from '../data/tools-es';
+import { TOOLS_DATA_FR } from '../data/tools-fr';
 import { slugify } from '../utils/slugify';
 import { useNavigate } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -46,7 +47,7 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
   const [activeCategory, setActiveCategory] = useState('all');
   const navigate = useNavigate();
 
-  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
+  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : lang === 'fr' ? TOOLS_DATA_FR : TOOLS_DATA;
 
   const filteredTools = toolDataList.filter(tool => {
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
@@ -66,25 +67,41 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
     const toolIndex = toolDataList.findIndex(t => t === tool);
     const enTool = TOOLS_DATA[toolIndex];
     const slug = slugify(enTool ? enTool.title : tool.title);
-    const prefix = lang === 'es' ? '/es' : '';
+    const prefix = lang === 'es' ? '/es' : lang === 'fr' ? '/fr' : '';
     navigate(`${prefix}/tools/${slug}`);
   };
 
   const isSearching = searchQuery.trim().length > 0;
 
   const translatedCategories = CATEGORIES.map(c => {
-    if (lang !== 'es') return c;
-    const labels = {
-      'all': 'Todas',
-      'convert': 'Convertir',
-      'organize': 'Organizar',
-      'optimize': 'Optimizar',
-      'security': 'Seguridad',
-      'edit': 'Editar',
-      'sign': 'Firmar',
-      'ai': 'IA Tools'
-    };
-    return { ...c, label: labels[c.id] };
+    if (lang === 'en') return c;
+    if (lang === 'es') {
+      const labels = {
+        'all': 'Todas',
+        'convert': 'Convertir',
+        'organize': 'Organizar',
+        'optimize': 'Optimizar',
+        'security': 'Seguridad',
+        'edit': 'Editar',
+        'sign': 'Firmar',
+        'ai': 'IA Tools'
+      };
+      return { ...c, label: labels[c.id] };
+    }
+    if (lang === 'fr') {
+      const labels = {
+        'all': 'Toutes',
+        'convert': 'Convertir',
+        'organize': 'Organiser',
+        'optimize': 'Optimiser',
+        'security': 'Sécurité',
+        'edit': 'Modifier',
+        'sign': 'Signer',
+        'ai': 'Outils IA'
+      };
+      return { ...c, label: labels[c.id] };
+    }
+    return c;
   });
 
   return (

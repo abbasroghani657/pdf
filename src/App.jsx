@@ -34,6 +34,7 @@ import FillPDFFormsPage from './pages/FillPDFFormsPage';
 import PageNumbersPage from './pages/PageNumbersPage';
 import { TOOLS_DATA } from './data/tools';
 import { TOOLS_DATA_ES } from './data/tools-es';
+import { TOOLS_DATA_FR } from './data/tools-fr';
 import { slugify } from './utils/slugify';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -281,8 +282,9 @@ export default function App() {
     navigate(getNavPath(path));
   };
 
-  const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : location.pathname;
+  const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : location.pathname.startsWith('/fr') ? location.pathname.replace(/^\/fr/, '') || '/' : location.pathname;
   const isEs = location.pathname.startsWith('/es');
+  const isFr = location.pathname.startsWith('/fr');
 
   const isHome = pathToCheck === '/';
   const isPricing = pathToCheck === '/pricing';
@@ -308,7 +310,7 @@ export default function App() {
   // Admin portal: also full-screen, no public navbar/footer
   const isAdminPage = location.pathname.startsWith(PORTAL);
 
-  const currentToolsData = isEs ? TOOLS_DATA_ES : TOOLS_DATA;
+  const currentToolsData = isEs ? TOOLS_DATA_ES : isFr ? TOOLS_DATA_FR : TOOLS_DATA;
   const organizeOptimizeTools = currentToolsData.filter(t => t.category === 'organize' || t.category === 'optimize');
   const convertToTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.endsWith('to PDF') || t.title.endsWith('a PDF')));
   const convertFromTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.startsWith('PDF to') || t.title.startsWith('PDF a')));
@@ -385,11 +387,11 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-1">
             {[
-              { path: '/', label: isEs ? 'Inicio' : 'Home' },
-              { path: '/tools', label: isEs ? 'Herramientas' : 'Tools' },
-              { path: '/pricing', label: isEs ? 'Precios' : 'Pricing' },
-              { path: '/blog', label: isEs ? 'Blog' : 'Blog' },
-              { path: '/compare', label: isEs ? '¿Por qué nosotros?' : 'Why Us?' },
+              { path: '/', label: isEs ? 'Inicio' : isFr ? 'Accueil' : 'Home' },
+              { path: '/tools', label: isEs ? 'Herramientas' : isFr ? 'Outils' : 'Tools' },
+              { path: '/pricing', label: isEs ? 'Precios' : isFr ? 'Tarifs' : 'Pricing' },
+              { path: '/blog', label: isEs ? 'Blog' : isFr ? 'Blog' : 'Blog' },
+              { path: '/compare', label: isEs ? '¿Por qué nosotros?' : isFr ? 'Pourquoi nous?' : 'Why Us?' },
             ].map(item => (
               <button
                 key={item.path}
@@ -411,20 +413,25 @@ export default function App() {
             <button
               onClick={() => {
                 const isCurrentlyEs = location.pathname.startsWith('/es/') || location.pathname === '/es';
+                const isCurrentlyFr = location.pathname.startsWith('/fr/') || location.pathname === '/fr';
                 let newPath = location.pathname;
+                
+                // Toggle between EN -> ES -> FR -> EN
                 if (isCurrentlyEs) {
-                  newPath = newPath.replace(/^\/es(\/|$)/, '/');
-                  if (newPath === '') newPath = '/';
+                  newPath = newPath.replace(/^\/es(\/|$)/, '/fr$1');
+                } else if (isCurrentlyFr) {
+                  newPath = newPath.replace(/^\/fr(\/|$)/, '/');
                 } else {
                   newPath = newPath === '/' ? '/es' : `/es${newPath}`;
                 }
+                if (newPath === '') newPath = '/';
                 navigate(newPath);
               }}
               className="text-sm font-semibold text-gray-500 hover:text-gray-900 border border-gray-200 hover:bg-gray-50 rounded-lg px-2.5 py-1.5 transition-colors flex items-center gap-1.5"
-              title={isEs ? 'Cambiar a Inglés' : 'Switch to Spanish'}
+              title={isEs ? 'Cambiar a Francés' : isFr ? 'Passer à l\\'anglais' : 'Switch to Spanish'}
             >
               <iconify-icon icon="solar:global-linear" class="text-base"></iconify-icon>
-              {isEs ? 'ES' : 'EN'}
+              {isEs ? 'ES' : isFr ? 'FR' : 'EN'}
             </button>
 
             {user ? (
@@ -438,7 +445,7 @@ export default function App() {
                     </div>
                   )}
                   <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    {user.profile?.name || (isEs ? 'Panel' : 'Dashboard')}
+                    {user.profile?.name || (isEs ? 'Panel' : isFr ? 'Tableau' : 'Dashboard')}
                   </span>
                 </div>
                 {['admin', 'superadmin'].includes(user.profile?.role) && (
@@ -859,9 +866,9 @@ export default function App() {
             </div>
 
             {[
-              { title: isEs ? 'Herramientas' : 'Tools', links: [{ label: isEs ? 'Unir PDF' : 'Merge PDF', path: '/tools/merge-pdf' }, { label: isEs ? 'Dividir PDF' : 'Split PDF', path: '/tools/split-pdf' }, { label: isEs ? 'Comprimir PDF' : 'Compress PDF', path: '/tools/compress-pdf' }, { label: isEs ? 'PDF a Word' : 'PDF to Word', path: '/tools/pdf-to-word' }, { label: isEs ? 'Firmar PDF' : 'Sign PDF', path: '/tools/sign-pdf' }, { label: isEs ? 'Editar PDF' : 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: isEs ? 'Compañía' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : 'Pricing', path: '/pricing' }, { label: 'Blog & Guides', path: '/blog' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
-              { title: isEs ? 'Legal' : 'Legal', links: [{ label: isEs ? 'Política de privacidad' : 'Privacy Policy', path: '/privacy' }, { label: isEs ? 'Términos de servicio' : 'Terms of Service', path: '/terms' }] },
+              { title: isEs ? 'Herramientas' : isFr ? 'Outils' : 'Tools', links: [{ label: isEs ? 'Unir PDF' : isFr ? 'Fusionner PDF' : 'Merge PDF', path: '/tools/merge-pdf' }, { label: isEs ? 'Dividir PDF' : isFr ? 'Diviser PDF' : 'Split PDF', path: '/tools/split-pdf' }, { label: isEs ? 'Comprimir PDF' : isFr ? 'Compresser PDF' : 'Compress PDF', path: '/tools/compress-pdf' }, { label: isEs ? 'PDF a Word' : isFr ? 'PDF en Word' : 'PDF to Word', path: '/tools/pdf-to-word' }, { label: isEs ? 'Firmar PDF' : isFr ? 'Signer PDF' : 'Sign PDF', path: '/tools/sign-pdf' }, { label: isEs ? 'Editar PDF' : isFr ? 'Modifier PDF' : 'Edit PDF', path: '/tools/edit-pdf' }] },
+              { title: isEs ? 'Compañía' : isFr ? 'Entreprise' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : isFr ? 'À propos' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : isFr ? 'Contact' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : isFr ? 'Tarifs' : 'Pricing', path: '/pricing' }, { label: 'Blog & Guides', path: '/blog' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
+              { title: isEs ? 'Legal' : isFr ? 'Légal' : 'Legal', links: [{ label: isEs ? 'Política de privacidad' : isFr ? 'Confidentialité' : 'Privacy Policy', path: '/privacy' }, { label: isEs ? 'Términos de servicio' : isFr ? 'Conditions' : 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>
                 <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">{col.title}</p>
@@ -881,7 +888,7 @@ export default function App() {
           </div>
 
           <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. {isEs ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
+            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. {isEs ? 'Todos los derechos reservados.' : isFr ? 'Tous droits réservés.' : 'All rights reserved.'}</p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-gray-400">
                 <iconify-icon icon="solar:shield-check-linear" class="text-emerald-500 text-base"></iconify-icon>

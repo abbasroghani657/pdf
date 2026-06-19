@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { TOOLS_DATA } from '../data/tools';
 import { TOOLS_DATA_ES } from '../data/tools-es';
+import { TOOLS_DATA_FR } from '../data/tools-fr';
 import { slugify } from '../utils/slugify';
 import SEOHead from '../components/SEOHead';
 import ToolPage from './ToolPage'; 
@@ -74,7 +75,7 @@ export default function ToolRenderer({ lang = 'en' }) {
   }, [lang, i18n]);
 
   const enToolIndex = TOOLS_DATA.findIndex(t => slugify(t.title) === toolSlug);
-  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
+  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : lang === 'fr' ? TOOLS_DATA_FR : TOOLS_DATA;
   const tool = toolDataList[enToolIndex];
   
   const localizedTitle = tool?.title;
@@ -144,16 +145,16 @@ export default function ToolRenderer({ lang = 'en' }) {
           <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
             <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">{t('platformGuides')}</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to={`${lang === 'es' ? '/es' : ''}/tools/${toolSlug}/windows`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
+              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/windows`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
                 Windows
               </Link>
-              <Link to={`${lang === 'es' ? '/es' : ''}/tools/${toolSlug}/mac`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
+              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/mac`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
                 Mac
               </Link>
-              <Link to={`${lang === 'es' ? '/es' : ''}/tools/${toolSlug}/iphone`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
+              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/iphone`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
                 iPhone
               </Link>
-              <Link to={`${lang === 'es' ? '/es' : ''}/tools/${toolSlug}/android`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
+              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/android`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
                 Android
               </Link>
             </div>
