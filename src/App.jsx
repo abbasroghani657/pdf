@@ -752,26 +752,33 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/es/login" element={<LoginPage lang="es" />} />
+            <Route path="/fr/login" element={<LoginPage lang="fr" />} />
             
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/es/register" element={<RegisterPage lang="es" />} />
+            <Route path="/fr/register" element={<RegisterPage lang="fr" />} />
             
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/es/dashboard" element={<DashboardPage lang="es" />} />
+              <Route path="/fr/dashboard" element={<DashboardPage lang="fr" />} />
             </Route>
             
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/es/forgot-password" element={<ForgotPasswordPage lang="es" />} />
+            <Route path="/fr/forgot-password" element={<ForgotPasswordPage lang="fr" />} />
             
             <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/es/reset-password" element={<ResetPasswordPage lang="es" />} />
+            <Route path="/fr/reset-password" element={<ResetPasswordPage lang="fr" />} />
             
             <Route path="/auth/callback" element={<OAuthCallbackPage />} />
             <Route path="/es/auth/callback" element={<OAuthCallbackPage lang="es" />} />
+            <Route path="/fr/auth/callback" element={<OAuthCallbackPage lang="fr" />} />
             
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
             <Route path="/es/payment-success" element={<PaymentSuccessPage lang="es" />} />
+            <Route path="/fr/payment-success" element={<PaymentSuccessPage lang="fr" />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
             <Route path="/accept-invite/:token" element={<AcceptInvite />} />
             <Route path="/invite-response" element={<InviteResponse />} />
@@ -783,7 +790,7 @@ export default function App() {
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/pdf-trends-2026" element={<PDFTrendsPage />} />
 
-            {/* Spanish Static Routes */}
+            {/* Spanish & French Static Routes */}
             <Route path="/es" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="es" />} />
             <Route path="/es/pricing" element={<PricingPage lang="es" />} />
             <Route path="/es/compare" element={<ComparePage lang="es" />} />
@@ -792,13 +799,25 @@ export default function App() {
             <Route path="/es/privacy" element={<PrivacyPage lang="es" />} />
             <Route path="/es/terms" element={<TermsPage lang="es" />} />
             <Route path="/es/pdf-trends-2026" element={<PDFTrendsPage lang="es" />} />
+            
+            <Route path="/fr" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="fr" />} />
+            <Route path="/fr/pricing" element={<PricingPage lang="fr" />} />
+            <Route path="/fr/compare" element={<ComparePage lang="fr" />} />
+            <Route path="/fr/about" element={<AboutPage lang="fr" />} />
+            <Route path="/fr/contact" element={<ContactPage lang="fr" />} />
+            <Route path="/fr/privacy" element={<PrivacyPage lang="fr" />} />
+            <Route path="/fr/terms" element={<TermsPage lang="fr" />} />
+            <Route path="/fr/pdf-trends-2026" element={<PDFTrendsPage lang="fr" />} />
 
             <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
             <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
             <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
             <Route path="/es/tools/:toolSlug/:platform" element={<ToolRenderer lang="es" />} />
+            <Route path="/fr/tools/:toolSlug" element={<ToolRenderer lang="fr" />} />
+            <Route path="/fr/tools/:toolSlug/:platform" element={<ToolRenderer lang="fr" />} />
             <Route path="/sign/:token" element={<SigningPage />} />
             <Route path="/es/sign/:token" element={<SigningPage lang="es" />} />
+            <Route path="/fr/sign/:token" element={<SigningPage lang="fr" />} />
 
             {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
             {/* OLD /admin path is explicitly blocked — returns 404 */}
