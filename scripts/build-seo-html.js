@@ -86,7 +86,10 @@ allRoutes.forEach(route => {
   const displayTitle = lang === 'es' ? tool.title : tool.title; // tool is already esTool for spanish routes!
   const displayDesc = tool.desc; 
   
-  const title = `${displayTitle} ${platform ? 'for ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''} - TheyLovePDF`;
+  const platformName = platform ? (platform.charAt(0).toUpperCase() + platform.slice(1)) : '';
+  const platformSuffix = platform ? (lang === 'es' ? ' en ' : ' for ') + platformName : '';
+  
+  const title = `${displayTitle}${platformSuffix} - TheyLovePDF`;
   const desc = injectContext(displayDesc, platform, lang === 'es');
 
   const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang === 'es')) : [];
@@ -114,7 +117,7 @@ allRoutes.forEach(route => {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": `How to use ${displayTitle} ${platform ? 'on ' + (platform.charAt(0).toUpperCase() + platform.slice(1)) : ''}`,
+      "name": `${lang === 'es' ? 'Cómo usar' : 'How to use'} ${displayTitle}${platformSuffix}`,
       "description": desc,
       "step": dynamicSteps.map((step, index) => ({
         "@type": "HowToStep",
@@ -175,9 +178,34 @@ const staticRoutes = [
 ];
 
 staticRoutes.forEach(route => {
+  const isEs = route.startsWith('/es');
+  const lang = isEs ? 'es' : 'en';
+  
+  // Very basic title mapping for static pages
+  const titles = {
+    '/es': 'El kit de herramientas PDF más potente gratis - TheyLovePDF',
+    '/es/pricing': 'Precios - TheyLovePDF',
+    '/es/compare': 'Por qué nosotros - TheyLovePDF',
+    '/es/about': 'Sobre nosotros - TheyLovePDF',
+    '/es/contact': 'Contacto - TheyLovePDF',
+    '/es/privacy': 'Política de privacidad - TheyLovePDF',
+    '/es/terms': 'Términos de servicio - TheyLovePDF',
+    '/es/pdf-trends-2026': 'Tendencias PDF 2026 - TheyLovePDF'
+  };
+
+  let finalHtml = baseHtml;
+  
+  if (isEs) {
+    finalHtml = finalHtml.replace(/<html lang="[^"]*">/, `<html lang="es">`);
+    if (titles[route]) {
+      finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${titles[route]}</title>`);
+      finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${titles[route]}" />`);
+    }
+  }
+
   const outDir = path.join(DIST_DIR, route);
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, 'index.html'), baseHtml); // simple fallback
+  fs.writeFileSync(path.join(outDir, 'index.html'), finalHtml);
 });
 
 // Generate 404 fallback for Vercel

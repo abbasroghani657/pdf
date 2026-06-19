@@ -405,6 +405,26 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
+            {/* Language Switcher */}
+            <button
+              onClick={() => {
+                const isCurrentlyEs = location.pathname.startsWith('/es/') || location.pathname === '/es';
+                let newPath = location.pathname;
+                if (isCurrentlyEs) {
+                  newPath = newPath.replace(/^\/es(\/|$)/, '/');
+                  if (newPath === '') newPath = '/';
+                } else {
+                  newPath = newPath === '/' ? '/es' : `/es${newPath}`;
+                }
+                navigate(newPath);
+              }}
+              className="text-sm font-semibold text-gray-500 hover:text-gray-900 border border-gray-200 hover:bg-gray-50 rounded-lg px-2.5 py-1.5 transition-colors flex items-center gap-1.5"
+              title={isEs ? 'Cambiar a Inglés' : 'Switch to Spanish'}
+            >
+              <iconify-icon icon="solar:global-linear" class="text-base"></iconify-icon>
+              {isEs ? 'ES' : 'EN'}
+            </button>
+
             {user ? (
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleNavClick('/dashboard')}>
@@ -824,7 +844,7 @@ export default function App() {
           </div>
 
           <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. All rights reserved.</p>
+            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. {isEs ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-gray-400">
                 <iconify-icon icon="solar:shield-check-linear" class="text-emerald-500 text-base"></iconify-icon>
