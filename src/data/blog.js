@@ -1,4 +1,4 @@
-export const BLOG_POSTS = [
+﻿export const BLOG_POSTS = [
   {
     slug: "how-to-compress-pdf-mac-2026",
     title: "How to Compress a PDF on Mac (2026 Guide)",
@@ -66,7 +66,7 @@ export const BLOG_POSTS = [
       </div>
 
       <h2>Why Not Use an App?</h2>
-      <p>Most PDF apps on the App Store are "freemium"—they let you download the app for free, but put a paywall in front of the merge feature. By using a cloud tool, you bypass App Store fees and save valuable storage space on your device.</p>
+      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
       <p>It's that simple, fast, and entirely secure!</p>
     `
   },
@@ -80,7 +80,7 @@ export const BLOG_POSTS = [
       <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
 
       <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations—a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
+      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
       <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
 
       <h2>How to Protect Your PDF</h2>
@@ -129,7 +129,7 @@ export const BLOG_POSTS = [
       <ol>
         <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
         <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial—telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
+        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
         <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
       </ol>
       
@@ -281,7 +281,7 @@ export const BLOG_POSTS = [
     date: "2026-06-12",
     excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
     content: `
-      <p>In the legal profession, confidentiality is not just a best practice—it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
 
       <h2>The Interception Risk</h2>
       <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
@@ -364,7 +364,7 @@ export const BLOG_POSTS = [
       <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
 
       <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document—destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
 
       <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
 
