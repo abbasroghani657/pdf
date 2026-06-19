@@ -747,14 +747,27 @@ export default function App() {
             <Route path="/" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/tools" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/es/login" element={<LoginPage lang="es" />} />
+            
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/es/register" element={<RegisterPage lang="es" />} />
+            
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/es/dashboard" element={<DashboardPage lang="es" />} />
             </Route>
+            
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/es/forgot-password" element={<ForgotPasswordPage lang="es" />} />
+            
             <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/es/reset-password" element={<ResetPasswordPage lang="es" />} />
+            
             <Route path="/auth/callback" element={<OAuthCallbackPage />} />
+            <Route path="/es/auth/callback" element={<OAuthCallbackPage lang="es" />} />
+            
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
+            <Route path="/es/payment-success" element={<PaymentSuccessPage lang="es" />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
             <Route path="/accept-invite/:token" element={<AcceptInvite />} />
             <Route path="/invite-response" element={<InviteResponse />} />
@@ -781,6 +794,7 @@ export default function App() {
             <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
             <Route path="/es/tools/:toolSlug/:platform" element={<ToolRenderer lang="es" />} />
             <Route path="/sign/:token" element={<SigningPage />} />
+            <Route path="/es/sign/:token" element={<SigningPage lang="es" />} />
 
             {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
             {/* OLD /admin path is explicitly blocked — returns 404 */}
