@@ -66,6 +66,38 @@ const resources = {
       "processAnother": "Procesar otro",
       "errorTitle": "¡Vaya! Algo salió mal."
     }
+  },
+  fr: {
+    translation: {
+      "howToUse": "Comment utiliser",
+      "faqs": "Foire aux questions",
+      "platformGuides": "Guides de plateforme",
+      "dropFileHere": "Déposez votre fichier ici",
+      "dragDropHere": "Glissez-déposez votre fichier ici",
+      "orClickBrowse": "ou cliquez pour parcourir — PDF, jusqu'à",
+      "chooseFile": "Choisir le fichier",
+      "processWith": "Traiter avec",
+      "processing": "Traitement de votre fichier...",
+      "download": "Télécharger le fichier traité",
+      "reset": "Traiter un autre fichier",
+      "autoDeleted": "Suppression auto dans 2h",
+      "private": "Privé",
+      "tryAgain": "Réessayer",
+      "goPro": "Passez Pro (1Go)",
+      "filesCount": "{{count}} fichiers",
+      "inQueue": "Vous êtes en position #{{count}} dans la file...",
+      "processingMsg": "Traitement en cours...",
+      "uploadingValidating": "Téléchargement et validation...",
+      "analyzingDoc": "Analyse de la structure...",
+      "applyingTransform": "Application de la transformation...",
+      "finalizingOutput": "Finalisation en cours...",
+      "doneReady": "Terminé ! Votre fichier est prêt.",
+      "autoDeletePrivacy": "Le fichier sera automatiquement supprimé dans 2 heures.",
+      "preparingDownload": "Préparation du téléchargement...",
+      "downloadBtn": "Télécharger",
+      "processAnother": "Traiter un autre",
+      "errorTitle": "Oups ! Quelque chose s'est mal passé."
+    }
   }
 };
 
