@@ -159,11 +159,13 @@ allRoutes.forEach(route => {
   const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n</script>`;
   finalHtml = finalHtml.replace('</head>', `  ${scriptTag}\n  </head>`);
   
-  // Inject Hreflang
+  // Inject Hreflang and Canonical
   const alternateUrl = lang === 'en' ? `https://www.theylovepdf.com/es${routePath}` : `https://www.theylovepdf.com${routePath.replace('/es/', '/')}`;
   const alternateLang = lang === 'en' ? 'es' : 'en';
   const hreflangTag = `<link rel="alternate" hreflang="${alternateLang}" href="${alternateUrl}" />\n    <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${routePath.replace('/es', '')}" />`;
-  finalHtml = finalHtml.replace('</head>', `  ${hreflangTag}\n  </head>`);
+  const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${routePath}" />`;
+  
+  finalHtml = finalHtml.replace('</head>', `  ${hreflangTag}\n  ${canonicalTag}\n  </head>`);
 
   // Write file
   const outDir = path.join(DIST_DIR, routePath);
@@ -202,6 +204,15 @@ staticRoutes.forEach(route => {
       finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${titles[route]}" />`);
     }
   }
+
+  // Add Canonical and Hreflang for static pages too
+  const cleanRoute = route === '/es' ? '' : route.replace('/es', '');
+  const alternateUrl = lang === 'en' ? `https://www.theylovepdf.com/es${cleanRoute}` : `https://www.theylovepdf.com${cleanRoute}`;
+  const alternateLang = lang === 'en' ? 'es' : 'en';
+  const hreflangTag = `<link rel="alternate" hreflang="${alternateLang}" href="${alternateUrl}" />\n    <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${cleanRoute}" />`;
+  const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${route === '/es' ? '/es/' : route}" />`;
+
+  finalHtml = finalHtml.replace('</head>', `  ${hreflangTag}\n  ${canonicalTag}\n  </head>`);
 
   const outDir = path.join(DIST_DIR, route);
   fs.mkdirSync(outDir, { recursive: true });
