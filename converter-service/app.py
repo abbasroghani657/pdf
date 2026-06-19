@@ -987,7 +987,8 @@ def ocr_pdf():
                 img = img.convert('L')
                 img = ImageEnhance.Contrast(img).enhance(1.5)
                 
-                raw  = pytesseract.image_to_string(img, lang=lang, config='--psm 3')
+                # Must use --psm 6 for tables to keep rows intact horizontally
+                raw  = pytesseract.image_to_string(img, lang=lang, config='--psm 6')
                 ws   = wb.create_sheet(title=f'Page {page_num + 1}')
                 import re
                 for line in raw.split('\n'):
@@ -1007,9 +1008,9 @@ def ocr_pdf():
 
         # ── Mode: SEARCHABLE PDF (default) ─────────────────────────────────────────
         else:
-            # Dynamically detect RTL languages to apply special layout config
+            # Dynamically detect RTL languages or explicitly arabic mode to apply special layout config
             rtl_langs = ['ara', 'urd', 'heb']
-            if any(r in lang for r in rtl_langs):
+            if mode == 'arabic' or any(r in lang for r in rtl_langs):
                 tess_config = '--psm 3 --oem 1'
             else:
                 tess_config = '--psm 3'

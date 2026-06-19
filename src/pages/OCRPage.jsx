@@ -426,7 +426,14 @@ export default function OCRPage({ lang = 'en' }) {
                   {OCR_MODES.map((m) => (
                     <button
                       key={m.id}
-                      onClick={() => setMode(m.id)}
+                      onClick={() => {
+                        setMode(m.id);
+                        if (m.id === 'arabic') {
+                          if (language !== 'ara' && language !== 'urd' && language !== 'heb') {
+                            setLanguage('ara');
+                          }
+                        }
+                      }}
                       className={clsx(
                         'flex items-start gap-4 p-4 rounded-2xl border-2 transition-all duration-200 text-left',
                         mode === m.id
