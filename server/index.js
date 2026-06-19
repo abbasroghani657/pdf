@@ -323,11 +323,18 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
     
     // ─── SaaS Monetization: Pro = 1GB, Free = 10MB ──────────────────────────────
     const totalSize = files ? files.reduce((acc, f) => acc + f.size, 0) : 0;
-    const maxSize = isPro ? 2 * 1024 * 1024 * 1024 : 10 * 1024 * 1024; // 2GB pro, 10MB free
+    let maxSize = isPro ? 2 * 1024 * 1024 * 1024 : 10 * 1024 * 1024; // Default: 2GB pro, 10MB free
+    let limitLabel = isPro ? '2GB' : '10MB';
+    
+    // Custom limit specifically for resource-heavy OCR to prevent OOM crashes
+    if (tool === 'OCR PDF') {
+        maxSize = isPro ? 100 * 1024 * 1024 : 10 * 1024 * 1024; // 100MB pro, 10MB free
+        limitLabel = isPro ? '100MB' : '10MB';
+    }
+
     if (totalSize > maxSize) {
       files.forEach(f => { try { fs.unlinkSync(f.path); } catch(e){} });
-      const limitLabel = isPro ? '1GB' : '10MB';
-      return res.status(413).json({ error: `File size exceeds the ${limitLabel} limit. ${!isPro ? 'Upgrade to Pro for up to 1GB uploads.' : ''}` });
+      return res.status(413).json({ error: `File size exceeds the ${limitLabel} limit for this tool. ${!isPro ? 'Upgrade to Pro for larger uploads.' : ''}` });
     }
     // ────────────────────────────────────────────────────────────────────────────
     
@@ -845,7 +852,7 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
           method: 'POST',
           body: ocrForm,
           headers: ocrForm.getHeaders(),
-          signal: AbortSignal.timeout(300000), // 5 min for large docs
+          signal: AbortSignal.timeout(900000), // 15 min for large OCR jobs to prevent zombie processes
         });
 
         if (!ocrResp.ok) {
