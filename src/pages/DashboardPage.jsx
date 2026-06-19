@@ -23,6 +23,7 @@ const COUNTRIES = [
 
 
 export default function DashboardPage({ lang = 'en' }) {
+  const isEs = lang === 'es';
   const { user, isPro, logout, upgradeToPro, updateProfile, uploadAvatar, downgradeToFree } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
@@ -137,9 +138,9 @@ export default function DashboardPage({ lang = 'en' }) {
           </div>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-3 mb-1">
-              <h1 className="text-xl font-extrabold text-gray-900">{profile.name || 'Welcome back!'}</h1>
+              <h1 className="text-xl font-extrabold text-gray-900">{profile.name || (isEs ? '¡Bienvenido de nuevo!' : 'Welcome back!')}</h1>
               <span className={clsx('text-xs font-bold px-2.5 py-1 rounded-full border', planColor)}>
-                {isPro ? '👑 Pro' : 'Free Plan'}
+                {isPro ? '👑 Pro' : (isEs ? 'Plan Gratis' : 'Free Plan')}
               </span>
             </div>
             <p className="text-sm text-gray-500">{user.email}</p>
@@ -157,7 +158,7 @@ export default function DashboardPage({ lang = 'en' }) {
                 className="flex items-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold rounded-xl transition-all shadow-sm shadow-amber-200 hover:-translate-y-px"
               >
                 <iconify-icon icon="solar:crown-bold" class="text-base"></iconify-icon>
-                Upgrade to Pro
+                {isEs ? 'Actualizar a Pro' : 'Upgrade to Pro'}
               </button>
             )}
             <button
@@ -165,7 +166,7 @@ export default function DashboardPage({ lang = 'en' }) {
               className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-600 border border-gray-200 rounded-xl hover:bg-red-50 hover:text-red-600 hover:border-red-100 transition-colors"
             >
               <iconify-icon icon="solar:logout-2-linear" class="text-base"></iconify-icon>
-              Logout
+              {isEs ? 'Cerrar sesión' : 'Logout'}
             </button>
           </div>
         </div>
@@ -173,9 +174,9 @@ export default function DashboardPage({ lang = 'en' }) {
         {/* ── Stats Row ────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           {[
-            { label: 'Files Processed', value: userStats.filesProcessed, icon: 'solar:document-bold', color: 'bg-blue-500', sub: 'All time' },
-            { label: 'Storage Saved', value: userStats.storageSaved, icon: 'solar:database-bold', color: 'bg-emerald-500', sub: 'Compressed' },
-            { label: 'Current Plan', value: null, icon: 'solar:crown-bold', color: 'bg-amber-500', sub: 'Upgrade for more' },
+            { label: isEs ? 'Archivos procesados' : 'Files Processed', value: userStats.filesProcessed, icon: 'solar:document-bold', color: 'bg-blue-500', sub: isEs ? 'De todos los tiempos' : 'All time' },
+            { label: isEs ? 'Almacenamiento ahorrado' : 'Storage Saved', value: userStats.storageSaved, icon: 'solar:database-bold', color: 'bg-emerald-500', sub: isEs ? 'Comprimido' : 'Compressed' },
+            { label: isEs ? 'Plan actual' : 'Current Plan', value: null, icon: 'solar:crown-bold', color: 'bg-amber-500', sub: isEs ? 'Actualiza para más' : 'Upgrade for more' },
           ].map((card, i) => (
             <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex items-center gap-4">
               <div className={clsx('w-12 h-12 rounded-xl flex items-center justify-center text-white shrink-0', card.color)}>
@@ -183,7 +184,7 @@ export default function DashboardPage({ lang = 'en' }) {
               </div>
               <div>
                 <p className="text-2xl font-extrabold text-gray-900">
-                  {card.label === 'Current Plan' ? (
+                  {card.label === 'Current Plan' || card.label === 'Plan actual' ? (
                     <span className={isPro ? 'text-amber-500' : 'text-gray-700'}>{planLabel}</span>
                   ) : card.value}
                 </p>

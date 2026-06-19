@@ -13,6 +13,7 @@ import CountrySelector from '../components/CountrySelector';
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
 export default function RegisterPage({ lang = 'en' }) {
+  const isEs = lang === 'es';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -46,7 +47,7 @@ export default function RegisterPage({ lang = 'en' }) {
       // Redirect to login so they can log in
       navigate('/login', { replace: true });
     } catch (error) {
-      setRegisterError(error.message || 'Registration failed. Please try again.');
+      setRegisterError(isEs ? (error.message || 'Registro fallido. Inténtalo de nuevo.') : (error.message || 'Registration failed. Please try again.'));
     } finally {
       setIsLoading(false);
     }
@@ -75,20 +76,20 @@ export default function RegisterPage({ lang = 'en' }) {
 
         {/* Headline */}
         <div className="relative z-10 px-10">
-          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">The PDF Platform</p>
+          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">{isEs ? 'LA PLATAFORMA PDF' : 'The PDF Platform'}</p>
           <h1 className="text-3xl font-extrabold text-white leading-tight mb-3">
-            Every PDF tool<br/>you'll ever need.
+            {isEs ? <>Cada herramienta PDF<br/>que necesitarás.</> : <>Every PDF tool<br/>you'll ever need.</>}
           </h1>
           <p className="text-slate-400 leading-relaxed text-sm mb-6">
-            Convert, compress, merge, sign, and protect<br/>documents in one place.
+            {isEs ? <>Convierte, comprime, une, firma y protege<br/>documentos en un solo lugar.</> : <>Convert, compress, merge, sign, and protect<br/>documents in one place.</>}
           </p>
 
           {/* Checkmarks */}
           <div className="space-y-2.5 mb-7">
             {[
-              '40+ PDF tools',
-              'Files deleted after processing',
-              'AI-powered: Chat, Summarize, Translate',
+              isEs ? 'Más de 40 herramientas PDF' : '40+ PDF tools',
+              isEs ? 'Archivos eliminados tras procesar' : 'Files deleted after processing',
+              isEs ? 'Impulsado por IA: Chatear, Resumir, Traducir' : 'AI-powered: Chat, Summarize, Translate',
             ].map((text, i) => (
               <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
                 <div className="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center shrink-0">
@@ -101,7 +102,11 @@ export default function RegisterPage({ lang = 'en' }) {
 
           {/* Trust badges row */}
           <div className="flex items-center gap-3 flex-wrap mb-1">
-            {['256-bit Encryption', 'AI-Powered', 'Privacy First'].map((badge, i) => (
+            {[
+              isEs ? 'Cifrado de 256 bits' : '256-bit Encryption',
+              isEs ? 'Impulsado por IA' : 'AI-Powered',
+              isEs ? 'Privacidad primero' : 'Privacy First'
+            ].map((badge, i) => (
               <span key={i} className={`text-[11px] font-semibold text-slate-400 ${i < 2 ? "after:content-['|'] after:ml-3 after:text-slate-600" : ''}`}>
                 {badge}
               </span>
@@ -110,8 +115,8 @@ export default function RegisterPage({ lang = 'en' }) {
         </div>
 
         <div className="relative z-10 px-10 pb-7">
-          <p className="text-slate-500 text-xs mb-1">Trusted by professionals worldwide.</p>
-          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · All rights reserved.</p>
+          <p className="text-slate-500 text-xs mb-1">{isEs ? 'Con la confianza de profesionales en todo el mundo.' : 'Trusted by professionals worldwide.'}</p>
+          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · {isEs ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
         </div>
       </motion.div>
 
@@ -128,8 +133,8 @@ export default function RegisterPage({ lang = 'en' }) {
 
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
             <div className="mb-8">
-              <h2 className="text-2xl font-extrabold text-slate-900 mb-1">Create an account</h2>
-              <p className="text-slate-500 text-sm">Join us today. It's free!</p>
+              <h2 className="text-2xl font-extrabold text-slate-900 mb-1">{isEs ? 'Crea una cuenta' : 'Create an account'}</h2>
+              <p className="text-slate-500 text-sm">{isEs ? 'Únete hoy. ¡Es gratis!' : "Join us today. It's free!"}</p>
             </div>
 
             {/* Google OAuth */}
@@ -144,7 +149,7 @@ export default function RegisterPage({ lang = 'en' }) {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
-              Continue with Google
+              {isEs ? 'Continuar con Google' : 'Continue with Google'}
             </button>
 
             {/* Divider */}
@@ -153,14 +158,14 @@ export default function RegisterPage({ lang = 'en' }) {
                 <div className="w-full border-t border-slate-200" />
               </div>
               <div className="relative flex justify-center">
-                <span className="px-3 bg-[#F7F8FC] text-xs text-slate-400 font-medium">Or continue with email</span>
+                <span className="px-3 bg-[#F7F8FC] text-xs text-slate-400 font-medium">{isEs ? 'O continuar con correo electrónico' : 'Or continue with email'}</span>
               </div>
             </div>
 
             {/* Traditional Register form */}
             <form onSubmit={handleRegister} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">Full Name</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{isEs ? 'Nombre completo' : 'Full Name'}</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                     <iconify-icon icon="solar:user-circle-linear" class="text-lg"></iconify-icon>
@@ -171,14 +176,14 @@ export default function RegisterPage({ lang = 'en' }) {
                     autoFocus
                     value={name}
                     onChange={(e) => { setName(e.target.value); setRegisterError(''); }}
-                    placeholder="Enter your full name"
+                    placeholder={isEs ? 'Ingresa tu nombre completo' : 'Enter your full name'}
                     className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">Email address</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{isEs ? 'Correo electrónico' : 'Email address'}</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                     <iconify-icon icon="solar:letter-linear" class="text-lg"></iconify-icon>
@@ -188,14 +193,14 @@ export default function RegisterPage({ lang = 'en' }) {
                     required
                     value={email}
                     onChange={(e) => { setEmail(e.target.value); setRegisterError(''); }}
-                    placeholder="Enter your email"
+                    placeholder={isEs ? 'Ingresa tu correo electrónico' : 'Enter your email'}
                     className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">Password</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{isEs ? 'Contraseña' : 'Password'}</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                     <iconify-icon icon="solar:lock-password-linear" class="text-lg"></iconify-icon>
@@ -206,7 +211,7 @@ export default function RegisterPage({ lang = 'en' }) {
                     minLength={8}
                     value={password}
                     onChange={(e) => { setPassword(e.target.value); setRegisterError(''); }}
-                    placeholder="Min. 8 characters"
+                    placeholder={isEs ? 'Mín. 8 caracteres' : 'Min. 8 characters'}
                     className="w-full pl-10 pr-10 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                   />
                   <button
@@ -220,7 +225,7 @@ export default function RegisterPage({ lang = 'en' }) {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">Country</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{isEs ? 'País' : 'Country'}</label>
                 <CountrySelector value={country} onChange={setCountry} required={true} />
               </div>
 
@@ -241,14 +246,14 @@ export default function RegisterPage({ lang = 'en' }) {
               >
                 {isLoading
                   ? <iconify-icon icon="line-md:loading-twotone-loop" class="text-lg"></iconify-icon>
-                  : 'Sign up'
+                  : (isEs ? 'Registrarse' : 'Sign up')
                 }
               </button>
 
               <div className="text-center mt-6 text-sm text-slate-600">
-                Already have an account?{' '}
-                <Link to="/login" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                  Log in
+                {isEs ? '¿Ya tienes una cuenta?' : 'Already have an account?'}{' '}
+                <Link to={isEs ? "/es/login" : "/login"} className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                  {isEs ? 'Iniciar sesión' : 'Log in'}
                 </Link>
               </div>
 

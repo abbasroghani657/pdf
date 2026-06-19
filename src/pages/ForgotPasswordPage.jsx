@@ -9,6 +9,7 @@ import { toast } from 'react-hot-toast';
 import Logo from '../components/Logo';
 
 export default function ForgotPasswordPage({ lang = 'en' }) {
+  const isEs = lang === 'es';
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -19,7 +20,7 @@ export default function ForgotPasswordPage({ lang = 'en' }) {
     try {
       await api.post('/auth/forgot-password', { email });
       setSent(true);
-      toast.success('Password reset email sent!');
+      toast.success(isEs ? '¡Correo de restablecimiento de contraseña enviado!' : 'Password reset email sent!');
     } catch (error) {
       const msg = error.response?.data?.message || 'Something went wrong. Please try again.';
       toast.error(msg);
@@ -35,9 +36,9 @@ export default function ForgotPasswordPage({ lang = 'en' }) {
           <div className="w-10 h-10 bg-[#378ADD] rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">P</div>
           <Logo />
         </Link>
-        <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Reset your password</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">{isEs ? 'Restablece tu contraseña' : 'Reset your password'}</h2>
         <p className="mt-2 text-sm text-gray-500">
-          Enter your email and we'll send you a reset link.
+          {isEs ? 'Ingresa tu correo y te enviaremos un enlace de restablecimiento.' : "Enter your email and we'll send you a reset link."}
         </p>
       </div>
 
@@ -49,22 +50,22 @@ export default function ForgotPasswordPage({ lang = 'en' }) {
               <div className="w-20 h-20 mx-auto bg-emerald-50 rounded-full flex items-center justify-center border-4 border-emerald-100">
                 <iconify-icon icon="solar:letter-bold" class="text-4xl text-emerald-500"></iconify-icon>
               </div>
-              <h3 className="text-lg font-extrabold text-gray-900">Check your inbox!</h3>
+              <h3 className="text-lg font-extrabold text-gray-900">{isEs ? '¡Revisa tu bandeja de entrada!' : 'Check your inbox!'}</h3>
               <p className="text-sm text-gray-500">
-                We've sent a password reset link to <strong>{email}</strong>. Check your spam folder if you don't see it.
+                {isEs ? 'Hemos enviado un enlace de restablecimiento a ' : "We've sent a password reset link to "}<strong>{email}</strong>{isEs ? '. Revisa tu carpeta de spam si no lo ves.' : ". Check your spam folder if you don't see it."}
               </p>
               <Link
-                to="/login"
+                to={isEs ? "/es/login" : "/login"}
                 className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-[#378ADD] hover:underline"
               >
                 <iconify-icon icon="solar:arrow-left-linear" class="text-base"></iconify-icon>
-                Back to login
+                {isEs ? 'Volver a iniciar sesión' : 'Back to login'}
               </Link>
             </div>
           ) : (
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-semibold text-gray-700">Email address</label>
+                <label className="block text-sm font-semibold text-gray-700">{isEs ? 'Correo electrónico' : 'Email address'}</label>
                 <div className="mt-2 relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                     <iconify-icon icon="solar:letter-linear" class="text-lg"></iconify-icon>
@@ -75,7 +76,7 @@ export default function ForgotPasswordPage({ lang = 'en' }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#378ADD] focus:border-[#378ADD] sm:text-sm transition-colors"
-                    placeholder="Enter your email address"
+                    placeholder={isEs ? 'Ingresa tu correo electrónico' : 'Enter your email address'}
                   />
                 </div>
               </div>
@@ -90,13 +91,13 @@ export default function ForgotPasswordPage({ lang = 'en' }) {
               >
                 {isLoading ? (
                   <iconify-icon icon="line-md:loading-twotone-loop" class="text-xl"></iconify-icon>
-                ) : 'Send reset link'}
+                ) : (isEs ? 'Enviar enlace de restablecimiento' : 'Send reset link')}
               </button>
 
               <div className="text-center">
-                <Link to="/login" className="text-sm font-semibold text-gray-500 hover:text-[#378ADD] transition-colors flex items-center justify-center gap-1">
+                <Link to={isEs ? "/es/login" : "/login"} className="text-sm font-semibold text-gray-500 hover:text-[#378ADD] transition-colors flex items-center justify-center gap-1">
                   <iconify-icon icon="solar:arrow-left-linear" class="text-base"></iconify-icon>
-                  Back to login
+                  {isEs ? 'Volver a iniciar sesión' : 'Back to login'}
                 </Link>
               </div>
             </form>

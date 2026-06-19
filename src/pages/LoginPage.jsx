@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
 export default function LoginPage({ lang = 'en' }) {
+  const isEs = lang === 'es';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -46,11 +47,11 @@ export default function LoginPage({ lang = 'en' }) {
     } catch (error) {
       const raw = error.message || '';
       if (raw.toLowerCase().includes('google')) {
-        setLoginError('This account uses Google sign-in. Please click "Continue with Google".');
+        setLoginError(isEs ? 'Esta cuenta usa Google sign-in. Haz clic en "Continuar con Google".' : 'This account uses Google sign-in. Please click "Continue with Google".');
       } else if (raw.toLowerCase().includes('invalid') || raw.toLowerCase().includes('credentials')) {
-        setLoginError('Incorrect email or password. Please try again.');
+        setLoginError(isEs ? 'Correo o contraseña incorrectos. Inténtalo de nuevo.' : 'Incorrect email or password. Please try again.');
       } else {
-        setLoginError(raw || 'Something went wrong. Please try again.');
+        setLoginError(isEs ? (raw || 'Algo salió mal. Inténtalo de nuevo.') : (raw || 'Something went wrong. Please try again.'));
       }
     } finally {
       setIsLoading(false);
@@ -80,20 +81,20 @@ export default function LoginPage({ lang = 'en' }) {
 
         {/* Headline */}
         <div className="relative z-10 px-10">
-          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">The PDF Platform</p>
+          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">{isEs ? 'LA PLATAFORMA PDF' : 'The PDF Platform'}</p>
           <h1 className="text-3xl font-extrabold text-white leading-tight mb-3">
-            Every PDF tool<br/>you'll ever need.
+            {isEs ? <>Cada herramienta PDF<br/>que necesitarás.</> : <>Every PDF tool<br/>you'll ever need.</>}
           </h1>
           <p className="text-slate-400 leading-relaxed text-sm mb-6">
-            Convert, compress, merge, sign, and protect<br/>documents in one place.
+            {isEs ? <>Convierte, comprime, une, firma y protege<br/>documentos en un solo lugar.</> : <>Convert, compress, merge, sign, and protect<br/>documents in one place.</>}
           </p>
 
           {/* Checkmarks */}
           <div className="space-y-2.5 mb-7">
             {[
-              '40+ PDF tools',
-              'Files deleted after processing',
-              'AI-powered: Chat, Summarize, Translate',
+              isEs ? 'Más de 40 herramientas PDF' : '40+ PDF tools',
+              isEs ? 'Archivos eliminados tras procesar' : 'Files deleted after processing',
+              isEs ? 'Impulsado por IA: Chatear, Resumir, Traducir' : 'AI-powered: Chat, Summarize, Translate',
             ].map((text, i) => (
               <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
                 <div className="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center shrink-0">
@@ -106,7 +107,11 @@ export default function LoginPage({ lang = 'en' }) {
 
           {/* Trust badges row */}
           <div className="flex items-center gap-3 flex-wrap mb-1">
-            {['256-bit Encryption', 'AI-Powered', 'Privacy First'].map((badge, i) => (
+            {[
+              isEs ? 'Cifrado de 256 bits' : '256-bit Encryption',
+              isEs ? 'Impulsado por IA' : 'AI-Powered',
+              isEs ? 'Privacidad primero' : 'Privacy First'
+            ].map((badge, i) => (
               <span key={i} className={`text-[11px] font-semibold text-slate-400 ${i < 2 ? "after:content-['|'] after:ml-3 after:text-slate-600" : ''}`}>
                 {badge}
               </span>
@@ -115,8 +120,8 @@ export default function LoginPage({ lang = 'en' }) {
         </div>
 
         <div className="relative z-10 px-10 pb-7">
-          <p className="text-slate-500 text-xs mb-1">Trusted by professionals worldwide.</p>
-          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · All rights reserved.</p>
+          <p className="text-slate-500 text-xs mb-1">{isEs ? 'Con la confianza de profesionales en todo el mundo.' : 'Trusted by professionals worldwide.'}</p>
+          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · {isEs ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
         </div>
       </motion.div>
 
@@ -133,8 +138,8 @@ export default function LoginPage({ lang = 'en' }) {
 
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
             <div className="mb-8">
-              <h2 className="text-2xl font-extrabold text-slate-900 mb-1">Login to your account</h2>
-              <p className="text-slate-500 text-sm">Welcome back! Please enter your details.</p>
+              <h2 className="text-2xl font-extrabold text-slate-900 mb-1">{isEs ? 'Inicia sesión en tu cuenta' : 'Login to your account'}</h2>
+              <p className="text-slate-500 text-sm">{isEs ? '¡Bienvenido de nuevo! Por favor, ingresa tus datos.' : 'Welcome back! Please enter your details.'}</p>
             </div>
 
             {/* Google OAuth */}
@@ -149,7 +154,7 @@ export default function LoginPage({ lang = 'en' }) {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
-              Continue with Google
+              {isEs ? 'Continuar con Google' : 'Continue with Google'}
             </button>
 
             {/* Divider */}
@@ -158,14 +163,14 @@ export default function LoginPage({ lang = 'en' }) {
                 <div className="w-full border-t border-slate-200" />
               </div>
               <div className="relative flex justify-center">
-                <span className="px-3 bg-[#F7F8FC] text-xs text-slate-400 font-medium">Or continue with email</span>
+                <span className="px-3 bg-[#F7F8FC] text-xs text-slate-400 font-medium">{isEs ? 'O continuar con correo electrónico' : 'Or continue with email'}</span>
               </div>
             </div>
 
             {/* Traditional Login form */}
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">Email address</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{isEs ? 'Correo electrónico' : 'Email address'}</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                     <iconify-icon icon="solar:letter-linear" class="text-lg"></iconify-icon>
@@ -176,7 +181,7 @@ export default function LoginPage({ lang = 'en' }) {
                     autoFocus
                     value={email}
                     onChange={(e) => { setEmail(e.target.value); setLoginError(''); }}
-                    placeholder="Enter your email"
+                    placeholder={isEs ? 'Ingresa tu correo electrónico' : 'Enter your email'}
                     className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                   />
                 </div>
@@ -184,7 +189,7 @@ export default function LoginPage({ lang = 'en' }) {
 
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Password</label>
+                  <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">{isEs ? 'Contraseña' : 'Password'}</label>
                 </div>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -195,7 +200,7 @@ export default function LoginPage({ lang = 'en' }) {
                     required
                     value={password}
                     onChange={(e) => { setPassword(e.target.value); setLoginError(''); }}
-                    placeholder="Password"
+                    placeholder={isEs ? 'Contraseña' : 'Password'}
                     className={clsx(
                       'w-full pl-10 pr-10 py-2.5 bg-white border rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all',
                       loginError
@@ -220,8 +225,8 @@ export default function LoginPage({ lang = 'en' }) {
               </div>
 
               <div className="flex items-center justify-center pt-1 pb-1">
-                <Link to="/forgot-password" className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                  Forgot your password?
+                <Link to={isEs ? "/es/forgot-password" : "/forgot-password"} className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                  {isEs ? '¿Olvidaste tu contraseña?' : 'Forgot your password?'}
                 </Link>
               </div>
 
@@ -235,14 +240,14 @@ export default function LoginPage({ lang = 'en' }) {
               >
                 {isLoading
                   ? <iconify-icon icon="line-md:loading-twotone-loop" class="text-lg"></iconify-icon>
-                  : 'Log in'
+                  : (isEs ? 'Iniciar sesión' : 'Log in')
                 }
               </button>
 
               <div className="text-center mt-6 text-sm text-slate-600">
-                Don't have an account?{' '}
-                <Link to="/register" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                  Create an account
+                {isEs ? '¿No tienes una cuenta?' : "Don't have an account?"}{' '}
+                <Link to={isEs ? "/es/register" : "/register"} className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                  {isEs ? 'Crear una cuenta' : 'Create an account'}
                 </Link>
               </div>
 
