@@ -971,8 +971,10 @@ def ocr_pdf():
                 img  = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
                 raw  = pytesseract.image_to_string(img, lang=lang, config='--psm 6')
                 ws   = wb.create_sheet(title=f'Page {page_num + 1}')
+                import re
                 for line in raw.split('\n'):
-                    cells = [c.strip() for c in line.split('  ') if c.strip()]
+                    # Split by 2 or more spaces, tabs, or pipe characters
+                    cells = [c.strip() for c in re.split(r'\s{2,}|\t|\|', line) if c.strip()]
                     if cells:
                         ws.append(cells)
 
