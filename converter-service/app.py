@@ -923,6 +923,10 @@ def ocr_pdf():
         import io
 
         doc         = fitz.open(input_path)
+        if doc.needs_pass:
+            doc.close()
+            return jsonify({'error': 'This PDF is password protected. Please unlock it first using the Unlock PDF tool.'}), 400
+            
         num_pages   = len(doc)
         
         # ── Digital PDF Detection ──────────────────────────────────────────────
