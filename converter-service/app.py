@@ -923,15 +923,15 @@ def ocr_pdf():
         import io
 
         doc         = fitz.open(input_path)
+        num_pages   = len(doc)
         
         # ── Digital PDF Detection ──────────────────────────────────────────────
         # Check if the PDF is already searchable to prevent garbled OCR output
+        # An average of >50 characters per page indicates a digital (non-scanned) PDF.
         text_length = sum(len(p.get_text()) for p in doc)
-        if text_length > 50:
+        if text_length > (num_pages * 50):
             doc.close()
             return jsonify({'error': 'This document is already searchable and contains text. OCR is only needed for scanned images.'}), 400
-            
-        num_pages   = len(doc)
         confidence  = 95      # default estimate
         
         # Use shutil.which to find tesseract on any OS (Linux VPS / Windows)

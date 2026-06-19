@@ -103,7 +103,7 @@ const CONVERTER_URL   = process.env.CONVERTER_URL   || 'http://localhost:3006'; 
 // Configure multer
 const upload = multer({
   dest: 'uploads/',
-  limits: { fileSize: 100 * 1024 * 1024 }, // 100MB
+  limits: { fileSize: 2000 * 1024 * 1024 }, // 2GB
   fileFilter: (req, file, cb) => {
     const allowed = [
       'application/pdf', 'image/jpeg', 'image/png', 'image/webp',
