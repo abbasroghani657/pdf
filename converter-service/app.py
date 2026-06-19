@@ -919,10 +919,18 @@ def ocr_pdf():
         file.save(input_path)
         import fitz           # PyMuPDF
         import pytesseract
-        from PIL import Image
+        from PIL import Image, ImageEnhance
         import io
 
         doc         = fitz.open(input_path)
+        
+        # ── Digital PDF Detection ──────────────────────────────────────────────
+        # Check if the PDF is already searchable to prevent garbled OCR output
+        text_length = sum(len(p.get_text()) for p in doc)
+        if text_length > 50:
+            doc.close()
+            return jsonify({'error': 'This document is already searchable and contains text. OCR is only needed for scanned images.'}), 400
+            
         num_pages   = len(doc)
         confidence  = 95      # default estimate
         
@@ -940,12 +948,17 @@ def ocr_pdf():
                 mat   = fitz.Matrix(4.17, 4.17)   # ~300 dpi equivalent for better accuracy
                 pix   = page.get_pixmap(matrix=mat, alpha=False)
                 img   = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
-                data  = pytesseract.image_to_data(img, lang=lang, output_type=pytesseract.Output.DICT)
+                
+                # Preprocessing for better OCR accuracy
+                img = img.convert('L')
+                img = ImageEnhance.Contrast(img).enhance(1.5)
+                
+                data  = pytesseract.image_to_data(img, lang=lang, config='--psm 3', output_type=pytesseract.Output.DICT)
                 words = [data['text'][i] for i in range(len(data['text'])) if int(data['conf'][i]) > 30]
                 confs = [int(data['conf'][i]) for i in range(len(data['conf'])) if int(data['conf'][i]) > 0]
                 if confs:
                     confidence = int(sum(confs) / len(confs))
-                page_text = pytesseract.image_to_string(img, lang=lang)
+                page_text = pytesseract.image_to_string(img, lang=lang, config='--psm 3')
                 full_text += f'--- Page {page_num + 1} ---\n\n{page_text}\n\n'
 
             doc.close()
@@ -969,7 +982,12 @@ def ocr_pdf():
                 mat  = fitz.Matrix(4.17, 4.17)
                 pix  = page.get_pixmap(matrix=mat, alpha=False)
                 img  = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
-                raw  = pytesseract.image_to_string(img, lang=lang, config='--psm 6')
+                
+                # Preprocessing
+                img = img.convert('L')
+                img = ImageEnhance.Contrast(img).enhance(1.5)
+                
+                raw  = pytesseract.image_to_string(img, lang=lang, config='--psm 3')
                 ws   = wb.create_sheet(title=f'Page {page_num + 1}')
                 import re
                 for line in raw.split('\n'):
@@ -992,9 +1010,9 @@ def ocr_pdf():
             # Dynamically detect RTL languages to apply special layout config
             rtl_langs = ['ara', 'urd', 'heb']
             if any(r in lang for r in rtl_langs):
-                tess_config = '--psm 6 --oem 1'
+                tess_config = '--psm 3 --oem 1'
             else:
-                tess_config = '--psm 6'
+                tess_config = '--psm 3'
 
             out_pdf_path = output_path + '.pdf'
             # Build a new PDF with invisible text overlay
@@ -1004,6 +1022,10 @@ def ocr_pdf():
                 mat  = fitz.Matrix(4.17, 4.17)
                 pix  = page.get_pixmap(matrix=mat, alpha=False)
                 img  = Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
+                
+                # Preprocessing
+                img = img.convert('L')
+                img = ImageEnhance.Contrast(img).enhance(1.5)
 
                 # Get OCR data with bounding boxes
                 data = pytesseract.image_to_data(
