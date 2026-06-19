@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "node scripts/generate-sitemap.js && vite build && node scripts/build-seo-html.js",
+    "build": "node scripts/generate-sitemap.js && vite build && node scripts/build-seo-html.js && node scripts/build-blog-html.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "node server/index.js",

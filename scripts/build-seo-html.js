@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { TOOLS_DATA } from '../src/data/tools.js';
 import { TOOLS_DATA_ES } from '../src/data/tools-es.js';
+import { TOOLS_DATA_FR } from '../src/data/tools-fr.js';
 import { slugify } from '../src/utils/slugify.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -25,54 +26,43 @@ function generateToolPages() {
   TOOLS_DATA.forEach((tool, index) => {
     const slug = slugify(tool.title);
     const esTool = TOOLS_DATA_ES[index] || tool;
+    const frTool = TOOLS_DATA_FR[index] || tool;
     
     // English
-    routes.push({
-      path: `/tools/${slug}`,
-      lang: 'en',
-      tool,
-      platform: null
-    });
-    
-    // English Platforms
-    platforms.forEach(platform => {
-      routes.push({
-        path: `/tools/${slug}/${platform}`,
-        lang: 'en',
-        tool,
-        platform
-      });
-    });
+    routes.push({ path: `/tools/${slug}`, lang: 'en', tool, platform: null });
+    platforms.forEach(platform => routes.push({ path: `/tools/${slug}/${platform}`, lang: 'en', tool, platform }));
 
     // Spanish
-    routes.push({
-      path: `/es/tools/${slug}`,
-      lang: 'es',
-      tool: esTool,
-      platform: null
-    });
+    routes.push({ path: `/es/tools/${slug}`, lang: 'es', tool: esTool, platform: null });
+    platforms.forEach(platform => routes.push({ path: `/es/tools/${slug}/${platform}`, lang: 'es', tool: esTool, platform }));
 
-    // Spanish Platforms
-    platforms.forEach(platform => {
-      routes.push({
-        path: `/es/tools/${slug}/${platform}`,
-        lang: 'es',
-        tool: esTool,
-        platform
-      });
-    });
+    // French
+    routes.push({ path: `/fr/tools/${slug}`, lang: 'fr', tool: frTool, platform: null });
+    platforms.forEach(platform => routes.push({ path: `/fr/tools/${slug}/${platform}`, lang: 'fr', tool: frTool, platform }));
   });
 
   return routes;
 }
 
-function injectContext(text, platform, isEs = false) {
+function injectContext(text, platform, lang = 'en') {
   if (!text) return text;
-  const platformStr = platform ? (isEs ? (platform === 'mac' ? 'tu Mac' : platform === 'windows' ? 'tu Windows' : platform === 'iphone' ? 'tu iPhone' : 'tu dispositivo Android') : `your ${platform === 'mac' ? 'Mac' : platform === 'windows' ? 'Windows' : platform === 'iphone' ? 'iPhone' : 'Android device'}`) : (isEs ? 'tu dispositivo' : 'your device');
+  
+  let platformStr = '';
+  if (platform) {
+    if (lang === 'es') platformStr = platform === 'mac' ? 'tu Mac' : platform === 'windows' ? 'tu Windows' : platform === 'iphone' ? 'tu iPhone' : 'tu dispositivo Android';
+    else if (lang === 'fr') platformStr = platform === 'mac' ? 'votre Mac' : platform === 'windows' ? 'votre Windows' : platform === 'iphone' ? 'votre iPhone' : 'votre appareil Android';
+    else platformStr = `your ${platform === 'mac' ? 'Mac' : platform === 'windows' ? 'Windows' : platform === 'iphone' ? 'iPhone' : 'Android device'}`;
+  } else {
+    if (lang === 'es') platformStr = 'tu dispositivo';
+    else if (lang === 'fr') platformStr = 'votre appareil';
+    else platformStr = 'your device';
+  }
+  
   const capitalizedPlatformStr = platformStr.charAt(0).toUpperCase() + platformStr.slice(1);
   
   let res = text.replace(/your device/g, platformStr).replace(/Your device/g, capitalizedPlatformStr);
-  if (isEs) res = res.replace(/tu dispositivo/g, platformStr).replace(/Tu dispositivo/g, capitalizedPlatformStr);
+  if (lang === 'es') res = res.replace(/tu dispositivo/g, platformStr).replace(/Tu dispositivo/g, capitalizedPlatformStr);
+  if (lang === 'fr') res = res.replace(/votre appareil/g, platformStr).replace(/Votre appareil/g, capitalizedPlatformStr);
   return res;
 }
 
@@ -83,19 +73,19 @@ console.log(`Generating SEO HTML for ${allRoutes.length} tool pages...`);
 allRoutes.forEach(route => {
   const { path: routePath, lang, tool, platform } = route;
   
-  const displayTitle = lang === 'es' ? tool.title : tool.title; // tool is already esTool for spanish routes!
+  const displayTitle = tool.title;
   const displayDesc = tool.desc; 
   
   const platformName = platform ? (platform.charAt(0).toUpperCase() + platform.slice(1)) : '';
-  const platformSuffix = platform ? (lang === 'es' ? ' en ' : ' for ') + platformName : '';
+  const platformSuffix = platform ? (lang === 'es' ? ' en ' : lang === 'fr' ? ' sur ' : ' for ') + platformName : '';
   
   const title = `${displayTitle}${platformSuffix} - TheyLovePDF`;
-  const desc = injectContext(displayDesc, platform, lang === 'es');
+  const desc = injectContext(displayDesc, platform, lang);
 
-  const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang === 'es')) : [];
+  const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang)) : [];
   const dynamicFaqs = (tool.faqs && tool.faqs.length > 0) ? tool.faqs.map(faq => ({
-    question: injectContext(faq.question, platform, lang === 'es'),
-    answer: injectContext(faq.answer, platform, lang === 'es')
+    question: injectContext(faq.question, platform, lang),
+    answer: injectContext(faq.answer, platform, lang)
   })) : [];
 
   // Generate Schemas
@@ -117,7 +107,7 @@ allRoutes.forEach(route => {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": `${lang === 'es' ? 'Cómo usar' : 'How to use'} ${displayTitle}${platformSuffix}`,
+      "name": `${lang === 'es' ? 'Cómo usar' : lang === 'fr' ? 'Comment utiliser' : 'How to use'} ${displayTitle}${platformSuffix}`,
       "description": desc,
       "step": dynamicSteps.map((step, index) => ({
         "@type": "HowToStep",
@@ -142,9 +132,33 @@ allRoutes.forEach(route => {
       }))
     });
   }
+  
+  // BreadcrumbList Schema
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theylovepdf.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Tools", "item": `https://www.theylovepdf.com${lang === 'en' ? '' : '/'+lang}/tools` },
+      { "@type": "ListItem", "position": 3, "name": displayTitle, "item": `https://www.theylovepdf.com${routePath}` }
+    ]
+  });
 
   // Inject into HTML
   let finalHtml = baseHtml;
+  
+  // Hreflang Tags
+  const slug = slugify(displayTitle); // Need original slug, wait, displayTitle is translated.
+  // We need the english slug for the URL generation.
+  // Actually routePath already has the correct base URL.
+  // Let's reconstruct the paths for alternate languages based on routePath.
+  const routeBase = routePath.replace(/^\/(es|fr)/, '');
+  const hreflangTags = `
+    <link rel="alternate" hreflang="en" href="https://www.theylovepdf.com${routeBase}" />
+    <link rel="alternate" hreflang="es" href="https://www.theylovepdf.com/es${routeBase}" />
+    <link rel="alternate" hreflang="fr" href="https://www.theylovepdf.com/fr${routeBase}" />
+    <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${routeBase}" />
+  `;
   
   // Replace language
   finalHtml = finalHtml.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
@@ -152,8 +166,11 @@ allRoutes.forEach(route => {
   // Replace Title
   finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${title}</title>`);
   
-  // Replace Meta Description - Fixing regex to allow space and self closing slash
+  // Replace Meta Description
   finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${desc}" />`);
+  
+  // Inject Hreflang Tags right after charset
+  finalHtml = finalHtml.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n${hreflangTags}`);
   
   // Inject JSON-LD right before </head>
   const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n</script>`;

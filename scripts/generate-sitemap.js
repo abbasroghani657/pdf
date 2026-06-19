@@ -25,25 +25,37 @@ const staticRoutes = [
   '/es/contact',
   '/es/privacy',
   '/es/terms',
-  '/es/pdf-trends-2026'
+  '/es/pdf-trends-2026',
+  '/fr',
+  '/fr/pricing',
+  '/fr/compare',
+  '/fr/about',
+  '/fr/contact',
+  '/fr/privacy',
+  '/fr/terms',
+  '/fr/pdf-trends-2026'
 ];
 
 const platforms = ['mac', 'windows', 'iphone', 'android'];
 
 const toolRoutes = [];
 const esToolRoutes = [];
+const frToolRoutes = [];
 TOOLS_DATA.forEach(t => {
   const baseSlug = `/tools/${slugify(t.title)}`;
   const esBaseSlug = `/es/tools/${slugify(t.title)}`;
+  const frBaseSlug = `/fr/tools/${slugify(t.title)}`;
   toolRoutes.push(baseSlug);
   esToolRoutes.push(esBaseSlug);
+  frToolRoutes.push(frBaseSlug);
   platforms.forEach(platform => {
     toolRoutes.push(`${baseSlug}/${platform}`);
     esToolRoutes.push(`${esBaseSlug}/${platform}`);
+    frToolRoutes.push(`${frBaseSlug}/${platform}`);
   });
 });
 
-const allRoutes = [...staticRoutes, ...toolRoutes, ...esToolRoutes];
+const allRoutes = [...staticRoutes, ...toolRoutes, ...esToolRoutes, ...frToolRoutes];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

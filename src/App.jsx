@@ -47,6 +47,8 @@ import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
 import MergePDFPage from './pages/MergePDFPage';
 import NotFoundPage from './pages/NotFoundPage';
 import PDFTrendsPage from './pages/PDFTrendsPage';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUsers from './pages/admin/AdminUsers';
@@ -746,6 +748,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/tools" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/es/login" element={<LoginPage lang="es" />} />
             
