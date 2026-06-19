@@ -388,6 +388,7 @@ export default function App() {
               { path: '/', label: isEs ? 'Inicio' : 'Home' },
               { path: '/tools', label: isEs ? 'Herramientas' : 'Tools' },
               { path: '/pricing', label: isEs ? 'Precios' : 'Pricing' },
+              { path: '/blog', label: isEs ? 'Blog' : 'Blog' },
               { path: '/compare', label: isEs ? '¿Por qué nosotros?' : 'Why Us?' },
             ].map(item => (
               <button
@@ -395,7 +396,7 @@ export default function App() {
                 onClick={() => handleNavClick(item.path)}
                 className={clsx(
                   'px-3.5 py-1.5 rounded-lg text-sm font-medium transition-colors',
-                  location.pathname === item.path
+                  location.pathname === item.path || (item.path === '/blog' && location.pathname.startsWith('/blog'))
                     ? 'bg-gray-100 text-gray-900'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                 )}
@@ -403,7 +404,6 @@ export default function App() {
                 {item.label}
               </button>
             ))}
-            {/* Blog link hidden until blog is ready */}
           </div>
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
@@ -841,7 +841,7 @@ export default function App() {
 
             {[
               { title: isEs ? 'Herramientas' : 'Tools', links: [{ label: isEs ? 'Unir PDF' : 'Merge PDF', path: '/tools/merge-pdf' }, { label: isEs ? 'Dividir PDF' : 'Split PDF', path: '/tools/split-pdf' }, { label: isEs ? 'Comprimir PDF' : 'Compress PDF', path: '/tools/compress-pdf' }, { label: isEs ? 'PDF a Word' : 'PDF to Word', path: '/tools/pdf-to-word' }, { label: isEs ? 'Firmar PDF' : 'Sign PDF', path: '/tools/sign-pdf' }, { label: isEs ? 'Editar PDF' : 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: isEs ? 'Compañía' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : 'Pricing', path: '/pricing' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
+              { title: isEs ? 'Compañía' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : 'Pricing', path: '/pricing' }, { label: 'Blog & Guides', path: '/blog' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
               { title: isEs ? 'Legal' : 'Legal', links: [{ label: isEs ? 'Política de privacidad' : 'Privacy Policy', path: '/privacy' }, { label: isEs ? 'Términos de servicio' : 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>
