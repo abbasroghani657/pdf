@@ -13,18 +13,29 @@ export default function SEOHead({
   faqs = []
 }) {
   const siteName = 'TheyLovePDF';
-  const defaultDescription = 'The world\'s most powerful PDF toolkit. Free, fast, and secure. 37+ tools including merge, split, compress, sign, OCR, and AI chat.';
+  const defaultDescription = 'Edit, convert, compress, and sign PDFs in seconds. 100% free online PDF toolkit with no limits.';
   
-  const metaTitle = title ? `${title} - ${siteName}` : `${siteName} — Free PDF Tools Online`;
+  const metaTitle = title ? `${title} - ${siteName}` : `Online PDF Editor & Converter - ${siteName}`;
   const metaDesc = description || defaultDescription;
   
-  // Clean the base URL (it usually comes in without /es prefix from ToolPage)
-  const baseUrl = url ? (url.startsWith('/es') ? url.replace('/es', '') : url) : '';
+  // Clean the base URL (it usually comes in without language prefix from ToolPage)
+  let baseUrl = url || '';
+  if (baseUrl.startsWith('/es')) baseUrl = baseUrl.replace('/es', '');
+  if (baseUrl.startsWith('/fr')) baseUrl = baseUrl.replace('/fr', '');
+  if (baseUrl.startsWith('/de')) baseUrl = baseUrl.replace('/de', '');
+  if (baseUrl.startsWith('/pt')) baseUrl = baseUrl.replace('/pt', '');
   
   const englishUrl = baseUrl ? `https://www.theylovepdf.com${baseUrl}` : 'https://www.theylovepdf.com';
   const spanishUrl = baseUrl ? `https://www.theylovepdf.com/es${baseUrl}` : 'https://www.theylovepdf.com/es';
+  const frenchUrl = baseUrl ? `https://www.theylovepdf.com/fr${baseUrl}` : 'https://www.theylovepdf.com/fr';
+  const germanUrl = baseUrl ? `https://www.theylovepdf.com/de${baseUrl}` : 'https://www.theylovepdf.com/de';
+  const portugueseUrl = baseUrl ? `https://www.theylovepdf.com/pt${baseUrl}` : 'https://www.theylovepdf.com/pt';
   
-  const canonicalUrl = lang === 'es' ? spanishUrl : englishUrl;
+  let canonicalUrl = englishUrl;
+  if (lang === 'es') canonicalUrl = spanishUrl;
+  if (lang === 'fr') canonicalUrl = frenchUrl;
+  if (lang === 'de') canonicalUrl = germanUrl;
+  if (lang === 'pt') canonicalUrl = portugueseUrl;
 
   const schemas = [];
 
@@ -92,6 +103,9 @@ export default function SEOHead({
       {/* International SEO (i18n) */}
       <link rel="alternate" hreflang="en" href={englishUrl} />
       <link rel="alternate" hreflang="es" href={spanishUrl} />
+      <link rel="alternate" hreflang="fr" href={frenchUrl} />
+      <link rel="alternate" hreflang="de" href={germanUrl} />
+      <link rel="alternate" hreflang="pt" href={portugueseUrl} />
       <link rel="alternate" hreflang="x-default" href={englishUrl} />
 
       {/* Open Graph / Facebook */}

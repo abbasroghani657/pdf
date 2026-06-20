@@ -35,6 +35,8 @@ import PageNumbersPage from './pages/PageNumbersPage';
 import { TOOLS_DATA } from './data/tools';
 import { TOOLS_DATA_ES } from './data/tools-es';
 import { TOOLS_DATA_FR } from './data/tools-fr';
+import { TOOLS_DATA_DE } from './data/tools-de';
+import { TOOLS_DATA_PT } from './data/tools-pt';
 import { slugify } from './utils/slugify';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -189,20 +191,24 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
   );
 }
 // ─── LANGUAGE SWITCHER COMPONENT ──────────────────────────────────────────────
-const LanguageSwitcher = ({ location, navigate, isEs, isFr }) => {
+const LanguageSwitcher = ({ location, navigate, isEs, isFr, isDe, isPt }) => {
   const [isOpen, setIsOpen] = useState(false);
   
-  const currentLang = isEs ? 'ES' : isFr ? 'FR' : 'EN';
+  const currentLang = isEs ? 'ES' : isFr ? 'FR' : isDe ? 'DE' : isPt ? 'PT' : 'EN';
   
   const switchLang = (lang) => {
     let newPath = location.pathname;
-    newPath = newPath.replace(/^\/(es|fr)(\/|$)/, '/');
+    newPath = newPath.replace(/^\/(es|fr|de|pt)(\/|$)/, '/');
     if (!newPath.startsWith('/')) newPath = '/' + newPath;
     
     if (lang === 'ES') {
       newPath = `/es${newPath === '/' ? '' : newPath}`;
     } else if (lang === 'FR') {
       newPath = `/fr${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'DE') {
+      newPath = `/de${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'PT') {
+      newPath = `/pt${newPath === '/' ? '' : newPath}`;
     }
     
     if (newPath === '') newPath = '/';
@@ -243,6 +249,18 @@ const LanguageSwitcher = ({ location, navigate, isEs, isFr }) => {
               className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'FR' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
             >
               Français
+            </button>
+            <button 
+              onClick={() => switchLang('DE')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'DE' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Deutsch
+            </button>
+            <button 
+              onClick={() => switchLang('PT')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'PT' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Português
             </button>
           </div>
         </>
@@ -342,6 +360,14 @@ export default function App() {
       if (path === '/') return '/fr';
       if (!path.startsWith('/fr')) return `/fr${path}`;
     }
+    if (location.pathname.startsWith('/de/') || location.pathname === '/de') {
+      if (path === '/') return '/de';
+      if (!path.startsWith('/de')) return `/de${path}`;
+    }
+    if (location.pathname.startsWith('/pt/') || location.pathname === '/pt') {
+      if (path === '/') return '/pt';
+      if (!path.startsWith('/pt')) return `/pt${path}`;
+    }
     return path;
   };
 
@@ -349,9 +375,16 @@ export default function App() {
     navigate(getNavPath(path));
   };
 
-  const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : location.pathname.startsWith('/fr') ? location.pathname.replace(/^\/fr/, '') || '/' : location.pathname;
+  const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : 
+                      location.pathname.startsWith('/fr') ? location.pathname.replace(/^\/fr/, '') || '/' : 
+                      location.pathname.startsWith('/de') ? location.pathname.replace(/^\/de/, '') || '/' : 
+                      location.pathname.startsWith('/pt') ? location.pathname.replace(/^\/pt/, '') || '/' : 
+                      location.pathname;
+                      
   const isEs = location.pathname.startsWith('/es');
   const isFr = location.pathname.startsWith('/fr');
+  const isDe = location.pathname.startsWith('/de');
+  const isPt = location.pathname.startsWith('/pt');
 
   const isHome = pathToCheck === '/';
   const isPricing = pathToCheck === '/pricing';
@@ -377,10 +410,10 @@ export default function App() {
   // Admin portal: also full-screen, no public navbar/footer
   const isAdminPage = location.pathname.startsWith(PORTAL);
 
-  const currentToolsData = isEs ? TOOLS_DATA_ES : isFr ? TOOLS_DATA_FR : TOOLS_DATA;
+  const currentToolsData = isEs ? TOOLS_DATA_ES : isFr ? TOOLS_DATA_FR : isDe ? TOOLS_DATA_DE : isPt ? TOOLS_DATA_PT : TOOLS_DATA;
   const organizeOptimizeTools = currentToolsData.filter(t => t.category === 'organize' || t.category === 'optimize');
-  const convertToTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.endsWith('to PDF') || t.title.endsWith('a PDF')));
-  const convertFromTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.startsWith('PDF to') || t.title.startsWith('PDF a')));
+  const convertToTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.endsWith('to PDF') || t.title.endsWith('a PDF') || t.title.endsWith('in PDF') || t.title.endsWith('para PDF')));
+  const convertFromTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.startsWith('PDF to') || t.title.startsWith('PDF a') || t.title.startsWith('PDF in') || t.title.startsWith('PDF para')));
   const editSignSecurityTools = currentToolsData.filter(t => t.category === 'edit' || t.category === 'sign' || t.category === 'security');
   const aiTools = currentToolsData.filter(t => t.category === 'ai');
 

@@ -33,7 +33,23 @@ const staticRoutes = [
   '/fr/contact',
   '/fr/privacy',
   '/fr/terms',
-  '/fr/pdf-trends-2026'
+  '/fr/pdf-trends-2026',
+  '/de',
+  '/de/pricing',
+  '/de/compare',
+  '/de/about',
+  '/de/contact',
+  '/de/privacy',
+  '/de/terms',
+  '/de/pdf-trends-2026',
+  '/pt',
+  '/pt/pricing',
+  '/pt/compare',
+  '/pt/about',
+  '/pt/contact',
+  '/pt/privacy',
+  '/pt/terms',
+  '/pt/pdf-trends-2026'
 ];
 
 const platforms = ['mac', 'windows', 'iphone', 'android'];
@@ -41,21 +57,32 @@ const platforms = ['mac', 'windows', 'iphone', 'android'];
 const toolRoutes = [];
 const esToolRoutes = [];
 const frToolRoutes = [];
+const deToolRoutes = [];
+const ptToolRoutes = [];
+
 TOOLS_DATA.forEach(t => {
   const baseSlug = `/tools/${slugify(t.title)}`;
   const esBaseSlug = `/es/tools/${slugify(t.title)}`;
   const frBaseSlug = `/fr/tools/${slugify(t.title)}`;
+  const deBaseSlug = `/de/tools/${slugify(t.title)}`;
+  const ptBaseSlug = `/pt/tools/${slugify(t.title)}`;
+  
   toolRoutes.push(baseSlug);
   esToolRoutes.push(esBaseSlug);
   frToolRoutes.push(frBaseSlug);
+  deToolRoutes.push(deBaseSlug);
+  ptToolRoutes.push(ptBaseSlug);
+
   platforms.forEach(platform => {
     toolRoutes.push(`${baseSlug}/${platform}`);
     esToolRoutes.push(`${esBaseSlug}/${platform}`);
     frToolRoutes.push(`${frBaseSlug}/${platform}`);
+    deToolRoutes.push(`${deBaseSlug}/${platform}`);
+    ptToolRoutes.push(`${ptBaseSlug}/${platform}`);
   });
 });
 
-const allRoutes = [...staticRoutes, ...toolRoutes, ...esToolRoutes, ...frToolRoutes];
+const allRoutes = [...staticRoutes, ...toolRoutes, ...esToolRoutes, ...frToolRoutes, ...deToolRoutes, ...ptToolRoutes];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

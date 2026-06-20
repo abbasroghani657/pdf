@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import { TOOLS_DATA } from '../src/data/tools.js';
 import { TOOLS_DATA_ES } from '../src/data/tools-es.js';
 import { TOOLS_DATA_FR } from '../src/data/tools-fr.js';
+import { TOOLS_DATA_DE } from '../src/data/tools-de.js';
+import { TOOLS_DATA_PT } from '../src/data/tools-pt.js';
 import { slugify } from '../src/utils/slugify.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -27,6 +29,8 @@ function generateToolPages() {
     const slug = slugify(tool.title);
     const esTool = TOOLS_DATA_ES[index] || tool;
     const frTool = TOOLS_DATA_FR[index] || tool;
+    const deTool = TOOLS_DATA_DE ? (TOOLS_DATA_DE[index] || tool) : tool;
+    const ptTool = TOOLS_DATA_PT ? (TOOLS_DATA_PT[index] || tool) : tool;
     
     // English
     routes.push({ path: `/tools/${slug}`, lang: 'en', tool, platform: null });
@@ -39,6 +43,14 @@ function generateToolPages() {
     // French
     routes.push({ path: `/fr/tools/${slug}`, lang: 'fr', tool: frTool, platform: null });
     platforms.forEach(platform => routes.push({ path: `/fr/tools/${slug}/${platform}`, lang: 'fr', tool: frTool, platform }));
+
+    // German
+    routes.push({ path: `/de/tools/${slug}`, lang: 'de', tool: deTool, platform: null });
+    platforms.forEach(platform => routes.push({ path: `/de/tools/${slug}/${platform}`, lang: 'de', tool: deTool, platform }));
+
+    // Portuguese
+    routes.push({ path: `/pt/tools/${slug}`, lang: 'pt', tool: ptTool, platform: null });
+    platforms.forEach(platform => routes.push({ path: `/pt/tools/${slug}/${platform}`, lang: 'pt', tool: ptTool, platform }));
   });
 
   return routes;
