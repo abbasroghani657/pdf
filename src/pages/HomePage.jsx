@@ -260,7 +260,7 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
 
         <div className="inline-flex items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-shadow">
           <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#378ADD] to-[#1e3a5f] flex items-center justify-center text-white font-bold text-xs shadow-inner">ZA</div>
-          <span className="text-sm font-semibold text-gray-700">Developed by <span className="text-gray-900 font-bold">Zaheer Abbas</span> <span className="mx-2 text-gray-300">|</span> WE <iconify-icon icon="solar:heart-bold" class="text-red-500 text-sm translate-y-0.5 mx-0.5"></iconify-icon> PDF</span>
+          <span className="text-sm font-semibold text-gray-700">Developed by <span className="text-gray-900 font-bold">Zaheer Abbas</span> <span className="mx-2 text-gray-300">|</span> <span className="font-bold text-[#378ADD]">They</span><iconify-icon icon="solar:heart-bold" class="text-red-500 text-sm translate-y-0.5 mx-0.5"></iconify-icon><span className="font-bold text-[#378ADD]">PDF</span></span>
         </div>
       </section>
 
