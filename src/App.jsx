@@ -275,6 +275,10 @@ export default function App() {
       if (path === '/') return '/es';
       if (!path.startsWith('/es')) return `/es${path}`;
     }
+    if (location.pathname.startsWith('/fr/') || location.pathname === '/fr') {
+      if (path === '/') return '/fr';
+      if (!path.startsWith('/fr')) return `/fr${path}`;
+    }
     return path;
   };
 
@@ -808,6 +812,8 @@ export default function App() {
             <Route path="/es/contact" element={<ContactPage lang="es" />} />
             <Route path="/es/privacy" element={<PrivacyPage lang="es" />} />
             <Route path="/es/terms" element={<TermsPage lang="es" />} />
+            <Route path="/es/blog" element={<BlogList lang="es" />} />
+            <Route path="/es/blog/:slug" element={<BlogPost lang="es" />} />
             <Route path="/es/pdf-trends-2026" element={<PDFTrendsPage lang="es" />} />
             
             <Route path="/fr" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="fr" />} />
@@ -817,6 +823,8 @@ export default function App() {
             <Route path="/fr/contact" element={<ContactPage lang="fr" />} />
             <Route path="/fr/privacy" element={<PrivacyPage lang="fr" />} />
             <Route path="/fr/terms" element={<TermsPage lang="fr" />} />
+            <Route path="/fr/blog" element={<BlogList lang="fr" />} />
+            <Route path="/fr/blog/:slug" element={<BlogPost lang="fr" />} />
             <Route path="/fr/pdf-trends-2026" element={<PDFTrendsPage lang="fr" />} />
 
             <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
