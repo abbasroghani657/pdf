@@ -1,16 +1,22 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
-// Expose protected methods that allow the renderer process to use
-// the ipcRenderer without exposing the entire object
 contextBridge.exposeInMainWorld('electronAPI', {
-  // Listen for files passed via OS double-click
-  onOpenFile: (callback) => ipcRenderer.on('open-file', (_event, filePath) => callback(filePath)),
-  
-  // Smart trick: fetch offline token from safe storage
+  // File operations
+  openFileDialog: (opts) => ipcRenderer.invoke('open-file-dialog', opts),
+  openFolder: (filePath) => ipcRenderer.invoke('open-folder', filePath),
+  openExternal: (url) => ipcRenderer.invoke('open-external', url),
+
+  // Pro token check (monetization)
   getOfflineToken: () => ipcRenderer.invoke('get-offline-token'),
-  
-  // Auto-updater events
+
+  // PDF Processing
+  processPDF: (payload) => ipcRenderer.invoke('process-pdf', payload),
+
+  // OS file open (double-click PDF)
+  onOpenFile: (callback) => ipcRenderer.on('open-file', (_event, filePath) => callback(filePath)),
+
+  // Auto-updater
   onUpdateAvailable: (callback) => ipcRenderer.on('update_available', callback),
   onUpdateDownloaded: (callback) => ipcRenderer.on('update_downloaded', callback),
-  restartApp: () => ipcRenderer.send('restart_app')
+  restartApp: () => ipcRenderer.send('restart_app'),
 });

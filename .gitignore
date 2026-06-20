@@ -3,6 +3,7 @@ dist/
 uploads/
 server/uploads/
 scratch/
+release/
 
 # Environment variables (SENSITIVE - passwords, API keys)
 .env
