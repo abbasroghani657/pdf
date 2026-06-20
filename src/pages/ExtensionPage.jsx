@@ -2,9 +2,40 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function ExtensionPage() {
+export default function ExtensionPage({ lang = 'en' }) {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isInstalled, setIsInstalled] = useState(false);
+
+  const isEs = lang === 'es';
+  const isFr = lang === 'fr';
+  const isDe = lang === 'de';
+  const isPt = lang === 'pt';
+
+  const t = {
+    title: isEs ? 'Extensión TheyLovePDF para Chrome y Edge' : isFr ? 'Extension TheyLovePDF pour Chrome & Edge' : isDe ? 'TheyLovePDF Chrome & Edge Erweiterung' : isPt ? 'Extensão TheyLovePDF para Chrome e Edge' : 'TheyLovePDF Chrome & Edge Extension',
+    desc: isEs ? 'Accede a todas tus herramientas PDF favoritas al instante desde la barra de herramientas de tu navegador. Sin complicaciones, solo magia PDF a 1 clic.' : isFr ? 'Accédez instantanément à tous vos outils PDF préférés depuis la barre d\'outils de votre navigateur. Aucune recherche, juste la magie du PDF en 1 clic.' : isDe ? 'Greifen Sie sofort von der Symbolleiste Ihres Browsers auf all Ihre bevorzugten PDF-Tools zu. Kein Suchen mehr, nur noch PDF-Magie mit 1 Klick.' : isPt ? 'Acesse instantaneamente todas as suas ferramentas de PDF favoritas da barra de ferramentas do seu navegador. Sem mais buscas, apenas mágica em PDF com 1 clique.' : 'Access all your favorite PDF tools instantly from your browser toolbar. No more searching, just 1-click PDF magic.',
+    installedTitle: isEs ? '¡Extensión Instalada!' : isFr ? 'Extension Installée !' : isDe ? 'Erweiterung installiert!' : isPt ? 'Extensão Instalada!' : 'Extension Installed!',
+    installedDesc: isEs ? 'TheyLovePDF ha sido añadida a los accesos directos de tu navegador.' : isFr ? 'TheyLovePDF est maintenant ajouté aux raccourcis de votre navigateur.' : isDe ? 'TheyLovePDF wurde jetzt zu Ihren Browser-Verknüpfungen hinzugefügt.' : isPt ? 'O TheyLovePDF agora foi adicionado aos atalhos do seu navegador.' : 'TheyLovePDF is now added to your browser shortcuts.',
+    goTools: isEs ? 'Abrir Herramientas' : isFr ? 'Ouvrir les Outils' : isDe ? 'Tools Öffnen' : isPt ? 'Abrir Ferramentas' : 'Open Tools',
+    download: isEs ? 'Añadir a Chrome' : isFr ? 'Ajouter à Chrome' : isDe ? 'Zu Chrome Hinzufügen' : isPt ? 'Adicionar ao Chrome' : 'Add to Chrome',
+    fallback: isEs ? 'Para instalar, haga clic en el menú del navegador (⋮) y seleccione "Instalar TheyLovePDF".' : isFr ? 'Pour installer, cliquez sur le menu du navigateur (⋮) et sélectionnez "Installer TheyLovePDF".' : isDe ? 'Zur Installation klicken Sie auf das Browser-Menü (⋮) und wählen "TheyLovePDF installieren".' : isPt ? 'Para instalar, clique no menu do navegador (⋮) e selecione "Instalar TheyLovePDF".' : 'To install, click the browser menu (⋮) and select \'Install TheyLovePDF\' or \'Add to Home Screen\'.',
+    schemaDesc: isEs ? 'Instala la extensión del navegador TheyLovePDF. Edita, une, comprime y convierte archivos PDF.' : isFr ? 'Installez l\'extension TheyLovePDF. Modifiez, fusionnez, compressez et convertissez.' : isDe ? 'Installieren Sie die TheyLovePDF Browser-Erweiterung. PDFs direkt bearbeiten, zusammenführen und komprimieren.' : isPt ? 'Instale a extensão de navegador TheyLovePDF. Edite, mescle, comprima e converta arquivos PDF.' : 'Install the TheyLovePDF browser extension. Edit, merge, compress and convert PDF files directly from your browser toolbar.',
+    users: isEs ? 'usuarios' : isFr ? 'utilisateurs' : isDe ? 'Benutzer' : isPt ? 'usuários' : 'users',
+    features: [
+      {
+        title: isEs ? 'Acceso en 1 clic' : isFr ? 'Accès en 1 clic' : isDe ? '1-Klick-Zugang' : isPt ? 'Acesso em 1 clique' : '1-Click Access',
+        desc: isEs ? 'Abre el kit de herramientas al instante.' : isFr ? 'Ouvrez la boîte à outils instantanément.' : isDe ? 'Öffnen Sie das PDF-Toolkit sofort.' : isPt ? 'Abra o kit de ferramentas instantaneamente.' : 'Open the PDF toolkit instantly from your browser\'s toolbar.'
+      },
+      {
+        title: isEs ? 'Extensión Segura' : isFr ? 'Extension Sécurisée' : isDe ? 'Sichere Erweiterung' : isPt ? 'Extensão Segura' : 'Secure Extension',
+        desc: isEs ? 'No rastreamos tu historial de navegación. 100% privacidad.' : isFr ? 'Nous ne suivons pas votre historique. 100% privé.' : isDe ? 'Wir verfolgen Ihren Browserverlauf nicht. 100% Datenschutz.' : isPt ? 'Não rastreamos seu histórico de navegação. 100% de privacidade.' : 'We don\'t track your browsing history. 100% privacy focused.'
+      },
+      {
+        title: isEs ? 'Súper Ligera' : isFr ? 'Zéro Lenteur' : isDe ? 'Null Bloat' : isPt ? 'Zero Bloat' : 'Zero Bloat',
+        desc: isEs ? 'Integración extremadamente ligera.' : isFr ? 'Intégration d\'application web extrêmement légère.' : isDe ? 'Extrem leichte Web-App-Integration.' : isPt ? 'Integração extremamente leve.' : 'Extremely lightweight progressive web app integration.'
+      }
+    ]
+  };
 
   useEffect(() => {
     // Check if already installed
@@ -32,14 +63,14 @@ export default function ExtensionPage() {
       }
     } else {
       // Fallback
-      alert("To install, click the browser menu (⋮) and select 'Install TheyLovePDF' or 'Add to Home Screen'.");
+      alert(t.fallback);
     }
   };
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "TheyLovePDF Browser Extension",
+    "name": t.title,
     "operatingSystem": "Chrome, Edge, Brave",
     "applicationCategory": "BrowserExtension",
     "offers": {
@@ -47,14 +78,14 @@ export default function ExtensionPage() {
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "Install the TheyLovePDF browser extension. Edit, merge, compress and convert PDF files directly from your browser toolbar."
+    "description": t.schemaDesc
   };
 
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-20 px-4">
       <Helmet>
-        <title>TheyLovePDF Chrome & Edge Extension</title>
-        <meta name="description" content="Install the TheyLovePDF browser extension. Edit, merge, compress and convert PDF files directly from your browser toolbar." />
+        <title>{t.title}</title>
+        <meta name="description" content={t.schemaDesc} />
         <script type="application/ld+json">
           {JSON.stringify(schema)}
         </script>
@@ -71,9 +102,9 @@ export default function ExtensionPage() {
           </div>
         </div>
         
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">TheyLovePDF Browser Extension</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">{t.title}</h1>
         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Access all your favorite PDF tools instantly from your browser toolbar. No more searching, just 1-click PDF magic.
+          {t.desc}
         </p>
 
         <div className="bg-white rounded-3xl p-10 shadow-sm border border-gray-100 max-w-2xl mx-auto relative overflow-hidden">
@@ -85,10 +116,10 @@ export default function ExtensionPage() {
               <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <iconify-icon icon="solar:check-circle-bold" class="text-3xl"></iconify-icon>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Extension Installed!</h3>
-              <p className="text-gray-600 mb-6">TheyLovePDF is now added to your browser shortcuts.</p>
-              <Link to="/tools" className="px-8 py-3 bg-[#378ADD] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all inline-block">
-                Open Tools
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.installedTitle}</h3>
+              <p className="text-gray-600 mb-6">{t.installedDesc}</p>
+              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools`} className="px-8 py-3 bg-[#378ADD] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all inline-block">
+                {t.goTools}
               </Link>
             </div>
           ) : (
@@ -113,7 +144,7 @@ export default function ExtensionPage() {
                 className="w-full sm:w-auto px-10 py-4 bg-[#378ADD] text-white text-lg font-bold rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3"
               >
                 <iconify-icon icon="logos:chrome" class="text-xl"></iconify-icon>
-                Add to Chrome
+                {t.download}
               </button>
               
               <div className="flex items-center gap-2 mt-4 text-sm text-gray-500">
@@ -124,7 +155,7 @@ export default function ExtensionPage() {
                   <iconify-icon icon="solar:star-bold"></iconify-icon>
                   <iconify-icon icon="solar:star-bold"></iconify-icon>
                 </div>
-                <span>4.9/5 (10k+ users)</span>
+                <span>4.9/5 (10k+ {t.users})</span>
               </div>
             </div>
           )}
@@ -134,22 +165,22 @@ export default function ExtensionPage() {
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
             <iconify-icon icon="solar:mouse-circle-bold-duotone" class="text-4xl text-[#378ADD] shrink-0"></iconify-icon>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1">1-Click Access</h3>
-              <p className="text-gray-500 text-sm">Open the PDF toolkit instantly from your browser's toolbar.</p>
+              <h3 className="font-bold text-gray-900 mb-1">{t.features[0].title}</h3>
+              <p className="text-gray-500 text-sm">{t.features[0].desc}</p>
             </div>
           </div>
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
             <iconify-icon icon="solar:shield-check-bold-duotone" class="text-4xl text-emerald-500 shrink-0"></iconify-icon>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1">Secure Extension</h3>
-              <p className="text-gray-500 text-sm">We don't track your browsing history. 100% privacy focused.</p>
+              <h3 className="font-bold text-gray-900 mb-1">{t.features[1].title}</h3>
+              <p className="text-gray-500 text-sm">{t.features[1].desc}</p>
             </div>
           </div>
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
             <iconify-icon icon="solar:flash-bold-duotone" class="text-4xl text-purple-500 shrink-0"></iconify-icon>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1">Zero Bloat</h3>
-              <p className="text-gray-500 text-sm">Extremely lightweight progressive web app integration.</p>
+              <h3 className="font-bold text-gray-900 mb-1">{t.features[2].title}</h3>
+              <p className="text-gray-500 text-sm">{t.features[2].desc}</p>
             </div>
           </div>
         </div>

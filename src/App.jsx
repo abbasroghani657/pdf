@@ -896,8 +896,11 @@ export default function App() {
             <Route path="/extension" element={<ExtensionPage />} />
             <Route path="/for/:industry" element={<UseCasePage />} />
 
-            {/* Spanish & French Static Routes */}
+            {/* Spanish Static Routes */}
             <Route path="/es" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="es" />} />
+            <Route path="/es/desktop" element={<DesktopAppPage lang="es" />} />
+            <Route path="/es/extension" element={<ExtensionPage lang="es" />} />
+            <Route path="/es/for/:industry" element={<UseCasePage lang="es" />} />
             <Route path="/es/pricing" element={<PricingPage lang="es" />} />
             <Route path="/es/compare" element={<ComparePage lang="es" />} />
             <Route path="/es/about" element={<AboutPage lang="es" />} />
@@ -908,7 +911,11 @@ export default function App() {
             <Route path="/es/blog/:slug" element={<BlogPost lang="es" />} />
             <Route path="/es/pdf-trends-2026" element={<PDFTrendsPage lang="es" />} />
             
+            {/* French Static Routes */}
             <Route path="/fr" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="fr" />} />
+            <Route path="/fr/desktop" element={<DesktopAppPage lang="fr" />} />
+            <Route path="/fr/extension" element={<ExtensionPage lang="fr" />} />
+            <Route path="/fr/for/:industry" element={<UseCasePage lang="fr" />} />
             <Route path="/fr/pricing" element={<PricingPage lang="fr" />} />
             <Route path="/fr/compare" element={<ComparePage lang="fr" />} />
             <Route path="/fr/about" element={<AboutPage lang="fr" />} />
@@ -919,8 +926,11 @@ export default function App() {
             <Route path="/fr/blog/:slug" element={<BlogPost lang="fr" />} />
             <Route path="/fr/pdf-trends-2026" element={<PDFTrendsPage lang="fr" />} />
 
-            {/* German & Portuguese Static Routes */}
+            {/* German Static Routes */}
             <Route path="/de" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="de" />} />
+            <Route path="/de/desktop" element={<DesktopAppPage lang="de" />} />
+            <Route path="/de/extension" element={<ExtensionPage lang="de" />} />
+            <Route path="/de/for/:industry" element={<UseCasePage lang="de" />} />
             <Route path="/de/pricing" element={<PricingPage lang="de" />} />
             <Route path="/de/compare" element={<ComparePage lang="de" />} />
             <Route path="/de/about" element={<AboutPage lang="de" />} />
@@ -930,8 +940,12 @@ export default function App() {
             <Route path="/de/blog" element={<BlogList lang="de" />} />
             <Route path="/de/blog/:slug" element={<BlogPost lang="de" />} />
             <Route path="/de/pdf-trends-2026" element={<PDFTrendsPage lang="de" />} />
-            
+
+            {/* Portuguese Static Routes */}
             <Route path="/pt" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="pt" />} />
+            <Route path="/pt/desktop" element={<DesktopAppPage lang="pt" />} />
+            <Route path="/pt/extension" element={<ExtensionPage lang="pt" />} />
+            <Route path="/pt/for/:industry" element={<UseCasePage lang="pt" />} />
             <Route path="/pt/pricing" element={<PricingPage lang="pt" />} />
             <Route path="/pt/compare" element={<ComparePage lang="pt" />} />
             <Route path="/pt/about" element={<AboutPage lang="pt" />} />
