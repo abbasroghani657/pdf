@@ -2,6 +2,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "PDF to Word",
+    "keywords": ["doc", "docx", "text", "convert", "extract"],
     "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
     "icon": "solar:document-text-bold-duotone",
     "iconColorClass": "bg-blue-50 text-blue-600",
@@ -32,6 +33,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "Word to PDF",
+    "keywords": ["doc", "docx", "create", "convert"],
     "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
     "icon": "solar:file-text-bold-duotone",
     "iconColorClass": "bg-blue-50 text-blue-600",
@@ -62,6 +64,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "PDF to Excel",
+    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
     "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
     "icon": "solar:chart-2-bold-duotone",
     "iconColorClass": "bg-emerald-50 text-emerald-600",
@@ -92,6 +95,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "Excel to PDF",
+    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
     "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
     "icon": "solar:chart-square-bold-duotone",
     "iconColorClass": "bg-emerald-50 text-emerald-600",
@@ -122,6 +126,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "PDF to JPG",
+    "keywords": ["image", "picture", "photo", "convert"],
     "desc": "Convert each PDF page into a JPG or extract all images contained.",
     "icon": "solar:gallery-bold-duotone",
     "iconColorClass": "bg-amber-50 text-amber-500",
@@ -152,6 +157,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "JPG to PDF",
+    "keywords": ["image", "picture", "photo", "create"],
     "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
     "icon": "solar:camera-bold-duotone",
     "iconColorClass": "bg-amber-50 text-amber-500",
@@ -242,6 +248,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "PDF to HTML",
+    "keywords": ["webpage", "website", "convert"],
     "desc": "Convert your PDF documents to HTML web pages perfectly.",
     "icon": "solar:code-bold-duotone",
     "iconColorClass": "bg-indigo-50 text-indigo-500",
@@ -272,6 +279,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "HTML to PDF",
+    "keywords": ["webpage", "website", "url", "link"],
     "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
     "icon": "solar:global-bold-duotone",
     "iconColorClass": "bg-indigo-50 text-indigo-500",
@@ -332,6 +340,7 @@ export const TOOLS_DATA = [
   {
     "category": "organize",
     "title": "Merge PDF",
+    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
     "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
     "icon": "solar:layers-bold-duotone",
     "iconColorClass": "bg-cyan-50 text-cyan-600",
@@ -362,6 +371,7 @@ export const TOOLS_DATA = [
   {
     "category": "organize",
     "title": "Split PDF",
+    "keywords": ["cut", "divide", "separate", "extract"],
     "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
     "icon": "solar:scissors-bold-duotone",
     "iconColorClass": "bg-cyan-50 text-cyan-600",
@@ -392,6 +402,7 @@ export const TOOLS_DATA = [
   {
     "category": "organize",
     "title": "Rotate PDF",
+    "keywords": ["turn", "orientation", "pages", "flip"],
     "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
     "icon": "solar:refresh-bold-duotone",
     "iconColorClass": "bg-cyan-50 text-cyan-600",
@@ -512,6 +523,7 @@ export const TOOLS_DATA = [
   {
     "category": "optimize",
     "title": "Compress PDF",
+    "keywords": ["reduce", "shrink", "smaller", "size"],
     "desc": "Reduce file size while optimizing for maximal PDF quality.",
     "icon": "solar:zip-file-bold-duotone",
     "iconColorClass": "bg-green-50 text-green-600",
@@ -542,6 +554,7 @@ export const TOOLS_DATA = [
   {
     "category": "optimize",
     "title": "Repair PDF",
+    "keywords": ["fix", "recover", "corrupt", "broken"],
     "desc": "Repair a damaged PDF and recover data from corrupt files.",
     "icon": "solar:document-medicine-bold-duotone",
     "iconColorClass": "bg-green-50 text-green-600",
@@ -602,6 +615,7 @@ export const TOOLS_DATA = [
   {
     "category": "optimize",
     "title": "Flatten PDF",
+    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
     "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
     "icon": "solar:layers-minimalistic-bold-duotone",
     "iconColorClass": "bg-green-50 text-green-600",
@@ -632,6 +646,7 @@ export const TOOLS_DATA = [
   {
     "category": "security",
     "title": "Protect PDF",
+    "keywords": ["lock", "encrypt", "password", "secure"],
     "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
     "icon": "solar:shield-keyhole-bold-duotone",
     "iconColorClass": "bg-red-50 text-red-500",
@@ -662,6 +677,7 @@ export const TOOLS_DATA = [
   {
     "category": "security",
     "title": "Unlock PDF",
+    "keywords": ["decrypt", "remove password", "open"],
     "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
     "icon": "solar:lock-unlocked-bold-duotone",
     "iconColorClass": "bg-red-50 text-red-500",
@@ -692,6 +708,7 @@ export const TOOLS_DATA = [
   {
     "category": "security",
     "title": "Redact PDF",
+    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
     "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
     "icon": "solar:eye-closed-bold-duotone",
     "iconColorClass": "bg-red-50 text-red-500",
@@ -722,6 +739,7 @@ export const TOOLS_DATA = [
   {
     "category": "sign",
     "title": "Sign PDF",
+    "keywords": ["signature", "esign", "sign", "document"],
     "desc": "Sign yourself or request electronic signatures from others.",
     "icon": "solar:pen-bold-duotone",
     "iconColorClass": "bg-violet-50 text-violet-600",
@@ -812,6 +830,7 @@ export const TOOLS_DATA = [
   {
     "category": "ai",
     "title": "Chat with PDF",
+    "keywords": ["ai", "ask", "bot", "assistant", "read"],
     "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
     "icon": "solar:chat-round-dots-bold-duotone",
     "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
@@ -842,6 +861,7 @@ export const TOOLS_DATA = [
   {
     "category": "edit",
     "title": "Edit PDF",
+    "keywords": ["modify", "change", "text", "add"],
     "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
     "icon": "solar:pen-new-square-bold-duotone",
     "iconColorClass": "bg-yellow-50 text-yellow-600",
@@ -872,6 +892,7 @@ export const TOOLS_DATA = [
   {
     "category": "edit",
     "title": "Watermark PDF",
+    "keywords": ["logo", "stamp", "mark", "brand"],
     "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
     "icon": "solar:waterdrops-bold-duotone",
     "iconColorClass": "bg-yellow-50 text-yellow-600",
@@ -1022,6 +1043,7 @@ export const TOOLS_DATA = [
   {
     "category": "ai",
     "title": "Summarize PDF",
+    "keywords": ["ai", "shorten", "tldr", "abstract"],
     "desc": "Generate quick, accurate summaries of long documents in seconds.",
     "icon": "solar:bill-list-bold-duotone",
     "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
@@ -1052,6 +1074,7 @@ export const TOOLS_DATA = [
   {
     "category": "ai",
     "title": "Translate PDF",
+    "keywords": ["language", "translate", "localization", "ai"],
     "desc": "Translate full documents while preserving original formatting and layout.",
     "icon": "solar:translation-2-bold-duotone",
     "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",

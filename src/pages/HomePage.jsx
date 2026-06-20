@@ -53,9 +53,11 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
 
   const filteredTools = toolDataList.filter(tool => {
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
+    const query = searchQuery.toLowerCase();
     const matchesSearch =
-      tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tool.desc.toLowerCase().includes(searchQuery.toLowerCase());
+      tool.title.toLowerCase().includes(query) ||
+      tool.desc.toLowerCase().includes(query) ||
+      (tool.keywords && tool.keywords.some(k => k.toLowerCase().includes(query)));
     return matchesCategory && matchesSearch;
   });
 
@@ -209,6 +211,58 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
           </div>
         </div>
       </div>
+
+      {/* ── Information / Trust Signals ─────────────────────────────────────── */}
+      <section className="py-12 mt-8 border-t border-gray-100">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">{lang === 'es' ? '¿Por qué elegir TheyLovePDF?' : lang === 'fr' ? 'Pourquoi choisir TheyLovePDF ?' : lang === 'de' ? 'Warum TheyLovePDF wählen?' : lang === 'pt' ? 'Por que escolher TheyLovePDF?' : 'Why Choose TheyLovePDF?'}</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">{lang === 'es' ? 'Herramientas de PDF gratuitas, seguras y fáciles de usar.' : lang === 'fr' ? 'Outils PDF gratuits, sécurisés et faciles à utiliser.' : lang === 'de' ? 'Kostenlose, sichere und einfach zu bedienende PDF-Tools.' : lang === 'pt' ? 'Ferramentas de PDF gratuitas, seguras e fáceis de usar.' : 'Free, secure, and easy-to-use PDF tools that make you more productive.'}</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {[
+            { icon: 'solar:widget-add-bold-duotone', title: lang === 'es' ? 'Colección extensa' : 'Extensive collection', desc: lang === 'es' ? 'Todo lo que necesitas en un solo lugar. Más de 37 herramientas.' : 'Everything you need in one place. Over 37+ tools.' },
+            { icon: 'solar:shield-check-bold-duotone', title: lang === 'es' ? 'La seguridad es prioridad' : 'Safety is important to us', desc: lang === 'es' ? 'Archivos encriptados y eliminados automáticamente después de 2 horas.' : 'Files are encrypted and automatically deleted after 2 hours.' },
+            { icon: 'solar:monitor-smartphone-bold-duotone', title: lang === 'es' ? 'Sin instalación' : 'No installation necessary', desc: lang === 'es' ? 'Funciona directamente en tu navegador en cualquier dispositivo.' : 'Works directly in your web browser on any device.' },
+            { icon: 'solar:wallet-bold-duotone', title: lang === 'es' ? '100% Gratis' : '100% free of charge', desc: lang === 'es' ? 'Usa todas las herramientas gratis sin marcas de agua.' : 'Use all tools completely free without watermarks.' },
+            { icon: 'solar:infinity-bold-duotone', title: lang === 'es' ? 'Sin límites ocultos' : 'No hidden limits', desc: lang === 'es' ? 'Procesa archivos de hasta 10MB gratis, o 2GB en Pro.' : 'Process files up to 10MB for free, or 2GB on Pro.' },
+            { icon: 'solar:verified-check-bold-duotone', title: lang === 'es' ? 'Fácil de usar' : 'Easy to use', desc: lang === 'es' ? 'Diseño intuitivo que te ahorra tiempo en cada tarea.' : 'Intuitive design that saves you time on every task.' },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#378ADD] flex items-center justify-center shrink-0">
+                <iconify-icon icon={item.icon} class="text-2xl"></iconify-icon>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Social Share & Developer ────────────────────────────────────────── */}
+      <section className="py-10 mb-6 bg-gradient-to-b from-transparent to-gray-50 rounded-3xl text-center border border-gray-100/50">
+        <h3 className="text-lg font-bold text-gray-900 mb-2">{lang === 'es' ? '¡Ayúdanos a crecer!' : 'Please share TheyLovePDF with friends'}</h3>
+        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">{lang === 'es' ? 'Escribe un artículo sobre nuestras herramientas en tu blog o compártelo.' : 'Write an article about our tools on your blog, forum, or share it on social media.'}</p>
+        
+        <div className="flex items-center justify-center gap-4 mb-10">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://theylovepdf.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md">
+            <iconify-icon icon="fa6-brands:facebook-f" class="text-xl"></iconify-icon>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://theylovepdf.com&text=Check%20out%20this%20awesome%20PDF%20toolkit!" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md">
+            <iconify-icon icon="fa6-brands:x-twitter" class="text-xl"></iconify-icon>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://theylovepdf.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-md">
+            <iconify-icon icon="fa6-brands:linkedin-in" class="text-xl"></iconify-icon>
+          </a>
+        </div>
+
+        <div className="inline-flex items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-shadow">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#378ADD] to-[#1e3a5f] flex items-center justify-center text-white font-bold text-xs shadow-inner">ZA</div>
+          <span className="text-sm font-semibold text-gray-700">Developed by <span className="text-gray-900 font-bold">Zaheer Abbas</span> <span className="mx-2 text-gray-300">|</span> WE <iconify-icon icon="solar:heart-bold" class="text-red-500 text-sm translate-y-0.5 mx-0.5"></iconify-icon> PDF</span>
+        </div>
+      </section>
 
     </div>
   );

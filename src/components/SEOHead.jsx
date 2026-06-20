@@ -13,7 +13,7 @@ export default function SEOHead({
   faqs = []
 }) {
   const siteName = 'TheyLovePDF';
-  const defaultDescription = 'Edit, convert, compress, and sign PDFs in seconds. 100% free online PDF toolkit with no limits.';
+  const defaultDescription = '✓ Free & Secure. ✓ No Watermarks. ✓ Auto-delete in 2 hours. Edit, convert, compress, and sign PDFs in seconds. 100% free online PDF toolkit.';
   
   const metaTitle = title ? `${title} - ${siteName}` : `Online PDF Editor & Converter - ${siteName}`;
   const metaDesc = description || defaultDescription;
