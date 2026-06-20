@@ -487,11 +487,11 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-1">
             {[
-              { path: '/', label: isEs ? 'Inicio' : isFr ? 'Accueil' : 'Home' },
-              { path: '/tools', label: isEs ? 'Herramientas' : isFr ? 'Outils' : 'Tools' },
-              { path: '/pricing', label: isEs ? 'Precios' : isFr ? 'Tarifs' : 'Pricing' },
-              { path: '/blog', label: isEs ? 'Blog' : isFr ? 'Blog' : 'Blog' },
-              { path: '/compare', label: isEs ? '¿Por qué nosotros?' : isFr ? 'Pourquoi nous?' : 'Why Us?' },
+              { path: '/', label: isEs ? 'Inicio' : isFr ? 'Accueil' : isDe ? 'Startseite' : isPt ? 'Início' : 'Home' },
+              { path: '/tools', label: isEs ? 'Herramientas' : isFr ? 'Outils' : isDe ? 'Werkzeuge' : isPt ? 'Ferramentas' : 'Tools' },
+              { path: '/pricing', label: isEs ? 'Precios' : isFr ? 'Tarifs' : isDe ? 'Preise' : isPt ? 'Preços' : 'Pricing' },
+              { path: '/blog', label: isEs ? 'Blog' : isFr ? 'Blog' : isDe ? 'Blog' : isPt ? 'Blog' : 'Blog' },
+              { path: '/compare', label: isEs ? '¿Por qué nosotros?' : isFr ? 'Pourquoi nous?' : isDe ? 'Warum Wir?' : isPt ? 'Por Que Nós?' : 'Why Us?' },
             ].map(item => (
               <button
                 key={item.path}
@@ -510,7 +510,7 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
             {/* Language Switcher Dropdown */}
-            <LanguageSwitcher location={location} navigate={navigate} isEs={isEs} isFr={isFr} />
+            <LanguageSwitcher location={location} navigate={navigate} isEs={isEs} isFr={isFr} isDe={isDe} isPt={isPt} />
 
             {user ? (
               <div className="flex items-center gap-4">
@@ -523,7 +523,7 @@ export default function App() {
                     </div>
                   )}
                   <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    {user.profile?.name || (isEs ? 'Panel' : isFr ? 'Tableau' : 'Dashboard')}
+                    {user.profile?.name || (isEs ? 'Panel' : isFr ? 'Tableau' : isDe ? 'Dashboard' : isPt ? 'Painel' : 'Dashboard')}
                   </span>
                 </div>
                 {['admin', 'superadmin'].includes(user.profile?.role) && (
@@ -533,19 +533,19 @@ export default function App() {
                     title="Admin Panel"
                   >
                     <iconify-icon icon="solar:shield-keyhole-bold" class="text-sm"></iconify-icon>
-                    {isEs ? 'Administrador' : isFr ? 'Administrateur' : 'Admin'}</button>
+                    {isEs ? 'Administrador' : isFr ? 'Administrateur' : isDe ? 'Administrator' : isPt ? 'Administrador' : 'Admin'}</button>
                 )}
                 <button onClick={logout} className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors">
-                  {isEs ? 'Cerrar sesión' : isFr ? 'Se déconnecter' : 'Logout'}
+                  {isEs ? 'Cerrar sesión' : isFr ? 'Se déconnecter' : isDe ? 'Abmelden' : isPt ? 'Sair' : 'Logout'}
                 </button>
               </div>
             ) : (
               <>
                 <button onClick={() => handleNavClick('/login')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
-                  {isEs ? 'Iniciar sesión' : isFr ? 'Se connecter' : 'Sign in'}
+                  {isEs ? 'Iniciar sesión' : isFr ? 'Se connecter' : isDe ? 'Anmelden' : isPt ? 'Entrar' : 'Sign in'}
                 </button>
                 <button onClick={() => handleNavClick('/register')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
-                  {isEs ? 'Registrarse' : isFr ? "S'inscrire" : 'Sign up'}
+                  {isEs ? 'Registrarse' : isFr ? "S'inscrire" : isDe ? 'Registrieren' : isPt ? 'Inscrever-se' : 'Sign up'}
                 </button>
               </>
             )}
@@ -564,9 +564,9 @@ export default function App() {
         <div className="hidden lg:flex border-b border-gray-200/70 bg-white/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-center gap-10 w-full">
             {[
-              { label: isEs ? 'UNIR PDF' : isFr ? 'FUSIONNER PDF' : 'MERGE PDF', path: '/tools/merge-pdf' },
-              { label: isEs ? 'DIVIDIR PDF' : isFr ? 'DIVISER PDF' : 'SPLIT PDF', path: '/tools/split-pdf' },
-              { label: isEs ? 'COMPRIMIR PDF' : isFr ? 'COMPRESSER PDF' : 'COMPRESS PDF', path: '/tools/compress-pdf' },
+              { label: isEs ? 'UNIR PDF' : isFr ? 'FUSIONNER PDF' : isDe ? 'PDF ZUSAMMENFÜHREN' : isPt ? 'MESCLAR PDF' : 'MERGE PDF', path: '/tools/merge-pdf' },
+              { label: isEs ? 'DIVIDIR PDF' : isFr ? 'DIVISER PDF' : isDe ? 'PDF TEILEN' : isPt ? 'DIVIDIR PDF' : 'SPLIT PDF', path: '/tools/split-pdf' },
+              { label: isEs ? 'COMPRIMIR PDF' : isFr ? 'COMPRESSER PDF' : isDe ? 'PDF KOMPRIMIEREN' : isPt ? 'COMPRIMIR PDF' : 'COMPRESS PDF', path: '/tools/compress-pdf' },
             ].map(link => (
               <button
                 key={link.path}
@@ -582,21 +582,21 @@ export default function App() {
             
             <div className="relative group h-full flex items-center">
               <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3">
-                {isEs ? 'CONVERTIR PDF' : isFr ? 'CONVERTIR PDF' : 'CONVERT PDF'}
+                {isEs ? 'CONVERTIR PDF' : isFr ? 'CONVERTIR PDF' : isDe ? 'PDF KONVERTIEREN' : isPt ? 'CONVERTER PDF' : 'CONVERT PDF'}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover:rotate-180"></iconify-icon>
               </button>
 
               <div className="absolute top-[48px] left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-6 flex gap-8">
                 {/* Column 1 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : 'CONVERT TO PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : isDe ? 'IN PDF KONVERTIEREN' : isPt ? 'CONVERTER PARA PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-1">
                     {[
-                      { name: isEs ? 'JPG a PDF' : isFr ? 'JPG en PDF' : 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: isEs ? 'WORD a PDF' : isFr ? 'WORD en PDF' : 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: isEs ? 'POWERPOINT a PDF' : isFr ? 'POWERPOINT en PDF' : 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: isEs ? 'EXCEL a PDF' : isFr ? 'EXCEL en PDF' : 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: isEs ? 'HTML a PDF' : isFr ? 'HTML en PDF' : 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
+                      { name: isEs ? 'JPG a PDF' : isFr ? 'JPG en PDF' : isDe ? 'JPG in PDF' : isPt ? 'JPG para PDF' : 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: isEs ? 'WORD a PDF' : isFr ? 'WORD en PDF' : isDe ? 'WORD in PDF' : isPt ? 'WORD para PDF' : 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: isEs ? 'POWERPOINT a PDF' : isFr ? 'POWERPOINT en PDF' : isDe ? 'POWERPOINT in PDF' : isPt ? 'POWERPOINT para PDF' : 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: isEs ? 'EXCEL a PDF' : isFr ? 'EXCEL en PDF' : isDe ? 'EXCEL in PDF' : isPt ? 'EXCEL para PDF' : 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: isEs ? 'HTML a PDF' : isFr ? 'HTML en PDF' : isDe ? 'HTML in PDF' : isPt ? 'HTML para PDF' : 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
                     ].map(t => (
                       <button
                         key={t.name}
@@ -614,7 +614,7 @@ export default function App() {
 
                 {/* Column 2 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : 'CONVERT FROM PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : isDe ? 'VON PDF KONVERTIEREN' : isPt ? 'CONVERTER DE PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-1">
                     {[
                       { name: isEs ? 'PDF a JPG' : isFr ? 'PDF en JPG' : 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
@@ -644,7 +644,7 @@ export default function App() {
                 onClick={() => handleNavClick('/')}
                 className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3"
               >
-                {isEs ? 'TODAS LAS HERRAMIENTAS' : isFr ? 'TOUS LES OUTILS PDF' : 'ALL PDF TOOLS'}
+                {isEs ? 'TODAS LAS HERRAMIENTAS' : isFr ? 'TOUS LES OUTILS PDF' : isDe ? 'ALLE PDF-WERKZEUGE' : isPt ? 'TODAS AS FERRAMENTAS' : 'ALL PDF TOOLS'}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover/all:rotate-180"></iconify-icon>
               </button>
 
@@ -652,7 +652,7 @@ export default function App() {
                 
                 {/* Column 1: {isEs ? 'ORGANIZAR Y OPTIMIZAR' : 'ORGANIZE & OPTIMIZE'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'ORGANIZAR Y OPTIMIZAR' : isFr ? 'ORGANISER & OPTIMISER' : 'ORGANIZE & OPTIMIZE'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'ORGANIZAR Y OPTIMIZAR' : isFr ? 'ORGANISER & OPTIMISER' : isDe ? 'ORGANISIEREN & OPTIMIEREN' : isPt ? 'ORGANIZAR E OTIMIZAR' : 'ORGANIZE & OPTIMIZE'}</p>
                   <div className="space-y-0.5">
                     {organizeOptimizeTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -667,7 +667,7 @@ export default function App() {
 
                 {/* Column 2: {isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : 'CONVERT TO PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : isDe ? 'IN PDF KONVERTIEREN' : isPt ? 'CONVERTER PARA PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-0.5 mb-6">
                     {convertToTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -678,7 +678,7 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">{isEs ? 'HERRAMIENTAS IA' : isFr ? 'OUTILS IA' : 'AI TOOLS'}</p>
+                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">{isEs ? 'HERRAMIENTAS IA' : isFr ? 'OUTILS IA' : isDe ? 'KI-WERKZEUGE' : isPt ? 'FERRAMENTAS DE IA' : 'AI TOOLS'}</p>
                   <div className="space-y-0.5">
                     {aiTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-purple-50 transition-colors text-left group/item">
@@ -693,7 +693,7 @@ export default function App() {
 
                 {/* Column 3: {isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : 'CONVERT FROM PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : isDe ? 'VON PDF KONVERTIEREN' : isPt ? 'CONVERTER DE PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-0.5">
                     {convertFromTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -708,7 +708,7 @@ export default function App() {
 
                 {/* Column 4: {isEs ? 'EDICIÓN Y SEGURIDAD' : 'EDIT & SECURITY'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'EDICIÓN Y SEGURIDAD' : isFr ? 'ÉDITION & SÉCURITÉ' : 'EDIT & SECURITY'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'EDICIÓN Y SEGURIDAD' : isFr ? 'ÉDITION & SÉCURITÉ' : isDe ? 'BEARBEITEN & SICHERHEIT' : isPt ? 'EDIÇÃO E SEGURANÇA' : 'EDIT & SECURITY'}</p>
                   <div className="space-y-0.5">
                     {editSignSecurityTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -850,23 +850,33 @@ export default function App() {
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/es/dashboard" element={<DashboardPage lang="es" />} />
               <Route path="/fr/dashboard" element={<DashboardPage lang="fr" />} />
+              <Route path="/de/dashboard" element={<DashboardPage lang="de" />} />
+              <Route path="/pt/dashboard" element={<DashboardPage lang="pt" />} />
             </Route>
             
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/es/forgot-password" element={<ForgotPasswordPage lang="es" />} />
             <Route path="/fr/forgot-password" element={<ForgotPasswordPage lang="fr" />} />
+            <Route path="/de/forgot-password" element={<ForgotPasswordPage lang="de" />} />
+            <Route path="/pt/forgot-password" element={<ForgotPasswordPage lang="pt" />} />
             
             <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/es/reset-password" element={<ResetPasswordPage lang="es" />} />
             <Route path="/fr/reset-password" element={<ResetPasswordPage lang="fr" />} />
+            <Route path="/de/reset-password" element={<ResetPasswordPage lang="de" />} />
+            <Route path="/pt/reset-password" element={<ResetPasswordPage lang="pt" />} />
             
             <Route path="/auth/callback" element={<OAuthCallbackPage />} />
             <Route path="/es/auth/callback" element={<OAuthCallbackPage lang="es" />} />
             <Route path="/fr/auth/callback" element={<OAuthCallbackPage lang="fr" />} />
+            <Route path="/de/auth/callback" element={<OAuthCallbackPage lang="de" />} />
+            <Route path="/pt/auth/callback" element={<OAuthCallbackPage lang="pt" />} />
             
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
             <Route path="/es/payment-success" element={<PaymentSuccessPage lang="es" />} />
             <Route path="/fr/payment-success" element={<PaymentSuccessPage lang="fr" />} />
+            <Route path="/de/payment-success" element={<PaymentSuccessPage lang="de" />} />
+            <Route path="/pt/payment-success" element={<PaymentSuccessPage lang="pt" />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
             <Route path="/accept-invite/:token" element={<AcceptInvite />} />
             <Route path="/invite-response" element={<InviteResponse />} />
@@ -901,15 +911,45 @@ export default function App() {
             <Route path="/fr/blog/:slug" element={<BlogPost lang="fr" />} />
             <Route path="/fr/pdf-trends-2026" element={<PDFTrendsPage lang="fr" />} />
 
+            {/* German & Portuguese Static Routes */}
+            <Route path="/de" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="de" />} />
+            <Route path="/de/pricing" element={<PricingPage lang="de" />} />
+            <Route path="/de/compare" element={<ComparePage lang="de" />} />
+            <Route path="/de/about" element={<AboutPage lang="de" />} />
+            <Route path="/de/contact" element={<ContactPage lang="de" />} />
+            <Route path="/de/privacy" element={<PrivacyPage lang="de" />} />
+            <Route path="/de/terms" element={<TermsPage lang="de" />} />
+            <Route path="/de/blog" element={<BlogList lang="de" />} />
+            <Route path="/de/blog/:slug" element={<BlogPost lang="de" />} />
+            <Route path="/de/pdf-trends-2026" element={<PDFTrendsPage lang="de" />} />
+            
+            <Route path="/pt" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="pt" />} />
+            <Route path="/pt/pricing" element={<PricingPage lang="pt" />} />
+            <Route path="/pt/compare" element={<ComparePage lang="pt" />} />
+            <Route path="/pt/about" element={<AboutPage lang="pt" />} />
+            <Route path="/pt/contact" element={<ContactPage lang="pt" />} />
+            <Route path="/pt/privacy" element={<PrivacyPage lang="pt" />} />
+            <Route path="/pt/terms" element={<TermsPage lang="pt" />} />
+            <Route path="/pt/blog" element={<BlogList lang="pt" />} />
+            <Route path="/pt/blog/:slug" element={<BlogPost lang="pt" />} />
+            <Route path="/pt/pdf-trends-2026" element={<PDFTrendsPage lang="pt" />} />
+
             <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
             <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
             <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
             <Route path="/es/tools/:toolSlug/:platform" element={<ToolRenderer lang="es" />} />
             <Route path="/fr/tools/:toolSlug" element={<ToolRenderer lang="fr" />} />
             <Route path="/fr/tools/:toolSlug/:platform" element={<ToolRenderer lang="fr" />} />
+            <Route path="/de/tools/:toolSlug" element={<ToolRenderer lang="de" />} />
+            <Route path="/de/tools/:toolSlug/:platform" element={<ToolRenderer lang="de" />} />
+            <Route path="/pt/tools/:toolSlug" element={<ToolRenderer lang="pt" />} />
+            <Route path="/pt/tools/:toolSlug/:platform" element={<ToolRenderer lang="pt" />} />
+            
             <Route path="/sign/:token" element={<SigningPage />} />
             <Route path="/es/sign/:token" element={<SigningPage lang="es" />} />
             <Route path="/fr/sign/:token" element={<SigningPage lang="fr" />} />
+            <Route path="/de/sign/:token" element={<SigningPage lang="de" />} />
+            <Route path="/pt/sign/:token" element={<SigningPage lang="pt" />} />
 
             {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
             {/* OLD /admin path is explicitly blocked — returns 404 */}

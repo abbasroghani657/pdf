@@ -13,6 +13,11 @@ export default function PricingPage({ lang = 'en' }) {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const isEs = lang === 'es';
+  const isFr = lang === 'fr';
+  const isDe = lang === 'de';
+  const isPt = lang === 'pt';
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,14 +48,19 @@ export default function PricingPage({ lang = 'en' }) {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#378ADD]/20 shadow-sm mb-6">
             <span className="flex h-2 w-2 rounded-full bg-[#378ADD] animate-pulse"></span>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#378ADD]">Pricing 2026</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#378ADD]">
+              {isEs ? 'Precios 2026' : isFr ? 'Tarifs 2026' : isDe ? 'Preise 2026' : isPt ? 'Preços 2026' : 'Pricing 2026'}
+            </span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight mb-6">
-            Simple, transparent pricing
+            {isEs ? 'Precios simples y transparentes' : isFr ? 'Des tarifs simples et transparents' : isDe ? 'Einfache, transparente Preise' : isPt ? 'Preços simples e transparentes' : 'Simple, transparent pricing'}
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Whether you're a casual user or a power enterprise, we have a plan tailored for your needs. 
-            No hidden fees, cancel anytime.
+            {isEs ? 'Ya sea un usuario ocasional o una empresa, tenemos un plan para sus necesidades. Sin cargos ocultos, cancele en cualquier momento.' : 
+             isFr ? 'Que vous soyez un utilisateur occasionnel ou une entreprise, nous avons un plan adapté à vos besoins. Aucun frais caché, annulez à tout moment.' : 
+             isDe ? 'Ob Gelegenheitsnutzer oder Unternehmen, wir haben den passenden Plan für Ihre Bedürfnisse. Keine versteckten Gebühren, jederzeit kündbar.' : 
+             isPt ? 'Seja você um usuário casual ou uma empresa, temos um plano para suas necessidades. Sem taxas ocultas, cancele a qualquer momento.' : 
+             'Whether you\'re a casual user or a power enterprise, we have a plan tailored for your needs. No hidden fees, cancel anytime.'}
           </p>
 
           {/* Billing Toggle */}
@@ -69,7 +79,7 @@ export default function PricingPage({ lang = 'en' }) {
                   !isAnnual ? "text-white" : "text-slate-600 hover:text-slate-900"
                 )}
               >
-                Monthly
+                {isEs ? 'Mensual' : isFr ? 'Mensuel' : isDe ? 'Monatlich' : isPt ? 'Mensal' : 'Monthly'}
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
@@ -78,7 +88,7 @@ export default function PricingPage({ lang = 'en' }) {
                   isAnnual ? "text-white" : "text-slate-600 hover:text-slate-900"
                 )}
               >
-                Annually
+                {isEs ? 'Anual' : isFr ? 'Annuel' : isDe ? 'Jährlich' : isPt ? 'Anual' : 'Annually'}
               </button>
             </div>
             {/* Save Badge */}
@@ -91,7 +101,7 @@ export default function PricingPage({ lang = 'en' }) {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
               </span>
               <div className="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wide border border-emerald-200 shadow-sm">
-                Save 20%
+                {isEs ? 'Ahorre 20%' : isFr ? 'Économisez 20%' : isDe ? 'Spare 20%' : isPt ? 'Poupe 20%' : 'Save 20%'}
               </div>
             </motion.div>
           </div>

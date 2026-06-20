@@ -4,6 +4,8 @@ import { clsx } from 'clsx';
 import { TOOLS_DATA } from '../data/tools';
 import { TOOLS_DATA_ES } from '../data/tools-es';
 import { TOOLS_DATA_FR } from '../data/tools-fr';
+import { TOOLS_DATA_DE } from '../data/tools-de';
+import { TOOLS_DATA_PT } from '../data/tools-pt';
 import { slugify } from '../utils/slugify';
 import { useNavigate } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -47,7 +49,7 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
   const [activeCategory, setActiveCategory] = useState('all');
   const navigate = useNavigate();
 
-  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : lang === 'fr' ? TOOLS_DATA_FR : TOOLS_DATA;
+  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : lang === 'fr' ? TOOLS_DATA_FR : lang === 'de' ? TOOLS_DATA_DE : lang === 'pt' ? TOOLS_DATA_PT : TOOLS_DATA;
 
   const filteredTools = toolDataList.filter(tool => {
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
@@ -67,7 +69,7 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
     const toolIndex = toolDataList.findIndex(t => t === tool);
     const enTool = TOOLS_DATA[toolIndex];
     const slug = slugify(enTool ? enTool.title : tool.title);
-    const prefix = lang === 'es' ? '/es' : lang === 'fr' ? '/fr' : '';
+    const prefix = lang === 'es' ? '/es' : lang === 'fr' ? '/fr' : lang === 'de' ? '/de' : lang === 'pt' ? '/pt' : '';
     navigate(`${prefix}/tools/${slug}`);
   };
 
@@ -76,29 +78,19 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
   const translatedCategories = CATEGORIES.map(c => {
     if (lang === 'en') return c;
     if (lang === 'es') {
-      const labels = {
-        'all': 'Todas',
-        'convert': 'Convertir',
-        'organize': 'Organizar',
-        'optimize': 'Optimizar',
-        'security': 'Seguridad',
-        'edit': 'Editar',
-        'sign': 'Firmar',
-        'ai': 'IA Tools'
-      };
+      const labels = { 'all': 'Todas', 'convert': 'Convertir', 'organize': 'Organizar', 'optimize': 'Optimizar', 'security': 'Seguridad', 'edit': 'Editar', 'sign': 'Firmar', 'ai': 'IA Tools' };
       return { ...c, label: labels[c.id] };
     }
     if (lang === 'fr') {
-      const labels = {
-        'all': 'Toutes',
-        'convert': 'Convertir',
-        'organize': 'Organiser',
-        'optimize': 'Optimiser',
-        'security': 'Sécurité',
-        'edit': 'Modifier',
-        'sign': 'Signer',
-        'ai': 'Outils IA'
-      };
+      const labels = { 'all': 'Toutes', 'convert': 'Convertir', 'organize': 'Organiser', 'optimize': 'Optimiser', 'security': 'Sécurité', 'edit': 'Modifier', 'sign': 'Signer', 'ai': 'Outils IA' };
+      return { ...c, label: labels[c.id] };
+    }
+    if (lang === 'de') {
+      const labels = { 'all': 'Alle', 'convert': 'Konvertieren', 'organize': 'Organisieren', 'optimize': 'Optimieren', 'security': 'Sicherheit', 'edit': 'Bearbeiten', 'sign': 'Unterschreiben', 'ai': 'KI-Tools' };
+      return { ...c, label: labels[c.id] };
+    }
+    if (lang === 'pt') {
+      const labels = { 'all': 'Todas', 'convert': 'Converter', 'organize': 'Organizar', 'optimize': 'Otimizar', 'security': 'Segurança', 'edit': 'Editar', 'sign': 'Assinar', 'ai': 'Ferramentas de IA' };
       return { ...c, label: labels[c.id] };
     }
     return c;
@@ -137,7 +129,7 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
           {filteredTools.length > 0 ? (
             <>
               <p className="text-sm text-gray-500">
-                <span className="font-semibold text-gray-900">{filteredTools.length}</span> {lang === 'es' ? 'herramientas encontradas para' : 'tools found for'} "<span className="text-[#378ADD]">{searchQuery}</span>"
+                <span className="font-semibold text-gray-900">{filteredTools.length}</span> {lang === 'es' ? 'herramientas encontradas para' : lang === 'fr' ? 'outils trouvés pour' : lang === 'de' ? 'Werkzeuge gefunden für' : lang === 'pt' ? 'ferramentas encontradas para' : 'tools found for'} "<span className="text-[#378ADD]">{searchQuery}</span>"
               </p>
               <div className="tools-grid">
                 {filteredTools.map((tool, idx) => (
@@ -181,33 +173,33 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
             PLAN PRO
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            {lang === 'es' ? '¿Listo para un poder ilimitado?' : 'Ready for unlimited power?'}
+            {lang === 'es' ? '¿Listo para un poder ilimitado?' : lang === 'fr' ? 'Prêt pour une puissance illimitée ?' : lang === 'de' ? 'Bereit für unbegrenzte Macht?' : lang === 'pt' ? 'Pronto para poder ilimitado?' : 'Ready for unlimited power?'}
           </h2>
           <p className="text-blue-100 text-sm mb-7 max-w-md mx-auto">
-            {lang === 'es' ? 'Desbloquee más de 37 herramientas, tamaños de archivo de 2 GB, procesamiento por lotes, acceso API y cero anuncios por solo $4.99/mes.' : 'Unlock all 37+ tools, 2GB file sizes, batch processing, API access, and zero ads for just $4.99/month.'}
+            {lang === 'es' ? 'Desbloquee más de 37 herramientas por solo $4.99/mes.' : lang === 'fr' ? 'Débloquez plus de 37 outils pour seulement 4,99 $/mois.' : lang === 'de' ? 'Schalten Sie über 37 Werkzeuge für nur 4,99 $/Monat frei.' : lang === 'pt' ? 'Desbloqueie mais de 37 ferramentas por apenas $ 4,99/mês.' : 'Unlock all 37+ tools, 2GB file sizes, batch processing, API access, and zero ads for just $4.99/month.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
-              onClick={() => navigate('/pricing')}
+              onClick={() => navigate(lang === 'en' ? '/pricing' : `/${lang}/pricing`)}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#378ADD] font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg text-sm hover:-translate-y-0.5 active:translate-y-0"
             >
               <iconify-icon icon="solar:crown-bold" class="text-base text-amber-500"></iconify-icon>
-              {lang === 'es' ? 'Ver Precios' : 'View Pricing'}
+              {lang === 'es' ? 'Ver Precios' : lang === 'fr' ? 'Voir les Tarifs' : lang === 'de' ? 'Preise ansehen' : lang === 'pt' ? 'Ver Preços' : 'View Pricing'}
             </button>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-sm"
             >
               <iconify-icon icon="solar:play-bold" class="text-base"></iconify-icon>
-              {lang === 'es' ? 'Pruébalo gratis — no requiere tarjeta' : 'Try free — no card needed'}
+              {lang === 'es' ? 'Pruébalo gratis' : lang === 'fr' ? 'Essayez gratuitement' : lang === 'de' ? 'Kostenlos testen' : lang === 'pt' ? 'Experimente grátis' : 'Try free — no card needed'}
             </button>
           </div>
           {/* Trust pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
             {[
               { icon: 'solar:shield-check-bold', text: '256-bit SSL' },
-              { icon: 'solar:user-cross-bold', text: 'No signup required' },
-              { icon: 'solar:trash-bin-minimalistic-bold', text: 'Auto-delete files' },
+              { icon: 'solar:user-cross-bold', text: lang === 'es' ? 'Sin registro' : lang === 'fr' ? 'Sans inscription' : lang === 'de' ? 'Ohne Anmeldung' : lang === 'pt' ? 'Sem registro' : 'No signup required' },
+              { icon: 'solar:trash-bin-minimalistic-bold', text: lang === 'es' ? 'Borrado automático' : lang === 'fr' ? 'Suppression auto' : lang === 'de' ? 'Autom. Löschung' : lang === 'pt' ? 'Exclusão automática' : 'Auto-delete files' },
             ].map((pill, i) => (
               <div key={i} className="flex items-center gap-1.5 text-white/70 text-xs font-medium">
                 <iconify-icon icon={pill.icon} class="text-white/60 text-sm"></iconify-icon>
@@ -282,13 +274,13 @@ function EmptyState({ setSearchQuery, setActiveCategory, lang }) {
       <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
         <iconify-icon icon="solar:file-remove-bold-duotone" class="text-3xl text-gray-400"></iconify-icon>
       </div>
-      <h3 className="text-base font-bold text-gray-900">{lang === 'es' ? 'No se encontraron herramientas' : 'No tools found'}</h3>
-      <p className="text-sm text-gray-500 mt-1">{lang === 'es' ? 'Pruebe con un término de búsqueda o categoría diferente.' : 'Try a different search term or category.'}</p>
+      <h3 className="text-base font-bold text-gray-900">{lang === 'es' ? 'No se encontraron herramientas' : lang === 'fr' ? 'Aucun outil trouvé' : lang === 'de' ? 'Keine Werkzeuge gefunden' : lang === 'pt' ? 'Nenhuma ferramenta encontrada' : 'No tools found'}</h3>
+      <p className="text-sm text-gray-500 mt-1">{lang === 'es' ? 'Pruebe con un término de búsqueda o categoría diferente.' : lang === 'fr' ? 'Essayez un terme de recherche ou une catégorie différente.' : lang === 'de' ? 'Versuchen Sie einen anderen Suchbegriff oder eine andere Kategorie.' : lang === 'pt' ? 'Tente um termo de pesquisa ou categoria diferente.' : 'Try a different search term or category.'}</p>
       <button
         onClick={() => { setSearchQuery(''); setActiveCategory('all'); }}
         className="mt-5 px-5 py-2 bg-[#378ADD] text-white text-xs font-bold rounded-xl hover:bg-[#2b71b8] transition-colors shadow-sm"
       >
-        {lang === 'es' ? 'Borrar filtros' : 'Clear filters'}
+        {lang === 'es' ? 'Borrar filtros' : lang === 'fr' ? 'Effacer les filtres' : lang === 'de' ? 'Filter löschen' : lang === 'pt' ? 'Limpar filtros' : 'Clear filters'}
       </button>
     </div>
   );
