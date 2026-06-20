@@ -166,15 +166,13 @@ allRoutes.forEach(route => {
   let finalHtml = baseHtml;
   
   // Hreflang Tags
-  const slug = slugify(displayTitle); // Need original slug, wait, displayTitle is translated.
-  // We need the english slug for the URL generation.
-  // Actually routePath already has the correct base URL.
-  // Let's reconstruct the paths for alternate languages based on routePath.
-  const routeBase = routePath.replace(/^\/(es|fr)/, '');
+  const routeBase = routePath.replace(/^\/(es|fr|de|pt)/, '');
   const hreflangTags = `
     <link rel="alternate" hreflang="en" href="https://www.theylovepdf.com${routeBase}" />
     <link rel="alternate" hreflang="es" href="https://www.theylovepdf.com/es${routeBase}" />
     <link rel="alternate" hreflang="fr" href="https://www.theylovepdf.com/fr${routeBase}" />
+    <link rel="alternate" hreflang="de" href="https://www.theylovepdf.com/de${routeBase}" />
+    <link rel="alternate" hreflang="pt" href="https://www.theylovepdf.com/pt${routeBase}" />
     <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${routeBase}" />
   `;
   
@@ -194,13 +192,9 @@ allRoutes.forEach(route => {
   const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n</script>`;
   finalHtml = finalHtml.replace('</head>', `  ${scriptTag}\n  </head>`);
   
-  // Inject Hreflang and Canonical
-  const alternateUrl = lang === 'en' ? `https://www.theylovepdf.com/es${routePath}` : `https://www.theylovepdf.com${routePath.replace('/es/', '/')}`;
-  const alternateLang = lang === 'en' ? 'es' : 'en';
-  const hreflangTag = `<link rel="alternate" hreflang="${alternateLang}" href="${alternateUrl}" />\n    <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${routePath.replace('/es', '')}" />`;
+  // Inject Canonical
   const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${routePath}" />`;
-  
-  finalHtml = finalHtml.replace('</head>', `  ${hreflangTag}\n  ${canonicalTag}\n  </head>`);
+  finalHtml = finalHtml.replace('</head>', `  ${canonicalTag}\n  </head>`);
 
   // Write file
   const outDir = path.join(DIST_DIR, routePath);
@@ -212,13 +206,17 @@ allRoutes.forEach(route => {
 const staticRoutes = [
   '/pricing', '/compare', '/about', '/contact', '/privacy', '/terms', '/pdf-trends-2026',
   '/es', '/es/pricing', '/es/compare', '/es/about', '/es/contact', '/es/privacy', '/es/terms', '/es/pdf-trends-2026',
-  '/fr', '/fr/pricing', '/fr/compare', '/fr/about', '/fr/contact', '/fr/privacy', '/fr/terms', '/fr/pdf-trends-2026'
+  '/fr', '/fr/pricing', '/fr/compare', '/fr/about', '/fr/contact', '/fr/privacy', '/fr/terms', '/fr/pdf-trends-2026',
+  '/de', '/de/pricing', '/de/compare', '/de/about', '/de/contact', '/de/privacy', '/de/terms', '/de/pdf-trends-2026',
+  '/pt', '/pt/pricing', '/pt/compare', '/pt/about', '/pt/contact', '/pt/privacy', '/pt/terms', '/pt/pdf-trends-2026'
 ];
 
 staticRoutes.forEach(route => {
   const isEs = route.startsWith('/es');
   const isFr = route.startsWith('/fr');
-  const lang = isEs ? 'es' : isFr ? 'fr' : 'en';
+  const isDe = route.startsWith('/de');
+  const isPt = route.startsWith('/pt');
+  const lang = isEs ? 'es' : isFr ? 'fr' : isDe ? 'de' : isPt ? 'pt' : 'en';
   
   const titles = {
     '/es': 'El kit de herramientas PDF más potente gratis - TheyLovePDF',
@@ -236,7 +234,23 @@ staticRoutes.forEach(route => {
     '/fr/contact': 'Contact - TheyLovePDF',
     '/fr/privacy': 'Politique de confidentialité - TheyLovePDF',
     '/fr/terms': 'Conditions d\'utilisation - TheyLovePDF',
-    '/fr/pdf-trends-2026': 'Tendances PDF 2026 - TheyLovePDF'
+    '/fr/pdf-trends-2026': 'Tendances PDF 2026 - TheyLovePDF',
+    '/de': 'Das leistungsstärkste PDF-Toolkit kostenlos - TheyLovePDF',
+    '/de/pricing': 'Preise - TheyLovePDF',
+    '/de/compare': 'Warum wir - TheyLovePDF',
+    '/de/about': 'Über uns - TheyLovePDF',
+    '/de/contact': 'Kontakt - TheyLovePDF',
+    '/de/privacy': 'Datenschutzerklärung - TheyLovePDF',
+    '/de/terms': 'Nutzungsbedingungen - TheyLovePDF',
+    '/de/pdf-trends-2026': 'PDF-Trends 2026 - TheyLovePDF',
+    '/pt': 'O kit de ferramentas PDF mais poderoso grátis - TheyLovePDF',
+    '/pt/pricing': 'Preços - TheyLovePDF',
+    '/pt/compare': 'Por que nós - TheyLovePDF',
+    '/pt/about': 'Sobre nós - TheyLovePDF',
+    '/pt/contact': 'Contato - TheyLovePDF',
+    '/pt/privacy': 'Política de Privacidade - TheyLovePDF',
+    '/pt/terms': 'Termos de Uso - TheyLovePDF',
+    '/pt/pdf-trends-2026': 'Tendências de PDF 2026 - TheyLovePDF'
   };
 
   let finalHtml = baseHtml;
@@ -250,14 +264,16 @@ staticRoutes.forEach(route => {
   }
 
   // Canonical and Hreflang for static pages
-  const cleanRoute = route.replace(/^\/(es|fr)/, '');
+  const cleanRoute = route.replace(/^\/(es|fr|de|pt)/, '');
   const hreflangTags = `
     <link rel="alternate" hreflang="en" href="https://www.theylovepdf.com${cleanRoute}" />
     <link rel="alternate" hreflang="es" href="https://www.theylovepdf.com/es${cleanRoute}" />
     <link rel="alternate" hreflang="fr" href="https://www.theylovepdf.com/fr${cleanRoute}" />
+    <link rel="alternate" hreflang="de" href="https://www.theylovepdf.com/de${cleanRoute}" />
+    <link rel="alternate" hreflang="pt" href="https://www.theylovepdf.com/pt${cleanRoute}" />
     <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${cleanRoute}" />
   `;
-  const canonicalPath = route === '/es' ? '/es/' : route === '/fr' ? '/fr/' : route;
+  const canonicalPath = route === '/es' ? '/es/' : route === '/fr' ? '/fr/' : route === '/de' ? '/de/' : route === '/pt' ? '/pt/' : route;
   const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${canonicalPath}" />`;
 
   finalHtml = finalHtml.replace('</head>', `  ${hreflangTags}\n  ${canonicalTag}\n  </head>`);
