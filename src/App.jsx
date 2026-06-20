@@ -41,6 +41,10 @@ import { slugify } from './utils/slugify';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import PDFTrendsPage from './pages/PDFTrendsPage';
+import DesktopAppPage from './pages/DesktopAppPage';
+import ExtensionPage from './pages/ExtensionPage';
+import UseCasePage from './pages/UseCasePage';
 import AnnotatePDFPage from './pages/AnnotatePDFPage';
 import ChatPDFPage from './pages/ChatPDFPage';
 import SummarizePDFPage from './pages/SummarizePDFPage';
@@ -49,7 +53,6 @@ import ExtractDataPage from './pages/ExtractDataPage';
 import PlagiarismCheckPage from './pages/PlagiarismCheckPage';
 import MergePDFPage from './pages/MergePDFPage';
 import NotFoundPage from './pages/NotFoundPage';
-import PDFTrendsPage from './pages/PDFTrendsPage';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import AdminLayout from './pages/admin/AdminLayout';
@@ -887,6 +890,11 @@ export default function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/pdf-trends-2026" element={<PDFTrendsPage />} />
+            
+            {/* SEO Growth Hack Pages */}
+            <Route path="/desktop" element={<DesktopAppPage />} />
+            <Route path="/extension" element={<ExtensionPage />} />
+            <Route path="/for/:industry" element={<UseCasePage />} />
 
             {/* Spanish & French Static Routes */}
             <Route path="/es" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="es" />} />

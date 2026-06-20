@@ -114,6 +114,34 @@ export default function SEOHead({
     });
   }
 
+  // 4. BreadcrumbList Schema
+  if (toolName) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": englishUrl.replace(baseUrl, '') || 'https://www.theylovepdf.com'
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": `${englishUrl.replace(baseUrl, '') || 'https://www.theylovepdf.com'}/tools`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": toolName,
+          "item": canonicalUrl
+        }
+      ]
+    });
+  }
+
   return (
     <Helmet>
       <title>{metaTitle}</title>

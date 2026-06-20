@@ -144,7 +144,7 @@ export default function ToolRenderer({ lang = 'en' }) {
 
           <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
             <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">{t('platformGuides')}</h3>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
               <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/windows`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
                 Windows
               </Link>
@@ -157,6 +157,22 @@ export default function ToolRenderer({ lang = 'en' }) {
               <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/android`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
                 Android
               </Link>
+            </div>
+
+            {/* Related Tools Internal Linking Grid for SEO */}
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">{t('relatedTools') || 'Related Tools'}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
+              {toolDataList.filter(t => t.title !== localizedTitle).slice(0, 6).map((rt, idx) => (
+                <Link key={idx} to={rt.path} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-100 hover:shadow-md hover:border-[#378ADD]/30 transition-all group">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${rt.color.replace('bg-', 'bg-opacity-10 text-').replace('text-white', 'text-blue-500')} group-hover:scale-110 transition-transform`}>
+                    <iconify-icon icon={rt.icon} class="text-xl"></iconify-icon>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm text-gray-900 group-hover:text-[#378ADD] transition-colors line-clamp-1">{rt.title}</h4>
+                    <p className="text-xs text-gray-500 line-clamp-1">{rt.desc}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

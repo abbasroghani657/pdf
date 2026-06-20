@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 const BASE_URL = 'https://www.theylovepdf.com';
 
-const staticRoutes = [
+const baseStaticRoutes = [
   '/',
   '/pricing',
   '/compare',
@@ -18,82 +18,71 @@ const staticRoutes = [
   '/privacy',
   '/terms',
   '/pdf-trends-2026',
-  '/es',
-  '/es/pricing',
-  '/es/compare',
-  '/es/about',
-  '/es/contact',
-  '/es/privacy',
-  '/es/terms',
-  '/es/pdf-trends-2026',
-  '/fr',
-  '/fr/pricing',
-  '/fr/compare',
-  '/fr/about',
-  '/fr/contact',
-  '/fr/privacy',
-  '/fr/terms',
-  '/fr/pdf-trends-2026',
-  '/de',
-  '/de/pricing',
-  '/de/compare',
-  '/de/about',
-  '/de/contact',
-  '/de/privacy',
-  '/de/terms',
-  '/de/pdf-trends-2026',
-  '/pt',
-  '/pt/pricing',
-  '/pt/compare',
-  '/pt/about',
-  '/pt/contact',
-  '/pt/privacy',
-  '/pt/terms',
-  '/pt/pdf-trends-2026'
+  '/desktop', // Aggressive SEO
+  '/extension', // Aggressive SEO
+  '/for/students', // Use Cases
+  '/for/business', // Use Cases
+  '/for/real-estate', // Use Cases
+  '/for/legal' // Use Cases
 ];
 
 const platforms = ['mac', 'windows', 'iphone', 'android'];
-
-const toolRoutes = [];
-const esToolRoutes = [];
-const frToolRoutes = [];
-const deToolRoutes = [];
-const ptToolRoutes = [];
+const baseToolRoutes = [];
 
 TOOLS_DATA.forEach(t => {
   const baseSlug = `/tools/${slugify(t.title)}`;
-  const esBaseSlug = `/es/tools/${slugify(t.title)}`;
-  const frBaseSlug = `/fr/tools/${slugify(t.title)}`;
-  const deBaseSlug = `/de/tools/${slugify(t.title)}`;
-  const ptBaseSlug = `/pt/tools/${slugify(t.title)}`;
-  
-  toolRoutes.push(baseSlug);
-  esToolRoutes.push(esBaseSlug);
-  frToolRoutes.push(frBaseSlug);
-  deToolRoutes.push(deBaseSlug);
-  ptToolRoutes.push(ptBaseSlug);
-
+  baseToolRoutes.push(baseSlug);
   platforms.forEach(platform => {
-    toolRoutes.push(`${baseSlug}/${platform}`);
-    esToolRoutes.push(`${esBaseSlug}/${platform}`);
-    frToolRoutes.push(`${frBaseSlug}/${platform}`);
-    deToolRoutes.push(`${deBaseSlug}/${platform}`);
-    ptToolRoutes.push(`${ptBaseSlug}/${platform}`);
+    baseToolRoutes.push(`${baseSlug}/${platform}`);
   });
 });
 
-const allRoutes = [...staticRoutes, ...toolRoutes, ...esToolRoutes, ...frToolRoutes, ...deToolRoutes, ...ptToolRoutes];
+const allBaseRoutes = [...baseStaticRoutes, ...baseToolRoutes];
+const languages = [
+  { code: 'en', prefix: '' },
+  { code: 'es', prefix: '/es' },
+  { code: 'fr', prefix: '/fr' },
+  { code: 'de', prefix: '/de' },
+  { code: 'pt', prefix: '/pt' }
+];
+
+let sitemapUrls = '';
+
+allBaseRoutes.forEach(baseRoute => {
+  // Generate a <url> block for each language version of this route
+  languages.forEach(lang => {
+    // Determine the path for this specific language
+    // e.g., if baseRoute is "/", en is "/", es is "/es"
+    // if baseRoute is "/pricing", en is "/pricing", es is "/es/pricing"
+    const currentPath = lang.prefix + (baseRoute === '/' && lang.prefix !== '' ? '' : baseRoute);
+    const fullUrl = `${BASE_URL}${currentPath}`;
+    
+    let xhtmlLinks = '';
+    // Add alternate links for ALL languages
+    languages.forEach(altLang => {
+      const altPath = altLang.prefix + (baseRoute === '/' && altLang.prefix !== '' ? '' : baseRoute);
+      const altUrl = `${BASE_URL}${altPath}`;
+      xhtmlLinks += `\n    <xhtml:link rel="alternate" hreflang="${altLang.code === 'en' ? 'x-default' : altLang.code}" href="${altUrl}" />`;
+      // For english, we explicitly add the 'en' code too, as x-default is good but explicit 'en' is also needed
+      if (altLang.code === 'en') {
+        xhtmlLinks += `\n    <xhtml:link rel="alternate" hreflang="en" href="${altUrl}" />`;
+      }
+    });
+
+    const priority = baseRoute === '/' ? '1.0' : baseRoute.startsWith('/tools/') ? '0.9' : '0.8';
+
+    sitemapUrls += `
+  <url>
+    <loc>${fullUrl}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>${baseRoute === '/' ? 'daily' : 'weekly'}</changefreq>
+    <priority>${priority}</priority>${xhtmlLinks}
+  </url>`;
+  });
+});
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allRoutes.map(route => `
-  <url>
-    <loc>${BASE_URL}${route}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${route === '/' ? 'daily' : 'weekly'}</changefreq>
-    <priority>${route === '/' ? '1.0' : route.startsWith('/tools/') ? '0.9' : '0.8'}</priority>
-  </url>
-`).join('')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${sitemapUrls}
 </urlset>`;
 
 const publicDir = path.join(__dirname, '..', 'public');
@@ -104,4 +93,4 @@ if (!fs.existsSync(publicDir)){
 
 fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap.trim());
 
-console.log(`Sitemap generated with ${allRoutes.length} URLs`);
+console.log(`Sitemap generated with ${allBaseRoutes.length * languages.length} URLs with full cross-language hreflang mapping.`);
