@@ -754,5 +754,285 @@ export const TOOLS_DATA_FR = [
         "answer": "Oui, c'est la forme de signature la plus sûre et la plus juridiquement contraignante."
       }
     ]
+  },
+  {
+    "category": "ai",
+    "title": "Discuter avec le PDF",
+    "desc": "Parlez à votre PDF. Posez des questions, obtenez des résumés et extrayez des informations instantanément grâce à l'IA.",
+    "icon": "solar:chat-round-dots-bold-duotone",
+    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
+    "badge": { "text": "IA" },
+    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "howToSteps": [
+      "Téléchargez votre document PDF long ou complexe.",
+      "Tapez une question dans la boîte de discussion, comme 'Résume le chapitre 2' ou 'Quel est l'argument principal ?'",
+      "Notre IA lira instantanément le document et vous fournira une réponse précise."
+    ],
+    "faqs": [
+      {
+        "question": "Comment fonctionne la discussion avec le PDF ?",
+        "answer": "Nous utilisons des modèles linguistiques avancés (LLM) pour analyser le texte, comprendre le contexte et répondre strictement en fonction du contenu."
+      },
+      {
+        "question": "Peut-il lire des documents numérisés ?",
+        "answer": "Si le document est une image, utilisez d'abord notre outil OCR. S'il contient du texte sélectionnable, l'IA peut le lire immédiatement."
+      },
+      {
+        "question": "Mes documents entraînent-ils l'IA ?",
+        "answer": "Absolument pas. Votre vie privée est prioritaire. Vos documents ne sont jamais utilisés pour entraîner des modèles d'IA publics."
+      }
+    ]
+  },
+  {
+    "category": "edit",
+    "title": "Modifier PDF",
+    "desc": "Ajoutez du texte, des images, des formes ou des annotations à main levée à un document PDF.",
+    "icon": "solar:pen-new-square-bold-duotone",
+    "iconColorClass": "bg-yellow-50 text-yellow-600",
+    "badge": { "text": "Populaire" },
+    "badgeClass": "bg-red-50 text-red-600",
+    "howToSteps": [
+      "Téléchargez le PDF que vous souhaitez modifier.",
+      "Utilisez la barre d'outils pour ajouter du texte, insérer des images, dessiner des formes ou appliquer du correcteur blanc.",
+      "Enregistrez vos modifications et téléchargez le PDF mis à jour."
+    ],
+    "faqs": [
+      {
+        "question": "Puis-je modifier le texte existant dans le PDF ?",
+        "answer": "Actuellement, vous pouvez utiliser l'outil 'correcteur blanc' pour couvrir l'ancien texte et taper par-dessus."
+      },
+      {
+        "question": "Puis-je ajouter des images au PDF ?",
+        "answer": "Oui, vous pouvez facilement télécharger et tamponner des images PNG ou JPG n'importe où."
+      },
+      {
+        "question": "La modification réduit-elle la qualité ?",
+        "answer": "Non, notre éditeur ajoute vos annotations par-dessus la structure existante sans recompresser les images originales."
+      }
+    ]
+  },
+  {
+    "category": "edit",
+    "title": "Filigrane PDF",
+    "desc": "Tamponnez une image ou du texte sur votre PDF en quelques secondes. Choisissez la police, la transparence et la position.",
+    "icon": "solar:waterdrops-bold-duotone",
+    "iconColorClass": "bg-yellow-50 text-yellow-600",
+    "badge": { "text": "Gratuit" },
+    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "howToSteps": [
+      "Téléchargez votre fichier PDF.",
+      "Tapez le texte de votre filigrane ou téléchargez un logo. Ajustez l'opacité, la rotation et l'emplacement.",
+      "Appliquez et téléchargez votre document filigrané."
+    ],
+    "faqs": [
+      {
+        "question": "Puis-je filigraner toutes les pages à la fois ?",
+        "answer": "Oui, par défaut, votre filigrane sera appliqué sur chaque page du document."
+      },
+      {
+        "question": "Puis-je ajuster la transparence ?",
+        "answer": "Absolument. Vous pouvez le rendre très discret ou complètement opaque pour une visibilité maximale."
+      },
+      {
+        "question": "Un filigrane peut-il être supprimé ?",
+        "answer": "Nous aplatissons le filigrane dans le document pour rendre sa suppression aussi difficile que possible."
+      }
+    ]
+  },
+  {
+    "category": "edit",
+    "title": "Formulaires PDF",
+    "desc": "Remplissez des formulaires PDF rapidement et avec précision en ligne.",
+    "icon": "solar:clipboard-list-bold-duotone",
+    "iconColorClass": "bg-yellow-50 text-yellow-600",
+    "badge": { "text": "Gratuit" },
+    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "howToSteps": [
+      "Téléchargez un formulaire PDF interactif.",
+      "Cliquez sur les champs de texte, les cases à cocher ou les boutons radio pour remplir vos informations.",
+      "Téléchargez le formulaire complété."
+    ],
+    "faqs": [
+      {
+        "question": "Puis-je enregistrer un formulaire partiellement rempli ?",
+        "answer": "Si vous avez un compte Pro, vos sessions sont enregistrées automatiquement pour terminer plus tard."
+      },
+      {
+        "question": "Cela fonctionne-t-il avec tous les formulaires ?",
+        "answer": "Nous prenons en charge les formulaires AcroForms standard (99% des PDF interactifs). Les anciens formulaires XFA peuvent avoir un support limité."
+      },
+      {
+        "question": "Puis-je aplatir le formulaire après ?",
+        "answer": "Oui, utilisez notre outil 'Aplatir PDF' pour verrouiller les données afin qu'elles ne puissent pas être modifiées."
+      }
+    ]
+  },
+  {
+    "category": "edit",
+    "title": "Ajouter des numéros de page",
+    "desc": "Ajoutez facilement des numéros de page dans vos PDF. Choisissez vos positions, dimensions et typographie.",
+    "icon": "solar:hashtag-bold-duotone",
+    "iconColorClass": "bg-yellow-50 text-yellow-600",
+    "badge": { "text": "Gratuit" },
+    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "howToSteps": [
+      "Téléchargez votre document.",
+      "Sélectionnez la position (ex: en bas à droite), le style de police et le numéro de départ.",
+      "Appliquez la numérotation et téléchargez votre PDF parfaitement formaté."
+    ],
+    "faqs": [
+      {
+        "question": "Puis-je ignorer la page de garde ?",
+        "answer": "Oui ! Vous pouvez spécifier à partir de quelle page la numérotation doit commencer."
+      },
+      {
+        "question": "Puis-je personnaliser le format ?",
+        "answer": "Absolument. Choisissez des formats comme 'Page 1', '1 sur 10' et sélectionnez la police, la taille et la couleur."
+      },
+      {
+        "question": "L'alignement est-il précis ?",
+        "answer": "Oui, notre outil calcule les marges exactes pour assurer un alignement parfait sur chaque page."
+      }
+    ]
+  },
+  {
+    "category": "edit",
+    "title": "Annoter PDF",
+    "desc": "Surlignez, soulignez, rayez le texte et ajoutez des commentaires.",
+    "icon": "solar:notes-bold-duotone",
+    "iconColorClass": "bg-yellow-50 text-yellow-600",
+    "badge": { "text": "Nouveau" },
+    "badgeClass": "bg-blue-50 text-blue-600",
+    "howToSteps": [
+      "Téléchargez votre PDF.",
+      "Utilisez le surligneur, le soulignement, le barré et les notes autocollantes pour réviser le document.",
+      "Téléchargez le fichier annoté pour le partager avec votre équipe."
+    ],
+    "faqs": [
+      {
+        "question": "Mes annotations seront-elles visibles dans les lecteurs standards ?",
+        "answer": "Oui, nous utilisons les protocoles d'annotation PDF standards (visibles dans Acrobat, Chrome, Apple Preview, etc.)."
+      },
+      {
+        "question": "Puis-je changer les couleurs de surlignage ?",
+        "answer": "Oui, vous pouvez choisir parmi une large palette de couleurs pour coder vos notes."
+      },
+      {
+        "question": "Est-il facile de supprimer une annotation ?",
+        "answer": "Très facile. Cliquez sur l'annotation et appuyez sur la touche Suppr pour l'effacer instantanément."
+      }
+    ]
+  },
+  {
+    "category": "ai",
+    "title": "Vérification de plagiat",
+    "desc": "Comparez votre document avec des milliards de pages web et de bases de données académiques.",
+    "icon": "solar:shield-check-bold-duotone",
+    "iconColorClass": "bg-blue-50 text-blue-600",
+    "badge": { "text": "Pro" },
+    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "howToSteps": [
+      "Téléchargez l'essai ou le document que vous souhaitez vérifier.",
+      "Notre moteur d'IA analysera des milliards de pages web pour trouver des correspondances.",
+      "Consultez le rapport de similitude détaillé mettant en évidence tout texte copié."
+    ],
+    "faqs": [
+      {
+        "question": "Quelle est la précision du vérificateur de plagiat ?",
+        "answer": "Il est très précis. Nous utilisons une IA d'entreprise qui compare votre texte à une base de données massive de contenu en ligne."
+      },
+      {
+        "question": "Vérifie-t-il les articles académiques hors ligne ?",
+        "answer": "Il vérifie les principales revues universitaires en libre accès et les sources fortement citées disponibles en ligne."
+      },
+      {
+        "question": "Mon document est-il enregistré dans une base de données ?",
+        "answer": "Non. Contrairement à certains systèmes universitaires, nous n'ajoutons pas votre document à une base de données mondiale."
+      }
+    ]
+  },
+  {
+    "category": "ai",
+    "title": "Résumer PDF",
+    "desc": "Générez des résumés rapides et précis de documents longs en quelques secondes.",
+    "icon": "solar:bill-list-bold-duotone",
+    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
+    "badge": { "text": "IA + Nouveau" },
+    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "howToSteps": [
+      "Téléchargez un document long, un rapport ou un chapitre de livre.",
+      "Cliquez sur 'Résumer' pour laisser notre IA analyser les concepts clés.",
+      "Lisez le résumé à puces et téléchargez-le si nécessaire."
+    ],
+    "faqs": [
+      {
+        "question": "Peut-il résumer un livre entier ?",
+        "answer": "L'IA est très performante, mais pour de meilleurs résultats, nous recommandons de résumer un chapitre à la fois."
+      },
+      {
+        "question": "Le résumé capture-t-il les statistiques clés ?",
+        "answer": "Oui, notre IA identifie et met en évidence les données critiques et les arguments principaux."
+      },
+      {
+        "question": "Quelles langues sont prises en charge ?",
+        "answer": "Le résumé fonctionne le mieux en anglais, mais prend en charge nativement plus de 50 langues mondiales."
+      }
+    ]
+  },
+  {
+    "category": "ai",
+    "title": "Traduire PDF",
+    "desc": "Traduisez des documents entiers tout en préservant le formatage et la mise en page d'origine.",
+    "icon": "solar:translation-2-bold-duotone",
+    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
+    "badge": { "text": "IA + Nouveau" },
+    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "howToSteps": [
+      "Téléchargez votre document.",
+      "Sélectionnez la langue d'origine et la langue cible vers laquelle vous souhaitez traduire.",
+      "Téléchargez le PDF nouvellement traduit avec son formatage d'origine."
+    ],
+    "faqs": [
+      {
+        "question": "La mise en page sera-t-elle cassée après la traduction ?",
+        "answer": "Notre moteur avancé préserve la mise en page exacte, bien que l'expansion du texte puisse causer de légers décalages visuels."
+      },
+      {
+        "question": "Quelle est la précision de la traduction ?",
+        "answer": "Nous utilisons la traduction automatique neuronale (NMT) pour des traductions précises et adaptées au contexte."
+      },
+      {
+        "question": "Puis-je traduire des documents numérisés ?",
+        "answer": "Oui ! Le système exécutera automatiquement l'OCR pour lire le texte avant de le traduire."
+      }
+    ]
+  },
+  {
+    "category": "ai",
+    "title": "Extraire des données",
+    "desc": "Extrayez intelligemment des tableaux, des valeurs et des entités à partir de factures et de formulaires.",
+    "icon": "solar:database-bold-duotone",
+    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
+    "badge": { "text": "IA + Nouveau" },
+    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "howToSteps": [
+      "Téléchargez des factures, des reçus ou des formulaires structurés.",
+      "Notre IA identifiera les champs clés tels que les dates, les totaux, les noms et les adresses.",
+      "Téléchargez les données extraites sous forme de fichier CSV ou JSON propre."
+    ],
+    "faqs": [
+      {
+        "question": "À quoi sert l'extraction de données ?",
+        "answer": "C'est parfait pour la comptabilité. Au lieu de taper manuellement 100 factures, notre IA le fait automatiquement."
+      },
+      {
+        "question": "Le document a-t-il besoin d'une mise en page spécifique ?",
+        "answer": "Non ! Notre IA est assez intelligente pour trouver le 'Montant Total' peu importe où il se trouve sur la page."
+      },
+      {
+        "question": "Puis-je extraire des données vers Excel ?",
+        "answer": "Oui, les données extraites peuvent être exportées directement au format CSV, qui s'ouvre parfaitement dans Excel."
+      }
+    ]
   }
 ];
