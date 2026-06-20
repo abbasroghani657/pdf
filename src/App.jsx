@@ -455,19 +455,19 @@ export default function App() {
                     title="Admin Panel"
                   >
                     <iconify-icon icon="solar:shield-keyhole-bold" class="text-sm"></iconify-icon>
-                    {isEs ? 'Administrador' : 'Admin'}</button>
+                    {isEs ? 'Administrador' : isFr ? 'Administrateur' : 'Admin'}</button>
                 )}
                 <button onClick={logout} className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors">
-                  {isEs ? 'Cerrar sesión' : 'Logout'}
+                  {isEs ? 'Cerrar sesión' : isFr ? 'Se déconnecter' : 'Logout'}
                 </button>
               </div>
             ) : (
               <>
                 <button onClick={() => handleNavClick('/login')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
-                  {isEs ? 'Iniciar sesión' : 'Sign in'}
+                  {isEs ? 'Iniciar sesión' : isFr ? 'Se connecter' : 'Sign in'}
                 </button>
                 <button onClick={() => handleNavClick('/register')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
-                  {isEs ? 'Registrarse' : 'Sign up'}
+                  {isEs ? 'Registrarse' : isFr ? "S'inscrire" : 'Sign up'}
                 </button>
               </>
             )}
@@ -486,9 +486,9 @@ export default function App() {
         <div className="hidden lg:flex border-b border-gray-200/70 bg-white/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-center gap-10 w-full">
             {[
-              { label: isEs ? 'UNIR PDF' : 'MERGE PDF', path: '/tools/merge-pdf' },
-              { label: isEs ? 'DIVIDIR PDF' : 'SPLIT PDF', path: '/tools/split-pdf' },
-              { label: isEs ? 'COMPRIMIR PDF' : 'COMPRESS PDF', path: '/tools/compress-pdf' },
+              { label: isEs ? 'UNIR PDF' : isFr ? 'FUSIONNER PDF' : 'MERGE PDF', path: '/tools/merge-pdf' },
+              { label: isEs ? 'DIVIDIR PDF' : isFr ? 'DIVISER PDF' : 'SPLIT PDF', path: '/tools/split-pdf' },
+              { label: isEs ? 'COMPRIMIR PDF' : isFr ? 'COMPRESSER PDF' : 'COMPRESS PDF', path: '/tools/compress-pdf' },
             ].map(link => (
               <button
                 key={link.path}
@@ -504,21 +504,21 @@ export default function App() {
             
             <div className="relative group h-full flex items-center">
               <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3">
-                {isEs ? 'CONVERTIR PDF' : 'CONVERT PDF'}
+                {isEs ? 'CONVERTIR PDF' : isFr ? 'CONVERTIR PDF' : 'CONVERT PDF'}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover:rotate-180"></iconify-icon>
               </button>
 
               <div className="absolute top-[48px] left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-6 flex gap-8">
                 {/* Column 1 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-1">
                     {[
-                      { name: isEs ? 'JPG a PDF' : 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: isEs ? 'WORD a PDF' : 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: isEs ? 'POWERPOINT a PDF' : 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: isEs ? 'EXCEL a PDF' : 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: isEs ? 'HTML a PDF' : 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
+                      { name: isEs ? 'JPG a PDF' : isFr ? 'JPG en PDF' : 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: isEs ? 'WORD a PDF' : isFr ? 'WORD en PDF' : 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: isEs ? 'POWERPOINT a PDF' : isFr ? 'POWERPOINT en PDF' : 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: isEs ? 'EXCEL a PDF' : isFr ? 'EXCEL en PDF' : 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: isEs ? 'HTML a PDF' : isFr ? 'HTML en PDF' : 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
                     ].map(t => (
                       <button
                         key={t.name}
@@ -536,15 +536,15 @@ export default function App() {
 
                 {/* Column 2 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-1">
                     {[
-                      { name: isEs ? 'PDF a JPG' : 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: isEs ? 'PDF a WORD' : 'PDF to WORD', path: '/tools/pdf-to-word', icon: 'solar:document-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: isEs ? 'PDF a POWERPOINT' : 'PDF to POWERPOINT', path: '/tools/pdf-to-powerpoint', icon: 'solar:presentation-graph-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: isEs ? 'PDF a EXCEL' : 'PDF to EXCEL', path: '/tools/pdf-to-excel', icon: 'solar:chart-square-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: isEs ? 'PDF a PDF/A' : 'PDF to PDF/A', path: '/tools/pdf-to-pdf-a', icon: 'solar:shield-check-linear', color: 'text-gray-600 bg-gray-100' },
-                      { name: isEs ? 'Firmar PDF' : 'Sign PDF', path: '/tools/sign-pdf', icon: 'solar:pen-linear', color: 'text-violet-600 bg-violet-50' },
+                      { name: isEs ? 'PDF a JPG' : isFr ? 'PDF en JPG' : 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: isEs ? 'PDF a WORD' : isFr ? 'PDF en WORD' : 'PDF to WORD', path: '/tools/pdf-to-word', icon: 'solar:document-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: isEs ? 'PDF a POWERPOINT' : isFr ? 'PDF en POWERPOINT' : 'PDF to POWERPOINT', path: '/tools/pdf-to-powerpoint', icon: 'solar:presentation-graph-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: isEs ? 'PDF a EXCEL' : isFr ? 'PDF en EXCEL' : 'PDF to EXCEL', path: '/tools/pdf-to-excel', icon: 'solar:chart-square-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: isEs ? 'PDF a PDF/A' : isFr ? 'PDF en PDF/A' : 'PDF to PDF/A', path: '/tools/pdf-to-pdf-a', icon: 'solar:shield-check-linear', color: 'text-gray-600 bg-gray-100' },
+                      { name: isEs ? 'Firmar PDF' : isFr ? 'Signer PDF' : 'Sign PDF', path: '/tools/sign-pdf', icon: 'solar:pen-linear', color: 'text-violet-600 bg-violet-50' },
                     ].map(t => (
                       <button
                         key={t.name}
@@ -566,7 +566,7 @@ export default function App() {
                 onClick={() => handleNavClick('/')}
                 className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3"
               >
-                {isEs ? 'TODAS LAS HERRAMIENTAS' : 'ALL PDF TOOLS'}
+                {isEs ? 'TODAS LAS HERRAMIENTAS' : isFr ? 'TOUS LES OUTILS PDF' : 'ALL PDF TOOLS'}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover/all:rotate-180"></iconify-icon>
               </button>
 
@@ -574,7 +574,7 @@ export default function App() {
                 
                 {/* Column 1: {isEs ? 'ORGANIZAR Y OPTIMIZAR' : 'ORGANIZE & OPTIMIZE'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'ORGANIZAR Y OPTIMIZAR' : 'ORGANIZE & OPTIMIZE'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'ORGANIZAR Y OPTIMIZAR' : isFr ? 'ORGANISER & OPTIMISER' : 'ORGANIZE & OPTIMIZE'}</p>
                   <div className="space-y-0.5">
                     {organizeOptimizeTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -589,7 +589,7 @@ export default function App() {
 
                 {/* Column 2: {isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : 'CONVERT TO PDF'}</p>
                   <div className="space-y-0.5 mb-6">
                     {convertToTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -600,7 +600,7 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">{isEs ? 'HERRAMIENTAS IA' : 'AI TOOLS'}</p>
+                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">{isEs ? 'HERRAMIENTAS IA' : isFr ? 'OUTILS IA' : 'AI TOOLS'}</p>
                   <div className="space-y-0.5">
                     {aiTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-purple-50 transition-colors text-left group/item">
@@ -615,7 +615,7 @@ export default function App() {
 
                 {/* Column 3: {isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : 'CONVERT FROM PDF'}</p>
                   <div className="space-y-0.5">
                     {convertFromTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -630,7 +630,7 @@ export default function App() {
 
                 {/* Column 4: {isEs ? 'EDICIÓN Y SEGURIDAD' : 'EDIT & SECURITY'} */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'EDICIÓN Y SEGURIDAD' : 'EDIT & SECURITY'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'EDICIÓN Y SEGURIDAD' : isFr ? 'ÉDITION & SÉCURITÉ' : 'EDIT & SECURITY'}</p>
                   <div className="space-y-0.5">
                     {editSignSecurityTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -678,6 +678,9 @@ export default function App() {
                 isEs ? (
                   <> El kit de herramientas PDF<br className="hidden sm:block" />
                     <span className="gradient-text"> más potente</span> gratis</>
+                ) : isFr ? (
+                  <> La boîte à outils PDF<br className="hidden sm:block" />
+                    <span className="gradient-text"> la plus puissante</span> gratuite</>
                 ) : (
                   <> The most powerful<br className="hidden sm:block" />
                     <span className="gradient-text"> PDF toolkit</span> free</>
@@ -688,7 +691,7 @@ export default function App() {
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
-              {isHome && (isEs ? 'Más de 37 herramientas. Desarrollado por IA. Sin límites en el nivel gratuito. Confiado por profesionales de todo el mundo.' : '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.')}
+              {isHome && (isEs ? 'Más de 37 herramientas. Desarrollado por IA. Sin límites en el nivel gratuito. Confiado por profesionales de todo el mundo.' : isFr ? 'Plus de 37 outils. Propulsé par l\'IA. Traitement plus rapide. Sans limites dans la version gratuite. Approuvé par des professionnels.' : '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.')}
               {isPricing && (isEs ? 'Haga más con TheyLovePDF Pro. Sin cargos ocultos, cancele en cualquier momento.' : 'Get more done with TheyLovePDF Pro. No hidden fees, cancel anytime.')}
               {isCompare && (isEs ? 'Por qué millones están cambiando a la alternativa más rápida, inteligente y asequible.' : 'Why millions are switching to the faster, smarter, and more affordable alternative.')}
             </p>
@@ -696,12 +699,12 @@ export default function App() {
             {isHome && (
               <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
                 {[
-                  { icon: 'solar:stars-linear', label: isEs ? 'Con IA' : 'AI powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
-                  { icon: 'solar:widget-5-linear', label: isEs ? 'Más de 37 herramientas' : '37+ tools', cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
-                  { icon: 'solar:user-cross-linear', label: isEs ? 'Sin registro' : 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
-                  { icon: 'solar:shield-check-linear', label: isEs ? 'SSL de 256 bits' : '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:devices-linear', label: isEs ? 'Todos los dispositivos' : 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:cloud-bold', label: isEs ? 'Rápido y seguro' : 'Fast & Secure', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
+                  { icon: 'solar:stars-linear', label: isEs ? 'Con IA' : isFr ? 'Propulsé par l\'IA' : 'AI powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
+                  { icon: 'solar:widget-5-linear', label: isEs ? 'Más de 37 herramientas' : isFr ? '+ de 37 outils' : '37+ tools', cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
+                  { icon: 'solar:user-cross-linear', label: isEs ? 'Sin registro' : isFr ? 'Pas d\'inscription' : 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
+                  { icon: 'solar:shield-check-linear', label: isEs ? 'SSL de 256 bits' : isFr ? 'SSL 256 bits' : '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
+                  { icon: 'solar:devices-linear', label: isEs ? 'Todos los dispositivos' : isFr ? 'Tous les appareils' : 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
+                  { icon: 'solar:cloud-bold', label: isEs ? 'Rápido y seguro' : isFr ? 'Rapide et sécurisé' : 'Fast & Secure', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
                 ].map((pill, i) => (
                   <span
                     key={i}
@@ -725,7 +728,7 @@ export default function App() {
                 </div>
                 <input
                   type="text"
-                  placeholder={isEs ? 'Buscar herramientas... comprimir, unir, firmar...' : 'Search tools... compress, merge, sign...'}
+                  placeholder={isEs ? 'Buscar herramientas... comprimir, unir, firmar...' : isFr ? 'Rechercher des outils... compresser, fusionner, signer...' : 'Search tools... compress, merge, sign...'}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-white border border-gray-200 rounded-full py-3 pl-11 pr-10 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] shadow-sm transition-all"

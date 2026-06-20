@@ -137,12 +137,17 @@ export default function PDFTrendsPage({ lang = 'en' }) {
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 text-center">
             
             <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-4">
-              Global PDF <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-indigo-600">Trends</span> <span className="text-gray-400 font-light">2026</span>
+              {lang === 'es' ? 'Tendencias Globales de ' : lang === 'fr' ? 'Tendances Mondiales des ' : 'Global PDF '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-indigo-600">
+                {lang === 'es' || lang === 'fr' ? 'PDF' : 'Trends'}
+              </span> 
+              <span className="text-gray-400 font-light"> 2026</span>
             </h1>
 
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-12">
-              The Portable Document Format remains the cornerstone of global digital infrastructure.
-              Explore our verified statistics on the scale, growth, and future of digital documents.
+              {lang === 'es' ? 'El Formato de Documento Portátil sigue siendo la piedra angular de la infraestructura digital global. Explore nuestras estadísticas verificadas sobre la escala, el crecimiento y el futuro de los documentos digitales.' :
+               lang === 'fr' ? 'Le Format de Document Portable reste la pierre angulaire de l\'infrastructure numérique mondiale. Découvrez nos statistiques vérifiées sur l\'échelle, la croissance et l\'avenir des documents numériques.' :
+               'The Portable Document Format remains the cornerstone of global digital infrastructure. Explore our verified statistics on the scale, growth, and future of digital documents.'}
             </p>
 
             {/* Quick Stats Banner */}
