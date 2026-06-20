@@ -8,14 +8,16 @@ import { BLOG_POSTS_FR } from '../data/blog-fr';
 const BlogList = ({ lang = 'en' }) => {
   const isEs = lang === 'es';
   const isFr = lang === 'fr';
-  const prefix = isEs ? '/es' : isFr ? '/fr' : '';
+  const isDe = lang === 'de';
+  const isPt = lang === 'pt';
+  const prefix = isEs ? '/es' : isFr ? '/fr' : isDe ? '/de' : isPt ? '/pt' : '';
   const posts = isEs ? BLOG_POSTS_ES : isFr ? BLOG_POSTS_FR : BLOG_POSTS_EN;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const title = isEs ? 'Guías y Blog' : isFr ? 'Guides et Blog' : 'Guides & Blog';
-  const description = isEs ? 'Consejos, trucos y tutoriales para dominar sus documentos PDF.' : isFr ? 'Conseils, astuces et tutoriels pour maîtriser vos documents PDF.' : 'Tips, tricks, and tutorials to master your PDF documents.';
+  const title = isEs ? 'Guías y Blog' : isFr ? 'Guides et Blog' : isDe ? 'Anleitungen & Blog' : isPt ? 'Guias e Blog' : 'Guides & Blog';
+  const description = isEs ? 'Consejos, trucos y tutoriales para dominar sus documentos PDF.' : isFr ? 'Conseils, astuces et tutoriels pour maîtriser vos documents PDF.' : isDe ? 'Tipps, Tricks und Tutorials zur Beherrschung Ihrer PDF-Dokumente.' : isPt ? 'Dicas, truques e tutoriais para dominar seus documentos PDF.' : 'Tips, tricks, and tutorials to master your PDF documents.';
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -29,7 +31,7 @@ const BlogList = ({ lang = 'en' }) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-              {isEs ? 'Guías y Blog de TheyLovePDF' : isFr ? 'Guides et Blog de TheyLovePDF' : 'TheyLovePDF Guides & Blog'}
+              {isEs ? 'Guías y Blog de TheyLovePDF' : isFr ? 'Guides et Blog de TheyLovePDF' : isDe ? 'TheyLovePDF Anleitungen & Blog' : isPt ? 'Guias e Blog do TheyLovePDF' : 'TheyLovePDF Guides & Blog'}
             </h1>
             <p className="mt-4 text-xl text-gray-600">
               {description}
@@ -44,7 +46,7 @@ const BlogList = ({ lang = 'en' }) => {
                   <p className="text-sm text-gray-500 mb-4">{post.date}</p>
                   <p className="text-gray-700 leading-relaxed">{post.excerpt}</p>
                   <span className="inline-block mt-4 text-red-600 font-semibold hover:underline">
-                    {isEs ? 'Leer artículo completo →' : isFr ? "Lire l'article complet →" : 'Read full article →'}
+                    {isEs ? 'Leer artículo completo →' : isFr ? "Lire l'article complet →" : isDe ? "Vollständigen Artikel lesen →" : isPt ? "Ler artigo completo →" : 'Read full article →'}
                   </span>
                 </Link>
               </article>

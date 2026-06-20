@@ -63,18 +63,24 @@ function injectContext(text, platform, lang = 'en') {
   if (platform) {
     if (lang === 'es') platformStr = platform === 'mac' ? 'tu Mac' : platform === 'windows' ? 'tu Windows' : platform === 'iphone' ? 'tu iPhone' : 'tu dispositivo Android';
     else if (lang === 'fr') platformStr = platform === 'mac' ? 'votre Mac' : platform === 'windows' ? 'votre Windows' : platform === 'iphone' ? 'votre iPhone' : 'votre appareil Android';
+    else if (lang === 'de') platformStr = platform === 'mac' ? 'Ihren Mac' : platform === 'windows' ? 'Ihren Windows-PC' : platform === 'iphone' ? 'Ihr iPhone' : 'Ihr Android-Gerät';
+    else if (lang === 'pt') platformStr = platform === 'mac' ? 'seu Mac' : platform === 'windows' ? 'seu Windows' : platform === 'iphone' ? 'seu iPhone' : 'seu dispositivo Android';
     else platformStr = `your ${platform === 'mac' ? 'Mac' : platform === 'windows' ? 'Windows' : platform === 'iphone' ? 'iPhone' : 'Android device'}`;
   } else {
     if (lang === 'es') platformStr = 'tu dispositivo';
     else if (lang === 'fr') platformStr = 'votre appareil';
+    else if (lang === 'de') platformStr = 'Ihr Gerät';
+    else if (lang === 'pt') platformStr = 'seu dispositivo';
     else platformStr = 'your device';
   }
   
   const capitalizedPlatformStr = platformStr.charAt(0).toUpperCase() + platformStr.slice(1);
   
-  let res = text.replace(/your device/g, platformStr).replace(/Your device/g, capitalizedPlatformStr);
-  if (lang === 'es') res = res.replace(/tu dispositivo/g, platformStr).replace(/Tu dispositivo/g, capitalizedPlatformStr);
-  if (lang === 'fr') res = res.replace(/votre appareil/g, platformStr).replace(/Votre appareil/g, capitalizedPlatformStr);
+  let res = text.replace(/your device/gi, platformStr).replace(/Your device/gi, capitalizedPlatformStr);
+  if (lang === 'es') res = res.replace(/tu dispositivo/gi, platformStr).replace(/Tu dispositivo/gi, capitalizedPlatformStr);
+  if (lang === 'fr') res = res.replace(/votre appareil/gi, platformStr).replace(/Votre appareil/gi, capitalizedPlatformStr);
+  if (lang === 'de') res = res.replace(/Ihr Gerät/gi, platformStr).replace(/ihr gerät/gi, platformStr);
+  if (lang === 'pt') res = res.replace(/seu dispositivo/gi, platformStr).replace(/Seu dispositivo/gi, capitalizedPlatformStr);
   return res;
 }
 
@@ -89,7 +95,7 @@ allRoutes.forEach(route => {
   const displayDesc = tool.desc; 
   
   const platformName = platform ? (platform.charAt(0).toUpperCase() + platform.slice(1)) : '';
-  const platformSuffix = platform ? (lang === 'es' ? ' en ' : lang === 'fr' ? ' sur ' : ' for ') + platformName : '';
+  const platformSuffix = platform ? (lang === 'es' ? ' en ' : lang === 'fr' ? ' sur ' : lang === 'de' ? ' für ' : lang === 'pt' ? ' para ' : ' for ') + platformName : '';
   
   const title = `${displayTitle}${platformSuffix} - TheyLovePDF`;
   const desc = injectContext(displayDesc, platform, lang);
