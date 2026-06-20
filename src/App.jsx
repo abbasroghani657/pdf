@@ -188,6 +188,69 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
     </>
   );
 }
+// ─── LANGUAGE SWITCHER COMPONENT ──────────────────────────────────────────────
+const LanguageSwitcher = ({ location, navigate, isEs, isFr }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const currentLang = isEs ? 'ES' : isFr ? 'FR' : 'EN';
+  
+  const switchLang = (lang) => {
+    let newPath = location.pathname;
+    newPath = newPath.replace(/^\/(es|fr)(\/|$)/, '/');
+    if (!newPath.startsWith('/')) newPath = '/' + newPath;
+    
+    if (lang === 'ES') {
+      newPath = `/es${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'FR') {
+      newPath = `/fr${newPath === '/' ? '' : newPath}`;
+    }
+    
+    if (newPath === '') newPath = '/';
+    navigate(newPath);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="text-sm font-semibold text-gray-500 hover:text-gray-900 border border-gray-200 hover:bg-gray-50 rounded-lg px-2.5 py-1.5 transition-colors flex items-center gap-1.5"
+        title="Change Language"
+      >
+        <iconify-icon icon="solar:global-linear" class="text-base"></iconify-icon>
+        {currentLang}
+        <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xs ml-0.5"></iconify-icon>
+      </button>
+
+      {isOpen && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)}></div>
+          <div className="absolute right-0 mt-2 w-32 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50 py-1">
+            <button 
+              onClick={() => switchLang('EN')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'EN' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              English
+            </button>
+            <button 
+              onClick={() => switchLang('ES')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'ES' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Español
+            </button>
+            <button 
+              onClick={() => switchLang('FR')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'FR' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Français
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
 
 // ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function App() {
@@ -413,30 +476,8 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
-            {/* Language Switcher */}
-            <button
-              onClick={() => {
-                const isCurrentlyEs = location.pathname.startsWith('/es/') || location.pathname === '/es';
-                const isCurrentlyFr = location.pathname.startsWith('/fr/') || location.pathname === '/fr';
-                let newPath = location.pathname;
-                
-                // Toggle between EN -> ES -> FR -> EN
-                if (isCurrentlyEs) {
-                  newPath = newPath.replace(/^\/es(\/|$)/, '/fr$1');
-                } else if (isCurrentlyFr) {
-                  newPath = newPath.replace(/^\/fr(\/|$)/, '/');
-                } else {
-                  newPath = newPath === '/' ? '/es' : `/es${newPath}`;
-                }
-                if (newPath === '') newPath = '/';
-                navigate(newPath);
-              }}
-              className="text-sm font-semibold text-gray-500 hover:text-gray-900 border border-gray-200 hover:bg-gray-50 rounded-lg px-2.5 py-1.5 transition-colors flex items-center gap-1.5"
-              title={isEs ? 'Cambiar a Francés' : isFr ? "Passer à l'anglais" : 'Switch to Spanish'}
-            >
-              <iconify-icon icon="solar:global-linear" class="text-base"></iconify-icon>
-              {isEs ? 'ES' : isFr ? 'FR' : 'EN'}
-            </button>
+            {/* Language Switcher Dropdown */}
+            <LanguageSwitcher location={location} navigate={navigate} isEs={isEs} isFr={isFr} />
 
             {user ? (
               <div className="flex items-center gap-4">
