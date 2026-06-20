@@ -39,8 +39,28 @@ export default function SEOHead({
 
   const schemas = [];
 
-  // 1. WebSite or SoftwareApplication Schema
-  if (toolName) {
+  // 1. WebSite or SoftwareApplication or Article Schema
+  if (type === 'article') {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": metaTitle,
+      "description": metaDesc,
+      "image": image,
+      "author": {
+        "@type": "Organization",
+        "name": siteName
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": siteName,
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.theylovepdf.com/logo.png"
+        }
+      }
+    });
+  } else if (toolName) {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "WebApplication",

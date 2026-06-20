@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { BLOG_POSTS as BLOG_POSTS_EN } from '../data/blog';
 import { BLOG_POSTS_ES } from '../data/blog-es';
 import { BLOG_POSTS_FR } from '../data/blog-fr';
@@ -13,8 +14,17 @@ const BlogList = ({ lang = 'en' }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const title = isEs ? 'Guías y Blog' : isFr ? 'Guides et Blog' : 'Guides & Blog';
+  const description = isEs ? 'Consejos, trucos y tutoriales para dominar sus documentos PDF.' : isFr ? 'Conseils, astuces et tutoriels pour maîtriser vos documents PDF.' : 'Tips, tricks, and tutorials to master your PDF documents.';
+
   return (
     <div className="flex flex-col min-h-screen">
+      <SEOHead 
+        lang={lang}
+        title={title}
+        description={description}
+        url="/blog"
+      />
       <main className="flex-grow bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -22,7 +32,7 @@ const BlogList = ({ lang = 'en' }) => {
               {isEs ? 'Guías y Blog de TheyLovePDF' : isFr ? 'Guides et Blog de TheyLovePDF' : 'TheyLovePDF Guides & Blog'}
             </h1>
             <p className="mt-4 text-xl text-gray-600">
-              {isEs ? 'Consejos, trucos y tutoriales para dominar sus documentos PDF.' : isFr ? 'Conseils, astuces et tutoriels pour maîtriser vos documents PDF.' : 'Tips, tricks, and tutorials to master your PDF documents.'}
+              {description}
             </p>
           </div>
           

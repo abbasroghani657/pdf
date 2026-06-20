@@ -36,21 +36,28 @@ const overrides = {
   }
 };
 
-async function translateText(text) {
+async function translateText(text, retries = 3) {
   if (!text) return text;
   
   if (overrides[lang] && overrides[lang][text]) {
     return overrides[lang][text];
   }
 
-  try {
-    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lang}&dt=t&q=${encodeURIComponent(text)}`;
-    const res = await fetch(url);
-    const json = await res.json();
-    return json[0].map(item => item[0]).join('');
-  } catch (e) {
-    console.error("Error translating:", text, e);
-    return text;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lang}&dt=t&q=${encodeURIComponent(text)}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      const json = await res.json();
+      return json[0].map(item => item[0]).join('');
+    } catch (e) {
+      if (attempt === retries) {
+        console.error("Error translating after 3 attempts:", text, e.message);
+        return text;
+      }
+      console.warn(`Retry ${attempt} for text: ${text.substring(0, 20)}...`);
+      await delay(1000 * attempt); // Exponential backoff
+    }
   }
 }
 
@@ -71,12 +78,22 @@ async function main() {
     await delay(100);
     
     if (tool.howToSteps) {
-      // Per user recommendation: Only translate title/desc, leave steps/FAQs for manual review
-      translatedTool.howToSteps = [...tool.howToSteps];
+      translatedTool.howToSteps = [];
+      for (const step of tool.howToSteps) {
+        translatedTool.howToSteps.push(await translateText(step));
+        await delay(500);
+      }
     }
     
     if (tool.faqs) {
-      translatedTool.faqs = [...tool.faqs];
+      translatedTool.faqs = [];
+      for (const faq of tool.faqs) {
+        translatedTool.faqs.push({
+          question: await translateText(faq.question),
+          answer: await translateText(faq.answer)
+        });
+        await delay(500);
+      }
     }
     
     translatedTools.push(translatedTool);

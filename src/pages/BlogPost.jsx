@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { BLOG_POSTS as BLOG_POSTS_EN } from '../data/blog';
 import { BLOG_POSTS_ES } from '../data/blog-es';
 import { BLOG_POSTS_FR } from '../data/blog-fr';
@@ -22,6 +23,13 @@ const BlogPost = ({ lang = 'en' }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <SEOHead 
+        lang={lang}
+        title={post.title}
+        description={post.excerpt}
+        url={`/blog/${post.slug}`}
+        type="article"
+      />
       <main className="flex-grow bg-white py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to={`${prefix}/blog`} className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 mb-8">
