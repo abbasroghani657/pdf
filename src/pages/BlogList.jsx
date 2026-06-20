@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { BLOG_POSTS } from '../data/blog';
+import { BLOG_POSTS as BLOG_POSTS_EN } from '../data/blog';
+import { BLOG_POSTS_ES } from '../data/blog-es';
+import { BLOG_POSTS_FR } from '../data/blog-fr';
 
 const BlogList = ({ lang = 'en' }) => {
   const isEs = lang === 'es';
   const isFr = lang === 'fr';
   const prefix = isEs ? '/es' : isFr ? '/fr' : '';
+  const posts = isEs ? BLOG_POSTS_ES : isFr ? BLOG_POSTS_FR : BLOG_POSTS_EN;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,7 +27,7 @@ const BlogList = ({ lang = 'en' }) => {
           </div>
           
           <div className="space-y-8">
-            {BLOG_POSTS.map(post => (
+            {posts.map(post => (
               <article key={post.slug} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <Link to={`${prefix}/blog/${post.slug}`} className="block">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2 hover:text-red-600 transition-colors">{post.title}</h2>

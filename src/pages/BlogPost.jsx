@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { BLOG_POSTS } from '../data/blog';
+import { BLOG_POSTS as BLOG_POSTS_EN } from '../data/blog';
+import { BLOG_POSTS_ES } from '../data/blog-es';
+import { BLOG_POSTS_FR } from '../data/blog-fr';
 
 const BlogPost = ({ lang = 'en' }) => {
   const isEs = lang === 'es';
   const isFr = lang === 'fr';
   const prefix = isEs ? '/es' : isFr ? '/fr' : '';
+  const posts = isEs ? BLOG_POSTS_ES : isFr ? BLOG_POSTS_FR : BLOG_POSTS_EN;
   const { slug } = useParams();
-  const post = BLOG_POSTS.find(p => p.slug === slug);
+  const post = posts.find(p => p.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
