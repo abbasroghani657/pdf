@@ -402,7 +402,7 @@ export default function App() {
                 onClick={() => handleNavClick(item.path)}
                 className={clsx(
                   'px-3.5 py-1.5 rounded-lg text-sm font-medium transition-colors',
-                  location.pathname === item.path || (item.path === '/blog' && location.pathname.startsWith('/blog'))
+                  location.pathname === getNavPath(item.path) || (item.path === '/blog' && location.pathname.startsWith(getNavPath('/blog')))
                     ? 'bg-gray-100 text-gray-900'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
                 )}

@@ -31,7 +31,7 @@ const BlogList = ({ lang = 'en' }) => {
                   <p className="text-sm text-gray-500 mb-4">{post.date}</p>
                   <p className="text-gray-700 leading-relaxed">{post.excerpt}</p>
                   <span className="inline-block mt-4 text-red-600 font-semibold hover:underline">
-                    {isEs ? 'Leer artículo completo &rarr;' : isFr ? 'Lire l\'article complet &rarr;' : 'Read full article &rarr;'}
+                    {isEs ? 'Leer artículo completo →' : isFr ? "Lire l'article complet →" : 'Read full article →'}
                   </span>
                 </Link>
               </article>
