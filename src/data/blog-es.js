@@ -1,42 +1,42 @@
-﻿export const BLOG_POSTS_ES = [
+export const BLOG_POSTS_ES = [
   {
     slug: "how-to-compress-pdf-mac-2026",
     title: "Cómo comprimir un PDF en Mac (Guía 2026)",
     date: "2026-06-20",
     excerpt: "Aprenda las formas más rápidas y fáciles de reducir el tamaño de su archivo PDF en una Mac sin perder calidad.",
     content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
+      <p>Lidiar con archivos PDF grandes en su Mac puede ser frustrante, especialmente cuando necesita enviar un documento por correo electrónico y supera el límite estándar de tamaño de archivo adjunto de 25 MB. Ya sea que sea un estudiante que envía una tarea o un profesional que envía un portafolio, saber cómo comprimir adecuadamente un PDF es una habilidad esencial.</p>
       
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
+      <h2>Método 1: La aplicación Vista previa integrada (Gratuita pero básica)</h2>
+      <p>La aplicación Vista previa de Apple viene con un "Filtro Quartz" integrado que puede reducir sus archivos PDF. Es rápido y no requiere conexión a Internet.</p>
       <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
+        <li>Abra su PDF usando la aplicación <strong>Vista previa</strong>.</li>
+        <li>Haga clic en <strong>Archivo</strong> en la barra de menú superior, luego seleccione <strong>Exportar</strong> (No seleccione "Exportar como PDF").</li>
+        <li>En la ventana de exportación, busque el menú desplegable <strong>Filtro Quartz</strong>.</li>
+        <li>Seleccione <strong>Reducir tamaño de archivo</strong> y haga clic en Guardar.</li>
       </ol>
       <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
+        <p class="text-red-700 m-0"><strong>Advertencia:</strong> Aunque este método es gratuito, el algoritmo de compresión predeterminado de Apple es increíblemente agresivo. A menudo arruina la calidad de las imágenes y hace que el texto vectorial se vea borroso. No lo recomendamos para documentos profesionales.</p>
       </div>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
+      <h2>Método 2: Uso de TheyLovePDF (Profesional y de alta calidad)</h2>
+      <p>Si desea mantener la calidad nítida de su texto e imágenes mientras reduce significativamente el tamaño del archivo, la mejor opción es utilizar una herramienta de compresión dedicada basada en IA.</p>
       <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
+        <li>Vaya a la <a href="/es/tools/compress-pdf" class="text-blue-600 hover:underline">herramienta Comprimir PDF en TheyLovePDF</a>.</li>
+        <li>Arrastre y suelte su archivo PDF en la página.</li>
+        <li>Seleccione su nivel de compresión:
           <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
+            <li><strong>Compresión Extrema:</strong> Ideal para enviar por correo electrónico (la calidad más baja).</li>
+            <li><strong>Compresión Recomendada:</strong> El equilibrio perfecto entre tamaño y calidad.</li>
+            <li><strong>Menos compresión:</strong> Alta calidad, perfecto para imprimir.</li>
           </ul>
         </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
+        <li>Haga clic en <strong>Comprimir PDF</strong> y descargue su archivo optimizado.</li>
       </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+      <p>Nuestros algoritmos de compresión inteligentes eliminan metadatos innecesarios y comprimen imágenes utilizando los estándares web modernos, lo que garantiza que su documento se vea exactamente igual mientras ocupa una fracción del espacio de almacenamiento.</p>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
+      <h2>Conclusión</h2>
+      <p>Si bien las herramientas integradas de Mac son excelentes para salir de un apuro sin conexión, carecen gravemente del control granular requerido para los documentos modernos. Para cualquier cosa importante, confíe siempre en un motor de compresión dedicado.</p>
     `
   },
   {
@@ -45,29 +45,29 @@
     date: "2026-06-19",
     excerpt: "Descubra la forma más sencilla de combinar varios documentos PDF en un solo archivo directamente desde su dispositivo iOS.",
     content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
+      <p>Con los iPhone convirtiéndose en nuestros dispositivos principales para el trabajo y el estudio, saber cómo fusionar archivos PDF sobre la marcha es una habilidad esencial. Ya sea que esté recopilando recibos para un informe de gastos o fusionando notas de clase, aquí le mostramos exactamente cómo puede hacerlo sin una computadora.</p>
       
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
+      <h2>El desafío con iOS</h2>
+      <p>Si bien iOS tiene una sólida aplicación Archivos integrada, no ofrece una forma nativa y directa de seleccionar varios PDF y unirlos sin problemas. Puede escanear documentos en un solo PDF, pero fusionar archivos existentes es sorprendentemente difícil.</p>
       
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
+      <h2>La solución: aplicación web TheyLovePDF</h2>
+      <p>No necesita descargar ninguna aplicación pesada basada en suscripción de la App Store. Puede hacerlo directamente desde Safari o Chrome utilizando nuestra arquitectura en la nube.</p>
       
       <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
+        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Guía paso a paso</h3>
         <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
+          <li>Abra Safari en su iPhone y navegue hasta la <a href="/es/tools/merge-pdf" class="text-blue-600 hover:underline">herramienta Unir PDF de TheyLovePDF</a>.</li>
+          <li>Toque el enorme botón <strong>Seleccionar archivos PDF</strong>.</li>
+          <li>Elija los archivos de la aplicación <em>Archivos</em> de su iPhone o de su <em>Biblioteca de fotos</em>. Puede seleccionar varios archivos a la vez.</li>
+          <li>Una vez subidos, verá una cuadrícula visual de sus archivos. Mantenga presionado cualquier archivo para arrastrarlo y reordenarlo exactamente como lo desea.</li>
+          <li>Toque <strong>Unir PDF</strong>. Nuestros servidores procesarán los archivos en milisegundos.</li>
+          <li>Toque <strong>Descargar</strong> y guarde el nuevo documento combinado directamente en su dispositivo.</li>
         </ol>
       </div>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
+      <h2>¿Por qué no usar una aplicación?</h2>
+      <p>Muchas aplicaciones de PDF en la App Store se pueden descargar gratis, pero le piden dinero tan pronto como intenta fusionar archivos. Al utilizar una herramienta en la nube, evita estas tarifas de la App Store y ahorra espacio de almacenamiento en su teléfono.</p>
+      <p>¡Es así de simple, rápido y completamente seguro!</p>
     `
   },
   {
@@ -76,32 +76,32 @@
     date: "2026-06-18",
     excerpt: "Proteja la información confidencial agregando una contraseña de cifrado AES de 256 bits segura a sus archivos PDF.",
     content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+      <p>En la era digital actual, la privacidad de los datos es más crítica que nunca. Ya sea que esté enviando estados financieros, registros médicos o un contrato comercial confidencial, dejar un PDF sin protección es un riesgo de seguridad masivo.</p>
+      <p>En esta guía, le mostraremos cómo bloquear sus documentos PDF utilizando cifrado de nivel militar.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+      <h2>¿Qué es el cifrado AES de 256 bits?</h2>
+      <p>El Estándar de cifrado avanzado (AES) es el algoritmo de cifrado utilizado por el gobierno de EE. UU. para asegurar información clasificada. Una clave de cifrado de 256 bits significa que hay 2<sup>256</sup> combinaciones posibles, un número tan masivo que ni siquiera las supercomputadoras más poderosas del mundo podrían descifrarlo en mil millones de años.</p>
+      <p>Cuando utiliza nuestra herramienta, no nos limitamos a "añadir una contraseña" que pueda omitirse fácilmente. Codificamos matemáticamente el contenido de su archivo usando AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
+      <h2>Cómo proteger su PDF</h2>
       <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
         <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
+          <li>Navegue a la herramienta <a href="/es/tools/protect-pdf" class="font-bold hover:underline">Proteger PDF</a>.</li>
+          <li>Cargue su documento confidencial a través de nuestra conexión segura TLS 1.3.</li>
+          <li>Ingrese una contraseña segura. (Recomendamos al menos 12 caracteres, mezclando letras, números y símbolos).</li>
+          <li>Haga clic en <strong>Proteger PDF</strong>.</li>
+          <li>Descargue su archivo recién cifrado.</li>
         </ol>
       </div>
 
-      <h2>Best Practices for Password Security</h2>
+      <h2>Mejores prácticas para la seguridad de contraseñas</h2>
       <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
+        <li><strong>Nunca envíe la contraseña en el mismo correo electrónico:</strong> Si envía el PDF por correo electrónico, envíe la contraseña a través de un canal diferente (como SMS o una aplicación de mensajería segura como Signal).</li>
+        <li><strong>Utilice un administrador de contraseñas:</strong> Genere una cadena aleatoria de caracteres en lugar de usar una palabra que se pueda encontrar en un diccionario.</li>
+        <li><strong>No utilice información personal:</strong> Evite las fechas de nacimiento, los nombres de mascotas o los nombres de la empresa.</li>
       </ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
+      <p class="mt-6 italic text-gray-500">Una vez que se cifra su archivo, el contenido original se elimina permanentemente de nuestros servidores en 2 horas. Su privacidad es nuestra prioridad absoluta.</p>
     `
   },
   {
@@ -110,31 +110,31 @@
     date: "2026-06-17",
     excerpt: "Descubra cómo funciona la tecnología de reconocimiento óptico de caracteres (OCR) y cómo extrae texto seleccionable.",
     content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+      <p>¿Alguna vez recibió un PDF que parece un documento, pero cuando intenta resaltar el texto, no sucede nada? Se ha encontrado con un PDF "plano" o "escaneado". Básicamente, es solo una fotografía digital de un trozo de papel.</p>
+      <p>Para interactuar con ese texto, necesita la magia del <strong>Reconocimiento óptico de caracteres (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+      <h2>Cómo funciona el OCR</h2>
+      <p>Cuando ejecuta un archivo a través de un motor de OCR, el software actúa como un ojo humano altamente capacitado. Escanea la imagen píxel por píxel, buscando patrones que se parezcan a letras y números.</p>
+      <p>El OCR moderno no solo hace coincidir formas; utiliza Inteligencia Artificial compleja y modelos de aprendizaje automático para comprender el contexto. Por ejemplo, puede diferenciar una 'I' mayúscula y una 'l' minúscula en función de las letras que la rodean en la palabra.</p>
 
-      <h2>The Benefits of OCR</h2>
+      <h2>Los beneficios del OCR</h2>
       <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
+        <li><strong>Capacidad de búsqueda:</strong> Encontrar una cláusula específica en un contrato escaneado de 500 páginas es imposible sin leerlo todo. OCR le permite usar CTRL+F para encontrar exactamente lo que necesita al instante.</li>
+        <li><strong>Capacidad de edición:</strong> Una vez que se reconoce el texto, puede copiarlo, pegarlo y editarlo en Word o Google Docs.</li>
+        <li><strong>Accesibilidad:</strong> Los lectores de pantalla para usuarios con discapacidad visual no pueden leer imágenes planas. OCR hace que sus documentos sean accesibles para todos.</li>
       </ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
+      <h2>Cómo hacer OCR a un documento</h2>
+      <p>Transformar sus documentos escaneados es increíblemente simple con TheyLovePDF:</p>
       <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
+        <li>Vaya a la <a href="/es/tools/ocr-pdf" class="text-blue-600 hover:underline">herramienta OCR PDF</a>.</li>
+        <li>Cargue su documento escaneado.</li>
+        <li>Seleccione el idioma del documento. Esto es crucial: decirle a la IA qué idioma esperar mejora drásticamente la precisión, especialmente para idiomas con caracteres o acentos únicos.</li>
+        <li>Presione procesar. La IA reconstruirá su documento, superponiendo una capa de texto invisible sobre las imágenes originales.</li>
       </ol>
       
       <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
+        Deje de volver a escribir documentos manualmente. ¡Deje que la IA haga el trabajo pesado por usted!
       </blockquote>
     `
   },
@@ -144,29 +144,29 @@
     date: "2026-06-16",
     excerpt: "Deje de pagar por software costoso. Descubra las formas más eficientes de editar texto en PDF directamente en Windows.",
     content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
+      <p>Durante años, los usuarios de Windows han tenido problemas con los archivos PDF. A diferencia de los documentos de Word, los archivos PDF fueron diseñados para ser impresiones digitales "finalizadas". Cuando nota un error tipográfico en un contrato o necesita actualizar una fecha en una factura, por lo general se topa con un muro de pago masivo como Adobe Acrobat.</p>
+      <p>Afortunadamente, en 2026, no necesita software costoso instalado en su máquina con Windows 11 para realizar ediciones básicas.</p>
       
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
+      <h2>El enfoque web inteligente</h2>
+      <p>En lugar de descargar aplicaciones de escritorio pesadas y lentas, los editores basados ​​en la nube utilizan la potencia de procesamiento de servidores remotos para analizar la estructura PDF directamente en su navegador.</p>
       
       <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
+        <h3 class="text-indigo-900 font-bold mb-3 mt-0">Cómo editar directamente</h3>
         <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
+          <li>Abra Microsoft Edge o Google Chrome en Windows 11.</li>
+          <li>Navegue a la <a href="/es/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">herramienta Editar PDF</a>.</li>
+          <li>Cargue su documento. Nuestro motor decodificará las capas de texto al instante.</li>
+          <li>Haga clic en cualquier cuadro de texto para modificar el texto, cambiar la fuente o ajustar el tamaño.</li>
+          <li>También puede insertar nuevas imágenes, formas o bloquear información confidencial.</li>
+          <li>Haga clic en <strong>Aplicar cambios</strong> y descargue el archivo actualizado.</li>
         </ol>
       </div>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+      <h2>¿Por qué no utilizar Microsoft Edge?</h2>
+      <p>Si bien Microsoft Edge tiene un visor de PDF integrado con herramientas de dibujo (tinta), <strong>no puede editar texto existente</strong>. Solo le permite dibujar en la parte superior o agregar nuevos cuadros de texto. Para cambiar realmente un error tipográfico en la capa de texto original, necesita un verdadero editor de PDF.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
+      <p class="font-semibold text-gray-900 mt-6">Consejo profesional:</p>
+      <p class="text-sm text-gray-600">Si su PDF es una imagen escaneada, la edición de texto estándar no funcionará. Primero debe utilizar una <a href="/es/tools/ocr-pdf" class="text-blue-600 hover:underline">herramienta OCR</a> para convertir la imagen en una capa de texto legible.</p>
     `
   },
   {
@@ -175,31 +175,31 @@
     date: "2026-06-15",
     excerpt: "¿Necesita firmar un documento urgentemente? Aprenda a dibujar, escribir o cargar su firma electrónica en su teléfono.",
     content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+      <p>Todos hemos pasado por eso: recibe un documento importante por correo electrónico mientras no está en su escritorio. Necesita su firma de inmediato. Imprimir, firmar y volver a escanear es una reliquia del pasado.</p>
+      <p>Hoy en día, su teléfono inteligente Android es una potente estación de trabajo digital capaz de realizar firmas electrónicas legalmente vinculantes.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+      <h2>¿Son legales las firmas electrónicas?</h2>
+      <p>Sí. Según la Ley ESIGN (EE. UU.) y eIDAS (Europa), las firmas electrónicas tienen el mismo peso legal que una firma con tinta húmeda para casi todas las transacciones comerciales y personales.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
+      <h2>Cómo firmar en Android (No se requiere aplicación)</h2>
+      <p>No es necesario sobrecargar su dispositivo Android con aplicaciones de PDF premium. Simplemente use su navegador móvil.</p>
       
       <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
+        <li><strong>Abra la herramienta:</strong> Toque el enlace para abrir la <a href="/es/tools/sign-pdf" class="text-blue-600 hover:underline">herramienta Firmar PDF</a> en Chrome.</li>
+        <li><strong>Cargue el documento:</strong> Toque para cargar el archivo directamente desde su carpeta de Descargas de Android o Google Drive.</li>
+        <li><strong>Cree su firma:</strong> 
           <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
+            <li><em>Dibujar:</em> Use su dedo o un lápiz óptico para dibujar su firma directamente en la pantalla.</li>
+            <li><em>Escribir:</em> Escriba su nombre y elija una fuente cursiva.</li>
+            <li><em>Cargar:</em> Cargue una foto de su firma real en un trozo de papel en blanco (nuestra herramienta elimina automáticamente el fondo).</li>
           </ul>
         </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
+        <li><strong>Colóquela:</strong> Arrastre y suelte la firma exactamente en la línea de firma. Puede pellizcar para cambiar el tamaño.</li>
+        <li><strong>Finalizar:</strong> Toque "Firmar" para incrustar permanentemente la firma en la arquitectura del documento.</li>
       </ol>
 
       <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
+        <p class="text-yellow-800 text-sm m-0"><strong>Nota de seguridad:</strong> Asegúrese siempre de estar utilizando una plataforma segura cifrada con HTTPS al firmar documentos confidenciales. Eliminamos todos los archivos de nuestros servidores automáticamente.</p>
       </div>
     `
   },
@@ -209,38 +209,38 @@
     date: "2026-06-14",
     excerpt: "¿Escribiendo una tesis o tomando notas? Descubra por qué extraer texto a un documento de Word es fundamentalmente mejor.",
     content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+      <p>Como estudiante, se encuentra con cientos de archivos PDF cada semestre: diapositivas de conferencias, trabajos de investigación y libros de texto digitales. Cuando necesite extraer citas, resumir contenido o reescribir secciones, puede sentirse tentado a utilizar un editor de PDF. Pero hay una manera más inteligente y profesional.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+      <h2>El problema con la arquitectura de PDF</h2>
+      <p>Los archivos PDF (Portable Document Format) se diseñaron para <em>presentación</em>, no para composición. Dentro de un PDF, el texto no fluye como en un documento normal; cada palabra está fijada a coordenadas X e Y específicas en la página.</p>
+      <p>Si intenta eliminar un párrafo en un editor de PDF, el texto debajo <strong>no</strong> se moverá hacia arriba para llenar el espacio. Deja un enorme espacio en blanco.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+      <h2>La solución: Conversión de PDF a Word</h2>
+      <p>Al volver a convertir el documento a Microsoft Word (.docx), nuestro motor inteligente reconstruye el diseño fluido. Los párrafos vuelven a ser párrafos, los encabezados vuelven a ser encabezados y las imágenes se convierten en bloques móviles.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
         <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
+          <h4 class="font-bold text-gray-900 mt-0">Editor de PDF</h4>
           <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
+            <li>❌ El texto no refluye</li>
+            <li>❌ Es difícil cambiar las fuentes globales</li>
+            <li>❌ Los márgenes están bloqueados</li>
+            <li>❌ Las tablas son difíciles de modificar</li>
           </ul>
         </div>
         <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
+          <h4 class="font-bold text-blue-900 mt-0">Documento de Word</h4>
           <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
+            <li>✅ El texto fluye con naturalidad</li>
+            <li>✅ Fácil revisión ortográfica y gramatical</li>
+            <li>✅ Saltos de página dinámicos</li>
+            <li>✅ Copiar y pegar es impecable</li>
           </ul>
         </div>
       </div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
+      <h2>Cómo hacerlo a la perfección</h2>
+      <p>Nuestro <a href="/es/tools/pdf-to-word" class="text-blue-600 hover:underline">convertidor de PDF a Word</a> impulsado por IA utiliza un reconocimiento de diseño avanzado. Simplemente cargue su archivo y en segundos tendrá un documento de Word completamente editable. Una vez que termine de escribir su tarea o notas, siempre puede exportarla a PDF antes de enviarla a su profesor.</p>
     `
   },
   {
@@ -249,30 +249,30 @@
     date: "2026-06-13",
     excerpt: "Organice sus carpetas desordenadas uniendo documentos PDF relacionados en archivos únicos desde su escritorio.",
     content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+      <p>Tener 15 archivos PDF diferentes para un solo proyecto es una pesadilla. Ya sean facturas mensuales, capítulos de un libro o registros médicos escaneados, combinarlos en un archivo coherente es esencial para la organización de Windows 10.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+      <h2>La limitación integrada de Windows</h2>
+      <p>Windows 10 es un sistema operativo potente, pero es famoso por carecer de una fusión nativa de PDF. Si bien incluye "Microsoft Print to PDF", eso solo ayuda a crear archivos PDF a partir de otros formatos, no a combinar los existentes.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+      <h2>El flujo de trabajo inteligente (basado en el navegador)</h2>
+      <p>No descargue software gratuito dudoso que pueda contener malware o poner marcas de agua masivas en sus archivos. El método más profesional es utilizar una herramienta de navegador encriptada.</p>
 
       <ol class="space-y-4 mt-6">
         <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
+          <strong>Paso 1: Reúna sus archivos.</strong> Ponga todos los PDF que desee fusionar en una sola carpeta en su escritorio. Esto facilita la carga.
         </li>
         <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
+          <strong>Paso 2: Abra el fusionador.</strong> Vaya a la <a href="/es/tools/merge-pdf" class="text-blue-600 hover:underline">herramienta Unir PDF</a> en TheyLovePDF.
         </li>
         <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
+          <strong>Paso 3: Seleccione y ordene.</strong> Arrastre sus archivos a la pantalla. Verá miniaturas de vista previa. Puede arrastrar estas miniaturas hacia la izquierda o hacia la derecha para asegurarse de que estén en el orden cronológico perfecto.
         </li>
         <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
+          <strong>Paso 4: Combine.</strong> Presione el botón de fusionar. El servidor une instantáneamente el código binario de los PDF sin perder ninguna calidad.
         </li>
       </ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
+      <p class="mt-8">Este método funciona en Chrome, Edge, Firefox y Brave en Windows 10, y no requiere absolutamente ninguna instalación ni privilegios administrativos en su PC.</p>
     `
   },
   {
@@ -281,29 +281,29 @@
     date: "2026-06-12",
     excerpt: "Una inmersión profunda en la seguridad de los documentos y por qué enviar PDF abiertos por correo electrónico es un riesgo.",
     content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+      <p>En la profesión legal, la confidencialidad no es solo una mejor práctica: es un requisito ético y, a menudo, legal estricto. Sin embargo, innumerables bufetes de abogados y asistentes legales aún envían resúmenes, contratos y ofertas de liquidación confidenciales como archivos adjuntos PDF sin procesar y sin cifrar a través de un correo electrónico estándar.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+      <h2>El riesgo de intercepción</h2>
+      <p>El correo electrónico estándar (SMTP) es notoriamente inseguro. Si un correo electrónico se enruta a través de servidores no seguros, o si una bandeja de entrada se ve comprometida, cualquier persona que lo intercepte puede leer un PDF sin cifrar. Esto puede conducir a violaciones del privilegio del cliente y responsabilidades masivas.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+      <h2>Cifrado frente a contraseñas</h2>
+      <p>Es importante comprender la diferencia. Una simple "contraseña de permisos" impide la impresión o edición, pero no cifra el archivo. Cualquiera puede seguir leyéndolo.</p>
+      <p>Lo que necesita es una <strong>contraseña de apertura</strong> respaldada por un <strong>cifrado AES-256</strong>. Cuando se aplica, los datos binarios del archivo se codifican. Sin la contraseña, el documento es matemáticamente imposible de leer.</p>
 
       <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
+        <h4 class="text-red-900 font-bold m-0 mb-2">Requisitos de cumplimiento</h4>
+        <p class="text-red-800 text-sm m-0">Regulaciones como HIPAA (médica) y GDPR (datos europeos) penalizan en gran medida a las organizaciones que no cifran la información de identificación personal (PII) en tránsito. Un PDF cifrado es un método aceptado para asegurar los datos en tránsito.</p>
       </div>
 
-      <h2>The Professional Workflow</h2>
+      <h2>El flujo de trabajo profesional</h2>
       <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
+        <li>Redacte el documento en Word y expórtelo a PDF.</li>
+        <li>Cárguelo a una plataforma segura de retención cero como <a href="/es/tools/protect-pdf" class="text-blue-600 hover:underline">Seguridad TheyLovePDF</a>.</li>
+        <li>Aplique una contraseña generada de 16 caracteres.</li>
+        <li>Envíe por correo electrónico el PDF cifrado al cliente.</li>
+        <li>Proporcione la contraseña al cliente a través de un canal seguro y separado (por ejemplo, una llamada telefónica o una aplicación de mensajería cifrada).</li>
       </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
+      <p>Al hacer cumplir este flujo de trabajo, los profesionales legales se protegen de responsabilidades por violación de datos y garantizan la total confidencialidad del cliente.</p>
     `
   },
   {
@@ -312,46 +312,46 @@
     date: "2026-06-11",
     excerpt: "WhatsApp tiene límites de tamaño de archivo. Aprenda a reducir el tamaño de su PDF en Android para compartirlo al instante.",
     content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+      <p>WhatsApp es el estándar mundial para la comunicación rápida, muy utilizado por empresas y estudiantes para compartir documentos. Sin embargo, WhatsApp impone límites estrictos de tamaño de archivo. Si intenta enviar un plano arquitectónico de 150 MB o un libro de texto masivo escaneado, la aplicación bloqueará por completo la transferencia.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+      <h2>El dilema de Android</h2>
+      <p>A diferencia de comprimir una foto, el sistema operativo Android no tiene una función incorporada para comprimir documentos PDF. Si busca en Google Play Store, será bombardeado con aplicaciones llenas de anuncios intrusivos que arruinan la calidad de su archivo.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+      <h2>La técnica de compresión inteligente</h2>
+      <p>Puede omitir las tiendas de aplicaciones por completo utilizando nuestra infraestructura en la nube de alta velocidad directamente desde Google Chrome en su dispositivo Android.</p>
 
       <div class="space-y-4 my-8">
         <div class="flex gap-4 items-start">
           <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
           <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
+            <h4 class="font-bold text-gray-900 m-0">Abra el compresor</h4>
+            <p class="text-sm text-gray-600 m-0 mt-1">Toque este enlace para abrir el <a href="/es/tools/compress-pdf" class="text-blue-600 hover:underline">Compresor de PDF</a> en su navegador.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
           <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
+            <h4 class="font-bold text-gray-900 m-0">Cargar desde Archivos</h4>
+            <p class="text-sm text-gray-600 m-0 mt-1">Toque para cargar y seleccione la aplicación 'Archivos' o 'Documentos' en su Android para encontrar su PDF grande.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
           <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
+            <h4 class="font-bold text-gray-900 m-0">Elija 'Compresión extrema'</h4>
+            <p class="text-sm text-gray-600 m-0 mt-1">Para WhatsApp, seleccione el nivel de compresión más alto. Esto elimina los datos de imágenes de alta resolución, pero mantiene el texto perfectamente legible en las pantallas de los dispositivos móviles.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
           <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
+            <h4 class="font-bold text-gray-900 m-0">Descargar y compartir</h4>
+            <p class="text-sm text-gray-600 m-0 mt-1">Una vez procesado, toque Descargar. Abra WhatsApp, toque el icono de clip, seleccione Documento y ¡comparta su archivo recién encogido!</p>
           </div>
         </div>
       </div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
+      <p>Todo este proceso toma menos de 30 segundos, usa muy poco de sus datos móviles y resuelve el problema del límite de WhatsApp de forma permanente.</p>
     `
   },
   {
@@ -360,30 +360,30 @@
     date: "2026-06-10",
     excerpt: "No envíe un manual de 500 páginas. Aquí está la forma más inteligente de extraer y dividir páginas PDF.",
     content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+      <p>Todos los hemos recibido: el manual corporativo de 500 páginas, el enorme archivo de descubrimiento legal o todo el libro de texto del semestre. Pero, ¿qué pasa si solo necesita enviar las páginas 45 a 52 a un colega?</p>
+      <p>Enviar el documento completo no es profesional, desperdicia ancho de banda y obliga al destinatario a buscar la información relevante. Necesita dividir el PDF.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+      <h2>La forma pirata frente a la forma profesional</h2>
+      <p>Un "truco" común es utilizar el cuadro de diálogo Imprimir, seleccionar "Imprimir a PDF" y elegir un rango de páginas. Si bien esto funciona, a menudo aplana el documento, destruyendo los enlaces interactivos, los marcadores y, a veces, aumentando significativamente el tamaño del archivo.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+      <p>La forma profesional es dividir el documento a nivel binario, conservando la calidad original exacta y los metadatos de las páginas extraídas.</p>
 
-      <h2>Using a Professional Splitter</h2>
+      <h2>Uso de un divisor profesional</h2>
       <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
         <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
+          <li>Navegue a la <a href="/es/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Herramienta Dividir PDF</a>.</li>
+          <li>Cargue su documento masivo. Nuestros servidores manejan archivos de hasta 2 GB al instante.</li>
+          <li>Elija su modo:
             <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
+              <li><strong>Extraer páginas:</strong> Escriba las páginas o rangos exactos (por ejemplo, <em>45-52, 88, 102-105</em>).</li>
+              <li><strong>Dividir por rangos:</strong> Corte automáticamente el documento en varios documentos más pequeños.</li>
             </ul>
           </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
+          <li>Presione Procesar. Recibirá un PDF ordenado e hiperconcentrado que contiene solo las páginas que seleccionó, con todos los enlaces originales y la calidad intacta.</li>
         </ol>
       </div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
+      <p>Al extraer solo lo que importa, respeta el tiempo y el espacio en la bandeja de entrada de su destinatario. Es una pequeña habilidad técnica que rinde dividendos profesionales masivos.</p>
     `
   },
   {
@@ -392,28 +392,28 @@
     date: "2026-06-09",
     excerpt: "Deje de leer informes de 100 páginas. Descubra cómo los LLM le permiten 'hablar' con sus documentos para extraer respuestas.",
     content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+      <p>Leer un informe financiero de 150 páginas o un artículo académico denso solía requerir horas de resaltado, toma de notas y búsqueda. En 2026, esa era ha terminado oficialmente. Bienvenido a la era del chat de documentos de IA.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+      <h2>¿Qué es "Chatear con PDF"?</h2>
+      <p>Imagínese si el autor del documento estuviera sentado a su lado y pudiera hacerle preguntas. <em>"¿Cuál es el ingreso total del tercer trimestre?"</em> o <em>"Resuma la metodología de este experimento en 3 puntos."</em></p>
+      <p>Nuestra <a href="/es/tools/chat-with-pdf" class="text-blue-600 hover:underline">herramienta Chatear con PDF</a> utiliza modelos de lenguaje grandes (LLM) avanzados. Cuando carga un archivo, la IA "lee" todo el documento en segundos, almacenándolo en la memoria de vectores. Luego utiliza una interfaz de chat (exactamente como ChatGPT) para hacer preguntas sobre el texto.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
+      <h2>Cómo funciona realmente (bajo el capó)</h2>
       <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
+        <li><strong>Extracción de texto:</strong> El sistema analiza el PDF, extrayendo todo el texto y las tablas.</li>
+        <li><strong>Vectorización:</strong> El texto se corta en "fragmentos" y se convierte en números matemáticos llamados incrustaciones.</li>
+        <li><strong>Búsqueda semántica:</strong> Cuando hace una pregunta, la IA busca en las matemáticas para encontrar los párrafos exactos más relevantes para su pregunta.</li>
+        <li><strong>Generación:</strong> El LLM lee esos párrafos específicos y escribe una respuesta conversacional natural, ¡a menudo citando el número de página exacto en el que encontró la información!</li>
       </ul>
 
       <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
+        <h4 class="text-purple-900 font-bold m-0 mb-2">Casos de uso</h4>
+        <p class="text-purple-800 text-sm m-0"><strong>Estudiantes:</strong> Cargar libros de texto para crear guías de estudio instantáneas y tarjetas didácticas.<br><strong>Abogados:</strong> Cargar archivos de casos para encontrar instantáneamente precedentes sin presionar CTRL+F.<br><strong>Analistas:</strong> Cargar informes 10-K para extraer instantáneamente métricas financieras específicas.</p>
       </div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
+      <h2>La privacidad es lo primero</h2>
+      <p>La mayor preocupación con la IA es la privacidad de los datos. Al utilizar herramientas profesionales como TheyLovePDF, los datos de su documento se aíslan estrictamente. Nunca se utilizan para entrenar modelos de IA globales, y los datos se borran de nuestros servidores automáticamente después de que finaliza su sesión.</p>
+      <p>No se quede atrás. Comience a chatear con sus documentos hoy mismo y aumente 10 veces su velocidad de lectura.</p>
     `
   }
 ];
