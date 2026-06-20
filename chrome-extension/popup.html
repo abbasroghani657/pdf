@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TheyLovePDF Toolkit</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+    .header {
+      background-color: #378ADD;
+      color: white;
+      padding: 16px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .container {
+      padding: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .tool-btn {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      color: #374151;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover {
+      border-color: #378ADD;
+      color: #378ADD;
+      background: #f0f7ff;
+    }
+    .tool-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #378ADD;
+    }
+    .offline-overlay {
+      display: none;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 100;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .offline-overlay.active {
+      display: flex;
+    }
+    .btn-upgrade {
+      background: #f59e0b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-top: 15px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .footer {
+      text-align: center;
+      padding: 12px;
+      font-size: 12px;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+    }
+    .pro-badge {
+      background: #f59e0b;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-left: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    TheyLovePDF <span id="proBadge" class="pro-badge">PRO</span>
+  </div>
+
+  <div id="offlineOverlay" class="offline-overlay">
+    <div style="font-size: 40px; margin-bottom: 10px;">📶</div>
+    <h3 style="margin:0 0 10px 0;">Internet Required</h3>
+    <p style="font-size: 13px; color: #4b5563; margin-bottom: 20px;">
+      Free users need an active internet connection to verify limits and view ads.
+    </p>
+    <p style="font-size: 13px; font-weight: bold; color: #111827;">
+      Want to work 100% Offline?
+    </p>
+    <a href="https://www.theylovepdf.com/pricing" target="_blank" class="btn-upgrade">Upgrade to PRO</a>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      <a href="https://www.theylovepdf.com/tools/merge-pdf" target="_blank" class="tool-btn">
+        <span class="tool-icon">📄</span>
+        Merge PDF
+      </a>
+      <a href="https://www.theylovepdf.com/tools/split-pdf" target="_blank" class="tool-btn">
+        <span class="tool-icon">✂️</span>
+        Split PDF
+      </a>
+      <a href="https://www.theylovepdf.com/tools/compress-pdf" target="_blank" class="tool-btn">
+        <span class="tool-icon">🗜️</span>
+        Compress PDF
+      </a>
+      <a href="https://www.theylovepdf.com/tools/pdf-to-word" target="_blank" class="tool-btn">
+        <span class="tool-icon">📝</span>
+        PDF to Word
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://www.theylovepdf.com" target="_blank" style="color: #378ADD; text-decoration: none;">View all 30+ Tools</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+name: Build Electron & Chrome Extension
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on version tags
+
+jobs:
+  build-extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Chrome Extension ZIP
+        run: |
+          cd chrome-extension
+          zip -r ../theylovepdf-extension.zip *
+      - name: Upload Extension Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: chrome-extension
+          path: theylovepdf-extension.zip
+
+  build-electron:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install Dependencies
+        run: npm ci
+      
+      # Build React app first
+      - name: Build React App
+        run: npm run build
+        
+      # Build Electron
+      - name: Build Electron App
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+          # WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
+          # CSC_LINK: ${{ secrets.MAC_CSC_LINK }}
+          # CSC_KEY_PASSWORD: ${{ secrets.MAC_CSC_KEY_PASSWORD }}
+          # APPLEID: ${{ secrets.APPLEID }}
+          # APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
+        run: npx electron-builder --publish always
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: electron-builds-${{ matrix.os }}
+          path: release/

@@ -20,7 +20,6 @@ const baseStaticRoutes = [
   '/pdf-trends-2026',
   '/desktop', // Aggressive SEO
   '/extension', // Aggressive SEO
-  '/for/students', // Use Cases
   '/for/business', // Use Cases
   '/for/real-estate', // Use Cases
   '/for/legal' // Use Cases

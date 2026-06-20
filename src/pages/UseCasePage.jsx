@@ -10,13 +10,6 @@ const getUseCases = (lang) => {
   const isPt = lang === 'pt';
 
   return {
-    students: {
-      title: isEs ? 'Herramientas PDF para Estudiantes' : isFr ? 'Outils PDF pour Étudiants' : isDe ? 'PDF-Tools für Studenten' : isPt ? 'Ferramentas PDF para Estudantes' : 'PDF Tools for Students & Educators',
-      desc: isEs ? 'Las mejores herramientas PDF gratuitas para estudiar mejor. Une tareas y chatea con tus libros.' : isFr ? 'Les meilleurs outils gratuits pour étudier plus intelligemment. Fusionnez vos devoirs et discutez avec vos manuels.' : isDe ? 'Die besten kostenlosen PDF-Tools, um intelligenter zu lernen. Aufgaben zusammenführen und mit Lehrbüchern chatten.' : isPt ? 'As melhores ferramentas de PDF gratuitas para estudar de forma mais inteligente. Junte tarefas e converse com seus livros.' : 'The best free PDF tools to help you study smarter. Merge assignments, compress presentations, and chat with your textbooks using AI.',
-      tools: ['merge-pdf', 'compress-pdf', 'chat-with-pdf', 'summarize-pdf', 'add-page-numbers'],
-      icon: 'solar:diploma-bold-duotone',
-      color: 'text-blue-500'
-    },
     business: {
       title: isEs ? 'Soluciones PDF para Empresas' : isFr ? 'Solutions PDF pour Entreprises' : isDe ? 'PDF-Lösungen für Unternehmen' : isPt ? 'Soluções de PDF para Empresas' : 'PDF Solutions for Small Business',
       desc: isEs ? 'Herramientas seguras y rápidas para tu negocio. Firma contratos y edita facturas.' : isFr ? 'Outils sécurisés et rapides pour votre entreprise. Signez des contrats et modifiez des factures.' : isDe ? 'Sichere, schnelle und kostenlose PDF-Tools, damit Ihr Geschäft reibungslos läuft. Verträge unterschreiben und Rechnungen bearbeiten.' : isPt ? 'Ferramentas de PDF seguras e rápidas para o seu negócio. Assine contratos e edite faturas.' : 'Secure, fast, and free PDF tools to keep your business running smoothly. Sign contracts, edit invoices, and convert documents.',

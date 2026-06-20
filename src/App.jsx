@@ -894,12 +894,14 @@ export default function App() {
             {/* SEO Growth Hack Pages */}
             <Route path="/desktop" element={<DesktopAppPage />} />
             <Route path="/extension" element={<ExtensionPage />} />
+            <Route path="/for/students" element={<Navigate to="/tools" replace />} />
             <Route path="/for/:industry" element={<UseCasePage />} />
 
             {/* Spanish Static Routes */}
             <Route path="/es" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="es" />} />
             <Route path="/es/desktop" element={<DesktopAppPage lang="es" />} />
             <Route path="/es/extension" element={<ExtensionPage lang="es" />} />
+            <Route path="/es/for/students" element={<Navigate to="/es/tools" replace />} />
             <Route path="/es/for/:industry" element={<UseCasePage lang="es" />} />
             <Route path="/es/pricing" element={<PricingPage lang="es" />} />
             <Route path="/es/compare" element={<ComparePage lang="es" />} />
@@ -915,6 +917,7 @@ export default function App() {
             <Route path="/fr" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="fr" />} />
             <Route path="/fr/desktop" element={<DesktopAppPage lang="fr" />} />
             <Route path="/fr/extension" element={<ExtensionPage lang="fr" />} />
+            <Route path="/fr/for/students" element={<Navigate to="/fr/tools" replace />} />
             <Route path="/fr/for/:industry" element={<UseCasePage lang="fr" />} />
             <Route path="/fr/pricing" element={<PricingPage lang="fr" />} />
             <Route path="/fr/compare" element={<ComparePage lang="fr" />} />
@@ -930,6 +933,7 @@ export default function App() {
             <Route path="/de" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="de" />} />
             <Route path="/de/desktop" element={<DesktopAppPage lang="de" />} />
             <Route path="/de/extension" element={<ExtensionPage lang="de" />} />
+            <Route path="/de/for/students" element={<Navigate to="/de/tools" replace />} />
             <Route path="/de/for/:industry" element={<UseCasePage lang="de" />} />
             <Route path="/de/pricing" element={<PricingPage lang="de" />} />
             <Route path="/de/compare" element={<ComparePage lang="de" />} />
@@ -945,6 +949,7 @@ export default function App() {
             <Route path="/pt" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="pt" />} />
             <Route path="/pt/desktop" element={<DesktopAppPage lang="pt" />} />
             <Route path="/pt/extension" element={<ExtensionPage lang="pt" />} />
+            <Route path="/pt/for/students" element={<Navigate to="/pt/tools" replace />} />
             <Route path="/pt/for/:industry" element={<UseCasePage lang="pt" />} />
             <Route path="/pt/pricing" element={<PricingPage lang="pt" />} />
             <Route path="/pt/compare" element={<ComparePage lang="pt" />} />
@@ -1014,7 +1019,7 @@ export default function App() {
 
             {[
               { title: isEs ? 'Herramientas' : isFr ? 'Outils' : 'Tools', links: [{ label: isEs ? 'Unir PDF' : isFr ? 'Fusionner PDF' : 'Merge PDF', path: '/tools/merge-pdf' }, { label: isEs ? 'Dividir PDF' : isFr ? 'Diviser PDF' : 'Split PDF', path: '/tools/split-pdf' }, { label: isEs ? 'Comprimir PDF' : isFr ? 'Compresser PDF' : 'Compress PDF', path: '/tools/compress-pdf' }, { label: isEs ? 'PDF a Word' : isFr ? 'PDF en Word' : 'PDF to Word', path: '/tools/pdf-to-word' }, { label: isEs ? 'Firmar PDF' : isFr ? 'Signer PDF' : 'Sign PDF', path: '/tools/sign-pdf' }, { label: isEs ? 'Editar PDF' : isFr ? 'Modifier PDF' : 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: isEs ? 'Soluciones' : isFr ? 'Solutions' : 'Solutions', links: [{ label: 'For Students', path: '/for/students' }, { label: 'For Business', path: '/for/business' }, { label: 'Desktop App', path: '/desktop' }, { label: 'Chrome Extension', path: '/extension' }] },
+              { title: isEs ? 'Soluciones' : isFr ? 'Solutions' : 'Solutions', links: [{ label: 'For Business', path: '/for/business' }, { label: 'Desktop App', path: '/desktop' }, { label: 'Chrome Extension', path: '/extension' }] },
               { title: isEs ? 'Compañía' : isFr ? 'Entreprise' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : isFr ? 'À propos' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : isFr ? 'Contact' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : isFr ? 'Tarifs' : 'Pricing', path: '/pricing' }, { label: 'Blog & Guides', path: '/blog' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
               { title: isEs ? 'Legal' : isFr ? 'Légal' : 'Legal', links: [{ label: isEs ? 'Política de privacidad' : isFr ? 'Confidentialité' : 'Privacy Policy', path: '/privacy' }, { label: isEs ? 'Términos de servicio' : isFr ? 'Conditions' : 'Terms of Service', path: '/terms' }] },
             ].map((col, i) => (
