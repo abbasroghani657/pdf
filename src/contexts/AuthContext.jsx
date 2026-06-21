@@ -193,7 +193,7 @@ export function AuthProvider({ children }) {
       downgradeToFree,
       fetchUser
     }}>
-      {!loading && children}
+      {children}
     </AuthContext.Provider>
   );
 }
