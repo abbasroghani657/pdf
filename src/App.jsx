@@ -89,7 +89,7 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
   const links = [
     { id: '/', label: 'All Tools', icon: 'solar:box-linear' },
     { id: '/pricing', label: 'Pricing', icon: 'solar:tag-price-linear' },
-    { id: '/compare', label: 'vs ILovePDF', icon: 'solar:chart-square-linear' },
+    { id: '/compare', label: 'Why Us?', icon: 'solar:chart-square-linear' },
   ];
   const quickTools = [
     { path: '/tools/merge-pdf', label: 'Merge PDF', icon: 'solar:layers-linear', color: 'text-blue-600' },
