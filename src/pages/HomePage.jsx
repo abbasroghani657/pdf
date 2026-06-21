@@ -276,21 +276,21 @@ function ToolCard({ tool, onClick, lang }) {
   return (
     <div
       onClick={onClick}
-      className="tool-card group relative bg-white rounded-[10px] cursor-pointer overflow-hidden p-6 flex flex-col items-start gap-4"
+      className="tool-card group relative bg-white rounded-xl cursor-pointer overflow-hidden p-4 sm:p-6 flex flex-col items-start gap-3 sm:gap-4"
     >
       {/* ── Icon (Top Left) ────────── */}
       <div 
-        className="w-12 h-12 rounded-xl flex items-center justify-center bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05]"
+        className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05]"
       >
-        <iconify-icon icon={tool.icon} class="text-[28px]" style={{ color: iconColor }}></iconify-icon>
+        <iconify-icon icon={tool.icon} class="text-2xl sm:text-[28px]" style={{ color: iconColor }}></iconify-icon>
       </div>
 
       {/* ── Text Content ────────── */}
       <div className="flex flex-col flex-1 text-left w-full">
-        <h3 className="text-[15px] font-bold text-gray-900 leading-snug mb-1.5">
+        <h3 className="text-[14px] sm:text-[15px] font-bold text-gray-900 leading-snug mb-1 sm:mb-1.5">
           {tool.title}
         </h3>
-        <p className="text-[13px] text-gray-500 leading-relaxed font-medium">
+        <p className="text-xs sm:text-[13px] text-gray-500 leading-relaxed font-medium line-clamp-3 sm:line-clamp-none">
           {tool.desc}
         </p>
       </div>
@@ -298,7 +298,7 @@ function ToolCard({ tool, onClick, lang }) {
       {/* ── Badge ────────── */}
       {tool.badge && (
         <span className={clsx(
-          'absolute top-4 right-4 text-[9px] font-bold px-2 py-0.5 rounded-full border',
+          'absolute top-2.5 right-2.5 sm:top-4 sm:right-4 text-[8px] sm:text-[9px] font-bold px-1.5 py-0.5 sm:px-2 rounded-full border',
           tool.badge.text === 'AI' || tool.badge.text?.includes('AI')
             ? 'bg-purple-50 text-purple-700 border-purple-100'
             : tool.badge.text === 'Popular'
@@ -311,7 +311,7 @@ function ToolCard({ tool, onClick, lang }) {
         )}>
           {tool.badge.text === 'AI' || tool.badge.text?.includes('AI') ? (
             <span className="flex items-center gap-0.5">
-              <iconify-icon icon="solar:stars-bold" class="text-[8px]"></iconify-icon>
+              <iconify-icon icon="solar:stars-bold" class="text-[7px] sm:text-[8px]"></iconify-icon>
               {tool.badge.text}
             </span>
           ) : tool.badge.text}

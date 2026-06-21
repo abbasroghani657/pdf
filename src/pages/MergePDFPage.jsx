@@ -168,20 +168,26 @@ function PdfCard({ pdf, index, total, onRemove, onMoveUp, onMoveDown, isDragging
 function SummaryBar({ pdfs }) {
   const totalPages = pdfs.reduce((acc, p) => acc + (p.pageCount || 0), 0);
   const totalSize = pdfs.reduce((acc, p) => acc + (p.size || 0), 0);
+  const formattedSize = (() => {
+    if (totalSize <= 0) return '—';
+    if (totalSize < 1024 * 1024) return `${(totalSize / 1024).toFixed(0)} KB`;
+    return `${(totalSize / (1024 * 1024)).toFixed(1)} MB`;
+  })();
+
   return (
-    <div className="grid grid-cols-3 gap-3 mb-6">
+    <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
       {[
         { label: 'PDFs', value: pdfs.length, icon: 'solar:documents-bold', color: 'text-[#378ADD] bg-blue-50' },
         { label: 'Total Pages', value: totalPages || '—', icon: 'solar:document-bold', color: 'text-emerald-600 bg-emerald-50' },
-        { label: 'Total Size', value: totalSize > 0 ? `${(totalSize / 1024).toFixed(0)} KB` : '—', icon: 'solar:database-bold', color: 'text-purple-600 bg-purple-50' },
+        { label: 'Total Size', value: formattedSize, icon: 'solar:database-bold', color: 'text-purple-600 bg-purple-50' },
       ].map(stat => (
-        <div key={stat.label} className="bg-white rounded-2xl p-2 sm:p-4 border border-gray-100 flex flex-col sm:flex-row items-center gap-1 sm:gap-3 shadow-sm text-center sm:text-left">
-          <div className={clsx('w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center shrink-0', stat.color)}>
-            <iconify-icon icon={stat.icon} class="text-base sm:text-lg" />
+        <div key={stat.label} className="bg-white rounded-2xl p-2 sm:p-4 border border-gray-100 flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 shadow-sm text-center sm:text-left min-w-0">
+          <div className={clsx('w-7 h-7 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center shrink-0', stat.color)}>
+            <iconify-icon icon={stat.icon} class="text-xs sm:text-lg" />
           </div>
-          <div>
-            <p className="text-lg font-bold text-gray-900 leading-none">{stat.value}</p>
-            <p className="text-xs text-gray-400 mt-0.5">{stat.label}</p>
+          <div className="min-w-0 w-full">
+            <p className="text-xs sm:text-lg font-bold text-gray-900 leading-none truncate">{stat.value}</p>
+            <p className="text-[9px] sm:text-xs text-gray-400 mt-1 truncate">{stat.label}</p>
           </div>
         </div>
       ))}
@@ -363,7 +369,7 @@ export default function MergePDFPage({ lang = 'en' }) {
   const totalPages = pdfs.reduce((acc, p) => acc + (p.pageCount || 0), 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 pb-24 md:pb-0">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 pb-10 md:pb-0">
       {/* ── Topbar ── */}
       <div className="bg-white border-b border-gray-100 sticky top-0 z-30 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center gap-3">
@@ -476,7 +482,7 @@ export default function MergePDFPage({ lang = 'en' }) {
             </div>
 
             {/* Merge CTA */}
-            <div className="sticky bottom-20 md:bottom-6 z-20">
+            <div className="sticky bottom-4 md:bottom-6 z-20">
               <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-4 border border-gray-100 shadow-2xl shadow-blue-100 flex flex-col sm:flex-row items-center gap-3">
                 <div className="flex-1 text-center sm:text-left">
                   <p className="text-sm font-bold text-gray-900">

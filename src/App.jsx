@@ -404,7 +404,9 @@ export default function App() {
     '/tools/summarize-pdf',
     '/tools/translate-pdf',
     '/tools/extract-data',
-    '/tools/plagiarism-check'
+    '/tools/plagiarism-check',
+    '/tools/merge-pdf',
+    '/tools/certificate-sign'
   ].includes(pathToCheck);
 
   // Auth pages: full-screen, no navbar/footer
