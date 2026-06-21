@@ -34,23 +34,18 @@ function generateToolPages() {
     
     // English
     routes.push({ path: `/tools/${slug}`, lang: 'en', tool, platform: null });
-    platforms.forEach(platform => routes.push({ path: `/tools/${slug}/${platform}`, lang: 'en', tool, platform }));
 
     // Spanish
     routes.push({ path: `/es/tools/${slug}`, lang: 'es', tool: esTool, platform: null });
-    platforms.forEach(platform => routes.push({ path: `/es/tools/${slug}/${platform}`, lang: 'es', tool: esTool, platform }));
 
     // French
     routes.push({ path: `/fr/tools/${slug}`, lang: 'fr', tool: frTool, platform: null });
-    platforms.forEach(platform => routes.push({ path: `/fr/tools/${slug}/${platform}`, lang: 'fr', tool: frTool, platform }));
 
     // German
     routes.push({ path: `/de/tools/${slug}`, lang: 'de', tool: deTool, platform: null });
-    platforms.forEach(platform => routes.push({ path: `/de/tools/${slug}/${platform}`, lang: 'de', tool: deTool, platform }));
 
     // Portuguese
     routes.push({ path: `/pt/tools/${slug}`, lang: 'pt', tool: ptTool, platform: null });
-    platforms.forEach(platform => routes.push({ path: `/pt/tools/${slug}/${platform}`, lang: 'pt', tool: ptTool, platform }));
   });
 
   return routes;
