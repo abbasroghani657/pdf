@@ -107,13 +107,13 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
     <>
       <div
         className={clsx(
-          'fixed inset-0 z-40 bg-gray-900/50 backdrop-blur-sm transition-opacity duration-300',
+          'fixed inset-0 z-[105] bg-gray-900/50 backdrop-blur-sm transition-opacity duration-300',
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
         onClick={onClose}
       />
       <div className={clsx(
-        'fixed inset-y-0 right-0 z-50 w-72 bg-white shadow-2xl transition-transform duration-300 flex flex-col',
+        'fixed inset-y-0 right-0 z-[110] w-72 max-w-[85vw] bg-white shadow-2xl transition-transform duration-300 flex flex-col',
         isOpen ? 'translate-x-0' : 'translate-x-full'
       )}>
         <div className="flex items-center justify-between h-14 px-5 border-b border-gray-100">
@@ -159,7 +159,7 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
           </div>
         </div>
 
-        <div className="p-4 border-t border-gray-100 space-y-3 pb-safe">
+        <div className="p-4 border-t border-gray-100 space-y-3 pb-safe pb-6">
           {user ? (
             <>
               <div className="flex items-center gap-3 px-2 mb-4">
