@@ -266,13 +266,13 @@ export default function PricingPage({ lang = 'en' }) {
         
         <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm whitespace-nowrap">
+            <table className="w-full text-left text-xs sm:text-sm">
               <thead>
                 <tr className="bg-slate-50/50 border-b border-slate-200">
-                  <th className="py-5 px-6 font-bold text-slate-900 w-2/5">Feature Overview</th>
-                  <th className="py-5 px-6 font-bold text-slate-900 text-center w-1/5">Free</th>
-                  <th className="py-5 px-6 font-bold text-[#378ADD] text-center w-1/5">Pro</th>
-                  <th className="py-5 px-6 font-bold text-slate-900 text-center w-1/5">Business</th>
+                  <th className="py-3 px-2 sm:py-5 sm:px-6 font-bold text-slate-900 w-[30%] sm:w-2/5 leading-tight">Feature Overview</th>
+                  <th className="py-3 px-1 sm:py-5 sm:px-6 font-bold text-slate-900 text-center w-[20%] sm:w-1/5">Free</th>
+                  <th className="py-3 px-1 sm:py-5 sm:px-6 font-bold text-[#378ADD] text-center w-[25%] sm:w-1/5">Pro</th>
+                  <th className="py-3 px-1 sm:py-5 sm:px-6 font-bold text-slate-900 text-center w-[25%] sm:w-1/5 hidden sm:table-cell">Business</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -288,15 +288,15 @@ export default function PricingPage({ lang = 'en' }) {
                   { name: 'Support', free: 'Community', pro: 'Priority Email', bus: '24/7 Dedicated' },
                 ].map((row, idx) => (
                   <tr key={idx} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="py-4 px-6 text-slate-700 font-medium">{row.name}</td>
-                    <td className="py-4 px-6 text-center text-slate-500 font-medium">
+                    <td className="py-3 px-2 sm:py-4 sm:px-6 text-slate-700 font-medium leading-tight">{row.name}</td>
+                    <td className="py-3 px-1 sm:py-4 sm:px-6 text-center text-slate-500 font-medium">
                       {typeof row.free === 'boolean' ? (row.free ? checkIcon : crossIcon) : row.free}
                     </td>
-                    <td className="py-4 px-6 text-center text-slate-900 font-bold bg-[#378ADD]/5">
+                    <td className="py-3 px-1 sm:py-4 sm:px-6 text-center text-slate-900 font-bold bg-[#378ADD]/5">
                       {typeof row.pro === 'boolean' ? (row.pro ? checkIcon : crossIcon) : row.pro}
                     </td>
-                    <td className="py-4 px-6 text-center text-slate-700 font-medium">
-                      {typeof row.bus === 'boolean' ? (row.bus ? <iconify-icon icon="solar:check-circle-bold" class="text-slate-800 text-xl shrink-0"></iconify-icon> : crossIcon) : row.bus}
+                    <td className="py-3 px-1 sm:py-4 sm:px-6 text-center text-slate-700 font-medium hidden sm:table-cell">
+                      {typeof row.bus === 'boolean' ? (row.bus ? <iconify-icon icon="solar:check-circle-bold" class="text-slate-800 text-lg sm:text-xl shrink-0"></iconify-icon> : crossIcon) : row.bus}
                     </td>
                   </tr>
                 ))}
