@@ -283,7 +283,7 @@ function ToolCard({ tool, onClick, lang }) {
         <div 
           className={clsx(
             "w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-sm border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05]",
-            tool.iconColorClass ? tool.iconColorClass.split(' ')[0] : 'bg-blue-50'
+            tool.iconColorClass || 'bg-blue-50 text-blue-500'
           )}
         >
           <iconify-icon icon={tool.icon} class="text-[22px] sm:text-[28px]" style={{ color: tool.iconColorClass ? undefined : iconColor }}></iconify-icon>
