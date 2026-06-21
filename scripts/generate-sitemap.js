@@ -31,9 +31,8 @@ const baseToolRoutes = [];
 TOOLS_DATA.forEach(t => {
   const baseSlug = `/tools/${slugify(t.title)}`;
   baseToolRoutes.push(baseSlug);
-  platforms.forEach(platform => {
-    baseToolRoutes.push(`${baseSlug}/${platform}`);
-  });
+  // Platform-specific routes removed from sitemap to prevent duplicate content penalties.
+  // We will target these keywords through FAQs on the main tool page instead.
 });
 
 const allBaseRoutes = [...baseStaticRoutes, ...baseToolRoutes];

@@ -112,12 +112,20 @@ function PdfCard({ pdf, index, total, onRemove, onMoveUp, onMoveDown, isDragging
           {pdf.pageCount > 0 && (
             <div className="mt-2 flex flex-wrap gap-1">
               {Array.from({ length: Math.min(pdf.pageCount, 8) }, (_, i) => (
-                <span key={i} className="w-5 h-6 bg-gray-100 border border-gray-200 rounded text-[9px] flex items-center justify-center text-gray-500 font-medium">
+                <span key={i} className={clsx(
+                  "w-5 h-6 bg-gray-100 border border-gray-200 rounded text-[9px] flex items-center justify-center text-gray-500 font-medium",
+                  i >= 3 ? "hidden sm:flex" : ""
+                )}>
                   {i + 1}
                 </span>
               ))}
+              {pdf.pageCount > 3 && (
+                <span className="sm:hidden h-6 px-1.5 bg-gray-100 border border-gray-200 rounded text-[9px] flex items-center justify-center text-gray-400">
+                  +{pdf.pageCount - 3}
+                </span>
+              )}
               {pdf.pageCount > 8 && (
-                <span className="h-6 px-1 bg-gray-100 border border-gray-200 rounded text-[9px] flex items-center justify-center text-gray-400">
+                <span className="hidden sm:flex h-6 px-1.5 bg-gray-100 border border-gray-200 rounded text-[9px] items-center justify-center text-gray-400">
                   +{pdf.pageCount - 8}
                 </span>
               )}

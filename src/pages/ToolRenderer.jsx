@@ -167,33 +167,28 @@ function ToolRendererInner({ lang = 'en' }) {
               ))}
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('faqs')}</h2>
-            <div className="space-y-6">
-              {dynamicFaqs.map((faq, idx) => (
-                <div key={idx} className="pb-6 border-b border-gray-100 last:border-0 last:pb-0">
-                  <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
-                  <p className="text-gray-600 leading-relaxed text-sm">{faq.answer}</p>
+            {dynamicFaqs.length > 0 && (
+              <>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('faqs')}</h2>
+                <div className="space-y-4 mb-16">
+                  {dynamicFaqs.map((faq, idx) => (
+                    <details key={idx} className="group bg-gray-50 rounded-2xl open:bg-blue-50/50 transition-colors border border-gray-100">
+                      <summary className="flex justify-between items-center font-semibold text-gray-900 cursor-pointer p-5 select-none">
+                        {faq.question}
+                        <span className="transition group-open:rotate-180">
+                          <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xl text-gray-400 group-open:text-[#378ADD]" />
+                        </span>
+                      </summary>
+                      <div className="px-5 pb-5 pt-1 text-gray-600 text-sm leading-relaxed border-t border-gray-100/50 mt-2">
+                        {faq.answer}
+                      </div>
+                    </details>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </>
+            )}
 
-          <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">{t('platformGuides')}</h3>
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
-              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/windows`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
-                Windows
-              </Link>
-              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/mac`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
-                Mac
-              </Link>
-              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/iphone`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
-                iPhone
-              </Link>
-              <Link to={`${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}/android`} className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm hover:bg-blue-50 hover:text-[#378ADD] transition-colors">
-                Android
-              </Link>
-            </div>
+            <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
 
             {/* Related Tools — FIXED: was using rt.color (undefined) causing silent crash */}
             <h3 className="text-2xl font-bold text-gray-900 mb-8">{t('relatedTools') || 'Related Tools'}</h3>

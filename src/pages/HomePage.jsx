@@ -276,21 +276,21 @@ function ToolCard({ tool, onClick, lang }) {
   return (
     <div
       onClick={onClick}
-      className="tool-card group relative bg-white rounded-xl cursor-pointer overflow-hidden p-4 sm:p-6 flex flex-col items-start gap-3 sm:gap-4"
+      className="tool-card group relative bg-white rounded-2xl sm:rounded-xl cursor-pointer overflow-hidden p-4 sm:p-6 flex flex-col items-center sm:items-start gap-2 sm:gap-4 border border-gray-100 hover:border-[#378ADD]/30 hover:shadow-[0_8px_30px_rgba(55,138,221,0.12)] transition-all duration-300 aspect-square sm:aspect-auto justify-center sm:justify-start text-center sm:text-left"
     >
-      {/* ── Icon (Top Left) ────────── */}
+      {/* ── Icon ────────── */}
       <div 
-        className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05]"
+        className="w-12 h-12 sm:w-12 sm:h-12 rounded-2xl sm:rounded-xl flex items-center justify-center bg-white shadow-[0_4px_16px_rgba(0,0,0,0.08)] sm:shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05] mb-1 sm:mb-0"
       >
-        <iconify-icon icon={tool.icon} class="text-2xl sm:text-[28px]" style={{ color: iconColor }}></iconify-icon>
+        <iconify-icon icon={tool.icon} class="text-[28px] sm:text-[28px]" style={{ color: iconColor }}></iconify-icon>
       </div>
 
       {/* ── Text Content ────────── */}
-      <div className="flex flex-col flex-1 text-left w-full">
-        <h3 className="text-[14px] sm:text-[15px] font-bold text-gray-900 leading-snug mb-1 sm:mb-1.5">
+      <div className="flex flex-col flex-1 w-full justify-start sm:justify-start">
+        <h3 className="text-[13px] sm:text-[15px] font-bold text-gray-900 leading-tight sm:leading-snug mb-0 sm:mb-1.5 line-clamp-2 sm:line-clamp-none">
           {tool.title}
         </h3>
-        <p className="text-xs sm:text-[13px] text-gray-500 leading-relaxed font-medium line-clamp-3 sm:line-clamp-none">
+        <p className="hidden sm:block text-xs sm:text-[13px] text-gray-500 leading-relaxed font-medium">
           {tool.desc}
         </p>
       </div>
