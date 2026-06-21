@@ -187,8 +187,9 @@ function ToolRendererInner({ lang = 'en' }) {
                 </div>
               </>
             )}
+          </div>
 
-            <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
+          <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
 
             {/* Related Tools — FIXED: was using rt.color (undefined) causing silent crash */}
             <h3 className="text-2xl font-bold text-gray-900 mb-8">{t('relatedTools') || 'Related Tools'}</h3>
