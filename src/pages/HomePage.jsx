@@ -276,21 +276,27 @@ function ToolCard({ tool, onClick, lang }) {
   return (
     <div
       onClick={onClick}
-      className="tool-card group relative bg-white rounded-2xl sm:rounded-xl cursor-pointer overflow-hidden p-4 sm:p-6 flex flex-col items-center sm:items-start gap-2 sm:gap-4 border border-gray-100 hover:border-[#378ADD]/30 hover:shadow-[0_8px_30px_rgba(55,138,221,0.12)] transition-all duration-300 aspect-square sm:aspect-auto justify-center sm:justify-start text-center sm:text-left"
+      className="tool-card group relative bg-white rounded-2xl sm:rounded-xl cursor-pointer overflow-hidden p-4 sm:p-5 flex flex-col border border-gray-100 hover:border-[#378ADD]/30 hover:shadow-[0_8px_30px_rgba(55,138,221,0.12)] transition-all duration-300 min-h-[140px] sm:min-h-0 gap-3 sm:gap-4 justify-between sm:justify-start"
     >
-      {/* ── Icon ────────── */}
-      <div 
-        className="w-12 h-12 sm:w-12 sm:h-12 rounded-2xl sm:rounded-xl flex items-center justify-center bg-white shadow-[0_4px_16px_rgba(0,0,0,0.08)] sm:shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05] mb-1 sm:mb-0"
-      >
-        <iconify-icon icon={tool.icon} class="text-[28px] sm:text-[28px]" style={{ color: iconColor }}></iconify-icon>
+      {/* ── Top Area (Icon & Arrow) ────────── */}
+      <div className="flex justify-between items-start w-full">
+        <div 
+          className={clsx(
+            "w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-sm border border-gray-50 transition-transform duration-300 group-hover:scale-[1.05]",
+            tool.iconColorClass ? tool.iconColorClass.split(' ')[0] : 'bg-blue-50'
+          )}
+        >
+          <iconify-icon icon={tool.icon} class="text-[22px] sm:text-[28px]" style={{ color: tool.iconColorClass ? undefined : iconColor }}></iconify-icon>
+        </div>
+        <iconify-icon icon="solar:alt-arrow-right-linear" class="text-gray-300 text-sm sm:hidden group-hover:text-[#378ADD] transition-colors mt-1 mr-1"></iconify-icon>
       </div>
 
       {/* ── Text Content ────────── */}
-      <div className="flex flex-col flex-1 w-full justify-start sm:justify-start">
-        <h3 className="text-[13px] sm:text-[15px] font-bold text-gray-900 leading-tight sm:leading-snug mb-0 sm:mb-1.5 line-clamp-2 sm:line-clamp-none">
+      <div className="flex flex-col w-full text-left mt-auto sm:mt-0">
+        <h3 className="text-[13px] sm:text-[15px] font-bold text-gray-900 leading-tight mb-1 line-clamp-1">
           {tool.title}
         </h3>
-        <p className="hidden sm:block text-xs sm:text-[13px] text-gray-500 leading-relaxed font-medium">
+        <p className="text-[10px] sm:text-[13px] text-gray-500 leading-snug font-medium line-clamp-1 sm:line-clamp-2">
           {tool.desc}
         </p>
       </div>
@@ -298,7 +304,7 @@ function ToolCard({ tool, onClick, lang }) {
       {/* ── Badge ────────── */}
       {tool.badge && (
         <span className={clsx(
-          'absolute top-2.5 right-2.5 sm:top-4 sm:right-4 text-[8px] sm:text-[9px] font-bold px-1.5 py-0.5 sm:px-2 rounded-full border',
+          'absolute top-3 right-8 sm:top-4 sm:right-4 text-[8px] sm:text-[9px] font-bold px-1.5 py-0.5 sm:px-2 rounded-full border',
           tool.badge.text === 'AI' || tool.badge.text?.includes('AI')
             ? 'bg-purple-50 text-purple-700 border-purple-100'
             : tool.badge.text === 'Popular'
