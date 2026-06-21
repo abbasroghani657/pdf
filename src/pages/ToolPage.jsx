@@ -101,8 +101,31 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
   const [queuePosition, setQueuePosition] = useState(null);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [showStickyCTA, setShowStickyCTA] = useState(false);
+  
   const fileInputRef = useRef(null);
   const progressIntervalRef = useRef(null);
+  const uploadBoxRef = useRef(null);
+
+  // Intersection observer for sticky CTA
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Show sticky CTA only when upload box is completely out of view and we are in idle state
+        if (!entry.isIntersecting && uploadState === 'idle') {
+          setShowStickyCTA(true);
+        } else {
+          setShowStickyCTA(false);
+        }
+      },
+      { threshold: 0 }
+    );
+
+    if (uploadBoxRef.current) {
+      observer.observe(uploadBoxRef.current);
+    }
+    return () => observer.disconnect();
+  }, [uploadState]);
 
   // Reset on tool change
   useEffect(() => {
@@ -117,6 +140,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
     setIsDragging(false);
     setErrorMsg('');
     setQueuePosition(null);
+    setShowStickyCTA(false);
     return () => {
       if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
     };
@@ -132,7 +156,9 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
     }
     setSelectedFiles(validFiles);
     setUploadState('selected');
-  }, []);
+    setShowStickyCTA(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [isPro]);
 
   const handleInputChange = (e) => {
     if (e.target.files) handleFileSelect(e.target.files);
@@ -311,6 +337,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
           {(uploadState === 'idle' || uploadState === 'dragging') && (
             <>
             <div
+              ref={uploadBoxRef}
               onDrop={handleDrop}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
@@ -547,6 +574,23 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
         featureName={tool.title} 
         limitMessage="Files over 10MB require a Pro account. Upgrade to Pro for up to 1GB file uploads."
       />
+
+      {/* Sticky Floating Upload Button */}
+      <button
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          // Optional: fileInputRef.current?.click();
+        }}
+        className={clsx(
+          "fixed z-50 md:hidden bg-[#378ADD] text-white rounded-full shadow-2xl flex items-center gap-2 font-bold transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]",
+          showStickyCTA ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-20 opacity-0 pointer-events-none",
+          // Positioned above the Bottom Navbar
+          "bottom-[80px] right-4 px-6 py-4"
+        )}
+      >
+        <iconify-icon icon="solar:upload-minimalistic-bold" class="text-2xl"></iconify-icon>
+        Upload
+      </button>
 
       </div>
     </>

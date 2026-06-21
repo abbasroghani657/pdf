@@ -1063,39 +1063,40 @@ export default function App() {
 
       {/* ── MOBILE BOTTOM NAV BAR ─────────────────────────────────────────── */}
       <nav 
-        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 flex items-center justify-around pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
-        style={{ display: pathToCheck.startsWith('/tools/') || pathToCheck.startsWith('/sign/') || isAuthPage || isAdminPage ? 'none' : undefined }}
+        className="md:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 flex items-center justify-around pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
+        style={{ display: isFullscreenTool || isAuthPage || isAdminPage ? 'none' : undefined }}
       >
         {[
-          { label: isEs ? 'Inicio' : 'Home', icon: 'solar:home-linear', path: '/' },
-          { label: isEs ? 'Unir' : 'Merge', icon: 'solar:layers-linear', path: '/tools/merge-pdf' },
-          { label: isEs ? 'Firmar' : 'Sign', icon: 'solar:pen-linear', path: '/tools/sign-pdf' },
-          { label: isEs ? 'Chat de IA' : 'AI Chat', icon: 'solar:chat-round-linear', path: '/tools/chat-with-pdf' },
-          { label: isEs ? 'Más' : 'More', icon: 'solar:hamburger-menu-linear', path: null },
-        ].map(item => (
-          item.path ? (
+          { label: isEs ? 'Inicio' : isFr ? 'Accueil' : 'Home', icon: 'solar:home-linear', activeIcon: 'solar:home-bold', path: '/' },
+          { label: isEs ? 'Unir' : isFr ? 'Fusionner' : 'Merge', icon: 'solar:layers-linear', activeIcon: 'solar:layers-bold', path: '/tools/merge-pdf' },
+          { label: isEs ? 'Firmar' : isFr ? 'Signer' : 'Sign', icon: 'solar:pen-linear', activeIcon: 'solar:pen-bold', path: '/tools/sign-pdf' },
+          { label: isEs ? 'Chat IA' : isFr ? 'Chat IA' : 'AI Chat', icon: 'solar:chat-round-linear', activeIcon: 'solar:chat-round-bold', path: '/tools/chat-with-pdf' },
+          { label: isEs ? 'Más' : isFr ? 'Plus' : 'More', icon: 'solar:hamburger-menu-linear', activeIcon: 'solar:hamburger-menu-bold', path: null },
+        ].map(item => {
+          const isActive = item.path && location.pathname === getNavPath(item.path);
+          return item.path ? (
             <button
               key={item.label}
               onClick={() => handleNavClick(item.path)}
               className={clsx(
-                'flex flex-col items-center justify-center gap-0.5 py-2 px-3 flex-1 transition-colors',
-                location.pathname === item.path ? 'text-[#378ADD]' : 'text-gray-400'
+                'flex flex-col items-center justify-center gap-1 py-2 px-3 flex-1 transition-colors min-h-[50px]',
+                isActive ? 'text-[#378ADD]' : 'text-gray-400 hover:text-gray-600'
               )}
             >
-              <iconify-icon icon={item.icon} class="text-2xl"></iconify-icon>
+              <iconify-icon icon={isActive ? item.activeIcon : item.icon} class="text-[22px]"></iconify-icon>
               <span className="text-[10px] font-semibold">{item.label}</span>
             </button>
           ) : (
             <button
               key={item.label}
               onClick={() => setIsMobileMenuOpen(true)}
-              className="flex flex-col items-center justify-center gap-0.5 py-2 px-3 flex-1 text-gray-400"
+              className="flex flex-col items-center justify-center gap-1 py-2 px-3 flex-1 text-gray-400 hover:text-gray-600 min-h-[50px]"
             >
-              <iconify-icon icon={item.icon} class="text-2xl"></iconify-icon>
+              <iconify-icon icon={item.icon} class="text-[22px]"></iconify-icon>
               <span className="text-[10px] font-semibold">{item.label}</span>
             </button>
           )
-        ))}
+        })}
       </nav>
 
       {/* Bottom spacer so content doesn't hide behind mobile nav */}

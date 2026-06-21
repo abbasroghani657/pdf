@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,7 +8,33 @@ export default defineConfig({
   // Website always uses '/' (absolute), Electron uses './' (relative for file:// protocol).
   base: process.env.ELECTRON_BUILD === 'true' ? './' : '/',
   plugins: [
-    react()
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.png'],
+      manifest: {
+        name: 'TheyLovePDF - Advanced PDF Editor',
+        short_name: 'TheyLovePDF',
+        description: 'The worlds most powerful PDF toolkit. Free, fast, and secure.',
+        theme_color: '#ffffff',
+        background_color: '#ffffff',
+        display: 'standalone',
+        orientation: 'portrait',
+        icons: [
+          {
+            src: 'logo.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'logo.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
+          }
+        ]
+      }
+    })
   ],
   build: {
     chunkSizeWarningLimit: 1000,
