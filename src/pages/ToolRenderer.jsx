@@ -6,7 +6,7 @@ import { TOOLS_DATA_ES } from '../data/tools-es';
 import { TOOLS_DATA_FR } from '../data/tools-fr';
 import { slugify } from '../utils/slugify';
 import SEOHead from '../components/SEOHead';
-import ToolPage from './ToolPage'; 
+import ToolPage from './ToolPage';
 
 import MergePDFPage from './MergePDFPage';
 import CompressPage from './CompressPage';
@@ -36,6 +36,42 @@ import TranslatePDFPage from './TranslatePDFPage';
 import ExtractDataPage from './ExtractDataPage';
 import PlagiarismCheckPage from './PlagiarismCheckPage';
 
+// ─── ERROR BOUNDARY ────────────────────────────────────────────────────────────
+// Catches silent React render errors that would otherwise show a blank white page
+class ToolErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, info) {
+    console.error('ToolRenderer caught a render error:', error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 py-16">
+          <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-4">
+            <iconify-icon icon="solar:danger-triangle-bold" class="text-red-500 text-3xl" />
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Something went wrong</h2>
+          <p className="text-gray-500 text-sm mb-6">We encountered an error loading this tool. Please try again.</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-6 py-3 bg-[#378ADD] text-white rounded-xl font-semibold hover:bg-[#2b71b8] transition-colors"
+          >
+            Reload Page
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// ─── CUSTOM TOOL MAP ───────────────────────────────────────────────────────────
 const customTools = {
   'merge-pdf': <MergePDFPage />,
   'compress-pdf': <CompressPage />,
@@ -66,7 +102,8 @@ const customTools = {
   'plagiarism-check': <PlagiarismCheckPage />
 };
 
-export default function ToolRenderer({ lang = 'en' }) {
+// ─── INNER COMPONENT ───────────────────────────────────────────────────────────
+function ToolRendererInner({ lang = 'en' }) {
   const { toolSlug, platform } = useParams();
   const { t, i18n } = useTranslation();
   
@@ -86,10 +123,10 @@ export default function ToolRenderer({ lang = 'en' }) {
     
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
-  const currentUrl = `/tools/${toolSlug}${platform ? '/' + platform : ''}`;
+  const currentUrl = `${lang === 'en' ? '' : '/' + lang}/tools/${toolSlug}${platform ? '/' + platform : ''}`;
 
   const dynamicSteps = (tool?.howToSteps || [
-    `Select or drag and drop your file into the ${localizedTitle} tool.`,
+    `Select or drag and drop your file into the ${localizedTitle || 'PDF'} tool.`,
     `Click on the process button.`,
     `Download your processed file.`
   ]).map(step => injectPlatformContext(step, platform));
@@ -98,7 +135,6 @@ export default function ToolRenderer({ lang = 'en' }) {
     question: injectPlatformContext(faq.question, platform),
     answer: injectPlatformContext(faq.answer, platform)
   }));
-
 
   return (
     <div className="flex flex-col min-h-screen relative">
@@ -159,12 +195,17 @@ export default function ToolRenderer({ lang = 'en' }) {
               </Link>
             </div>
 
-            {/* Related Tools Internal Linking Grid for SEO */}
+            {/* Related Tools — FIXED: was using rt.color (undefined) causing silent crash */}
             <h3 className="text-2xl font-bold text-gray-900 mb-8">{t('relatedTools') || 'Related Tools'}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
-              {toolDataList.filter(t => t.title !== localizedTitle).slice(0, 6).map((rt, idx) => (
-                <Link key={idx} to={rt.path} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-100 hover:shadow-md hover:border-[#378ADD]/30 transition-all group">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${rt.color.replace('bg-', 'bg-opacity-10 text-').replace('text-white', 'text-blue-500')} group-hover:scale-110 transition-transform`}>
+              {toolDataList.filter(rt => rt.title !== localizedTitle).slice(0, 6).map((rt, idx) => (
+                <Link
+                  key={idx}
+                  to={`${lang === 'en' ? '' : '/' + lang}/tools/${slugify(rt.title)}`}
+                  className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-100 hover:shadow-md hover:border-[#378ADD]/30 transition-all group"
+                >
+                  {/* FIX: TOOLS_DATA uses iconColorClass, NOT color */}
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${rt.iconColorClass || 'bg-blue-50 text-blue-500'} group-hover:scale-110 transition-transform`}>
                     <iconify-icon icon={rt.icon} class="text-xl"></iconify-icon>
                   </div>
                   <div>
@@ -181,6 +222,16 @@ export default function ToolRenderer({ lang = 'en' }) {
   );
 }
 
+// ─── EXPORTED COMPONENT (with ErrorBoundary) ────────────────────────────────────
+export default function ToolRenderer({ lang = 'en' }) {
+  return (
+    <ToolErrorBoundary>
+      <ToolRendererInner lang={lang} />
+    </ToolErrorBoundary>
+  );
+}
+
+// ─── PLATFORM CONTEXT INJECTION ───────────────────────────────────────────────
 function injectPlatformContext(text, platform) {
   if (!platform || !text) return text;
   const p = platform.toLowerCase();
