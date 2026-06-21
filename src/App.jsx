@@ -378,11 +378,14 @@ export default function App() {
     navigate(getNavPath(path));
   };
 
-  const pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : 
-                      location.pathname.startsWith('/fr') ? location.pathname.replace(/^\/fr/, '') || '/' : 
-                      location.pathname.startsWith('/de') ? location.pathname.replace(/^\/de/, '') || '/' : 
-                      location.pathname.startsWith('/pt') ? location.pathname.replace(/^\/pt/, '') || '/' : 
-                      location.pathname;
+  let pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : 
+                    location.pathname.startsWith('/fr') ? location.pathname.replace(/^\/fr/, '') || '/' : 
+                    location.pathname.startsWith('/de') ? location.pathname.replace(/^\/de/, '') || '/' : 
+                    location.pathname.startsWith('/pt') ? location.pathname.replace(/^\/pt/, '') || '/' : 
+                    location.pathname;
+  if (pathToCheck.endsWith('/') && pathToCheck !== '/') {
+    pathToCheck = pathToCheck.slice(0, -1);
+  }
                       
   const isEs = location.pathname.startsWith('/es');
   const isFr = location.pathname.startsWith('/fr');
