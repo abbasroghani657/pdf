@@ -337,10 +337,10 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
               )}>
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
-              <p className="text-xl font-bold text-gray-900 mb-1">
+              <p className="text-xl font-bold text-gray-900 mb-1 text-center leading-tight">
                 {isDragging ? t('dropFileHere') : t('dragDropHere')}
               </p>
-              <p className="text-sm text-gray-500 mb-6">{t('orClickBrowse')} {isPro ? '2GB' : '10MB'}</p>
+              <p className="text-sm text-gray-500 mb-6 text-center">{t('orClickBrowse')} {isPro ? '2GB' : '10MB'}</p>
               <button
                 type="button"
                 className="bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0 relative z-0 pointer-events-none"
@@ -354,7 +354,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <p className="text-sm font-bold text-gray-700 mb-3 text-center">
                   {lang === 'es' ? 'O INGRESE UNA URL WEB' : 'OR ENTER A WEBPAGE URL'}
                 </p>
-                <div className="flex gap-3 max-w-lg mx-auto">
+                <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
                   <input
                     type="url"
                     placeholder="https://example.com"
@@ -442,7 +442,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                     style={{ width: `${progress}%` }}
                   />
                 </div>
-                <p className="text-xs text-gray-400 font-medium pt-1">
+                <p className="text-xs text-gray-400 font-medium pt-1 text-center sm:text-left">
                   {progress < 30 ? t('uploadingValidating') : progress < 60 ? t('analyzingDoc') : progress < 85 ? t('applyingTransform') : t('finalizingOutput')}
                 </p>
               </div>
@@ -521,17 +521,17 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
 
           {/* Trust Footer */}
           {uploadState !== 'done' && uploadState !== 'error' && (
-            <div className="mt-6 pt-5 border-t border-gray-100 flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-gray-400">
-              <span className="flex items-center gap-2">
-                <iconify-icon icon="solar:shield-check-linear" class="text-lg"></iconify-icon>
+            <div className="mt-6 pt-5 border-t border-gray-100 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-gray-400">
+              <span className="flex items-center gap-1.5">
+                <iconify-icon icon="solar:shield-check-linear" class="text-base sm:text-lg"></iconify-icon>
                 256-bit SSL
               </span>
-              <span className="flex items-center gap-2">
-                <iconify-icon icon="solar:trash-bin-trash-linear" class="text-lg"></iconify-icon>
+              <span className="flex items-center gap-1.5">
+                <iconify-icon icon="solar:trash-bin-trash-linear" class="text-base sm:text-lg"></iconify-icon>
                 {t('autoDeleted')}
               </span>
-              <span className="flex items-center gap-2">
-                <iconify-icon icon="solar:eye-closed-linear" class="text-lg"></iconify-icon>
+              <span className="flex items-center gap-1.5">
+                <iconify-icon icon="solar:eye-closed-linear" class="text-base sm:text-lg"></iconify-icon>
                 {t('private')}
               </span>
             </div>
