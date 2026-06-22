@@ -118,8 +118,8 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
       )}>
         <div className="flex items-center justify-between h-14 px-5 border-b border-gray-100">
           <Logo size="sm" />
-          <button onClick={onClose} className="p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-            <iconify-icon icon="solar:close-linear" class="text-xl"></iconify-icon>
+          <button onClick={onClose} className="p-2 flex items-center justify-center text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-full transition-colors border border-gray-200">
+            <iconify-icon icon="solar:close-circle-bold" class="text-xl"></iconify-icon>
           </button>
         </div>
 
