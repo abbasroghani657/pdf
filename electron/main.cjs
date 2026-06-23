@@ -12,6 +12,14 @@ function createWindow() {
     minWidth: 900,
     minHeight: 600,
     title: 'TheyLovePDF',
+    icon: path.join(__dirname, '../public/icon.png'),
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#0d1320',
+      symbolColor: '#ffffff',
+      height: 36
+    },
+    autoHideMenuBar: true,
     backgroundColor: '#0c0c18',
     webPreferences: {
       nodeIntegration: false,
@@ -21,8 +29,13 @@ function createWindow() {
     }
   });
 
-  // ✅ LOAD DEDICATED DESKTOP UI (not the website)
-  mainWindow.loadFile(path.join(__dirname, 'renderer', 'index.html'));
+  // ✅ LOAD DEDICATED DESKTOP UI (Vite Output)
+  if (process.env.VITE_DEV_SERVER_URL) {
+    mainWindow.loadURL(process.env.VITE_DEV_SERVER_URL);
+    // mainWindow.webContents.openDevTools();
+  } else {
+    mainWindow.loadFile(path.join(__dirname, 'dist', 'index.html'));
+  }
 
   // Handle double-clicked PDF files on startup
   const args = process.argv;
@@ -37,6 +50,16 @@ function createWindow() {
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.setTitle('TheyLovePDF');
+  });
+
+  const { Menu } = require('electron');
+  Menu.setApplicationMenu(null);
+
+  ipcMain.on('set-theme', (event, isDark) => {
+    mainWindow.setTitleBarOverlay({
+      color: isDark ? '#0d1320' : '#ffffff',
+      symbolColor: isDark ? '#ffffff' : '#475569' // slate-600
+    });
   });
 
   // Auto-updater

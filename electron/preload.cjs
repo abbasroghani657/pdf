@@ -5,6 +5,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openFileDialog: (opts) => ipcRenderer.invoke('open-file-dialog', opts),
   openFolder: (filePath) => ipcRenderer.invoke('open-folder', filePath),
   openExternal: (url) => ipcRenderer.invoke('open-external', url),
+  // Theme updates for titlebar
+  setTheme: (isDark) => ipcRenderer.send('set-theme', isDark),
 
   // Pro token check (monetization)
   getOfflineToken: () => ipcRenderer.invoke('get-offline-token'),

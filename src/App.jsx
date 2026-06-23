@@ -378,19 +378,25 @@ export default function App() {
     navigate(getNavPath(path));
   };
 
-  let pathToCheck = location.pathname.startsWith('/es') ? location.pathname.replace(/^\/es/, '') || '/' : 
-                    location.pathname.startsWith('/fr') ? location.pathname.replace(/^\/fr/, '') || '/' : 
-                    location.pathname.startsWith('/de') ? location.pathname.replace(/^\/de/, '') || '/' : 
-                    location.pathname.startsWith('/pt') ? location.pathname.replace(/^\/pt/, '') || '/' : 
-                    location.pathname;
+  let pathToCheck = location.pathname;
+  if (pathToCheck.startsWith('/es/') || pathToCheck === '/es') {
+    pathToCheck = pathToCheck.replace(/^\/es/, '') || '/';
+  } else if (pathToCheck.startsWith('/fr/') || pathToCheck === '/fr') {
+    pathToCheck = pathToCheck.replace(/^\/fr/, '') || '/';
+  } else if (pathToCheck.startsWith('/de/') || pathToCheck === '/de') {
+    pathToCheck = pathToCheck.replace(/^\/de/, '') || '/';
+  } else if (pathToCheck.startsWith('/pt/') || pathToCheck === '/pt') {
+    pathToCheck = pathToCheck.replace(/^\/pt/, '') || '/';
+  }
+  
   if (pathToCheck.endsWith('/') && pathToCheck !== '/') {
     pathToCheck = pathToCheck.slice(0, -1);
   }
                       
-  const isEs = location.pathname.startsWith('/es');
-  const isFr = location.pathname.startsWith('/fr');
-  const isDe = location.pathname.startsWith('/de');
-  const isPt = location.pathname.startsWith('/pt');
+  const isEs = location.pathname.startsWith('/es/') || location.pathname === '/es';
+  const isFr = location.pathname.startsWith('/fr/') || location.pathname === '/fr';
+  const isDe = location.pathname.startsWith('/de/') || location.pathname === '/de';
+  const isPt = location.pathname.startsWith('/pt/') || location.pathname === '/pt';
 
   const isHome = pathToCheck === '/';
   const isPricing = pathToCheck === '/pricing';
