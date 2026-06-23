@@ -1,3 +1,4 @@
+const newLanguages = ["hi","ru","zh-cn","zh-tw","ja","ko","it","pl","ro","bg","ca","nl","el","id","ms","sv","th","tr","uk","vi","sw","fi","da","no","cs"];
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -97,6 +98,7 @@ allRoutes.forEach(route => {
                   lang === 'fr' ? ' La meilleure alternative gratuite à iLovePDF.' :
                   lang === 'de' ? ' Die beste kostenlose iLovePDF Alternative.' :
                   lang === 'pt' ? ' A melhor alternativa gratuita ao iLovePDF.' :
+                  newLanguages.includes(lang) ? ' The #1 free alternative to iLovePDF.' :
                   ' The #1 free alternative to iLovePDF.';
                   
   const desc = injectContext(displayDesc, platform, lang) + altText;

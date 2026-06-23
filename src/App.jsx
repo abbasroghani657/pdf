@@ -37,6 +37,31 @@ import { TOOLS_DATA_ES } from './data/tools-es';
 import { TOOLS_DATA_FR } from './data/tools-fr';
 import { TOOLS_DATA_DE } from './data/tools-de';
 import { TOOLS_DATA_PT } from './data/tools-pt';
+import { TOOLS_DATA_HI } from './data/tools-hi';
+import { TOOLS_DATA_RU } from './data/tools-ru';
+import { TOOLS_DATA_ZH_CN } from './data/tools-zh-cn';
+import { TOOLS_DATA_ZH_TW } from './data/tools-zh-tw';
+import { TOOLS_DATA_JA } from './data/tools-ja';
+import { TOOLS_DATA_KO } from './data/tools-ko';
+import { TOOLS_DATA_IT } from './data/tools-it';
+import { TOOLS_DATA_PL } from './data/tools-pl';
+import { TOOLS_DATA_RO } from './data/tools-ro';
+import { TOOLS_DATA_BG } from './data/tools-bg';
+import { TOOLS_DATA_CA } from './data/tools-ca';
+import { TOOLS_DATA_NL } from './data/tools-nl';
+import { TOOLS_DATA_EL } from './data/tools-el';
+import { TOOLS_DATA_ID } from './data/tools-id';
+import { TOOLS_DATA_MS } from './data/tools-ms';
+import { TOOLS_DATA_SV } from './data/tools-sv';
+import { TOOLS_DATA_TH } from './data/tools-th';
+import { TOOLS_DATA_TR } from './data/tools-tr';
+import { TOOLS_DATA_UK } from './data/tools-uk';
+import { TOOLS_DATA_VI } from './data/tools-vi';
+import { TOOLS_DATA_SW } from './data/tools-sw';
+import { TOOLS_DATA_FI } from './data/tools-fi';
+import { TOOLS_DATA_DA } from './data/tools-da';
+import { TOOLS_DATA_NO } from './data/tools-no';
+import { TOOLS_DATA_CS } from './data/tools-cs';
 import { slugify } from './utils/slugify';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -212,6 +237,56 @@ const LanguageSwitcher = ({ location, navigate, isEs, isFr, isDe, isPt }) => {
       newPath = `/de${newPath === '/' ? '' : newPath}`;
     } else if (lang === 'PT') {
       newPath = `/pt${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'HI') {
+      newPath = `/hi${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'RU') {
+      newPath = `/ru${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'ZH-CN') {
+      newPath = `/zh-cn${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'ZH-TW') {
+      newPath = `/zh-tw${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'JA') {
+      newPath = `/ja${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'KO') {
+      newPath = `/ko${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'IT') {
+      newPath = `/it${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'PL') {
+      newPath = `/pl${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'RO') {
+      newPath = `/ro${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'BG') {
+      newPath = `/bg${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'CA') {
+      newPath = `/ca${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'NL') {
+      newPath = `/nl${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'EL') {
+      newPath = `/el${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'ID') {
+      newPath = `/id${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'MS') {
+      newPath = `/ms${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'SV') {
+      newPath = `/sv${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'TH') {
+      newPath = `/th${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'TR') {
+      newPath = `/tr${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'UK') {
+      newPath = `/uk${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'VI') {
+      newPath = `/vi${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'SW') {
+      newPath = `/sw${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'FI') {
+      newPath = `/fi${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'DA') {
+      newPath = `/da${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'NO') {
+      newPath = `/no${newPath === '/' ? '' : newPath}`;
+    } else if (lang === 'CS') {
+      newPath = `/cs${newPath === '/' ? '' : newPath}`;
     }
     
     if (newPath === '') newPath = '/';
@@ -234,7 +309,7 @@ const LanguageSwitcher = ({ location, navigate, isEs, isFr, isDe, isPt }) => {
       {isOpen && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)}></div>
-          <div className="absolute right-0 mt-2 w-32 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50 py-1">
+          <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50 py-1 max-h-96 overflow-y-auto">
             <button 
               onClick={() => switchLang('EN')}
               className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'EN' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
@@ -264,6 +339,156 @@ const LanguageSwitcher = ({ location, navigate, isEs, isFr, isDe, isPt }) => {
               className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'PT' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
             >
               Português
+            </button>
+            <button 
+              onClick={() => switchLang('HI')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'HI' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              हिन्दी
+            </button>
+            <button 
+              onClick={() => switchLang('RU')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'RU' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Pусский
+            </button>
+            <button 
+              onClick={() => switchLang('ZH-CN')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'ZH-CN' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              中文 (简体)
+            </button>
+            <button 
+              onClick={() => switchLang('ZH-TW')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'ZH-TW' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              中文 (繁體)
+            </button>
+            <button 
+              onClick={() => switchLang('JA')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'JA' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              日本語
+            </button>
+            <button 
+              onClick={() => switchLang('KO')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'KO' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              한국어
+            </button>
+            <button 
+              onClick={() => switchLang('IT')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'IT' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Italiano
+            </button>
+            <button 
+              onClick={() => switchLang('PL')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'PL' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Polski
+            </button>
+            <button 
+              onClick={() => switchLang('RO')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'RO' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Română
+            </button>
+            <button 
+              onClick={() => switchLang('BG')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'BG' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Български
+            </button>
+            <button 
+              onClick={() => switchLang('CA')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'CA' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Català
+            </button>
+            <button 
+              onClick={() => switchLang('NL')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'NL' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Nederlands
+            </button>
+            <button 
+              onClick={() => switchLang('EL')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'EL' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Ελληνικά
+            </button>
+            <button 
+              onClick={() => switchLang('ID')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'ID' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Bahasa Indonesia
+            </button>
+            <button 
+              onClick={() => switchLang('MS')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'MS' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Bahasa Melayu
+            </button>
+            <button 
+              onClick={() => switchLang('SV')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'SV' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Svenska
+            </button>
+            <button 
+              onClick={() => switchLang('TH')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'TH' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              ภาษาไทย
+            </button>
+            <button 
+              onClick={() => switchLang('TR')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'TR' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Türkçe
+            </button>
+            <button 
+              onClick={() => switchLang('UK')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'UK' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Українська
+            </button>
+            <button 
+              onClick={() => switchLang('VI')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'VI' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Tiếng Việt
+            </button>
+            <button 
+              onClick={() => switchLang('SW')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'SW' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Kiswahili
+            </button>
+            <button 
+              onClick={() => switchLang('FI')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'FI' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Suomi
+            </button>
+            <button 
+              onClick={() => switchLang('DA')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'DA' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Dansk
+            </button>
+            <button 
+              onClick={() => switchLang('NO')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'NO' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Norsk
+            </button>
+            <button 
+              onClick={() => switchLang('CS')}
+              className={clsx("w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-50", currentLang === 'CS' ? "font-bold text-[#378ADD] bg-blue-50/50" : "text-gray-700")}
+            >
+              Čeština
             </button>
           </div>
         </>

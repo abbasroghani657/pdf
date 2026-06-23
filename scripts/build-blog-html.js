@@ -16,7 +16,7 @@ if (!fs.existsSync(indexPath)) {
 }
 const baseHtml = fs.readFileSync(indexPath, 'utf-8');
 
-const languages = ['en', 'es', 'fr', 'de', 'pt'];
+const languages = ['en', 'es', 'fr', 'de', 'pt', 'hi', 'ru', 'zh-cn', 'zh-tw', 'ja', 'ko', 'it', 'pl', 'ro', 'bg', 'ca', 'nl', 'el', 'id', 'ms', 'sv', 'th', 'tr', 'uk', 'vi', 'sw', 'fi', 'da', 'no', 'cs'];
 
 languages.forEach(lang => {
   const isEs = lang === 'es';
