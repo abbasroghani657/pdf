@@ -79,7 +79,12 @@ export default function DesktopAppPage({ lang = 'en' }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] pt-12 pb-20 px-4">
+    <div className="relative min-h-screen bg-[#f8fafc] pt-6 pb-20 px-4 overflow-hidden">
+      {/* Premium Decorative Background */}
+      <div className="absolute top-[-15%] left-[-10%] w-96 h-96 bg-blue-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+      <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-indigo-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+      <div className="absolute top-[20%] left-[40%] w-96 h-96 bg-purple-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+
       <Helmet>
         <title>{t.title}</title>
         <meta name="description" content={t.desc} />
@@ -88,14 +93,14 @@ export default function DesktopAppPage({ lang = 'en' }) {
         </script>
       </Helmet>
 
-      <div className="max-w-4xl mx-auto text-center mt-4">
-        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl mx-auto flex items-center justify-center shadow-xl shadow-blue-500/20 mb-8 transform transition-transform hover:scale-105">
+      <div className="relative z-10 max-w-4xl mx-auto text-center mt-2">
+        <div className="w-20 h-20 bg-gradient-to-br from-[#378ADD] to-[#2b71b8] rounded-2xl mx-auto flex items-center justify-center shadow-xl shadow-blue-500/20 mb-6 transform transition-transform hover:scale-110 duration-300">
           <iconify-icon icon="solar:document-bold" class="text-white text-4xl"></iconify-icon>
         </div>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 mb-5 tracking-tight">
           {t.title}
         </h1>
-        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
           {t.desc}
         </p>
 
