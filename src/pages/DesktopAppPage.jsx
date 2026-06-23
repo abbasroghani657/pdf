@@ -79,7 +79,7 @@ export default function DesktopAppPage({ lang = 'en' }) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-20 px-4">
+    <div className="min-h-screen bg-[#f8fafc] pt-12 pb-20 px-4">
       <Helmet>
         <title>{t.title}</title>
         <meta name="description" content={t.desc} />
@@ -88,11 +88,13 @@ export default function DesktopAppPage({ lang = 'en' }) {
         </script>
       </Helmet>
 
-      <div className="max-w-4xl mx-auto text-center mt-10">
-        <div className="w-20 h-20 bg-[#378ADD] rounded-2xl mx-auto flex items-center justify-center shadow-lg mb-8">
+      <div className="max-w-4xl mx-auto text-center mt-4">
+        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl mx-auto flex items-center justify-center shadow-xl shadow-blue-500/20 mb-8 transform transition-transform hover:scale-105">
           <iconify-icon icon="solar:document-bold" class="text-white text-4xl"></iconify-icon>
         </div>
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">{t.title}</h1>
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+          {t.title}
+        </h1>
         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
           {t.desc}
         </p>
