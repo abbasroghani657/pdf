@@ -16,7 +16,13 @@ export default function SEOHead({
   const defaultDescription = '✓ Free & Secure. ✓ No Watermarks. ✓ Auto-delete in 2 hours. Edit, convert, compress, and sign PDFs in seconds. 100% free online PDF toolkit.';
   
   const metaTitle = title ? `${title} - ${siteName}` : `Online PDF Editor & Converter - ${siteName}`;
-  const metaDesc = description || defaultDescription;
+  const altText = lang === 'es' ? ' La mejor alternativa a iLovePDF gratis.' :
+                  lang === 'fr' ? ' La meilleure alternative gratuite à iLovePDF.' :
+                  lang === 'de' ? ' Die beste kostenlose iLovePDF Alternative.' :
+                  lang === 'pt' ? ' A melhor alternativa gratuita ao iLovePDF.' :
+                  ' The #1 free alternative to iLovePDF.';
+                  
+  const metaDesc = (description || defaultDescription) + altText;
   
   // Clean the base URL (it usually comes in without language prefix from ToolPage)
   let baseUrl = url || '';

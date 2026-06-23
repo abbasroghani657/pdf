@@ -93,7 +93,13 @@ allRoutes.forEach(route => {
   const platformSuffix = platform ? (lang === 'es' ? ' en ' : lang === 'fr' ? ' sur ' : lang === 'de' ? ' für ' : lang === 'pt' ? ' para ' : ' for ') + platformName : '';
   
   const title = `${displayTitle}${platformSuffix} - TheyLovePDF`;
-  const desc = injectContext(displayDesc, platform, lang);
+  const altText = lang === 'es' ? ' La mejor alternativa a iLovePDF gratis.' :
+                  lang === 'fr' ? ' La meilleure alternative gratuite à iLovePDF.' :
+                  lang === 'de' ? ' Die beste kostenlose iLovePDF Alternative.' :
+                  lang === 'pt' ? ' A melhor alternativa gratuita ao iLovePDF.' :
+                  ' The #1 free alternative to iLovePDF.';
+                  
+  const desc = injectContext(displayDesc, platform, lang) + altText;
 
   const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang)) : [];
   const dynamicFaqs = (tool.faqs && tool.faqs.length > 0) ? tool.faqs.map(faq => ({

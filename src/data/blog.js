@@ -1,4 +1,4 @@
-﻿export const BLOG_POSTS = [
+export const BLOG_POSTS = [
   {
     slug: "how-to-compress-pdf-mac-2026",
     title: "How to Compress a PDF on Mac (2026 Guide)",
@@ -414,6 +414,84 @@
       <h2>Privacy First</h2>
       <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
       <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
+    `
+  },
+  {
+    slug: "reduire-pdf-ilovepdf-alternative",
+    title: "The Best iLovePDF Alternative for Reducing PDF Size",
+    date: "2026-06-23",
+    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
+    content: `
+      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
+      
+      <h2>Why Look for an Alternative?</h2>
+      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+
+      <h2>The TheyLovePDF Advantage</h2>
+      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
+      
+      <ul class="space-y-3 my-6">
+        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
+        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
+        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
+      </ul>
+
+      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
+    `
+  },
+  {
+    slug: "convert-ppt-to-pdf-iphone",
+    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
+    date: "2026-06-23",
+    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
+    content: `
+      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
+      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+
+      <h2>The Hassle-Free Method</h2>
+      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+
+      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+        <ol class="space-y-3 mb-0">
+          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
+          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
+          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
+          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
+          <li>Tap Download and save the crisp, new PDF to your device.</li>
+        </ol>
+      </div>
+
+      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
+    `
+  },
+  {
+    slug: "sign-pdf-windows-11",
+    title: "How to Digitally Sign a PDF on Windows 10 & 11",
+    date: "2026-06-23",
+    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
+    content: `
+      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+
+      <h2>The Modern Way to Sign on Windows</h2>
+      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+
+      <ol class="list-decimal pl-5 space-y-3 mt-6">
+        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
+        <li>Drag and drop your contract onto the page.</li>
+        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
+        <li>Choose how you want to sign:
+          <ul class="list-disc pl-5 mt-2 text-gray-600">
+            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
+            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
+            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
+          </ul>
+        </li>
+        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
+      </ol>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
+      </div>
     `
   }
 ];
