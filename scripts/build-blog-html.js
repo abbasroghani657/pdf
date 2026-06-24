@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import { BLOG_POSTS as BLOG_POSTS_EN } from '../src/data/blog.js';
 import { BLOG_POSTS_ES } from '../src/data/blog-es.js';
 import { BLOG_POSTS_FR } from '../src/data/blog-fr.js';
+import { BLOG_POSTS_DE } from '../src/data/blog-de.js';
+import { BLOG_POSTS_PT } from '../src/data/blog-pt.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,7 +32,7 @@ languages.forEach(lang => {
     fs.mkdirSync(blogDir, { recursive: true });
   }
 
-  const posts = isEs ? BLOG_POSTS_ES : isFr ? BLOG_POSTS_FR : BLOG_POSTS_EN;
+  const posts = isEs ? BLOG_POSTS_ES : isFr ? BLOG_POSTS_FR : isDe ? BLOG_POSTS_DE : isPt ? BLOG_POSTS_PT : BLOG_POSTS_EN;
   
   const listTitle = isEs ? 'Guías y Blog - TheyLovePDF' : isFr ? 'Guides et Blog - TheyLovePDF' : isDe ? 'Anleitungen & Blog - TheyLovePDF' : isPt ? 'Guias e Blog - TheyLovePDF' : 'Blog & Guides - TheyLovePDF';
   const listDesc = isEs ? 'Consejos, trucos y tutoriales para dominar sus documentos PDF.' : isFr ? 'Conseils, astuces et tutoriels pour maîtriser vos documents PDF.' : isDe ? 'Tipps, Tricks und Tutorials zur Beherrschung Ihrer PDF-Dokumente.' : isPt ? 'Dicas, truques e tutoriais para dominar seus documentos PDF.' : 'Discover tips, tricks, and tutorials to master your PDF documents with TheyLovePDF.';

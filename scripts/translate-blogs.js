@@ -8,11 +8,7 @@ const __dirname = path.dirname(__filename);
 
 import { BLOG_POSTS } from '../src/data/blog.js';
 
-const targetLanguages = [
-  'hi', 'ru', 'zh-cn', 'zh-tw', 'ja', 'ko', 'it', 'pl', 'ro', 'bg',
-  'ca', 'nl', 'el', 'id', 'ms', 'sv', 'th', 'tr', 'uk', 'vi',
-  'sw', 'fi', 'da', 'no', 'cs'
-];
+const targetLanguages = ['pt', 'de'];
 
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
