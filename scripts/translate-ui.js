@@ -72,10 +72,30 @@ async function generateFile(langCode) {
   const values = Object.values(flatDict);
   
   try {
-    const translatedValues = await translate(values, { to: langCode });
+    const chunkSize = 30;
+    const translatedValues = [];
+    
+    for (let i = 0; i < values.length; i += chunkSize) {
+      const chunk = values.slice(i, i + chunkSize);
+      try {
+        const translatedChunk = await translate(chunk, { to: langCode });
+        // Sometimes translate-google returns a single string if chunk size is 1
+        if (Array.isArray(translatedChunk)) {
+          translatedValues.push(...translatedChunk);
+        } else {
+          translatedValues.push(translatedChunk);
+        }
+      } catch (err) {
+        // Fallback to English if translation fails
+        translatedValues.push(...chunk);
+        console.error(`Chunk failed for ${langCode}, using fallback`);
+      }
+      await sleep(100); // small delay between chunks
+    }
+
     const translatedFlatDict = {};
     keys.forEach((key, index) => {
-      translatedFlatDict[key] = translatedValues[index];
+      translatedFlatDict[key] = translatedValues[index] || values[index]; // fallback to English if missing
     });
     
     const translatedUI = unflattenObject(translatedFlatDict);
@@ -95,7 +115,7 @@ async function generateFile(langCode) {
 async function main() {
   for (const lang of targetLanguages) {
     await generateFile(lang);
-    await sleep(2000); // 2s delay to prevent rate limit
+    await sleep(200); // 2s delay to prevent rate limit
   }
   console.log("ALL UI TRANSLATIONS DONE!");
 }
