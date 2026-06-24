@@ -2,8 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { TOOLS_DATA } from '../data/tools';
-import { TOOLS_DATA_ES } from '../data/tools-es';
-import { TOOLS_DATA_FR } from '../data/tools-fr';
 import { slugify } from '../utils/slugify';
 import SEOHead from '../components/SEOHead';
 import ToolPage from './ToolPage';
@@ -103,7 +101,7 @@ const customTools = {
 };
 
 // ─── INNER COMPONENT ───────────────────────────────────────────────────────────
-function ToolRendererInner({ lang = 'en', ui }) {
+function ToolRendererInner({ lang = 'en', ui, toolsData }) {
   const { toolSlug, platform } = useParams();
   const { t, i18n } = useTranslation();
   
@@ -112,14 +110,14 @@ function ToolRendererInner({ lang = 'en', ui }) {
   }, [lang, i18n]);
 
   const enToolIndex = TOOLS_DATA.findIndex(t => slugify(t.title) === toolSlug);
-  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : lang === 'fr' ? TOOLS_DATA_FR : TOOLS_DATA;
+  const toolDataList = toolsData && toolsData.length > 0 ? toolsData : TOOLS_DATA;
   const tool = toolDataList[enToolIndex];
   
   const localizedTitle = tool?.title;
 
   const Component = customTools[toolSlug] 
     ? React.cloneElement(customTools[toolSlug], { lang, toolSlug, toolData: tool, ui }) 
-    : <ToolPage lang={lang} hideSEO={true} ui={ui} />;
+    : <ToolPage lang={lang} hideSEO={true} ui={ui} toolData={tool} />;
     
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
@@ -219,10 +217,10 @@ function ToolRendererInner({ lang = 'en', ui }) {
 }
 
 // ─── EXPORTED COMPONENT (with ErrorBoundary) ────────────────────────────────────
-export default function ToolRenderer({ lang = 'en', ui }) {
+export default function ToolRenderer({ lang = 'en', ui, toolsData }) {
   return (
     <ToolErrorBoundary>
-      <ToolRendererInner lang={lang} ui={ui} />
+      <ToolRendererInner lang={lang} ui={ui} toolsData={toolsData} />
     </ToolErrorBoundary>
   );
 }

@@ -4,7 +4,6 @@ import UpgradeModal from '../components/UpgradeModal';
 import { clsx } from 'clsx';
 import { saveAs } from 'file-saver';
 import { TOOLS_DATA } from '../data/tools';
-import { TOOLS_DATA_ES } from '../data/tools-es';
 import { slugify } from '../utils/slugify';
 import { processWithQueue } from '../utils/queueApi';
 import { toast } from 'react-hot-toast';
@@ -56,7 +55,7 @@ function injectPlatformContext(text, platform) {
 
 import { useTranslation } from 'react-i18next';
 
-export default function ToolPage({ lang = 'en', hideSEO = false, ui }) {
+export default function ToolPage({ lang = 'en', hideSEO = false, ui, toolData }) {
   const { toolSlug, platform } = useParams();
   const tg = ui?.tools_generic || {};
   const navigate = useNavigate();
@@ -69,8 +68,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false, ui }) {
   
   const toolIndex = TOOLS_DATA.findIndex((t) => slugify(t.title) === toolSlug);
   const tool = TOOLS_DATA[toolIndex];
-  const toolDataList = lang === 'es' ? TOOLS_DATA_ES : TOOLS_DATA;
-  const displayTool = toolDataList[toolIndex];
+  const displayTool = toolData || tool;
 
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   
