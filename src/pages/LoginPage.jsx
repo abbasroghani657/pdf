@@ -11,9 +11,8 @@ import { motion } from 'framer-motion';
 
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
-export default function LoginPage({ lang = 'en' }) {
-  const isEs = lang === 'es';
-  const isFr = lang === 'fr';
+export default function LoginPage({ lang = 'en', ui }) {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -48,11 +47,11 @@ export default function LoginPage({ lang = 'en' }) {
     } catch (error) {
       const raw = error.message || '';
       if (raw.toLowerCase().includes('google')) {
-        setLoginError(isEs ? 'Esta cuenta usa Google sign-in. Haz clic en "Continuar con Google".' : isFr ? 'Ce compte utilise la connexion Google. Cliquez sur "Continuer avec Google".' : 'This account uses Google sign-in. Please click "Continue with Google".');
+        setLoginError(ui?.auth?.google_sign_in_required || 'This account uses Google sign-in. Please click "Continue with Google".');
       } else if (raw.toLowerCase().includes('invalid') || raw.toLowerCase().includes('credentials')) {
-        setLoginError(isEs ? 'Correo o contraseña incorrectos. Inténtalo de nuevo.' : isFr ? 'E-mail ou mot de passe incorrect. Veuillez réessayer.' : 'Incorrect email or password. Please try again.');
+        setLoginError(ui?.auth?.invalid_credentials || 'Incorrect email or password. Please try again.');
       } else {
-        setLoginError(isEs ? (raw || 'Algo salió mal. Inténtalo de nuevo.') : isFr ? (raw || "Quelque chose s'est mal passé. Veuillez réessayer.") : (raw || 'Something went wrong. Please try again.'));
+        setLoginError(raw || ui?.auth?.generic_error || 'Something went wrong. Please try again.');
       }
     } finally {
       setIsLoading(false);
@@ -82,20 +81,20 @@ export default function LoginPage({ lang = 'en' }) {
 
         {/* Headline */}
         <div className="relative z-10 px-10">
-          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">{isEs ? 'LA PLATAFORMA PDF' : isFr ? 'LA PLATEFORME PDF' : 'The PDF Platform'}</p>
+          <p className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mb-3">{ui?.auth?.the_pdf_platform || 'The PDF Platform'}</p>
           <h1 className="text-3xl font-extrabold text-white leading-tight mb-3">
-            {isEs ? <>Cada herramienta PDF<br/>que necesitarás.</> : isFr ? <>Tous les outils PDF<br/>dont vous aurez besoin.</> : <>Every PDF tool<br/>you'll ever need.</>}
+            {ui?.auth?.every_pdf_tool || 'Every PDF tool you\'ll ever need.'}
           </h1>
           <p className="text-slate-400 leading-relaxed text-sm mb-6">
-            {isEs ? <>Convierte, comprime, une, firma y protege<br/>documentos en un solo lugar.</> : isFr ? <>Convertissez, compressez, fusionnez, signez et protégez<br/>des documents en un seul endroit.</> : <>Convert, compress, merge, sign, and protect<br/>documents in one place.</>}
+            {ui?.auth?.convert_compress_merge || 'Convert, compress, merge, sign, and protect documents in one place.'}
           </p>
 
           {/* Checkmarks */}
           <div className="space-y-2.5 mb-7">
             {[
-              isEs ? 'Más de 40 herramientas PDF' : isFr ? 'Plus de 40 outils PDF' : '40+ PDF tools',
-              isEs ? 'Archivos eliminados tras procesar' : isFr ? 'Fichiers supprimés après traitement' : 'Files deleted after processing',
-              isEs ? 'Impulsado por IA: Chatear, Resumir, Traducir' : isFr ? 'Propulsé par l\'IA : Discuter, Résumer, Traduire' : 'AI-powered: Chat, Summarize, Translate',
+              ui?.auth?.feature_1 || '40+ PDF tools',
+              ui?.auth?.feature_2 || 'Files deleted after processing',
+              ui?.auth?.feature_3 || 'AI-powered: Chat, Summarize, Translate',
             ].map((text, i) => (
               <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
                 <div className="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center shrink-0">
@@ -109,9 +108,9 @@ export default function LoginPage({ lang = 'en' }) {
           {/* Trust badges row */}
           <div className="flex items-center gap-3 flex-wrap mb-1">
             {[
-              isEs ? 'Cifrado de 256 bits' : isFr ? 'Chiffrement 256 bits' : '256-bit Encryption',
-              isEs ? 'Impulsado por IA' : isFr ? 'Propulsé par l\'IA' : 'AI-Powered',
-              isEs ? 'Privacidad primero' : isFr ? 'Confidentialité' : 'Privacy First'
+              ui?.auth?.badge_1 || '256-bit Encryption',
+              ui?.auth?.badge_2 || 'AI-Powered',
+              ui?.auth?.badge_3 || 'Privacy First'
             ].map((badge, i) => (
               <span key={i} className={`text-[11px] font-semibold text-slate-400 ${i < 2 ? "after:content-['|'] after:ml-3 after:text-slate-600" : ''}`}>
                 {badge}
@@ -121,8 +120,8 @@ export default function LoginPage({ lang = 'en' }) {
         </div>
 
         <div className="relative z-10 px-10 pb-7">
-          <p className="text-slate-500 text-xs mb-1">{isEs ? 'Con la confianza de profesionales en todo el mundo.' : isFr ? 'Approuvé par des professionnels du monde entier.' : 'Trusted by professionals worldwide.'}</p>
-          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · {isEs ? 'Todos los derechos reservados.' : isFr ? 'Tous droits réservés.' : 'All rights reserved.'}</p>
+          <p className="text-slate-500 text-xs mb-1">{ui?.auth?.trusted_by || 'Trusted by professionals worldwide.'}</p>
+          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} TheyLovePDF · {ui?.auth?.all_rights_reserved || 'All rights reserved.'}</p>
         </div>
       </motion.div>
 
@@ -139,8 +138,8 @@ export default function LoginPage({ lang = 'en' }) {
 
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
             <div className="mb-8">
-              <h2 className="text-2xl font-extrabold text-slate-900 mb-1">{isEs ? 'Inicia sesión en tu cuenta' : isFr ? 'Connectez-vous à votre compte' : 'Login to your account'}</h2>
-              <p className="text-slate-500 text-sm">{isEs ? '¡Bienvenido de nuevo! Por favor, ingresa tus datos.' : isFr ? 'Bon retour ! Veuillez entrer vos coordonnées.' : 'Welcome back! Please enter your details.'}</p>
+              <h2 className="text-2xl font-extrabold text-slate-900 mb-1">{ui?.auth?.log_in || 'Login to your account'}</h2>
+              <p className="text-slate-500 text-sm">{ui?.auth?.welcome_back || 'Welcome back! Please enter your details.'}</p>
             </div>
 
             {/* Google OAuth */}
@@ -155,7 +154,7 @@ export default function LoginPage({ lang = 'en' }) {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
-              {isEs ? 'Continuar con Google' : isFr ? 'Continuer avec Google' : 'Continue with Google'}
+              {ui?.auth?.continue_with_google || 'Continue with Google'}
             </button>
 
             {/* Divider */}
@@ -164,14 +163,14 @@ export default function LoginPage({ lang = 'en' }) {
                 <div className="w-full border-t border-slate-200" />
               </div>
               <div className="relative flex justify-center">
-                <span className="px-3 bg-[#F7F8FC] text-xs text-slate-400 font-medium">{isEs ? 'O continuar con correo electrónico' : isFr ? 'Ou continuer avec l\'e-mail' : 'Or continue with email'}</span>
+                <span className="px-3 bg-[#F7F8FC] text-xs text-slate-400 font-medium">{ui?.auth?.or_continue_with_email || 'Or continue with email'}</span>
               </div>
             </div>
 
             {/* Traditional Login form */}
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{isEs ? 'Correo electrónico' : isFr ? 'Adresse e-mail' : 'Email address'}</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">{ui?.auth?.email_address || 'Email address'}</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                     <iconify-icon icon="solar:letter-linear" class="text-lg"></iconify-icon>
@@ -182,7 +181,7 @@ export default function LoginPage({ lang = 'en' }) {
                     autoFocus
                     value={email}
                     onChange={(e) => { setEmail(e.target.value); setLoginError(''); }}
-                    placeholder={isEs ? 'Ingresa tu correo electrónico' : isFr ? 'Entrez votre e-mail' : 'Enter your email'}
+                    placeholder={ui?.auth?.email_placeholder || 'Enter your email'}
                     className="w-full pl-10 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                   />
                 </div>
@@ -190,7 +189,7 @@ export default function LoginPage({ lang = 'en' }) {
 
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">{isEs ? 'Contraseña' : isFr ? 'Mot de passe' : 'Password'}</label>
+                  <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide">{ui?.auth?.password || 'Password'}</label>
                 </div>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -201,7 +200,7 @@ export default function LoginPage({ lang = 'en' }) {
                     required
                     value={password}
                     onChange={(e) => { setPassword(e.target.value); setLoginError(''); }}
-                    placeholder={isEs ? 'Contraseña' : isFr ? 'Mot de passe' : 'Password'}
+                    placeholder={ui?.auth?.password || 'Password'}
                     className={clsx(
                       'w-full pl-10 pr-10 py-2.5 bg-white border rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all',
                       loginError
@@ -226,8 +225,8 @@ export default function LoginPage({ lang = 'en' }) {
               </div>
 
               <div className="flex items-center justify-center pt-1 pb-1">
-                <Link to={isEs ? "/es/forgot-password" : isFr ? "/fr/forgot-password" : "/forgot-password"} className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                  {isEs ? '¿Olvidaste tu contraseña?' : isFr ? 'Mot de passe oublié ?' : 'Forgot your password?'}
+                <Link to={`/${lang}/forgot-password`} className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                  {ui?.auth?.forgot_password || 'Forgot your password?'}
                 </Link>
               </div>
 
@@ -241,14 +240,14 @@ export default function LoginPage({ lang = 'en' }) {
               >
                 {isLoading
                   ? <iconify-icon icon="line-md:loading-twotone-loop" class="text-lg"></iconify-icon>
-                  : (isEs ? 'Iniciar sesión' : isFr ? 'Se connecter' : 'Log in')
+                  : (ui?.auth?.sign_in || 'Log in')
                 }
               </button>
 
               <div className="text-center mt-6 text-sm text-slate-600">
-                {isEs ? '¿No tienes una cuenta?' : isFr ? "Vous n'avez pas de compte ?" : "Don't have an account?"}{' '}
-                <Link to={isEs ? "/es/register" : isFr ? "/fr/register" : "/register"} className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                  {isEs ? 'Crear una cuenta' : isFr ? 'Créer un compte' : 'Create an account'}
+                {ui?.auth?.no_account || "Don't have an account?"}{' '}
+                <Link to={`/${lang}/register`} className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                  {ui?.auth?.create_account || 'Create an account'}
                 </Link>
               </div>
 

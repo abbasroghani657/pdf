@@ -40,6 +40,7 @@ import WatermarkPDFPage from './pages/WatermarkPDFPage';
 import FillPDFFormsPage from './pages/FillPDFFormsPage';
 import PageNumbersPage from './pages/PageNumbersPage';
 import { slugify } from './utils/slugify';
+import { UI_DICT as UI_EN } from './data/ui-en.js';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
@@ -87,23 +88,23 @@ import Logo from './components/Logo';
 const PORTAL = import.meta.env.VITE_ADMIN_PORTAL_PATH || '/x-portal-9f3a';
 
 // ─── MOBILE NAVIGATION DRAWER ─────────────────────────────────────────────────
-function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
+function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout, ui }) {
   const links = [
-    { id: '/', label: 'All Tools', icon: 'solar:box-linear' },
-    { id: '/pricing', label: 'Pricing', icon: 'solar:tag-price-linear' },
-    { id: '/compare', label: 'Why Us?', icon: 'solar:chart-square-linear' },
+    { id: '/', label: ui.mobile_nav.all_tools, icon: 'solar:box-linear' },
+    { id: '/pricing', label: ui.mobile_nav.pricing, icon: 'solar:tag-price-linear' },
+    { id: '/compare', label: ui.mobile_nav.why_us, icon: 'solar:chart-square-linear' },
   ];
   const quickTools = [
-    { path: '/tools/merge-pdf', label: 'Merge PDF', icon: 'solar:layers-linear', color: 'text-blue-600' },
-    { path: '/tools/split-pdf', label: 'Split PDF', icon: 'solar:scissors-linear', color: 'text-amber-600' },
-    { path: '/tools/compress-pdf', label: 'Compress PDF', icon: 'solar:archive-minimalistic-linear', color: 'text-emerald-600' },
-    { path: '/tools/pdf-to-word', label: 'PDF to Word', icon: 'solar:file-text-linear', color: 'text-indigo-600' },
-    { path: '/tools/word-to-pdf', label: 'Word to PDF', icon: 'solar:document-add-linear', color: 'text-blue-600' },
-    { path: '/tools/jpg-to-pdf', label: 'JPG to PDF', icon: 'solar:images-linear', color: 'text-orange-500' },
-    { path: '/tools/protect-pdf', label: 'Protect PDF', icon: 'solar:lock-password-linear', color: 'text-red-600' },
-    { path: '/tools/sign-pdf', label: 'Sign PDF', icon: 'solar:pen-linear', color: 'text-violet-600' },
-    { path: '/tools/redact-pdf', label: 'Redact PDF', icon: 'solar:shield-cross-linear', color: 'text-red-500' },
-    { path: '/tools/ocr-pdf', label: 'OCR PDF', icon: 'solar:text-square-linear', color: 'text-teal-600' },
+    { path: '/tools/merge-pdf', label: ui.mobile_nav.merge_pdf, icon: 'solar:layers-linear', color: 'text-blue-600' },
+    { path: '/tools/split-pdf', label: ui.mobile_nav.split_pdf, icon: 'solar:scissors-linear', color: 'text-amber-600' },
+    { path: '/tools/compress-pdf', label: ui.mobile_nav.compress_pdf, icon: 'solar:archive-minimalistic-linear', color: 'text-emerald-600' },
+    { path: '/tools/pdf-to-word', label: ui.mobile_nav.pdf_to_word, icon: 'solar:file-text-linear', color: 'text-indigo-600' },
+    { path: '/tools/word-to-pdf', label: ui.mobile_nav.word_to_pdf, icon: 'solar:document-add-linear', color: 'text-blue-600' },
+    { path: '/tools/jpg-to-pdf', label: ui.mobile_nav.jpg_to_pdf, icon: 'solar:images-linear', color: 'text-orange-500' },
+    { path: '/tools/protect-pdf', label: ui.mobile_nav.protect_pdf, icon: 'solar:lock-password-linear', color: 'text-red-600' },
+    { path: '/tools/sign-pdf', label: ui.mobile_nav.sign_pdf, icon: 'solar:pen-linear', color: 'text-violet-600' },
+    { path: '/tools/redact-pdf', label: ui.mobile_nav.redact_pdf, icon: 'solar:shield-cross-linear', color: 'text-red-500' },
+    { path: '/tools/ocr-pdf', label: ui.mobile_nav.ocr_pdf, icon: 'solar:text-square-linear', color: 'text-teal-600' },
   ];
   return (
     <>
@@ -145,7 +146,7 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
 
           {/* Quick Tool Links */}
           <div className="py-4 px-4">
-            <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-3 px-1">Popular Tools</p>
+            <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-3 px-1">{ui.mobile_nav.popular_tools}</p>
             <div className="grid grid-cols-2 gap-2">
               {quickTools.map(t => (
                 <button
@@ -174,19 +175,19 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
                 </div>
               </div>
               <button onClick={() => { onNav('/dashboard'); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
-                Dashboard
+                {ui.mobile_nav.dashboard}
               </button>
               <button onClick={() => { logout(); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-red-600 border border-red-100 hover:bg-red-50 rounded-xl transition-colors">
-                Logout
+                {ui.mobile_nav.logout}
               </button>
             </>
           ) : (
             <>
               <button onClick={() => { onNav('/login'); onClose(); }} className="w-full py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-xl transition-colors">
-                Log in
+                {ui.mobile_nav.log_in}
               </button>
               <button onClick={() => { onNav('/register'); onClose(); }} className="w-full py-2.5 text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl transition-colors shadow-sm">
-                Sign up free
+                {ui.mobile_nav.sign_up_free}
               </button>
             </>
           )}
@@ -526,10 +527,27 @@ export default function App() {
     pathToCheck = pathToCheck.slice(0, -1);
   }
                       
-  const isEs = currentLang === 'es';
-  const isFr = currentLang === 'fr';
-  const isDe = currentLang === 'de';
-  const isPt = currentLang === 'pt';
+  const [uiDict, setUiDict] = useState(UI_EN);
+  
+  useEffect(() => {
+    let isMounted = true;
+    const loadUiDict = async () => {
+      try {
+        if (currentLang === 'en') {
+          if (isMounted) setUiDict(UI_EN);
+        } else {
+          const mod = await import(`./data/ui-${currentLang}.js`);
+          const key = `UI_DICT_${currentLang.toUpperCase().replace('-', '_')}`;
+          if (isMounted) setUiDict(mod[key] || mod.default || Object.values(mod)[0] || UI_EN);
+        }
+      } catch (err) {
+        console.error('Failed to load UI dict for', currentLang, err);
+        if (isMounted) setUiDict(UI_EN);
+      }
+    };
+    loadUiDict();
+    return () => { isMounted = false; };
+  }, [currentLang]);
 
   const isHome = pathToCheck === '/';
   const isPricing = pathToCheck === '/pricing';
@@ -658,11 +676,11 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-1">
             {[
-              { path: '/', label: isEs ? 'Inicio' : isFr ? 'Accueil' : isDe ? 'Startseite' : isPt ? 'Início' : 'Home' },
-              { path: '/tools', label: isEs ? 'Herramientas' : isFr ? 'Outils' : isDe ? 'Werkzeuge' : isPt ? 'Ferramentas' : 'Tools' },
-              { path: '/pricing', label: isEs ? 'Precios' : isFr ? 'Tarifs' : isDe ? 'Preise' : isPt ? 'Preços' : 'Pricing' },
-              { path: '/blog', label: isEs ? 'Blog' : isFr ? 'Blog' : isDe ? 'Blog' : isPt ? 'Blog' : 'Blog' },
-              { path: '/compare', label: isEs ? '¿Por qué nosotros?' : isFr ? 'Pourquoi nous?' : isDe ? 'Warum Wir?' : isPt ? 'Por Que Nós?' : 'Why Us?' },
+              { path: '/', label: uiDict.nav.home },
+              { path: '/tools', label: uiDict.nav.tools },
+              { path: '/pricing', label: uiDict.nav.pricing },
+              { path: '/blog', label: uiDict.nav.blog },
+              { path: '/compare', label: uiDict.nav.why_us },
             ].map(item => (
               <button
                 key={item.path}
@@ -694,7 +712,7 @@ export default function App() {
                     </div>
                   )}
                   <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    {user.profile?.name || (isEs ? 'Panel' : isFr ? 'Tableau' : isDe ? 'Dashboard' : isPt ? 'Painel' : 'Dashboard')}
+                    {user.profile?.name || uiDict.nav.dashboard}
                   </span>
                 </div>
                 {['admin', 'superadmin'].includes(user.profile?.role) && (
@@ -704,19 +722,19 @@ export default function App() {
                     title="Admin Panel"
                   >
                     <iconify-icon icon="solar:shield-keyhole-bold" class="text-sm"></iconify-icon>
-                    {isEs ? 'Administrador' : isFr ? 'Administrateur' : isDe ? 'Administrator' : isPt ? 'Administrador' : 'Admin'}</button>
+                    {uiDict.nav.admin}</button>
                 )}
                 <button onClick={logout} className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors">
-                  {isEs ? 'Cerrar sesión' : isFr ? 'Se déconnecter' : isDe ? 'Abmelden' : isPt ? 'Sair' : 'Logout'}
+                  {uiDict.nav.logout}
                 </button>
               </div>
             ) : (
               <>
                 <button onClick={() => handleNavClick('/login')} className="text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 rounded-lg px-4 py-1.5 transition-colors">
-                  {isEs ? 'Iniciar sesión' : isFr ? 'Se connecter' : isDe ? 'Anmelden' : isPt ? 'Entrar' : 'Sign in'}
+                  {uiDict.nav.sign_in}
                 </button>
                 <button onClick={() => handleNavClick('/register')} className="text-sm font-semibold bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-lg px-4 py-1.5 transition-all shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0">
-                  {isEs ? 'Registrarse' : isFr ? "S'inscrire" : isDe ? 'Registrieren' : isPt ? 'Inscrever-se' : 'Sign up'}
+                  {uiDict.nav.sign_up}
                 </button>
               </>
             )}
@@ -735,9 +753,9 @@ export default function App() {
         <div className="hidden lg:flex border-b border-gray-200/70 bg-white/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-center gap-10 w-full">
             {[
-              { label: isEs ? 'UNIR PDF' : isFr ? 'FUSIONNER PDF' : isDe ? 'PDF ZUSAMMENFÜHREN' : isPt ? 'MESCLAR PDF' : 'MERGE PDF', path: '/tools/merge-pdf' },
-              { label: isEs ? 'DIVIDIR PDF' : isFr ? 'DIVISER PDF' : isDe ? 'PDF TEILEN' : isPt ? 'DIVIDIR PDF' : 'SPLIT PDF', path: '/tools/split-pdf' },
-              { label: isEs ? 'COMPRIMIR PDF' : isFr ? 'COMPRESSER PDF' : isDe ? 'PDF KOMPRIMIEREN' : isPt ? 'COMPRIMIR PDF' : 'COMPRESS PDF', path: '/tools/compress-pdf' },
+              { label: uiDict.secondary_nav.merge_pdf, path: '/tools/merge-pdf' },
+              { label: uiDict.secondary_nav.split_pdf, path: '/tools/split-pdf' },
+              { label: uiDict.secondary_nav.compress_pdf, path: '/tools/compress-pdf' },
             ].map(link => (
               <button
                 key={link.path}
@@ -753,21 +771,21 @@ export default function App() {
             
             <div className="relative group h-full flex items-center">
               <button className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3">
-                {isEs ? 'CONVERTIR PDF' : isFr ? 'CONVERTIR PDF' : isDe ? 'PDF KONVERTIEREN' : isPt ? 'CONVERTER PDF' : 'CONVERT PDF'}
+                {uiDict.secondary_nav.convert_pdf}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover:rotate-180"></iconify-icon>
               </button>
 
               <div className="absolute top-[48px] left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-6 flex gap-8">
                 {/* Column 1 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : isDe ? 'IN PDF KONVERTIEREN' : isPt ? 'CONVERTER PARA PDF' : 'CONVERT TO PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{uiDict.secondary_nav.convert_to_pdf}</p>
                   <div className="space-y-1">
                     {[
-                      { name: isEs ? 'JPG a PDF' : isFr ? 'JPG en PDF' : isDe ? 'JPG in PDF' : isPt ? 'JPG para PDF' : 'JPG to PDF', path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: isEs ? 'WORD a PDF' : isFr ? 'WORD en PDF' : isDe ? 'WORD in PDF' : isPt ? 'WORD para PDF' : 'WORD to PDF', path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: isEs ? 'POWERPOINT a PDF' : isFr ? 'POWERPOINT en PDF' : isDe ? 'POWERPOINT in PDF' : isPt ? 'POWERPOINT para PDF' : 'POWERPOINT to PDF', path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: isEs ? 'EXCEL a PDF' : isFr ? 'EXCEL en PDF' : isDe ? 'EXCEL in PDF' : isPt ? 'EXCEL para PDF' : 'EXCEL to PDF', path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: isEs ? 'HTML a PDF' : isFr ? 'HTML en PDF' : isDe ? 'HTML in PDF' : isPt ? 'HTML para PDF' : 'HTML to PDF', path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
+                      { name: uiDict.secondary_nav.jpg_to_pdf, path: '/tools/jpg-to-pdf', icon: 'solar:images-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: uiDict.secondary_nav.word_to_pdf, path: '/tools/word-to-pdf', icon: 'solar:file-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: uiDict.secondary_nav.powerpoint_to_pdf, path: '/tools/powerpoint-to-pdf', icon: 'solar:play-circle-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: uiDict.secondary_nav.excel_to_pdf, path: '/tools/excel-to-pdf', icon: 'solar:document-add-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: uiDict.secondary_nav.html_to_pdf, path: '/tools/html-to-pdf', icon: 'solar:global-linear', color: 'text-indigo-500 bg-indigo-50' },
                     ].map(t => (
                       <button
                         key={t.name}
@@ -785,15 +803,15 @@ export default function App() {
 
                 {/* Column 2 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : isDe ? 'VON PDF KONVERTIEREN' : isPt ? 'CONVERTER DE PDF' : 'CONVERT FROM PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{uiDict.secondary_nav.convert_from_pdf}</p>
                   <div className="space-y-1">
                     {[
-                      { name: isEs ? 'PDF a JPG' : isFr ? 'PDF en JPG' : 'PDF to JPG', path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
-                      { name: isEs ? 'PDF a WORD' : isFr ? 'PDF en WORD' : 'PDF to WORD', path: '/tools/pdf-to-word', icon: 'solar:document-text-linear', color: 'text-blue-600 bg-blue-50' },
-                      { name: isEs ? 'PDF a POWERPOINT' : isFr ? 'PDF en POWERPOINT' : 'PDF to POWERPOINT', path: '/tools/pdf-to-powerpoint', icon: 'solar:presentation-graph-linear', color: 'text-orange-600 bg-orange-50' },
-                      { name: isEs ? 'PDF a EXCEL' : isFr ? 'PDF en EXCEL' : 'PDF to EXCEL', path: '/tools/pdf-to-excel', icon: 'solar:chart-square-linear', color: 'text-emerald-600 bg-emerald-50' },
-                      { name: isEs ? 'PDF a PDF/A' : isFr ? 'PDF en PDF/A' : 'PDF to PDF/A', path: '/tools/pdf-to-pdf-a', icon: 'solar:shield-check-linear', color: 'text-gray-600 bg-gray-100' },
-                      { name: isEs ? 'Firmar PDF' : isFr ? 'Signer PDF' : 'Sign PDF', path: '/tools/sign-pdf', icon: 'solar:pen-linear', color: 'text-violet-600 bg-violet-50' },
+                      { name: uiDict.secondary_nav.pdf_to_jpg, path: '/tools/pdf-to-jpg', icon: 'solar:gallery-linear', color: 'text-amber-500 bg-amber-50' },
+                      { name: uiDict.secondary_nav.pdf_to_word, path: '/tools/pdf-to-word', icon: 'solar:document-text-linear', color: 'text-blue-600 bg-blue-50' },
+                      { name: uiDict.secondary_nav.pdf_to_powerpoint, path: '/tools/pdf-to-powerpoint', icon: 'solar:presentation-graph-linear', color: 'text-orange-600 bg-orange-50' },
+                      { name: uiDict.secondary_nav.pdf_to_excel, path: '/tools/pdf-to-excel', icon: 'solar:chart-square-linear', color: 'text-emerald-600 bg-emerald-50' },
+                      { name: uiDict.secondary_nav.pdf_to_pdfa, path: '/tools/pdf-to-pdf-a', icon: 'solar:shield-check-linear', color: 'text-gray-600 bg-gray-100' },
+                      { name: uiDict.secondary_nav.sign_pdf, path: '/tools/sign-pdf', icon: 'solar:pen-linear', color: 'text-violet-600 bg-violet-50' },
                     ].map(t => (
                       <button
                         key={t.name}
@@ -815,15 +833,14 @@ export default function App() {
                 onClick={() => handleNavClick('/')}
                 className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide uppercase text-gray-700 hover:text-[#378ADD] transition-colors h-full py-3"
               >
-                {isEs ? 'TODAS LAS HERRAMIENTAS' : isFr ? 'TOUS LES OUTILS PDF' : isDe ? 'ALLE PDF-WERKZEUGE' : isPt ? 'TODAS AS FERRAMENTAS' : 'ALL PDF TOOLS'}
+                {uiDict.mobile_nav.all_tools}
                 <iconify-icon icon="solar:alt-arrow-down-linear" class="text-base transition-transform group-hover/all:rotate-180"></iconify-icon>
               </button>
 
               <div className="absolute top-[48px] right-0 w-[900px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 opacity-0 invisible group-hover/all:opacity-100 group-hover/all:visible transition-all duration-200 z-50 p-6 flex gap-6">
-                
-                {/* Column 1: {isEs ? 'ORGANIZAR Y OPTIMIZAR' : 'ORGANIZE & OPTIMIZE'} */}
+                {/* Column 1 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'ORGANIZAR Y OPTIMIZAR' : isFr ? 'ORGANISER & OPTIMISER' : isDe ? 'ORGANISIEREN & OPTIMIEREN' : isPt ? 'ORGANIZAR E OTIMIZAR' : 'ORGANIZE & OPTIMIZE'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{uiDict.footer.tools}</p>
                   <div className="space-y-0.5">
                     {organizeOptimizeTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -836,9 +853,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Column 2: {isEs ? 'CONVERTIR A PDF' : 'CONVERT TO PDF'} */}
+                {/* Column 2 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR A PDF' : isFr ? 'CONVERTIR EN PDF' : isDe ? 'IN PDF KONVERTIEREN' : isPt ? 'CONVERTER PARA PDF' : 'CONVERT TO PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{uiDict.secondary_nav.convert_to_pdf}</p>
                   <div className="space-y-0.5 mb-6">
                     {convertToTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -849,7 +866,7 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">{isEs ? 'HERRAMIENTAS IA' : isFr ? 'OUTILS IA' : isDe ? 'KI-WERKZEUGE' : isPt ? 'FERRAMENTAS DE IA' : 'AI TOOLS'}</p>
+                  <p className="text-xs font-bold text-purple-400 tracking-wider mb-3">AI TOOLS</p>
                   <div className="space-y-0.5">
                     {aiTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-purple-50 transition-colors text-left group/item">
@@ -862,9 +879,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Column 3: {isEs ? 'CONVERTIR DESDE PDF' : 'CONVERT FROM PDF'} */}
+                {/* Column 3 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'CONVERTIR DESDE PDF' : isFr ? 'CONVERTIR DEPUIS PDF' : isDe ? 'VON PDF KONVERTIEREN' : isPt ? 'CONVERTER DE PDF' : 'CONVERT FROM PDF'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{uiDict.secondary_nav.convert_from_pdf}</p>
                   <div className="space-y-0.5">
                     {convertFromTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -877,9 +894,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Column 4: {isEs ? 'EDICIÓN Y SEGURIDAD' : 'EDIT & SECURITY'} */}
+                {/* Column 4 */}
                 <div className="flex-1">
-                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{isEs ? 'EDICIÓN Y SEGURIDAD' : isFr ? 'ÉDITION & SÉCURITÉ' : isDe ? 'BEARBEITEN & SICHERHEIT' : isPt ? 'EDIÇÃO E SEGURANÇA' : 'EDIT & SECURITY'}</p>
+                  <p className="text-xs font-bold text-gray-400 tracking-wider mb-3">{uiDict.footer.legal}</p>
                   <div className="space-y-0.5">
                     {editSignSecurityTools.map(t => (
                       <button key={t.title} onClick={() => handleNavClick(`/tools/${slugify(t.title)}`)} className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-blue-50/50 transition-colors text-left group/item">
@@ -905,6 +922,7 @@ export default function App() {
         onNav={handleNavClick}
         user={user}
         logout={logout}
+        ui={uiDict}
       />}
 
       {/* ── HERO / HEADER ──────────────────────────────────────────────────── */}
@@ -924,36 +942,28 @@ export default function App() {
           <div className="relative max-w-4xl mx-auto px-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4">
               {isHome && (
-                isEs ? (
-                  <> El kit de herramientas PDF<br className="hidden sm:block" />
-                    <span className="gradient-text"> más potente</span> gratis</>
-                ) : isFr ? (
-                  <> La boîte à outils PDF<br className="hidden sm:block" />
-                    <span className="gradient-text"> la plus puissante</span> gratuite</>
-                ) : (
-                  <> The most powerful<br className="hidden sm:block" />
-                    <span className="gradient-text"> PDF toolkit</span> free</>
-                )
+                <> {uiDict.home.hero_title} <br className="hidden sm:block" />
+                  <span className="gradient-text"> {uiDict.home.hero_title_gradient}</span> {uiDict.home.hero_title_suffix}</>
               )}
-              {isPricing && (isEs ? 'Precios simples y transparentes' : 'Simple, transparent pricing')}
-              {isCompare && (isEs ? 'TheyLovePDF vs Competidores' : 'TheyLovePDF vs Competitors')}
+              {isPricing && uiDict.home.pricing_title}
+              {isCompare && uiDict.home.compare_title}
             </h1>
 
             <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6">
-              {isHome && (isEs ? 'Más de 37 herramientas. Desarrollado por IA. Sin límites en el nivel gratuito. Confiado por profesionales de todo el mundo.' : isFr ? 'Plus de 37 outils. Propulsé par l\'IA. Traitement plus rapide. Sans limites dans la version gratuite. Approuvé par des professionnels.' : '37+ tools. AI powered. Faster processing. No limits on free tier. Trusted by professionals worldwide.')}
-              {isPricing && (isEs ? 'Haga más con TheyLovePDF Pro. Sin cargos ocultos, cancele en cualquier momento.' : 'Get more done with TheyLovePDF Pro. No hidden fees, cancel anytime.')}
-              {isCompare && (isEs ? 'Por qué millones están cambiando a la alternativa más rápida, inteligente y asequible.' : 'Why millions are switching to the faster, smarter, and more affordable alternative.')}
+              {isHome && uiDict.home.hero_subtitle}
+              {isPricing && uiDict.home.pricing_subtitle}
+              {isCompare && uiDict.home.compare_subtitle}
             </p>
 
             {isHome && (
               <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
                 {[
-                  { icon: 'solar:stars-linear', label: isEs ? 'Con IA' : isFr ? 'Propulsé par l\'IA' : 'AI powered', cls: 'bg-purple-50 text-purple-600 border-purple-100' },
-                  { icon: 'solar:widget-5-linear', label: isEs ? 'Más de 37 herramientas' : isFr ? '+ de 37 outils' : '37+ tools', cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
-                  { icon: 'solar:user-cross-linear', label: isEs ? 'Sin registro' : isFr ? 'Pas d\'inscription' : 'No signup', cls: 'bg-amber-50 text-amber-700 border-amber-100' },
-                  { icon: 'solar:shield-check-linear', label: isEs ? 'SSL de 256 bits' : isFr ? 'SSL 256 bits' : '256-bit SSL', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:devices-linear', label: isEs ? 'Todos los dispositivos' : isFr ? 'Tous les appareils' : 'All devices', cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
-                  { icon: 'solar:cloud-bold', label: isEs ? 'Rápido y seguro' : isFr ? 'Rapide et sécurisé' : 'Fast & Secure', cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
+                  { icon: 'solar:stars-linear', label: uiDict.home.pill_ai, cls: 'bg-purple-50 text-purple-600 border-purple-100' },
+                  { icon: 'solar:widget-5-linear', label: uiDict.home.pill_tools, cls: 'bg-blue-50 text-[#378ADD] border-blue-100' },
+                  { icon: 'solar:user-cross-linear', label: uiDict.home.pill_signup, cls: 'bg-amber-50 text-amber-700 border-amber-100' },
+                  { icon: 'solar:shield-check-linear', label: uiDict.home.pill_ssl, cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
+                  { icon: 'solar:devices-linear', label: uiDict.home.pill_devices, cls: 'bg-gray-100 text-gray-600 border-gray-200', hidden: 'sm' },
+                  { icon: 'solar:cloud-bold', label: uiDict.home.pill_fast, cls: 'bg-emerald-50 text-emerald-600 border-emerald-100', hidden: 'sm' },
                 ].map((pill, i) => (
                   <span
                     key={i}
@@ -977,7 +987,7 @@ export default function App() {
                 </div>
                 <input
                   type="text"
-                  placeholder={isEs ? 'Buscar herramientas... comprimir, unir, firmar...' : isFr ? 'Rechercher des outils... compresser, fusionner, signer...' : 'Search tools... compress, merge, sign...'}
+                  placeholder={uiDict.home.search_placeholder}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-white border border-gray-200 rounded-full py-3 pl-11 pr-10 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#378ADD]/20 focus:border-[#378ADD] shadow-sm transition-all"
@@ -1009,15 +1019,15 @@ export default function App() {
             <Route path="/tools" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage ui={uiDict} />} />
+            <Route path="/register" element={<RegisterPage ui={uiDict} />} />
             
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<DashboardPage />} />
             </Route>
             
-            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-            <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage ui={uiDict} />} />
+            <Route path="/reset-password" element={<ResetPasswordPage ui={uiDict} />} />
             <Route path="/auth/callback" element={<OAuthCallbackPage />} />
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
@@ -1058,15 +1068,15 @@ export default function App() {
                 <Route path={`/${lang}/blog`} element={<BlogList lang={lang} />} />
                 <Route path={`/${lang}/blog/:slug`} element={<BlogPost lang={lang} />} />
                 <Route path={`/${lang}/pdf-trends-2026`} element={<PDFTrendsPage lang={lang} />} />
-                <Route path={`/${lang}/login`} element={<LoginPage lang={lang} />} />
-                <Route path={`/${lang}/register`} element={<RegisterPage lang={lang} />} />
+                <Route path={`/${lang}/login`} element={<LoginPage lang={lang} ui={uiDict} />} />
+                <Route path={`/${lang}/register`} element={<RegisterPage lang={lang} ui={uiDict} />} />
                 
                 <Route element={<ProtectedRoute />}>
                   <Route path={`/${lang}/dashboard`} element={<DashboardPage lang={lang} />} />
                 </Route>
                 
-                <Route path={`/${lang}/forgot-password`} element={<ForgotPasswordPage lang={lang} />} />
-                <Route path={`/${lang}/reset-password`} element={<ResetPasswordPage lang={lang} />} />
+                <Route path={`/${lang}/forgot-password`} element={<ForgotPasswordPage lang={lang} ui={uiDict} />} />
+                <Route path={`/${lang}/reset-password`} element={<ResetPasswordPage lang={lang} ui={uiDict} />} />
                 <Route path={`/${lang}/auth/callback`} element={<OAuthCallbackPage lang={lang} />} />
                 <Route path={`/${lang}/payment-success`} element={<PaymentSuccessPage lang={lang} />} />
                 
@@ -1116,10 +1126,10 @@ export default function App() {
             </div>
 
             {[
-              { title: isEs ? 'Herramientas' : isFr ? 'Outils' : 'Tools', links: [{ label: isEs ? 'Unir PDF' : isFr ? 'Fusionner PDF' : 'Merge PDF', path: '/tools/merge-pdf' }, { label: isEs ? 'Dividir PDF' : isFr ? 'Diviser PDF' : 'Split PDF', path: '/tools/split-pdf' }, { label: isEs ? 'Comprimir PDF' : isFr ? 'Compresser PDF' : 'Compress PDF', path: '/tools/compress-pdf' }, { label: isEs ? 'PDF a Word' : isFr ? 'PDF en Word' : 'PDF to Word', path: '/tools/pdf-to-word' }, { label: isEs ? 'Firmar PDF' : isFr ? 'Signer PDF' : 'Sign PDF', path: '/tools/sign-pdf' }, { label: isEs ? 'Editar PDF' : isFr ? 'Modifier PDF' : 'Edit PDF', path: '/tools/edit-pdf' }] },
-              { title: isEs ? 'Soluciones' : isFr ? 'Solutions' : 'Solutions', links: [{ label: 'For Business', path: '/for/business' }, { label: 'Desktop App', path: '/desktop' }, { label: 'Chrome Extension', path: '/extension' }] },
-              { title: isEs ? 'Compañía' : isFr ? 'Entreprise' : 'Company', links: [{ label: isEs ? 'Sobre nosotros' : isFr ? 'À propos' : 'About Us', path: '/about' }, { label: isEs ? 'Contacto' : isFr ? 'Contact' : 'Contact', path: '/contact' }, { label: isEs ? 'Precios' : isFr ? 'Tarifs' : 'Pricing', path: '/pricing' }, { label: 'Blog & Guides', path: '/blog' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
-              { title: isEs ? 'Legal' : isFr ? 'Légal' : 'Legal', links: [{ label: isEs ? 'Política de privacidad' : isFr ? 'Confidentialité' : 'Privacy Policy', path: '/privacy' }, { label: isEs ? 'Términos de servicio' : isFr ? 'Conditions' : 'Terms of Service', path: '/terms' }] },
+              { title: uiDict.footer.tools, links: [{ label: uiDict.secondary_nav.merge_pdf, path: '/tools/merge-pdf' }, { label: uiDict.secondary_nav.split_pdf, path: '/tools/split-pdf' }, { label: uiDict.secondary_nav.compress_pdf, path: '/tools/compress-pdf' }, { label: uiDict.secondary_nav.pdf_to_word, path: '/tools/pdf-to-word' }, { label: uiDict.secondary_nav.sign_pdf, path: '/tools/sign-pdf' }, { label: uiDict.mobile_nav.all_tools, path: '/tools/edit-pdf' }] },
+              { title: uiDict.footer.solutions, links: [{ label: 'For Business', path: '/for/business' }, { label: 'Desktop App', path: '/desktop' }, { label: 'Chrome Extension', path: '/extension' }] },
+              { title: uiDict.footer.company, links: [{ label: uiDict.footer.about_us, path: '/about' }, { label: uiDict.footer.contact, path: '/contact' }, { label: uiDict.footer.pricing, path: '/pricing' }, { label: 'Blog & Guides', path: '/blog' }, { label: 'PDF Trends 2026', path: '/pdf-trends-2026' }] },
+              { title: uiDict.footer.legal, links: [{ label: uiDict.footer.privacy_policy, path: '/privacy' }, { label: uiDict.footer.terms, path: '/terms' }] },
             ].map((col, i) => (
               <div key={i}>
                 <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">{col.title}</p>
@@ -1139,7 +1149,7 @@ export default function App() {
           </div>
 
           <div className="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. {isEs ? 'Todos los derechos reservados.' : isFr ? 'Tous droits réservés.' : 'All rights reserved.'}</p>
+            <p className="text-xs text-gray-400">© {new Date().getFullYear()} TheyLovePDF. {uiDict.footer.all_rights_reserved}</p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-gray-400">
                 <iconify-icon icon="solar:shield-check-linear" class="text-emerald-500 text-base"></iconify-icon>
@@ -1160,11 +1170,11 @@ export default function App() {
         style={{ display: isFullscreenTool || isAuthPage || isAdminPage ? 'none' : undefined }}
       >
         {[
-          { label: isEs ? 'Inicio' : isFr ? 'Accueil' : 'Home', icon: 'solar:home-linear', activeIcon: 'solar:home-bold', path: '/' },
-          { label: isEs ? 'Unir' : isFr ? 'Fusionner' : 'Merge', icon: 'solar:layers-linear', activeIcon: 'solar:layers-bold', path: '/tools/merge-pdf' },
-          { label: isEs ? 'Firmar' : isFr ? 'Signer' : 'Sign', icon: 'solar:pen-linear', activeIcon: 'solar:pen-bold', path: '/tools/sign-pdf' },
-          { label: isEs ? 'Chat IA' : isFr ? 'Chat IA' : 'AI Chat', icon: 'solar:chat-round-linear', activeIcon: 'solar:chat-round-bold', path: '/tools/chat-with-pdf' },
-          { label: isEs ? 'Más' : isFr ? 'Plus' : 'More', icon: 'solar:hamburger-menu-linear', activeIcon: 'solar:hamburger-menu-bold', path: null },
+          { label: uiDict.bottom_nav.home, icon: 'solar:home-linear', activeIcon: 'solar:home-bold', path: '/' },
+          { label: uiDict.bottom_nav.merge, icon: 'solar:layers-linear', activeIcon: 'solar:layers-bold', path: '/tools/merge-pdf' },
+          { label: uiDict.bottom_nav.sign, icon: 'solar:pen-linear', activeIcon: 'solar:pen-bold', path: '/tools/sign-pdf' },
+          { label: uiDict.bottom_nav.ai_chat, icon: 'solar:chat-round-linear', activeIcon: 'solar:chat-round-bold', path: '/tools/chat-with-pdf' },
+          { label: uiDict.bottom_nav.more, icon: 'solar:hamburger-menu-linear', activeIcon: 'solar:hamburger-menu-bold', path: null },
         ].map(item => {
           const isActive = item.path && location.pathname === getNavPath(item.path);
           return item.path ? (
