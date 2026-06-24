@@ -196,74 +196,18 @@ function MobileDrawer({ isOpen, onClose, pathname, onNav, user, logout }) {
   );
 }
 // ─── LANGUAGE SWITCHER COMPONENT ──────────────────────────────────────────────
-const LanguageSwitcher = ({ location, navigate, isEs, isFr, isDe, isPt }) => {
+const LanguageSwitcher = ({ location, navigate, currentLangCode }) => {
   const [isOpen, setIsOpen] = useState(false);
   
-  const currentLang = isEs ? 'ES' : isFr ? 'FR' : isDe ? 'DE' : isPt ? 'PT' : 'EN';
+  const currentLang = currentLangCode.toUpperCase();
   
-  const switchLang = (lang) => {
+  const switchLang = (targetLang) => {
     let newPath = location.pathname;
     newPath = newPath.replace(LANG_PREFIX_REGEX, '/');
     if (!newPath.startsWith('/')) newPath = '/' + newPath;
     
-    if (lang === 'ES') {
-      newPath = `/es${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'FR') {
-      newPath = `/fr${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'DE') {
-      newPath = `/de${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'PT') {
-      newPath = `/pt${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'HI') {
-      newPath = `/hi${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'RU') {
-      newPath = `/ru${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'ZH-CN') {
-      newPath = `/zh-cn${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'ZH-TW') {
-      newPath = `/zh-tw${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'JA') {
-      newPath = `/ja${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'KO') {
-      newPath = `/ko${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'IT') {
-      newPath = `/it${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'PL') {
-      newPath = `/pl${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'RO') {
-      newPath = `/ro${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'BG') {
-      newPath = `/bg${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'CA') {
-      newPath = `/ca${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'NL') {
-      newPath = `/nl${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'EL') {
-      newPath = `/el${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'ID') {
-      newPath = `/id${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'MS') {
-      newPath = `/ms${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'SV') {
-      newPath = `/sv${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'TH') {
-      newPath = `/th${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'TR') {
-      newPath = `/tr${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'UK') {
-      newPath = `/uk${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'VI') {
-      newPath = `/vi${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'SW') {
-      newPath = `/sw${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'FI') {
-      newPath = `/fi${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'DA') {
-      newPath = `/da${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'NO') {
-      newPath = `/no${newPath === '/' ? '' : newPath}`;
-    } else if (lang === 'CS') {
-      newPath = `/cs${newPath === '/' ? '' : newPath}`;
+    if (targetLang.toLowerCase() !== 'en') {
+      newPath = `/${targetLang.toLowerCase()}${newPath === '/' ? '' : newPath}`;
     }
     
     if (newPath === '') newPath = '/';
@@ -737,7 +681,7 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-2.5 shrink-0">
             {/* Language Switcher Dropdown */}
-            <LanguageSwitcher location={location} navigate={navigate} isEs={isEs} isFr={isFr} isDe={isDe} isPt={isPt} />
+            <LanguageSwitcher location={location} navigate={navigate} currentLangCode={currentLang} />
 
             {user ? (
               <div className="flex items-center gap-4">

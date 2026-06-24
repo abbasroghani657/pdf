@@ -71,7 +71,7 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
     const toolIndex = toolDataList.findIndex(t => t === tool);
     const enTool = TOOLS_DATA[toolIndex];
     const slug = slugify(enTool ? enTool.title : tool.title);
-    const prefix = lang === 'es' ? '/es' : lang === 'fr' ? '/fr' : lang === 'de' ? '/de' : lang === 'pt' ? '/pt' : '';
+    const prefix = lang !== 'en' ? `/${lang}` : '';
     navigate(`${prefix}/tools/${slug}`);
   };
 

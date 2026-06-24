@@ -24,12 +24,13 @@ const SUPPORTED_LANGS = [
 async function generateToolPages() {
   const routes = [];
   
+  const { TOOLS_DATA: enToolsData } = await import('../src/data/tools.js');
+  
   for (const lang of SUPPORTED_LANGS) {
     try {
       let langTools = [];
       if (lang === 'en') {
-        const mod = await import('../src/data/tools.js');
-        langTools = mod.TOOLS_DATA;
+        langTools = enToolsData;
       } else {
         const mod = await import(`../src/data/tools-${lang}.js`);
         const key = `TOOLS_DATA_${lang.toUpperCase().replace('-', '_')}`;
@@ -41,8 +42,9 @@ async function generateToolPages() {
           continue;
       }
 
-      langTools.forEach(tool => {
-        const slug = slugify(tool.title);
+      langTools.forEach((tool, idx) => {
+        const enTool = enToolsData[idx];
+        const slug = slugify(enTool ? enTool.title : tool.title);
         const langPrefix = lang === 'en' ? '' : `/${lang}`;
         routes.push({ path: `${langPrefix}/tools/${slug}`, lang, tool, platform: null });
       });
