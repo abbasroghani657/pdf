@@ -3,6 +3,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
 const BlogPost = ({ lang = 'en' }) => {
+  const { slug } = useParams();
   const prefix = lang !== 'en' ? `/${lang}` : '';
   const [posts, setPosts] = React.useState([]);
   const [post, setPost] = React.useState(null);
@@ -45,8 +46,6 @@ const BlogPost = ({ lang = 'en' }) => {
     return () => { isMounted = false; };
   }, [lang, slug]);
 
-  const { slug } = useParams();
-  
 
   useEffect(() => {
     window.scrollTo(0, 0);
