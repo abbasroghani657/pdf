@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
 const BlogList = ({ lang = 'en' }) => {
-  const isEs = lang === 'es';
-  const isFr = lang === 'fr';
-  const isDe = lang === 'de';
-  const isPt = lang === 'pt';
-  const prefix = isEs ? '/es' : isFr ? '/fr' : isDe ? '/de' : isPt ? '/pt' : '';
+  const prefix = lang !== 'en' ? `/${lang}` : '';
   const [posts, setPosts] = React.useState([]);
 
   React.useEffect(() => {
@@ -35,6 +31,12 @@ const BlogList = ({ lang = 'en' }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Only the top 5 languages have translated meta currently, fallback to English for others.
+  const isEs = lang === 'es';
+  const isFr = lang === 'fr';
+  const isDe = lang === 'de';
+  const isPt = lang === 'pt';
+  
   const title = isEs ? 'Guías y Blog' : isFr ? 'Guides et Blog' : isDe ? 'Anleitungen & Blog' : isPt ? 'Guias e Blog' : 'Guides & Blog';
   const description = isEs ? 'Consejos, trucos y tutoriales para dominar sus documentos PDF.' : isFr ? 'Conseils, astuces et tutoriels pour maîtriser vos documents PDF.' : isDe ? 'Tipps, Tricks und Tutorials zur Beherrschung Ihrer PDF-Dokumente.' : isPt ? 'Dicas, truques e tutoriais para dominar seus documentos PDF.' : 'Tips, tricks, and tutorials to master your PDF documents.';
 

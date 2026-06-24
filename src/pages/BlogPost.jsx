@@ -3,13 +3,16 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
 const BlogPost = ({ lang = 'en' }) => {
+  const prefix = lang !== 'en' ? `/${lang}` : '';
+  const [posts, setPosts] = React.useState([]);
+  const [post, setPost] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+  
+  // Keep these for UI text translation
   const isEs = lang === 'es';
   const isFr = lang === 'fr';
   const isDe = lang === 'de';
   const isPt = lang === 'pt';
-  const prefix = isEs ? '/es' : isFr ? '/fr' : isDe ? '/de' : isPt ? '/pt' : '';
-  const [posts, setPosts] = React.useState([]);
-  const [post, setPost] = React.useState(null);
 
   React.useEffect(() => {
     let isMounted = true;
@@ -27,12 +30,14 @@ const BlogPost = ({ lang = 'en' }) => {
         if (isMounted) {
             setPosts(loadedPosts);
             setPost(loadedPosts.find(p => p.slug === slug));
+            setIsLoading(false);
         }
       } catch (e) {
         const mod = await import('../data/blog.js');
         if (isMounted) {
             setPosts(mod.BLOG_POSTS);
             setPost(mod.BLOG_POSTS.find(p => p.slug === slug));
+            setIsLoading(false);
         }
       }
     };
@@ -46,6 +51,14 @@ const BlogPost = ({ lang = 'en' }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <div className="w-8 h-8 border-4 border-[#378ADD] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   if (!post) {
     return <Navigate to={`${prefix}/blog`} replace />;
