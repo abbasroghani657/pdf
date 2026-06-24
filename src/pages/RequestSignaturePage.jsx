@@ -27,7 +27,7 @@ const SIGNER_COLORS = [
   'bg-rose-500 border-rose-600 text-rose-50'
 ];
 
-export default function RequestSignaturePage({ lang = 'en' }) {
+export default function RequestSignaturePage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
 
@@ -308,7 +308,7 @@ export default function RequestSignaturePage({ lang = 'en' }) {
         <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4 bg-violet-50 text-violet-600">
           <iconify-icon icon="solar:user-speak-rounded-bold" class="text-3xl"></iconify-icon>
         </div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Request Signatures</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{toolData?.title || 'Request Signatures'}</h1>
         <p className="text-gray-500 max-w-xl mx-auto text-sm">
           Legally binding electronic signatures for the entire world. Upload a PDF, add signers, and track the process in real-time.
         </p>
@@ -345,7 +345,7 @@ export default function RequestSignaturePage({ lang = 'en' }) {
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
               <p className="text-xl font-bold text-gray-900 mb-1">
-                {isDragging ? 'Drop your PDF here' : 'Select PDF to send for signature'}
+                {isDragging ? (ui?.tools_common?.drop_here || 'Drop your PDF here') : 'Select PDF to send for signature'}
               </p>
               <p className="text-sm text-gray-500 mb-6">Secure, worldwide, legally binding</p>
               <button className="bg-violet-600 text-white hover:bg-violet-700 rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-violet-500/30 transition-all pointer-events-none">

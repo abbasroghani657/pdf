@@ -41,7 +41,7 @@ const CUSTOM_FONTS = {
 
 const ALL_FONTS = Object.keys(CUSTOM_FONTS);
 
-export default function EditPDFPage({ lang = 'en' }) {
+export default function EditPDFPage({ lang = 'en', ui, toolData }) {
   // ----- Core State -----
   const [file, setFile] = useState(null);
   const [fileBytes, setFileBytes] = useState(null);
@@ -719,7 +719,7 @@ export default function EditPDFPage({ lang = 'en' }) {
           <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4 bg-indigo-50 text-indigo-600">
             <iconify-icon icon="solar:pen-new-square-linear" class="text-3xl" stroke-width="1.5"></iconify-icon>
           </div>
-          <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Edit PDF</h1>
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{toolData?.title || 'Edit PDF'}</h1>
           <p className="text-gray-500 max-w-lg mx-auto text-sm">Add text, images, shapes or freehand annotations directly onto your PDF. Professional editing tools.</p>
         </div>
 
@@ -732,7 +732,7 @@ export default function EditPDFPage({ lang = 'en' }) {
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 shadow-sm bg-white text-indigo-600 group-hover:scale-110 group-hover:shadow-md">
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
-              <p className="text-xl font-bold text-gray-900 mb-1">{lang === 'es' ? 'Arrastra y suelta tu PDF aquí' : 'Drag & drop your PDF here'}</p>
+              <p className="text-xl font-bold text-gray-900 mb-1">{lang === 'es' ? 'Arrastra y suelta tu PDF aquí' : (ui?.tools_common?.drag_drop_pdf || 'Drag & drop your PDF here')}</p>
               <p className="text-sm text-gray-500 mb-6">or click to browse — PDF only, up to 2GB (Free for Testing)</p>
               <span className="bg-indigo-600 text-white hover:bg-indigo-700 rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-indigo-500/30 transition-all pointer-events-none">
                 Select PDF File

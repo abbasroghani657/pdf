@@ -204,7 +204,7 @@ function SummaryBar({ pdfs }) {
 }
 
 // ── MAIN PAGE ──────────────────────────────────────────────────────────────────
-export default function MergePDFPage({ lang = 'en' }) {
+export default function MergePDFPage({ lang = 'en', ui, toolData }) {
   const navigate = useNavigate();
   const [pdfs, setPdfs] = useState([]);
   const [step, setStep] = useState(1);
@@ -392,7 +392,7 @@ export default function MergePDFPage({ lang = 'en' }) {
               <iconify-icon icon="solar:documents-bold" class="text-cyan-600 text-base" />
             </div>
             <div>
-              <h1 className="font-bold text-gray-900 text-sm leading-none">Merge PDF</h1>
+              <h1 className="font-bold text-gray-900 text-sm leading-none">{toolData?.title || 'Merge PDF'}</h1>
               <p className="text-[10px] text-gray-400 mt-0.5">Combine multiple PDFs into one</p>
             </div>
           </div>

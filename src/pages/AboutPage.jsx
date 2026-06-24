@@ -4,7 +4,7 @@ import { slugify } from '../utils/slugify';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-export default function AboutPage({ lang = 'en' }) {
+export default function AboutPage({ lang = 'en', ui, toolData }) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16 animate-fade-in">
       <SEOHead 
@@ -14,7 +14,7 @@ export default function AboutPage({ lang = 'en' }) {
       />
       
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">About TheyLovePDF</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{toolData?.title || 'About TheyLovePDF'}</h1>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto">
           We believe document management should be fast, secure, and accessible to everyone.
         </p>

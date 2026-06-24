@@ -10,7 +10,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 import UpgradeModal from '../components/UpgradeModal';
 
-export default function WatermarkPDFPage({ lang = 'en' }) {
+export default function WatermarkPDFPage({ lang = 'en', ui, toolData }) {
   const [file, setFile] = useState(null);
   const [fileBytes, setFileBytes] = useState(null);
   const [pdfDoc, setPdfDoc] = useState(null);
@@ -349,7 +349,7 @@ export default function WatermarkPDFPage({ lang = 'en' }) {
           <div className="w-20 h-20 bg-indigo-100 text-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-sm rotate-3">
             <iconify-icon icon="solar:stamp-bold-duotone" class="text-4xl"></iconify-icon>
           </div>
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Watermark PDF</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">{toolData?.title || 'Watermark PDF'}</h1>
           <p className="text-lg text-gray-500 mb-8 leading-relaxed">Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.</p>
           <input type="file" accept="application/pdf" onChange={handleFileUpload} className="hidden" ref={fileInputRef} />
           <button onClick={() => fileInputRef.current.click()} className="bg-indigo-600 text-white font-bold text-lg px-8 py-4 rounded-2xl hover:bg-indigo-700 hover:shadow-xl hover:-translate-y-1 transition-all shadow-indigo-600/30 shadow-lg flex items-center justify-center gap-3 mx-auto">

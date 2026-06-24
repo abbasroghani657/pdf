@@ -4,12 +4,12 @@ import { slugify } from '../utils/slugify';
 import { useAuth } from '../contexts/AuthContext';
 import React from 'react';
 
-export default function PrivacyPage({ lang = 'en' }) {
+export default function PrivacyPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 md:py-20 animate-fade-in font-sans">
       <div className="mb-10 text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">Privacy Policy</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">{toolData?.title || 'Privacy Policy'}</h1>
         <p className="mt-4 text-gray-500 text-lg">Last updated: {new Date().toLocaleDateString()}</p>
       </div>
 

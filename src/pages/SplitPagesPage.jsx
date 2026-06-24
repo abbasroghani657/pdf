@@ -18,7 +18,7 @@ function formatFileSize(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
-export default function SplitPagesPage({ lang = 'en' }) {
+export default function SplitPagesPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
@@ -60,7 +60,7 @@ export default function SplitPagesPage({ lang = 'en' }) {
   const processFile = async (file) => {
     if (!file) return;
     if (file.type !== 'application/pdf') {
-      setErrorMsg('Please upload a valid PDF file.');
+      setErrorMsg((ui?.tools_common?.invalid_pdf || 'Please upload a valid PDF file.'));
       setUploadState('error');
       return;
     }
@@ -232,7 +232,7 @@ export default function SplitPagesPage({ lang = 'en' }) {
         <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4 bg-cyan-50 text-cyan-600">
           <iconify-icon icon="solar:scissors-linear" class="text-3xl" stroke-width="1.5"></iconify-icon>
         </div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Split PDF</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{toolData?.title || 'Split PDF'}</h1>
         <p className="text-gray-500 max-w-lg mx-auto text-sm">Separate one page or a whole set for easy conversion into independent PDF files.</p>
       </div>
 
@@ -267,7 +267,7 @@ export default function SplitPagesPage({ lang = 'en' }) {
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
               <p className="text-xl font-bold text-gray-900 mb-1">
-                {isDragging ? 'Drop your PDF here' : 'Drag & drop your PDF here'}
+                {isDragging ? (ui?.tools_common?.drop_here || 'Drop your PDF here') : (ui?.tools_common?.drag_drop_pdf || 'Drag & drop your PDF here')}
               </p>
               <p className="text-sm text-gray-500 mb-6">or click to browse — PDF, up to {isPro ? '2GB' : '10MB'}</p>
               <button type="button" className="bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0 relative z-0 pointer-events-none">
@@ -451,7 +451,7 @@ export default function SplitPagesPage({ lang = 'en' }) {
                 <iconify-icon icon="solar:close-circle-bold" class="text-5xl text-red-500"></iconify-icon>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">Something went wrong</p>
+                <p className="text-xl font-bold text-gray-900">{ui?.tools_common?.something_went_wrong || (ui?.tools_common?.something_went_wrong || 'Something went wrong')}</p>
                 <p className="text-sm text-gray-500 mt-2">{errorMsg}</p>
               </div>
               <button

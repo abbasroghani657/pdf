@@ -19,7 +19,7 @@ const LANGUAGES = [
   'Russian', 'Portuguese', 'Italian', 'Dutch', 'Turkish', 'Bengali', 'Punjabi', 'Tamil', 'Telugu', 'Marathi'
 ];
 
-export default function SummarizePDFPage({ lang = 'en' }) {
+export default function SummarizePDFPage({ lang = 'en', ui, toolData }) {
   const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -175,7 +175,7 @@ ${pdfContextRef.current}`;
         </div>
         
         <div className="space-y-1.5">
-          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Summarize PDF</h1>
+          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">{toolData?.title || 'Summarize PDF'}</h1>
           <p className="text-sm text-gray-500 max-w-sm mx-auto leading-relaxed">
             Instantly compress long documents into clear, concise summaries. Perfect for research, legal, and business reports.
           </p>
@@ -385,7 +385,7 @@ ${pdfContextRef.current}`;
               <List className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-gray-900 text-sm leading-tight">Summarize PDF</h1>
+              <h1 className="font-bold text-gray-900 text-sm leading-tight">{toolData?.title || 'Summarize PDF'}</h1>
               <p className="text-xs text-gray-400 truncate max-w-[200px] md:max-w-sm">{file.name} • {pageCount} pages</p>
             </div>
           </div>

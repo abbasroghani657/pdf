@@ -11,7 +11,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 import { processWithQueue } from '../utils/queueApi';
 
-export default function ProtectPDFPage({ lang = 'en' }) {
+export default function ProtectPDFPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -173,7 +173,7 @@ export default function ProtectPDFPage({ lang = 'en' }) {
         <div className="inline-flex items-center justify-center p-3 bg-red-50 text-red-600 rounded-2xl mb-4">
           <ShieldCheckIcon className="w-8 h-8" />
         </div>
-        <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">Protect PDF</h1>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">{toolData?.title || 'Protect PDF'}</h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           Secure your PDF with a password and set advanced permissions to prevent unauthorized printing, copying, or editing.
         </p>

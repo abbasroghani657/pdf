@@ -37,7 +37,7 @@ const COLORS = [
   { id: 'white', value: '#FFFFFF', label: 'White' },
 ];
 
-export default function AddTextPage({ lang = 'en' }) {
+export default function AddTextPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error
@@ -83,7 +83,7 @@ export default function AddTextPage({ lang = 'en' }) {
   const handleFileSelect = useCallback((f) => {
     if (!f) return;
     if (!f.name.toLowerCase().endsWith('.pdf')) {
-      setErrorMsg('Please upload a valid PDF file.');
+      setErrorMsg((ui?.tools_common?.invalid_pdf || 'Please upload a valid PDF file.'));
       setState('error');
       return;
     }
@@ -185,7 +185,7 @@ export default function AddTextPage({ lang = 'en' }) {
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 text-white shadow-lg shadow-yellow-500/20 mb-2">
           <iconify-icon icon="solar:pen-new-square-bold" class="text-3xl"></iconify-icon>
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Add Text to PDF</h1>
+        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">{toolData?.title || 'Add Text to PDF'}</h1>
         <p className="text-sm text-gray-500 max-w-2xl mx-auto">
           Add custom text overlays, captions or annotations to your PDF pages easily.
         </p>

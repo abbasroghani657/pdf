@@ -15,7 +15,7 @@ import PropertiesPanel from '../components/AnnotatePDF/PropertiesPanel';
 import MobileBottomSheet from '../components/AnnotatePDF/MobileBottomSheet';
 import CommentThread from '../components/AnnotatePDF/CommentThread';
 
-export default function AnnotatePDFPage({ lang = 'en' }) {
+export default function AnnotatePDFPage({ lang = 'en', ui, toolData }) {
   const [file, setFile] = useState(null);
   const [activeTool, setActiveTool] = useState('select');
   const [selectedAnnotation, setSelectedAnnotation] = useState(null);
@@ -289,7 +289,7 @@ export default function AnnotatePDFPage({ lang = 'en' }) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
               </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">Annotate PDF</h1>
+              <h1 className="text-4xl font-bold text-gray-900 mb-2">{toolData?.title || 'Annotate PDF'}</h1>
               <p className="text-lg text-gray-500">Highlight, underline, draw, add sticky notes and comments</p>
             </motion.div>
 
@@ -305,7 +305,7 @@ export default function AnnotatePDFPage({ lang = 'en' }) {
               <input {...getInputProps()} />
               <div className="text-5xl mb-4">📄</div>
               <p className="text-xl font-semibold text-gray-900 mb-1">
-                {isDragActive ? (lang === 'es' ? '¡Suéltalo aquí!' : 'Drop it here!') : (lang === 'es' ? 'Arrastra tu PDF aquí' : 'Drop your PDF here')}
+                {isDragActive ? (lang === 'es' ? '¡Suéltalo aquí!' : 'Drop it here!') : (lang === 'es' ? 'Arrastra tu PDF aquí' : (ui?.tools_common?.drop_here || 'Drop your PDF here'))}
               </p>
               <p className="text-gray-400 mb-6">{lang === 'es' ? 'o haz clic para buscar' : 'or click to browse'}</p>
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-md shadow-indigo-500/30 inline-block">

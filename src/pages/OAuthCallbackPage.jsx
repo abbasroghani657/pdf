@@ -9,7 +9,7 @@ import CountrySelector from '../components/CountrySelector';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-hot-toast';
 
-export default function OAuthCallbackPage({ lang = 'en' }) {
+export default function OAuthCallbackPage({ lang = 'en', ui, toolData }) {
   const navigate = useNavigate();
   const { fetchUser, user } = useAuth();
   const [needsOnboarding, setNeedsOnboarding] = useState(false);

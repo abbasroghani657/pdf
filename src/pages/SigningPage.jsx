@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { pdfjsLib } from '../utils/pdfjs-legacy-setup.js';
 import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
-export default function SigningPage({ lang = 'en' }) {
+export default function SigningPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const { token } = useParams();
   const [step, setStep] = useState('LOADING'); // LOADING -> ERROR -> VIEW -> SIGN -> ADJUST -> DONE
@@ -243,7 +243,7 @@ export default function SigningPage({ lang = 'en' }) {
           <div style={{ width: '64px', height: '64px', background: '#fee2e2', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', fontSize: '28px' }}>
             ⚠️
           </div>
-          <h1 style={{ margin: '0 0 8px', fontSize: '22px', fontWeight: '800', color: '#991b1b' }}>Access Denied</h1>
+          <h1 style={{ margin: '0 0 8px', fontSize: '22px', fontWeight: '800', color: '#991b1b' }}>{toolData?.title || 'Access Denied'}</h1>
           <p style={{ margin: 0, color: '#b91c1c', fontSize: '14px', lineHeight: '1.6' }}>
             {errorMsg}
           </p>
@@ -257,7 +257,7 @@ export default function SigningPage({ lang = 'en' }) {
             <div style={{ width: '64px', height: '64px', background: '#ede9fe', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', fontSize: '28px' }}>
               📄
             </div>
-            <h1 style={{ margin: '0 0 8px', fontSize: '22px', fontWeight: '800', color: '#1f2937' }}>Signature Requested</h1>
+            <h1 style={{ margin: '0 0 8px', fontSize: '22px', fontWeight: '800', color: '#1f2937' }}>{toolData?.title || 'Signature Requested'}</h1>
             <p style={{ margin: 0, color: '#6b7280', fontSize: '14px', lineHeight: '1.6' }}>
               <strong>{requestInfo?.senderName || 'Someone'}</strong> has requested you to sign a document. Please review and apply your electronic signature.
             </p>

@@ -1047,8 +1047,8 @@ export default function App() {
             <Route path="/for/students" element={<Navigate to="/tools" replace />} />
             <Route path="/for/:industry" element={<UseCasePage />} />
 
-            <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
-            <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
+            <Route path="/tools/:toolSlug" element={<ToolRenderer ui={uiDict} />} />
+            <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer ui={uiDict} />} />
             <Route path="/sign/:token" element={<SigningPage />} />
 
             {/* DYNAMIC TRANSLATED ROUTES FOR ALL 30 LANGUAGES */}
@@ -1080,8 +1080,8 @@ export default function App() {
                 <Route path={`/${lang}/auth/callback`} element={<OAuthCallbackPage lang={lang} />} />
                 <Route path={`/${lang}/payment-success`} element={<PaymentSuccessPage lang={lang} />} />
                 
-                <Route path={`/${lang}/tools/:toolSlug`} element={<ToolRenderer lang={lang} />} />
-                <Route path={`/${lang}/tools/:toolSlug/:platform`} element={<ToolRenderer lang={lang} />} />
+                <Route path={`/${lang}/tools/:toolSlug`} element={<ToolRenderer lang={lang} ui={uiDict} />} />
+                <Route path={`/${lang}/tools/:toolSlug/:platform`} element={<ToolRenderer lang={lang} ui={uiDict} />} />
                 <Route path={`/${lang}/sign/:token`} element={<SigningPage lang={lang} />} />
               </React.Fragment>
             ))}

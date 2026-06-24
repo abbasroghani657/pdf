@@ -60,7 +60,7 @@ const LEVELS = [
   }
 ];
 
-export default function CompressPage({ lang = 'en' }) {
+export default function CompressPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
   const [state, setState] = useState('idle'); // idle | selected | processing | done | error
@@ -100,7 +100,7 @@ export default function CompressPage({ lang = 'en' }) {
   const handleFileSelect = useCallback((f) => {
     if (!f) return;
     if (!f.name.toLowerCase().endsWith('.pdf')) {
-      setErrorMsg('Please upload a valid PDF file.');
+      setErrorMsg((ui?.tools_common?.invalid_pdf || 'Please upload a valid PDF file.'));
       setState('error');
       return;
     }
@@ -130,10 +130,10 @@ export default function CompressPage({ lang = 'en' }) {
       p = Math.min(p + inc, 95);
       setProgress(p);
       setProgressLabel(
-        p < 20 ? 'Uploading to server...' :
-        p < 45 ? 'Ghostscript analyzing structure...' :
-        p < 70 ? 'Optimizing image streams...' :
-        p < 90 ? 'Compressing fonts & metadata...' :
+        p < 20 ? (ui?.tools_common?.uploading || 'Uploading to server...') :
+        p < 45 ? (ui?.tools_common?.analyzing || 'Ghostscript analyzing structure...') :
+        p < 70 ? (ui?.tools_common?.optimizing || 'Optimizing image streams...') :
+        p < 90 ? (ui?.tools_common?.compressing || 'Compressing fonts & metadata...') :
         'Finalizing download...'
       );
     }, 100);
@@ -161,7 +161,7 @@ export default function CompressPage({ lang = 'en' }) {
 
       clearInterval(progressRef.current);
       setProgress(100);
-      setProgressLabel('Done!');
+      setProgressLabel((ui?.tools_common?.done || 'Done!'));
 
       setTimeout(() => {
         setResult({
@@ -216,7 +216,7 @@ export default function CompressPage({ lang = 'en' }) {
         <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4 bg-green-50 text-green-600">
           <iconify-icon icon="solar:minimize-square-linear" class="text-3xl" stroke-width="1.5"></iconify-icon>
         </div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Compress PDF</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{toolData?.title || 'Compress PDF'}</h1>
         <p className="text-gray-500 max-w-lg mx-auto text-sm">Reduce file size while optimizing for maximal PDF quality. Fast, free, and secure.</p>
       </div>
 
@@ -251,7 +251,7 @@ export default function CompressPage({ lang = 'en' }) {
                   <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
                 </div>
                 <p className="text-xl font-bold text-gray-900 mb-1">
-                  {isDragging ? 'Drop your PDF here' : 'Drag & drop your PDF here'}
+                  {isDragging ? (ui?.tools_common?.drop_here || 'Drop your PDF here') : (ui?.tools_common?.drag_drop_pdf || 'Drag & drop your PDF here')}
                 </p>
                 <p className="text-sm text-gray-500 mb-6">or click to browse — PDF only, up to {isPro ? '2GB' : '10MB'}</p>
                 <button
@@ -458,7 +458,7 @@ export default function CompressPage({ lang = 'en' }) {
                 <iconify-icon icon="solar:close-circle-bold" class="text-5xl text-red-500"></iconify-icon>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">Something went wrong</p>
+                <p className="text-xl font-bold text-gray-900">{ui?.tools_common?.something_went_wrong || (ui?.tools_common?.something_went_wrong || 'Something went wrong')}</p>
                 <p className="text-sm text-gray-500 mt-2">{errorMsg}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">

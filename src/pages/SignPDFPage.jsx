@@ -11,7 +11,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerSrc;
 
 const STEPS = ['Upload', 'Signature', 'Place', 'Sign'];
 
-export default function SignPDFPage({ lang = 'en' }) {
+export default function SignPDFPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const [step, setStep] = useState(0);
   const [file, setFile] = useState(null);
@@ -377,7 +377,7 @@ export default function SignPDFPage({ lang = 'en' }) {
     <div className="max-w-lg mx-auto px-4 py-10">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 text-violet-600 rounded-2xl mb-4 text-3xl">✍️</div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">Sign PDF</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">{toolData?.title || 'Sign PDF'}</h1>
         <p className="text-slate-500 mt-2 text-sm">Upload a PDF, draw or type your signature, place it exactly where you want.</p>
       </div>
       <div

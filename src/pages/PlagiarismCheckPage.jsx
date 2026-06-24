@@ -14,7 +14,7 @@ import { toast } from 'react-hot-toast';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
-export default function PlagiarismCheckPage({ lang = 'en' }) {
+export default function PlagiarismCheckPage({ lang = 'en', ui, toolData }) {
   const [file, setFile] = useState(null);
   const [step, setStep] = useState(1); // 1: Upload, 2: Options, 3: Scanning, 4: Results
   const [progress, setProgress] = useState(0);
@@ -203,7 +203,7 @@ export default function PlagiarismCheckPage({ lang = 'en' }) {
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div>
-            <h1 className="font-extrabold text-slate-900 text-[15px]">Plagiarism Check</h1>
+            <h1 className="font-extrabold text-slate-900 text-[15px]">{toolData?.title || 'Plagiarism Check'}</h1>
             <p className="text-xs text-slate-500 font-semibold truncate max-w-[200px] md:max-w-md">{file.name}</p>
           </div>
         </div>
@@ -456,7 +456,7 @@ export default function PlagiarismCheckPage({ lang = 'en' }) {
           {/* Report Header */}
           <div style={{ borderBottom: '3px solid #e2e8f0', paddingBottom: '20px', marginBottom: '30px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
-              <h1 style={{ fontSize: '28px', fontWeight: '900', margin: '0 0 10px 0', color: '#1e293b' }}>Originality Report</h1>
+              <h1 style={{ fontSize: '28px', fontWeight: '900', margin: '0 0 10px 0', color: '#1e293b' }}>{toolData?.title || 'Originality Report'}</h1>
               <div style={{ fontSize: '14px', color: '#475569', marginBottom: '4px' }}><strong>Document:</strong> {file?.name}</div>
               <div style={{ fontSize: '14px', color: '#475569' }}><strong>Generated on:</strong> {new Date().toLocaleString()}</div>
             </div>

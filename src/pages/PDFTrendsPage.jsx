@@ -71,7 +71,7 @@ function ProjectionBar({ year, value, max, label, delay }) {
   );
 }
 
-export default function PDFTrendsPage({ lang = 'en' }) {
+export default function PDFTrendsPage({ lang = 'en', ui, toolData }) {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [

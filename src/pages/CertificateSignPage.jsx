@@ -11,7 +11,7 @@ import UpgradeModal from '../components/UpgradeModal';
 import Logo from '../components/Logo';
 import { useToolSession } from '../hooks/useToolSession';
 
-export default function CertificateSignPage({ lang = 'en' }) {
+export default function CertificateSignPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const navigate = useNavigate();
 
@@ -286,7 +286,7 @@ export default function CertificateSignPage({ lang = 'en' }) {
         {step === 'UPLOAD' && (
           <div className="max-w-md mx-auto text-center mt-10">
             <div className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🔐</div>
-            <h1 className="text-2xl font-extrabold text-gray-900 mb-2">Certificate Sign PDF</h1>
+            <h1 className="text-2xl font-extrabold text-gray-900 mb-2">{toolData?.title || 'Certificate Sign PDF'}</h1>
             <p className="text-gray-500 text-sm mb-8">Apply legally binding cryptographic digital signatures to your PDF documents.</p>
             
             <label className="block w-full border-2 border-dashed border-indigo-200 bg-white rounded-2xl p-12 cursor-pointer hover:border-indigo-400 hover:bg-indigo-50 transition-all group">
@@ -590,7 +590,7 @@ export default function CertificateSignPage({ lang = 'en' }) {
         {step === 'SUCCESS' && (
           <div className="max-w-lg mx-auto text-center mt-6 animate-fade-in-up">
             <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner border-4 border-white shadow-emerald-200">✅</div>
-            <h1 className="text-3xl font-extrabold text-emerald-800 mb-2">Cryptographically Signed!</h1>
+            <h1 className="text-3xl font-extrabold text-emerald-800 mb-2">{toolData?.title || 'Cryptographically Signed!'}</h1>
             <p className="text-gray-600 text-sm mb-8">Your PDF has been secured with a mathematically verifiable digital certificate.</p>
             
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-8 text-left">

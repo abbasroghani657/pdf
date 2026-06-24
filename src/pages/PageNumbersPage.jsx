@@ -22,7 +22,7 @@ const POSITIONS = [
   { id: 'bottom-right', label: 'Bottom-Right', icon: '↘️' }
 ];
 
-export default function PageNumbersPage({ lang = 'en' }) {
+export default function PageNumbersPage({ lang = 'en', ui, toolData }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [step, setStep] = useState('UPLOAD'); // UPLOAD, FORMAT, POSITION, TYPO, NUMBERING, PREVIEW, PROCESSING, SUCCESS
   
@@ -327,7 +327,7 @@ export default function PageNumbersPage({ lang = 'en' }) {
             <div className="w-24 h-24 bg-indigo-100 text-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-sm">
               <iconify-icon icon="solar:sort-by-time-bold-duotone" class="text-5xl"></iconify-icon>
             </div>
-            <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Add Page Numbers</h1>
+            <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">{toolData?.title || 'Add Page Numbers'}</h1>
             <p className="text-lg text-gray-500 mb-10 leading-relaxed">Insert page numbers in your PDF documents with ease. Choose positions, formats, and typography.</p>
             
             <div 

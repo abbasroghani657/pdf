@@ -12,7 +12,7 @@ import PDFViewer from '../components/ChatPDF/PDFViewer';
 import ChatPanel from '../components/ChatPDF/ChatPanel';
 import { PDFAIEngine } from '../components/ChatPDF/PDFAIEngine';
 
-export default function ChatPDFPage({ lang = 'en' }) {
+export default function ChatPDFPage({ lang = 'en', ui, toolData }) {
   const [file, setFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -163,7 +163,7 @@ export default function ChatPDFPage({ lang = 'en' }) {
         </div>
         
         <div className="space-y-1.5">
-          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Chat with PDF</h1>
+          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">{toolData?.title || 'Chat with PDF'}</h1>
           <p className="text-sm text-gray-500 max-w-sm mx-auto leading-relaxed">
             Upload your document and instantly ask complex questions to get expert-level answers powered by AI.
           </p>
@@ -235,7 +235,7 @@ export default function ChatPDFPage({ lang = 'en' }) {
               <MessageSquare className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-gray-900 text-sm leading-tight">Chat with PDF</h1>
+              <h1 className="font-bold text-gray-900 text-sm leading-tight">{toolData?.title || 'Chat with PDF'}</h1>
               <p className="text-xs text-gray-400 truncate max-w-[200px] md:max-w-sm">{file.name} · {pageCount} pages</p>
             </div>
           </div>

@@ -58,7 +58,7 @@ const FLATTEN_MODES = [
   },
 ];
 
-export default function FlattenPDFPage({ lang = 'en' }) {
+export default function FlattenPDFPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const [state, setState] = useState('idle');
   const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
@@ -88,7 +88,7 @@ export default function FlattenPDFPage({ lang = 'en' }) {
   const handleFileSelect = useCallback((f) => {
     if (!f) return;
     if (!f.name.toLowerCase().endsWith('.pdf')) {
-      setErrorMsg('Please upload a valid PDF file.');
+      setErrorMsg((ui?.tools_common?.invalid_pdf || 'Please upload a valid PDF file.'));
       setState('error');
       return;
     }
@@ -199,7 +199,7 @@ export default function FlattenPDFPage({ lang = 'en' }) {
         <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center shadow-sm mb-4 bg-purple-50 text-purple-600">
           <iconify-icon icon="solar:layers-minimalistic-bold-duotone" class="text-3xl" stroke-width="1.5"></iconify-icon>
         </div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Flatten PDF</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">{toolData?.title || 'Flatten PDF'}</h1>
         <p className="text-gray-500 max-w-2xl mx-auto text-sm">
           Make interactive elements permanent. Lock forms, stamp signatures, and embed annotations directly into your document to prevent unauthorized edits.
         </p>

@@ -103,7 +103,7 @@ const customTools = {
 };
 
 // ─── INNER COMPONENT ───────────────────────────────────────────────────────────
-function ToolRendererInner({ lang = 'en' }) {
+function ToolRendererInner({ lang = 'en', ui }) {
   const { toolSlug, platform } = useParams();
   const { t, i18n } = useTranslation();
   
@@ -118,7 +118,7 @@ function ToolRendererInner({ lang = 'en' }) {
   const localizedTitle = tool?.title;
 
   const Component = customTools[toolSlug] 
-    ? React.cloneElement(customTools[toolSlug], { lang, toolSlug }) 
+    ? React.cloneElement(customTools[toolSlug], { lang, toolSlug, toolData: tool, ui }) 
     : <ToolPage lang={lang} hideSEO={true} />;
     
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
@@ -219,10 +219,10 @@ function ToolRendererInner({ lang = 'en' }) {
 }
 
 // ─── EXPORTED COMPONENT (with ErrorBoundary) ────────────────────────────────────
-export default function ToolRenderer({ lang = 'en' }) {
+export default function ToolRenderer({ lang = 'en', ui }) {
   return (
     <ToolErrorBoundary>
-      <ToolRendererInner lang={lang} />
+      <ToolRendererInner lang={lang} ui={ui} />
     </ToolErrorBoundary>
   );
 }

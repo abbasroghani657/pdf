@@ -29,7 +29,7 @@ const LANGUAGES = [
   'Welsh', 'Xhosa', 'Yiddish', 'Yoruba', 'Zulu'
 ];
 
-export default function TranslatePDFPage({ lang = 'en' }) {
+export default function TranslatePDFPage({ lang = 'en', ui, toolData }) {
   const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -212,7 +212,7 @@ ${pdfContextRef.current}`;
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 shadow-sm border border-blue-200">
               <Globe className="w-4 h-4" /> Professional Global Translator
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Translate PDF Document</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">{toolData?.title || 'Translate PDF Document'}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">Instantly translate PDFs into 100+ languages while preserving exact formatting, tables, and layouts.</p>
           </motion.div>
 
@@ -404,7 +404,7 @@ ${pdfContextRef.current}`;
               <Globe className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-gray-900 text-sm leading-tight flex items-center gap-2">Translate PDF</h1>
+              <h1 className="font-bold text-gray-900 text-sm leading-tight flex items-center gap-2">{toolData?.title || 'Translate PDF'}</h1>
               <p className="text-[11px] text-gray-400 truncate max-w-[200px] md:max-w-sm font-semibold">{file.name} • {pageCount} pages</p>
             </div>
           </div>

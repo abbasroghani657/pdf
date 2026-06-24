@@ -280,7 +280,7 @@ function DataPanel({ extractStatus, progress, extractedData, confidence, onExpor
 }
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
-export default function ExtractDataPage({ lang = 'en' }) {
+export default function ExtractDataPage({ lang = 'en', ui, toolData }) {
   const [file, setFile]           = useState(null);
   const [mobileTab, setMobileTab] = useState('config');
   const [docType, setDocType]     = useState('invoice');
@@ -456,7 +456,7 @@ Text:\n${pdfContextRef.current}`;
                 <Database className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="font-extrabold text-slate-900 text-[15px]">Extract Data</h1>
+                <h1 className="font-extrabold text-slate-900 text-[15px]">{toolData?.title || 'Extract Data'}</h1>
                 <p className="text-xs text-slate-500 font-semibold truncate max-w-[200px] md:max-w-md">{file.name}</p>
               </div>
             </div>

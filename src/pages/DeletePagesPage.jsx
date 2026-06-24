@@ -110,7 +110,7 @@ function Thumbnail({ pdfDoc, pageNum, marked, onToggle, onClick }) {
 }
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function DeletePagesPage({ lang = 'en' }) {
+export default function DeletePagesPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const tool = TOOLS_DATA.find(t => t.title === 'Delete pages');
 
@@ -280,9 +280,9 @@ export default function DeletePagesPage({ lang = 'en' }) {
         ) : phase === 'error' ? (
           <div style={{ textAlign: 'center', background: '#fff', border: '1px solid #e5e7eb', borderRadius: 16, padding: 48 }}>
             <div style={{ fontSize: 48, marginBottom: 12 }}>⚠️</div>
-            <h2 style={{ fontSize: 22, fontWeight: 800, color: '#111', marginBottom: 8 }}>Something went wrong</h2>
+            <h2 style={{ fontSize: 22, fontWeight: 800, color: '#111', marginBottom: 8 }}>{ui?.tools_common?.something_went_wrong || (ui?.tools_common?.something_went_wrong || 'Something went wrong')}</h2>
             <p style={{ color: '#6b7280', marginBottom: 28 }}>{errorMsg}</p>
-            <button onClick={handleReset} style={{ background: '#e03e3e', color: '#fff', border: 'none', padding: '14px 28px', borderRadius: 10, fontWeight: 700, cursor: 'pointer' }}>Try again</button>
+            <button onClick={handleReset} style={{ background: '#e03e3e', color: '#fff', border: 'none', padding: '14px 28px', borderRadius: 10, fontWeight: 700, cursor: 'pointer' }}>{ui?.tools_common?.try_again || 'Try again'}</button>
           </div>
         ) : (
           <div

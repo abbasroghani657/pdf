@@ -25,7 +25,7 @@ const MOCK_PROFILE = {
   city: 'Peshawar'
 };
 
-export default function FillPDFFormsPage({ lang = 'en' }) {
+export default function FillPDFFormsPage({ lang = 'en', ui, toolData }) {
   const [file, setFile] = useState(null);
   const [fileBytes, setFileBytes] = useState(null);
   
@@ -289,7 +289,7 @@ export default function FillPDFFormsPage({ lang = 'en' }) {
             <div className="w-24 h-24 bg-indigo-100 text-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-sm">
               <iconify-icon icon="solar:checklist-minimalistic-bold-duotone" class="text-5xl"></iconify-icon>
             </div>
-            <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Fill PDF Forms</h1>
+            <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">{toolData?.title || 'Fill PDF Forms'}</h1>
             <p className="text-lg text-gray-500 mb-10 leading-relaxed">Fill interactive AcroForm PDF documents online. Fast, secure, and precise.</p>
             
             <div 

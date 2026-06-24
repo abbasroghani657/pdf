@@ -7,7 +7,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { clsx } from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function PricingPage({ lang = 'en' }) {
+export default function PricingPage({ lang = 'en', ui, toolData }) {
   const { user, isPro, upgradeToPro } = useAuth();
   const [isAnnual, setIsAnnual] = useState(true);
   const navigate = useNavigate();
@@ -240,7 +240,7 @@ export default function PricingPage({ lang = 'en' }) {
         <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           <div className="flex items-center gap-3 text-slate-500">
             <iconify-icon icon="solar:shield-check-bold-duotone" class="text-3xl text-emerald-500"></iconify-icon>
-            <span className="text-sm font-semibold">256-bit SSL</span>
+            <span className="text-sm font-semibold">{ui?.tools_common?.ssl_256 || '256-bit SSL'}</span>
           </div>
           <div className="flex items-center gap-3 text-slate-500">
             <iconify-icon icon="solar:trash-bin-trash-bold-duotone" class="text-3xl text-[#378ADD]"></iconify-icon>

@@ -11,7 +11,7 @@ import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 
-export default function UnlockPDFPage({ lang = 'en' }) {
+export default function UnlockPDFPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -115,7 +115,7 @@ export default function UnlockPDFPage({ lang = 'en' }) {
         <div className="inline-flex items-center justify-center p-3 bg-emerald-50 text-emerald-600 rounded-2xl mb-4">
           <LockOpenIcon className="w-8 h-8" />
         </div>
-        <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">Unlock PDF</h1>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">{toolData?.title || 'Unlock PDF'}</h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           Remove passwords and restrictions from your protected PDF documents instantly.
         </p>

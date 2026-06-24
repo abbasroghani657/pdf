@@ -11,7 +11,7 @@ import { toast } from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import { useToolSession } from '../hooks/useToolSession';
 
-export default function RedactPDFPage({ lang = 'en' }) {
+export default function RedactPDFPage({ lang = 'en', ui, toolData }) {
   const { isPro } = useAuth();
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -140,7 +140,7 @@ export default function RedactPDFPage({ lang = 'en' }) {
         <div className="inline-flex items-center justify-center p-3 bg-slate-800 text-white rounded-2xl mb-4 shadow-lg">
           <EyeSlashIcon className="w-8 h-8" />
         </div>
-        <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">Redact PDF</h1>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4 tracking-tight">{toolData?.title || 'Redact PDF'}</h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           Permanently remove visible text and hidden metadata. Safe, secure, and unrecoverable.
         </p>
