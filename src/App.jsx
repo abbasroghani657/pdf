@@ -1,3 +1,10 @@
+
+const SUPPORTED_LANGS = [
+  'es', 'fr', 'de', 'pt', 'hi', 'ru', 'zh-cn', 'zh-tw', 'ja', 'ko',
+  'it', 'pl', 'ro', 'bg', 'ca', 'nl', 'el', 'id', 'ms', 'sv', 'th',
+  'tr', 'uk', 'vi', 'sw', 'fi', 'da', 'no', 'cs'
+];
+const LANG_PREFIX_REGEX = new RegExp('^/(' + SUPPORTED_LANGS.join('|') + ')(/|$)');
 import React, { useState, useEffect, Suspense } from 'react';
 import { Routes, Route, Link, useNavigate, useLocation, useNavigationType, Navigate } from 'react-router-dom';
 import { 
@@ -32,36 +39,6 @@ import EditPDFPage from './pages/EditPDFPage';
 import WatermarkPDFPage from './pages/WatermarkPDFPage';
 import FillPDFFormsPage from './pages/FillPDFFormsPage';
 import PageNumbersPage from './pages/PageNumbersPage';
-import { TOOLS_DATA } from './data/tools';
-import { TOOLS_DATA_ES } from './data/tools-es';
-import { TOOLS_DATA_FR } from './data/tools-fr';
-import { TOOLS_DATA_DE } from './data/tools-de';
-import { TOOLS_DATA_PT } from './data/tools-pt';
-import { TOOLS_DATA_HI } from './data/tools-hi';
-import { TOOLS_DATA_RU } from './data/tools-ru';
-import { TOOLS_DATA_ZH_CN } from './data/tools-zh-cn';
-import { TOOLS_DATA_ZH_TW } from './data/tools-zh-tw';
-import { TOOLS_DATA_JA } from './data/tools-ja';
-import { TOOLS_DATA_KO } from './data/tools-ko';
-import { TOOLS_DATA_IT } from './data/tools-it';
-import { TOOLS_DATA_PL } from './data/tools-pl';
-import { TOOLS_DATA_RO } from './data/tools-ro';
-import { TOOLS_DATA_BG } from './data/tools-bg';
-import { TOOLS_DATA_CA } from './data/tools-ca';
-import { TOOLS_DATA_NL } from './data/tools-nl';
-import { TOOLS_DATA_EL } from './data/tools-el';
-import { TOOLS_DATA_ID } from './data/tools-id';
-import { TOOLS_DATA_MS } from './data/tools-ms';
-import { TOOLS_DATA_SV } from './data/tools-sv';
-import { TOOLS_DATA_TH } from './data/tools-th';
-import { TOOLS_DATA_TR } from './data/tools-tr';
-import { TOOLS_DATA_UK } from './data/tools-uk';
-import { TOOLS_DATA_VI } from './data/tools-vi';
-import { TOOLS_DATA_SW } from './data/tools-sw';
-import { TOOLS_DATA_FI } from './data/tools-fi';
-import { TOOLS_DATA_DA } from './data/tools-da';
-import { TOOLS_DATA_NO } from './data/tools-no';
-import { TOOLS_DATA_CS } from './data/tools-cs';
 import { slugify } from './utils/slugify';
 import SigningPage from './pages/SigningPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -226,7 +203,7 @@ const LanguageSwitcher = ({ location, navigate, isEs, isFr, isDe, isPt }) => {
   
   const switchLang = (lang) => {
     let newPath = location.pathname;
-    newPath = newPath.replace(/^\/(es|fr|de|pt)(\/|$)/, '/');
+    newPath = newPath.replace(LANG_PREFIX_REGEX, '/');
     if (!newPath.startsWith('/')) newPath = '/' + newPath;
     
     if (lang === 'ES') {
@@ -580,21 +557,11 @@ export default function App() {
   }, [location.pathname, location.key, navType]);
 
   const getNavPath = (path) => {
-    if (location.pathname.startsWith('/es/') || location.pathname === '/es') {
-      if (path === '/') return '/es';
-      if (!path.startsWith('/es')) return `/es${path}`;
-    }
-    if (location.pathname.startsWith('/fr/') || location.pathname === '/fr') {
-      if (path === '/') return '/fr';
-      if (!path.startsWith('/fr')) return `/fr${path}`;
-    }
-    if (location.pathname.startsWith('/de/') || location.pathname === '/de') {
-      if (path === '/') return '/de';
-      if (!path.startsWith('/de')) return `/de${path}`;
-    }
-    if (location.pathname.startsWith('/pt/') || location.pathname === '/pt') {
-      if (path === '/') return '/pt';
-      if (!path.startsWith('/pt')) return `/pt${path}`;
+    const match = location.pathname.match(LANG_PREFIX_REGEX);
+    if (match) {
+      const lang = match[1];
+      if (path === '/') return `/${lang}`;
+      if (!path.startsWith(`/${lang}`)) return `/${lang}${path}`;
     }
     return path;
   };
@@ -604,24 +571,21 @@ export default function App() {
   };
 
   let pathToCheck = location.pathname;
-  if (pathToCheck.startsWith('/es/') || pathToCheck === '/es') {
-    pathToCheck = pathToCheck.replace(/^\/es/, '') || '/';
-  } else if (pathToCheck.startsWith('/fr/') || pathToCheck === '/fr') {
-    pathToCheck = pathToCheck.replace(/^\/fr/, '') || '/';
-  } else if (pathToCheck.startsWith('/de/') || pathToCheck === '/de') {
-    pathToCheck = pathToCheck.replace(/^\/de/, '') || '/';
-  } else if (pathToCheck.startsWith('/pt/') || pathToCheck === '/pt') {
-    pathToCheck = pathToCheck.replace(/^\/pt/, '') || '/';
+  const match = pathToCheck.match(LANG_PREFIX_REGEX);
+  let currentLang = 'en';
+  if (match) {
+    currentLang = match[1];
+    pathToCheck = pathToCheck.replace(LANG_PREFIX_REGEX, '/') || '/';
   }
   
   if (pathToCheck.endsWith('/') && pathToCheck !== '/') {
     pathToCheck = pathToCheck.slice(0, -1);
   }
                       
-  const isEs = location.pathname.startsWith('/es/') || location.pathname === '/es';
-  const isFr = location.pathname.startsWith('/fr/') || location.pathname === '/fr';
-  const isDe = location.pathname.startsWith('/de/') || location.pathname === '/de';
-  const isPt = location.pathname.startsWith('/pt/') || location.pathname === '/pt';
+  const isEs = currentLang === 'es';
+  const isFr = currentLang === 'fr';
+  const isDe = currentLang === 'de';
+  const isPt = currentLang === 'pt';
 
   const isHome = pathToCheck === '/';
   const isPricing = pathToCheck === '/pricing';
@@ -649,7 +613,31 @@ export default function App() {
   // Admin portal: also full-screen, no public navbar/footer
   const isAdminPage = location.pathname.startsWith(PORTAL);
 
-  const currentToolsData = isEs ? TOOLS_DATA_ES : isFr ? TOOLS_DATA_FR : isDe ? TOOLS_DATA_DE : isPt ? TOOLS_DATA_PT : TOOLS_DATA;
+  
+  const [currentToolsData, setCurrentToolsData] = useState([]);
+  
+  useEffect(() => {
+    let isMounted = true;
+    const loadToolsData = async () => {
+      try {
+        if (currentLang === 'en') {
+          const mod = await import('./data/tools.js');
+          if (isMounted) setCurrentToolsData(mod.TOOLS_DATA);
+        } else {
+          const mod = await import(`./data/tools-${currentLang}.js`);
+          const key = `TOOLS_DATA_${currentLang.toUpperCase().replace('-', '_')}`;
+          if (isMounted) setCurrentToolsData(mod[key] || mod.default || Object.values(mod)[0] || []);
+        }
+      } catch (err) {
+        console.error('Failed to load tools data for', currentLang, err);
+        const mod = await import('./data/tools.js');
+        if (isMounted) setCurrentToolsData(mod.TOOLS_DATA);
+      }
+    };
+    loadToolsData();
+    return () => { isMounted = false; };
+  }, [currentLang]);
+
   const organizeOptimizeTools = currentToolsData.filter(t => t.category === 'organize' || t.category === 'optimize');
   const convertToTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.endsWith('to PDF') || t.title.endsWith('a PDF') || t.title.endsWith('in PDF') || t.title.endsWith('para PDF')));
   const convertFromTools = currentToolsData.filter(t => t.category === 'convert' && (t.title.startsWith('PDF to') || t.title.startsWith('PDF a') || t.title.startsWith('PDF in') || t.title.startsWith('PDF para')));
@@ -1078,44 +1066,16 @@ export default function App() {
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/es/login" element={<LoginPage lang="es" />} />
-            <Route path="/fr/login" element={<LoginPage lang="fr" />} />
-            
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/es/register" element={<RegisterPage lang="es" />} />
-            <Route path="/fr/register" element={<RegisterPage lang="fr" />} />
             
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/es/dashboard" element={<DashboardPage lang="es" />} />
-              <Route path="/fr/dashboard" element={<DashboardPage lang="fr" />} />
-              <Route path="/de/dashboard" element={<DashboardPage lang="de" />} />
-              <Route path="/pt/dashboard" element={<DashboardPage lang="pt" />} />
             </Route>
             
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-            <Route path="/es/forgot-password" element={<ForgotPasswordPage lang="es" />} />
-            <Route path="/fr/forgot-password" element={<ForgotPasswordPage lang="fr" />} />
-            <Route path="/de/forgot-password" element={<ForgotPasswordPage lang="de" />} />
-            <Route path="/pt/forgot-password" element={<ForgotPasswordPage lang="pt" />} />
-            
             <Route path="/reset-password" element={<ResetPasswordPage />} />
-            <Route path="/es/reset-password" element={<ResetPasswordPage lang="es" />} />
-            <Route path="/fr/reset-password" element={<ResetPasswordPage lang="fr" />} />
-            <Route path="/de/reset-password" element={<ResetPasswordPage lang="de" />} />
-            <Route path="/pt/reset-password" element={<ResetPasswordPage lang="pt" />} />
-            
             <Route path="/auth/callback" element={<OAuthCallbackPage />} />
-            <Route path="/es/auth/callback" element={<OAuthCallbackPage lang="es" />} />
-            <Route path="/fr/auth/callback" element={<OAuthCallbackPage lang="fr" />} />
-            <Route path="/de/auth/callback" element={<OAuthCallbackPage lang="de" />} />
-            <Route path="/pt/auth/callback" element={<OAuthCallbackPage lang="pt" />} />
-            
             <Route path="/payment-success" element={<PaymentSuccessPage />} />
-            <Route path="/es/payment-success" element={<PaymentSuccessPage lang="es" />} />
-            <Route path="/fr/payment-success" element={<PaymentSuccessPage lang="fr" />} />
-            <Route path="/de/payment-success" element={<PaymentSuccessPage lang="de" />} />
-            <Route path="/pt/payment-success" element={<PaymentSuccessPage lang="pt" />} />
             <Route path="/mock-checkout" element={<MockCheckoutPage />} />
             <Route path="/accept-invite/:token" element={<AcceptInvite />} />
             <Route path="/invite-response" element={<InviteResponse />} />
@@ -1133,86 +1093,44 @@ export default function App() {
             <Route path="/for/students" element={<Navigate to="/tools" replace />} />
             <Route path="/for/:industry" element={<UseCasePage />} />
 
-            {/* Spanish Static Routes */}
-            <Route path="/es" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="es" />} />
-            <Route path="/es/desktop" element={<DesktopAppPage lang="es" />} />
-            <Route path="/es/extension" element={<ExtensionPage lang="es" />} />
-            <Route path="/es/for/students" element={<Navigate to="/es/tools" replace />} />
-            <Route path="/es/for/:industry" element={<UseCasePage lang="es" />} />
-            <Route path="/es/pricing" element={<PricingPage lang="es" />} />
-            <Route path="/es/compare" element={<ComparePage lang="es" />} />
-            <Route path="/es/about" element={<AboutPage lang="es" />} />
-            <Route path="/es/contact" element={<ContactPage lang="es" />} />
-            <Route path="/es/privacy" element={<PrivacyPage lang="es" />} />
-            <Route path="/es/terms" element={<TermsPage lang="es" />} />
-            <Route path="/es/blog" element={<BlogList lang="es" />} />
-            <Route path="/es/blog/:slug" element={<BlogPost lang="es" />} />
-            <Route path="/es/pdf-trends-2026" element={<PDFTrendsPage lang="es" />} />
-            
-            {/* French Static Routes */}
-            <Route path="/fr" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="fr" />} />
-            <Route path="/fr/desktop" element={<DesktopAppPage lang="fr" />} />
-            <Route path="/fr/extension" element={<ExtensionPage lang="fr" />} />
-            <Route path="/fr/for/students" element={<Navigate to="/fr/tools" replace />} />
-            <Route path="/fr/for/:industry" element={<UseCasePage lang="fr" />} />
-            <Route path="/fr/pricing" element={<PricingPage lang="fr" />} />
-            <Route path="/fr/compare" element={<ComparePage lang="fr" />} />
-            <Route path="/fr/about" element={<AboutPage lang="fr" />} />
-            <Route path="/fr/contact" element={<ContactPage lang="fr" />} />
-            <Route path="/fr/privacy" element={<PrivacyPage lang="fr" />} />
-            <Route path="/fr/terms" element={<TermsPage lang="fr" />} />
-            <Route path="/fr/blog" element={<BlogList lang="fr" />} />
-            <Route path="/fr/blog/:slug" element={<BlogPost lang="fr" />} />
-            <Route path="/fr/pdf-trends-2026" element={<PDFTrendsPage lang="fr" />} />
-
-            {/* German Static Routes */}
-            <Route path="/de" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="de" />} />
-            <Route path="/de/desktop" element={<DesktopAppPage lang="de" />} />
-            <Route path="/de/extension" element={<ExtensionPage lang="de" />} />
-            <Route path="/de/for/students" element={<Navigate to="/de/tools" replace />} />
-            <Route path="/de/for/:industry" element={<UseCasePage lang="de" />} />
-            <Route path="/de/pricing" element={<PricingPage lang="de" />} />
-            <Route path="/de/compare" element={<ComparePage lang="de" />} />
-            <Route path="/de/about" element={<AboutPage lang="de" />} />
-            <Route path="/de/contact" element={<ContactPage lang="de" />} />
-            <Route path="/de/privacy" element={<PrivacyPage lang="de" />} />
-            <Route path="/de/terms" element={<TermsPage lang="de" />} />
-            <Route path="/de/blog" element={<BlogList lang="de" />} />
-            <Route path="/de/blog/:slug" element={<BlogPost lang="de" />} />
-            <Route path="/de/pdf-trends-2026" element={<PDFTrendsPage lang="de" />} />
-
-            {/* Portuguese Static Routes */}
-            <Route path="/pt" element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang="pt" />} />
-            <Route path="/pt/desktop" element={<DesktopAppPage lang="pt" />} />
-            <Route path="/pt/extension" element={<ExtensionPage lang="pt" />} />
-            <Route path="/pt/for/students" element={<Navigate to="/pt/tools" replace />} />
-            <Route path="/pt/for/:industry" element={<UseCasePage lang="pt" />} />
-            <Route path="/pt/pricing" element={<PricingPage lang="pt" />} />
-            <Route path="/pt/compare" element={<ComparePage lang="pt" />} />
-            <Route path="/pt/about" element={<AboutPage lang="pt" />} />
-            <Route path="/pt/contact" element={<ContactPage lang="pt" />} />
-            <Route path="/pt/privacy" element={<PrivacyPage lang="pt" />} />
-            <Route path="/pt/terms" element={<TermsPage lang="pt" />} />
-            <Route path="/pt/blog" element={<BlogList lang="pt" />} />
-            <Route path="/pt/blog/:slug" element={<BlogPost lang="pt" />} />
-            <Route path="/pt/pdf-trends-2026" element={<PDFTrendsPage lang="pt" />} />
-
             <Route path="/tools/:toolSlug" element={<ToolRenderer />} />
             <Route path="/tools/:toolSlug/:platform" element={<ToolRenderer />} />
-            <Route path="/es/tools/:toolSlug" element={<ToolRenderer lang="es" />} />
-            <Route path="/es/tools/:toolSlug/:platform" element={<ToolRenderer lang="es" />} />
-            <Route path="/fr/tools/:toolSlug" element={<ToolRenderer lang="fr" />} />
-            <Route path="/fr/tools/:toolSlug/:platform" element={<ToolRenderer lang="fr" />} />
-            <Route path="/de/tools/:toolSlug" element={<ToolRenderer lang="de" />} />
-            <Route path="/de/tools/:toolSlug/:platform" element={<ToolRenderer lang="de" />} />
-            <Route path="/pt/tools/:toolSlug" element={<ToolRenderer lang="pt" />} />
-            <Route path="/pt/tools/:toolSlug/:platform" element={<ToolRenderer lang="pt" />} />
-            
             <Route path="/sign/:token" element={<SigningPage />} />
-            <Route path="/es/sign/:token" element={<SigningPage lang="es" />} />
-            <Route path="/fr/sign/:token" element={<SigningPage lang="fr" />} />
-            <Route path="/de/sign/:token" element={<SigningPage lang="de" />} />
-            <Route path="/pt/sign/:token" element={<SigningPage lang="pt" />} />
+
+            {/* DYNAMIC TRANSLATED ROUTES FOR ALL 30 LANGUAGES */}
+            {SUPPORTED_LANGS.filter(l => l !== 'en').map(lang => (
+              <React.Fragment key={lang}>
+                <Route path={`/${lang}`} element={<HomePage searchQuery={searchQuery} setSearchQuery={setSearchQuery} lang={lang} />} />
+                <Route path={`/${lang}/desktop`} element={<DesktopAppPage lang={lang} />} />
+                <Route path={`/${lang}/extension`} element={<ExtensionPage lang={lang} />} />
+                <Route path={`/${lang}/for/students`} element={<Navigate to={`/${lang}/tools`} replace />} />
+                <Route path={`/${lang}/for/:industry`} element={<UseCasePage lang={lang} />} />
+                <Route path={`/${lang}/pricing`} element={<PricingPage lang={lang} />} />
+                <Route path={`/${lang}/compare`} element={<ComparePage lang={lang} />} />
+                <Route path={`/${lang}/about`} element={<AboutPage lang={lang} />} />
+                <Route path={`/${lang}/contact`} element={<ContactPage lang={lang} />} />
+                <Route path={`/${lang}/privacy`} element={<PrivacyPage lang={lang} />} />
+                <Route path={`/${lang}/terms`} element={<TermsPage lang={lang} />} />
+                <Route path={`/${lang}/blog`} element={<BlogList lang={lang} />} />
+                <Route path={`/${lang}/blog/:slug`} element={<BlogPost lang={lang} />} />
+                <Route path={`/${lang}/pdf-trends-2026`} element={<PDFTrendsPage lang={lang} />} />
+                <Route path={`/${lang}/login`} element={<LoginPage lang={lang} />} />
+                <Route path={`/${lang}/register`} element={<RegisterPage lang={lang} />} />
+                
+                <Route element={<ProtectedRoute />}>
+                  <Route path={`/${lang}/dashboard`} element={<DashboardPage lang={lang} />} />
+                </Route>
+                
+                <Route path={`/${lang}/forgot-password`} element={<ForgotPasswordPage lang={lang} />} />
+                <Route path={`/${lang}/reset-password`} element={<ResetPasswordPage lang={lang} />} />
+                <Route path={`/${lang}/auth/callback`} element={<OAuthCallbackPage lang={lang} />} />
+                <Route path={`/${lang}/payment-success`} element={<PaymentSuccessPage lang={lang} />} />
+                
+                <Route path={`/${lang}/tools/:toolSlug`} element={<ToolRenderer lang={lang} />} />
+                <Route path={`/${lang}/tools/:toolSlug/:platform`} element={<ToolRenderer lang={lang} />} />
+                <Route path={`/${lang}/sign/:token`} element={<SigningPage lang={lang} />} />
+              </React.Fragment>
+            ))}
 
             {/* ── ADMIN PANEL — Obscure path, admin-only ────────────────── */}
             {/* OLD /admin path is explicitly blocked — returns 404 */}

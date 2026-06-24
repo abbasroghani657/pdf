@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { BLOG_POSTS as BLOG_POSTS_EN } from '../data/blog';
-import { BLOG_POSTS_ES } from '../data/blog-es';
-import { BLOG_POSTS_FR } from '../data/blog-fr';
 
 const BlogPost = ({ lang = 'en' }) => {
   const isEs = lang === 'es';
@@ -11,9 +8,40 @@ const BlogPost = ({ lang = 'en' }) => {
   const isDe = lang === 'de';
   const isPt = lang === 'pt';
   const prefix = isEs ? '/es' : isFr ? '/fr' : isDe ? '/de' : isPt ? '/pt' : '';
-  const posts = isEs ? BLOG_POSTS_ES : isFr ? BLOG_POSTS_FR : BLOG_POSTS_EN;
+  const [posts, setPosts] = React.useState([]);
+  const [post, setPost] = React.useState(null);
+
+  React.useEffect(() => {
+    let isMounted = true;
+    const loadPost = async () => {
+      try {
+        let loadedPosts = [];
+        if (lang === 'en') {
+          const mod = await import('../data/blog.js');
+          loadedPosts = mod.BLOG_POSTS;
+        } else {
+          const mod = await import(`../data/blog-${lang}.js`);
+          const key = `BLOG_POSTS_${lang.toUpperCase().replace('-', '_')}`;
+          loadedPosts = mod[key] || mod.default || Object.values(mod)[0] || [];
+        }
+        if (isMounted) {
+            setPosts(loadedPosts);
+            setPost(loadedPosts.find(p => p.slug === slug));
+        }
+      } catch (e) {
+        const mod = await import('../data/blog.js');
+        if (isMounted) {
+            setPosts(mod.BLOG_POSTS);
+            setPost(mod.BLOG_POSTS.find(p => p.slug === slug));
+        }
+      }
+    };
+    loadPost();
+    return () => { isMounted = false; };
+  }, [lang, slug]);
+
   const { slug } = useParams();
-  const post = posts.find(p => p.slug === slug);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);

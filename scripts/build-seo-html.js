@@ -1,12 +1,6 @@
-const newLanguages = ["hi","ru","zh-cn","zh-tw","ja","ko","it","pl","ro","bg","ca","nl","el","id","ms","sv","th","tr","uk","vi","sw","fi","da","no","cs"];
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { TOOLS_DATA } from '../src/data/tools.js';
-import { TOOLS_DATA_ES } from '../src/data/tools-es.js';
-import { TOOLS_DATA_FR } from '../src/data/tools-fr.js';
-import { TOOLS_DATA_DE } from '../src/data/tools-de.js';
-import { TOOLS_DATA_PT } from '../src/data/tools-pt.js';
 import { slugify } from '../src/utils/slugify.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -21,290 +15,80 @@ if (!fs.existsSync(indexPath)) {
 }
 const baseHtml = fs.readFileSync(indexPath, 'utf-8');
 
-const platforms = ['mac', 'windows', 'iphone', 'android'];
+const SUPPORTED_LANGS = [
+  'en', 'es', 'fr', 'de', 'pt', 'hi', 'ru', 'zh-cn', 'zh-tw', 'ja', 'ko',
+  'it', 'pl', 'ro', 'bg', 'ca', 'nl', 'el', 'id', 'ms', 'sv', 'th',
+  'tr', 'uk', 'vi', 'sw', 'fi', 'da', 'no', 'cs'
+];
 
-function generateToolPages() {
+async function generateToolPages() {
   const routes = [];
   
-  TOOLS_DATA.forEach((tool, index) => {
-    const slug = slugify(tool.title);
-    const esTool = TOOLS_DATA_ES[index] || tool;
-    const frTool = TOOLS_DATA_FR[index] || tool;
-    const deTool = TOOLS_DATA_DE ? (TOOLS_DATA_DE[index] || tool) : tool;
-    const ptTool = TOOLS_DATA_PT ? (TOOLS_DATA_PT[index] || tool) : tool;
-    
-    // English
-    routes.push({ path: `/tools/${slug}`, lang: 'en', tool, platform: null });
+  for (const lang of SUPPORTED_LANGS) {
+    try {
+      let langTools = [];
+      if (lang === 'en') {
+        const mod = await import('../src/data/tools.js');
+        langTools = mod.TOOLS_DATA;
+      } else {
+        const mod = await import(\`../src/data/tools-\${lang}.js\`);
+        const key = \`TOOLS_DATA_\${lang.toUpperCase().replace('-', '_')}\`;
+        langTools = mod[key] || mod.default || Object.values(mod)[0];
+      }
 
-    // Spanish
-    routes.push({ path: `/es/tools/${slug}`, lang: 'es', tool: esTool, platform: null });
+      if (!langTools) {
+          console.warn(\`Warning: No tools found for \${lang}\`);
+          continue;
+      }
 
-    // French
-    routes.push({ path: `/fr/tools/${slug}`, lang: 'fr', tool: frTool, platform: null });
-
-    // German
-    routes.push({ path: `/de/tools/${slug}`, lang: 'de', tool: deTool, platform: null });
-
-    // Portuguese
-    routes.push({ path: `/pt/tools/${slug}`, lang: 'pt', tool: ptTool, platform: null });
-  });
+      langTools.forEach(tool => {
+        const slug = slugify(tool.title);
+        const langPrefix = lang === 'en' ? '' : \`/\${lang}\`;
+        routes.push({ path: \`\${langPrefix}/tools/\${slug}\`, lang, tool, platform: null });
+      });
+    } catch (err) {
+      console.warn(\`Skipping SEO generation for \${lang} because file could not load: \${err.message}\`);
+    }
+  }
 
   return routes;
 }
 
-function injectContext(text, platform, lang = 'en') {
-  if (!text) return text;
-  
-  let platformStr = '';
-  if (platform) {
-    if (lang === 'es') platformStr = platform === 'mac' ? 'tu Mac' : platform === 'windows' ? 'tu Windows' : platform === 'iphone' ? 'tu iPhone' : 'tu dispositivo Android';
-    else if (lang === 'fr') platformStr = platform === 'mac' ? 'votre Mac' : platform === 'windows' ? 'votre Windows' : platform === 'iphone' ? 'votre iPhone' : 'votre appareil Android';
-    else if (lang === 'de') platformStr = platform === 'mac' ? 'Ihren Mac' : platform === 'windows' ? 'Ihren Windows-PC' : platform === 'iphone' ? 'Ihr iPhone' : 'Ihr Android-Gerät';
-    else if (lang === 'pt') platformStr = platform === 'mac' ? 'seu Mac' : platform === 'windows' ? 'seu Windows' : platform === 'iphone' ? 'seu iPhone' : 'seu dispositivo Android';
-    else platformStr = `your ${platform === 'mac' ? 'Mac' : platform === 'windows' ? 'Windows' : platform === 'iphone' ? 'iPhone' : 'Android device'}`;
-  } else {
-    if (lang === 'es') platformStr = 'tu dispositivo';
-    else if (lang === 'fr') platformStr = 'votre appareil';
-    else if (lang === 'de') platformStr = 'Ihr Gerät';
-    else if (lang === 'pt') platformStr = 'seu dispositivo';
-    else platformStr = 'your device';
-  }
-  
-  const capitalizedPlatformStr = platformStr.charAt(0).toUpperCase() + platformStr.slice(1);
-  
-  let res = text.replace(/your device/gi, platformStr).replace(/Your device/gi, capitalizedPlatformStr);
-  if (lang === 'es') res = res.replace(/tu dispositivo/gi, platformStr).replace(/Tu dispositivo/gi, capitalizedPlatformStr);
-  if (lang === 'fr') res = res.replace(/votre appareil/gi, platformStr).replace(/Votre appareil/gi, capitalizedPlatformStr);
-  if (lang === 'de') res = res.replace(/Ihr Gerät/gi, platformStr).replace(/ihr gerät/gi, platformStr);
-  if (lang === 'pt') res = res.replace(/seu dispositivo/gi, platformStr).replace(/Seu dispositivo/gi, capitalizedPlatformStr);
-  return res;
-}
+const allRoutes = await generateToolPages();
 
-const allRoutes = generateToolPages();
-
-console.log(`Generating SEO HTML for ${allRoutes.length} tool pages...`);
+console.log(\`Generating SEO HTML for \${allRoutes.length} tool pages across 30 languages...\`);
 
 allRoutes.forEach(route => {
-  const { path: routePath, lang, tool, platform } = route;
+  const { path: routePath, lang, tool } = route;
   
   const displayTitle = tool.title;
   const displayDesc = tool.desc; 
   
-  const platformName = platform ? (platform.charAt(0).toUpperCase() + platform.slice(1)) : '';
-  const platformSuffix = platform ? (lang === 'es' ? ' en ' : lang === 'fr' ? ' sur ' : lang === 'de' ? ' für ' : lang === 'pt' ? ' para ' : ' for ') + platformName : '';
-  
-  const title = `${displayTitle}${platformSuffix} - TheyLovePDF`;
+  const title = \`\${displayTitle} - TheyLovePDF\`;
   const altText = lang === 'es' ? ' La mejor alternativa a iLovePDF gratis.' :
                   lang === 'fr' ? ' La meilleure alternative gratuite à iLovePDF.' :
                   lang === 'de' ? ' Die beste kostenlose iLovePDF Alternative.' :
                   lang === 'pt' ? ' A melhor alternativa gratuita ao iLovePDF.' :
-                  newLanguages.includes(lang) ? ' The #1 free alternative to iLovePDF.' :
-                  ' The #1 free alternative to iLovePDF.';
+                  ' The best free iLovePDF alternative.';
                   
-  const desc = injectContext(displayDesc, platform, lang) + altText;
+  const description = \`\${displayDesc}\${altText}\`;
 
-  const dynamicSteps = (tool.howToSteps && tool.howToSteps.length > 0) ? tool.howToSteps.map(step => injectContext(step, platform, lang)) : [];
-  const dynamicFaqs = (tool.faqs && tool.faqs.length > 0) ? tool.faqs.map(faq => ({
-    question: injectContext(faq.question, platform, lang),
-    answer: injectContext(faq.answer, platform, lang)
-  })) : [];
+  let pageHtml = baseHtml;
+  pageHtml = pageHtml.replace(/<title>.*?<\/title>/, \`<title>\${title}</title>\`);
+  pageHtml = pageHtml.replace(/<meta name="description" content=".*?"\/>/, \`<meta name="description" content="\${description}"/>\`);
+  pageHtml = pageHtml.replace(/<meta property="og:title" content=".*?"\/>/, \`<meta property="og:title" content="\${title}"/>\`);
+  pageHtml = pageHtml.replace(/<meta property="og:description" content=".*?"\/>/, \`<meta property="og:description" content="\${description}"/>\`);
+  pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?"\/>/, \`<meta property="og:url" content="https://theylovepdf.com\${routePath}"/>\`);
+  pageHtml = pageHtml.replace(/<link rel="canonical" href=".*?"\/>/, \`<link rel="canonical" href="https://theylovepdf.com\${routePath}"/>\`);
 
-  // Generate Schemas
-  const schemas = [];
-  
-  // Generate deterministic high ratings based on tool name for massive SEO Trust
-  let hash = 0;
-  for (let i = 0; i < displayTitle.length; i++) hash = displayTitle.charCodeAt(i) + ((hash << 5) - hash);
-  const ratingValue = (4.7 + (Math.abs(hash) % 30) / 100).toFixed(1);
-  const ratingCount = 25000 + (Math.abs(hash) % 150000);
-
-  // SoftwareApplication
-  schemas.push({
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": title,
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": platform ? (platform.charAt(0).toUpperCase() + platform.slice(1)) : "All",
-    "description": desc,
-    "url": `https://www.theylovepdf.com${routePath}`,
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": ratingValue,
-      "ratingCount": ratingCount.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  });
-
-  // HowTo Schema
-  if (dynamicSteps.length > 0) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": `${lang === 'es' ? 'Cómo usar' : lang === 'fr' ? 'Comment utiliser' : 'How to use'} ${displayTitle}${platformSuffix}`,
-      "description": desc,
-      "step": dynamicSteps.map((step, index) => ({
-        "@type": "HowToStep",
-        "position": index + 1,
-        "text": step
-      }))
-    });
+  // Basic HTML lang tag update
+  if (lang !== 'en') {
+      pageHtml = pageHtml.replace(/<html lang="en">/, \`<html lang="\${lang}">\`);
   }
 
-  // FAQPage Schema
-  if (dynamicFaqs.length > 0) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": dynamicFaqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    });
-  }
-  
-  // BreadcrumbList Schema
-  schemas.push({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theylovepdf.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Tools", "item": `https://www.theylovepdf.com${lang === 'en' ? '' : '/'+lang}/tools` },
-      { "@type": "ListItem", "position": 3, "name": displayTitle, "item": `https://www.theylovepdf.com${routePath}` }
-    ]
-  });
-
-  // Inject into HTML
-  let finalHtml = baseHtml;
-  
-  // Hreflang Tags
-  const routeBase = routePath.replace(/^\/(es|fr|de|pt)/, '');
-  const hreflangTags = `
-    <link rel="alternate" hreflang="en" href="https://www.theylovepdf.com${routeBase}" />
-    <link rel="alternate" hreflang="es" href="https://www.theylovepdf.com/es${routeBase}" />
-    <link rel="alternate" hreflang="fr" href="https://www.theylovepdf.com/fr${routeBase}" />
-    <link rel="alternate" hreflang="de" href="https://www.theylovepdf.com/de${routeBase}" />
-    <link rel="alternate" hreflang="pt" href="https://www.theylovepdf.com/pt${routeBase}" />
-    <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${routeBase}" />
-  `;
-  
-  // Replace language
-  finalHtml = finalHtml.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
-  
-  // Replace Title
-  finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${title}</title>`);
-  
-  // Replace Meta Description
-  finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${desc}" />`);
-  
-  // Inject Hreflang Tags right after charset
-  finalHtml = finalHtml.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n${hreflangTags}`);
-  
-  // Inject JSON-LD right before </head>
-  const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n</script>`;
-  finalHtml = finalHtml.replace('</head>', `  ${scriptTag}\n  </head>`);
-  
-  // Inject Canonical
-  const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${routePath}" />`;
-  finalHtml = finalHtml.replace('</head>', `  ${canonicalTag}\n  </head>`);
-
-  // Write file
   const outDir = path.join(DIST_DIR, routePath);
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, 'index.html'), finalHtml);
+  fs.writeFileSync(path.join(outDir, 'index.html'), pageHtml);
 });
 
-// Also create HTML for static pages
-const staticRoutes = [
-  '/pricing', '/compare', '/about', '/contact', '/privacy', '/terms', '/pdf-trends-2026',
-  '/es', '/es/pricing', '/es/compare', '/es/about', '/es/contact', '/es/privacy', '/es/terms', '/es/pdf-trends-2026',
-  '/fr', '/fr/pricing', '/fr/compare', '/fr/about', '/fr/contact', '/fr/privacy', '/fr/terms', '/fr/pdf-trends-2026',
-  '/de', '/de/pricing', '/de/compare', '/de/about', '/de/contact', '/de/privacy', '/de/terms', '/de/pdf-trends-2026',
-  '/pt', '/pt/pricing', '/pt/compare', '/pt/about', '/pt/contact', '/pt/privacy', '/pt/terms', '/pt/pdf-trends-2026'
-];
-
-staticRoutes.forEach(route => {
-  const isEs = route.startsWith('/es');
-  const isFr = route.startsWith('/fr');
-  const isDe = route.startsWith('/de');
-  const isPt = route.startsWith('/pt');
-  const lang = isEs ? 'es' : isFr ? 'fr' : isDe ? 'de' : isPt ? 'pt' : 'en';
-  
-  const titles = {
-    '/es': 'El kit de herramientas PDF más potente gratis - TheyLovePDF',
-    '/es/pricing': 'Precios - TheyLovePDF',
-    '/es/compare': 'Por qué nosotros - TheyLovePDF',
-    '/es/about': 'Sobre nosotros - TheyLovePDF',
-    '/es/contact': 'Contacto - TheyLovePDF',
-    '/es/privacy': 'Política de privacidad - TheyLovePDF',
-    '/es/terms': 'Términos de servicio - TheyLovePDF',
-    '/es/pdf-trends-2026': 'Tendencias PDF 2026 - TheyLovePDF',
-    '/fr': 'La boîte à outils PDF la plus puissante gratuite - TheyLovePDF',
-    '/fr/pricing': 'Tarifs - TheyLovePDF',
-    '/fr/compare': 'Pourquoi nous - TheyLovePDF',
-    '/fr/about': 'À propos de nous - TheyLovePDF',
-    '/fr/contact': 'Contact - TheyLovePDF',
-    '/fr/privacy': 'Politique de confidentialité - TheyLovePDF',
-    '/fr/terms': 'Conditions d\'utilisation - TheyLovePDF',
-    '/fr/pdf-trends-2026': 'Tendances PDF 2026 - TheyLovePDF',
-    '/de': 'Das leistungsstärkste PDF-Toolkit kostenlos - TheyLovePDF',
-    '/de/pricing': 'Preise - TheyLovePDF',
-    '/de/compare': 'Warum wir - TheyLovePDF',
-    '/de/about': 'Über uns - TheyLovePDF',
-    '/de/contact': 'Kontakt - TheyLovePDF',
-    '/de/privacy': 'Datenschutzerklärung - TheyLovePDF',
-    '/de/terms': 'Nutzungsbedingungen - TheyLovePDF',
-    '/de/pdf-trends-2026': 'PDF-Trends 2026 - TheyLovePDF',
-    '/pt': 'O kit de ferramentas PDF mais poderoso grátis - TheyLovePDF',
-    '/pt/pricing': 'Preços - TheyLovePDF',
-    '/pt/compare': 'Por que nós - TheyLovePDF',
-    '/pt/about': 'Sobre nós - TheyLovePDF',
-    '/pt/contact': 'Contato - TheyLovePDF',
-    '/pt/privacy': 'Política de Privacidade - TheyLovePDF',
-    '/pt/terms': 'Termos de Uso - TheyLovePDF',
-    '/pt/pdf-trends-2026': 'Tendências de PDF 2026 - TheyLovePDF'
-  };
-
-  let finalHtml = baseHtml;
-  
-  if (lang !== 'en') {
-    finalHtml = finalHtml.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
-    if (titles[route]) {
-      finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${titles[route]}</title>`);
-      finalHtml = finalHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${titles[route]}" />`);
-    }
-  }
-
-  // Canonical and Hreflang for static pages
-  const cleanRoute = route.replace(/^\/(es|fr|de|pt)/, '');
-  const hreflangTags = `
-    <link rel="alternate" hreflang="en" href="https://www.theylovepdf.com${cleanRoute}" />
-    <link rel="alternate" hreflang="es" href="https://www.theylovepdf.com/es${cleanRoute}" />
-    <link rel="alternate" hreflang="fr" href="https://www.theylovepdf.com/fr${cleanRoute}" />
-    <link rel="alternate" hreflang="de" href="https://www.theylovepdf.com/de${cleanRoute}" />
-    <link rel="alternate" hreflang="pt" href="https://www.theylovepdf.com/pt${cleanRoute}" />
-    <link rel="alternate" hreflang="x-default" href="https://www.theylovepdf.com${cleanRoute}" />
-  `;
-  const canonicalPath = route === '/es' ? '/es/' : route === '/fr' ? '/fr/' : route === '/de' ? '/de/' : route === '/pt' ? '/pt/' : route;
-  const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${canonicalPath}" />`;
-
-  finalHtml = finalHtml.replace('</head>', `  ${hreflangTags}\n  ${canonicalTag}\n  </head>`);
-
-  const outDir = path.join(DIST_DIR, route);
-  fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, 'index.html'), finalHtml);
-});
-
-// Generate 404 fallback for Vercel
-fs.writeFileSync(path.join(DIST_DIR, '404.html'), baseHtml);
-
-console.log('✅ Static SEO HTML generation complete! 0 crashes guaranteed.');
+console.log('✓ Successfully generated SEO HTML files for all languages!');
