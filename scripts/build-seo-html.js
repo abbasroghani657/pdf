@@ -31,23 +31,23 @@ async function generateToolPages() {
         const mod = await import('../src/data/tools.js');
         langTools = mod.TOOLS_DATA;
       } else {
-        const mod = await import(\`../src/data/tools-\${lang}.js\`);
-        const key = \`TOOLS_DATA_\${lang.toUpperCase().replace('-', '_')}\`;
+        const mod = await import(`../src/data/tools-${lang}.js`);
+        const key = `TOOLS_DATA_${lang.toUpperCase().replace('-', '_')}`;
         langTools = mod[key] || mod.default || Object.values(mod)[0];
       }
 
       if (!langTools) {
-          console.warn(\`Warning: No tools found for \${lang}\`);
+          console.warn(`Warning: No tools found for ${lang}`);
           continue;
       }
 
       langTools.forEach(tool => {
         const slug = slugify(tool.title);
-        const langPrefix = lang === 'en' ? '' : \`/\${lang}\`;
-        routes.push({ path: \`\${langPrefix}/tools/\${slug}\`, lang, tool, platform: null });
+        const langPrefix = lang === 'en' ? '' : `/${lang}`;
+        routes.push({ path: `${langPrefix}/tools/${slug}`, lang, tool, platform: null });
       });
     } catch (err) {
-      console.warn(\`Skipping SEO generation for \${lang} because file could not load: \${err.message}\`);
+      console.warn(`Skipping SEO generation for ${lang} because file could not load: ${err.message}`);
     }
   }
 
@@ -56,7 +56,7 @@ async function generateToolPages() {
 
 const allRoutes = await generateToolPages();
 
-console.log(\`Generating SEO HTML for \${allRoutes.length} tool pages across 30 languages...\`);
+console.log(`Generating SEO HTML for ${allRoutes.length} tool pages across 30 languages...`);
 
 allRoutes.forEach(route => {
   const { path: routePath, lang, tool } = route;
@@ -64,26 +64,26 @@ allRoutes.forEach(route => {
   const displayTitle = tool.title;
   const displayDesc = tool.desc; 
   
-  const title = \`\${displayTitle} - TheyLovePDF\`;
+  const title = `${displayTitle} - TheyLovePDF`;
   const altText = lang === 'es' ? ' La mejor alternativa a iLovePDF gratis.' :
                   lang === 'fr' ? ' La meilleure alternative gratuite à iLovePDF.' :
                   lang === 'de' ? ' Die beste kostenlose iLovePDF Alternative.' :
                   lang === 'pt' ? ' A melhor alternativa gratuita ao iLovePDF.' :
                   ' The best free iLovePDF alternative.';
                   
-  const description = \`\${displayDesc}\${altText}\`;
+  const description = `${displayDesc}${altText}`;
 
   let pageHtml = baseHtml;
-  pageHtml = pageHtml.replace(/<title>.*?<\/title>/, \`<title>\${title}</title>\`);
-  pageHtml = pageHtml.replace(/<meta name="description" content=".*?"\/>/, \`<meta name="description" content="\${description}"/>\`);
-  pageHtml = pageHtml.replace(/<meta property="og:title" content=".*?"\/>/, \`<meta property="og:title" content="\${title}"/>\`);
-  pageHtml = pageHtml.replace(/<meta property="og:description" content=".*?"\/>/, \`<meta property="og:description" content="\${description}"/>\`);
-  pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?"\/>/, \`<meta property="og:url" content="https://theylovepdf.com\${routePath}"/>\`);
-  pageHtml = pageHtml.replace(/<link rel="canonical" href=".*?"\/>/, \`<link rel="canonical" href="https://theylovepdf.com\${routePath}"/>\`);
+  pageHtml = pageHtml.replace(/<title>.*?<\/title>/, `<title>${title}</title>`);
+  pageHtml = pageHtml.replace(/<meta name="description" content=".*?"\/>/, `<meta name="description" content="${description}"/>`);
+  pageHtml = pageHtml.replace(/<meta property="og:title" content=".*?"\/>/, `<meta property="og:title" content="${title}"/>`);
+  pageHtml = pageHtml.replace(/<meta property="og:description" content=".*?"\/>/, `<meta property="og:description" content="${description}"/>`);
+  pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?"\/>/, `<meta property="og:url" content="https://theylovepdf.com${routePath}"/>`);
+  pageHtml = pageHtml.replace(/<link rel="canonical" href=".*?"\/>/, `<link rel="canonical" href="https://theylovepdf.com${routePath}"/>`);
 
   // Basic HTML lang tag update
   if (lang !== 'en') {
-      pageHtml = pageHtml.replace(/<html lang="en">/, \`<html lang="\${lang}">\`);
+      pageHtml = pageHtml.replace(/<html lang="en">/, `<html lang="${lang}">`);
   }
 
   const outDir = path.join(DIST_DIR, routePath);
