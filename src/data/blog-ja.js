@@ -1,497 +1,468 @@
+// Auto-generated blog translation for ja
 export const BLOG_POSTS_JA = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Mac で PDF を圧縮する方法 (2026 ガイド)`,
+    date: `2026-06-20`,
+    excerpt: `品質を損なうことなく Mac で PDF ファイルのサイズを縮小する最も速くて簡単な方法を学びましょう。プレビュー、Automator、Web ツールを比較します。`,
+    content: `<p>Mac で大きな PDF ファイルを扱うと、特に標準の 25 MB の添付ファイル サイズ制限を超えるドキュメントを電子メールで送信する必要がある場合にストレスがかかることがあります。課題を提出する学生であっても、ポートフォリオを送信する専門家であっても、PDF を適切に圧縮する方法を知ることは必須のスキルです。</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>方法 1: 組み込みのプレビュー アプリ (無料ですが基本)</h2>
+<p>Apple のプレビュー アプリには、PDF を縮小できる「Quartz Filter」が組み込まれています。高速で、インターネット接続は必要ありません。</p>
+<オル>
+<li><strong>プレビュー</strong>アプリを使用して PDF を開きます。</li>
+<li>上部のメニュー バーで [<strong>ファイル</strong>] をクリックし、[<strong>エクスポート</strong>] を選択します ([PDF としてエクスポート] は選択しないでください)。</li>
+<li>エクスポート ウィンドウで、<strong>Quartz Filter</strong> ドロップダウン メニューを探します。</li>
+<li><strong>ファイル サイズを減らす</strong>を選択し、[保存] をクリックします。</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6rounded-r-lg">
+<p class="text-red-700 m-0"><strong>警告:</strong> この方法は無料ですが、Apple のデフォルトの圧縮アルゴリズムは非常に強力です。多くの場合、画像の品質が損なわれ、ベクター テキストがぼやけてしまいます。専門的な文書にはこれをお勧めしません。</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>方法 2: TheyLovePDF を使用する (プロフェッショナルかつ高品質)</h2>
+<p>ファイル サイズを大幅に削減しながら、テキストと画像の鮮明な品質を維持したい場合は、AI を活用した専用の圧縮ツールを使用するのが最良の選択肢です。</p>
+<オル>
+<li>TheyLovePDF の <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF 圧縮ツール</a>に移動します。</li>
+<li>PDF ファイルをページにドラッグ アンド ドロップします。</li>
+<li>圧縮レベルを選択します:
+<ul class="mt-2 space-y-1 text-gray-600">
+<li><strong>極度の圧縮:</strong> 電子メール送信に最適です (最低品質)。</li>
+<li><strong>推奨される圧縮:</strong> サイズと品質の間のスイート スポット。</li>
+<li><strong>低圧縮:</strong> 高品質で印刷に最適</li>
+</ul>
+</li>
+<li>[<strong>PDF を圧縮</strong>] をクリックして、最適化されたファイルをダウンロードします。</li>
+</ol>
+<p>当社のインテリジェントな圧縮アルゴリズムは、不要なメタデータを取り除き、最新の Web 標準を使用して画像を圧縮します。これにより、ストレージ容量の一部を使用しながら、ドキュメントの見た目はまったく同じになります。</p>
+
+<h2>結論</h2>
+<p>Mac の組み込みツールは、オフラインの状況では優れていますが、最新のドキュメントに必要な詳細な制御が大幅に不足しています。重要なものについては、常に専用の圧縮エンジンを使用してください。</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `iPhone で複数の PDF ファイルを結合する方法`,
+    date: `2026-06-19`,
+    excerpt: `iOS デバイスから直接、複数の PDF ドキュメントを 1 つのファイルに結合する最も簡単な方法を発見してください。`,
+    content: `<p>iPhone が仕事や勉強の主なデバイスになっているため、外出先で PDF ファイルを結合する方法を知ることは必須のスキルです。経費報告書の領収書を作成する場合でも、講義ノートを結合する場合でも、コンピューターを使わずにそれを行う方法をここに示します。</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>iOS での挑戦</h2>
+<p>iOS には堅牢なファイル アプリが組み込まれていますが、複数の PDF を選択してシームレスに結合するためのネイティブで簡単な方法は提供されていません。ドキュメントをスキャンして 1 つの PDF にすることはできますが、既存のファイルを結合するのは驚くほど困難です。</p>
+
+<h2>解決策: TheyLovePDF Web アプリ</h2>
+<p>App Store から重いサブスクリプションベースのアプリをダウンロードする必要はありません。これは、クラウド アーキテクチャを使用して Safari または Chrome から直接行うことができます。</p>
+
+<div class="bg-gray-50 border border-gray-200 p-6rounded-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">ステップバイステップ ガイド</h3>
+<ol class="space-y-3 mb-0">
+<li>iPhone で Safari を開き、<a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF 結合ツール</a>に移動します。</li>
+<li>大きな<strong>PDF ファイルを選択</strong>ボタンをタップします。</li>
+<li>iPhone の<em>ファイル</em>アプリまたは<em>フォト ライブラリ</em>からファイルを選択します。一度に複数のファイルを選択できます。</li>
+<li>アップロードすると、ファイルの視覚的なグリッドが表示されます。ファイルを長押しすると、ファイルをドラッグして、希望どおりに並べ替えることができます。</li>
+<li>[<strong>PDF を結合</strong>] をタップします。当社のサーバーはミリ秒以内にファイルを処理します。</li>
+<li>[<strong>ダウンロード</strong>] をタップし、新しく結合されたドキュメントをデバイスに直接保存します。</li>
+</ol>
+</div>
+
+<h2>アプリを使用してみませんか?</h2>
+<p>App Store にある PDF アプリの多くは無料でダウンロードできますが、ファイルを結合しようとするとすぐに料金を要求されます。クラウド ツールを使用すると、App Store の手数料を回避し、携帯電話のストレージ容量を節約できます。</p>
+<p>とてもシンプル、高速、そして完全に安全です!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `PDF をパスワードで保護する方法`,
+    date: `2026-06-18`,
+    excerpt: `安全で解読不可能な 256 ビット AES 暗号化パスワードを PDF ファイルに追加して、機密情報を保護します。`,
+    content: `<p>今日のデジタル時代では、データのプライバシーがこれまで以上に重要になっています。財務諸表、医療記録、または機密のビジネス契約書を送信する場合でも、PDF を保護しないままにしておくと、重大なセキュリティ リスクが発生します。</p>
+<p>このガイドでは、軍事レベルの暗号化を使用して PDF ドキュメントをロックする方法を説明します。</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>256 ビット AES 暗号化とは何ですか?</h2>
+<p>Advanced Encryption Standard (AES) は、米国政府が機密情報を保護するために使用する暗号化アルゴリズムです。256 ビットの暗号化キーは、2<sup>256</sup> 通りの組み合わせがあることを意味します。その数は非常に膨大なので、世界で最も強力なスーパーコンピューターですら 10 億年かかっても解読できないほどです。</p>
+<p>当社のツールを使用する場合、簡単に回避できる「パスワードを追加」するだけではありません。AES-256 を使用してファイルの内容を数学的にスクランブルします。</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>PDF を保護する方法</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6rounded-r-lg">
+<ol class="mb-0 text-blue-900">
+<li><a href="/tools/protect-pdf" class="font-bold hover:underline">PDF の保護</a>ツールに移動します。</li>
+<li>機密文書を安全な TLS 1.3 接続経由でアップロードします。</li>
+<li>強力なパスワードを入力します。（文字、数字、記号を組み合わせて 12 文字以上にすることをお勧めします）</li>
+<li>[<strong>PDF を保護</strong>] をクリックします。</li>
+<li>新しく暗号化されたファイルをダウンロードします。</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>パスワード セキュリティのベスト プラクティス</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>同じメールでパスワードを送信しないでください。</strong> PDF をメールで送信する場合は、別のチャネル (SMS や Signal などの安全なメッセージング アプリなど) を介してパスワードを送信してください。</li>
+<li><strong>パスワード マネージャーを使用する:</strong> 辞書にある単語を使用するのではなく、ランダムな文字列を生成します。</li>
+<li><strong>個人情報を使用しない:</strong> 生年月日、ペットの名前、会社名は避けてください。</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">ファイルが暗号化されると、元のコンテンツは 2 時間以内にサーバーから完全に削除されます。あなたのプライバシーは私たちの絶対的な優先事項です。</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `OCRとは何ですか?スキャンした PDF を検索可能にする方法`,
+    date: `2026-06-17`,
+    excerpt: `光学式文字認識 (OCR) テクノロジーがどのように機能し、平面画像から選択可能なテキストを抽出するかを学びます。`,
+    content: `<p>ドキュメントのように見える PDF を受け取ったことがありますが、テキストを強調表示しようとしても何も起こりませんでした。「フラット」または「スキャンされた」PDF が見つかりました。これは本質的には単なる紙のデジタル写真です。</p>
+<p>そのテキストを操作するには、<strong>光学文字認識 (OCR)</strong> の魔法が必要です。</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>OCR の仕組み</h2>
+<p>OCR エンジンを通じてファイルを実行すると、ソフトウェアは高度に訓練された人間の目のように機能します。画像をピクセルごとにスキャンし、文字や数字に似たパターンを探します。</p>
+<p>最新の OCR は単に形状を一致させるだけではありません。複雑な人工知能と機械学習モデルを使用してコンテキストを理解します。たとえば、単語内の周囲の文字に基づいて、大文字の「I」と小文字の「l」の違いを判別できます。</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>OCR の利点</h2>
+<ul class="space-y-2">
+<li><strong>検索性:</strong> 500 ページのスキャンされた契約書から特定の条項を見つけることは、すべてを読まなければ不可能です。OCR を使用すると、CTRL+F を使用して必要なものを即座に見つけることができます。</li>
+<li><strong>編集可能性:</strong> テキストが認識されると、Word や Google ドキュメントでコピー、貼り付け、編集できます。</li>
+<li><strong>アクセシビリティ:</strong> 視覚障害のあるユーザー用のスクリーン リーダーは、平面的な画像を読み取ることができません。OCR を使用すると、誰でもドキュメントにアクセスできるようになります。</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>ドキュメントを OCR する方法</h2>
+<p>TheyLovePDF を使用すると、スキャンしたドキュメントの変換が驚くほど簡単になります:</p>
+<オル>
+<li><a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF ツール</a>に移動します。</li>
+<li>スキャンしたドキュメントをアップロードします。</li>
+<li>ドキュメントの言語を選択します。これは非常に重要です。AI にどの言語が予想されるかを伝えることで、特に固有の文字やアクセントを持つ言語の精度が大幅に向上します。</li>
+<li>プロセスをヒットします。AI はドキュメントを再構築し、元の画像の上に非表示のテキスト レイヤーを重ねます。</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50rounded-r-lg">
+文書を手動で再入力するのはやめてください。面倒な作業は AI に任せましょう。
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Windows 11 で PDF テキストを編集する方法 (Adobe Acrobat なし)`,
+    date: `2026-06-16`,
+    excerpt: `高価なソフトウェアにお金を払うのはやめましょう。Windows PC で PDF のテキストや画像を直接編集する最も効率的、無料、スマートな方法を発見してください。`,
+    content: `<p>長年にわたり、Windows ユーザーは PDF に苦労してきました。Word 文書とは異なり、PDF は「完成した」デジタル印刷物として設計されています。契約書のタイプミスに気づいたり、請求書の日付を更新する必要がある場合、通常は Adobe Acrobat のような巨大なペイウォールにぶつかります。</p>
+<p>幸いなことに、2026 年には、基本的な編集を行うために Windows 11 マシンに高価なソフトウェアをインストールする必要はありません。</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>スマートな Web アプローチ</h2>
+<p>クラウドベースのエディタは、重くて遅いデスクトップ アプリケーションをダウンロードするのではなく、リモート サーバーの処理能力を利用して、ブラウザ内で PDF 構造を直接解析します。</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6rounded-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">直接編集する方法</h3>
+<ol class="space-y-2 mb-0">
+<li>Windows 11 で Microsoft Edge または Google Chrome を開きます。</li>
+<li><a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">PDF 編集ツール</a>に移動します。</li>
+<li>ドキュメントをアップロードします。私たちのエンジンはテキスト レイヤーを即座にデコードします。</li>
+<li>テキスト ボックスをクリックして、テキストを変更したり、フォントを変更したり、サイズを調整したりできます。</li>
+<li>新しい画像、図形を挿入したり、機密情報をブラックアウトしたりすることもできます。</li>
+<li>[<strong>変更を適用</strong>] をクリックし、更新されたファイルをダウンロードします。</li>
+</ol>
+</div>
+
+<h2>Microsoft Edge を使用しない理由</h2>
+<p>Microsoft Edge には描画ツール (インク) を備えた PDF ビューアが組み込まれていますが、<strong>既存のテキストを編集することはできません</strong>。上部に描画したり、新しいテキスト ボックスを追加したりすることのみが可能です。元のテキスト レイヤーのタイプミスを実際に変更するには、本物の PDF エディターが必要です。</p>
+
+<p class="font-semibold text-gray-900 mt-6">プロのヒント:</p>
+<p class="text-sm text-gray-600">PDF がスキャンされた画像である場合、標準のテキスト編集は機能しません。まず、<a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR ツール</a>を使用して、画像を読み取り可能なテキスト レイヤーに変換する必要があります。</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Android で PDF に無料で署名するための究極のガイド`,
+    date: `2026-06-15`,
+    excerpt: `急いで書類に署名する必要がありますか?Android スマートフォンから直接電子署名を描画、入力、アップロードする方法を学びます。`,
+    content: `<p>誰もが経験したことがあります。席を離れている間に重要な文書を電子メールで受け取ることがあります。すぐにあなたの署名が必要です。印刷、署名、スキャンして戻す作業は過去の遺物です。</p>
+<p>現在、Android スマートフォンは、法的拘束力のある電子署名が可能な強力なデジタル ワークステーションです。</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>電子署名は合法ですか?</h2>
+<p>はい。ESIGN 法 (米国) および eIDAS (欧州) に基づき、電子署名は、ほぼすべてのビジネスおよび個人の取引において、ウェット インク署名と同じ法的重要性を持ちます。</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Android で署名する方法 (アプリは必要ありません)</h2>
+<p>プレミアム PDF アプリを使用して Android デバイスを肥大化させる必要はありません。モバイル ブラウザを使用してください。</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="リスト-10進数 pl-5 スペース-y-3 mt-6">
+<li><strong>ツールを開く:</strong> リンクをタップして、Chrome で <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">PDF 署名ツール</a>を開きます。</li>
+<li><strong>ドキュメントをアップロードする:</strong> タップして、Android ダウンロード フォルダーまたは Google ドライブからファイルを直接アップロードします。</li>
+<li><strong>署名を作成します:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>描画:</em> 指またはスタイラスを使用して、画面上に直接署名を描画します。</li>
+<li><em>入力:</em> 名前を入力し、筆記体フォントを選択します。</li>
+<li><em>アップロード:</em> 白い紙に実際の署名を写した写真をアップロードします (ツールは背景を自動的に削除します)。</li>
+</ul>
+</li>
+<li><strong>配置:</strong> 署名を署名欄に正確にドラッグ アンド ドロップします。ピンチしてサイズを変更できます。</li>
+<li><strong>完成:</strong> [署名] をタップして、署名をドキュメント アーキテクチャに永続的に埋め込みます。</li>
+</ol>
+
+<div class="bg- yellow-50 border-l-4 border- yellow-500 p-4 my-6">
+<p class="text- yellow-800 text-sm m-0"><strong>セキュリティ上の注意:</strong> 機密文書に署名するときは、必ず安全な HTTPS 暗号化プラットフォームを使用してください。すべてのファイルはサーバーから自動的に削除されます。</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `学生が編集のために常に PDF を Word に変換する必要がある理由`,
+    date: `2026-06-14`,
+    excerpt: `論文を書いたりメモを取ったりしていますか？Word 文書にテキストを抽出する方が、PDF を直接編集するよりも基本的に優れている理由を説明します。`,
+    content: `<p>学生は、講義スライド、研究論文、デジタル教科書など、学期ごとに何百もの PDF に遭遇します。引用を抽出したり、内容を要約したり、セクションを書き換えたりする必要がある場合、PDF エディタを使用したくなるかもしれません。しかし、よりスマートで、よりプロフェッショナルな方法があります。</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>PDF アーキテクチャの問題</h2>
+<p>PDF (Portable Document Format) は、構成ではなく<em>プレゼンテーション</em>のために設計されました。PDF 内では、テキストは通常​​の文書のように流れません。すべての単語がページ上の特定の X 座標と Y 座標に固定されます。</p>
+<p>PDF エディターで段落を削除しようとしても、その下のテキストは上に移動して隙間を埋めることは<strong>できません</strong>。大きな空白が残ります。</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>解決策: PDF から Word への変換</h2>
+<p>ドキュメントを Microsoft Word (.docx) に変換し直すことにより、当社のインテリジェント エンジンは流れるようなレイアウトを再構築します。段落は再び段落になり、ヘッダーはヘッダーになり、画像は移動可能なブロックになります。</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid グリッド-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-5rounded-lg border border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">PDF エディタ</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ テキストはリフローしません</li>
+<li>❌ グローバル フォントの変更が難しい</li>
+<li>❌ 余白はロックされています</li>
+<li>❌ テーブルは変更が難しい</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5rounded-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Word ドキュメント</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li>✅ テキストの流れが自然</li>
+<li>✅ 簡単なスペルチェックと文法</li>
+<li>✅ 動的な改ページ</li>
+<li>✅ コピー＆ペーストは完璧です</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>完璧に行う方法</h2>
+<p>AI を活用した <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF から Word へのコンバータ</a>は、高度なレイアウト認識を使用します。ファイルをアップロードするだけで、数秒以内に完全に編集可能な Word 文書が完成します。課題やメモを書き終えたら、教授に提出する前にいつでも PDF にエクスポートして戻すことができます。</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Windows 10 で複数の PDF を結合する: ステップバイステップ`,
+    date: `2026-06-13`,
+    excerpt: `Windows デスクトップから直接、関連する PDF ドキュメントを 1 つのまとまりのあるファイルに結合して、乱雑なフォルダーを整理します。`,
+    content: `<p>1 つのプロジェクトに 15 個の異なる PDF ファイルがあるのは悪夢です。毎月の請求書、本の章、またはスキャンした医療記録のいずれであっても、それらを 1 つのまとまりのあるファイルに結合することは、Windows 10 の組織にとって不可欠です。</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Windows の組み込みの制限</h2>
+<p>Windows 10 は強力な OS ですが、ネイティブ PDF マージが欠けていることは有名です。これには「Microsoft Print to PDF」が含まれていますが、これは他の形式から PDF を作成するのに役立つだけであり、既存の形式を結合するのには役立ちません。</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>スマートなワークフロー (ブラウザベース)</h2>
+<p>マルウェアが含まれたり、ファイルに巨大な透かしが加えられたりする可能性のある怪しいフリーウェアをダウンロードしないでください。最も専門的な方法は、暗号化されたブラウザ ツールを使用することです。</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100shadow-sm p-4rounded-lg">
+<strong>ステップ 1: ファイルを収集する</strong> 結合するすべての PDF をデスクトップ上の 1 つのフォルダーに置きます。これにより、アップロードが簡単になります。
+</li>
+<li class="bg-white border border-gray-100shadow-sm p-4rounded-lg">
+<strong>ステップ 2: 結合を開きます。</strong>TheyLovePDF の <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">PDF の結合ツール</a>に移動します。
+</li>
+<li class="bg-white border border-gray-100shadow-sm p-4rounded-lg">
+<strong>ステップ 3: 選択して注文します。</strong> ファイルを画面にドラッグします。プレビューのサムネイルが表示されます。これらのサムネイルを左右にドラッグして、完全な時系列順に並べることができます。
+</li>
+<li class="bg-white border border-gray-100shadow-sm p-4rounded-lg">
+<strong>ステップ 4: 結合</strong> 結合ボタンを押します。サーバーは、品質を損なうことなく PDF のバイナリ コードを即座につなぎ合わせます。
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">この方法は、Windows 10 上の Chrome、Edge、Firefox、Brave で動作し、PC へのインストール権限や管理権限はまったく必要ありません。</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `法律専門家が PDF をパスワードで保護しなければならない理由`,
+    date: `2026-06-12`,
+    excerpt: `ドキュメントのセキュリティ、コンプライアンス、および開いた PDF を電子メールで送信することが法律事務所にとって大きな責任となる理由について詳しく説明します。`,
+    content: `<p>法律専門家において、機密保持は単なるベストプラクティスではなく、厳格な倫理的要件であり、多くの場合法定要件となります。しかし、数え切れないほどの法律事務所やパラリーガルが依然として、機密の準備書面、契約書、和解案を、暗号化されていない未加工の PDF 添付ファイルとして標準メールで送信しています。</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>傍受のリスク</h2>
+<p>標準電子メール (SMTP) は安全でないことで知られています。電子メールがセキュリティで保護されていないサーバーを経由してルーティングされた場合、または受信トレイが侵害された場合、暗号化されていない PDF は傍受した誰でも完全に読み取ることができます。これは、クライアントの特権の侵害や巨額の責任につながる可能性があります。</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>暗号化とパスワード</h2>
+<p>違いを理解することが重要です。単純な「アクセス許可パスワード」では、印刷や編集はできませんが、ファイルは暗号化されません。誰でも読むことができます。</p>
+<p>必要なのは、<strong>AES-256 暗号化</strong>による<strong>オープン パスワード</strong>です。適用すると、ファイルのバイナリ データがスクランブルされます。パスワードがなければ、文書を読み取ることは数学的に不可能です。</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">コンプライアンス要件</h4>
+<p class="text-red-800 text-sm m-0">HIPAA (医療) や GDPR (欧州データ) などの規制により、転送中の PII (個人を特定できる情報) の暗号化に失敗した組織は厳しく罰せられます。暗号化された PDF は、転送中のデータを保護する方法として受け入れられています。</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>プロフェッショナルなワークフロー</h2>
+<オル>
+<li>Word で文書を下書きし、PDF にエクスポートします。</li>
+<li><a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a> などの安全な保持ゼロのプラットフォームにアップロードします。</li>
+<li>生成された 16 文字のパスワードを適用します。</li>
+<li>暗号化された PDF をクライアントに電子メールで送信します。</li>
+<li>別の安全なチャネル（電話や暗号化されたメッセージング アプリなど）を介してクライアントにパスワードを提供します。</li>
+</ol>
+<p>このワークフローを実施することで、法律専門家はデータ侵害の責任から身を守り、クライアントの完全な機密保持を確保します。</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Android で PDF を圧縮して WhatsApp 経由で送信する方法`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp には、大きなドキュメントをブロックするファイル サイズ制限があります。Android スマートフォンで PDF のサイズを小さくし、即座に共有する方法を学びましょう。`,
+    content: `<p>WhatsApp は迅速なコミュニケーションのための世界標準であり、企業や学生がドキュメントを共有するためによく使用しています。ただし、WhatsApp ではファイル サイズに厳格な制限が適用されます。150MB の建築計画やスキャンした大量の教科書を送信しようとすると、アプリは転送を完全にブロックします。</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Android のジレンマ</h2>
+<p>写真の圧縮とは異なり、Android OS には PDF ドキュメントを圧縮する機能が組み込まれていません。Google Play ストアを検索すると、ファイルの品質を損なう邪魔な広告が満載のアプリが大量に表示されます。</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>スマート圧縮技術</h2>
+<p>Android デバイスの Google Chrome から高速クラウド インフラストラクチャを直接使用することで、アプリ ストアを完全にバイパスできます。</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">コンプレッサーを開きます</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">このリンクをタップすると、ブラウザで <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF 圧縮ツール</a>が開きます。</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">ファイルからアップロード</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">タップしてアップロードし、Android で [ファイル] アプリまたは [ドキュメント] アプリを選択して大きな PDF を見つけます。</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">「極度の圧縮」を選択します</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">WhatsApp の場合は、最も高い圧縮レベルを選択します。これにより、高解像度の画像データが削除されますが、テキストはモバイル画面で完全に読み取れる状態に保たれます。</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">ダウンロードして共有</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">処理が完了したら、[ダウンロード] をタップします。WhatsApp を開いてクリップ アイコンをタップし、[ドキュメント] を選択して、新しく縮小したファイルを共有します。</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>このプロセス全体は 30 秒未満で完了し、モバイル データの使用量はほとんどなくなり、WhatsApp の制限問題は永久に解決されます。</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `大容量の PDF から特定のページを抽出する方法`,
+    date: `2026-06-10`,
+    excerpt: `第 3 章だけが必要な場合は、500 ページのマニュアルを送信しないでください。PDF ページを抽出して分割する最も賢明な方法は次のとおりです。`,
+    content: `<p>500 ページの企業マニュアル、膨大な法的証拠開示ファイル、または学期全体の教科書など、誰もがそれらを受け取ったことがあります。しかし、45 ページから 52 ページを同僚に送信するだけでよい場合はどうすればよいでしょうか?</p>
+<p>ドキュメント全体を送信することはプロフェッショナルらしくなく、帯域幅を無駄にし、受信者は関連情報を探す必要があります。PDF を分割する必要があります。</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>ハッキーな方法とプロの方法</h2>
+<p>一般的な「ハック」は、[印刷] ダイアログを使用し、[PDF に印刷] を選択して、ページ範囲を選択することです。これは機能しますが、多くの場合、ドキュメントが平坦化され、インタラクティブなリンクやブックマークが破壊され、場合によってはファイル サイズが大幅に増加します。</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>プロフェッショナルな方法は、ドキュメントをバイナリ レベルで分割し、抽出されたページの正確な元の品質とメタデータを保持することです。</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>プロ仕様のスプリッターを使用する</h2>
+<div class="bg-gray-50 border border-gray-200 p-6rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li><a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">PDF 分割ツール</a>に移動します。</li>
+<li>大規模なドキュメントをアップロードします。当社のサーバーは最大 2 GB のファイルを瞬時に処理します。</li>
+<li>モードを選択してください:
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
+<li><strong>ページの抽出:</strong> 正確なページまたは範囲を入力します (例: <em>45-52、88、102-105</em>)。</li>
+<li><strong>範囲による分割:</strong> ドキュメントを複数の小さなドキュメントに自動的に分割します。</li>
+</ul>
+</li>
+<li>「プロセス」をクリックします。選択したページのみを含む、元のリンクと品質がそのままの状態で、非常に焦点が絞られたきちんとした PDF が届きます。</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>重要なものだけを抽出することで、受信者の時間と受信トレイのスペースを尊重できます。これは小さな技術スキルですが、プロフェッショナルとして多大な利益をもたらします。</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Chat with PDF: AI は長い文書の読み方をどう変えるか`,
+    date: `2026-06-09`,
+    excerpt: `100ページのレポートを読むのはやめましょう。大規模言語モデル (LLM) を使用すると、文字通りドキュメントと「会話」して、即座に答えを抽出できるようになります。`,
+    content: `<p>150 ページの財務報告書や分厚い学術論文を読むには、ハイライトを付けたり、メモを取ったり、検索したりするのに何時間もかかりました。2026 年に、その時代は正式に終わります。AI ドキュメント チャットの時代へようこそ。</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>「PDF でチャット」とは何ですか?</h2>
+<p>文書の作成者があなたの隣に座っていて、ただ質問できるとしたらどうでしょうか。<em>「第 3 四半期の総収益はいくらですか?」</em> または <em>「この実験の方法論を 3 つの箇条書きで要約してください。」</em></p>
+<p><a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">PDF でチャット ツール</a>は、高度なラージ言語モデル (LLM) を使用します。ファイルをアップロードすると、AI が数秒でドキュメント全体を「読み取り」、ベクトル メモリに保存します。次に、チャット インターフェース (ChatGPT とまったく同じ) を使用して、テキストについて質問します。</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>実際の仕組み (内部)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>テキスト抽出:</strong> システムは PDF を解析し、すべてのテキストと表を抽出します。</li>
+<li><strong>ベクトル化:</strong> テキストは「チャンク」に切り刻まれ、エンベディングと呼ばれる数学的な数値に変換されます。</li>
+<li><strong>セマンティック検索:</strong> あなたが質問すると、AI が計算式を検索して、質問に最も関連のある正確な段落を見つけます。</li>
+<li><strong>生成:</strong> LLM は特定の段落を読み、自然で会話的な回答を入力し、多くの場合、情報を見つけた正確なページ番号を引用します。</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">使用例</h4>
+<p class="text-purple-800 text-sm m-0"><strong>学生:</strong> 教科書をアップロードして、インスタント学習ガイドやフラッシュカードを作成します。<br><strong>弁護士:</strong> 事件ファイルをアップロードして、CTRL+F を使用せずに判例を即座に検索します。<br><strong>アナリスト:</strong> 10-K レポートをアップロードして、特定の財務指標を即座に抽出します。</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>プライバシー第一</h2>
+<p>AI に関する最大の懸念はデータのプライバシーです。TheyLovePDF のようなプロフェッショナルなツールを使用すると、ドキュメント データは厳密にサンドボックス化されます。グローバル AI モデルのトレーニングには決して使用されず、データはセッション終了後にサーバーから自動的に消去されます。</p>
+<p>取り残されないでください。今すぐドキュメントとチャットを始めて、読む速度を 10 倍にしましょう。</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `PDF サイズを削減するための最適な iLovePDF 代替ツール`,
+    date: `2026-06-23`,
+    excerpt: `品質を落とさずに PDF を圧縮したり、攻撃的な広告に対処したりしたいですか?TheyLovePDF が iLovePDF の優れた代替品である理由はここにあります。`,
+    content: `<p>これを読んでいるあなたは、おそらく PDF サイズを小さくする方法を探して、iLovePDF の使用を考えたことでしょう。これは人気のあるツールですが、多くのユーザーは、ドキュメントの視覚的な忠実度を損なわず、より高速で広告のない代替ツールを探しています。</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>代替手段を探す理由</h2>
+<p>従来の PDF ツールの多くは、画像やベクター グラフィックスの品質を損なう強力な圧縮アルゴリズムに依存しています。さらに、無料枠には 1 日あたりの制限が設けられており、煩わしい広告が埋め込まれていることがよくあります。</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>TheyLovePDF の利点</h2>
+<p>当社は、<a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF 圧縮ツール</a>を業界で最高のものになるように設計しました。ユーザーが切り替えを行う理由は次のとおりです。</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>スマート AI 圧縮:</strong> 画像の解像度を下げるだけでなく、我々 のエンジンはドキュメントを数学的に分析し、目に見えないメタデータ、参照されていないフォント、重複したデータ構造を削除します。</li>
+<li><strong>広告ゼロ:</strong> 私たちは、ユーティリティ ツールはクリーンで気が散るものではないと考えています。我々 の圧縮ツールではバナー広告が 1 つも見つかりません。</li>
+<li><strong>厳格なプライバシー:</strong> ファイルは 256 ビット SSL 暗号化で保護され、2 時間後にサーバーから完全に削除されます。私たちはあなたのデータを読んだり販売したりすることはありません。</li>
+</ul>
+
+<p>次回、電子メールの添付ファイルまたは WhatsApp メッセージ用に大規模なファイルを圧縮する必要がある場合は、従来のツールをスキップしてください。ファイルを TheyLovePDF にドラッグ アンド ドロップして、違いを体験してください。</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `iPhone で PowerPoint (PPT) を PDF に変換する方法`,
+    date: `2026-06-23`,
+    excerpt: `携帯電話からプレゼンテーションを送信する必要がありますか?iOS 上で .ppt または .pptx ファイルをプロフェッショナルな PDF に直接変換する最速の方法を学びましょう。`,
+    content: `<p>バスの中で課題を提出しようとしている学生であっても、空港からクライアントに資料をメールで送信するプロフェッショナルであっても、iPhone で PowerPoint を PDF に変換することは重要なモバイル スキルです。</p>
+<p>PDF では、受信者の使用しているデバイスに関係なく、フォント、書式設定、レイアウトが受信者の画面上でまったく同じに見えることが保証されます。</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>手間のかからない方法</h2>
+<p>1 つのファイルを変換するためだけに重いプレゼンテーション アプリをダウンロードしないでください。これは、Safari を使用して数秒で安全に行うことができます。</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 border border-gray-200 p-6rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Safari を開き、<a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> に移動します (このツールは Word、Excel、PowerPoint を処理します)。</li>
+<li>アップロード ボタンをタップし、<strong>ファイルの選択</strong>を選択します。</li>
+<li>iPhone のファイル アプリまたは iCloud Drive で、ダウンロードした <em>.pptx</em> ファイルを見つけます。</li>
+<li>「変換」をタップします。当社のエンタープライズ グレードのレンダリング エンジンは、すべてのスライド レイアウトとベクター グラフィックを完全に保持します。</li>
+<li>[ダウンロード] をタップし、鮮明な新しい PDF をデバイスに保存します。</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>このプロセス全体はクラウドで行われるため、iPhone のバッテリーを消耗したり、ローカルのストレージ容量を占有したりすることはありません。</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Windows 10および11でPDFにデジタル署名する方法`,
+    date: `2026-06-23`,
+    excerpt: `契約書の印刷とスキャンを停止します。ここでは、Windows PC で文書に署名する法的拘束力のあるプロフェッショナルな方法を紹介します。`,
+    content: `<p>電子メールで契約書を受け取るということは、これまでは契約書を印刷し、ペンで署名し、スキャンしてコンピュータに取り込み、劣化した曲がった画像を電子メールで送信者に送信することを意味していました。2026 年に、このワークフローは正式に廃止されます。</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Windows でサインインする最新の方法</h2>
+<p>法的拘束力のある電子署名を実行するために、Windows マシンに Adobe Acrobat や有料ソフトウェアをインストールする必要はありません。</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="リスト-10進数 pl-5 スペース-y-3 mt-6">
+<li>Chrome または Edge を開いて、<a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF ツール</a>に移動します。</li>
+<li>契約書をページにドラッグ アンド ドロップします。</li>
+<li>ツールバーの<strong>署名</strong>アイコンをクリックします。</li>
+<li>署名方法を選択します:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>描画:</strong> マウスまたは Windows タッチスクリーン/スタイラスを使用して署名を書きます。</li>
+<li><strong>種類:</strong> 名前を入力し、プロ仕様の筆記体フォントを選択します。</li>
+<li><strong>アップロード:</strong> 実際の署名のきれいな写真がある場合は、アップロードします。私たちのツールは白い背景を自動的に取り除きます。</li>
+</ul>
+</li>
+<li>署名を点線にドラッグし、サイズを変更し、<strong>適用</strong>をクリックします。</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>これらの署名は合法ですか?</strong> はい!主要な国際枠組み（米国の ESIGN 法や欧州の eIDAS など）では、電子署名は、ほぼすべての標準的なビジネス契約において、ウェット インク署名とまったく同じ法的重要性を持ちます。</p>
+</div>`
+  },
 ];

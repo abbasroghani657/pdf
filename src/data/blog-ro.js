@@ -1,497 +1,468 @@
+// Auto-generated blog translation for ro
 export const BLOG_POSTS_RO = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Cum să comprimați un PDF pe Mac (Ghid 2026)`,
+    date: `2026-06-20`,
+    excerpt: `Aflați cele mai rapide și simple modalități de a reduce dimensiunea fișierului PDF pe un Mac fără a pierde calitatea.Comparăm instrumentele Preview, Automator și Web.`,
+    content: `<p>Lucrarea cu fișiere PDF mari pe Mac poate fi frustrantă, mai ales atunci când trebuie să trimiteți un document prin e-mail și acesta depășește limita standard de 25 MB pentru dimensiunea atașării.Indiferent dacă sunteți un student care trimite o temă sau un profesionist care trimite un portofoliu, a ști cum să comprimați corect un PDF este o abilitate esențială.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Metoda 1: aplicația de previzualizare încorporată (gratuită, dar de bază)</h2>
+<p>Aplicația de previzualizare a Apple vine cu un „filtru de cuarț” încorporat care vă poate micșora fișierele PDF.Este rapid și nu necesită conexiune la internet.</p>
+<ol>
+<li>Deschideți PDF-ul folosind aplicația <strong>Previzualizare</strong>.</li>
+<li>Faceți clic pe <strong>Fișier</strong> în bara de meniu de sus, apoi selectați <strong>Exportați</strong> (nu selectați „Exportați ca PDF”).</li>
+<li>În fereastra de export, căutați meniul drop-down <strong>Filtru de cuarț</strong>.</li>
+<li>Selectați <strong>Reduceți dimensiunea fișierului</strong> și faceți clic pe Salvare.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+<p class="text-red-700 m-0"><strong>Avertisment:</strong> deși această metodă este gratuită, algoritmul de compresie implicit al Apple este incredibil de agresiv.Adesea distruge calitatea imaginilor și face textul vectorial neclar.Nu recomandăm acest lucru pentru documente profesionale.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Metoda 2: Utilizarea TheyLovePDF (profesional și de înaltă calitate)</h2>
+<p>Dacă doriți să mențineți calitatea clară a textului și a imaginilor dvs., reducând în același timp în mod semnificativ dimensiunea fișierului, cea mai bună opțiune este utilizarea unui instrument dedicat de compresie bazat pe inteligență artificială.</p>
+<ol>
+<li>Accesați <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">instrumentul de comprimare PDF pe TheyLovePDF</a>.</li>
+<li>Trageți și plasați fișierul PDF pe pagină.</li>
+<li>Selectați nivelul de compresie:
+<ul class="mt-2 space-y-1 text-gray-600">
+<li><strong>Compresie extremă:</strong> Cel mai bun pentru e-mail (calitate cea mai scăzută).</li>
+<li><strong>Compresie recomandată:</strong> punctul favorabil dintre dimensiune și calitate.</li>
+<li><strong>Mai puțină compresie:</strong> de înaltă calitate, perfectă pentru imprimare.</li>
+</ul>
+</li>
+<li>Faceți clic pe <strong>Comprimați PDF</strong> și descărcați fișierul optimizat.</li>
+</ol>
+<p>Algoritmii noștri inteligenți de compresie elimină metadatele inutile și comprimă imaginile utilizând standarde web moderne, asigurându-se că documentul dumneavoastră arată exact la fel, în timp ce ocupă o fracțiune din spațiul de stocare!</p>
+
+<h2>Concluzie</h2>
+<p>În timp ce instrumentele încorporate de la Mac sunt grozave în situații offline, le lipsește grav controlul granular necesar documentelor moderne.Pentru orice lucru important, bazați-vă întotdeauna pe un motor de compresie dedicat.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Cum să îmbinați mai multe fișiere PDF pe iPhone-ul dvs`,
+    date: `2026-06-19`,
+    excerpt: `Descoperiți cel mai simplu mod de a combina mai multe documente PDF într-un singur fișier direct de pe dispozitivul dvs. iOS.`,
+    content: `<p>Întrucât iPhone-urile devenind dispozitivele noastre principale pentru muncă și studiu, a ști cum să îmbinați fișierele PDF din mers este o abilitate esențială.Indiferent dacă compilați chitanțe pentru un raport de cheltuieli sau îmbinați notele de curs, iată exact cum puteți face acest lucru fără un computer.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>Provocarea cu iOS</h2>
+<p>Deși iOS are o aplicație robustă încorporată Fișiere, aceasta nu oferă o modalitate nativă și simplă de a selecta mai multe PDF-uri și de a le îmbina fără probleme.Puteți scana documente într-un singur PDF, dar îmbinarea fișierelor existente este surprinzător de dificilă.</p>
+
+<h2>Soluția: aplicația web TheyLovePDF</h2>
+<p>Nu trebuie să descărcați aplicații grele, bazate pe abonament din App Store.Puteți face acest lucru direct din Safari sau Chrome folosind arhitectura noastră cloud.</p>
+
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Ghid pas cu pas</h3>
+<ol class="space-y-3 mb-0">
+<li>Deschideți Safari pe iPhone și navigați la <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Instrumentul de îmbinare TheyLovePDF</a>.</li>
+<li>Atingeți butonul masiv <strong>Selectați fișierele PDF</strong>.</li>
+<li>Alegeți fișierele din aplicația <em>Fișiere</em> de pe iPhone sau din <em>Biblioteca foto</em>.Puteți selecta mai multe fișiere simultan.</li>
+<li>Odată încărcat, veți vedea o grilă vizuală a fișierelor dvs.Apăsați și mențineți apăsat orice fișier pentru a le trage și a le reordona exact așa cum doriți.</li>
+<li>Atingeți <strong>Îmbinare PDF</strong>.Serverele noastre vor procesa fișierele în milisecunde.</li>
+<li>Atingeți <strong>Descărcați</strong> și salvați noul document combinat direct pe dispozitiv.</li>
+</ol>
+</div>
+
+<h2>De ce să nu folosiți o aplicație?</h2>
+<p>O mulțime de aplicații PDF din App Store sunt descărcate gratuit, dar vă cer bani imediat ce încercați să îmbinați fișiere.Folosind un instrument cloud, evitați aceste taxe din App Store și economisiți spațiu de stocare pe telefon.</p>
+<p>Este atât de simplu, rapid și complet sigur!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Cum să vă securizați PDF-ul cu o parolă`,
+    date: `2026-06-18`,
+    excerpt: `Protejați informațiile sensibile adăugând la fișierele dvs. PDF o parolă de criptare AES de 256 de biți, sigură și de neîntrerupt.`,
+    content: `<p>În era digitală de astăzi, confidențialitatea datelor este mai critică ca niciodată.Indiferent dacă trimiteți situații financiare, dosare medicale sau un contract de afaceri confidențial, lăsarea unui PDF neprotejat reprezintă un risc masiv de securitate.</p>
+<p>În acest ghid, vă vom arăta cum să vă blocați documentele PDF utilizând criptarea militară.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Ce este criptarea AES pe 256 de biți?</h2>
+<p>Advanced Encryption Standard (AES) este algoritmul de criptare folosit de guvernul SUA pentru a securiza informațiile clasificate.O cheie de criptare pe 256 de biți înseamnă că există 2<sup>256</sup> combinații posibile - un număr atât de mare încât nici măcar cele mai puternice supercalculatoare din lume nu l-ar putea sparge într-un miliard de ani.</p>
+<p>Când folosiți instrumentul nostru, nu doar „adăugăm o parolă” care poate fi ocolită cu ușurință.Amestecăm matematic conținutul fișierului dvs. folosind AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Cum să vă protejați PDF-ul</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Navigați la instrumentul <a href="/tools/protect-pdf" class="font-bold hover:underline">Protejați PDF</a>.</li>
+<li>Încărcați documentul dvs. sensibil prin conexiunea noastră securizată TLS 1.3.</li>
+<li>Introduceți o parolă puternică.(Recomandăm cel puțin 12 caractere, amestecând litere, cifre și simboluri).</li>
+<li>Faceți clic pe <strong>Protect PDF</strong>.</li>
+<li>Descărcați fișierul dvs. nou criptat.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Cele mai bune practici pentru securitatea parolei</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>Nu trimiteți niciodată parola în același e-mail:</strong> dacă trimiteți PDF-ul prin e-mail, trimiteți parola printr-un alt canal (cum ar fi SMS-uri sau o aplicație de mesagerie securizată, cum ar fi Signal).</li>
+<li><strong>Utilizați un manager de parole:</strong> generați un șir de caractere aleatoriu, în loc să utilizați un cuvânt care poate fi găsit într-un dicționar.</li>
+<li><strong>Nu folosiți informații personale:</strong> evitați datele de naștere, numele animalelor de companie sau numele companiei.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Odată ce fișierul dvs. este criptat, conținutul original este șters definitiv de pe serverele noastre în decurs de 2 ore.Confidențialitatea dvs. este prioritatea noastră absolută.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `Ce este OCR?Cum să faci căutările PDF-urilor scanate`,
+    date: `2026-06-17`,
+    excerpt: `Aflați cum funcționează tehnologia de recunoaștere optică a caracterelor (OCR) și cum poate extrage text selectabil din imagini plate.`,
+    content: `<p>Ați primit vreodată un PDF care arată ca un document, dar când încercați să evidențiați textul, nu se întâmplă nimic?Ați întâlnit un PDF „plat” sau „scanat”.În esență, este doar o fotografie digitală a unei bucăți de hârtie.</p>
+<p>Pentru a interacționa cu acel text, aveți nevoie de magia <strong>Recunoașterii optice a caracterelor (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>Cum funcționează OCR</h2>
+<p>Când rulați un fișier printr-un motor OCR, software-ul acționează ca un ochi uman foarte antrenat.Scanează imaginea pixel cu pixel, căutând modele care seamănă cu litere și cifre.</p>
+<p>OCR modern nu se potrivește doar cu forme;folosește modele complexe de inteligență artificială și de învățare automată pentru a înțelege contextul.De exemplu, poate face diferența dintre un „I” mare și un „l” minuscul pe baza literelor din jur.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>Beneficiile OCR</h2>
+<ul class="space-y-2">
+<li><strong>Posibilitatea de căutare:</strong> găsirea unei anumite clauze într-un contract scanat de 500 de pagini este imposibilă fără a citi totul.OCR vă permite să utilizați CTRL+F pentru a găsi exact ceea ce aveți nevoie instantaneu.</li>
+<li><strong>Editabilitate:</strong> după ce textul este recunoscut, îl puteți copia, lipi și edita în Word sau Google Docs.</li>
+<li><strong>Accesibilitate:</strong> cititoarele de ecran pentru utilizatorii cu deficiențe de vedere nu pot citi imagini plate.OCR face documentele dvs. accesibile tuturor.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Cum să OCR un document</h2>
+<p>Transformarea documentelor scanate este incredibil de simplă cu TheyLovePDF:</p>
+<ol>
+<li>Accesați <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">instrumentul OCR PDF</a>.</li>
+<li>Încărcați documentul scanat.</li>
+<li>Selectați limba documentului.Acest lucru este esențial - a spune AI la ce limbă să se aștepte îmbunătățește drastic acuratețea, în special pentru limbile cu caractere sau accente unice.</li>
+<li>Proces de accesare.AI vă va reconstrui documentul, suprapunând un strat de text invizibil peste imaginile originale.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
+Opriți tastarea manuală a documentelor.Lasă AI să facă treaba grea pentru tine!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Cum să editați text PDF pe Windows 11 (fără Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Nu mai plătiți pentru software scump.Descoperiți cele mai eficiente, gratuite și inteligente moduri de a edita direct text și imagini PDF pe computerul dvs. Windows.`,
+    content: `<p>De ani de zile, utilizatorii de Windows s-au luptat cu fișierele PDF.Spre deosebire de documentele Word, PDF-urile au fost concepute pentru a fi printuri digitale „finalizate”.Când observați o greșeală de tipar într-un contract sau aveți nevoie să actualizați o dată pe o factură, de obicei loviți un paywall masiv precum Adobe Acrobat.</p>
+<p>Din fericire, în 2026, nu aveți nevoie de software scump instalat pe computerul dvs. Windows 11 pentru a face modificări de bază.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Abordarea web inteligentă</h2>
+<p>În loc să descarce aplicații desktop grele și lente, editorii bazați pe cloud folosesc puterea de procesare a serverelor de la distanță pentru a analiza structura PDF direct în browser.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Cum se editează direct</h3>
+<ol class="space-y-2 mb-0">
+<li>Deschideți Microsoft Edge sau Google Chrome pe Windows 11.</li>
+<li>Navigați la <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">instrumentul de editare PDF</a>.</li>
+<li>Încărcați documentul.Motorul nostru va decoda straturile de text instantaneu.</li>
+<li>Faceți clic pe orice casetă de text pentru a modifica textul, a schimba fontul sau a ajusta dimensiunea.</li>
+<li>Puteți, de asemenea, să inserați noi imagini, forme sau să închideți informațiile sensibile.</li>
+<li>Faceți clic pe <strong>Aplicați modificări</strong> și descărcați fișierul actualizat.</li>
+</ol>
+</div>
+
+<h2>De ce să nu folosiți Microsoft Edge?</h2>
+<p>Deși Microsoft Edge are un vizualizator PDF încorporat cu instrumente de desen (cerneală), acesta <strong>nu poate edita textul existent</strong>.Vă permite doar să desenați deasupra sau să adăugați noi casete de text.Pentru a schimba efectiv o greșeală de scriere în stratul de text original, aveți nevoie de un editor PDF adevărat.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Sfat profesionist:</p>
+<p class="text-sm text-gray-600">Dacă PDF-ul dvs. este o imagine scanată, editarea standard a textului nu va funcționa.Mai întâi trebuie să utilizați un <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">instrument OCR</a> pentru a converti imaginea într-un strat de text care poate fi citit.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Ghidul suprem pentru semnarea PDF-urilor pe Android gratuit`,
+    date: `2026-06-15`,
+    excerpt: `Trebuie să semnați un document urgent?Aflați cum să desenați, să tastați sau să vă încărcați semnătura electronică direct de pe telefonul Android.`,
+    content: `<p>Am fost cu toții acolo: primiți un document important prin e-mail în timp ce nu sunteți de la birou.Are nevoie imediat de semnătura ta.Imprimarea, semnarea și scanarea înapoi este o relicvă a trecutului.</p>
+<p>Astăzi, smartphone-ul dvs. Android este o stație de lucru digitală puternică, capabilă de semnături electronice obligatorii din punct de vedere legal.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Sunt semnăturile electronice legale?</h2>
+<p>Da.În conformitate cu Legea ESIGN (SUA) și eIDAS (Europa), semnăturile electronice au aceeași greutate legală ca și semnătura cu cerneală umedă pentru aproape toate tranzacțiile de afaceri și personale.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Cum să vă conectați pe Android (nu este necesară nicio aplicație)</h2>
+<p>Nu trebuie să umflați dispozitivul Android cu aplicații premium PDF.Utilizați doar browserul dvs. mobil.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li><strong>Deschide instrumentul:</strong> atinge linkul pentru a deschide <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">instrumentul de semnare PDF</a> în Chrome.</li>
+<li><strong>Încărcați documentul:</strong> atingeți pentru a încărca fișierul direct din dosarul Descărcări Android sau Google Drive.</li>
+<li><strong>Creați-vă semnătura:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Desenați:</em> folosiți degetul sau un stilou pentru a desena semnătura direct pe ecran.</li>
+<li><em>Tastați:</em> introduceți numele și alegeți un font cursiv.</li>
+<li><em>Încărcați:</em> încărcați o fotografie a semnăturii dvs. reale pe o foaie de hârtie albă (instrumentul nostru elimină automat fundalul).</li>
+</ul>
+</li>
+<li><strong>Plasați-o:</strong> trageți și plasați semnătura exact pe linia semnăturii.Puteți ciupi pentru a redimensiona.</li>
+<li><strong>Finalizare:</strong> atingeți „Semnați” pentru a încorpora definitiv semnătura în arhitectura documentului.</li>
+</ol>
+
+<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
+<p class="text-yellow-800 text-sm m-0"><strong>Notă de securitate:</strong> asigurați-vă întotdeauna că utilizați o platformă securizată, criptată prin HTTPS atunci când semnați documente sensibile.Ștergem automat toate fișierele de pe serverele noastre.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `De ce studenții ar trebui să convertească întotdeauna fișierele PDF în Word pentru editare`,
+    date: `2026-06-14`,
+    excerpt: `Scrieți o teză sau luați notițe?Descoperiți de ce extragerea textului într-un document Word este fundamental mai bună decât editarea directă a unui PDF.`,
+    content: `<p>Ca student, întâlnești sute de fișiere PDF în fiecare semestru: diapozitive de curs, lucrări de cercetare și manuale digitale.Când trebuie să extrageți citate, să rezumați conținut sau să rescrieți secțiuni, ați putea fi tentat să utilizați un editor PDF.Dar există un mod mai inteligent, mult mai profesionist.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Problema cu arhitectura PDF</h2>
+<p>PDF-urile (Portable Document Format) au fost concepute pentru <em>prezentare</em>, nu pentru compunere.În interiorul unui PDF, textul nu curge ca un document normal;fiecare cuvânt este fixat pe anumite coordonate X și Y de pe pagină.</p>
+<p>Dacă încercați să ștergeți un paragraf într-un editor PDF, textul de sub acesta <strong>nu</strong> se va muta în sus pentru a umple golul.Lasă un spațiu gol masiv.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Soluția: conversia PDF în Word</h2>
+<p>Prin convertirea documentului înapoi în Microsoft Word (.docx), motorul nostru inteligent reconstruiește aspectul fluid.Paragrafele devin din nou paragrafe, anteturile devin anteturi, iar imaginile devin blocuri mobile.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">Editor PDF</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ Textul nu revine</li>
+<li>❌ Este dificil de schimbat fonturile globale</li>
+<li>❌ Marginile sunt blocate</li>
+<li>❌ Tabelele sunt greu de modificat</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Document Word</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li>✅ Textul curge natural</li>
+<li>✅ Verificare ortografică și gramatică ușoară</li>
+<li>✅ Întreruperile dinamice de pagină</li>
+<li>✅ Copy-liping este impecabil</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Cum să o faci fără cusur</h2>
+<p><a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">convertorul nostru PDF în Word</a> alimentat de AI, utilizează recunoașterea avansată a aspectului.Încărcați fișierul și în câteva secunde veți avea un document Word complet editabil.După ce ați terminat de scris tema sau notele, puteți oricând să le exportați înapoi în PDF înainte de a le trimite profesorului dvs.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Combinați mai multe PDF-uri pe Windows 10: pas cu pas`,
+    date: `2026-06-13`,
+    excerpt: `Organizați-vă folderele dezordonate, împletind documente PDF conexe în fișiere unice, coezive, direct de pe desktopul Windows.`,
+    content: `<p>A avea 15 fișiere PDF diferite pentru un singur proiect este un coșmar.Fie că este vorba despre facturi lunare, capitole dintr-o carte sau dosare medicale scanate, combinarea acestora într-un singur fișier coeziv este esențială pentru organizația Windows 10.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Limitarea Windows încorporată</h2>
+<p>Windows 10 este un sistem de operare puternic, dar nu are o fuziune nativă PDF.Deși include „Microsoft Print to PDF”, aceasta vă ajută doar să creați PDF-uri din alte formate, nu să le combinați pe cele existente.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Fluxul de lucru inteligent (bazat pe browser)</h2>
+<p>Nu descărcați programe gratuite umbroase care ar putea conține programe malware sau să plaseze filigrane masive pe fișierele dvs.Cea mai profesionistă metodă este utilizarea unui instrument de browser criptat.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Pasul 1: adunați fișierele.</strong> Puneți toate fișierele PDF pe care doriți să le îmbinați într-un singur dosar de pe desktop.Acest lucru facilitează încărcarea.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Pasul 2: Deschideți Fuziunea.</strong> Accesați <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Instrumentul Fuzionare PDF</a> de pe TheyLovePDF.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Pasul 3: selectați și comandați.</strong> Trageți fișierele pe ecran.Veți vedea miniaturile de previzualizare.Puteți trage aceste miniaturi la stânga sau la dreapta pentru a vă asigura că sunt în ordinea cronologică perfectă.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Pasul 4: Combinați.</strong> Apăsați butonul de îmbinare.Serverul unește instantaneu codul binar al PDF-urilor, fără a pierde calitatea.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Această metodă funcționează pe Chrome, Edge, Firefox și Brave pe Windows 10, necesitând absolut zero privilegii de instalare sau de administrare pe computer.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `De ce profesioniștii din domeniul juridic trebuie să protejeze PDF-urile cu parole`,
+    date: `2026-06-12`,
+    excerpt: `O scufundare profundă în securitatea documentelor, conformitatea și motivul pentru care trimiterea de PDF-uri deschise prin e-mail este o răspundere majoră pentru firmele de avocatură.`,
+    content: `<p>În profesia de avocat, confidențialitatea nu este doar o bună practică - este o cerință strictă etică și adesea statutară.Cu toate acestea, nenumărate firme de avocatură și parajuriști trimit în continuare briefs, contracte și oferte sensibile sub formă de atașamente PDF necriptate prin e-mail standard.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Riscul de interceptare</h2>
+<p>E-mailul standard (SMTP) este notoriu nesigur.Dacă un e-mail este direcționat prin servere nesecurizate sau dacă o căsuță de e-mail este compromisă, un PDF necriptat este pe deplin lizibil de oricine îl interceptează.Acest lucru poate duce la încălcări ale privilegiului clientului și la răspunderi masive.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Criptare vs. parole</h2>
+<p>Este important să înțelegeți diferența.O simplă „parolă de permisiuni” împiedică imprimarea sau editarea, dar nu criptează fișierul.Oricine îl poate citi în continuare.</p>
+<p>Aveți nevoie de o <strong>parolă deschisă</strong> susținută de <strong>criptare AES-256</strong>.Când sunt aplicate, datele binare ale fișierului sunt amestecate.Fără parolă, documentul este matematic imposibil de citit.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Cerințe de conformitate</h4>
+<p class="text-red-800 text-sm m-0">Reglementări precum HIPAA (medicală) și GDPR (date europene) penalizează puternic organizațiile care nu reușesc să cripteze PII (Informații de identificare personală) în tranzit.Un PDF criptat este o metodă acceptată de securizare a datelor în tranzit.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Fluxul de lucru profesional</h2>
+<ol>
+<li>Creați documentul în Word și exportați în PDF.</li>
+<li>Încărcați-l pe o platformă sigură, fără reținere, cum ar fi <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
+<li>Aplicați o parolă generată de 16 caractere.</li>
+<li>Trimiteți clientului PDF-ul criptat.</li>
+<li>Oferiți parola clientului printr-un canal separat și securizat (de exemplu, un apel telefonic sau o aplicație de mesagerie criptată).</li>
+</ol>
+<p>Prin aplicarea acestui flux de lucru, profesioniștii din domeniul juridic se feresc de răspunderile privind încălcarea datelor și asigură confidențialitatea totală a clienților.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Cum să comprimați un PDF pe Android pentru a-l trimite prin WhatsApp`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp are limite de dimensiune a fișierelor care blochează documentele mari.Aflați cum să reduceți dimensiunea PDF-ului pe telefonul Android pentru a-l partaja instantaneu.`,
+    content: `<p>WhatsApp este standardul global pentru comunicarea rapidă, utilizat intens de companii și studenți pentru a partaja documente.Cu toate acestea, WhatsApp impune limite stricte de dimensiune a fișierelor.Dacă încercați să trimiteți un plan arhitectural de 150 MB sau un manual scanat masiv, aplicația va bloca definitiv transferul.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Dilema Android</h2>
+<p>Spre deosebire de comprimarea unei fotografii, sistemul de operare Android nu are o funcție încorporată pentru comprimarea documentelor PDF.Dacă căutați în Magazinul Google Play, veți fi bombardat cu aplicații pline de reclame intruzive care vă distrug calitatea fișierului.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Tehnica de compresie inteligentă</h2>
+<p>Puteți ocoli în întregime magazinele de aplicații utilizând infrastructura noastră cloud de mare viteză direct din Google Chrome pe dispozitivul dvs. Android.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Deschideți compresorul</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Atingeți acest link pentru a deschide <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compresor</a> în browser.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Încărcați din fișiere</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Atingeți pentru a încărca și selectați aplicația „Fișiere” sau „Documente” de pe Android pentru a găsi fișierul PDF mare.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Alegeți „Compresie extremă”</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Pentru WhatsApp, selectați cel mai înalt nivel de compresie.Acest lucru elimină datele de imagine de înaltă rezoluție, dar păstrează textul perfect lizibil pe ecranele mobile.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Descărcați și distribuiți</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">După procesare, atingeți Descărcați.Deschideți WhatsApp, atingeți pictograma agrafă, selectați Document și partajați fișierul dvs. proaspăt micșorat!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Acest proces întreg durează mai puțin de 30 de secunde, folosește foarte puțin din datele tale mobile și rezolvă permanent problema limitei WhatsApp.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Cum să extrageți anumite pagini dintr-un PDF masiv`,
+    date: `2026-06-10`,
+    excerpt: `Nu trimiteți un manual de 500 de pagini când cineva are nevoie doar de capitolul 3. Iată cel mai inteligent mod de a extrage și împărți pagini PDF.`,
+    content: `<p>Toți le-am primit: manualul corporativ de 500 de pagini, dosarul masiv de descoperire juridică sau manualul întregului semestru.Dar dacă trebuie să trimiteți paginile 45-52 doar unui coleg?</p>
+<p>Trimiterea întregului document este neprofesională, risipește lățime de bandă și obligă destinatarul să caute informațiile relevante.Trebuie să împărțiți PDF-ul.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>The Hacky Way vs. The Pro Way</h2>
+<p>Un „hack” obișnuit este să utilizați dialogul Print, selectați „Print to PDF” și alegeți un interval de pagini.În timp ce acest lucru funcționează, adesea aplatizează documentul - distrugând legăturile interactive, marcajele și, uneori, mărind semnificativ dimensiunea fișierului.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Modul profesional este de a împărți documentul la nivel binar, păstrând exact calitatea originală și metadatele paginilor extrase.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Utilizarea unui splitter profesional</h2>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Navigați la <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
+<li>Încărcați documentul dvs. masiv.Serverele noastre gestionează instantaneu fișiere de până la 2 GB.</li>
+<li>Alegeți modul dvs.:
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
+<li><strong>Extrage pagini:</strong> introduceți pagini sau intervale exacte (de ex., <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Divizat după intervale:</strong> tăiați automat documentul în mai multe documente mai mici.</li>
+</ul>
+</li>
+<li>Proces de accesare.Veți primi un PDF ordonat, foarte concentrat, care conține numai paginile pe care le-ați selectat, cu toate linkurile originale și calitatea intacte.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Extragând doar ceea ce contează, respectați timpul și spațiul în căsuța de e-mail ale destinatarului.Este o mică abilitate tehnică care aduce dividende profesionale masive.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Chat cu PDF: Cum schimbă AI modul în care citim documentele lungi`,
+    date: `2026-06-09`,
+    excerpt: `Nu mai citiți rapoarte de 100 de pagini.Aflați cum modelele lingvistice mari (LLM) vă permit să „vorbiți” literalmente cu documentele dvs. pentru a extrage răspunsuri instantaneu.`,
+    content: `<p>Citirea unui raport financiar de 150 de pagini sau a unei lucrări academice dens, obișnuia să dureze ore întregi de evidențiere, luare de note și căutare.În 2026, acea eră s-a încheiat oficial.Bun venit în era AI Document Chat.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>Ce este „Chat cu PDF”?</h2>
+<p>Imaginați-vă dacă autorul documentului stă lângă tine și ai putea să le pui întrebări.<em>„Care este venitul total pentru T3?”</em> sau <em>„Rezumați metodologia acestui experiment în trei puncte.”</em></p>
+<p><a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">instrumentul nostru de chat cu PDF</a> folosește modele avansate de limbaj mari (LLM).Când încărcați un fișier, AI „citește” întregul document în câteva secunde, stocându-l în memoria vectorială.Apoi utilizați o interfață de chat (exact ca ChatGPT) pentru a pune întrebări despre text.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Cum funcționează de fapt (sub capotă)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>Extragere text:</strong> sistemul analizează PDF-ul, extragând tot textul și tabelele.</li>
+<li><strong>Vectorizare:</strong> textul este tăiat în „bucăți” și convertit în numere matematice numite înglobări.</li>
+<li><strong>Căutare semantică:</strong> atunci când pui o întrebare, AI caută în matematică pentru a găsi exact paragrafele cele mai relevante pentru întrebarea ta.</li>
+<li><strong>Generație:</strong> LLM citește acele paragrafe specifice și scrie un răspuns natural, conversațional, citând adesea numărul exact al paginii pe care a găsit informațiile!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Cazuri de utilizare</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Studenți:</strong> Încărcați manuale pentru a crea instantanee ghiduri de studiu și carduri.<br><strong>Avocați:</strong> Încărcați dosare pentru a găsi instantaneu precedente fără CTRL+F.<br><strong>Analiști:</strong> Încărcați instantaneu rapoarte financiare specifice în 10-K.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Print de confidențialitate</h2>
+<p>Cea mai mare preocupare cu AI este confidențialitatea datelor.Atunci când utilizați instrumente profesionale precum TheyLovePDF, datele documentelor dvs. sunt strict sandbox.Nu este niciodată folosit pentru a antrena modele globale de IA, iar datele sunt șterse automat de pe servere după încheierea sesiunii.</p>
+<p>Nu rămâneți în urmă.Începeți să discutați cu documentele dvs. astăzi și depășește viteza de citire.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Cea mai bună alternativă iLovePDF pentru reducerea dimensiunii PDF`,
+    date: `2026-06-23`,
+    excerpt: `Doriți să comprimați un PDF fără a pierde calitatea sau a face față reclamelor agresive?Iată de ce TheyLovePDF este alternativa superioară la iLovePDF.`,
+    content: `<p>Dacă citiți asta, probabil că ați căutat o modalitate de a reduce dimensiunea PDF-ului și v-ați gândit să utilizați iLovePDF.Deși este un instrument popular, mulți utilizatori caută o alternativă mai rapidă, fără anunțuri, care să nu compromită fidelitatea vizuală a documentului lor.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>De ce să căutați o alternativă?</h2>
+<p>Multe instrumente PDF vechi se bazează pe algoritmi de compresie agresivi care distrug calitatea imaginilor și a graficelor vectoriale.În plus, nivelurile gratuite sunt adesea puternic restricționate cu limite zilnice și acoperite cu reclame intruzive.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>Avantajul TheyLovePDF</h2>
+<p>Am conceput <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">instrumentul nostru de comprimare PDF</a> pentru a fi cel mai bun din industrie.Iată de ce utilizatorii fac schimbarea:</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>Compresie inteligentă prin inteligență artificială:</strong> în loc să doar degradeze rezoluția imaginii, motorul nostru analizează matematic documentul și elimină metadatele invizibile, fonturile nereferite și structurile de date duplicat.</li>
+<li><strong>Zero reclame:</strong> considerăm că instrumentele utilitare ar trebui să fie curate și să nu distragă atenția.Nu veți găsi un singur banner publicitar pe instrumentul nostru de compresie.</li>
+<li><strong>Confidențialitate strictă:</strong> fișierele dvs. sunt protejate cu criptare SSL pe 256 de biți și sunt șterse definitiv de pe serverele noastre după 2 ore.Nu citim și nu vindem datele dvs.</li>
+</ul>
+
+<p>Data viitoare când trebuie să micșorați un fișier masiv pentru un atașament de e-mail sau un mesaj WhatsApp, omiteți instrumentele vechi.Trageți și plasați fișierul în TheyLovePDF și experimentați diferența.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Cum să convertiți PowerPoint (PPT) în PDF pe iPhone`,
+    date: `2026-06-23`,
+    excerpt: `Trebuie să trimiteți o prezentare de pe telefon?Aflați cel mai rapid mod de a transforma un fișier .ppt sau .pptx într-un PDF profesional direct pe iOS.`,
+    content: `<p>Fie că sunteți un student care încearcă să trimită o temă în autobuz sau un profesionist care trimite un e-mail unui client dintr-un aeroport, convertirea unui PowerPoint într-un PDF pe iPhone este o abilitate mobilă esențială.</p>
+<p>PDF-urile garantează că fonturile, formatarea și aspectul dvs. vor arăta exact la fel pe ecranul destinatarului, indiferent de dispozitivul pe care îl utilizează.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Metoda fără probleme</h2>
+<p>Nu descărcați o aplicație de prezentare grea doar pentru a converti un fișier.Puteți face acest lucru în siguranță prin Safari în câteva secunde.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Deschideți Safari și accesați <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (acest instrument se ocupă de Word, Excel și PowerPoint).</li>
+<li>Atingeți butonul de încărcare și selectați <strong>Alege fișiere</strong>.</li>
+<li>Găsiți fișierul <em>.pptx</em> descărcat în aplicația Fișiere pentru iPhone sau iCloud Drive.</li>
+<li>Atingeți convertiți.Motorul nostru de randare de nivel enterprise va păstra perfect toate diapozitivele și grafica vectorială.</li>
+<li>Atingeți Descărcați și salvați documentul PDF nou și clar pe dispozitivul dvs.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Întregul proces are loc în cloud, ceea ce înseamnă că nu va consuma bateria iPhone-ului și nu va ocupa spațiu de stocare local!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Cum să semnați digital un PDF pe Windows 10 și 11`,
+    date: `2026-06-23`,
+    excerpt: `Opriți imprimarea și scanarea contractelor.Iată modul profesional obligatoriu din punct de vedere juridic de a semna un document pe computerul tău Windows.`,
+    content: `<p>Primirea unui contract prin e-mail însemna să-l tipăriți, să-l semnați cu un pix, să-l scanați înapoi în computer și să trimiteți prin e-mail expeditorului o imagine degradată, strâmbă.În 2026, acest flux de lucru a încetat oficial.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Modul modern de a vă conecta pe Windows</h2>
+<p>Nu aveți nevoie de Adobe Acrobat sau de vreun software plătit instalat pe computerul dvs. Windows pentru a executa o semnătură electronică obligatorie din punct de vedere legal.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li>Deschideți Chrome sau Edge și navigați la <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">instrumentul de semnare PDF</a>.</li>
+<li>Trageți și plasați contractul pe pagină.</li>
+<li>Dați clic pe pictograma <strong>Semnătură</strong> din bara de instrumente.</li>
+<li>Alegeți cum doriți să semnați:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Desenați:</strong> utilizați mouse-ul sau un ecran tactil/stylus Windows pentru a vă scrie semnătura.</li>
+<li><strong>Tastați:</strong> introduceți numele și selectați un font cursiv profesional.</li>
+<li><strong>Încărcați:</strong> dacă aveți o fotografie curată a semnăturii dvs. reale, încărcați-o.Instrumentul nostru va îndepărta automat fundalul alb!</li>
+</ul>
+</li>
+<li>Trageți semnătura pe linia punctată, redimensionați-o și faceți clic pe <strong>Aplicați</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Aceste semnături sunt legale?</strong> Da!În cadrul principalelor cadre internaționale (cum ar fi US ESIGN Act și European eIDAS), semnăturile electronice au exact aceeași greutate legală ca și semnătura cu cerneală umedă pentru aproape toate acordurile comerciale standard.</p>
+</div>`
+  },
 ];

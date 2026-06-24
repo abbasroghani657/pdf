@@ -1,1135 +1,1050 @@
+// Auto-generated translation file for vi
 export const TOOLS_DATA_VI = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF sang Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Chuyển đổi tệp PDF của bạn thành tài liệu DOC và DOCX dễ chỉnh sửa.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Tải tài liệu PDF của bạn lên bằng cách kéo nó vào vùng thả hoặc nhấp vào nút 'Chọn tệp'.`,
+      `Công cụ chuyển đổi và OCR tiên tiến của chúng tôi sẽ ngay lập tức bắt đầu trích xuất văn bản, bố cục và định dạng.`,
+      `Tải xuống tài liệu Word (DOC/DOCX) đã được chuyển đổi hoàn hảo, sẵn sàng để chỉnh sửa.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Trình chuyển đổi PDF sang Word là gì?`,
+        "answer": `Trình chuyển đổi PDF sang Word là tiện ích trích xuất văn bản, bố cục và hình ảnh từ tệp PDF và tạo lại chúng dưới dạng tài liệu Microsoft Word hoàn toàn có thể chỉnh sửa.Công cụ chuyển đổi cao cấp của chúng tôi giữ nguyên phông chữ, bố cục, bảng và hình ảnh để tài liệu Word của bạn trông giống hệt bản PDF gốc.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Tôi có thể chuyển đổi tệp PDF được quét thành tài liệu Word có thể chỉnh sửa được không?`,
+        "answer": `Tuyệt đối.Công nghệ OCR (Nhận dạng ký tự quang học) tích hợp của chúng tôi tự động phát hiện văn bản được quét và làm cho nó có thể chỉnh sửa hoàn toàn trong tệp DOCX kết quả.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Bản PDF bí mật của tôi có an toàn trong quá trình chuyển đổi không?`,
+        "answer": `Chúng tôi rất coi trọng quyền riêng tư.Các tệp của bạn được mã hóa qua SSL 256-bit trong quá trình truyền và tự động bị xóa vĩnh viễn khỏi máy chủ của chúng tôi trong vòng 2 giờ.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Từ sang PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Làm cho các tệp DOC và DOCX trở nên dễ đọc bằng cách chuyển đổi chúng thành PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Chọn tệp DOC hoặc DOCX từ máy tính của bạn hoặc kéo tệp đó lên trang.`,
+      `Công cụ sẽ ngay lập tức khóa định dạng và chuyển đổi tài liệu Word sang định dạng PDF phổ biến.`,
+      `Tải xuống bản PDF mới của bạn.Bố cục sẽ trông giống hệt nhau trên mọi thiết bị.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Tại sao tôi nên chuyển Word sang PDF?`,
+        "answer": `Chuyển đổi sang PDF đảm bảo bố cục, phông chữ và hình ảnh tài liệu của bạn trông giống hệt nhau trên mọi thiết bị, ngăn ngừa lỗi định dạng khi chia sẻ với người khác.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Lề và phông chữ của tôi có được giữ nguyên không?`,
+        "answer": `Có, trình chuyển đổi Word sang PDF của chúng tôi khóa bố cục chính xác của bạn, bao gồm phông chữ tùy chỉnh và cài đặt lề chính xác.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Tôi có thể chuyển đổi nhiều tệp Word cùng một lúc không?`,
+        "answer": `Có, bạn có thể tải lên nhiều tệp DOC/DOCX và chúng tôi sẽ xử lý chúng đồng thời để chuyển đổi tốc độ cao.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF sang Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Trích xuất bảng và dữ liệu từ tệp PDF vào bảng tính Excel.Kết quả tốt nhất với các tệp PDF dựa trên văn bản.Các tệp PDF được quét được hỗ trợ qua OCR — độ chính xác có thể khác nhau.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Tải lên tệp PDF chứa các bảng và dữ liệu bạn muốn trích xuất.`,
+      `Hệ thống của chúng tôi sẽ quét tài liệu, xác định dữ liệu dạng bảng và định dạng chính xác dữ liệu đó thành các ô trong bảng tính.`,
+      `Tải xuống tệp Excel (XLSX) có thể chỉnh sửa của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Các bảng PDF của tôi có được định dạng chính xác trong Excel không?`,
+        "answer": `Có, công cụ trích xuất thông minh của chúng tôi nhận dạng hàng và cột, đảm bảo dữ liệu dạng bảng của bạn được sắp xếp gọn gàng thành các ô Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Nó có thể trích xuất dữ liệu từ các tệp PDF được quét không?`,
+        "answer": `Có, công nghệ OCR của chúng tôi có thể đọc bảng từ hình ảnh được quét và chuyển đổi chúng thành bảng tính Excel có thể chỉnh sửa.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Các công thức có được chuyển sang không?`,
+        "answer": `Tệp PDF không lưu trữ công thức, chỉ lưu trữ dữ liệu thô.Tệp Excel được trích xuất sẽ chứa các giá trị chính xác hiển thị trong tệp PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel sang PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Làm cho bảng tính EXCEL dễ đọc bằng cách chuyển đổi chúng sang PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Tải lên bảng tính Excel (XLS hoặc XLSX) của bạn.`,
+      `Công cụ của chúng tôi sẽ tối ưu hóa bố cục của bảng tính để phù hợp hoàn hảo với các trang PDF mà không cần cắt bỏ các cột.`,
+      `Tải xuống tài liệu PDF đã hoàn thiện.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Bảng tính rộng của tôi có bị cắt bỏ không?`,
+        "answer": `Công cụ chuyển đổi của chúng tôi chia tỷ lệ và định dạng bảng tính của bạn một cách thông minh để đảm bảo các cột khớp một cách hợp lý trên các trang PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Nó có chuyển đổi tất cả các bảng tính không?`,
+        "answer": `Có, tất cả các trang tính đang hoạt động trong tệp Excel của bạn sẽ được chuyển đổi thành các trang tuần tự trong tệp PDF cuối cùng.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Dữ liệu tài chính của tôi có an toàn không?`,
+        "answer": `100%.Chúng tôi sử dụng mã hóa hai đầu và tất cả các tệp sẽ bị xóa vĩnh viễn khỏi hệ thống của chúng tôi trong vòng 2 giờ.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF sang JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Chuyển đổi từng trang PDF thành JPG hoặc trích xuất tất cả hình ảnh có trong đó.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Tải lên tài liệu PDF bạn muốn chuyển đổi thành hình ảnh.`,
+      `Chọn trích xuất hình ảnh nhúng hoặc chuyển đổi toàn bộ trang PDF thành JPG có độ phân giải cao.`,
+      `Tải xuống từng tệp JPG hoặc dưới dạng tệp ZIP nén.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Chất lượng JPG có cao không?`,
+        "answer": `Có, chúng tôi trích xuất và chuyển đổi các trang ở độ phân giải cao, đảm bảo văn bản sắc nét và hình ảnh rõ ràng trong tệp JPG thu được.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Tôi có thể chỉ trích xuất hình ảnh từ PDF không?`,
+        "answer": `Tuyệt đối.Bạn có thể chọn chỉ trích xuất những ảnh được nhúng trong tệp PDF thay vì chuyển đổi toàn bộ trang.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Có giới hạn về số lượng trang tôi có thể chuyển đổi không?`,
+        "answer": `Người dùng miễn phí có thể chuyển đổi tệp PDF có dung lượng lên tới 10 MB.Người dùng chuyên nghiệp có thể xử lý các tệp lớn lên tới 2GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG sang PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Chuyển đổi hình ảnh JPG sang PDF trong vài giây.Dễ dàng điều chỉnh hướng và lề.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Chọn một hoặc nhiều hình ảnh JPG từ thiết bị của bạn.`,
+      `Kéo và thả để sắp xếp lại thứ tự của chúng, điều chỉnh hướng trang và đặt lề nếu cần.`,
+      `Nhấp vào 'Chuyển đổi' và tải xuống tài liệu PDF kết hợp của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Tôi có thể kết hợp nhiều JPG thành một tệp PDF không?`,
+        "answer": `Có, chỉ cần tải lên nhiều hình ảnh, sắp xếp chúng theo thứ tự ưa thích của bạn và chúng tôi sẽ hợp nhất chúng thành một tài liệu PDF duy nhất.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Hình ảnh của tôi có bị giảm chất lượng không?`,
+        "answer": `Không, chúng tôi giữ nguyên độ phân giải và chất lượng gốc của hình ảnh JPG của bạn khi nhúng chúng vào tệp PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Tôi có thể điều chỉnh lề và hướng không?`,
+        "answer": `Có, công cụ của chúng tôi cho phép bạn tùy chỉnh hướng trang (dọc hoặc ngang) và kích thước lề trước khi chuyển đổi.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF sang PowerPoint`,
+    "desc": `Biến các tệp PDF của bạn thành các trình chiếu PPT và PPTX dễ chỉnh sửa.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Tải lên bản PDF mà bạn muốn chuyển thành bản trình bày.`,
+      `Công cụ AI của chúng tôi sẽ phân tích các trang trình bày và chuyển đổi chúng thành các định dạng PPTX có thể chỉnh sửa.`,
+      `Tải xuống bản trình bày PowerPoint mới của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Văn bản trong PowerPoint của tôi có thể chỉnh sửa được không?`,
+        "answer": `Có, tất cả văn bản, hình dạng và hình ảnh sẽ hoàn toàn có thể chỉnh sửa được trong tệp PPTX thu được.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Nó có hoạt động với các bài thuyết trình được quét không?`,
+        "answer": `Có, bằng cách sử dụng OCR, chúng tôi có thể trích xuất văn bản từ các trang chiếu được quét và làm cho nó có thể chỉnh sửa được trong PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Bố cục trang chiếu có được giữ nguyên không?`,
+        "answer": `Công nghệ chuyển đổi tiên tiến của chúng tôi đảm bảo bố cục của tệp PDF gốc của bạn khớp nhất có thể trong PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint sang PDF`,
+    "desc": `Làm cho trình chiếu PPT và PPTX dễ xem bằng cách chuyển đổi chúng sang PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Chọn tệp PPT hoặc PPTX của bạn.`,
+      `Công cụ này sẽ ngay lập tức chuyển đổi các trang trình bày của bạn thành định dạng PDF phổ biến, an toàn.`,
+      `Tải xuống bản trình bày của bạn dưới dạng PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Tại sao chuyển đổi PowerPoint sang PDF?`,
+        "answer": `Việc chuyển đổi đảm bảo bản trình bày của bạn trông giống hệt nhau trên mọi thiết bị, ngăn ngừa thiếu phông chữ hoặc bố cục bị hỏng khi trình bày trên máy tính khác.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Chuyển tiếp slide của tôi có được lưu không?`,
+        "answer": `Không, PDF là định dạng tài liệu tĩnh nên hoạt ảnh và chuyển tiếp trang chiếu sẽ không được chuyển sang.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Có bao gồm ghi chú của người thuyết trình không?`,
+        "answer": `Hiện tại, công cụ của chúng tôi chuyển đổi hình ảnh slide chính.Ghi chú của người thuyết trình không được bao gồm trong đầu ra PDF tiêu chuẩn.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF sang HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Chuyển đổi tài liệu PDF của bạn sang các trang web HTML một cách hoàn hảo.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Tải lên tệp PDF của bạn.`,
+      `Hệ thống của chúng tôi sẽ chuyển đổi tài liệu thành HTML, CSS và hình ảnh sẵn sàng cho web.`,
+      `Tải xuống tệp ZIP chứa trang web mới của bạn.`,
     ],
     "faqs": [
-      {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
-      },
-      {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
-      },
-      {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML sang PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Chuyển đổi các trang web ở định dạng HTML sang PDF trực tiếp từ URL hoặc tệp.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Tải lên tệp HTML của bạn hoặc nhập URL trang web.`,
+      `Công cụ kết xuất của chúng tôi sẽ tải trang, áp dụng kiểu và ghi lại dưới dạng tài liệu PDF.`,
+      `Tải xuống bản PDF có định dạng hoàn hảo của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Tôi có thể chuyển đổi URL trực tiếp sang PDF không?`,
+        "answer": `Có, bạn có thể nhập URL và công cụ của chúng tôi sẽ tìm nạp trang web trực tiếp và chuyển đổi nó thành tệp PDF chất lượng cao.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Các kiểu CSS có được áp dụng không?`,
+        "answer": `Tuyệt đối.Công cụ kết xuất của chúng tôi hỗ trợ đầy đủ CSS, đảm bảo tệp PDF trông giống hệt trang web trực tiếp.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Còn các trang nặng về JavaScript thì sao?`,
+        "answer": `Công cụ của chúng tôi thực thi JavaScript trước khi chụp trang, đảm bảo nội dung động được hiển thị chính xác trong tệp PDF cuối cùng.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF sang văn bản`,
+    "desc": `Trích xuất văn bản từ tệp PDF của bạn để tạo tài liệu TXT có thể chỉnh sửa.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Tải lên tài liệu PDF của bạn.`,
+      `Hệ thống của chúng tôi sẽ loại bỏ định dạng và trích xuất văn bản thuần túy, thuần túy.`,
+      `Tải xuống tệp TXT thô của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Nó có trích xuất văn bản từ hình ảnh không?`,
+        "answer": `Có, nếu tệp PDF chứa hình ảnh được quét, công nghệ OCR của chúng tôi sẽ đọc văn bản và đưa nó vào tệp TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Định dạng có được giữ nguyên không?`,
+        "answer": `Không, công cụ này đặc biệt loại bỏ tất cả định dạng để cung cấp cho bạn văn bản thuần túy thô, chưa được định kiểu.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Dữ liệu của tôi có an toàn không?`,
+        "answer": `Có, tất cả các tập tin đều được mã hóa trong quá trình xử lý và tự động xóa trong vòng 2 giờ.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Hợp nhất PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Kết hợp các tệp PDF theo thứ tự bạn muốn bằng cách hợp nhất PDF dễ dàng nhất hiện có.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Chọn nhiều tệp PDF từ thiết bị của bạn.`,
+      `Kéo và thả hình thu nhỏ để sắp xếp các tệp theo thứ tự bạn muốn.`,
+      `Nhấp vào 'Hợp nhất' và tải xuống tài liệu PDF đơn lẻ, kết hợp của bạn.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Sáp nhập PDF là gì?`,
+        "answer": `Sáp nhập PDF là một tiện ích kết hợp nhiều tệp PDF thành một tài liệu liên tục duy nhất.Người dùng miễn phí có thể hợp nhất tối đa 20 tệp cùng một lúc.Người dùng chuyên nghiệp có thể hợp nhất số lượng tài liệu không giới hạn.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Tôi có thể thay đổi thứ tự của các tập tin không?`,
+        "answer": `Đúng!Sau khi tải lên, chỉ cần kéo và thả hình thu nhỏ của tệp để sắp xếp lại chúng theo cách bạn muốn.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Việc sáp nhập có làm giảm chất lượng không?`,
+        "answer": `Không có gì.Quá trình hợp nhất giữ nguyên chất lượng và định dạng ban đầu của tất cả tài liệu của bạn.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Tách PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Tách một trang hoặc toàn bộ để dễ dàng chuyển đổi thành các tệp PDF độc lập.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Tải lên bản PDF bạn muốn chia nhỏ.`,
+      `Chọn trích xuất các trang cụ thể hay chia tài liệu thành các phạm vi cố định.`,
+      `Tải xuống các tệp PDF mới, riêng biệt của bạn dưới dạng kho lưu trữ ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Tôi có thể trích xuất chỉ một trang từ một tệp PDF lớn không?`,
+        "answer": `Có, bạn có thể dễ dàng chỉ định một số trang hoặc một phạm vi tùy chỉnh (ví dụ: trang 4-7) để trích xuất.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Các tập tin được chia nhỏ có giữ được chất lượng ban đầu không?`,
+        "answer": `Có, từng trang riêng lẻ được trích xuất hoàn hảo mà không làm giảm độ phân giải hoặc chất lượng văn bản.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Làm cách nào để tải xuống nhiều tệp được chia nhỏ?`,
+        "answer": `Khi bạn chia tài liệu thành nhiều phần, chúng tôi sẽ đóng gói chúng thành một tệp ZIP một cách thuận tiện để dễ dàng tải xuống.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Xoay PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Xoay các tệp PDF của bạn theo cách bạn cần.Bạn thậm chí có thể xoay nhiều tệp PDF cùng một lúc.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Tải lên tài liệu PDF của bạn.`,
+      `Di chuột qua các trang bạn muốn xoay và nhấp vào biểu tượng xoay hoặc xoay tất cả các trang cùng một lúc.`,
+      `Nhấp vào áp dụng và tải xuống bản PDF được xoay vĩnh viễn của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Tôi có thể chỉ xoay các trang cụ thể không?`,
+        "answer": `Có, bạn có thể chọn từng trang riêng lẻ và xoay chúng 90, 180 hoặc 270 độ mà không ảnh hưởng đến phần còn lại của tài liệu.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Vòng quay có vĩnh viễn không?`,
+        "answer": `Có, sau khi bạn tải xuống tệp mới, các thay đổi về hướng sẽ được lưu vĩnh viễn vào siêu dữ liệu của tệp PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Có an toàn để tải lên các tài liệu bí mật?`,
+        "answer": `Tuyệt đối.Tất cả nội dung tải lên đều được mã hóa qua HTTPS và bị xóa khỏi máy chủ của chúng tôi 2 giờ sau khi xử lý.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Xóa trang`,
+    "desc": `Xóa các trang khỏi tài liệu PDF trong nháy mắt.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Tải lên tệp PDF của bạn.`,
+      `Chọn các trang bạn muốn xóa bằng cách nhấp vào hình thu nhỏ của chúng.`,
+      `Nhấp vào 'Xóa trang' và tải xuống tài liệu mới được sắp xếp hợp lý của bạn.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Làm sao để biết trang nào cần xóa?`,
+        "answer": `Công cụ của chúng tôi tạo hình thu nhỏ chất lượng cao cho mỗi trang, cho phép bạn xác định và chọn chính xác các trang bạn muốn xóa một cách trực quan.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Tôi có thể xóa nhiều trang cùng một lúc không?`,
+        "answer": `Có, bạn có thể nhấp vào nhiều hình thu nhỏ hoặc nhập một phạm vi trang để xóa nhiều trang cùng một lúc.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Phần còn lại của tài liệu có bị ảnh hưởng không?`,
+        "answer": `Không, tất cả các trang còn lại sẽ giữ nguyên định dạng, chất lượng và độ phân giải ban đầu.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Sắp xếp lại các trang`,
+    "desc": `Thay đổi thứ tự trang của tài liệu PDF của bạn bằng cách kéo và thả.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Tải lên tài liệu PDF của bạn.`,
+      `Chỉ cần kéo và thả hình thu nhỏ của trang để thay đổi trình tự của chúng.`,
+      `Sau khi sắp xếp, hãy áp dụng các thay đổi và tải xuống bản PDF đã được sắp xếp lại của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Có dễ dàng sắp xếp lại một tài liệu lớn?`,
+        "answer": `Có, giao diện kéo và thả trực quan của chúng tôi cho phép bạn nhanh chóng di chuyển các trang xung quanh, ngay cả trong các tài liệu lớn.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Tôi có bị mất bất kỳ yếu tố tương tác nào không?`,
+        "answer": `Hầu hết các phần tử tương tác tiêu chuẩn đều được giữ nguyên, mặc dù các trường biểu mẫu phức tạp kết nối nhiều trang có thể hoạt động khác nhau.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Tôi có thể hoàn tác một bước di chuyển trước khi lưu không?`,
+        "answer": `Có, bạn có thể sắp xếp lại các trang bao nhiêu lần tùy thích trước khi nhấp vào nút xử lý cuối cùng.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Thêm trang trống`,
+    "desc": `Chèn một trang trống vào bất cứ đâu trong tài liệu PDF của bạn.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Tải lên tệp PDF của bạn.`,
+      `Chọn vị trí chính xác mà bạn muốn chèn một trang trống mới.`,
+      `Áp dụng các thay đổi và tải xuống bản PDF cập nhật của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Tại sao tôi cần thêm một trang trống?`,
+        "answer": `Việc thêm trang trống rất hữu ích cho việc in tài liệu hai mặt, chèn ghi chú trong tương lai hoặc sửa định dạng phân trang.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Tôi có thể thêm nhiều trang trống không?`,
+        "answer": `Có, bạn có thể chèn bao nhiêu trang trống tùy thích, vào bất kỳ đâu trong tài liệu.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Trang trống có khớp với kích thước của tài liệu không?`,
+        "answer": `Có, trang trống mới sẽ tự động khớp với kích thước và hướng của các trang xung quanh.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Nén PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Giảm kích thước tệp trong khi tối ưu hóa chất lượng PDF tối đa.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Tải lên tệp PDF cồng kềnh của bạn.`,
+      `Chọn mức độ nén mong muốn của bạn (Cực cao, Khuyến nghị hoặc Ít nén hơn).`,
+      `Tải xuống tệp PDF nhỏ hơn, được tối ưu hóa của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Việc nén có làm hỏng chất lượng tệp PDF của tôi không?`,
+        "answer": `Các thuật toán tối ưu hóa nâng cao của chúng tôi giúp giảm kích thước tệp bằng cách nén hình ảnh và xóa dữ liệu dư thừa trong khi vẫn giữ cho văn bản sắc nét và hình ảnh rõ nét.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Tôi nên chọn mức nén nào?`,
+        "answer": `Chúng tôi đề xuất 'Được khuyến nghị' để có sự cân bằng hoàn hảo.Chỉ sử dụng 'Cực đoan' nếu bạn cần gấp kích thước tệp nhỏ nhất có thể cho tệp đính kèm email.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Tôi có thể nén một tệp PDF vốn đã nhỏ không?`,
+        "answer": `Bạn có thể, nhưng việc giảm kích thước tệp sẽ ở mức tối thiểu vì dữ liệu có thể đã được tối ưu hóa.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Sửa chữa PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Sửa chữa tệp PDF bị hỏng và khôi phục dữ liệu từ các tệp bị hỏng.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Tải lên tệp PDF bị hỏng hoặc bị hỏng của bạn.`,
+      `Hệ thống của chúng tôi sẽ phân tích cấu trúc tệp và cố gắng xây dựng lại dữ liệu bị hỏng.`,
+      `Tải xuống tài liệu PDF đã sửa chữa.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Có thể sửa được tất cả các tệp PDF bị hỏng không?`,
+        "answer": `Mặc dù công cụ của chúng tôi có hiệu quả cao trong việc sửa lỗi cấu trúc và tiêu đề bị hỏng, nhưng các tệp bị hỏng nghiêm trọng do thiếu dữ liệu thô có thể không phục hồi được hoàn toàn.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Sửa chữa mất bao lâu?`,
+        "answer": `Hầu hết các tệp được phân tích và sửa chữa trong vòng vài giây, tùy thuộc vào mức độ phức tạp của hư hỏng.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Dữ liệu bên trong có an toàn không?`,
+        "answer": `Đúng.Chúng tôi xử lý việc sửa chữa một cách an toàn trên đám mây và tài liệu của bạn sẽ bị xóa vĩnh viễn ngay sau đó.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `PDF OCR`,
+    "desc": `Làm cho văn bản trong các tệp PDF được quét có thể lựa chọn, tìm kiếm và chỉnh sửa được.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Tải lên tài liệu PDF được quét của bạn.`,
+      `Chọn ngôn ngữ của văn bản bên trong tài liệu để có độ chính xác cao hơn.`,
+      `Tải xuống bản PDF mới, có thể tìm kiếm và lựa chọn đầy đủ của bạn.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `OCR là gì?`,
+        "answer": `OCR là viết tắt của Nhận dạng ký tự quang học.Đó là công nghệ đọc văn bản bên trong hình ảnh hoặc tài liệu được quét và chuyển đổi nó thành văn bản máy tính có thể lựa chọn và tìm kiếm được.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `OCR có hoạt động trên văn bản viết tay không?`,
+        "answer": `Công cụ OCR của chúng tôi có độ chính xác cao đối với văn bản in.Văn bản viết tay có thể mang lại kết quả khác nhau tùy thuộc vào mức độ dễ đọc.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Tôi có thể sao chép văn bản từ tài liệu OCR không?`,
+        "answer": `Tuyệt đối.Sau khi xử lý, bạn có thể đánh dấu, sao chép và dán văn bản trực tiếp từ tệp PDF giống như một tài liệu thông thường.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Làm phẳng PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Hợp nhất tất cả các lớp, biểu mẫu và chú thích thành một lớp duy nhất không thể chỉnh sửa.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Tải lên bản PDF chứa biểu mẫu, lớp hoặc chú thích.`,
+      `Hệ thống của chúng tôi sẽ hợp nhất vĩnh viễn tất cả các yếu tố trực quan thành một lớp phẳng duy nhất.`,
+      `Tải xuống bản PDF dẹt, sẵn sàng để in.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Tại sao tôi nên làm phẳng một tệp PDF?`,
+        "answer": `Việc làm phẳng tệp PDF sẽ khóa dữ liệu biểu mẫu, ngăn chặn việc chỉnh sửa thêm các chú thích và đảm bảo tài liệu được in chính xác như xuất hiện trên màn hình.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Một tệp PDF đã được làm phẳng có thể được làm phẳng không?`,
+        "answer": `Không, làm phẳng là một quá trình lâu dài.Chúng tôi khuyên bạn nên sao lưu bản PDF tương tác ban đầu của mình.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Việc làm phẳng có làm giảm kích thước tập tin không?`,
+        "answer": `Thường thì có.Bằng cách hợp nhất các lớp và loại bỏ các trường biểu mẫu tương tác, cấu trúc tổng thể trở nên đơn giản và nhỏ hơn.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Bảo vệ PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Mã hóa tệp PDF của bạn bằng mật khẩu để ngăn chặn truy cập trái phép.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Tải lên bản PDF bạn muốn bảo mật.`,
+      `Nhập một mật khẩu mạnh và xác nhận nó.`,
+      `Tải xuống tệp PDF được mã hóa mới của bạn.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Loại mã hóa nào được sử dụng?`,
+        "answer": `Chúng tôi sử dụng mã hóa AES 256-bit mạnh mẽ, đây là tiêu chuẩn ngành để bảo mật các tài liệu bí mật và có độ nhạy cảm cao.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `TheyLovePDF có thể khôi phục mật khẩu của tôi nếu tôi quên không?`,
+        "answer": `Không. Mật khẩu của bạn không bao giờ được lưu trên máy chủ của chúng tôi.Nếu bạn làm mất nó, tài liệu sẽ không thể được giải mã.Xin hãy giữ nó an toàn!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Việc bảo vệ tệp PDF có ngăn cản việc in ấn không?`,
+        "answer": `Có, mã hóa sẽ khóa tài liệu khỏi bị mở, in hoặc chỉnh sửa nếu không có mật khẩu chính xác.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Mở khóa PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Loại bỏ bảo mật mật khẩu PDF, cho phép bạn tự do sử dụng các tệp PDF của mình theo ý muốn.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Tải lên bản PDF được bảo vệ bằng mật khẩu của bạn.`,
+      `Nếu tệp có 'mật khẩu chủ sở hữu' hạn chế chỉnh sửa, chúng tôi sẽ xóa tệp đó ngay lập tức.Nếu nó có 'mật khẩu người dùng' hạn chế mở, bạn phải nhập mật khẩu đó trước.`,
+      `Tải xuống bản PDF đã mở khóa của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Bạn có thể mở khóa PDF mà không cần mật khẩu không?`,
+        "answer": `Chúng tôi có thể dễ dàng loại bỏ 'hạn chế chỉnh sửa/in' (mật khẩu chủ sở hữu) mà không cần mật khẩu.Tuy nhiên, nếu file yêu cầu mật khẩu chỉ để mở nó (mật khẩu người dùng) thì bạn phải cung cấp mật khẩu đó.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Việc mở khóa PDF có hợp pháp không?`,
+        "answer": `Bạn chỉ nên xóa bảo mật khỏi các tài liệu mà bạn sở hữu hợp pháp hoặc có quyền sửa đổi.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Việc mở khóa có làm thay đổi nội dung của tài liệu không?`,
+        "answer": `Không, nội dung, định dạng và chất lượng vẫn hoàn toàn không bị ảnh hưởng.Chỉ có lớp bảo mật bị loại bỏ.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Biên tập lại PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Xóa vĩnh viễn thông tin nhạy cảm hoặc dữ liệu ẩn khỏi tệp PDF của bạn.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Tải lên tệp PDF của bạn.`,
+      `Vẽ các hộp đen lên trên văn bản, hình ảnh hoặc thông tin cá nhân nhạy cảm.`,
+      `Áp dụng các thao tác chỉnh sửa để xóa vĩnh viễn dữ liệu, sau đó tải tệp xuống.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Văn bản được biên tập lại có thực sự biến mất không?`,
+        "answer": `Đúng.Không giống như chỉ vẽ một hình màu đen trên văn bản, công cụ chỉnh sửa của chúng tôi xóa vĩnh viễn dữ liệu văn bản cơ bản để máy không thể sao chép hoặc đọc dữ liệu đó.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Tôi có thể biên tập lại hình ảnh không?`,
+        "answer": `Tuyệt đối.Bạn có thể chọn bất kỳ khu vực nào của trang, bao gồm đồ họa và ảnh, để bôi đen vĩnh viễn.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Việc chỉnh sửa có thể đảo ngược được không?`,
+        "answer": `Không. Để bảo mật cho bạn, việc biên tập sẽ phá hủy vĩnh viễn dữ liệu ẩn.Luôn giữ một bản sao lưu chưa được chỉnh sửa nếu cần.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Ký PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Tự ký hoặc yêu cầu chữ ký điện tử từ người khác.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Tải lên tài liệu yêu cầu chữ ký.`,
+      `Tạo chữ ký của bạn bằng cách vẽ, gõ hoặc tải hình ảnh lên.`,
+      `Đặt chữ ký của bạn trên tài liệu, nhấp vào áp dụng và tải xuống.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Chữ ký điện tử có hợp pháp không?`,
+        "answer": `Có, chữ ký điện tử được tạo bằng TheyLovePDF có tính ràng buộc về mặt pháp lý ở hầu hết các quốc gia và khu vực pháp lý.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Tôi có thể lưu chữ ký của mình để sử dụng sau không?`,
+        "answer": `Có, nếu tạo tài khoản, bạn có thể lưu chữ ký của mình một cách an toàn để đăng nhập nhanh chóng chỉ bằng 1 cú nhấp chuột trong tương lai.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Tôi có thể thêm ngày văn bản và tên viết tắt không?`,
+        "answer": `Tuyệt đối.Cùng với chữ ký của mình, bạn có thể dễ dàng kéo và thả ngày, tên viết tắt và các trường văn bản tùy chỉnh.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Yêu cầu chữ ký`,
+    "desc": `Gửi tài liệu cho khách hàng để được ký trực tuyến hợp pháp.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Tải lên bản PDF bạn cần ký.`,
+      `Thêm địa chỉ email của người nhận và gán trường chữ ký cho họ.`,
+      `Gửi yêu cầu.Chúng tôi sẽ gửi email cho họ một liên kết an toàn để ký tài liệu trực tuyến.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Người nhận có cần tài khoản để ký không?`,
+        "answer": `Không, người nhận có thể ký tài liệu một cách an toàn trực tiếp từ liên kết email của họ mà không cần tạo tài khoản TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Làm sao tôi biết khi nào nó được ký?`,
+        "answer": `Bạn sẽ nhận được thông báo qua email tự động ngay khi tất cả các bên hoàn tất việc ký vào tài liệu.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Có dấu vết kiểm toán không?`,
+        "answer": `Có, người dùng Pro nhận được bản kiểm tra toàn diện nêu chi tiết địa chỉ IP và dấu thời gian để tuân thủ pháp luật đầy đủ.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Ký giấy chứng nhận`,
+    "desc": `Thêm chữ ký số mật mã vào tệp PDF của bạn.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Tải lên bản PDF và tệp chứng chỉ kỹ thuật số của bạn (.pfx hoặc .p12).`,
+      `Nhập mật khẩu chứng chỉ.`,
+      `Áp dụng chữ ký mật mã và tải xuống bản PDF đã được xác minh.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Chữ ký chứng chỉ là gì?`,
+        "answer": `Không giống như chữ ký điện tử trực quan, chữ ký chứng chỉ áp dụng hàm băm mật mã cho tài liệu, chứng minh tính xác thực của nó về mặt toán học và đảm bảo nó không bị thay đổi.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Bạn có lưu trữ mật khẩu chứng chỉ của tôi không?`,
+        "answer": `Không bao giờ.Mật khẩu của bạn chỉ được giữ trong bộ nhớ tạm thời tại thời điểm ký và bị hủy ngay lập tức.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Mọi người có thể xác minh chữ ký?`,
+        "answer": `Có, khi mở bằng trình đọc PDF tiêu chuẩn như Adobe Acrobat, dấu kiểm màu xanh lục sẽ xuất hiện cho biết tài liệu đã được xác minh kỹ thuật số và không bị thay đổi.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Trò chuyện bằng PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Nói chuyện với PDF của bạn.Đặt câu hỏi, nhận bản tóm tắt và trích xuất thông tin chi tiết ngay lập tức bằng AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `trí tuệ nhân tạo` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Tải lên tài liệu PDF dài hoặc phức tạp của bạn.`,
+      `Nhập câu hỏi vào hộp trò chuyện, chẳng hạn như 'Tóm tắt chương 2' hoặc 'Lý lẽ chính là gì?'`,
+      `AI của chúng tôi sẽ ngay lập tức đọc tài liệu và cung cấp cho bạn câu trả lời chính xác.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Trò chuyện bằng PDF hoạt động như thế nào?`,
+        "answer": `Chúng tôi sử dụng Mô hình ngôn ngữ lớn (LLM) nâng cao để quét văn bản tài liệu của bạn, hiểu ngữ cảnh của nó và trả lời bất kỳ câu hỏi nào bạn hỏi dựa trên nội dung tài liệu.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Nó có đọc được tài liệu scan không?`,
+        "answer": `Nếu tài liệu hoàn toàn là hình ảnh, trước tiên bạn phải chạy nó thông qua công cụ OCR của chúng tôi.Nếu nó chứa văn bản có thể chọn, AI có thể đọc nó ngay lập tức.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Tài liệu của tôi có được sử dụng để đào tạo AI không?`,
+        "answer": `Hoàn toàn không.Sự riêng tư của bạn là ưu tiên của chúng tôi.Tài liệu được xử lý trong môi trường an toàn và không bao giờ được sử dụng để đào tạo các mô hình AI công cộng.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Chỉnh sửa PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Thêm văn bản, hình ảnh, hình dạng hoặc chú thích tự do vào tài liệu PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Phổ biến` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Tải lên bản PDF bạn muốn sửa đổi.`,
+      `Sử dụng thanh công cụ để thêm văn bản, chèn hình ảnh, vẽ hình hoặc áp dụng hiệu ứng xóa trắng cho các khu vực hiện có.`,
+      `Lưu các chỉnh sửa của bạn và tải xuống bản PDF cập nhật.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Tôi có thể thay đổi văn bản hiện có trong PDF không?`,
+        "answer": `Hiện tại, bạn có thể sử dụng công cụ 'whiteout' để che văn bản cũ và nhập văn bản mới lên trên đó.Chỉnh sửa văn bản gốc là một tính năng rất phức tạp mà chúng tôi đang tích cực phát triển.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Tôi có thể thêm hình ảnh vào PDF không?`,
+        "answer": `Có, bạn có thể dễ dàng tải lên và đóng dấu hình ảnh PNG hoặc JPG ở bất kỳ đâu vào tài liệu của mình.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Việc chỉnh sửa có làm giảm chất lượng tài liệu không?`,
+        "answer": `Không, trình chỉnh sửa của chúng tôi thêm chú thích của bạn lên trên cấu trúc tài liệu hiện có mà không cần nén lại hình ảnh hoặc văn bản gốc.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Hình mờ PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Đóng dấu hình ảnh hoặc văn bản lên tệp PDF của bạn trong vài giây.Chọn kiểu chữ, độ trong suốt và vị trí.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Tải lên tệp PDF của bạn.`,
+      `Nhập văn bản hình mờ của bạn hoặc tải lên hình ảnh logo.Điều chỉnh độ mờ, xoay và vị trí.`,
+      `Nhấp vào áp dụng và tải xuống tài liệu có hình mờ của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Tôi có thể đóng dấu mờ tất cả các trang cùng một lúc không?`,
+        "answer": `Có, theo mặc định hình mờ của bạn sẽ được áp dụng nhất quán trên mỗi trang của tài liệu.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Tôi có thể điều chỉnh độ trong suốt không?`,
+        "answer": `Tuyệt đối.Bạn có thể làm cho hình mờ rất mờ để nó không làm mất tập trung vào tài liệu hoặc mờ hoàn toàn để có khả năng hiển thị tối đa.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Hình mờ có thể được gỡ bỏ?`,
+        "answer": `Chúng tôi làm phẳng hình mờ vào cấu trúc tài liệu để khiến việc xóa hình mờ trở nên khó khăn nhất có thể, đảm bảo tài sản trí tuệ của bạn được bảo vệ.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `biểu mẫu PDF`,
+    "desc": `Điền vào các mẫu PDF trực tuyến một cách nhanh chóng và chính xác.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Tải lên biểu mẫu PDF tương tác.`,
+      `Nhấp vào các trường văn bản, hộp kiểm hoặc nút radio để điền thông tin của bạn.`,
+      `Tải xuống mẫu đơn đã điền đầy đủ thông tin.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Tôi có thể lưu biểu mẫu đã điền một phần không?`,
+        "answer": `Nếu bạn có tài khoản Pro, các phiên của bạn sẽ được lưu tự động, cho phép bạn quay lại và hoàn tất việc điền biểu mẫu sau.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Nó có hoạt động với tất cả các dạng PDF không?`,
+        "answer": `Công cụ của chúng tôi hỗ trợ AcroForms tiêu chuẩn, chiếm 99% các tệp PDF tương tác.Các biểu mẫu XFA cũ hơn có thể được hỗ trợ hạn chế.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Tôi có thể làm phẳng biểu mẫu sau khi điền vào không?`,
+        "answer": `Có, sau khi tải xuống, bạn có thể chạy nó thông qua công cụ 'Flatten PDF' của chúng tôi để khóa dữ liệu để người nhận không thể thay đổi dữ liệu.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Thêm số trang`,
+    "desc": `Thêm số trang vào tệp PDF một cách dễ dàng.Chọn vị trí, kích thước, kiểu chữ của bạn.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Miễn phí` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Tải lên tài liệu của bạn.`,
+      `Chọn vị trí (ví dụ: dưới cùng bên phải), kiểu phông chữ và số bắt đầu.`,
+      `Áp dụng đánh số và tải xuống bản PDF có định dạng hoàn hảo của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Tôi có thể bỏ qua trang bìa được không?`,
+        "answer": `Đúng!Bạn có thể chỉ định trang nào sẽ thực sự bắt đầu đánh số, cho phép bạn giữ các trang tiêu đề rõ ràng.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Tôi có thể tùy chỉnh định dạng không?`,
+        "answer": `Tuyệt đối.Bạn có thể chọn các định dạng như 'Trang 1', '1 trên 10' hoặc chỉ '1' và chọn phông chữ, kích thước và màu sắc.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Việc căn chỉnh có chính xác không?`,
+        "answer": `Có, công cụ của chúng tôi tính toán lề chính xác để đảm bảo số trang của bạn được căn chỉnh hoàn hảo trên mỗi trang.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Chú thích PDF`,
+    "desc": `Đánh dấu, gạch chân, gạch ngang văn bản và thêm nhận xét.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Mới` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Tải lên bản PDF của bạn.`,
+      `Sử dụng các công cụ tô sáng, gạch chân, gạch ngang và ghi chú dán để xem lại tài liệu.`,
+      `Tải xuống tệp chú thích để chia sẻ với nhóm của bạn.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Chú thích của tôi có hiển thị trong trình đọc tiêu chuẩn không?`,
+        "answer": `Có, chúng tôi sử dụng các giao thức chú thích PDF tiêu chuẩn, nghĩa là những điểm nổi bật và ghi chú của bạn sẽ hiển thị trong Adobe Acrobat, Chrome và Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Tôi có thể thay đổi màu nổi bật không?`,
+        "answer": `Có, bạn có thể chọn từ một bảng màu rộng để mã màu cho ghi chú và điểm nổi bật của mình.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Có dễ dàng để xóa một chú thích?`,
+        "answer": `Rất dễ dàng.Chỉ cần nhấp vào bất kỳ chú thích nào bạn đã tạo và nhấn nút xóa để xóa chú thích đó ngay lập tức.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Kiểm tra đạo văn`,
+    "desc": `So sánh tài liệu của bạn với hàng tỷ trang web và cơ sở dữ liệu học thuật.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `chuyên nghiệp` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Tải lên bài luận hoặc tài liệu bạn muốn xác minh.`,
+      `Công cụ AI của chúng tôi sẽ quét hàng tỷ trang web và cơ sở dữ liệu học thuật để tìm kết quả phù hợp.`,
+      `Xem lại báo cáo chi tiết về sự tương đồng, đánh dấu bất kỳ văn bản được sao chép nào.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Trình kiểm tra đạo văn có độ chính xác như thế nào?`,
+        "answer": `Nó có độ chính xác cao.Chúng tôi sử dụng AI cấp doanh nghiệp để tham chiếu chéo văn bản của bạn với cơ sở dữ liệu nội dung trực tuyến khổng lồ, được cập nhật liên tục.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Nó có kiểm tra các bài báo học thuật ngoại tuyến không?`,
+        "answer": `Nó kiểm tra các tạp chí học thuật truy cập mở lớn và các nguồn được trích dẫn nhiều có sẵn trực tuyến.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Tài liệu của tôi có được lưu vào cơ sở dữ liệu không?`,
+        "answer": `Không. Không giống như hệ thống của một số trường đại học, chúng tôi không thêm tài liệu của bạn vào cơ sở dữ liệu toàn cầu, đảm bảo tác phẩm gốc của bạn vẫn hoàn toàn là của bạn.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Tóm tắt PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Tạo bản tóm tắt nhanh chóng, chính xác cho các tài liệu dài chỉ trong vài giây.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Mới` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Tải lên một tài liệu, báo cáo hoặc chương sách dài.`,
+      `Nhấp vào 'Tóm tắt' để AI của chúng tôi phân tích các khái niệm cốt lõi.`,
+      `Đọc bản tóm tắt dấu đầu dòng và tải xuống nếu cần.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Nó có thể tóm tắt toàn bộ một cuốn sách?`,
+        "answer": `AI có khả năng cao nhưng để có kết quả tốt nhất và chi tiết tối đa, chúng tôi khuyên bạn nên tóm tắt từng chương hoặc phần mỗi lần.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Bản tóm tắt có nắm bắt được những số liệu thống kê quan trọng không?`,
+        "answer": `Có, LLM của chúng tôi được hướng dẫn xác định và làm nổi bật các điểm dữ liệu, số liệu thống kê và đối số chính quan trọng.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Những ngôn ngữ nào được hỗ trợ?`,
+        "answer": `Trình tóm tắt hoạt động tốt nhất bằng tiếng Anh nhưng nó hỗ trợ và hiểu hơn 50 ngôn ngữ toàn cầu.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Dịch PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Dịch toàn bộ tài liệu mà vẫn giữ nguyên định dạng và bố cục gốc.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Mới` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Tải lên tài liệu của bạn.`,
+      `Chọn ngôn ngữ gốc và ngôn ngữ đích bạn muốn dịch sang.`,
+      `Tải xuống bản PDF mới được dịch, hoàn chỉnh với định dạng ban đầu.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Bố cục có bị hỏng sau khi dịch không?`,
+        "answer": `Công cụ tiên tiến của chúng tôi cố gắng duy trì bố cục chính xác, mặc dù việc mở rộng văn bản (ví dụ: tiếng Anh sang tiếng Đức) có thể gây ra những thay đổi hình ảnh nhỏ, không thể tránh khỏi.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Bản dịch chính xác đến mức nào?`,
+        "answer": `Chúng tôi sử dụng Công nghệ dịch máy thần kinh (NMT) tiên tiến nhất được hỗ trợ bởi AI, công nghệ này cung cấp các bản dịch có độ chính xác cao, nhận biết ngữ cảnh thay vì dịch từng từ một cách cứng nhắc.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Tôi có thể dịch tài liệu được quét không?`,
+        "answer": `Đúng!Nếu bạn tải lên tài liệu đã quét, hệ thống của chúng tôi sẽ tự động chạy OCR để đọc văn bản trước khi dịch.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Trích xuất dữ liệu`,
+    "desc": `Trích xuất thông minh các bảng, giá trị và thực thể từ hóa đơn và biểu mẫu.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Mới` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Tải hóa đơn, biên lai hoặc biểu mẫu có cấu trúc lên.`,
+      `AI của chúng tôi sẽ xác định các trường chính như Ngày, Tổng, Tên và Địa chỉ.`,
+      `Tải xuống dữ liệu được trích xuất dưới dạng tệp CSV hoặc JSON sạch.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Khai thác dữ liệu được sử dụng để làm gì?`,
+        "answer": `Nó hoàn hảo cho kế toán và quản trị.Thay vì nhập dữ liệu thủ công từ 100 hóa đơn, AI của chúng tôi sẽ tự động thực hiện việc đó trong vài giây.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Tài liệu có cần bố cục cụ thể không?`,
+        "answer": `KHÔNG!AI của chúng tôi đủ thông minh để tìm thấy 'Tổng số tiền' cho dù nó ở đầu, cuối hay giữa trang.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Tôi có thể trích xuất dữ liệu sang Excel không?`,
+        "answer": `Có, dữ liệu được trích xuất có thể được xuất trực tiếp dưới dạng tệp CSV, tệp này sẽ mở hoàn hảo trong Microsoft Excel hoặc Google Trang tính.`
+      },
     ]
-  }
+  },
 ];

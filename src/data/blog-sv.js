@@ -1,497 +1,468 @@
+// Auto-generated blog translation for sv
 export const BLOG_POSTS_SV = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Hur man komprimerar en PDF på Mac (2026 Guide)`,
+    date: `2026-06-20`,
+    excerpt: `Lär dig de snabbaste och enklaste sätten att minska din PDF-filstorlek på en Mac utan att förlora kvalitet.Vi jämför förhandsgranskning, Automator och webbverktyg.`,
+    content: `<p>Att hantera stora PDF-filer på din Mac kan vara frustrerande, särskilt när du behöver e-posta ett dokument och det överskrider standardgränsen på 25 MB för bilagor.Oavsett om du är en student som lämnar in en uppgift eller en professionell som skickar en portfolio, är det en viktig färdighet att veta hur man korrekt komprimerar en PDF.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Metod 1: Den inbyggda förhandsgranskningsappen (gratis men grundläggande)</h2>
+<p>Apples Preview-app kommer med ett inbyggt "Quartz Filter" som kan krympa dina PDF-filer.Det är snabbt och kräver ingen internetanslutning.</p>
+<ol>
+<li>Öppna din PDF med appen <strong>Förhandsgranska</strong>.</li>
+<li>Klicka på <strong>Arkiv</strong> i den övre menyraden och välj sedan <strong>Exportera</strong> (välj inte "Exportera som PDF").</li>
+<li>I exportfönstret letar du efter rullgardinsmenyn <strong>Kvartsfilter</strong>.</li>
+<li>Välj <strong>Minska filstorleken</strong> och klicka på Spara.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+<p class="text-red-700 m-0"><strong>Varning:</strong> Även om den här metoden är gratis, är Apples standardkomprimeringsalgoritm otroligt aggressiv.Det förstör ofta kvaliteten på bilder och gör vektortext suddig.Vi rekommenderar inte detta för professionella dokument.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Metod 2: Använda TheyLovePDF (Professionell och hög kvalitet)</h2>
+<p>Om du vill behålla den skarpa kvaliteten på din text och dina bilder samtidigt som du minskar filstorleken avsevärt, är det bästa alternativet att använda ett dedikerat AI-drivet komprimeringsverktyg.</p>
+<ol>
+<li>Gå till <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Komprimera PDF-verktyget på TheyLovePDF</a>.</li>
+<li>Dra och släpp din PDF-fil på sidan.</li>
+<li>Välj din komprimeringsnivå:
+<ul class="mt-2 space-y-1 text-gray-600">
+<li><strong>Extrem komprimering:</strong> Bäst för e-post (lägsta kvalitet).</li>
+<li><strong>Rekommenderad komprimering:</strong> Den söta punkten mellan storlek och kvalitet.</li>
+<li><strong>Mindre komprimering:</strong> Hög kvalitet, perfekt för utskrift.</li>
+</ul>
+</li>
+<li>Klicka på <strong>Komprimera PDF</strong> och ladda ner din optimerade fil.</li>
+</ol>
+<p>Våra intelligenta komprimeringsalgoritmer tar bort onödig metadata och komprimerar bilder med moderna webbstandarder, vilket säkerställer att ditt dokument ser exakt likadant ut samtidigt som det tar upp en bråkdel av lagringsutrymmet!</p>
+
+<h2>Slutsats</h2>
+<p>Medan Macs inbyggda verktyg är fantastiska i en offline-nypa, saknar de allvarligt den granulära kontroll som krävs för moderna dokument.För allt viktigt, lita alltid på en dedikerad kompressionsmotor.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Hur man slår ihop flera PDF-filer på din iPhone`,
+    date: `2026-06-19`,
+    excerpt: `Upptäck det enklaste sättet att kombinera flera PDF-dokument till en enda fil direkt från din iOS-enhet.`,
+    content: `<p>När iPhones blir våra primära enheter för arbete och studier, är det en viktig färdighet att veta hur man sammanfogar PDF-filer när du är på språng.Oavsett om du sammanställer kvitton för en utgiftsrapport eller slår samman föreläsningsanteckningar, så här kan du göra det utan dator.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>Utmaningen med iOS</h2>
+<p>Medan iOS har en robust inbyggd Files-app, erbjuder den inte ett inbyggt, enkelt sätt att välja flera PDF-filer och sy ihop dem sömlöst.Du kan skanna dokument till en enda PDF, men att slå samman befintliga filer är förvånansvärt svårt.</p>
+
+<h2>Lösningen: TheyLovePDF Web App</h2>
+<p>Du behöver inte ladda ner några tunga, prenumerationsbaserade appar från App Store.Du kan göra detta direkt från Safari eller Chrome med vår molnarkitektur.</p>
+
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Steg-för-steg-guide</h3>
+<ol class="space-y-3 mb-0">
+<li>Öppna Safari på din iPhone och navigera till <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
+<li>Tryck på den stora knappen <strong>Välj PDF-filer</strong>.</li>
+<li>Välj filerna från din iPhones <em>Filer</em>-app eller ditt <em>Fotobibliotek</em>.Du kan välja flera filer samtidigt.</li>
+<li>När du har laddat upp kommer du att se ett visuellt rutnät med dina filer.Tryck och håll ned valfri fil för att dra och ordna om dem precis som du vill.</li>
+<li>Knacka på <strong>Slå samman PDF</strong>.Våra servrar kommer att bearbeta filerna på millisekunder.</li>
+<li>Knacka på <strong>Hämta</strong> och spara det nya, kombinerade dokumentet direkt på din enhet.</li>
+</ol>
+</div>
+
+<h2>Varför inte använda en app?</h2>
+<p>Många PDF-appar på App Store är gratis att ladda ner, men de ber dig om pengar så fort du försöker slå samman filer.Genom att använda ett molnverktyg slipper du dessa App Store-avgifter och sparar lagringsutrymme på din telefon.</p>
+<p>Så enkelt, snabbt och helt säkert är det!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Hur du säkrar din PDF med ett lösenord`,
+    date: `2026-06-18`,
+    excerpt: `Skydda känslig information genom att lägga till ett säkert, okrossbart 256-bitars AES-krypteringslösenord till dina PDF-filer.`,
+    content: `<p>I dagens digitala tidsålder är datasekretess viktigare än någonsin.Oavsett om du skickar bokslut, medicinska journaler eller ett konfidentiellt affärskontrakt är det en enorm säkerhetsrisk att lämna en PDF-fil oskyddad.</p>
+<p>I den här guiden visar vi dig hur du låser dina PDF-dokument med kryptering av militär kvalitet.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Vad är 256-bitars AES-kryptering?</h2>
+<p>Advanced Encryption Standard (AES) är den krypteringsalgoritm som används av den amerikanska regeringen för att säkra sekretessbelagd information.En 256-bitars krypteringsnyckel betyder att det finns 2<sup>256</sup> möjliga kombinationer – ett antal så massivt att inte ens världens kraftfullaste superdatorer skulle kunna knäcka det på en miljard år.</p>
+<p>När du använder vårt verktyg "lägger vi inte bara till ett lösenord" som enkelt kan kringgås.Vi förvränger matematiskt innehållet i din fil med AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Så här skyddar du din PDF</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Navigera till verktyget <a href="/tools/protect-pdf" class="font-bold hover:underline">Skydda PDF</a>.</li>
+<li>Ladda upp ditt känsliga dokument via vår säkra TLS 1.3-anslutning.</li>
+<li>Ange ett starkt lösenord.(Vi rekommenderar minst 12 tecken, blanda bokstäver, siffror och symboler).</li>
+<li>Klicka på <strong>Skydda PDF</strong>.</li>
+<li>Ladda ner din nyligen krypterade fil.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Bästa metoder för lösenordssäkerhet</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>Skicka aldrig lösenordet i samma e-postmeddelande:</strong> Om du skickar PDF-filen via e-post, skicka lösenordet via en annan kanal (som SMS eller en säker meddelandeapp som Signal).</li>
+<li><strong>Använd en lösenordshanterare:</strong> Skapa en slumpmässig sträng med tecken istället för att använda ett ord som kan hittas i en ordbok.</li>
+<li><strong>Använd inte personlig information:</strong> Undvik födelsedatum, husdjursnamn eller företagsnamn.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">När din fil är krypterad raderas det ursprungliga innehållet permanent från våra servrar inom 2 timmar.Din integritet är vår absoluta prioritet.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `Vad är OCR?Hur man gör skannade PDF-filer sökbara`,
+    date: `2026-06-17`,
+    excerpt: `Lär dig hur Optical Character Recognition (OCR)-teknik fungerar och hur den kan extrahera valbar text från platta bilder.`,
+    content: `<p>Har du någonsin fått en PDF som ser ut som ett dokument, men när du försöker markera texten händer ingenting?Du har stött på en "platt" eller "skannad" PDF.Det är i princip bara ett digitalt fotografi av ett papper.</p>
+<p>För att interagera med den texten behöver du magin med <strong>Optical Character Recognition (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>Så fungerar OCR</h2>
+<p>När du kör en fil genom en OCR-motor fungerar programvaran som ett vältränat mänskligt öga.Den skannar bilden pixel för pixel och letar efter mönster som liknar bokstäver och siffror.</p>
+<p>Modern OCR matchar inte bara former;den använder komplexa modeller för artificiell intelligens och maskininlärning för att förstå sammanhang.Till exempel kan den se skillnaden mellan ett stort "I" och ett gement "l" baserat på de omgivande bokstäverna i ordet.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>Fördelarna med OCR</h2>
+<ul class="space-y-2">
+<li><strong>Sökbarhet:</strong> Att hitta en specifik klausul i ett skannat kontrakt på 500 sidor är omöjligt utan att läsa allt.OCR låter dig använda CTRL+F för att hitta exakt det du behöver direkt.</li>
+<li><strong>Redigerbarhet:</strong> När texten är igenkänd kan du kopiera, klistra in och redigera den i Word eller Google Dokument.</li>
+<li><strong>Tillgänglighet:</strong> Skärmläsare för synskadade användare kan inte läsa platta bilder.OCR gör dina dokument tillgängliga för alla.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Hur man OCR ett dokument</h2>
+<p>Det är otroligt enkelt att transformera dina skannade dokument med TheyLovePDF:</p>
+<ol>
+<li>Gå till <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF-verktyget</a>.</li>
+<li>Ladda upp ditt skannade dokument.</li>
+<li>Välj språket för dokumentet.Detta är avgörande - att tala om för AI vilket språk som kan förväntas förbättrar noggrannheten drastiskt, särskilt för språk med unika tecken eller accenter.</li>
+<li>Träffprocess.AI:n kommer att rekonstruera ditt dokument och lägga ett osynligt textlager över originalbilderna.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
+Sluta skriva om dokument manuellt.Låt AI göra det tunga arbetet åt dig!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Hur man redigerar PDF-text på Windows 11 (utan Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Sluta betala för dyr programvara.Upptäck de mest effektiva, kostnadsfria och smarta sätten att direktredigera PDF-text och bilder på din Windows-dator.`,
+    content: `<p>I flera år har Windows-användare kämpat med PDF-filer.Till skillnad från Word-dokument utformades PDF-filer för att vara "slutförda" digitala utskrifter.När du märker ett stavfel i ett kontrakt eller behöver uppdatera ett datum på en faktura, träffar du vanligtvis en massiv betalvägg som Adobe Acrobat.</p>
+<p>Lyckligtvis behöver du inte 2026 dyr programvara installerad på din Windows 11-maskin för att göra grundläggande redigeringar.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Den smarta webbmetoden</h2>
+<p>Istället för att ladda ner tunga, långsamma skrivbordsprogram använder molnbaserade redigerare processorkraften hos fjärrservrar för att analysera PDF-strukturen direkt i din webbläsare.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Så här redigerar du direkt</h3>
+<ol class="space-y-2 mb-0">
+<li>Öppna Microsoft Edge eller Google Chrome i Windows 11.</li>
+<li>Navigera till <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Redigera PDF-verktyg</a>.</li>
+<li>Ladda upp ditt dokument.Vår motor kommer att avkoda textlagren direkt.</li>
+<li>Klicka på en textruta för att ändra texten, ändra teckensnittet eller justera storleken.</li>
+<li>Du kan också infoga nya bilder, former eller mörklägga känslig information.</li>
+<li>Klicka på <strong>Apply Changes</strong> och ladda ner den uppdaterade filen.</li>
+</ol>
+</div>
+
+<h2>Varför inte använda Microsoft Edge?</h2>
+<p>Medan Microsoft Edge har en inbyggd PDF-visare med ritverktyg (bläck), kan den <strong>inte redigera befintlig text</strong>.Det låter dig bara rita över toppen eller lägga till nya textrutor.För att faktiskt ändra ett stavfel i det ursprungliga textlagret behöver du en riktig PDF-redigerare.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Proffstips:</p>
+<p class="text-sm text-gray-600">Om din PDF är en skannad bild, fungerar inte standardtextredigering.Du måste först använda ett <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR-verktyg</a> för att konvertera bilden till ett läsbart textlager.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Den ultimata guiden för att signera PDF-filer på Android gratis`,
+    date: `2026-06-15`,
+    excerpt: `Behöver du signera ett dokument omgående?Lär dig hur du ritar, skriver eller laddar upp din elektroniska signatur direkt från din Android-telefon.`,
+    content: `<p>Vi har alla varit där: du får ett viktigt dokument via e-post när du är borta från ditt skrivbord.Den behöver din signatur omedelbart.Att skriva ut, signera och skanna in det är en kvarleva från det förflutna.</p>
+<p>I dag är din Android-smarttelefon en kraftfull digital arbetsstation som kan juridiskt binda elektroniska signaturer.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Är elektroniska signaturer lagliga?</h2>
+<p>Ja.Enligt ESIGN Act (USA) och eIDAS (Europa) har elektroniska signaturer samma lagliga vikt som en våtfärgad signatur för nästan alla affärs- och personliga transaktioner.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Så här loggar du på Android (ingen app krävs)</h2>
+<p>Du behöver inte blåsa upp din Android-enhet med premium-PDF-appar.Använd bara din mobila webbläsare.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li><strong>Öppna verktyget:</strong> Tryck på länken för att öppna <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">verktyget Signera PDF</a> i Chrome.</li>
+<li><strong>Ladda upp dokumentet:</strong> Tryck för att ladda upp filen direkt från din Android-nedladdningsmapp eller Google Drive.</li>
+<li><strong>Skapa din signatur:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Rita:</em> Använd ditt finger eller en penna för att rita din signatur direkt på skärmen.</li>
+<li><em>Skriv:</em> Skriv ditt namn och välj ett kursivt teckensnitt.</li>
+<li><em>Ladda upp:</em> Ladda upp ett foto av din faktiska signatur på ett vitt papper (vårt verktyg tar automatiskt bort bakgrunden).</li>
+</ul>
+</li>
+<li><strong>Placera den:</strong> Dra och släpp signaturen exakt på signaturraden.Du kan nypa för att ändra storlek.</li>
+<li><strong>Avsluta:</strong> Tryck på "Signera" för att permanent bädda in signaturen i dokumentarkitekturen.</li>
+</ol>
+
+<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
+<p class="text-yellow-800 text-sm m-0"><strong>Säkerhetsanmärkning:</strong> Se alltid till att du använder en säker, HTTPS-krypterad plattform när du signerar känsliga dokument.Vi tar bort alla filer från våra servrar automatiskt.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Varför studenter alltid bör konvertera PDF-filer till Word för redigering`,
+    date: `2026-06-14`,
+    excerpt: `Skriva en uppsats eller göra anteckningar?Upptäck varför det i grunden är bättre att extrahera text till ett Word-dokument än att redigera en PDF direkt.`,
+    content: `<p>Som student möter du hundratals PDF-filer varje termin: föreläsningsbilder, forskningsrapporter och digitala läroböcker.När du behöver extrahera citat, sammanfatta innehåll eller skriva om avsnitt kan du bli frestad att använda en PDF-redigerare.Men det finns ett smartare, mycket mer professionellt sätt.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Problemet med PDF-arkitektur</h2>
+<p>PDF-filer (Portable Document Format) har utformats för <em>presentation</em>, inte för komposition.Inuti en PDF flyter inte texten som ett vanligt dokument;varje enskilt ord är fäst vid specifika X- och Y-koordinater på sidan.</p>
+<p>Om du försöker ta bort ett stycke i en PDF-redigerare kommer texten under det <strong>inte</strong> att flyttas upp för att fylla tomrummet.Det lämnar ett stort tomt utrymme.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Lösningen: PDF till Word-konvertering</h2>
+<p>Genom att konvertera dokumentet tillbaka till Microsoft Word (.docx), rekonstruerar vår intelligenta motor den flytande layouten.Stycken blir stycken igen, rubriker blir rubriker och bilder blir flyttbara block.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">PDF-redigerare</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ Text flödar inte om</li>
+<li>❌ Svårt att ändra globala teckensnitt</li>
+<li>❌ Marginalerna är låsta</li>
+<li>❌ Tabeller är svåra att ändra</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Word-dokument</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li>✅ Text flödar naturligt</li>
+<li>✅ Enkel stavningskontroll och grammatik</li>
+<li>✅ Dynamiska sidbrytningar</li>
+<li>✅ Att kopiera och klistra är felfritt</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Hur man gör det felfritt</h2>
+<p>Vår AI-drivna <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF till Word-konverterare</a> använder avancerad layoutigenkänning.Ladda bara upp din fil, och inom några sekunder har du ett helt redigerbart Word-dokument.När du har skrivit klart din uppgift eller anteckningar kan du alltid exportera den tillbaka till PDF innan du skickar in den till din professor.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Kombinera flera PDF-filer i Windows 10: Steg-för-steg`,
+    date: `2026-06-13`,
+    excerpt: `Organisera dina röriga mappar genom att sammanfoga relaterade PDF-dokument till enstaka, sammanhängande filer direkt från ditt Windows-skrivbord.`,
+    content: `<p>Att ha 15 olika PDF-filer för ett enda projekt är en mardröm.Oavsett om det är månadsfakturor, kapitel i en bok eller skannade journaler, är det viktigt att kombinera dem till en sammanhängande fil för Windows 10-organisation.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Den inbyggda Windows-begränsningen</h2>
+<p>Windows 10 är ett kraftfullt operativsystem, men det saknar som bekant en inbyggd PDF-fusion.Även om det innehåller "Microsoft Print to PDF", som bara hjälper till att skapa PDF-filer från andra format, inte kombinera befintliga.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Det smarta arbetsflödet (webbläsarbaserat)</h2>
+<p>Hämta inte skumma gratisprogram som kan innehålla skadlig programvara eller sätta stora vattenstämplar på dina filer.Den mest professionella metoden är att använda ett krypterat webbläsarverktyg.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Steg 1: Samla dina filer.</strong> Lägg alla PDF-filer som du vill slå ihop i en enda mapp på skrivbordet.Detta gör uppladdningen enklare.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Steg 2: Öppna sammanslagningen.</strong> Gå till <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF-verktyget</a> på TheyLovePDF.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Steg 3: Välj och beställ.</strong> Dra dina filer till skärmen.Du kommer att se förhandsgranskningsminiatyrer.Du kan dra dessa miniatyrer åt vänster eller höger för att säkerställa att de är i perfekt kronologisk ordning.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Steg 4: Kombinera.</strong> Tryck på sammanfogningsknappen.Servern syr omedelbart ihop den binära koden för PDF-filerna utan att förlora någon kvalitet.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Denna metod fungerar på Chrome, Edge, Firefox och Brave på Windows 10 och kräver absolut ingen installations- eller administratörsbehörighet på din PC.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Varför jurister måste skydda PDF-filer med lösenord`,
+    date: `2026-06-12`,
+    excerpt: `En djupdykning i dokumentsäkerhet, efterlevnad och varför det är ett stort ansvar för advokatbyråer att skicka öppna PDF-filer via e-post.`,
+    content: `<p>Inom advokatbranschen är sekretess inte bara en bästa praxis – det är ett strikt etiskt och ofta lagstadgat krav.Ändå skickar otaliga advokatbyråer och advokater fortfarande känsliga instruktioner, kontrakt och förlikningserbjudanden som råa, okrypterade PDF-bilagor via vanlig e-post.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Avlyssningsrisken</h2>
+<p>Standard e-post (SMTP) är notoriskt osäker.Om ett e-postmeddelande dirigeras genom osäkra servrar, eller om en inkorg äventyras, är en okrypterad PDF fullt läsbar för alla som fångar upp den.Detta kan leda till intrång i klientprivilegier och stora skulder.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Kryptering kontra lösenord</h2>
+<p>Det är viktigt att förstå skillnaden.Ett enkelt "behörighetslösenord" förhindrar utskrift eller redigering men krypterar inte filen.Vem som helst kan fortfarande läsa den.</p>
+<p>Vad du behöver är ett <strong>Öppet lösenord</strong> som stöds av <strong>AES-256-kryptering</strong>.När den tillämpas krypteras filens binära data.Utan lösenordet är dokumentet matematiskt omöjligt att läsa.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Efterlevnadskrav</h4>
+<p class="text-red-800 text-sm m-0">Regler som HIPAA (medicinsk) och GDPR (europeisk data) straffar hårt organisationer som misslyckas med att kryptera PII (personlig identifierbar information) under överföring.En krypterad PDF är en accepterad metod för att säkra data under överföring.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Det professionella arbetsflödet</h2>
+<ol>
+<li>Skapa dokumentet i Word och exportera till PDF.</li>
+<li>Ladda upp den till en säker, noll-retention plattform som <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
+<li>Använd ett genererat lösenord på 16 tecken.</li>
+<li>E-posta den krypterade PDF-filen till klienten.</li>
+<li>Ge lösenordet till klienten via en separat, säker kanal (t.ex. ett telefonsamtal eller en krypterad meddelandeapp).</li>
+</ol>
+<p>Genom att upprätthålla detta arbetsflöde skyddar jurister sig från ansvar för dataintrång och säkerställer total klientkonfidentialitet.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Hur man komprimerar en PDF på Android för att skicka via WhatsApp`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp har filstorleksbegränsningar som blockerar stora dokument.Lär dig hur du krossar din PDF-storlek på din Android-telefon för att dela den direkt.`,
+    content: `<p>WhatsApp är den globala standarden för snabb kommunikation, som flitigt används av företag och studenter för att dela dokument.WhatsApp tillämpar dock strikta filstorleksgränser.Om du försöker skicka en 150 MB arkitektonisk plan eller en massiv skannad lärobok kommer appen direkt att blockera överföringen.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Android-dilemmat</h2>
+<p>Till skillnad från att komprimera ett foto har Android OS ingen inbyggd funktion för att komprimera PDF-dokument.Om du söker i Google Play Butik kommer du att bombarderas med appar fulla av påträngande annonser som förstör din filkvalitet.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Den smarta kompressionstekniken</h2>
+<p>Du kan kringgå appbutiker helt genom att använda vår höghastighetsmolninfrastruktur direkt från Google Chrome på din Android-enhet.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Öppna kompressorn</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Tryck på den här länken för att öppna <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF-kompressor</a> i din webbläsare.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Ladda upp från filer</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Knacka för att ladda upp och välj appen "Filer" eller "Dokument" på din Android för att hitta din stora PDF.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Välj "Extrem komprimering"</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Välj den högsta komprimeringsnivån för WhatsApp.Detta tar bort högupplöst bilddata men håller texten perfekt läsbar på mobilskärmar.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Ladda ner och dela</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">När bearbetad, tryck på Ladda ned.Öppna WhatsApp, tryck på gem-ikonen, välj Dokument och dela din nyligen krympta fil!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Hela den här processen tar mindre än 30 sekunder, använder väldigt lite av din mobildata och löser problemet med WhatsApp-gränsen permanent.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Hur man extraherar specifika sidor från en massiv PDF`,
+    date: `2026-06-10`,
+    excerpt: `Skicka inte en 500-sidig manual när någon bara behöver kapitel 3. Här är det smartaste sättet att extrahera och dela PDF-sidor.`,
+    content: `<p>Vi har alla fått dem: företagsmanualen på 500 sidor, den omfattande juridiska upptäcktsfilen eller hela terminens lärobok.Men vad händer om du bara behöver skicka sidorna 45 till 52 till en kollega?</p>
+<p>Att skicka hela dokumentet är oprofessionellt, slösar bort bandbredd och tvingar mottagaren att leta efter relevant information.Du måste dela upp PDF-filen.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>The Hacky Way vs. The Pro Way</h2>
+<p>Ett vanligt "hack" är att använda dialogrutan Skriv ut, välja "Skriv ut till PDF" och välja ett sidintervall.Även om detta fungerar, förenklar det ofta dokumentet - förstör interaktiva länkar, bokmärken och ibland ökar filstorleken avsevärt.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Det professionella sättet är att dela upp dokumentet på binär nivå och bevara den exakta originalkvaliteten och metadata för de extraherade sidorna.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Använda en professionell splitter</h2>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Navigera till <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Dela PDF-verktyget</a>.</li>
+<li>Ladda upp ditt enorma dokument.Våra servrar hanterar filer upp till 2 GB direkt.</li>
+<li>Välj läge:
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
+<li><strong>Extrahera sidor:</strong> Skriv in exakta sidor eller intervall (t.ex. <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Dela upp efter intervall:</strong> Kapa dokumentet i flera mindre dokument automatiskt.</li>
+</ul>
+</li>
+<li>Träff Process.Du kommer att få en snygg, hyperfokuserad PDF som bara innehåller de sidor du valt, med alla originallänkar och kvalitet intakt.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Genom att bara extrahera det som är viktigt respekterar du mottagarens tid och inkorgsutrymme.Det är en liten teknisk färdighet som ger enorma professionella utdelningar.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Chatta med PDF: Hur AI förändrar hur vi läser långa dokument`,
+    date: `2026-06-09`,
+    excerpt: `Sluta läsa 100-sidiga rapporter.Lär dig hur stora språkmodeller (LLM) låter dig bokstavligen "prata" med dina dokument för att extrahera svar direkt.`,
+    content: `<p>Läser en 150-sidig finansiell rapport eller en tät akademisk uppsats som används för att ta timmar av framhävning, anteckningar och sökning.År 2026 är den eran officiellt över.Välkommen till AI Document Chats ålder.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>Vad är "Chatta med PDF"?</h2>
+<p>Föreställ dig om författaren till dokumentet satt bredvid dig och du kunde bara ställa frågor till dem.<em>"Vilka är de totala intäkterna för tredje kvartalet?"</em> eller <em>"Sammanfatta metodiken för detta experiment i tre punkter."</em></p>
+<p>Vårt <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chatta med PDF-verktyg</a> använder avancerade stora språkmodeller (LLM).När du laddar upp en fil "läser" AI hela dokumentet på några sekunder och lagrar det i vektorminnet.Du använder sedan ett chattgränssnitt (exakt som ChatGPT) för att ställa frågor om texten.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Hur det faktiskt fungerar (under huven)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>Textextraktion:</strong> Systemet analyserar PDF:en och extraherar all text och tabeller.</li>
+<li><strong>Vektorisering:</strong> Texten hackas i "bitar" och omvandlas till matematiska tal som kallas inbäddningar.</li>
+<li><strong>Semantisk sökning:</strong> När du ställer en fråga söker AI matematiken för att hitta de exakta styckena som är mest relevanta för din fråga.</li>
+<li><strong>Generation:</strong> LLM läser dessa specifika stycken och skriver ut ett naturligt, konversationssvar, ofta med hänvisning till det exakta sidnumret den hittade informationen på!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Användningsfall</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Elever:</strong> Ladda upp läroböcker för att skapa omedelbara studieguider och flashcards.<br><strong>Advokater:</strong> Ladda upp ärendefiler för att omedelbart hitta prejudikat utan CTRL+F.<br><strong>Analytiker ladda upp specifika finansiellt till 10-K:</strong>mätvärden.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Sekretess först</h2>
+<p>Det största problemet med AI är datasekretess.När du använder professionella verktyg som TheyLovePDF är dina dokumentdata strikt sandlådor.Den används aldrig för att träna globala AI-modeller, och data raderas automatiskt från servrarna efter att din session är slut.</p>
+<p>Bli inte kvar.Börja chatta med dina dokument idag och 10 gånger din läshastighet.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Det bästa iLovePDF-alternativet för att minska PDF-storleken`,
+    date: `2026-06-23`,
+    excerpt: `Vill du komprimera en PDF utan att förlora kvalitet eller hantera aggressiva annonser?Här är anledningen till att TheyLovePDF är det överlägsna alternativet till iLovePDF.`,
+    content: `<p>Om du läser det här har du förmodligen letat efter ett sätt att minska din PDF-storlek och tänkte använda iLovePDF.Även om det är ett populärt verktyg, letar många användare efter ett snabbare, annonsfritt alternativ som inte äventyrar dokumentets visuella trohet.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Varför leta efter ett alternativ?</h2>
+<p>Många äldre PDF-verktyg är beroende av aggressiva komprimeringsalgoritmer som förstör kvaliteten på dina bilder och vektorgrafik.Utöver det är gratisnivåer ofta kraftigt begränsade med dagliga gränser och besmittade med påträngande annonser.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>The TheyLovePDF Advantage</h2>
+<p>Vi konstruerade vårt <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Komprimera PDF-verktyg</a> för att vara det absolut bästa i branschen.Här är anledningen till att användarna byter:</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>Smart AI-komprimering:</strong> Istället för att bara försämra bildupplösningen analyserar vår motor matematiskt ditt dokument och tar bort osynlig metadata, teckensnitt utan referens och dubbletter av datastrukturer.</li>
+<li><strong>Noll annonser:</strong> Vi anser att verktyg ska vara rena och distraktionsfria.Du hittar inte en enda bannerannons i vårt komprimeringsverktyg.</li>
+<li><strong>Strikt sekretess:</strong> Dina filer är skyddade med 256-bitars SSL-kryptering och raderas permanent från våra servrar efter 2 timmar.Vi läser eller säljer inte dina uppgifter.</li>
+</ul>
+
+<p>Nästa gång du behöver krympa en stor fil för en e-postbilaga eller ett WhatsApp-meddelande, hoppa över de äldre verktygen.Dra och släpp din fil i TheyLovePDF och upplev skillnaden.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Hur man konverterar PowerPoint (PPT) till PDF på din iPhone`,
+    date: `2026-06-23`,
+    excerpt: `Behöver du skicka in en presentation från din telefon?Lär dig det snabbaste sättet att förvandla en .ppt- eller .pptx-fil till en professionell PDF direkt på iOS.`,
+    content: `<p>Oavsett om du är en student som försöker lämna in en uppgift på bussen eller en professionell som skickar ett e-postkort till en kund från en flygplats, är det en avgörande mobilfärdighet att konvertera en PowerPoint till en PDF på din iPhone.</p>
+<p>PDF-filer garanterar att dina teckensnitt, formatering och layouter ser exakt likadana ut på mottagarens skärm, oavsett vilken enhet de använder.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Den problemfria metoden</h2>
+<p>Hämta inte en tung presentationsapp bara för att konvertera en fil.Du kan göra detta säkert genom Safari på några sekunder.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Öppna Safari och gå till <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (det här verktyget hanterar Word, Excel och PowerPoint).</li>
+<li>Tryck på uppladdningsknappen och välj <strong>Välj filer</strong>.</li>
+<li>Hitta din nedladdade <em>.pptx</em>-fil i din iPhones Filer-app eller iCloud Drive.</li>
+<li>Knacka på konvertera.Vår renderingsmotor av företagsklass kommer att bevara alla dina bildlayouter och vektorgrafik perfekt.</li>
+<li>Knacka på Ladda ner och spara den skarpa, nya PDF-filen på din enhet.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Hela den här processen sker i molnet, vilket innebär att den inte tar ur din iPhones batteri eller tar upp lokalt lagringsutrymme!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Hur man signerar en PDF digitalt på Windows 10 och 11`,
+    date: `2026-06-23`,
+    excerpt: `Sluta skriva ut och skanna kontrakt.Här är det juridiskt bindande, professionella sättet att signera ett dokument på din Windows-dator.`,
+    content: `<p>Att ta emot ett kontrakt via e-post innebar förr att skriva ut det, signera det med en penna, skanna in det tillbaka till datorn och skicka tillbaka en försämrad, sned bild till avsändaren.År 2026 är detta arbetsflöde officiellt dött.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Det moderna sättet att logga på Windows</h2>
+<p>Du behöver inte Adobe Acrobat eller någon betald programvara installerad på din Windows-dator för att utföra en juridiskt bindande elektronisk signatur.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li>Öppna Chrome eller Edge och navigera till <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">verktyget Signera PDF</a>.</li>
+<li>Dra och släpp ditt kontrakt till sidan.</li>
+<li>Klicka på ikonen <strong>Signatur</strong> i verktygsfältet.</li>
+<li>Välj hur du vill signera:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Rita:</strong> Använd din mus eller en Windows-pekskärm/penna för att skriva din signatur.</li>
+<li><strong>Typ:</strong> Skriv ditt namn och välj ett professionellt kursivt teckensnitt.</li>
+<li><strong>Ladda upp:</strong> Om du har ett rent foto av din faktiska signatur, ladda upp det.Vårt verktyg tar automatiskt bort den vita bakgrunden!</li>
+</ul>
+</li>
+<li>Dra din signatur till den prickade linjen, ändra storlek på den och klicka på <strong>Använd</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Är dessa signaturer lagliga?</strong> Ja!Under stora internationella ramverk (som US ESIGN Act och European eIDAS) har elektroniska signaturer exakt samma juridiska vikt som en våtfärgad signatur för nästan alla standardaffärsavtal.</p>
+</div>`
+  },
 ];

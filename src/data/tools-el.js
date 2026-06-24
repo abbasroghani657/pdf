@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for el
 export const TOOLS_DATA_EL = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF σε Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Μετατρέψτε τα αρχεία PDF σας σε έγγραφα DOC και DOCX εύκολα στην επεξεργασία.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Ανεβάστε το έγγραφο PDF σας σύροντάς το στη ζώνη απόθεσης ή κάνοντας κλικ στο κουμπί "Επιλογή αρχείου".`,
+      `Η προηγμένη μηχανή OCR και μετατροπής μας θα ξεκινήσει αμέσως την εξαγωγή του κειμένου, της διάταξης και της μορφοποίησης.`,
+      `Κατεβάστε το έγγραφο Word (DOC/DOCX) που έχει μετατραπεί τέλεια, έτοιμο για επεξεργασία.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Τι είναι ο μετατροπέας PDF σε Word;`,
+        "answer": `Ο μετατροπέας PDF σε Word είναι ένα βοηθητικό πρόγραμμα που εξάγει κείμενο, διατάξεις και εικόνες από ένα PDF και τα αναδημιουργεί ως ένα πλήρως επεξεργάσιμο έγγραφο του Microsoft Word.Η μηχανή μετατροπής premium διατηρεί γραμματοσειρές, διατάξεις, πίνακες και εικόνες, ώστε το έγγραφο Word σας να μοιάζει ακριβώς με το αρχικό PDF.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Μπορώ να μετατρέψω σαρωμένα αρχεία PDF σε επεξεργάσιμα έγγραφα του Word;`,
+        "answer": `Απολύτως.Η ενσωματωμένη τεχνολογία OCR (Optical Character Recognition) εντοπίζει αυτόματα το σαρωμένο κείμενο και το καθιστά πλήρως επεξεργάσιμο στο αρχείο DOCX που προκύπτει.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Είναι ασφαλές το εμπιστευτικό μου PDF κατά τη μετατροπή;`,
+        "answer": `Λαμβάνουμε σοβαρά υπόψη το απόρρητο.Τα αρχεία σας κρυπτογραφούνται μέσω SSL 256-bit κατά τη μεταφορά και διαγράφονται οριστικά από τους διακομιστές μας αυτόματα εντός 2 ωρών.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word σε PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Κάντε τα αρχεία DOC και DOCX εύκολα στην ανάγνωση μετατρέποντάς τα σε PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Επιλέξτε το αρχείο DOC ή DOCX από τον υπολογιστή σας ή σύρετέ το στη σελίδα.`,
+      `Το εργαλείο θα κλειδώσει αμέσως τη μορφοποίηση και θα μετατρέψει το έγγραφο του Word σε μια καθολική μορφή PDF.`,
+      `Κατεβάστε το νέο σας PDF.Η διάταξη θα φαίνεται πανομοιότυπη σε κάθε συσκευή.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Γιατί πρέπει να μετατρέψω το Word σε PDF;`,
+        "answer": `Η μετατροπή σε PDF διασφαλίζει ότι η διάταξη, οι γραμματοσειρές και οι εικόνες του εγγράφου σας φαίνονται ακριβώς ίδιες σε οποιαδήποτε συσκευή, αποτρέποντας τα σφάλματα μορφοποίησης κατά την κοινή χρήση με άλλους.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Διατηρούνται τα περιθώρια και οι γραμματοσειρές μου;`,
+        "answer": `Ναι, ο μετατροπέας Word σε PDF κλειδώνει στην ακριβή σας διάταξη, συμπεριλαμβανομένων προσαρμοσμένων γραμματοσειρών και ακριβών ρυθμίσεων περιθωρίου.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Μπορώ να μετατρέψω πολλά αρχεία Word ταυτόχρονα;`,
+        "answer": `Ναι, μπορείτε να ανεβάσετε πολλά αρχεία DOC/DOCX και θα τα επεξεργαστούμε ταυτόχρονα για μετατροπή υψηλής ταχύτητας.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF σε Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Εξαγωγή πινάκων και δεδομένων από αρχεία PDF σε υπολογιστικά φύλλα Excel.Τα καλύτερα αποτελέσματα με αρχεία PDF που βασίζονται σε κείμενο.Τα σαρωμένα PDF υποστηρίζονται μέσω OCR — η ​​ακρίβεια μπορεί να διαφέρει.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Ανεβάστε το αρχείο PDF που περιέχει τους πίνακες και τα δεδομένα που θέλετε να εξαγάγετε.`,
+      `Το σύστημά μας θα σαρώσει το έγγραφο, θα αναγνωρίσει δεδομένα πίνακα και θα το μορφοποιήσει με ακρίβεια σε κελιά υπολογιστικού φύλλου.`,
+      `Κάντε λήψη του επεξεργάσιμου αρχείου σας Excel (XLSX).`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Θα μορφοποιηθούν σωστά οι πίνακες PDF μου στο Excel;`,
+        "answer": `Ναι, το έξυπνο εργαλείο εξαγωγής μας αναγνωρίζει σειρές και στήλες, διασφαλίζοντας ότι τα δεδομένα σας σε πίνακα είναι οργανωμένα σωστά σε κελιά Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Μπορεί να εξαγάγει δεδομένα από σαρωμένα αρχεία PDF;`,
+        "answer": `Ναι, η τεχνολογία OCR μας μπορεί να διαβάζει πίνακες από σαρωμένες εικόνες και να τους μετατρέπει σε επεξεργάσιμα υπολογιστικά φύλλα Excel.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Μεταφέρονται οι τύποι;`,
+        "answer": `Τα PDF δεν αποθηκεύουν τύπους, μόνο ανεπεξέργαστα δεδομένα.Το εξαγόμενο αρχείο Excel θα περιέχει τις ακριβείς τιμές που είναι ορατές στο PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel σε PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Κάντε τα υπολογιστικά φύλλα EXCEL εύκολα στην ανάγνωση μετατρέποντάς τα σε PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Ανεβάστε το υπολογιστικό φύλλο Excel (XLS ή XLSX).`,
+      `Το εργαλείο μας θα βελτιστοποιήσει τη διάταξη του υπολογιστικού φύλλου ώστε να ταιριάζει τέλεια σε σελίδες PDF χωρίς να κόβει στήλες.`,
+      `Κατεβάστε το τελικό έγγραφο PDF.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Θα κοπούν τα μεγάλα υπολογιστικά φύλλα μου;`,
+        "answer": `Ο μετατροπέας μας κλιμακώνει και μορφοποιεί έξυπνα το υπολογιστικό φύλλο σας για να διασφαλίσει ότι οι στήλες ταιριάζουν λογικά στις σελίδες PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Μετατρέπει όλα τα φύλλα εργασίας;`,
+        "answer": `Ναι, όλα τα ενεργά φύλλα εργασίας στο αρχείο σας Excel θα μετατραπούν σε διαδοχικές σελίδες στο τελικό PDF.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Είναι ασφαλή τα οικονομικά μου δεδομένα;`,
+        "answer": `100%.Χρησιμοποιούμε κρυπτογράφηση από άκρο σε άκρο και όλα τα αρχεία διαγράφονται οριστικά από τα συστήματά μας εντός 2 ωρών.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF σε JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Μετατρέψτε κάθε σελίδα PDF σε JPG ή εξάγετε όλες τις εικόνες που περιέχονται.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Ανεβάστε το έγγραφο PDF που θέλετε να μετατρέψετε σε εικόνες.`,
+      `Επιλέξτε εάν θέλετε να εξαγάγετε ενσωματωμένες εικόνες ή να μετατρέψετε ολόκληρες σελίδες PDF σε JPG υψηλής ανάλυσης.`,
+      `Κάντε λήψη των JPG μεμονωμένα ή ως συμπιεσμένο αρχείο ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Η ποιότητα JPG θα είναι υψηλή;`,
+        "answer": `Ναι, εξάγουμε και μετατρέπουμε σελίδες σε υψηλή ανάλυση, διασφαλίζοντας καθαρό κείμενο και καθαρές εικόνες στα αρχεία JPG που προκύπτουν.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Μπορώ να εξαγάγω μόνο τις εικόνες από το PDF;`,
+        "answer": `Απολύτως.Μπορείτε να επιλέξετε να εξαγάγετε μόνο τις φωτογραφίες που είναι ενσωματωμένες στο PDF αντί να μετατρέψετε ολόκληρη τη σελίδα.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Υπάρχει όριο στο πόσες σελίδες μπορώ να μετατρέψω;`,
+        "answer": `Οι δωρεάν χρήστες μπορούν να μετατρέψουν αρχεία PDF αξίας έως και 10 MB.Οι επαγγελματίες χρήστες μπορούν να επεξεργαστούν τεράστια αρχεία έως 2 GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG σε PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Μετατροπή εικόνων JPG σε PDF σε δευτερόλεπτα.Προσαρμόστε εύκολα τον προσανατολισμό και τα περιθώρια.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Επιλέξτε μία ή πολλές εικόνες JPG από τη συσκευή σας.`,
+      `Σύρετε και αποθέστε για να αναδιατάξετε τη σειρά τους, προσαρμόστε τον προσανατολισμό της σελίδας και ορίστε περιθώρια εάν χρειάζεται.`,
+      `Κάντε κλικ στο «Μετατροπή» και πραγματοποιήστε λήψη του συνδυασμένου εγγράφου PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Μπορώ να συνδυάσω πολλά JPG σε ένα PDF;`,
+        "answer": `Ναι, απλώς ανεβάστε πολλές εικόνες, τακτοποιήστε τις με τη σειρά που προτιμάτε και θα τις συγχωνεύσουμε σε ένα ενιαίο έγγραφο PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Θα χάσουν ποιότητα οι εικόνες μου;`,
+        "answer": `Όχι, διατηρούμε την αρχική ανάλυση και ποιότητα των εικόνων JPG κατά την ενσωμάτωσή τους στο PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Μπορώ να προσαρμόσω τα περιθώρια και τον προσανατολισμό;`,
+        "answer": `Ναι, το εργαλείο μας σάς επιτρέπει να προσαρμόσετε τον προσανατολισμό της σελίδας (κατακόρυφο ή οριζόντιο) και τα μεγέθη περιθωρίου πριν από τη μετατροπή.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF σε PowerPoint`,
+    "desc": `Μετατρέψτε τα αρχεία PDF σας σε εύκολες επεξεργασίες PPT και PPTX slideshows.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Ανεβάστε το PDF που θέλετε να μετατρέψετε σε παρουσίαση.`,
+      `Η μηχανή AI μας θα αναλύσει τις διαφάνειες και θα τις μετατρέψει σε επεξεργάσιμες μορφές PPTX.`,
+      `Κατεβάστε τη νέα σας παρουσίαση PowerPoint.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Θα είναι επεξεργάσιμο το κείμενο στο PowerPoint μου;`,
+        "answer": `Ναι, όλο το κείμενο, τα σχήματα και οι εικόνες θα είναι πλήρως επεξεργάσιμα στο αρχείο PPTX που προκύπτει.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Λειτουργεί με σαρωμένες παρουσιάσεις;`,
+        "answer": `Ναι, χρησιμοποιώντας το OCR, μπορούμε να εξαγάγουμε κείμενο από σαρωμένες διαφάνειες και να το κάνουμε επεξεργάσιμο στο PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Διατηρείται η διάταξη της διαφάνειας;`,
+        "answer": `Η προηγμένη τεχνολογία μετατροπής που διαθέτουμε διασφαλίζει ότι η διάταξη του αρχικού PDF σας ταιριάζει όσο το δυνατόν περισσότερο στο PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint σε PDF`,
+    "desc": `Κάντε εύκολες τις προβολές διαφανειών PPT και PPTX μετατρέποντάς τις σε PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Επιλέξτε το αρχείο PPT ή PPTX.`,
+      `Το εργαλείο θα μετατρέψει αμέσως τις διαφάνειές σας σε μια ασφαλή, καθολική μορφή PDF.`,
+      `Κατεβάστε την παρουσίασή σας ως PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Γιατί να μετατρέψετε το PowerPoint σε PDF;`,
+        "answer": `Η μετατροπή διασφαλίζει ότι η παρουσίασή σας φαίνεται πανομοιότυπη σε οποιαδήποτε συσκευή, αποτρέποντας την απώλεια γραμματοσειρών ή τις κατεστραμμένες διατάξεις κατά την παρουσίαση σε διαφορετικό υπολογιστή.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Αποθηκεύονται οι μεταβάσεις των διαφανειών μου;`,
+        "answer": `Όχι, το PDF είναι μια στατική μορφή εγγράφου, επομένως τα κινούμενα σχέδια και οι μεταβάσεις διαφανειών δεν θα μεταφερθούν.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Περιλαμβάνονται σημειώσεις ομιλητή;`,
+        "answer": `Επί του παρόντος, το εργαλείο μας μετατρέπει τα κύρια γραφικά της διαφάνειας.Οι σημειώσεις του ηχείου δεν περιλαμβάνονται στην τυπική έξοδο PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF σε HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Μετατρέψτε τέλεια τα έγγραφά σας PDF σε ιστοσελίδες HTML.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Ανεβάστε το αρχείο PDF σας.`,
+      `Το σύστημά μας θα μετατρέψει το έγγραφο σε web-ready HTML, CSS και εικόνες.`,
+      `Κατεβάστε το αρχείο ZIP που περιέχει τη νέα σας ιστοσελίδα.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Θα ανταποκρίνεται το HTML;`,
+        "answer": `Το HTML θα ταιριάζει πολύ με τη στατική διάταξη του PDF σας, διατηρώντας την απόλυτη τοποθέτηση για ακρίβεια.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Οι εικόνες εξάγονται αυτόματα;`,
+        "answer": `Ναι, όλες οι ενσωματωμένες εικόνες εξάγονται και αναφέρονται σωστά στον κώδικα HTML που δημιουργείται.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Χρειάζομαι δεξιότητες κωδικοποίησης για να το χρησιμοποιήσω;`,
+        "answer": `Καθόλου.Θα λάβετε ένα έτοιμο προς χρήση αρχείο HTML που μπορείτε να ανοίξετε αμέσως σε οποιοδήποτε πρόγραμμα περιήγησης ιστού.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML σε PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Μετατρέψτε ιστοσελίδες σε μορφή HTML σε PDF απευθείας από τη διεύθυνση URL ή το αρχείο.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Ανεβάστε το αρχείο HTML ή εισαγάγετε μια διεύθυνση URL ιστοσελίδας.`,
+      `Η μηχανή απόδοσης μας θα φορτώσει τη σελίδα, θα εφαρμόσει στυλ και θα την αποτυπώσει ως έγγραφο PDF.`,
+      `Κατεβάστε το τέλεια μορφοποιημένο PDF σας.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Μπορώ να μετατρέψω ζωντανές διευθύνσεις URL σε PDF;`,
+        "answer": `Ναι, μπορείτε να εισαγάγετε μια διεύθυνση URL και το εργαλείο μας θα ανακτήσει τη ζωντανή ιστοσελίδα και θα τη μετατρέψει σε PDF υψηλής ποιότητας.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Εφαρμόζονται στυλ CSS;`,
+        "answer": `Απολύτως.Η μηχανή απόδοσης μας υποστηρίζει πλήρως το CSS, διασφαλίζοντας ότι το PDF μοιάζει ακριβώς με τη ζωντανή ιστοσελίδα.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Τι γίνεται με τις βαριές σελίδες JavaScript;`,
+        "answer": `Το εργαλείο μας εκτελεί JavaScript πριν καταγράψει τη σελίδα, διασφαλίζοντας ότι το δυναμικό περιεχόμενο αποδίδεται σωστά στο τελικό PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF σε κείμενο`,
+    "desc": `Εξάγετε κείμενο από τα αρχεία PDF σας για να δημιουργήσετε επεξεργάσιμα έγγραφα TXT.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Ανεβάστε το έγγραφο PDF σας.`,
+      `Το σύστημά μας θα αφαιρέσει τη μορφοποίηση και θα εξαγάγει καθαρό, απλό κείμενο.`,
+      `Κατεβάστε το ακατέργαστο αρχείο TXT.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Εξάγει κείμενο από εικόνες;`,
+        "answer": `Ναι, εάν το PDF περιέχει σαρωμένες εικόνες, η τεχνολογία OCR μας θα διαβάσει το κείμενο και θα το συμπεριλάβει στο αρχείο TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Διατηρείται η μορφοποίηση;`,
+        "answer": `Όχι, αυτό το εργαλείο καταργεί συγκεκριμένα όλες τις μορφοποιήσεις για να σας παρέχει ακατέργαστο, χωρίς στυλ απλό κείμενο.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Είναι ασφαλή τα δεδομένα μου;`,
+        "answer": `Ναι, όλα τα αρχεία κρυπτογραφούνται κατά την επεξεργασία και διαγράφονται αυτόματα εντός 2 ωρών.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Συγχώνευση PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Συνδυάστε αρχεία PDF με τη σειρά που θέλετε με την ευκολότερη διαθέσιμη συγχώνευση PDF.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Επιλέξτε πολλά αρχεία PDF από τη συσκευή σας.`,
+      `Σύρετε και αποθέστε τις μικρογραφίες για να τακτοποιήσετε τα αρχεία με τη σειρά που επιθυμείτε.`,
+      `Κάντε κλικ στο «Συγχώνευση» και πραγματοποιήστε λήψη του συνδυασμένου, μεμονωμένου εγγράφου PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Τι είναι η συγχώνευση PDF;`,
+        "answer": `Η συγχώνευση PDF είναι ένα βοηθητικό πρόγραμμα που συνδυάζει πολλά αρχεία PDF σε ένα ενιαίο, συνεχές έγγραφο.Οι δωρεάν χρήστες μπορούν να συγχωνεύσουν έως και 20 αρχεία ταυτόχρονα.Οι επαγγελματίες χρήστες μπορούν να συγχωνεύσουν απεριόριστο αριθμό εγγράφων.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Μπορώ να αλλάξω τη σειρά των αρχείων;`,
+        "answer": `Ναί!Μετά τη μεταφόρτωση, απλώς σύρετε και αποθέστε τις μικρογραφίες των αρχείων για να τις αναδιατάξετε όπως ακριβώς θέλετε.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Η συγχώνευση μειώνει την ποιότητα;`,
+        "answer": `Καθόλου.Η διαδικασία συγχώνευσης διατηρεί την αρχική ποιότητα και μορφοποίηση όλων των εγγράφων σας.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Διαχωρισμός PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Διαχωρίστε μία σελίδα ή ένα ολόκληρο σύνολο για εύκολη μετατροπή σε ανεξάρτητα αρχεία PDF.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Ανεβάστε το PDF που θέλετε να χωρίσετε.`,
+      `Επιλέξτε εάν θέλετε να εξαγάγετε συγκεκριμένες σελίδες ή να χωρίσετε το έγγραφο σε σταθερές περιοχές.`,
+      `Κατεβάστε τα νέα, διαχωρισμένα αρχεία PDF ως αρχείο ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Μπορώ να εξαγάγω μόνο μία σελίδα από ένα μεγάλο PDF;`,
+        "answer": `Ναι, μπορείτε εύκολα να καθορίσετε έναν αριθμό σελίδας ή ένα προσαρμοσμένο εύρος (π.χ. σελίδες 4-7) για εξαγωγή.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Τα split αρχεία θα διατηρήσουν την αρχική ποιότητα;`,
+        "answer": `Ναι, οι μεμονωμένες σελίδες εξάγονται άψογα χωρίς απώλεια ανάλυσης ή ποιότητας κειμένου.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Πώς μπορώ να κατεβάσω πολλαπλά split αρχεία;`,
+        "answer": `Όταν χωρίζετε ένα έγγραφο σε πολλά μέρη, θα τα συσκευάσουμε άνετα σε ένα μόνο αρχείο ZIP για εύκολη λήψη.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Περιστροφή PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Περιστρέψτε τα PDF σας με τον τρόπο που τα χρειάζεστε.Μπορείτε ακόμη και να περιστρέψετε πολλά PDF ταυτόχρονα.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Ανεβάστε το έγγραφο PDF σας.`,
+      `Τοποθετήστε το δείκτη του ποντικιού πάνω από τις σελίδες που θέλετε να περιστρέψετε και κάντε κλικ στο εικονίδιο περιστροφής ή περιστρέψτε όλες τις σελίδες ταυτόχρονα.`,
+      `Κάντε κλικ στην εφαρμογή και κάντε λήψη του PDF που εναλλάσσεται μόνιμα.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Μπορώ να περιστρέψω μόνο συγκεκριμένες σελίδες;`,
+        "answer": `Ναι, μπορείτε να επιλέξετε μεμονωμένες σελίδες και να τις περιστρέψετε κατά 90, 180 ή 270 μοίρες χωρίς να επηρεαστεί το υπόλοιπο έγγραφο.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Είναι μόνιμη η εναλλαγή;`,
+        "answer": `Ναι, μόλις κάνετε λήψη του νέου αρχείου, οι αλλαγές προσανατολισμού αποθηκεύονται μόνιμα στα μεταδεδομένα του PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Είναι ασφαλές να ανεβάσετε εμπιστευτικά έγγραφα;`,
+        "answer": `Απολύτως.Όλες οι μεταφορτώσεις κρυπτογραφούνται μέσω HTTPS και διαγράφονται από τους διακομιστές μας 2 ώρες μετά την επεξεργασία.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Διαγραφή σελίδων`,
+    "desc": `Αφαιρέστε σελίδες από ένα έγγραφο PDF αμέσως.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Ανεβάστε το αρχείο PDF σας.`,
+      `Επιλέξτε τις σελίδες που θέλετε να αφαιρέσετε κάνοντας κλικ στις μικρογραφίες τους.`,
+      `Κάντε κλικ στην επιλογή "Διαγραφή σελίδων" και κάντε λήψη του πρόσφατα βελτιστοποιημένου εγγράφου σας.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Πώς μπορώ να ξέρω ποιες σελίδες να διαγράψω;`,
+        "answer": `Το εργαλείο μας δημιουργεί μικρογραφίες υψηλής ποιότητας για κάθε σελίδα, επιτρέποντάς σας να προσδιορίσετε οπτικά και να επιλέξετε τις ακριβείς σελίδες που θέλετε να αφαιρέσετε.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Μπορώ να διαγράψω πολλές σελίδες ταυτόχρονα;`,
+        "answer": `Ναι, μπορείτε να κάνετε κλικ σε πολλές μικρογραφίες ή να πληκτρολογήσετε μια περιοχή σελίδων για να αφαιρέσετε πολλές σελίδες ταυτόχρονα.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Επηρεάζεται το υπόλοιπο έγγραφο;`,
+        "answer": `Όχι, όλες οι υπόλοιπες σελίδες θα διατηρήσουν την αρχική τους μορφοποίηση, ποιότητα και ανάλυση.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Αναδιάταξη σελίδων`,
+    "desc": `Αλλάξτε τη σειρά σελίδων του εγγράφου PDF σας μέσω μεταφοράς και απόθεσης.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Ανεβάστε το έγγραφο PDF σας.`,
+      `Απλώς σύρετε και αποθέστε τις μικρογραφίες της σελίδας για να αλλάξετε τη σειρά τους.`,
+      `Αφού κανονίσετε, εφαρμόστε τις αλλαγές και πραγματοποιήστε λήψη του αναδιοργανωμένου PDF σας.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Είναι εύκολο να παραγγείλετε ξανά ένα μεγάλο έγγραφο;`,
+        "answer": `Ναι, η διαισθητική διεπαφή μεταφοράς και απόθεσης σάς επιτρέπει να μετακινείτε γρήγορα σελίδες, ακόμη και σε μεγάλα έγγραφα.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Θα χάσω κάποιο διαδραστικό στοιχείο;`,
+        "answer": `Τα περισσότερα τυπικά διαδραστικά στοιχεία διατηρούνται, αν και τα πεδία σύνθετης μορφής που γεφυρώνουν πολλές σελίδες ενδέχεται να συμπεριφέρονται διαφορετικά.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Μπορώ να αναιρέσω μια κίνηση πριν την αποθήκευση;`,
+        "answer": `Ναι, μπορείτε να αναδιατάξετε τις σελίδες όσες φορές θέλετε πριν κάνετε κλικ στο κουμπί τελικής διαδικασίας.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Προσθήκη κενού σελίδας`,
+    "desc": `Εισαγάγετε μια κενή σελίδα οπουδήποτε μέσα στο έγγραφο PDF σας.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Ανεβάστε το αρχείο PDF σας.`,
+      `Επιλέξτε την ακριβή τοποθεσία όπου θέλετε να εισαγάγετε μια νέα κενή σελίδα.`,
+      `Εφαρμόστε τις αλλαγές και κατεβάστε το ενημερωμένο PDF σας.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Γιατί πρέπει να προσθέσω μια κενή σελίδα;`,
+        "answer": `Η προσθήκη μιας κενή σελίδας είναι χρήσιμη για την εκτύπωση εγγράφων διπλής όψης, την εισαγωγή μελλοντικών σημειώσεων ή τη διόρθωση της μορφοποίησης σελιδοποίησης.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Μπορώ να προσθέσω πολλές κενές σελίδες;`,
+        "answer": `Ναι, μπορείτε να εισαγάγετε όσες κενές σελίδες χρειάζεστε, οπουδήποτε στο έγγραφο.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Θα ταιριάζει η κενή σελίδα με το μέγεθος του εγγράφου;`,
+        "answer": `Ναι, η νέα κενή σελίδα θα ταιριάζει αυτόματα με τις διαστάσεις και τον προσανατολισμό των γύρω σελίδων.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Συμπίεση PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Μειώστε το μέγεθος του αρχείου βελτιστοποιώντας παράλληλα τη μέγιστη ποιότητα PDF.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Ανεβάστε το ογκώδες αρχείο PDF σας.`,
+      `Επιλέξτε το επιθυμητό επίπεδο συμπίεσης (Ακραία, Συνιστώμενη ή Λιγότερη συμπίεση).`,
+      `Κατεβάστε το βελτιστοποιημένο, πολύ μικρότερο αρχείο PDF.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Η συμπίεση θα καταστρέψει την ποιότητα του PDF μου;`,
+        "answer": `Οι προηγμένοι αλγόριθμοι βελτιστοποίησης μας μειώνουν το μέγεθος του αρχείου συμπιέζοντας εικόνες και αφαιρώντας περιττά δεδομένα, διατηρώντας παράλληλα ευκρινές κείμενο και οπτικά καθαρές εικόνες.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Ποιο επίπεδο συμπίεσης να επιλέξω;`,
+        "answer": `Προτείνουμε «Συνιστάται» για τέλεια ισορροπία.Χρησιμοποιήστε το "Extreme" μόνο εάν χρειάζεστε επειγόντως το μικρότερο δυνατό μέγεθος αρχείου για συνημμένα email.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Μπορώ να συμπιέσω ένα PDF που είναι ήδη μικρό;`,
+        "answer": `Μπορείτε, αλλά η μείωση του μεγέθους του αρχείου θα είναι ελάχιστη, καθώς τα δεδομένα είναι πιθανώς ήδη βελτιστοποιημένα.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Επισκευή PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Επιδιορθώστε ένα κατεστραμμένο PDF και ανακτήστε δεδομένα από κατεστραμμένα αρχεία.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Ανεβάστε το κατεστραμμένο ή κατεστραμμένο αρχείο PDF.`,
+      `Το σύστημά μας θα αναλύσει τη δομή του αρχείου και θα προσπαθήσει να ξαναχτίσει τα κατεστραμμένα δεδομένα.`,
+      `Κατεβάστε το επισκευασμένο έγγραφο PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Μπορούν όλα τα κατεστραμμένα PDF να διορθωθούν;`,
+        "answer": `Παρόλο που το εργαλείο μας είναι εξαιρετικά αποτελεσματικό στην επιδιόρθωση δομικών σφαλμάτων και σπασμένων κεφαλίδων, τα αρχεία που έχουν υποστεί σοβαρή ζημιά και λείπουν ακατέργαστα δεδομένα ενδέχεται να μην είναι πλήρως ανακτήσιμα.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Πόσο χρόνο διαρκεί η επισκευή;`,
+        "answer": `Τα περισσότερα αρχεία αναλύονται και επισκευάζονται μέσα σε λίγα δευτερόλεπτα, ανάλογα με την πολυπλοκότητα της βλάβης.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Είναι ασφαλή τα δεδομένα μέσα;`,
+        "answer": `Ναί.Επεξεργαζόμαστε την επισκευή με ασφάλεια στο cloud και το έγγραφό σας διαγράφεται οριστικά λίγο αργότερα.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Κάντε το κείμενο σε σαρωμένα PDF με δυνατότητα επιλογής, αναζήτησης και επεξεργασίας.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Ανεβάστε το σαρωμένο έγγραφο PDF.`,
+      `Επιλέξτε τη γλώσσα του κειμένου μέσα στο έγγραφο για καλύτερη ακρίβεια.`,
+      `Κατεβάστε το νέο, πλήρως αναζητήσιμο και επιλέξιμο PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Τι είναι το OCR;`,
+        "answer": `OCR σημαίνει Οπτική Αναγνώριση Χαρακτήρων.Είναι μια τεχνολογία που διαβάζει κείμενο μέσα σε εικόνες ή σαρωμένα έγγραφα και το μετατρέπει σε κείμενο υπολογιστή με δυνατότητα επιλογής και αναζήτησης.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Λειτουργεί το OCR σε χειρόγραφο κείμενο;`,
+        "answer": `Η μηχανή OCR μας είναι εξαιρετικά ακριβής για τυπωμένο κείμενο.Το χειρόγραφο κείμενο μπορεί να αποφέρει διαφορετικά αποτελέσματα ανάλογα με την αναγνωσιμότητα.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Μπορώ να αντιγράψω κείμενο από το έγγραφο OCR'd;`,
+        "answer": `Απολύτως.Αφού υποβληθεί σε επεξεργασία, μπορείτε να επισημάνετε, να αντιγράψετε και να επικολλήσετε κείμενο απευθείας από το PDF όπως ακριβώς ένα κανονικό έγγραφο.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Ισοπεδώστε το PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Συγχωνεύστε όλα τα επίπεδα, τις φόρμες και τους σχολιασμούς σε ένα μόνο μη επεξεργάσιμο επίπεδο.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Ανεβάστε το PDF που περιέχει φόρμες, επίπεδα ή σχολιασμούς.`,
+      `Το σύστημά μας θα συγχωνεύει μόνιμα όλα τα οπτικά στοιχεία σε ένα ενιαίο επίπεδο στρώμα.`,
+      `Κατεβάστε το ισοπεδωμένο, έτοιμο για εκτύπωση PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Γιατί πρέπει να ισοπεδώσω ένα PDF;`,
+        "answer": `Η ισοπέδωση ενός PDF κλειδώνει τα δεδομένα της φόρμας, αποτρέπει την περαιτέρω επεξεργασία των σχολιασμών και διασφαλίζει ότι το έγγραφο εκτυπώνεται ακριβώς όπως εμφανίζεται στην οθόνη.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Μπορεί ένα πεπλατυσμένο PDF να μη ισοπεδωθεί;`,
+        "answer": `Όχι, η ισοπέδωση είναι μια μόνιμη διαδικασία.Συνιστούμε να διατηρείτε αντίγραφο ασφαλείας του αρχικού διαδραστικού σας PDF.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Η ισοπέδωση μειώνει το μέγεθος του αρχείου;`,
+        "answer": `Συχνά, ναι.Με τη συγχώνευση επιπέδων και την κατάργηση των διαδραστικών πεδίων φόρμας, η συνολική δομή γίνεται πιο απλή και μικρότερη.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Προστασία PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Κρυπτογραφήστε το PDF σας με κωδικό πρόσβασης για να αποτρέψετε τη μη εξουσιοδοτημένη πρόσβαση.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Ανεβάστε το PDF που θέλετε να ασφαλίσετε.`,
+      `Πληκτρολογήστε έναν ισχυρό κωδικό πρόσβασης και επιβεβαιώστε τον.`,
+      `Κατεβάστε το νέο σας κρυπτογραφημένο αρχείο PDF.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Τι είδους κρυπτογράφηση χρησιμοποιείται;`,
+        "answer": `Χρησιμοποιούμε ισχυρή κρυπτογράφηση AES 256-bit, η οποία είναι το βιομηχανικό πρότυπο για την ασφάλεια εξαιρετικά ευαίσθητων και εμπιστευτικών εγγράφων.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Μπορούν το TheyLovePDF να ανακτήσει τον κωδικό πρόσβασής μου εάν τον ξεχάσω;`,
+        "answer": `Όχι. Ο κωδικός πρόσβασής σας δεν αποθηκεύεται ποτέ στους διακομιστές μας.Εάν το χάσετε, το έγγραφο δεν μπορεί να αποκρυπτογραφηθεί.Παρακαλώ κρατήστε το ασφαλές!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Η προστασία ενός PDF εμποδίζει την εκτύπωση;`,
+        "answer": `Ναι, η κρυπτογράφηση κλειδώνει το άνοιγμα, την εκτύπωση ή την επεξεργασία του εγγράφου χωρίς τον σωστό κωδικό πρόσβασης.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Ξεκλείδωμα PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Καταργήστε την ασφάλεια κωδικού πρόσβασης PDF, δίνοντάς σας την ελευθερία να χρησιμοποιείτε τα PDF σας όπως θέλετε.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Ανεβάστε το PDF που προστατεύεται με κωδικό πρόσβασης.`,
+      `Εάν το αρχείο έχει "κωδικό πρόσβασης κατόχου" που περιορίζει τις αλλαγές, θα το καταργήσουμε αμέσως.Εάν έχει «κωδικό χρήστη» που περιορίζει το άνοιγμα, πρέπει πρώτα να τον εισαγάγετε.`,
+      `Κατεβάστε το ξεκλείδωτο PDF σας.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Μπορείτε να ξεκλειδώσετε ένα PDF χωρίς τον κωδικό πρόσβασης;`,
+        "answer": `Μπορούμε εύκολα να καταργήσουμε τους «περιορισμούς επεξεργασίας/εκτύπωσης» (κωδικούς πρόσβασης κατόχου) χωρίς να χρειαστούμε τον κωδικό πρόσβασης.Ωστόσο, εάν το αρχείο απαιτεί κωδικό πρόσβασης μόνο για να το ανοίξει (κωδικός χρήστη), πρέπει να τον δώσετε.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Είναι νόμιμο να ξεκλειδώσετε ένα PDF;`,
+        "answer": `Θα πρέπει να αφαιρείτε την ασφάλεια μόνο από έγγραφα που σας ανήκουν νόμιμα ή έχετε άδεια να τροποποιήσετε.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Το ξεκλείδωμα θα αλλάξει το περιεχόμενο του εγγράφου;`,
+        "answer": `Όχι, το περιεχόμενο, η μορφοποίηση και η ποιότητα παραμένουν εντελώς ανέγγιχτα.Καταργείται μόνο το επίπεδο ασφαλείας.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Διορθώστε το PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Καταργήστε μόνιμα ευαίσθητες πληροφορίες ή κρυφά δεδομένα από τα PDF σας.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Ανεβάστε το αρχείο PDF σας.`,
+      `Σχεδιάστε μαύρα κουτιά πάνω από το ευαίσθητο κείμενο, τις εικόνες ή τις προσωπικές πληροφορίες.`,
+      `Εφαρμόστε τις διορθώσεις για να καθαρίσετε μόνιμα τα δεδομένα και, στη συνέχεια, πραγματοποιήστε λήψη του αρχείου.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Έχει πραγματικά εξαφανιστεί το ανανεωμένο κείμενο;`,
+        "answer": `Ναί.Σε αντίθεση με την απλή σχεδίαση ενός μαύρου σχήματος πάνω από κείμενο, το εργαλείο σύνταξης διαγράφει οριστικά τα υποκείμενα δεδομένα κειμένου, ώστε να μην μπορούν να αντιγραφούν ή να διαβαστούν από μηχανήματα.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Μπορώ να επεξεργαστώ και εικόνες;`,
+        "answer": `Απολύτως.Μπορείτε να επιλέξετε οποιαδήποτε περιοχή της σελίδας, συμπεριλαμβανομένων των γραφικών και των φωτογραφιών, για να είναι μόνιμα μαυρισμένη.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Είναι η διόρθωση αναστρέψιμη;`,
+        "answer": `Όχι. Για την ασφάλειά σας, η έκδοση καταστρέφει οριστικά τα κρυφά δεδομένα.Διατηρείτε πάντα ένα μη διορθωμένο αντίγραφο ασφαλείας εάν χρειάζεται.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Υπογραφή PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Υπογράψτε μόνοι σας ή ζητήστε ηλεκτρονικές υπογραφές από άλλους.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Ανεβάστε το έγγραφο που απαιτεί υπογραφή.`,
+      `Δημιουργήστε την υπογραφή σας σχεδιάζοντας, πληκτρολογώντας ή ανεβάζοντας μια εικόνα.`,
+      `Τοποθετήστε την υπογραφή σας στο έγγραφο, κάντε κλικ στην εφαρμογή και κάντε λήψη του.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Είναι νόμιμες οι ηλεκτρονικές υπογραφές;`,
+        "answer": `Ναι, οι ηλεκτρονικές υπογραφές που δημιουργούνται με το TheyLovePDF είναι νομικά δεσμευτικές στις περισσότερες χώρες και δικαιοδοσίες.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Μπορώ να αποθηκεύσω την υπογραφή μου για αργότερα;`,
+        "answer": `Ναι, εάν δημιουργήσετε έναν λογαριασμό, μπορείτε να αποθηκεύσετε με ασφάλεια την υπογραφή σας για γρήγορη υπογραφή με 1 κλικ στο μέλλον.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Μπορώ να προσθέσω ημερομηνίες κειμένου και αρχικά;`,
+        "answer": `Απολύτως.Μαζί με την υπογραφή σας, μπορείτε εύκολα να σύρετε και να αποθέσετε ημερομηνίες, αρχικά και προσαρμοσμένα πεδία κειμένου.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Αίτημα υπογραφής`,
+    "desc": `Στείλτε έγγραφα στους πελάτες για να υπογραφούν νόμιμα ηλεκτρονικά.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Ανεβάστε το PDF που χρειάζεστε υπογεγραμμένο.`,
+      `Προσθέστε τις διευθύνσεις email των παραληπτών και εκχωρήστε πεδία υπογραφής για αυτούς.`,
+      `Στείλτε το αίτημα.Θα τους στείλουμε με email έναν ασφαλή σύνδεσμο για να υπογράψουν το έγγραφο ηλεκτρονικά.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Χρειάζονται οι παραλήπτες λογαριασμό για να υπογράψουν;`,
+        "answer": `Όχι, οι παραλήπτες μπορούν να υπογράψουν με ασφάλεια το έγγραφο απευθείας από τον σύνδεσμο email τους χωρίς να χρειάζεται να δημιουργήσουν έναν λογαριασμό TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Πώς μπορώ να ξέρω πότε έχει υπογραφεί;`,
+        "answer": `Θα λάβετε μια αυτοματοποιημένη ειδοποίηση μέσω email τη στιγμή που όλα τα μέρη έχουν ολοκληρώσει την υπογραφή του εγγράφου.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Υπάρχει ίχνος ελέγχου;`,
+        "answer": `Ναι, οι χρήστες Pro λαμβάνουν μια ολοκληρωμένη διαδρομή ελέγχου που περιγράφει λεπτομερώς τις διευθύνσεις IP και τις χρονικές σημάνσεις για πλήρη συμμόρφωση με τη νομοθεσία.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Πιστοποιητικό σημάδι`,
+    "desc": `Προσθέστε μια κρυπτογραφική ψηφιακή υπογραφή στο PDF σας.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Ανεβάστε το PDF και το ψηφιακό σας πιστοποιητικό (.pfx ή .p12).`,
+      `Εισαγάγετε τον κωδικό πρόσβασης του πιστοποιητικού.`,
+      `Εφαρμόστε την κρυπτογραφική υπογραφή και κατεβάστε το επαληθευμένο PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Τι είναι η υπογραφή πιστοποιητικού;`,
+        "answer": `Σε αντίθεση με μια οπτική ηλεκτρονική υπογραφή, μια υπογραφή πιστοποιητικού εφαρμόζει ένα κρυπτογραφικό κατακερματισμό στο έγγραφο, αποδεικνύοντας μαθηματικά την αυθεντικότητά του και διασφαλίζοντας ότι δεν έχει αλλοιωθεί.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Αποθηκεύετε τον κωδικό πρόσβασης του πιστοποιητικού μου;`,
+        "answer": `Ποτέ.Ο κωδικός πρόσβασής σας διατηρείται στην προσωρινή μνήμη μόνο κατά την ακριβή στιγμή της υπογραφής και καταστρέφεται αμέσως.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Μπορούν οι άνθρωποι να επαληθεύσουν την υπογραφή;`,
+        "answer": `Ναι, όταν ανοίγει σε τυπικά προγράμματα ανάγνωσης PDF όπως το Adobe Acrobat, θα εμφανιστεί ένα πράσινο σημάδι επιλογής που υποδεικνύει ότι το έγγραφο έχει επαληθευτεί ψηφιακά και δεν έχει τροποποιηθεί.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Συνομιλία με PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Μιλήστε στο PDF σας.Κάντε ερωτήσεις, λάβετε περιλήψεις και εξάγετε insight άμεσα χρησιμοποιώντας AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `Όλα συμπεριλαμβάνονται` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Ανεβάστε το μεγάλο ή πολύπλοκο έγγραφο PDF σας.`,
+      `Πληκτρολογήστε μια ερώτηση στο πλαίσιο συνομιλίας, όπως "Σύνοψη κεφαλαίου 2" ή "Ποιο είναι το κύριο επιχείρημα;"`,
+      `Το AI μας θα διαβάσει αμέσως το έγγραφο και θα σας δώσει μια ακριβή απάντηση.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Πώς λειτουργεί το Chat με PDF;`,
+        "answer": `Χρησιμοποιούμε προηγμένα μοντέλα μεγάλων γλωσσών (LLM) για να σαρώσουμε το κείμενο του εγγράφου σας, να κατανοήσουμε το περιεχόμενό του και να απαντήσουμε σε τυχόν ερωτήσεις που κάνετε με βάση αυστηρά το περιεχόμενο του εγγράφου.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Μπορεί να διαβάσει σαρωμένα έγγραφα;`,
+        "answer": `Εάν το έγγραφο είναι καθαρά εικόνα, πρέπει πρώτα να το εκτελέσετε μέσω του εργαλείου OCR.Εάν περιέχει κείμενο με δυνατότητα επιλογής, το AI μπορεί να το διαβάσει αμέσως.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Χρησιμοποιούνται τα έγγραφά μου για την εκπαίδευση του AI;`,
+        "answer": `Απολύτως όχι.Το απόρρητό σας είναι προτεραιότητά μας.Η επεξεργασία των εγγράφων γίνεται σε ασφαλές περιβάλλον και δεν χρησιμοποιούνται ποτέ για την εκπαίδευση μοντέλων δημόσιας τεχνητής νοημοσύνης.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Επεξεργασία PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Προσθέστε κείμενο, εικόνες, σχήματα ή ελεύθερους σχολιασμούς σε ένα έγγραφο PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Δημοφιλής` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Ανεβάστε το PDF που θέλετε να τροποποιήσετε.`,
+      `Χρησιμοποιήστε τη γραμμή εργαλείων για να προσθέσετε κείμενο, να εισαγάγετε εικόνες, να σχεδιάσετε σχήματα ή να εφαρμόσετε λευκώματα σε υπάρχουσες περιοχές.`,
+      `Αποθηκεύστε τις αλλαγές σας και κατεβάστε το ενημερωμένο PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Μπορώ να αλλάξω το υπάρχον κείμενο στο PDF;`,
+        "answer": `Προς το παρόν, μπορείτε να χρησιμοποιήσετε το εργαλείο "whiteout" για να καλύψετε παλιό κείμενο και να πληκτρολογήσετε νέο κείμενο πάνω του.Η εγγενής επεξεργασία κειμένου είναι ένα εξαιρετικά περίπλοκο χαρακτηριστικό που αναπτύσσουμε ενεργά.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Μπορώ να προσθέσω εικόνες στο PDF;`,
+        "answer": `Ναι, μπορείτε εύκολα να ανεβάσετε και να σφραγίσετε εικόνες PNG ή JPG οπουδήποτε στο έγγραφό σας.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Η επεξεργασία μειώνει την ποιότητα του εγγράφου;`,
+        "answer": `Όχι, το πρόγραμμα επεξεργασίας μας προσθέτει τους σχολιασμούς σας πάνω από την υπάρχουσα δομή του εγγράφου χωρίς να επανασυμπιέζει τις αρχικές εικόνες ή κείμενο.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Υδατογράφημα PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Σφραγίστε μια εικόνα ή ένα κείμενο πάνω από το PDF σας σε δευτερόλεπτα.Επιλέξτε τυπογραφία, διαφάνεια και θέση.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Ανεβάστε το αρχείο PDF σας.`,
+      `Πληκτρολογήστε το κείμενο του υδατογραφήματος ή ανεβάστε μια εικόνα λογότυπου.Προσαρμόστε την αδιαφάνεια, την περιστροφή και την τοποθέτηση.`,
+      `Κάντε κλικ στην εφαρμογή και κάντε λήψη του εγγράφου που έχει υδατογραφηθεί.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Μπορώ να υδατογραφήσω όλες τις σελίδες ταυτόχρονα;`,
+        "answer": `Ναι, από προεπιλογή το υδατογράφημά σας θα εφαρμόζεται με συνέπεια σε κάθε σελίδα του εγγράφου.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Μπορώ να προσαρμόσω τη διαφάνεια;`,
+        "answer": `Απολύτως.Μπορείτε να κάνετε το υδατογράφημα πολύ αχνά, ώστε να μην αποσπά την προσοχή από το έγγραφο ή εντελώς αδιαφανές για μέγιστη ορατότητα.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Μπορεί να αφαιρεθεί ένα υδατογράφημα;`,
+        "answer": `Ισιώνουμε το υδατογράφημα στη δομή του εγγράφου για να κάνουμε όσο το δυνατόν πιο δύσκολη την αφαίρεσή του, διασφαλίζοντας την προστασία της πνευματικής ιδιοκτησίας σας.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Φόρμες PDF`,
+    "desc": `Συμπληρώστε φόρμες PDF γρήγορα και με ακρίβεια στο διαδίκτυο.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Ανεβάστε μια διαδραστική φόρμα PDF.`,
+      `Κάντε κλικ στα πεδία κειμένου, στα πλαίσια ελέγχου ή στα κουμπιά επιλογής για να συμπληρώσετε τα στοιχεία σας.`,
+      `Κατεβάστε τη συμπληρωμένη, συμπληρωμένη φόρμα.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Μπορώ να αποθηκεύσω μια μερικώς συμπληρωμένη φόρμα;`,
+        "answer": `Εάν έχετε λογαριασμό Pro, οι συνεδρίες σας αποθηκεύονται αυτόματα, επιτρέποντάς σας να επιστρέψετε και να ολοκληρώσετε τη συμπλήρωση της φόρμας αργότερα.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Λειτουργεί με όλες τις φόρμες PDF;`,
+        "answer": `Το εργαλείο μας υποστηρίζει τυπικά AcroForms, τα οποία αποτελούν το 99% των διαδραστικών PDF.Οι παλαιότερες φόρμες XFA ενδέχεται να έχουν περιορισμένη υποστήριξη.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Μπορώ να ισοπεδώσω τη φόρμα αφού τη συμπληρώσω;`,
+        "answer": `Ναι, μετά τη λήψη, μπορείτε να το εκτελέσετε μέσω του εργαλείου μας 'Flatten PDF' για να κλειδώσετε τα δεδομένα, ώστε να μην μπορούν να τροποποιηθούν από τον παραλήπτη.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Προσθήκη αριθμών σελίδων`,
+    "desc": `Προσθέστε αριθμούς σελίδων σε PDF με ευκολία.Επιλέξτε τις θέσεις, τις διαστάσεις, την τυπογραφία σας.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Δωρεάν` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Ανεβάστε το έγγραφό σας.`,
+      `Επιλέξτε τη θέση (π.χ. κάτω δεξιά), το στυλ γραμματοσειράς και τον αριθμό έναρξης.`,
+      `Εφαρμόστε την αρίθμηση και κατεβάστε το τέλεια μορφοποιημένο PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Μπορώ να παραλείψω το εξώφυλλο;`,
+        "answer": `Ναί!Μπορείτε να καθορίσετε από ποια σελίδα πρέπει να ξεκινά πραγματικά η αρίθμηση, επιτρέποντάς σας να διατηρείτε καθαρές τις σελίδες τίτλου.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Μπορώ να προσαρμόσω τη μορφή;`,
+        "answer": `Απολύτως.Μπορείτε να επιλέξετε μορφές όπως «Σελίδα 1», «1 από 10» ή απλώς «1» και να επιλέξετε τη γραμματοσειρά, το μέγεθος και το χρώμα.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Είναι ακριβής η ευθυγράμμιση;`,
+        "answer": `Ναι, το εργαλείο μας υπολογίζει τα ακριβή περιθώρια για να διασφαλίσει ότι οι αριθμοί των σελίδων σας είναι τέλεια ευθυγραμμισμένοι σε κάθε σελίδα.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Σημειώστε το PDF`,
+    "desc": `Επισημάνετε, υπογραμμίστε, διαγραμμίστε το κείμενο και προσθέστε σχόλια.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Νέος` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Ανεβάστε το PDF σας.`,
+      `Χρησιμοποιήστε τα εργαλεία επισήμανσης, υπογράμμισης, διαγραφής και αυτοκόλλητων σημειώσεων για να ελέγξετε το έγγραφο.`,
+      `Κατεβάστε το σχολιασμένο αρχείο για να το μοιραστείτε με την ομάδα σας.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Θα είναι ορατοί οι σχολιασμοί μου σε τυπικούς αναγνώστες;`,
+        "answer": `Ναι, χρησιμοποιούμε τυπικά πρωτόκολλα σχολιασμού PDF, που σημαίνει ότι οι επισημάνσεις και οι σημειώσεις σας θα είναι ορατές στο Adobe Acrobat, στο Chrome και στο Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Μπορώ να αλλάξω τα χρώματα τονισμού;`,
+        "answer": `Ναι, μπορείτε να επιλέξετε από μια ευρεία παλέτα χρωμάτων για να κωδικοποιήσετε τις σημειώσεις και τις επισημάνσεις σας.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Είναι εύκολο να διαγράψετε έναν σχολιασμό;`,
+        "answer": `Πολύ εύκολο.Απλώς κάντε κλικ σε οποιονδήποτε σχολιασμό κάνατε και πατήστε το κουμπί διαγραφής για να τον αφαιρέσετε αμέσως.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Έλεγχος λογοκλοπής`,
+    "desc": `Συγκρίνετε το έγγραφό σας με δισεκατομμύρια ιστοσελίδες και ακαδημαϊκές βάσεις δεδομένων.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Ανεβάστε το δοκίμιο ή το έγγραφο που θέλετε να επαληθεύσετε.`,
+      `Η μηχανή AI μας θα σαρώσει δισεκατομμύρια ιστοσελίδες και ακαδημαϊκές βάσεις δεδομένων για να βρει αντιστοιχίσεις.`,
+      `Ελέγξτε τη λεπτομερή αναφορά ομοιότητας επισημαίνοντας οποιοδήποτε αντιγραμμένο κείμενο.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Πόσο ακριβής είναι ο έλεγχος λογοκλοπής;`,
+        "answer": `Είναι εξαιρετικά ακριβές.Χρησιμοποιούμε εταιρική τεχνητή νοημοσύνη που διασταυρώνει το κείμενό σας σε μια τεράστια, συνεχώς ενημερωμένη βάση δεδομένων διαδικτυακού περιεχομένου.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Ελέγχει έναντι ακαδημαϊκών εργασιών εκτός σύνδεσης;`,
+        "answer": `Ελέγχει τα μεγάλα ακαδημαϊκά περιοδικά ανοιχτής πρόσβασης και τις πηγές με πολλές αναφορές που είναι διαθέσιμες στο διαδίκτυο.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Αποθηκεύεται το έγγραφό μου σε μια βάση δεδομένων;`,
+        "answer": `Όχι. Σε αντίθεση με τα συστήματα ορισμένων πανεπιστημίων, δεν προσθέτουμε το έγγραφό σας σε μια παγκόσμια βάση δεδομένων, διασφαλίζοντας ότι η αρχική σας εργασία παραμένει αυστηρά δική σας.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Σύνοψη PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Δημιουργήστε γρήγορες, ακριβείς περιλήψεις μεγάλων εγγράφων σε δευτερόλεπτα.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Νέο` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Ανεβάστε ένα εκτενές έγγραφο, αναφορά ή κεφάλαιο βιβλίου.`,
+      `Κάντε κλικ στο «Σύνοψη» για να αφήσετε το AI μας να αναλύσει τις βασικές έννοιες.`,
+      `Διαβάστε τη σύνοψη κουκκίδων και κατεβάστε την εάν χρειάζεται.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Μπορεί να συνοψίσει ένα ολόκληρο βιβλίο;`,
+        "answer": `Η τεχνητή νοημοσύνη είναι πολύ ικανή, αλλά για τα καλύτερα αποτελέσματα και τη μέγιστη λεπτομέρεια, συνιστούμε να συνοψίζετε ένα κεφάλαιο ή ενότητα κάθε φορά.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Η περίληψη καταγράφει βασικά στατιστικά στοιχεία;`,
+        "answer": `Ναι, το LLM μας έχει οδηγίες να προσδιορίζει και να επισημαίνει κρίσιμα σημεία δεδομένων, στατιστικά στοιχεία και κύρια επιχειρήματα.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Ποιες γλώσσες υποστηρίζονται;`,
+        "answer": `Η σύνοψη λειτουργεί καλύτερα στα αγγλικά, αλλά υποστηρίζει εγγενώς και κατανοεί περισσότερες από 50 παγκόσμιες γλώσσες.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Μετάφραση PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Μεταφράστε πλήρη έγγραφα διατηρώντας παράλληλα την αρχική μορφοποίηση και διάταξη.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Νέο` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Ανεβάστε το έγγραφό σας.`,
+      `Επιλέξτε την αρχική γλώσσα και τη γλώσσα-στόχο στην οποία θέλετε να μεταφράσετε.`,
+      `Κατεβάστε το πρόσφατα μεταφρασμένο PDF, με την αρχική του μορφοποίηση.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Θα σπάσει η διάταξη μετά τη μετάφραση;`,
+        "answer": `Ο προηγμένος κινητήρας μας επιχειρεί να διατηρήσει την ακριβή διάταξη, αν και η επέκταση κειμένου (π.χ. από Αγγλικά προς Γερμανικά) μπορεί να προκαλέσει ελαφρές, αναπόφευκτες οπτικές μετατοπίσεις.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Πόσο ακριβής είναι η μετάφραση;`,
+        "answer": `Χρησιμοποιούμε την τελευταία λέξη της τεχνολογίας Neural Machine Translation (NMT) που υποστηρίζεται από AI, η οποία παρέχει μεταφράσεις υψηλής ακρίβειας, με επίγνωση του πλαισίου αντί για άκαμπτη μετάφραση λέξη προς λέξη.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Μπορώ να μεταφράσω σαρωμένα έγγραφα;`,
+        "answer": `Ναί!Εάν ανεβάσετε ένα σαρωμένο έγγραφο, το σύστημά μας θα εκτελέσει αυτόματα το OCR για να διαβάσει το κείμενο πριν το μεταφράσει.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Εξαγωγή δεδομένων`,
+    "desc": `Εξάγετε έξυπνα πίνακες, τιμές και οντότητες από τιμολόγια και φόρμες.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Νέο` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Ανεβάστε τιμολόγια, αποδείξεις ή δομημένες φόρμες.`,
+      `Το AI μας θα προσδιορίζει βασικά πεδία όπως Ημερομηνίες, Σύνολα, Ονόματα και Διευθύνσεις.`,
+      `Κάντε λήψη των εξαγόμενων δεδομένων ως καθαρό αρχείο CSV ή JSON.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Σε τι χρησιμοποιείται η εξαγωγή δεδομένων;`,
+        "answer": `Είναι τέλειο για λογιστικά και διοικητικά.Αντί να πληκτρολογούμε με μη αυτόματο τρόπο δεδομένα από 100 τιμολόγια, το AI μας το κάνει αυτόματα σε δευτερόλεπτα.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Χρειάζεται το έγγραφο συγκεκριμένη διάταξη;`,
+        "answer": `Όχι!Η τεχνητή νοημοσύνη μας είναι αρκετά έξυπνη ώστε να βρίσκει το "Συνολικό Ποσό" είτε βρίσκεται στην κορυφή, στο κάτω μέρος ή στο μέσο της σελίδας.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Μπορώ να εξαγάγω δεδομένα στο Excel;`,
+        "answer": `Ναι, τα εξαγόμενα δεδομένα μπορούν να εξαχθούν απευθείας ως αρχείο CSV, το οποίο ανοίγει τέλεια στο Microsoft Excel ή στο Google Sheets.`
+      },
     ]
-  }
+  },
 ];

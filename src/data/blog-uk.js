@@ -1,497 +1,468 @@
+// Auto-generated blog translation for uk
 export const BLOG_POSTS_UK = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Як стиснути PDF на Mac (посібник 2026)`,
+    date: `2026-06-20`,
+    excerpt: `Дізнайтеся про найшвидші та найпростіші способи зменшення розміру файлу PDF на Mac без втрати якості.Ми порівнюємо інструменти Preview, Automator і Web.`,
+    content: `<p>Робота з великими PDF-файлами на вашому Mac може бути неприємною, особливо коли вам потрібно надіслати документ електронною поштою, і він перевищує стандартний ліміт розміру вкладення у 25 Мб.Незалежно від того, чи ви студент, який надсилає завдання, чи професіонал, який надсилає портфоліо, знати, як правильно стискати PDF, є важливою навичкою.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Спосіб 1: вбудована програма попереднього перегляду (безкоштовна, але базова)</h2>
+<p>Програма Apple Preview має вбудований «Кварцовий фільтр», який може зменшувати ваші PDF-файли.Це швидко та не вимагає підключення до Інтернету.</p>
+<ol>
+<li>Відкрийте PDF-файл за допомогою програми <strong>Попередній перегляд</strong>.</li>
+<li>Натисніть <strong>Файл</strong> у верхній панелі меню, а потім виберіть <strong>Експорт</strong> (не вибирайте «Експортувати як PDF»).</li>
+<li>У вікні експорту знайдіть спадне меню <strong>Кварцовий фільтр</strong>.</li>
+<li>Виберіть <strong>Зменшити розмір файлу</strong> та натисніть «Зберегти».</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+<p class="text-red-700 m-0"><strong>Попередження:</strong> хоча цей метод безкоштовний, стандартний алгоритм стиснення Apple є неймовірно агресивним.Це часто псує якість зображень і робить векторний текст розмитим.Ми не рекомендуємо це для професійних документів.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Спосіб 2. Використання TheyLovePDF (професійний та високоякісний)</h2>
+<p>Якщо ви хочете зберегти чітку якість тексту та зображень, суттєво зменшивши розмір файлу, найкращим вибором стане використання спеціального інструменту стиснення на основі штучного інтелекту.</p>
+<ol>
+<li>Перейдіть до <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">інструменту стиснення PDF на TheyLovePDF</a>.</li>
+<li>Перетягніть PDF-файл на сторінку.</li>
+<li>Виберіть рівень стиснення:
+<ul class="mt-2 space-y-1 text-gray-600">
+<li><strong>Надзвичайне стиснення:</strong> найкраще для електронної пошти (найнижча якість).</li>
+<li><strong>Рекомендоване стиснення:</strong> найкраще співвідношення між розміром і якістю.</li>
+<li><strong>Менше стиснення:</strong> висока якість, ідеальна для друку.</li>
+</ul>
+</li>
+<li>Натисніть <strong>Стиснути PDF</strong> і завантажте оптимізований файл.</li>
+</ol>
+<p>Наші інтелектуальні алгоритми стиснення видаляють непотрібні метадані та стискають зображення за допомогою сучасних веб-стандартів, гарантуючи, що ваш документ виглядає точно так само, займаючи невелику частину місця для зберігання!</p>
+
+<h2>Висновок</h2>
+<p>Хоча вбудовані інструменти Mac чудові в автономному режимі, їм дуже бракує детального контролю, необхідного для сучасних документів.У будь-якому важливому випадку завжди покладайтеся на спеціальний механізм стиснення.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Як об’єднати кілька PDF-файлів на вашому iPhone`,
+    date: `2026-06-19`,
+    excerpt: `Відкрийте для себе найпростіший спосіб об’єднати кілька PDF-документів в один файл безпосередньо з вашого пристрою iOS.`,
+    content: `<p>Оскільки iPhone стає нашим основним пристроєм для роботи та навчання, знання, як об’єднувати PDF-файли на ходу, є важливою навичкою.Незалежно від того, чи збираєтеся ви квитанції для звіту про витрати, чи об’єднуєте конспекти лекцій, ось як ви можете це зробити без комп’ютера.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>Виклик з iOS</h2>
+<p>Хоча в iOS є надійна вбудована програма Files, вона не пропонує простого й рідного способу вибору кількох PDF-файлів і бездоганного їх з’єднання.Ви можете сканувати документи в один PDF-файл, але об’єднати наявні файли напрочуд складно.</p>
+
+<h2>Рішення: веб-додаток TheyLovePDF</h2>
+<p>Вам не потрібно завантажувати з App Store будь-які важкі програми на основі підписки.Ви можете зробити це безпосередньо з Safari або Chrome за допомогою нашої хмарної архітектури.</p>
+
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Покроковий посібник</h3>
+<ol class="space-y-3 mb-0">
+<li>Відкрийте Safari на своєму iPhone і перейдіть до <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
+<li>Торкніться великої кнопки <strong>Вибрати PDF-файли</strong>.</li>
+<li>Виберіть файли з програми <em>Файли</em> вашого iPhone або вашої <em>бібліотеки фотографій</em>.Ви можете вибрати кілька файлів одночасно.</li>
+<li>Після завантаження ви побачите візуальну сітку своїх файлів.Натисніть і утримуйте будь-який файл, щоб перетягнути та змінити їх порядок у потрібному порядку.</li>
+<li>Торкніться <strong>Об’єднати PDF</strong>.Наші сервери оброблять файли за мілісекунди.</li>
+<li>Торкніться <strong>Завантажити</strong> та збережіть новий комбінований документ просто на своєму пристрої.</li>
+</ol>
+</div>
+
+<h2>Чому б не використовувати програму?</h2>
+<p>Багато PDF-додатків з App Store можна завантажити безкоштовно, але вони вимагають грошей, щойно ви намагаєтесь об’єднати файли.Використовуючи хмарний інструмент, ви уникаєте цих комісій App Store і заощаджуєте місце на своєму телефоні.</p>
+<p>Це так просто, швидко та цілком безпечно!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Як захистити свій PDF паролем`,
+    date: `2026-06-18`,
+    excerpt: `Захистіть конфіденційну інформацію, додавши до ваших PDF-файлів безпечний, незламний пароль 256-бітного шифрування AES.`,
+    content: `<p>У сучасну епоху цифрових технологій конфіденційність даних є більш важливою, ніж будь-коли.Незалежно від того, надсилаєте ви фінансові звіти, медичні записи чи конфіденційний бізнес-контракт, залишати PDF-файл незахищеним становить величезний ризик для безпеки.</p>
+<p>У цьому посібнику ми покажемо вам, як заблокувати PDF-документи за допомогою шифрування військового рівня.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Що таке 256-бітне шифрування AES?</h2>
+<p>Advanced Encryption Standard (AES) – це алгоритм шифрування, який використовується урядом США для захисту секретної інформації.256-бітний ключ шифрування означає, що існує 2<sup>256</sup> можливих комбінацій – кількість настільки велика, що навіть найпотужніші суперкомп’ютери світу не зможуть її зламати за мільярд років.</p>
+<p>Коли ви використовуєте наш інструмент, ми не просто «додаємо пароль», який можна легко обійти.Ми математично шифруємо вміст вашого файлу за допомогою AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Як захистити ваш PDF</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Перейдіть до інструмента <a href="/tools/protect-pdf" class="font-bold hover:underline">Захист PDF</a>.</li>
+<li>Завантажте конфіденційний документ через наше безпечне з’єднання TLS 1.3.</li>
+<li>Введіть надійний пароль.(Ми рекомендуємо принаймні 12 символів, поєднуючи літери, цифри та символи).</li>
+<li>Натисніть <strong>Захистити PDF</strong>.</li>
+<li>Завантажте нещодавно зашифрований файл.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Найкращі методи захисту пароля</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>Ніколи не надсилайте пароль у тому самому електронному листі:</strong> якщо ви надсилаєте PDF-файл електронною поштою, надішліть пароль через інший канал (наприклад, через SMS або програму безпечного обміну повідомленнями, як-от Signal).</li>
+<li><strong>Використовуйте менеджер паролів:</strong> генеруйте випадковий рядок символів замість використання слова, яке можна знайти в словнику.</li>
+<li><strong>Не використовуйте особисту інформацію:</strong> уникайте дат народження, імен домашніх тварин або назв компаній.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Після шифрування файлу оригінальний вміст остаточно видаляється з наших серверів протягом 2 годин.Ваша конфіденційність є нашим абсолютним пріоритетом.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `Що таке OCR?Як зробити відскановані PDF-файли доступними для пошуку`,
+    date: `2026-06-17`,
+    excerpt: `Дізнайтеся, як працює технологія оптичного розпізнавання символів (OCR) і як вона може витягувати текст, який можна вибрати, із плоских зображень.`,
+    content: `<p>Ви коли-небудь отримували PDF-файл, який виглядає як документ, але коли ви намагаєтеся виділити текст, нічого не відбувається?Ви стикалися з «плоским» або «відсканованим» PDF-файлом.По суті, це просто цифрова фотографія аркуша паперу.</p>
+<p>Щоб взаємодіяти з цим текстом, вам потрібна магія <strong>оптичного розпізнавання символів (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>Як працює OCR</h2>
+<p>Коли ви запускаєте файл через механізм оптичного розпізнавання символів, програмне забезпечення діє як добре навчене людське око.Він сканує зображення піксель за пікселем, шукаючи візерунки, схожі на літери та цифри.</p>
+<p>Сучасне оптичне розпізнавання символів не лише відповідає формам;він використовує складні моделі штучного інтелекту та машинного навчання для розуміння контексту.Наприклад, він може визначити різницю між великим «I» і малим регістром «l» на основі літер, які оточують слово.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>Переваги OCR</h2>
+<ul class="space-y-2">
+<li><strong>Можливість пошуку:</strong> знайти певний пункт у 500-сторінковому відсканованому контракті неможливо, не прочитавши його повністю.OCR дозволяє використовувати CTRL+F, щоб миттєво знайти саме те, що вам потрібно.</li>
+<li><strong>Можливість редагувати:</strong> коли текст розпізнано, ви можете копіювати, вставляти та редагувати його в Word або Google Docs.</li>
+<li><strong>Доступність:</strong> програми зчитування з екрана для користувачів із вадами зору не можуть читати плоскі зображення.OCR робить ваші документи доступними для всіх.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Як розпізнати документ</h2>
+<p>З TheyLovePDF трансформувати відскановані документи неймовірно просто:</p>
+<ol>
+<li>Перейдіть до <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">інструменту OCR PDF</a>.</li>
+<li>Завантажте сканований документ.</li>
+<li>Виберіть мову документа.Це вкрай важливо: якщо повідомити штучному інтелекту, яку мову очікувати, це значно покращить точність, особливо для мов з унікальними символами чи акцентами.</li>
+<li>Процес звернення.Штучний інтелект реконструює ваш документ, накладаючи невидимий шар тексту на оригінальні зображення.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
+Припиніть вводити документи вручну.Дозвольте штучному інтелекту виконувати важку роботу за вас!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Як редагувати текст PDF у Windows 11 (без Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Перестаньте платити за дороге програмне забезпечення.Відкрийте для себе найефективніші, безкоштовні та розумні способи безпосереднього редагування тексту та зображень у форматі PDF на ПК з Windows.`,
+    content: `<p>Користувачі Windows роками стикалися з PDF-файлами.На відміну від документів Word, PDF-файли були розроблені як «завершені» цифрові відбитки.Коли ви помічаєте друкарську помилку в контракті або вам потрібно оновити дату в рахунку-фактурі, ви зазвичай стикаєтеся з великою платною системою, наприклад Adobe Acrobat.</p>
+<p>На щастя, у 2026 році вам не потрібно буде встановлювати дороге програмне забезпечення на вашому комп’ютері з Windows 11, щоб вносити основні зміни.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Розумний веб-підхід</h2>
+<p>Замість того, щоб завантажувати важкі та повільні програми для настільних комп’ютерів, хмарні редактори використовують обчислювальну потужність віддалених серверів для аналізу структури PDF безпосередньо у вашому браузері.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Як редагувати безпосередньо</h3>
+<ol class="space-y-2 mb-0">
+<li>Відкрийте Microsoft Edge або Google Chrome у Windows 11.</li>
+<li>Перейдіть до <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">інструмента редагування PDF</a>.</li>
+<li>Завантажте свій документ.Наша система миттєво розкодує текстові шари.</li>
+<li>Натисніть будь-яке текстове поле, щоб змінити текст, змінити шрифт або налаштувати розмір.</li>
+<li>Ви також можете вставляти нові зображення, фігури або затемнювати конфіденційну інформацію.</li>
+<li>Натисніть <strong>Застосувати зміни</strong> та завантажте оновлений файл.</li>
+</ol>
+</div>
+
+<h2>Чому б не використовувати Microsoft Edge?</h2>
+<p>Хоча Microsoft Edge має вбудований засіб перегляду PDF із інструментами малювання (чорнило), він <strong>не може редагувати наявний текст</strong>.Це дозволяє лише малювати зверху або додавати нові текстові поля.Щоб справді змінити опечатку в шарі оригінального тексту, вам потрібен справжній редактор PDF.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Порада спеціаліста:</p>
+<p class="text-sm text-gray-600">Якщо ваш PDF-файл є відсканованим зображенням, стандартне редагування тексту не працюватиме.Спершу потрібно використати <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">інструмент OCR</a>, щоб перетворити зображення на читабельний текстовий шар.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Найкращий посібник із безкоштовного підписання PDF-файлів на Android`,
+    date: `2026-06-15`,
+    excerpt: `Потрібно терміново підписати документ?Дізнайтеся, як намалювати, набрати або завантажити свій електронний підпис безпосередньо з телефону Android.`,
+    content: `<p>Ми всі були там: ви отримуєте важливий документ електронною поштою, поки вас немає за робочим столом.Тут негайно потрібен ваш підпис.Друк, підпис і сканування – це пережиток минулого.</p>
+<p>Сьогодні ваш Android-смартфон — це потужна цифрова робоча станція, здатна використовувати юридично обов’язкові електронні підписи.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Чи законні електронні підписи?</h2>
+<p>Так.Згідно із Законом ESIGN (США) та eIDAS (Європа), електронні підписи мають таку саму юридичну вагу, як і підписи мокрим чорнилом майже для всіх ділових і особистих операцій.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Як увійти на Android (програма не потрібна)</h2>
+<p>Вам не потрібно перевантажувати свій пристрій Android преміум-додатками для PDF.Просто використовуйте свій мобільний браузер.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li><strong>Відкрийте інструмент:</strong> торкніться посилання, щоб відкрити <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">інструмент підпису PDF</a> у Chrome.</li>
+<li><strong>Завантажте документ:</strong> торкніться, щоб завантажити файл безпосередньо з папки завантажень Android або Диска Google.</li>
+<li><strong>Створіть свій підпис:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Малюйте:</em> пальцем або стилусом намалюйте свій підпис прямо на екрані.</li>
+<li><em>Текст:</em> введіть своє ім’я та виберіть курсивний шрифт.</li>
+<li><em>Завантажити:</em> завантажте фотографію свого фактичного підпису на білому аркуші паперу (наш інструмент автоматично видаляє фон).</li>
+</ul>
+</li>
+<li><strong>Розмістіть:</strong> перетягніть підпис точно на рядок підпису.Ви можете звести щипки, щоб змінити розмір.</li>
+<li><strong>Завершення:</strong> натисніть «Підписати», щоб назавжди вставити підпис в архітектуру документа.</li>
+</ol>
+
+<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
+<p class="text-yellow-800 text-sm m-0"><strong>Примітка щодо безпеки:</strong> під час підписання конфіденційних документів завжди переконайтеся, що ви використовуєте безпечну платформу з шифруванням HTTPS.Ми автоматично видаляємо всі файли з наших серверів.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Чому студенти завжди повинні конвертувати PDF-файли у Word для редагування`,
+    date: `2026-06-14`,
+    excerpt: `Пишете дисертацію чи конспектуєте?Дізнайтеся, чому вилучення тексту в документ Word набагато краще, ніж редагування PDF безпосередньо.`,
+    content: `<p>Як студент, ви стикаєтесь із сотнями PDF-файлів щосеместру: слайдами лекцій, науковими роботами та цифровими підручниками.Коли вам потрібно витягнути цитати, узагальнити вміст або переписати розділи, у вас може виникнути спокуса скористатися редактором PDF.Але є розумніший, набагато професійніший спосіб.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Проблема з архітектурою PDF</h2>
+<p>PDF (Portable Document Format) розроблено для <em>презентації</em>, а не для створення.Усередині PDF-файлу текст не тече, як у звичайному документі;кожне окреме слово закріплюється за певними координатами X і Y на сторінці.</p>
+<p>Якщо ви спробуєте видалити абзац у редакторі PDF, текст під ним <strong>не</strong> переміститься вгору, щоб заповнити прогалину.Це залишає величезний порожній простір.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Рішення: перетворення PDF у Word</h2>
+<p>Перетворюючи документ назад у Microsoft Word (.docx), наша інтелектуальна система реконструює плавний макет.Абзаци знову стають абзацами, заголовки стають заголовками, а зображення стають рухомими блоками.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">Редактор PDF</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ Текст не змінюється</li>
+<li>❌ Важко змінити глобальні шрифти</li>
+<li>❌ Поля заблоковано</li>
+<li>❌ Таблиці важко змінювати</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Документ Word</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li>✅ Текст ллється природно</li>
+<li>✅ Легка перевірка орфографії та граматики</li>
+<li>✅ Динамічні розриви сторінок</li>
+<li>✅ Копіювання бездоганно</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Як зробити це бездоганно</h2>
+<p>Наш <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">конвертер PDF у Word</a> на основі штучного інтелекту використовує розширене розпізнавання макета.Просто завантажте файл, і за лічені секунди ви матимете повністю редагований документ Word.Коли ви закінчите писати завдання чи нотатки, ви завжди можете експортувати їх назад у PDF, перш ніж надіслати своєму професору.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Об’єднайте кілька PDF-файлів у Windows 10: крок за кроком`,
+    date: `2026-06-13`,
+    excerpt: `Упорядковуйте свої безладні папки, об’єднуючи пов’язані PDF-документи в єдині цілісні файли прямо з робочого столу Windows.`,
+    content: `<p>Наявність 15 різних PDF-файлів для одного проекту – це кошмар.Незалежно від того, чи йдеться про щомісячні рахунки-фактури, розділи книги чи відскановані медичні записи, об’єднання їх в один цілісний файл є важливим для організації Windows 10.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Вбудоване обмеження Windows</h2>
+<p>Windows 10 — це потужна ОС, але їй, як відомо, не вистачає вбудованого об’єднання PDF-файлів.Хоча він містить функцію «Microsoft Print to PDF», яка лише допомагає створювати PDF-файли з інших форматів, а не об’єднувати існуючі.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Розумний робочий процес (на основі браузера)</h2>
+<p>Не завантажуйте тіньове безкоштовне програмне забезпечення, яке може містити зловмисне програмне забезпечення або масові водяні знаки на ваших файлах.Найбільш професійним методом є використання зашифрованого інструмента браузера.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Крок 1. Зберіть файли.</strong> Розмістіть усі PDF-файли, які потрібно об’єднати, в одну папку на робочому столі.Це полегшує завантаження.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Крок 2. Відкрийте Merger.</strong> Перейдіть до <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Інструмент Merge PDF</a> на TheyLovePDF.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Крок 3. Виберіть і впорядкуйте.</strong> Перетягніть файли на екран.Ви побачите мініатюри попереднього перегляду.Ви можете перетягувати ці мініатюри вліво або вправо, щоб переконатися, що вони розташовані в ідеальному хронологічному порядку.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Крок 4. Об’єднайте.</strong> Натисніть кнопку об’єднання.Сервер миттєво зшиває двійковий код PDF-файлів без втрати якості.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Цей метод працює в Chrome, Edge, Firefox і Brave у Windows 10, не вимагаючи встановлення або адміністративних прав на вашому ПК.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Чому юристи повинні захищати PDF-файли паролями`,
+    date: `2026-06-12`,
+    excerpt: `Глибоке занурення в безпеку документів, відповідність і те, чому надсилання відкритих PDF-файлів електронною поштою є основним обов’язком для юридичних фірм.`,
+    content: `<p>У юридичній професії конфіденційність — це не просто найкраща практика, це сувора етична та часто законодавча вимога.Проте незліченна кількість юридичних фірм і помічників юристів досі надсилають конфіденційні довідки, контракти та пропозиції щодо врегулювання у вигляді необроблених незашифрованих PDF-додатків стандартною електронною поштою.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Ризик перехоплення</h2>
+<p>Стандартна електронна пошта (SMTP), як відомо, небезпечна.Якщо електронний лист направляється через незахищені сервери або якщо вхідні скомпрометовано, незашифрований PDF-файл повністю доступний для читання будь-кому, хто його перехопить.Це може призвести до порушення привілеїв клієнта та значних зобов’язань.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Шифрування проти паролів</h2>
+<p>Важливо розуміти різницю.Простий «пароль дозволів» забороняє друк або редагування, але не шифрує файл.Будь-хто все ще може прочитати це.</p>
+<p>Вам потрібен <strong>відкритий пароль</strong> із підтримкою <strong>шифрування AES-256</strong>.У разі застосування двійкові дані файлу зашифровані.Без пароля математично неможливо прочитати документ.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Вимоги відповідності</h4>
+<p class="text-red-800 text-sm m-0">Положення, такі як HIPAA (медичні) і GDPR (європейські дані), суворо штрафують організації, які не шифрують ідентифікаційну інформацію (PII) під час передачі.Зашифрований PDF-файл є прийнятним методом захисту даних під час передавання.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Професійний робочий процес</h2>
+<ol>
+<li>Створіть проект документа в Word і експортуйте його в PDF.</li>
+<li>Завантажте його на безпечну платформу без збереження даних, наприклад <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
+<li>Застосуйте згенерований пароль із 16 символів.</li>
+<li>Надіслати зашифрований PDF-файл клієнту електронною поштою.</li>
+<li>Надайте пароль клієнту через окремий захищений канал (наприклад, телефонний дзвінок або зашифровану програму обміну повідомленнями).</li>
+</ol>
+<p>Застосовуючи цей робочий процес, юристи захищають себе від відповідальності за порушення даних і забезпечують повну конфіденційність клієнта.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Як стиснути PDF на Android для надсилання через WhatsApp`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp має обмеження на розмір файлу, які блокують великі документи.Дізнайтеся, як зменшити розмір PDF-файлу на телефоні Android, щоб миттєво поділитися ним.`,
+    content: `<p>WhatsApp — це глобальний стандарт швидкого спілкування, який широко використовується як компаніями, так і студентами для обміну документами.Проте WhatsApp накладає суворі обмеження на розмір файлу.Якщо ви спробуєте надіслати архітектурний план розміром 150 МБ або великий відсканований підручник, програма прямо заблокує передачу.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Дилема Android</h2>
+<p>На відміну від стиснення фотографії, ОС Android не має вбудованої функції для стиснення документів PDF.Якщо ви шукатимете в магазині Google Play, вас засипатимуть програми, повні нав’язливої реклами, яка псує якість вашого файлу.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Техніка розумного стиснення</h2>
+<p>Ви можете повністю обійти магазини програм, використовуючи нашу високошвидкісну хмарну інфраструктуру безпосередньо з Google Chrome на своєму пристрої Android.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Відкрити компресор</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Торкніться цього посилання, щоб відкрити <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">компресор PDF</a> у своєму браузері.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Завантаження з файлів</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Торкніться, щоб завантажити, і виберіть програму «Файли» або «Документи» на своєму Android, щоб знайти великий PDF-файл.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Виберіть "Надзвичайне стиснення"</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Для WhatsApp виберіть найвищий рівень стиснення.Це видаляє дані зображення високої роздільної здатності, але забезпечує ідеальну читабельність тексту на екранах мобільних пристроїв.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Завантажити та поділитися</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Після обробки торкніться «Завантажити».Відкрийте WhatsApp, торкніться значка скріпки, виберіть «Документ» і поділіться своїм нещодавно зменшеним файлом!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Увесь цей процес займає менше 30 секунд, використовує дуже мало ваших мобільних даних і назавжди вирішує проблему ліміту WhatsApp.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Як витягнути певні сторінки з масивного PDF-файлу`,
+    date: `2026-06-10`,
+    excerpt: `Не надсилайте 500-сторінковий посібник, якщо комусь потрібен лише розділ 3. Ось найрозумніший спосіб витягнути та розділити сторінки PDF.`,
+    content: `<p>Ми всі їх отримали: 500-сторінковий корпоративний посібник, величезний файл юридичних розслідувань або підручник за весь семестр.Але що, якщо вам потрібно лише надіслати колезі сторінки з 45 по 52?</p>
+<p>Надсилання всього документа є непрофесійним, витрачає пропускну здатність і змушує одержувача шукати відповідну інформацію.Потрібно розділити PDF-файл.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>The Hacky Way проти Pro Way</h2>
+<p>Поширеним прийомом є використання діалогового вікна «Друк», вибір «Друк у PDF» і вибір діапазону сторінок.Хоча це працює, воно часто вирівнює документ – знищує інтерактивні посилання, закладки та іноді значно збільшує розмір файлу.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Професійний спосіб полягає в тому, щоб розділити документ на двійковий рівень, зберігаючи точну вихідну якість і метадані витягнутих сторінок.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Використання професійного спліттера</h2>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Перейдіть до <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
+<li>Завантажте свій великий документ.Наші сервери миттєво обробляють файли розміром до 2 ГБ.</li>
+<li>Виберіть свій режим:
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
+<li><strong>Витягти сторінки:</strong> введіть точні сторінки або діапазони (наприклад, <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Розділити за діапазонами:</strong> автоматично розділити документ на кілька менших документів.</li>
+</ul>
+</li>
+<li>Процес звернення.Ви отримаєте акуратний, гіперфокусований PDF-файл, який містить лише вибрані вами сторінки, з усіма оригінальними посиланнями та незмінною якістю.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Вилучаючи лише те, що має значення, ви поважаєте час і місце в папці вхідних повідомлень одержувача.Це невеликий технічний навик, який приносить значні професійні дивіденди.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Чат із PDF: як штучний інтелект змінює спосіб читання довгих документів`,
+    date: `2026-06-09`,
+    excerpt: `Перестаньте читати 100-сторінкові звіти.Дізнайтеся, як великі мовні моделі (LLM) дозволяють буквально «розмовляти» з вашими документами, щоб миттєво отримувати відповіді.`,
+    content: `<p>Читання 150-сторінкового фінансового звіту або щільної академічної роботи займало години виділення, ведення нотаток і пошуку.У 2026 році ця ера офіційно закінчилася.Ласкаво просимо в еру AI Document Chat.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>Що таке «Чат із PDF»?</h2>
+<p>Уявіть, що автор документа сидить поруч з вами, і ви можете просто поставити йому запитання.<em>"Який загальний дохід за 3 квартал?"</em> або <em>"Узагальніть методологію цього експерименту в 3 пунктах."</em></p>
+<p>Наш <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">інструмент Chat with PDF</a> використовує вдосконалені великі мовні моделі (LLM).Коли ви завантажуєте файл, ШІ «зчитує» весь документ за секунди, зберігаючи його у векторній пам’яті.Потім ви використовуєте інтерфейс чату (точно як ChatGPT), щоб ставити запитання щодо тексту.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Як це насправді працює (під капотом)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>Вилучення тексту:</strong> система аналізує PDF, вилучаючи весь текст і таблиці.</li>
+<li><strong>Векторизація:</strong> текст поділяється на "фрагменти" та перетворюється на математичні числа, які називаються вставленнями.</li>
+<li><strong>Семантичний пошук:</strong> коли ви ставите запитання, штучний інтелект шукає математику, щоб знайти точні абзаци, які найбільше відповідають вашому питанню.</li>
+<li><strong>Генерація:</strong> LLM читає ці конкретні абзаци та друкує звичайну розмовну відповідь, часто вказуючи точний номер сторінки, на якій він знайшов інформацію!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Випадки використання</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Студенти:</strong> завантажуйте підручники, щоб миттєво створювати навчальні посібники та картки.<br><strong>Юристи:</strong> завантажуйте файли справ, щоб миттєво знаходити прецеденти без CTRL+F.<br><strong>Аналітики:</strong> завантажуйте 10 тисяч звітів, щоб миттєво отримувати певні фінансові показники.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Конфіденційність перш за все</h2>
+<p>Найбільше занепокоєння ШІ – конфіденційність даних.Під час використання професійних інструментів, як-от TheyLovePDF, ваші дані документа суворо захищені.Він ніколи не використовується для навчання глобальних моделей штучного інтелекту, а дані автоматично стираються із серверів після завершення сеансу.</p>
+<p>Не залишайтеся позаду.Почніть спілкуватися зі своїми документами вже сьогодні та збільште швидкість читання в 10 разів.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Найкраща альтернатива iLovePDF для зменшення розміру PDF`,
+    date: `2026-06-23`,
+    excerpt: `Хочете стиснути PDF-файл без втрати якості чи агресивної реклами?Ось чому TheyLovePDF є кращою альтернативою iLovePDF.`,
+    content: `<p>Якщо ви читаєте це, ви, ймовірно, шукали спосіб зменшити розмір PDF-файлу та думали про використання iLovePDF.Хоча це популярний інструмент, багато користувачів шукають швидшу альтернативу без реклами, яка не погіршує візуальну точність документа.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Навіщо шукати альтернативу?</h2>
+<p>Багато застарілих PDF-інструментів покладаються на агресивні алгоритми стиснення, які погіршують якість ваших зображень і векторної графіки.Крім того, безкоштовні рівні часто сильно обмежені щоденними лімітами та прикрашені нав’язливою рекламою.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>Переваги TheyLovePDF</h2>
+<p>Ми розробили наш <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">інструмент для стиснення PDF</a>, щоб він був найкращим у галузі.Ось чому користувачі роблять перехід:</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>Інтелектуальне стиснення штучного інтелекту:</strong> замість простого зниження роздільної здатності зображення наша система математично аналізує ваш документ і видаляє невидимі метадані, шрифти без посилань і повторювані структури даних.</li>
+<li><strong>Відсутність реклами:</strong> ми вважаємо, що службові інструменти мають бути чистими та не відволікати.У нашому інструменті стиснення ви не знайдете жодного рекламного банера.</li>
+<li><strong>Сувора конфіденційність:</strong> ваші файли захищені 256-бітним шифруванням SSL і назавжди видаляються з наших серверів через 2 години.Ми не читаємо та не продаємо ваші дані.</li>
+</ul>
+
+<p>Наступного разу, коли вам потрібно буде зменшити величезний файл для вкладення електронної пошти чи повідомлення WhatsApp, пропустіть застарілі інструменти.Перетягніть свій файл у TheyLovePDF і відчуйте різницю.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Як конвертувати PowerPoint (PPT) у PDF на вашому iPhone`,
+    date: `2026-06-23`,
+    excerpt: `Потрібно подати презентацію з телефону?Дізнайтеся, як найшвидше перетворити файл .ppt або .pptx на професійний PDF безпосередньо на iOS.`,
+    content: `<p>Незалежно від того, чи ви студент, який намагається здати завдання в автобусі, чи професіонал, який надсилає лист електронною поштою клієнту з аеропорту, конвертація PowerPoint у PDF на вашому iPhone є надзвичайно важливою навичкою використання мобільних пристроїв.</p>
+<p>PDF-файли гарантують, що ваші шрифти, форматування та макети виглядатимуть однаково на екрані одержувача, незалежно від того, який пристрій він використовує.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Безпроблемний метод</h2>
+<p>Не завантажуйте важку програму для презентацій лише для того, щоб конвертувати один файл.Ви можете зробити це безпечно через Safari за лічені секунди.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Відкрийте Safari та перейдіть до <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">конвертера Office у PDF</a> (цей інструмент працює з Word, Excel і PowerPoint).</li>
+<li>Торкніться кнопки завантаження та виберіть <strong>Вибрати файли</strong>.</li>
+<li>Знайдіть завантажений файл <em>.pptx</em> у програмі «Файли» вашого iPhone або iCloud Drive.</li>
+<li>Натисніть конвертувати.Наш механізм візуалізації корпоративного рівня ідеально збереже всі ваші макети слайдів і векторну графіку.</li>
+<li>Натисніть «Завантажити» та збережіть чіткий новий PDF-файл на свій пристрій.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Увесь цей процес відбувається в хмарі, тобто він не розряджатиме акумулятор вашого iPhone і не займатиме місця в локальній пам’яті!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Як підписати PDF-файл цифровим підписом у Windows 10 і 11`,
+    date: `2026-06-23`,
+    excerpt: `Припиніть друк і сканування контрактів.Ось юридично обов’язковий професійний спосіб підписати документ на вашому ПК з Windows.`,
+    content: `<p>Отримання контракту електронною поштою раніше означало роздрукувати його, підписати ручкою, відсканувати назад у комп’ютер і відправити електронною поштою зіпсоване, викривлене зображення назад відправнику.У 2026 році цей робочий процес офіційно припиниться.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Сучасний спосіб входу в Windows</h2>
+<p>Вам не потрібен Adobe Acrobat або будь-яке платне програмне забезпечення, встановлене на вашому комп’ютері з Windows, щоб виконати юридично обов’язковий електронний підпис.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li>Відкрийте Chrome або Edge і перейдіть до <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">інструмента «Підписати PDF»</a>.</li>
+<li>Перетягніть свій договір на сторінку.</li>
+<li>Натисніть піктограму <strong>Підпис</strong> на панелі інструментів.</li>
+<li>Виберіть спосіб підпису:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Малюйте:</strong> використовуйте мишу або сенсорний екран/стилус Windows, щоб написати свій підпис.</li>
+<li><strong>Тип:</strong> введіть своє ім’я та виберіть професійний курсивний шрифт.</li>
+<li><strong>Завантажити:</strong> якщо у вас є чисте фото вашого фактичного підпису, завантажте його.Наш інструмент автоматично видалить білий фон!</li>
+</ul>
+</li>
+<li>Перетягніть свій підпис на пунктирну лінію, змініть його розмір і натисніть <strong>Застосувати</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Чи законні ці підписи?</strong> Так!Згідно з основними міжнародними нормативними документами (як-от Закон США про ESIGN та європейський eIDAS), електронні підписи мають таку саму юридичну вагу, як і підпис мокрим чорнилом для майже всіх стандартних ділових угод.</p>
+</div>`
+  },
 ];

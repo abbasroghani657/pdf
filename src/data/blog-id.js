@@ -1,497 +1,468 @@
+// Auto-generated blog translation for id
 export const BLOG_POSTS_ID = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Cara Mengompresi PDF di Mac (Panduan 2026)`,
+    date: `2026-06-20`,
+    excerpt: `Pelajari cara tercepat dan termudah untuk mengurangi ukuran file PDF Anda di Mac tanpa kehilangan kualitas.Kami membandingkan alat Pratinjau, Pengotomasi, dan Web.`,
+    content: `<p>Berurusan dengan file PDF berukuran besar di Mac Anda dapat membuat frustasi, terutama ketika Anda perlu mengirim dokumen melalui email dan dokumen tersebut melebihi batas ukuran lampiran standar 25MB.Baik Anda seorang pelajar yang mengirimkan tugas atau profesional yang mengirimkan portofolio, mengetahui cara mengompresi PDF dengan benar adalah keterampilan yang penting.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Metode 1: Aplikasi Pratinjau Bawaan (Gratis namun Dasar)</h2>
+<p>Aplikasi Pratinjau Apple dilengkapi dengan "Filter Kuarsa" bawaan yang dapat mengecilkan PDF Anda.Cepat dan tidak memerlukan koneksi internet.</p>
+<ol>
+<li>Buka PDF Anda menggunakan aplikasi <strong>Pratinjau</strong>.</li>
+<li>Klik <strong>File</strong> di bilah menu atas, lalu pilih <strong>Ekspor</strong> (Jangan pilih "Ekspor sebagai PDF").</li>
+<li>Di jendela ekspor, cari menu tarik-turun <strong>Filter Kuarsa</strong>.</li>
+<li>Pilih <strong>Kurangi Ukuran File</strong> dan klik Simpan.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 round-r-lg">
+<p class="text-red-700 m-0"><strong>Peringatan:</strong> Meskipun metode ini gratis, algoritme kompresi default Apple sangat agresif.Hal ini sering kali merusak kualitas gambar dan membuat teks vektor menjadi buram.Kami tidak menyarankan ini untuk dokumen profesional.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Metode 2: Menggunakan TheyLovePDF (Profesional & Kualitas Tinggi)</h2>
+<p>Jika Anda ingin mempertahankan kualitas teks dan gambar yang tajam sekaligus mengurangi ukuran file secara signifikan, menggunakan alat kompresi khusus yang didukung AI adalah pilihan terbaik.</p>
+<ol>
+<li>Buka <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Alat kompres PDF di TheyLovePDF</a>.</li>
+<li>Seret dan lepas file PDF Anda ke halaman.</li>
+<li>Pilih tingkat kompresi Anda:
+<ul class="mt-2 spasi-y-1 teks-abu-abu-600">
+<li><strong>Kompresi Ekstrim:</strong> Terbaik untuk mengirim email (kualitas terendah).</li>
+<li><strong>Kompresi yang Direkomendasikan:</strong> Titik terbaik antara ukuran dan kualitas.</li>
+<li><strong>Lebih Sedikit Kompresi:</strong> Kualitas tinggi, cocok untuk pencetakan.</li>
+</ul>
+</li>
+<li>Klik <strong>Kompres PDF</strong> dan unduh file yang dioptimalkan.</li>
+</ol>
+<p>Algoritme kompresi cerdas kami menghapus metadata yang tidak perlu dan mengompresi gambar menggunakan standar web modern, memastikan dokumen Anda terlihat sama persis dan hanya menggunakan sedikit ruang penyimpanan!</p>
+
+<h2>Kesimpulan</h2>
+<p>Meskipun alat bawaan Mac sangat bagus dalam kondisi offline, alat tersebut sangat tidak memiliki kontrol granular yang diperlukan untuk dokumen modern.Untuk hal penting apa pun, selalu andalkan mesin kompresi khusus.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Cara Menggabungkan Banyak File PDF di iPhone Anda`,
+    date: `2026-06-19`,
+    excerpt: `Temukan cara paling sederhana untuk menggabungkan beberapa dokumen PDF menjadi satu file langsung dari perangkat iOS Anda.`,
+    content: `<p>Dengan iPhone yang menjadi perangkat utama kita untuk bekerja dan belajar, mengetahui cara menggabungkan file PDF saat bepergian adalah keterampilan yang penting.Baik Anda menyusun kuitansi untuk laporan pengeluaran atau menggabungkan catatan kuliah, inilah cara yang tepat untuk melakukannya tanpa komputer.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>Tantangan dengan iOS</h2>
+<p>Meskipun iOS memiliki aplikasi File bawaan yang tangguh, iOS tidak menawarkan cara asli dan mudah untuk memilih beberapa PDF dan menyatukannya dengan mulus.Anda dapat memindai dokumen menjadi satu PDF, namun menggabungkan file yang sudah ada ternyata sangat sulit.</p>
+
+<h2>Solusinya: Aplikasi Web TheyLovePDF</h2>
+<p>Anda tidak perlu mengunduh aplikasi berat apa pun yang berbasis langganan dari App Store.Anda dapat melakukannya langsung dari Safari atau Chrome menggunakan arsitektur cloud kami.</p>
+
+<div class="bg-gray-50 perbatasan perbatasan-abu-abu-200 p-6 bulat-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Panduan Langkah demi Langkah</h3>
+<ol class="spasi-y-3 mb-0">
+<li>Buka Safari di iPhone Anda dan navigasikan ke <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Alat Penggabung TheyLovePDF</a>.</li>
+<li>Ketuk tombol besar <strong>Pilih file PDF</strong>.</li>
+<li>Pilih file dari aplikasi <em>File</em> iPhone atau <em>Perpustakaan Foto</em> Anda.Anda dapat memilih beberapa file sekaligus.</li>
+<li>Setelah diunggah, Anda akan melihat kisi visual file Anda.Tekan dan tahan file apa pun untuk menarik dan menyusun ulang file sesuai keinginan Anda.</li>
+<li>Ketuk <strong>Gabungkan PDF</strong>.Server kami akan memproses file dalam hitungan milidetik.</li>
+<li>Ketuk <strong>Unduh</strong> dan simpan dokumen gabungan baru langsung ke perangkat Anda.</li>
+</ol>
+</div>
+
+<h2>Mengapa Tidak Menggunakan Aplikasi?</h2>
+<p>Banyak aplikasi PDF di App Store yang dapat diunduh gratis, namun mereka meminta uang segera setelah Anda mencoba menggabungkan file.Dengan menggunakan alat cloud, Anda menghindari biaya App Store ini dan menghemat ruang penyimpanan di ponsel Anda.</p>
+<p>Sederhana, cepat, dan sepenuhnya aman!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Cara Mengamankan PDF Anda dengan Kata Sandi`,
+    date: `2026-06-18`,
+    excerpt: `Lindungi informasi sensitif dengan menambahkan kata sandi enkripsi AES 256-bit yang aman dan tidak dapat dipecahkan ke file PDF Anda.`,
+    content: `<p>Di era digital saat ini, privasi data menjadi lebih penting dari sebelumnya.Baik Anda mengirim laporan keuangan, catatan medis, atau kontrak bisnis rahasia, membiarkan PDF tanpa perlindungan merupakan risiko keamanan yang sangat besar.</p>
+<p>Dalam panduan ini, kami akan menunjukkan cara mengunci dokumen PDF Anda menggunakan enkripsi tingkat militer.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Apa itu Enkripsi AES 256-bit?</h2>
+<p>Standar Enkripsi Lanjutan (AES) adalah algoritma enkripsi yang digunakan oleh pemerintah AS untuk mengamankan informasi rahasia.Kunci enkripsi 256-bit berarti ada 2<sup>256</sup> kemungkinan kombinasi - jumlah yang sangat besar sehingga superkomputer terkuat di dunia pun tidak dapat memecahkannya dalam satu miliar tahun.</p>
+<p>Saat Anda menggunakan alat kami, kami tidak hanya "menambahkan kata sandi" yang dapat dengan mudah dilewati.Kami mengacak konten file Anda secara matematis menggunakan AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Cara Melindungi PDF Anda</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 round-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Buka alat <a href="/tools/protect-pdf" class="font-bold hover:underline">Proteksi PDF</a>.</li>
+<li>Unggah dokumen sensitif Anda melalui koneksi TLS 1.3 kami yang aman.</li>
+<li>Masukkan kata sandi yang kuat.(Sebaiknya minimal 12 karakter, campuran huruf, angka, dan simbol).</li>
+<li>Klik <strong>Lindungi PDF</strong>.</li>
+<li>Unduh file Anda yang baru dienkripsi.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Praktik Terbaik untuk Keamanan Kata Sandi</h2>
+<ul class="daftar-disc pl-5 spasi-y-2">
+<li><strong>Jangan pernah mengirim kata sandi dalam email yang sama:</strong> Jika Anda mengirim PDF melalui email, kirimkan kata sandi melalui saluran lain (seperti SMS atau aplikasi perpesanan aman seperti Signal).</li>
+<li><strong>Gunakan pengelola kata sandi:</strong> Buat rangkaian karakter acak daripada menggunakan kata yang dapat ditemukan di kamus.</li>
+<li><strong>Jangan gunakan informasi pribadi:</strong> Hindari tanggal lahir, nama hewan peliharaan, atau nama perusahaan.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Setelah file Anda dienkripsi, konten asli akan dihapus secara permanen dari server kami dalam waktu 2 jam.Privasi Anda adalah prioritas mutlak kami.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `Apa itu OCR?Cara Membuat PDF yang Dipindai Dapat Dicari`,
+    date: `2026-06-17`,
+    excerpt: `Pelajari cara kerja teknologi Pengenalan Karakter Optik (OCR) dan cara mengekstrak teks yang dapat dipilih dari gambar datar.`,
+    content: `<p>Pernahkah Anda menerima PDF yang tampak seperti dokumen, tetapi ketika Anda mencoba menyorot teksnya, tidak terjadi apa-apa?Anda menemukan PDF "datar" atau "scan".Intinya hanyalah foto digital dari selembar kertas.</p>
+<p>Untuk berinteraksi dengan teks tersebut, Anda memerlukan keajaiban <strong>Pengenalan Karakter Optik (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>Cara Kerja OCR</h2>
+<p>Saat Anda menjalankan file melalui mesin OCR, perangkat lunak bertindak seperti mata manusia yang sangat terlatih.Ini memindai gambar piksel demi piksel, mencari pola yang menyerupai huruf dan angka.</p>
+<p>OCR modern tidak hanya mencocokkan bentuk;ia menggunakan model Kecerdasan Buatan dan Pembelajaran Mesin yang kompleks untuk memahami konteks.Misalnya, ia dapat membedakan huruf besar 'I' dan huruf kecil 'l' berdasarkan huruf di sekitar kata tersebut.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>Manfaat OCR</h2>
+<ul kelas="spasi-y-2">
+<li><strong>Kemampuan Pencarian:</strong> Menemukan klausul spesifik dalam kontrak pindaian setebal 500 halaman tidak mungkin dilakukan tanpa membaca keseluruhannya.OCR memungkinkan Anda menggunakan CTRL+F untuk menemukan apa yang Anda perlukan secara instan.</li>
+<li><strong>Kemampuan untuk diedit:</strong> Setelah teks dikenali, Anda dapat menyalin, menempelkan, dan mengeditnya di Word atau Google Dokumen.</li>
+<li><strong>Aksesibilitas:</strong> Pembaca layar untuk pengguna tunanetra tidak dapat membaca gambar datar.OCR membuat dokumen Anda dapat diakses oleh semua orang.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Cara meng-OCR Dokumen</h2>
+<p>Mengubah dokumen pindaian Anda menjadi sangat mudah dengan TheyLovePDF:</p>
+<ol>
+<li>Buka <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">Alat OCR PDF</a>.</li>
+<li>Unggah dokumen pindaian Anda.</li>
+<li>Pilih bahasa dokumen.Hal ini penting - memberi tahu AI bahasa apa yang diharapkan akan meningkatkan akurasi secara drastis, terutama untuk bahasa dengan karakter atau aksen unik.</li>
+<li>Proses pukulan.AI akan merekonstruksi dokumen Anda, melapisi lapisan teks yang tidak terlihat di atas gambar asli.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 miring bg-gray-50 round-r-lg">
+Berhenti mengetik ulang dokumen secara manual.Biarkan AI melakukan pekerjaan berat untuk Anda!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Cara Edit Teks PDF di Windows 11 (Tanpa Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Berhenti membayar untuk perangkat lunak yang mahal.Temukan cara paling efisien, gratis, dan cerdas untuk mengedit teks dan gambar PDF secara langsung di PC Windows Anda.`,
+    content: `<p>Selama bertahun-tahun, pengguna Windows kesulitan dengan PDF.Tidak seperti dokumen Word, PDF dirancang untuk menjadi cetakan digital yang "diselesaikan".Saat Anda melihat ada kesalahan ketik dalam kontrak atau perlu memperbarui tanggal pada faktur, Anda biasanya menghadapi hambatan pembayaran besar-besaran seperti Adobe Acrobat.</p>
+<p>Untungnya, pada tahun 2026, Anda tidak perlu menginstal perangkat lunak mahal di mesin Windows 11 untuk melakukan pengeditan dasar.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Pendekatan Web Cerdas</h2>
+<p>Daripada mengunduh aplikasi desktop yang berat dan lambat, editor berbasis cloud memanfaatkan kekuatan pemrosesan server jarak jauh untuk menguraikan struktur PDF langsung di browser Anda.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 pembulatan-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Cara Mengedit Secara Langsung</h3>
+<ol class="spasi-y-2 mb-0">
+<li>Buka Microsoft Edge atau Google Chrome di Windows 11.</li>
+<li>Buka <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Alat Edit PDF</a>.</li>
+<li>Unggah dokumen Anda.Mesin kami akan memecahkan kode lapisan teks secara instan.</li>
+<li>Klik kotak teks mana pun untuk mengubah teks, mengubah font, atau menyesuaikan ukuran.</li>
+<li>Anda juga dapat menyisipkan gambar, bentuk, atau informasi sensitif baru.</li>
+<li>Klik <strong>Terapkan Perubahan</strong> dan unduh file yang diperbarui.</li>
+</ol>
+</div>
+
+<h2>Mengapa Tidak Menggunakan Microsoft Edge?</h2>
+<p>Meskipun Microsoft Edge memiliki penampil PDF bawaan dengan alat menggambar (tinta), <strong>tidak dapat mengedit teks yang ada</strong>.Ini hanya memungkinkan Anda menggambar di atas atau menambahkan kotak teks baru.Untuk benar-benar mengubah kesalahan ketik pada lapisan teks asli, Anda memerlukan editor PDF yang sebenarnya.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Kiat Pro:</p>
+<p class="text-sm text-gray-600">Jika PDF Anda adalah gambar pindaian, pengeditan teks standar tidak akan berfungsi.Anda harus menggunakan <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">alat OCR</a> terlebih dahulu untuk mengonversi gambar menjadi lapisan teks yang dapat dibaca.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Panduan Utama untuk Menandatangani PDF di Android secara Gratis`,
+    date: `2026-06-15`,
+    excerpt: `Perlu segera menandatangani dokumen?Pelajari cara menggambar, mengetik, atau mengunggah tanda tangan elektronik Anda langsung dari ponsel Android Anda.`,
+    content: `<p>Kita semua pernah mengalaminya: Anda menerima dokumen penting melalui email saat Anda jauh dari meja kerja.Ini membutuhkan tanda tangan Anda segera.Mencetak, menandatangani, dan memindainya kembali adalah peninggalan masa lalu.</p>
+<p>Saat ini, ponsel pintar Android Anda adalah stasiun kerja digital canggih yang mampu mengikat tanda tangan elektronik secara hukum.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Apakah Tanda Tangan Elektronik Sah?</h2>
+<p>Ya.Berdasarkan ESIGN Act (AS) dan eIDAS (Eropa), tanda tangan elektronik memiliki bobot hukum yang sama dengan tanda tangan tinta basah untuk hampir semua transaksi bisnis dan pribadi.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Cara Masuk ke Android (Tidak Perlu Aplikasi)</h2>
+<p>Anda tidak perlu membebani perangkat Android Anda dengan aplikasi PDF premium.Cukup gunakan browser seluler Anda.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="daftar-desimal pl-5 spasi-y-3 mt-6">
+<li><strong>Buka Alat:</strong> Ketuk tautan untuk membuka <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Alat Tanda Tangan PDF</a> di Chrome.</li>
+<li><strong>Unggah Dokumen:</strong> Ketuk untuk mengunggah file langsung dari folder Unduhan Android atau Google Drive Anda.</li>
+<li><strong>Buat Tanda Tangan Anda:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Gambar:</em> Gunakan jari atau stylus Anda untuk menggambar tanda tangan langsung di layar.</li>
+<li><em>Jenis:</em> Ketikkan nama Anda dan pilih font kursif.</li>
+<li><em>Unggah:</em> Unggah foto tanda tangan Anda yang sebenarnya pada selembar kertas putih (alat kami secara otomatis menghapus latar belakang).</li>
+</ul>
+</li>
+<li><strong>Menempatkannya:</strong> Seret dan lepas tanda tangan tepat pada baris tanda tangan.Anda dapat mencubit untuk mengubah ukuran.</li>
+<li><strong>Selesaikan:</strong> Ketuk "Tanda Tangan" untuk menyematkan tanda tangan secara permanen ke dalam arsitektur dokumen.</li>
+</ol>
+
+<div class="bg-kuning-50 perbatasan-l-4 perbatasan-kuning-500 p-4 my-6">
+<p class="text-Yellow-800 text-sm m-0"><strong>Catatan Keamanan:</strong> Selalu pastikan Anda menggunakan platform terenkripsi HTTPS yang aman saat menandatangani dokumen sensitif.Kami menghapus semua file dari server kami secara otomatis.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Mengapa Siswa Harus Selalu Mengonversi PDF ke Word untuk Diedit`,
+    date: `2026-06-14`,
+    excerpt: `Menulis tesis atau mencatat?Temukan mengapa mengekstraksi teks ke Dokumen Word pada dasarnya lebih baik daripada mengedit PDF secara langsung.`,
+    content: `<p>Sebagai mahasiswa, Anda menemukan ratusan PDF setiap semester: slide kuliah, makalah penelitian, dan buku teks digital.Saat Anda perlu mengekstrak kutipan, meringkas konten, atau menulis ulang bagian, Anda mungkin tergoda untuk menggunakan editor PDF.Namun ada cara yang lebih cerdas dan profesional.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Masalah dengan Arsitektur PDF</h2>
+<p>PDF (Portable Document Format) dirancang untuk <em>presentasi</em>, bukan komposisi.Di dalam PDF, teks tidak mengalir seperti dokumen biasa;setiap kata disematkan ke koordinat X dan Y tertentu di halaman.</p>
+<p>Jika Anda mencoba menghapus sebuah paragraf di editor PDF, teks di bawahnya <strong>tidak</strong> akan bergerak ke atas untuk mengisi kekosongan tersebut.Ini meninggalkan ruang kosong yang sangat besar.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Solusinya: Konversi PDF ke Word</h2>
+<p>Dengan mengonversi dokumen kembali ke Microsoft Word (.docx), mesin cerdas kami merekonstruksi tata letak yang mengalir.Paragraf menjadi paragraf lagi, header menjadi header, dan gambar menjadi balok yang dapat dipindahkan.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-5 bulat-lg perbatasan perbatasan-abu-abu-200">
+<h4 class="font-bold text-gray-900 mt-0">Editor PDF</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ Teks tidak berubah bentuk</li>
+<li>❌ Sulit mengubah font global</li>
+<li>❌ Margin terkunci</li>
+<li>❌ Tabel sulit diubah</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 round-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Dokumen Word</h4>
+<ul class="teks-sm teks-biru-800 spasi-y-1 mb-0">
+<li>✅ Teks mengalir secara alami</li>
+<li>✅ Periksa ejaan dan tata bahasa dengan mudah</li>
+<li>✅ Batas halaman dinamis</li>
+<li>✅ Copy-paste sempurna</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Bagaimana melakukannya dengan sempurna</h2>
+<p><a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">Konverter PDF ke Word</a> kami yang didukung AI menggunakan pengenalan tata letak tingkat lanjut.Cukup unggah file Anda, dan dalam hitungan detik Anda akan memiliki dokumen Word yang dapat diedit sepenuhnya.Setelah selesai menulis tugas atau catatan, Anda selalu dapat mengekspornya kembali ke PDF sebelum mengirimkannya ke profesor Anda.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Gabungkan Beberapa PDF di Windows 10: Langkah demi Langkah`,
+    date: `2026-06-13`,
+    excerpt: `Atur folder Anda yang berantakan dengan menggabungkan dokumen PDF terkait menjadi satu file yang kohesif langsung dari desktop Windows Anda.`,
+    content: `<p>Memiliki 15 file PDF berbeda untuk satu proyek adalah mimpi buruk.Baik itu faktur bulanan, bab buku, atau pemindaian rekam medis, menggabungkannya ke dalam satu file yang kohesif sangat penting untuk organisasi Windows 10.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Batasan Bawaan Windows</h2>
+<p>Windows 10 adalah OS yang tangguh, namun terkenal karena tidak memiliki penggabungan PDF asli.Meskipun mencakup "Microsoft Print to PDF", itu hanya membantu membuat PDF dari format lain, bukan menggabungkan yang sudah ada.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Alur Kerja Cerdas (Berbasis Browser)</h2>
+<p>Jangan mengunduh perangkat lunak gratis yang mencurigakan yang mungkin berisi malware atau memberi tanda air besar pada file Anda.Metode paling profesional adalah menggunakan alat browser terenkripsi.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="spasi-y-4 mt-6">
+<li class="bg-white border border-gray-100 shadow-sm p-4 round-lg">
+<strong>Langkah 1: Kumpulkan file Anda.</strong> Masukkan semua PDF yang ingin Anda gabungkan ke dalam satu folder di desktop Anda.Ini membuat pengunggahan menjadi lebih mudah.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 round-lg">
+<strong>Langkah 2: Buka Penggabungan.</strong> Buka <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Alat Penggabungan PDF</a> di TheyLovePDF.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 round-lg">
+<strong>Langkah 3: Pilih dan Susun.</strong> Seret file Anda ke layar.Anda akan melihat thumbnail pratinjau.Anda dapat menyeret thumbnail ini ke kiri atau kanan untuk memastikan urutan kronologisnya sempurna.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 round-lg">
+<strong>Langkah 4: Gabungkan.</strong> Tekan tombol gabung.Server langsung menyatukan kode biner PDF tanpa kehilangan kualitas apa pun.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Metode ini berfungsi di Chrome, Edge, Firefox, dan Brave di Windows 10, dan sama sekali tidak memerlukan instalasi atau hak administratif di PC Anda.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Mengapa Profesional Hukum Harus Melindungi PDF dengan Kata Sandi`,
+    date: `2026-06-12`,
+    excerpt: `Penjelasan mendalam tentang keamanan dokumen, kepatuhan, dan alasan pengiriman PDF terbuka melalui email merupakan tanggung jawab besar bagi firma hukum.`,
+    content: `<p>Dalam profesi hukum, kerahasiaan bukan hanya praktik terbaik - namun merupakan persyaratan etika yang ketat dan sering kali merupakan persyaratan undang-undang.Namun, banyak firma hukum dan paralegal yang masih mengirimkan laporan sensitif, kontrak, dan penawaran penyelesaian dalam bentuk lampiran PDF mentah dan tidak terenkripsi melalui email standar.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Risiko Intersepsi</h2>
+<p>Email standar (SMTP) terkenal tidak aman.Jika email dirutekan melalui server yang tidak aman, atau jika kotak masuk disusupi, PDF yang tidak terenkripsi dapat dibaca sepenuhnya oleh siapa pun yang menyadapnya.Hal ini dapat menyebabkan pelanggaran hak istimewa klien dan kewajiban yang sangat besar.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Enkripsi vs. Kata Sandi</h2>
+<p>Penting untuk memahami perbedaannya."Kata sandi izin" yang sederhana mencegah pencetakan atau pengeditan tetapi tidak mengenkripsi file.Siapapun masih bisa membacanya.</p>
+<p>Yang Anda perlukan hanyalah <strong>Kata Sandi Terbuka</strong> yang didukung oleh <strong>Enkripsi AES-256</strong>.Saat diterapkan, data biner file diacak.Tanpa kata sandi, dokumen secara matematis tidak mungkin dibaca.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Persyaratan Kepatuhan</h4>
+<p class="text-red-800 text-sm m-0">Peraturan seperti HIPAA (Kedokteran) dan GDPR (Data Eropa) memberikan sanksi berat kepada organisasi yang gagal mengenkripsi PII (Informasi Identifikasi Pribadi) saat transit.PDF terenkripsi adalah metode yang diterima untuk mengamankan data saat transit.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Alur Kerja Profesional</h2>
+<ol>
+<li>Buat draf dokumen dalam Word dan ekspor ke PDF.</li>
+<li>Unggah ke platform yang aman dan tanpa retensi seperti <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">Keamanan TheyLovePDF</a>.</li>
+<li>Terapkan kata sandi 16 karakter yang dihasilkan.</li>
+<li>Kirimkan PDF terenkripsi melalui email ke klien.</li>
+<li>Berikan sandi kepada klien melalui saluran terpisah yang aman (misalnya, panggilan telepon atau aplikasi perpesanan terenkripsi).</li>
+</ol>
+<p>Dengan menerapkan alur kerja ini, profesional hukum melindungi diri mereka dari kewajiban pelanggaran data dan memastikan kerahasiaan klien sepenuhnya.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Cara Kompres PDF di Android untuk Dikirim lewat WhatsApp`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp memiliki batasan ukuran file yang memblokir dokumen berukuran besar.Pelajari cara memperkecil ukuran PDF di ponsel Android Anda untuk membagikannya secara instan.`,
+    content: `<p>WhatsApp adalah standar global untuk komunikasi cepat, yang banyak digunakan oleh bisnis dan pelajar untuk berbagi dokumen.Namun, WhatsApp menerapkan batasan ukuran file yang ketat.Jika Anda mencoba mengirim denah arsitektur berukuran 150 MB atau buku teks berukuran besar yang dipindai, aplikasi akan langsung memblokir transfer tersebut.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Dilema Android</h2>
+<p>Tidak seperti mengompresi foto, OS Android tidak memiliki fitur bawaan untuk mengompresi dokumen PDF.Jika Anda menelusuri Google Play Store, Anda akan dibombardir dengan aplikasi yang penuh dengan iklan mengganggu yang merusak kualitas file Anda.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Teknik Kompresi Cerdas</h2>
+<p>Anda dapat melewati toko aplikasi sepenuhnya dengan menggunakan infrastruktur cloud berkecepatan tinggi kami langsung dari Google Chrome di perangkat Android Anda.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="spasi-y-4 my-8">
+<div class="flex gap-4 item-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 round-full flex items-center justify-center shrink-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Buka Kompresor</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Ketuk tautan ini untuk membuka <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Kompresor PDF</a> di browser Anda.</p>
+</div>
+</div>
+<div class="flex gap-4 item-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 round-full flex items-center justify-center shrink-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Unggah dari File</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Ketuk untuk mengunggah, dan pilih aplikasi 'File' atau 'Dokumen' di Android Anda untuk menemukan PDF berukuran besar.</p>
+</div>
+</div>
+<div class="flex gap-4 item-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 round-full flex items-center justify-center shrink-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Pilih 'Kompresi Ekstrim'</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Untuk WhatsApp, pilih tingkat kompresi tertinggi.Tindakan ini menghapus data gambar beresolusi tinggi namun tetap menjaga teks tetap terbaca dengan sempurna di layar seluler.</p>
+</div>
+</div>
+<div class="flex gap-4 item-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 round-full flex items-center justify-center shrink-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Unduh & Bagikan</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Setelah diproses, ketuk Unduh.Buka WhatsApp, ketuk ikon penjepit kertas, pilih Dokumen, dan bagikan file Anda yang baru dikecilkan!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Seluruh proses ini memakan waktu kurang dari 30 detik, hanya menggunakan sedikit data seluler Anda, dan menyelesaikan masalah batas WhatsApp secara permanen.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Cara Mengekstrak Halaman Tertentu dari PDF Besar`,
+    date: `2026-06-10`,
+    excerpt: `Jangan mengirimkan manual 500 halaman ketika seseorang hanya membutuhkan bab 3. Inilah cara paling cerdas untuk mengekstrak dan membagi halaman PDF.`,
+    content: `<p>Kita semua telah menerimanya: manual perusahaan setebal 500 halaman, file penemuan hukum dalam jumlah besar, atau buku teks semester penuh.Namun bagaimana jika Anda hanya perlu mengirimkan halaman 45 hingga 52 ke rekan kerja?</p>
+<p>Mengirim seluruh dokumen tidak profesional, menghabiskan bandwidth, dan memaksa penerima mencari informasi yang relevan.Anda perlu membagi PDF.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>Cara Hacky vs. Cara Pro</h2>
+<p>"Peretasan" yang umum adalah dengan menggunakan dialog Cetak, pilih "Cetak ke PDF", dan pilih rentang halaman.Meskipun berhasil, sering kali tindakan ini membuat dokumen menjadi rata - menghancurkan tautan interaktif, bookmark, dan terkadang meningkatkan ukuran file secara signifikan.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Cara profesional adalah dengan membagi dokumen pada tingkat biner, menjaga kualitas asli dan metadata halaman yang diekstraksi.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Menggunakan Splitter Profesional</h2>
+<div class="bg-gray-50 perbatasan perbatasan-abu-abu-200 p-6 bulat-xl my-6">
+<ol class="spasi-y-3 mb-0">
+<li>Buka <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Alat PDF Terpisah</a>.</li>
+<li>Unggah dokumen besar Anda.Server kami menangani file hingga 2 GB secara instan.</li>
+<li>Pilih mode Anda:
+<ul class="list-disc pl-5 mt-2 spasi-y-1 teks-sm teks-abu-abu-700">
+<li><strong>Ekstrak Halaman:</strong> Ketik halaman atau rentang yang tepat (misalnya, <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Dibagi berdasarkan Rentang:</strong> Memotong dokumen menjadi beberapa dokumen lebih kecil secara otomatis.</li>
+</ul>
+</li>
+<li>Proses Pukulan.Anda akan menerima PDF yang rapi dan sangat fokus yang hanya berisi halaman yang Anda pilih, dengan semua tautan asli dan kualitas utuh.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Dengan hanya mengekstrak hal-hal yang penting, Anda menghargai waktu dan ruang kotak masuk penerima.Ini adalah keterampilan teknis kecil yang menghasilkan keuntungan profesional yang besar.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Mengobrol dengan PDF: Bagaimana AI Mengubah Cara Kita Membaca Dokumen Panjang`,
+    date: `2026-06-09`,
+    excerpt: `Berhenti membaca laporan 100 halaman.Pelajari bagaimana Model Bahasa Besar (LLM) memungkinkan Anda 'berbicara' dengan dokumen Anda untuk mengekstrak jawaban secara instan.`,
+    content: `<p>Membaca laporan keuangan setebal 150 halaman atau makalah akademis yang padat biasanya membutuhkan waktu berjam-jam untuk menyorot, membuat catatan, dan mencari.Pada tahun 2026, era tersebut resmi berakhir.Selamat datang di era Obrolan Dokumen AI.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>Apa itu "Obrolan dengan PDF"?</h2>
+<p>Bayangkan jika penulis dokumen itu duduk di sebelah Anda, dan Anda bisa mengajukan pertanyaan kepada mereka.<em>"Berapa total pendapatan untuk Q3?"</em> atau <em>"Ringkas metodologi eksperimen ini dalam 3 poin-poin."</em></p>
+<p><a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Alat Chat dengan PDF</a> kami menggunakan Large Language Model (LLM) tingkat lanjut.Saat Anda mengunggah file, AI "membaca" seluruh dokumen dalam hitungan detik, menyimpannya dalam memori vektor.Anda kemudian menggunakan antarmuka chat (persis seperti ChatGPT) untuk mengajukan pertanyaan tentang teks.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Cara Kerja Sebenarnya (Di Balik Terpal)</h2>
+<ul class="spasi-y-3 my-6">
+<li><strong>Ekstraksi Teks:</strong> Sistem mem-parsing PDF, mengekstraksi semua teks dan tabel.</li>
+<li><strong>Vektorisasi:</strong> Teks dipotong menjadi "potongan" dan diubah menjadi angka matematika yang disebut embeddings.</li>
+<li><strong>Penelusuran Semantik:</strong> Saat Anda mengajukan pertanyaan, AI menelusuri matematika untuk menemukan paragraf yang paling relevan dengan pertanyaan Anda.</li>
+<li><strong>Generasi:</strong> LLM membaca paragraf spesifik tersebut dan mengetikkan jawaban percakapan yang alami, sering kali mengutip nomor halaman persis tempat informasi tersebut ditemukan!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Kasus Penggunaan</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Siswa:</strong> Unggah buku teks untuk membuat panduan belajar instan dan kartu flash.<br><strong>Pengacara:</strong> Unggah berkas kasus untuk segera menemukan preseden tanpa CTRL+F.<br><strong>Analis:</strong> Unggah laporan 10-K untuk langsung mengekstrak metrik keuangan tertentu.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Privasi Diutamakan</h2>
+<p>Kekhawatiran terbesar dengan AI adalah privasi data.Saat menggunakan alat profesional seperti TheyLovePDF, data dokumen Anda dimasukkan ke dalam kotak pasir.Ini tidak pernah digunakan untuk melatih model AI global, dan datanya dihapus dari server secara otomatis setelah sesi Anda berakhir.</p>
+<p>Jangan sampai ketinggalan.Mulailah chatting dengan dokumen Anda hari ini dan 10x kecepatan membaca Anda.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Alternatif iLovePDF Terbaik untuk Mengurangi Ukuran PDF`,
+    date: `2026-06-23`,
+    excerpt: `Ingin mengompres PDF tanpa kehilangan kualitas atau menghadapi iklan agresif?Inilah mengapa TheyLovePDF adalah alternatif yang lebih unggul daripada iLovePDF.`,
+    content: `<p>Jika Anda membaca ini, Anda mungkin sedang mencari cara untuk memperkecil ukuran PDF dan berpikir untuk menggunakan iLovePDF.Meskipun ini merupakan alat yang populer, banyak pengguna mencari alternatif yang lebih cepat dan bebas iklan yang tidak mengurangi fidelitas visual dokumen mereka.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Mengapa Mencari Alternatif?</h2>
+<p>Banyak alat PDF lama yang mengandalkan algoritme kompresi agresif yang merusak kualitas gambar dan grafik vektor Anda.Selain itu, paket gratis sering kali sangat dibatasi dengan batasan harian dan dipenuhi iklan yang mengganggu.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>Keunggulan TheyLovePDF</h2>
+<p>Kami merekayasa <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Alat kompres PDF</a> kami untuk menjadi yang terbaik di industri.Inilah alasan pengguna beralih:</p>
+
+<ul class="spasi-y-3 my-6">
+<li><strong>Kompresi AI Cerdas:</strong> Daripada hanya menurunkan resolusi gambar, mesin kami menganalisis dokumen Anda secara matematis dan menghapus metadata yang tidak terlihat, font yang tidak direferensikan, dan struktur data duplikat.</li>
+<li><strong>Tanpa Iklan:</strong> Kami yakin alat utilitas harus bersih dan bebas gangguan.Anda tidak akan menemukan satu pun iklan banner di alat kompresi kami.</li>
+<li><strong>Privasi Ketat:</strong> File Anda dilindungi dengan enkripsi SSL 256-bit dan dihapus secara permanen dari server kami setelah 2 jam.Kami tidak membaca atau menjual data Anda.</li>
+</ul>
+
+<p>Jika nanti Anda perlu mengecilkan file berukuran besar untuk lampiran email atau pesan WhatsApp, lewati alat lama.Tarik dan lepas file Anda ke TheyLovePDF dan rasakan perbedaannya.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Cara Mengonversi PowerPoint (PPT) ke PDF di iPhone Anda`,
+    date: `2026-06-23`,
+    excerpt: `Perlu mengirimkan presentasi dari ponsel Anda?Pelajari cara tercepat untuk mengubah file .ppt atau .pptx menjadi PDF profesional langsung di iOS.`,
+    content: `<p>Baik Anda seorang pelajar yang mencoba menyerahkan tugas di bus atau seorang profesional yang mengirim dokumen melalui email ke klien dari bandara, mengonversi PowerPoint ke PDF di iPhone Anda adalah keterampilan seluler yang penting.</p>
+<p>PDF menjamin bahwa font, pemformatan, dan tata letak Anda akan terlihat sama persis di layar penerima, apa pun perangkat yang mereka gunakan.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Metode Tanpa Repot</h2>
+<p>Jangan mengunduh aplikasi presentasi berat hanya untuk mengonversi satu file.Anda dapat melakukannya dengan aman melalui Safari dalam hitungan detik.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 perbatasan perbatasan-abu-abu-200 p-6 bulat-xl my-6">
+<ol class="spasi-y-3 mb-0">
+<li>Buka Safari dan buka <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Konverter Office ke PDF</a> (alat ini menangani Word, Excel, dan PowerPoint).</li>
+<li>Ketuk tombol unggah dan pilih <strong>Pilih File</strong>.</li>
+<li>Temukan file <em>.pptx</em> yang Anda unduh di aplikasi File iPhone atau iCloud Drive.</li>
+<li>Ketuk konversi.Mesin rendering tingkat perusahaan kami akan mempertahankan semua tata letak slide dan grafik vektor Anda dengan sempurna.</li>
+<li>Ketuk Unduh dan simpan PDF baru yang segar ke perangkat Anda.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Seluruh proses ini terjadi di cloud, yang berarti tidak akan menguras baterai iPhone Anda atau menghabiskan ruang penyimpanan lokal!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Cara Menandatangani PDF Secara Digital di Windows 10 & 11`,
+    date: `2026-06-23`,
+    excerpt: `Hentikan pencetakan dan pemindaian kontrak.Inilah cara profesional dan mengikat secara hukum untuk menandatangani dokumen di PC Windows Anda.`,
+    content: `<p>Menerima kontrak melalui email biasanya berarti mencetaknya, menandatanganinya dengan pena, memindainya kembali ke komputer, dan mengirimkan kembali gambar yang rusak dan rusak melalui email ke pengirimnya.Pada tahun 2026, alur kerja ini resmi dihentikan.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Cara Modern untuk Masuk ke Windows</h2>
+<p>Anda tidak memerlukan Adobe Acrobat atau perangkat lunak berbayar apa pun yang diinstal pada mesin Windows Anda untuk menjalankan tanda tangan elektronik yang mengikat secara hukum.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="daftar-desimal pl-5 spasi-y-3 mt-6">
+<li>Buka Chrome atau Edge dan navigasikan ke <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Alat Tanda Tangan PDF</a>.</li>
+<li>Seret dan lepas kontrak Anda ke halaman.</li>
+<li>Klik ikon <strong>Tanda Tangan</strong> di bilah alat.</li>
+<li>Pilih cara Anda ingin menandatangani:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Gambar:</strong> Gunakan mouse atau layar sentuh/stylus Windows untuk menulis tanda tangan Anda.</li>
+<li><strong>Jenis:</strong> Ketikkan nama Anda dan pilih font kursif profesional.</li>
+<li><strong>Unggah:</strong> Jika Anda memiliki foto bersih tanda tangan asli Anda, unggahlah.Alat kami akan secara otomatis menghapus latar belakang putih!</li>
+</ul>
+</li>
+<li>Seret tanda tangan Anda ke garis putus-putus, ubah ukurannya, dan klik <strong>Terapkan</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Apakah tanda tangan ini sah?</strong> Ya!Berdasarkan kerangka kerja internasional utama (seperti Undang-Undang ESIGN AS dan eIDAS Eropa), tanda tangan elektronik memiliki bobot hukum yang sama persis dengan tanda tangan tinta basah untuk hampir semua perjanjian bisnis standar.</p>
+</div>`
+  },
 ];

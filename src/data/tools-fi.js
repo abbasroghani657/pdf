@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for fi
 export const TOOLS_DATA_FI = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF Wordiksi`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Muunna PDF-tiedostot helposti muokattaviksi DOC- ja DOCX-asiakirjoiksi.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Lataa PDF-dokumentti vetämällä se pudotusalueelle tai napsauttamalla "Valitse tiedosto" -painiketta.`,
+      `Edistyksellinen OCR- ja muunnosmoottorimme aloittaa välittömästi tekstin, asettelun ja muotoilun purkamisen.`,
+      `Lataa täydellisesti muunnettu Word (DOC/DOCX) -asiakirja, valmis muokattavaksi.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Mikä on PDF-Word-muunnin?`,
+        "answer": `PDF-Word-muunnin on apuohjelma, joka poimii tekstiä, asetteluja ja kuvia PDF-tiedostosta ja luo ne uudelleen täysin muokattavaksi Microsoft Word -asiakirjaksi.Ensiluokkainen muunnoskoneemme säilyttää fontit, asettelut, taulukot ja kuvat, jotta Word-asiakirjasi näyttää täsmälleen alkuperäiseltä PDF-tiedostolta.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Voinko muuntaa skannatut PDF-tiedostot muokattaviksi Word-asiakirjoiksi?`,
+        "answer": `Täysin.Sisäänrakennettu OCR (Optical Character Recognition) -tekniikkamme tunnistaa automaattisesti skannatun tekstin ja tekee siitä täysin muokattavissa tuloksena olevassa DOCX-tiedostossa.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Onko luottamuksellinen PDF-tiedostoni turvassa muuntamisen aikana?`,
+        "answer": `Otamme yksityisyyden vakavasti.Tiedostosi salataan 256-bittisellä SSL:llä siirron aikana ja poistetaan pysyvästi palvelimiltamme automaattisesti 2 tunnin kuluessa.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Tee DOC- ja DOCX-tiedostoista helppolukuisia muuntamalla ne PDF-muotoon.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Valitse DOC- tai DOCX-tiedosto tietokoneeltasi tai vedä se sivulle.`,
+      `Työkalu lukitsee muotoilun välittömästi ja muuntaa Word-asiakirjan yleiseen PDF-muotoon.`,
+      `Lataa uusi PDF.Asettelu näyttää samalta kaikissa laitteissa.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Miksi minun pitäisi muuntaa Word PDF-muotoon?`,
+        "answer": `Muuntaminen PDF-muotoon varmistaa, että asiakirjasi asettelu, kirjasimet ja kuvat näyttävät täsmälleen samalta kaikilla laitteilla, mikä estää muotoiluvirheet jakamisen muiden kanssa.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Ovatko marginaalini ja fonttini säilyneet?`,
+        "answer": `Kyllä, Word PDF -muuntimemme lukitsee tarkan asettelusi, mukaan lukien mukautetut fontit ja tarkat marginaaliasetukset.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Voinko muuntaa useita Word-tiedostoja kerralla?`,
+        "answer": `Kyllä, voit ladata useita DOC/DOCX-tiedostoja, ja käsittelemme ne samanaikaisesti nopeaa muuntamista varten.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF Exceliin`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Pura taulukoita ja tietoja PDF-tiedostoista Excel-laskentataulukoiksi.Parhaat tulokset tekstipohjaisilla PDF-tiedostoilla.Skannattuja PDF-tiedostoja tuetaan OCR:n kautta – tarkkuus voi vaihdella.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Lataa PDF-tiedosto, joka sisältää taulukot ja tiedot, jotka haluat purkaa.`,
+      `Järjestelmämme skannaa asiakirjan, tunnistaa taulukkotiedot ja muotoilee sen tarkasti laskentataulukon soluiksi.`,
+      `Lataa muokattava Excel (XLSX) -tiedostosi.`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Muotoillaanko PDF-taulukkoni oikein Excelissä?`,
+        "answer": `Kyllä, älykäs purkutyökalumme tunnistaa rivit ja sarakkeet ja varmistaa, että taulukkotietosi on järjestetty siististi Excel-soluihin.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Voiko se poimia tietoja skannatuista PDF-tiedostoista?`,
+        "answer": `Kyllä, OCR-tekniikkamme pystyy lukemaan taulukoita skannatuista kuvista ja muuntaa ne muokattaviksi Excel-laskentataulukoiksi.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Siirretäänkö kaavat?`,
+        "answer": `PDF-tiedostot eivät tallenna kaavoja, vain raakadataa.Purettu Excel-tiedosto sisältää tarkat arvot, jotka näkyvät PDF-tiedostossa.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel PDF:ksi`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Tee EXCEL-laskentataulukoista helppolukuisia muuntamalla ne PDF-muotoon.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Lataa Excel (XLS tai XLSX) -laskentataulukko.`,
+      `Työkalumme optimoi laskentataulukon asettelun sopimaan täydellisesti PDF-sivuille ilman sarakkeiden leikkaamista.`,
+      `Lataa viimeistelty PDF-dokumentti.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Leikkautuuko leveät laskentataulukot pois?`,
+        "answer": `Muuntimemme skaalaa ja muotoilee laskentataulukkosi älykkäästi varmistaakseen, että sarakkeet sopivat loogisesti PDF-sivuille.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Muuntaako se kaikki laskentataulukot?`,
+        "answer": `Kyllä, kaikki Excel-tiedostosi aktiiviset laskentataulukot muunnetaan peräkkäisiksi sivuiksi lopullisessa PDF-tiedostossa.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Ovatko taloustietoni turvassa?`,
+        "answer": `100 %.Käytämme päästä päähän -salausta, ja kaikki tiedostot pyyhitään pysyvästi järjestelmistämme 2 tunnin sisällä.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF JPG-muotoon`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Muunna jokainen PDF-sivu JPG-muotoon tai pura kaikki sisältämät kuvat.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Lataa PDF-dokumentti, jonka haluat muuntaa kuviksi.`,
+      `Valitse, puretaanko upotetut kuvat vai muunnetaanko kokonaiset PDF-sivut korkearesoluutioisiksi JPG-tiedostoiksi.`,
+      `Lataa JPG-tiedostot yksittäin tai pakattuna ZIP-tiedostona.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Onko JPG-laatu korkea?`,
+        "answer": `Kyllä, poimimme ja muunnamme sivuja korkealla resoluutiolla, mikä takaa terävän tekstin ja selkeät kuvat tuloksena olevissa JPG-tiedostoissa.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Voinko poimia vain kuvat PDF-tiedostosta?`,
+        "answer": `Täysin.Voit poimia vain PDF-tiedostoon upotetut valokuvat koko sivun muuntamisen sijaan.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Onko rajoitettu kuinka monta sivua voin muuntaa?`,
+        "answer": `Ilmaiset käyttäjät voivat muuntaa jopa 10 Mt:n PDF-tiedostoja.Pro-käyttäjät voivat käsitellä jopa 2 Gt:n tiedostoja.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG PDF:ksi`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Muunna JPG-kuvat PDF-muotoon sekunneissa.Säädä suuntaa ja marginaaleja helposti.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Valitse yksi tai useampi JPG-kuva laitteestasi.`,
+      `Vedä ja pudota järjestääksesi niiden järjestystä, säädä sivun suuntaa ja aseta marginaaleja tarvittaessa.`,
+      `Napsauta "Muunna" ja lataa yhdistetty PDF-dokumentti.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Voinko yhdistää useita JPG-tiedostoja yhdeksi PDF-tiedostoksi?`,
+        "answer": `Kyllä, lataa vain useita kuvia, järjestä ne haluamaasi järjestykseen, niin yhdistämme ne yhdeksi PDF-dokumentiksi.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Meneekö kuvieni laatu?`,
+        "answer": `Ei, säilytämme JPG-kuviesi alkuperäisen resoluution ja laadun, kun upotamme ne PDF-tiedostoon.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Voinko säätää marginaaleja ja suuntaa?`,
+        "answer": `Kyllä, työkalumme avulla voit mukauttaa sivun suuntaa (pysty tai vaaka) ja marginaalien kokoa ennen muuntamista.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF PowerPointiin`,
+    "desc": `Muuta PDF-tiedostot helposti muokattaviksi PPT- ja PPTX-diaesityksiksi.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Lataa PDF, jonka haluat muuttaa esitykseksi.`,
+      `Tekoälymoottorimme analysoi diat ja muuntaa ne muokattavissa oleviin PPTX-muotoihin.`,
+      `Lataa uusi PowerPoint-esitys.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Voiko PowerPointini tekstiä muokata?`,
+        "answer": `Kyllä, kaikki teksti, muodot ja kuvat ovat täysin muokattavissa tuloksena olevassa PPTX-tiedostossa.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Toimiiko se skannattujen esitysten kanssa?`,
+        "answer": `Kyllä, OCR:n avulla voimme poimia tekstiä skannatuista dioista ja tehdä siitä muokattavissa PowerPointissa.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Onko dian asettelu säilynyt?`,
+        "answer": `Edistyksellinen muunnosteknologiamme varmistaa, että alkuperäisen PDF-tiedostosi asettelu vastaa mahdollisimman tarkasti PowerPointissa.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint PDF:ksi`,
+    "desc": `Tee PPT- ja PPTX-diaesityksistä helposti katseltavissa muuntamalla ne PDF-muotoon.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Valitse PPT- tai PPTX-tiedostosi.`,
+      `Työkalu muuntaa diasi välittömästi turvalliseen, yleiseen PDF-muotoon.`,
+      `Lataa esityksesi PDF-tiedostona.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Miksi muuntaa PowerPoint PDF-muotoon?`,
+        "answer": `Muuntaminen varmistaa, että esityksesi näyttää samalta millä tahansa laitteella, mikä estää puuttuvia fontteja tai rikkinäisiä asetteluja esitettäessä toisella tietokoneella.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Onko diasiirtymäni tallennettu?`,
+        "answer": `Ei, PDF on staattinen asiakirjamuoto, joten animaatioita ja diasiirtymiä ei siirretä.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Ovatko puhujan muistiinpanot mukana?`,
+        "answer": `Tällä hetkellä työkalumme muuntaa tärkeimmät diavisuaalit.Puhujan muistiinpanot eivät sisälly tavalliseen PDF-tulosteeseen.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF HTML:ksi`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Muunna PDF-dokumentit HTML-sivuiksi täydellisesti.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Lataa PDF-tiedostosi.`,
+      `Järjestelmämme muuntaa asiakirjan verkkovalmiiksi HTML-, CSS- ja kuviksi.`,
+      `Lataa ZIP-tiedosto, joka sisältää uuden verkkosivusi.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Onko HTML responsiivinen?`,
+        "answer": `HTML vastaa tiiviisti PDF-tiedoston staattista asettelua ja säilyttää ehdottoman paikannustarkkuuden.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Poimitaanko kuvat automaattisesti?`,
+        "answer": `Kyllä, kaikki upotetut kuvat puretaan ja niihin viitataan oikein luodussa HTML-koodissa.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Tarvitsenko koodaustaitoja käyttääkseni tätä?`,
+        "answer": `Ei ollenkaan.Saat käyttövalmiin HTML-tiedoston, jonka voit avata välittömästi millä tahansa verkkoselaimella.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML PDF:ksi`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Muunna verkkosivut HTML-muodossa PDF-muotoon suoraan URL-osoitteesta tai tiedostosta.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Lataa HTML-tiedostosi tai anna verkkosivun URL-osoite.`,
+      `Renderöintikoneemme lataa sivun, käyttää tyylejä ja tallentaa sen PDF-dokumentiksi.`,
+      `Lataa täydellisesti muotoiltu PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Voinko muuntaa live-URL-osoitteet PDF-muotoon?`,
+        "answer": `Kyllä, voit syöttää URL-osoitteen, ja työkalumme hakee live-sivun ja muuntaa sen korkealaatuiseksi PDF-tiedostoksi.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Käytetäänkö CSS-tyylejä?`,
+        "answer": `Täysin.Renderöintimoottorimme tukee täysin CSS:ää, mikä varmistaa, että PDF näyttää täsmälleen samalta kuin elävä verkkosivu.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Entä raskaat JavaScript-sivut?`,
+        "answer": `Työkalumme suorittaa JavaScriptin ennen sivun sieppaamista varmistaakseen, että dynaaminen sisältö renderöidään oikein lopullisessa PDF-tiedostossa.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF tekstiksi`,
+    "desc": `Pura tekstiä PDF-tiedostoistasi luodaksesi muokattavia TXT-asiakirjoja.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Lataa PDF-dokumenttisi.`,
+      `Järjestelmämme poistaa muotoilut ja poimii puhdasta, pelkkää tekstiä.`,
+      `Lataa raaka TXT-tiedosto.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Poimiiko se tekstiä kuvista?`,
+        "answer": `Kyllä, jos PDF sisältää skannattuja kuvia, OCR-tekniikkamme lukee tekstin ja sisällyttää sen TXT-tiedostoon.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Onko muotoilu säilytetty?`,
+        "answer": `Ei, tämä työkalu poistaa kaikki muotoilut tarjotakseen sinulle raakaa, tyylitöntä pelkkää tekstiä.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Ovatko tietoni turvassa?`,
+        "answer": `Kyllä, kaikki tiedostot salataan käsittelyn aikana ja poistetaan automaattisesti 2 tunnin sisällä.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Yhdistä PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Yhdistä PDF-tiedostot haluamassasi järjestyksessä helpoimmalla saatavilla olevalla PDF-yhdistelmällä.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Valitse useita PDF-tiedostoja laitteestasi.`,
+      `Järjestä tiedostot haluamaasi järjestykseen vetämällä ja pudottamalla pikkukuvat.`,
+      `Napsauta Yhdistä ja lataa yhdistetty, yksittäinen PDF-dokumentti.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Mikä on PDF-fuusio?`,
+        "answer": `PDF-fuusio on apuohjelma, joka yhdistää useita PDF-tiedostoja yhdeksi jatkuvaksi asiakirjaksi.Ilmaiset käyttäjät voivat yhdistää jopa 20 tiedostoa kerralla.Pro-käyttäjät voivat yhdistää rajattoman määrän asiakirjoja.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Voinko muuttaa tiedostojen järjestystä?`,
+        "answer": `Kyllä!Latauksen jälkeen vetämällä ja pudottamalla tiedostojen pikkukuvat järjestävät ne uudelleen haluamallasi tavalla.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Heikentääkö yhdistäminen laatua?`,
+        "answer": `Ei ollenkaan.Yhdistäminen säilyttää kaikkien asiakirjojen alkuperäisen laadun ja muotoilun.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Jaa PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Erota yksi sivu tai koko sarja, jotta voit muuntaa helposti itsenäisiksi PDF-tiedostoiksi.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Lataa PDF, jonka haluat jakaa.`,
+      `Valitse, puretaanko tiettyjä sivuja vai jaetaanko asiakirja kiinteisiin alueisiin.`,
+      `Lataa uudet, erilliset PDF-tiedostosi ZIP-arkistona.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Voinko poimia vain yhden sivun suuresta PDF-tiedostosta?`,
+        "answer": `Kyllä, voit helposti määrittää yksittäisen sivunumeron tai mukautetun alueen (esim. sivut 4-7) poimittavaksi.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Säilyvätkö jaetut tiedostot alkuperäisen laadun?`,
+        "answer": `Kyllä, yksittäiset sivut poimitaan virheettömästi ilman, että resoluutio tai tekstin laatu heikkenee.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Kuinka lataan useita jaettuja tiedostoja?`,
+        "answer": `Kun jaat asiakirjan useisiin osiin, pakkaamme ne kätevästi yhdeksi ZIP-tiedostoksi latausta varten.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Kierrä PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Käännä PDF-tiedostojasi haluamallasi tavalla.Voit jopa kiertää useita PDF-tiedostoja kerralla.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Lataa PDF-dokumenttisi.`,
+      `Vie hiiri niiden sivujen päälle, joita haluat kiertää, ja napsauta kiertokuvaketta tai kierrä kaikkia sivuja kerralla.`,
+      `Napsauta Käytä ja lataa pysyvästi kierretty PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Voinko kiertää vain tiettyjä sivuja?`,
+        "answer": `Kyllä, voit valita yksittäisiä sivuja ja kääntää niitä 90, 180 tai 270 astetta vaikuttamatta asiakirjan muuhun osaan.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Onko kierto pysyvä?`,
+        "answer": `Kyllä, kun lataat uuden tiedoston, suunnan muutokset tallennetaan pysyvästi PDF-tiedoston metatietoihin.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Onko luottamuksellisten asiakirjojen lataaminen turvallista?`,
+        "answer": `Täysin.Kaikki lataukset salataan HTTPS:n kautta ja pyyhitään palvelimiltamme 2 tunnin kuluttua käsittelystä.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Poista sivut`,
+    "desc": `Poista sivut PDF-dokumentista hetkessä.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Lataa PDF-tiedostosi.`,
+      `Valitse poistettavat sivut napsauttamalla niiden pikkukuvia.`,
+      `Napsauta Poista sivut ja lataa äskettäin virtaviivaistettu asiakirjasi.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Mistä tiedän, mitkä sivut pitäisi poistaa?`,
+        "answer": `Työkalumme luo korkealaatuisia pikkukuvia jokaisesta sivusta, jonka avulla voit visuaalisesti tunnistaa ja valita tarkat sivut, jotka haluat poistaa.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Voinko poistaa useita sivuja kerralla?`,
+        "answer": `Kyllä, voit napsauttaa useita pikkukuvia tai kirjoittaa sivualueen poistaaksesi useita sivuja samanaikaisesti.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Onko vaikutus asiakirjan muuhun osaan?`,
+        "answer": `Ei, kaikki muut sivut säilyttävät alkuperäisen muotoilunsa, laatunsa ja resoluutionsa.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Järjestä sivut uudelleen`,
+    "desc": `Muuta PDF-dokumentin sivujärjestystä vetämällä ja pudottamalla.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Lataa PDF-dokumenttisi.`,
+      `Vedä ja pudota sivujen pikkukuvat muuttaaksesi niiden järjestystä.`,
+      `Kun olet järjestänyt, ota muutokset käyttöön ja lataa uudelleenjärjestetty PDF.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Onko suuren asiakirjan uudelleenjärjestäminen helppoa?`,
+        "answer": `Kyllä, intuitiivisen vedä ja pudota -käyttöliittymämme avulla voit siirtää sivuja nopeasti, jopa suurissa asiakirjoissa.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Menetänkö interaktiivisia elementtejä?`,
+        "answer": `Useimmat standardi interaktiiviset elementit säilyvät, vaikka monimutkaiset lomakekentät, jotka yhdistävät useita sivuja, saattavat käyttäytyä eri tavalla.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Voinko peruuttaa siirron ennen tallentamista?`,
+        "answer": `Kyllä, voit järjestää sivut uudelleen niin monta kertaa kuin haluat ennen kuin napsautat loppuprosessipainiketta.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Lisää tyhjä sivu`,
+    "desc": `Lisää tyhjä sivu mihin tahansa PDF-dokumentin kohtaan.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Lataa PDF-tiedostosi.`,
+      `Valitse tarkka paikka, johon haluat lisätä uuden tyhjän sivun.`,
+      `Ota muutokset käyttöön ja lataa päivitetty PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Miksi minun pitäisi lisätä tyhjä sivu?`,
+        "answer": `Tyhjän sivun lisääminen on hyödyllistä kaksipuolisten asiakirjojen tulostamisessa, tulevien muistiinpanojen lisäämisessä tai sivutusmuotoilun korjaamisessa.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Voinko lisätä useita tyhjiä sivuja?`,
+        "answer": `Kyllä, voit lisätä niin monta tyhjiä sivuja kuin tarvitset mihin tahansa asiakirjaan.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Vastaako tyhjä sivu asiakirjan kokoa?`,
+        "answer": `Kyllä, uusi tyhjä sivu vastaa automaattisesti ympäröivien sivujen mittoja ja suuntaa.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Pakkaa PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Pienennä tiedostokokoa samalla kun optimoit PDF-laadun.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Lataa iso PDF-tiedostosi.`,
+      `Valitse haluamasi pakkaustaso (Extreme, Recommended tai Less compression).`,
+      `Lataa optimoitu, paljon pienempi PDF-tiedosto.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Pilaako pakkaus PDF-tiedostoni laadun?`,
+        "answer": `Kehittyneet optimointialgoritmimme pienentävät tiedostokokoa pakkaamalla kuvia ja poistamalla tarpeettomia tietoja pitäen tekstin terävinä ja kuvat visuaalisesti selkeinä.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Mikä pakkaustaso minun pitäisi valita?`,
+        "answer": `Suosittelemme täydellisen tasapainon saavuttamiseksi.Käytä Extreme-asetusta vain, jos tarvitset kiireellisesti pienimmän mahdollisen tiedostokoon sähköpostin liitteille.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Voinko pakata PDF-tiedoston, joka on jo pieni?`,
+        "answer": `Voit, mutta tiedostokoon pienennys on minimaalista, koska tiedot ovat todennäköisesti jo optimoituja.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Korjaa PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Korjaa vaurioitunut PDF ja palauta tiedot vioittuneista tiedostoista.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Lataa vioittunut tai vaurioitunut PDF-tiedosto.`,
+      `Järjestelmämme analysoi tiedostorakenteen ja yrittää rakentaa rikkinäiset tiedot uudelleen.`,
+      `Lataa korjattu PDF-dokumentti.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Voiko kaikki vioittuneet PDF-tiedostot korjata?`,
+        "answer": `Vaikka työkalumme on erittäin tehokas rakenteellisten virheiden ja rikkinäisten otsikoiden korjaamisessa, vakavasti vahingoittuneita tiedostoja, joista puuttuu raakadataa, ei välttämättä voida täysin palauttaa.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Kauanko korjaaminen kestää?`,
+        "answer": `Useimmat tiedostot analysoidaan ja korjataan muutamassa sekunnissa vaurion monimutkaisuudesta riippuen.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Ovatko sisällä olevat tiedot turvallisia?`,
+        "answer": `Kyllä.Käsittelemme korjauksen turvallisesti pilvessä, ja asiakirjasi poistetaan pysyvästi pian sen jälkeen.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Tee skannattujen PDF-tiedostojen tekstistä valittavissa, haettavissa ja muokattavissa.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Lataa skannattu PDF-dokumentti.`,
+      `Valitse asiakirjan sisällä olevan tekstin kieli parantaaksesi tarkkuutta.`,
+      `Lataa uusi, täysin haettavissa oleva ja valittavissa oleva PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Mikä on OCR?`,
+        "answer": `OCR on lyhenne sanoista Optical Character Recognition.Se on tekniikka, joka lukee tekstiä kuvien tai skannattujen asiakirjojen sisällä ja muuntaa sen valittavissa olevaksi, haettavaksi tietokonetekstiksi.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Toimiiko tekstintunnistus käsinkirjoitetussa tekstissä?`,
+        "answer": `OCR-moottorimme on erittäin tarkka painetulle tekstille.Käsinkirjoitettu teksti voi tuottaa vaihtelevia tuloksia luettavuudesta riippuen.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Voinko kopioida tekstiä OCR-asiakirjasta?`,
+        "answer": `Täysin.Kun olet käsitellyt, voit korostaa, kopioida ja liittää tekstiä suoraan PDF-tiedostosta tavallisen asiakirjan tapaan.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Litistä PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Yhdistä kaikki tasot, lomakkeet ja huomautukset yhdeksi ei-muokattavaksi tasoksi.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Lataa PDF-tiedosto, joka sisältää lomakkeita, tasoja tai huomautuksia.`,
+      `Järjestelmämme yhdistää pysyvästi kaikki visuaaliset elementit yhdeksi tasaiseksi kerrokseksi.`,
+      `Lataa litteä, tulostusvalmis PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Miksi minun pitäisi litistää PDF?`,
+        "answer": `PDF-tiedoston litistäminen lukitsee lomaketietoihin, estää huomautusten lisämuokkauksen ja varmistaa, että asiakirja tulostuu juuri sellaisena kuin se näkyy näytöllä.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Voidaanko litistetystä PDF-tiedostosta purkaa litistys?`,
+        "answer": `Ei, litistäminen on pysyvä prosessi.Suosittelemme pitämään varmuuskopion alkuperäisestä interaktiivisesta PDF-tiedostosta.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Pienentääkö litistäminen tiedostokokoa?`,
+        "answer": `Usein kyllä.Yhdistämällä tasoja ja poistamalla interaktiivisia lomakekenttiä kokonaisrakenne yksinkertaistuu ja pienenee.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Suojaa PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Salaa PDF-tiedosto salasanalla luvattoman käytön estämiseksi.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Lataa PDF, jonka haluat suojata.`,
+      `Kirjoita vahva salasana ja vahvista se.`,
+      `Lataa uusi salattu PDF-tiedosto.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Millaista salausta käytetään?`,
+        "answer": `Käytämme vahvaa 256-bittistä AES-salausta, joka on alan standardi erittäin arkaluonteisten ja luottamuksellisten asiakirjojen suojaamisessa.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Voiko TheyLovePDF palauttaa salasanani, jos unohdan sen?`,
+        "answer": `Ei. Salasanaasi ei koskaan tallenneta palvelimillemme.Jos kadotat sen, asiakirjaa ei voida purkaa.Pidä se turvassa!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Estääkö PDF-tiedoston suojaaminen tulostamisen?`,
+        "answer": `Kyllä, salaus estää asiakirjan avaamisen, tulostamisen tai muokkaamisen ilman oikeaa salasanaa.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Avaa PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Poista PDF-salasanan suojaus, jolloin voit käyttää PDF-tiedostoja haluamallasi tavalla.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Lataa salasanalla suojattu PDF-tiedosto.`,
+      `Jos tiedostossa on "omistajan salasana", joka rajoittaa muokkauksia, poistamme sen välittömästi.Jos siinä on "käyttäjän salasana", joka rajoittaa avaamista, sinun on annettava se ensin.`,
+      `Lataa lukitsematon PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Voitko avata PDF-tiedoston lukituksen ilman salasanaa?`,
+        "answer": `Voimme helposti poistaa "muokkaus-/tulostusrajoitukset" (omistajan salasanat) ilman salasanaa.Jos tiedosto vaatii salasanan vain sen avaamiseksi (käyttäjän salasana), sinun on annettava se.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Onko PDF-tiedoston lukituksen avaaminen laillista?`,
+        "answer": `Sinun tulee poistaa suojaus vain asiakirjoista, jotka omistat laillisesti tai joilla sinulla on lupa muokata.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Muuttaako lukituksen avaaminen asiakirjan sisältöä?`,
+        "answer": `Ei, sisältö, muotoilu ja laatu pysyvät täysin ennallaan.Vain suojakerros poistetaan.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Muokkaa PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Poista pysyvästi arkaluontoiset tiedot tai piilotetut tiedot PDF-tiedostoistasi.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Lataa PDF-tiedostosi.`,
+      `Piirrä mustat laatikot arkaluontoisen tekstin, kuvien tai henkilökohtaisten tietojen päälle.`,
+      `Käytä muokkauksia, jotta voit puhdistaa tiedot pysyvästi, ja lataa sitten tiedosto.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Onko muokattu teksti todella kadonnut?`,
+        "answer": `Kyllä.Toisin kuin pelkkä mustan muodon piirtäminen tekstin päälle, muokkaustyökalumme poistaa pysyvästi taustalla olevat tekstitiedot, joten koneet eivät voi kopioida tai lukea sitä.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Voinko myös muokata kuvia?`,
+        "answer": `Täysin.Voit valita minkä tahansa sivun alueen, mukaan lukien grafiikan ja valokuvat, pimennettäväksi pysyvästi.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Onko muokkaus peruttavissa?`,
+        "answer": `Ei. Turvallisuutesi vuoksi editointi tuhoaa piilotetut tiedot pysyvästi.Säilytä aina muokkaamaton varmuuskopio tarvittaessa.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Allekirjoita PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Allekirjoita itse tai pyydä sähköisiä allekirjoituksia muilta.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Lataa allekirjoitusta vaativa asiakirja.`,
+      `Luo allekirjoituksesi piirtämällä, kirjoittamalla tai lataamalla kuva.`,
+      `Aseta allekirjoituksesi asiakirjaan, napsauta Käytä ja lataa se.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Ovatko sähköiset allekirjoitukset laillisia?`,
+        "answer": `Kyllä, TheyLovePDF:llä luodut sähköiset allekirjoitukset ovat laillisesti sitovia useimmissa maissa ja lainkäyttöalueilla.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Voinko tallentaa allekirjoitukseni myöhempää käyttöä varten?`,
+        "answer": `Kyllä, jos luot tilin, voit tallentaa allekirjoituksesi turvallisesti nopeaa, yhden napsautuksen kirjautumista varten tulevaisuudessa.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Voinko lisätä tekstiin päivämäärät ja nimikirjaimet?`,
+        "answer": `Täysin.Allekirjoituksen lisäksi voit helposti vetää ja pudottaa päivämäärät, nimikirjaimet ja mukautetut tekstikentät.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Pyydä allekirjoitus`,
+    "desc": `Lähetä asiakirjoja asiakkaille allekirjoitettavaksi laillisesti verkossa.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Lataa PDF, jonka tarvitset allekirjoitettuna.`,
+      `Lisää vastaanottajien sähköpostiosoitteet ja määritä heille allekirjoituskentät.`,
+      `Lähetä pyyntö.Lähetämme heille sähköpostitse suojatun linkin asiakirjan allekirjoittamista varten verkossa.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Tarvitsevatko vastaanottajat tilin allekirjoittaakseen?`,
+        "answer": `Ei, vastaanottajat voivat allekirjoittaa asiakirjan turvallisesti suoraan sähköpostilinkin kautta ilman, että heidän tarvitsee luoda TheyLovePDF-tiliä.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Mistä tiedän, milloin se on allekirjoitettu?`,
+        "answer": `Saat automaattisen sähköposti-ilmoituksen heti, kun kaikki osapuolet ovat allekirjoittaneet asiakirjan.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Onko olemassa kirjausketjua?`,
+        "answer": `Kyllä, Pro-käyttäjät saavat kattavan kirjausketjun, jossa on yksityiskohtaiset IP-osoitteet ja aikaleimat täydellisen lainmukaisuuden varmistamiseksi.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Todistusmerkki`,
+    "desc": `Lisää kryptografinen digitaalinen allekirjoitus PDF-tiedostoosi.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Lataa PDF ja digitaalinen varmennetiedosto (.pfx tai .p12).`,
+      `Anna varmenteen salasana.`,
+      `Käytä kryptografista allekirjoitusta ja lataa vahvistettu PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Mikä on varmenteen allekirjoitus?`,
+        "answer": `Toisin kuin visuaalinen sähköinen allekirjoitus, varmenteen allekirjoitus lisää salaustiivisteen asiakirjaan, mikä todistaa matemaattisesti sen aitouden ja varmistaa, ettei sitä ole muutettu.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Tallennatko varmenteen salasanani?`,
+        "answer": `Ei koskaan.Salasanasi säilytetään vain väliaikaisessa muistissa tarkalleen allekirjoitushetkellä ja tuhotaan välittömästi.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Voivatko ihmiset vahvistaa allekirjoituksen?`,
+        "answer": `Kyllä, kun se avataan tavallisissa PDF-lukuohjelmissa, kuten Adobe Acrobatissa, näkyviin tulee vihreä valintamerkki, joka osoittaa, että asiakirja on digitaalisesti vahvistettu ja muuttumaton.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Keskustele PDF-tiedoston kanssa`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Puhu PDF-tiedostollesi.Esitä kysymyksiä, hanki yhteenvetoja ja poimi oivalluksia välittömästi tekoälyn avulla.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Lataa pitkä tai monimutkainen PDF-dokumentti.`,
+      `Kirjoita keskusteluruutuun kysymys, kuten "Yhteenveto luvusta 2" tai "Mikä on tärkein argumentti?"`,
+      `Tekoälymme lukee asiakirjan välittömästi ja antaa sinulle tarkan vastauksen.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Miten Chat with PDF toimii?`,
+        "answer": `Käytämme edistyneitä suuria kielimalleja (LLM) asiakirjasi tekstin skannaamiseen, sen kontekstin ymmärtämiseen ja kysymyksiin vastaamiseen tiukasti asiakirjan sisällön perusteella.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Pystyykö se lukemaan skannattuja asiakirjoja?`,
+        "answer": `Jos asiakirja on pelkkä kuva, sinun on suoritettava se ensin OCR-työkalullamme.Jos se sisältää valittavaa tekstiä, tekoäly voi lukea sen välittömästi.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Käytetäänkö asiakirjojani tekoälyn kouluttamiseen?`,
+        "answer": `Ei todellakaan.Yksityisyytesi on meille etusijalla.Asiakirjat käsitellään suojatussa ympäristössä, eikä niitä koskaan käytetä julkisten tekoälymallien kouluttamiseen.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Muokkaa PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Lisää tekstiä, kuvia, muotoja tai vapaakätisiä huomautuksia PDF-dokumenttiin.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Suosittu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Lataa PDF, jota haluat muokata.`,
+      `Työkalupalkin avulla voit lisätä tekstiä, lisätä kuvia, piirtää muotoja tai käyttää valkoista olemassa oleville alueille.`,
+      `Tallenna muokkaukset ja lataa päivitetty PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Voinko muuttaa PDF-tiedoston tekstiä?`,
+        "answer": `Tällä hetkellä voit käyttää "whiteout"-työkalua peittääksesi vanhan tekstin ja kirjoittaaksesi uuden tekstin sen päälle.Natiivitekstin muokkaus on erittäin monimutkainen ominaisuus, jota kehitämme aktiivisesti.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Voinko lisätä kuvia PDF-tiedostoon?`,
+        "answer": `Kyllä, voit helposti ladata ja leimata PNG- tai JPG-kuvia mihin tahansa asiakirjaan.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Heikentääkö muokkaaminen asiakirjan laatua?`,
+        "answer": `Ei, editorimme lisää merkinnäsi olemassa olevan asiakirjarakenteen päälle pakkaamatta uudelleen alkuperäisiä kuvia tai tekstiä.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Vesileima PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Leimaa kuva tai teksti PDF-tiedoston päälle sekunneissa.Valitse typografia, läpinäkyvyys ja sijainti.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Lataa PDF-tiedostosi.`,
+      `Kirjoita vesileiman teksti tai lataa logokuva.Säädä peittävyyttä, kiertoa ja sijoitusta.`,
+      `Napsauta Käytä ja lataa vesileimalla varustettu asiakirja.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Voinko tehdä vesileiman kaikille sivuille kerralla?`,
+        "answer": `Kyllä, oletuksena vesileimaa käytetään johdonmukaisesti asiakirjan jokaisella sivulla.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Voinko säätää läpinäkyvyyttä?`,
+        "answer": `Täysin.Voit tehdä vesileiman erittäin himmeäksi, jotta se ei häiritse asiakirjaa, tai täysin läpinäkymättömäksi parhaan näkyvyyden saavuttamiseksi.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Voiko vesileiman poistaa?`,
+        "answer": `Tasoitamme vesileiman asiakirjarakenteeseen, jotta sen poistaminen olisi mahdollisimman vaikeaa ja varmistamme immateriaaliomaisuutesi suojan.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF lomakkeet`,
+    "desc": `Fill out PDF forms quickly and accurately online.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Free` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Upload an interactive PDF form.`,
+      `Click on the text fields, checkboxes, or radio buttons to fill in your information.`,
+      `Download the completed, filled-out form.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Can I save a partially filled form?`,
+        "answer": `If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Does it work with all PDF forms?`,
+        "answer": `Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Can I flatten the form after filling it?`,
+        "answer": `Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Lisää sivunumerot`,
+    "desc": `Lisää sivunumeroita PDF-tiedostoihin helposti.Valitse sijaintisi, mitat, typografia.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Ilmainen` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Lataa asiakirjasi.`,
+      `Valitse sijainti (esim. alhaalla oikealla), kirjasintyyli ja aloitusnumero.`,
+      `Käytä numerointia ja lataa täydellisesti muotoiltu PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Voinko ohittaa kansilehden?`,
+        "answer": `Kyllä!Voit määrittää, millä sivulla numerointi alkaa, jolloin voit pitää otsikkosivut puhtaina.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Voinko mukauttaa muotoa?`,
+        "answer": `Täysin.Voit valita muotoja, kuten "Sivu 1", "1/10" tai vain "1", ja valita fontin, koon ja värin.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Onko linjaus tarkka?`,
+        "answer": `Kyllä, työkalumme laskee tarkat marginaalit varmistaakseen, että sivunumerosi ovat täysin kohdakkain jokaisella sivulla.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Merkitse PDF`,
+    "desc": `Korosta, alleviivaa, yliviivaa tekstiä ja lisää kommentteja.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Uusi` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Lataa PDF.`,
+      `Käytä korostus-, alleviivaus-, yliviivaus- ja tarralapputyökaluja tarkistaaksesi asiakirjan.`,
+      `Lataa huomautuksilla varustettu tiedosto jakaaksesi tiimisi kanssa.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Näkyvätkö merkinnäni tavallisissa lukijoissa?`,
+        "answer": `Kyllä, käytämme tavallisia PDF-merkintäprotokollia, mikä tarkoittaa, että kohokohdat ja muistiinpanot näkyvät Adobe Acrobatissa, Chromessa ja Apple Previewissa.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Voinko vaihtaa korostusvärejä?`,
+        "answer": `Kyllä, voit valita laajasta väripaletista värikoodataksesi muistiinpanosi ja kohokohdat.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Onko huomautuksen poistaminen helppoa?`,
+        "answer": `Erittäin helppoa.Napsauta mitä tahansa tekemääsi huomautusta ja poista se välittömästi painamalla poistopainiketta.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Plagioinnin tarkistus`,
+    "desc": `Vertaa asiakirjaasi miljardeihin verkkosivuihin ja akateemisiin tietokantoihin.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Lataa essee tai asiakirja, jonka haluat vahvistaa.`,
+      `Tekoälymoottorimme skannaa miljardeja verkkosivuja ja akateemisia tietokantoja löytääkseen osumia.`,
+      `Tarkista yksityiskohtainen samankaltaisuusraportti ja korosta kopioitu teksti.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Kuinka tarkka plagioinnin tarkistus on?`,
+        "answer": `Se on erittäin tarkka.Käytämme yritystason tekoälyä, joka vertaa tekstiäsi massiiviseen, jatkuvasti päivitettävään verkkosisältötietokantaan.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Vertaako se offline-akateemisiin papereihin?`,
+        "answer": `Se vertaa suuria avoimen pääsyn akateemisia lehtiä ja runsaasti siteerattuja lähteitä, jotka ovat saatavilla verkossa.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Onko asiakirjani tallennettu tietokantaan?`,
+        "answer": `Ei. Toisin kuin joidenkin yliopistojen järjestelmissä, emme lisää asiakirjaasi maailmanlaajuiseen tietokantaan, mikä varmistaa, että alkuperäinen työsi pysyy ehdottomasti sinun.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Yhteenveto PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Luo nopeita, tarkkoja yhteenvetoja pitkistä asiakirjoista sekunneissa.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Uusi` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Lataa pitkä asiakirja, raportti tai kirjan luku.`,
+      `Napsauta Yhteenveto, niin tekoälymme analysoi ydinkäsitteet.`,
+      `Lue tiivistelmä ja lataa se tarvittaessa.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Voiko se tiivistää koko kirjan?`,
+        "answer": `Tekoäly on erittäin pätevä, mutta parhaiden tulosten ja mahdollisimman yksityiskohtien saavuttamiseksi suosittelemme yhteenvedon tekemistä luvusta tai jaksosta kerrallaan.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Kertooko yhteenveto tärkeimmät tilastot?`,
+        "answer": `Kyllä, LLM:ämme on ohjeistettu tunnistamaan ja korostamaan tärkeitä tietopisteitä, tilastoja ja ensisijaisia ​​argumentteja.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Mitä kieliä tuetaan?`,
+        "answer": `Yhteenveto toimii parhaiten englanniksi, mutta se tukee ja ymmärtää yli 50 maailmanlaajuista kieltä.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Käännä PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Käännä kokonaisia ​​asiakirjoja säilyttäen samalla alkuperäinen muotoilu ja asettelu.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Uusi` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Lataa asiakirjasi.`,
+      `Valitse alkuperäinen kieli ja kohdekieli, jolle haluat kääntää.`,
+      `Lataa juuri käännetty PDF alkuperäisen muotoilunsa kanssa.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Hajoaako asettelu käännöksen jälkeen?`,
+        "answer": `Kehittynyt koneemme yrittää säilyttää tarkan asettelun, vaikka tekstin laajennus (esim. englannista saksaksi) saattaa aiheuttaa pieniä, väistämättömiä visuaalisia muutoksia.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Kuinka tarkka käännös on?`,
+        "answer": `Käytämme uusinta tekoälyn tuottamaa Neural Machine Translation (NMT) -tekniikkaa, joka tarjoaa erittäin tarkkoja, kontekstitietoisia käännöksiä jäykän sanasta sanaan -käännöksen sijaan.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Voinko kääntää skannatut asiakirjat?`,
+        "answer": `Kyllä!Jos lataat skannatun asiakirjan, järjestelmämme suorittaa automaattisesti OCR:n lukeakseen tekstin ennen sen kääntämistä.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Poimi tiedot`,
+    "desc": `Poimi älykkäästi taulukoita, arvoja ja kokonaisuuksia laskuista ja lomakkeista.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Uusi` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Lataa laskuja, kuitteja tai strukturoituja lomakkeita.`,
+      `Tekoälymme tunnistaa keskeiset kentät, kuten päivämäärät, summat, nimet ja osoitteet.`,
+      `Lataa puretut tiedot puhtaana CSV- tai JSON-tiedostona.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Mihin tiedonpoistoa käytetään?`,
+        "answer": `Se sopii erinomaisesti kirjanpitoon ja hallintoon.Sen sijaan, että kirjoittaisit manuaalisesti 100 laskun tiedot, tekoälymme tekee sen automaattisesti sekunneissa.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Tarvitseeko asiakirja tietyn asettelun?`,
+        "answer": `Ei!Tekoälymme on tarpeeksi älykäs löytääkseen kokonaissumman, olipa se sivun ylä-, ala- tai keskiosasta.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Voinko purkaa tiedot Exceliin?`,
+        "answer": `Kyllä, puretut tiedot voidaan viedä suoraan CSV-tiedostona, joka avautuu täydellisesti Microsoft Excelissä tai Google Sheetsissä.`
+      },
     ]
-  }
+  },
 ];

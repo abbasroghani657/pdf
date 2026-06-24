@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for hi
 export const TOOLS_DATA_HI = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `पीडीएफ से वर्ड`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `अपनी पीडीएफ फाइलों को संपादित करने में आसान DOC और DOCX दस्तावेज़ों में बदलें।`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `अपने पीडीएफ दस्तावेज़ को ड्रॉप ज़ोन में खींचकर या 'फ़ाइल चुनें' बटन पर क्लिक करके अपलोड करें।`,
+      `हमारा उन्नत ओसीआर और रूपांतरण इंजन तुरंत टेक्स्ट, लेआउट और फ़ॉर्मेटिंग निकालना शुरू कर देगा।`,
+      `संपादन के लिए तैयार, पूरी तरह से परिवर्तित वर्ड (DOC/DOCX) दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `पीडीएफ से वर्ड कनवर्टर क्या है?`,
+        "answer": `पीडीएफ से वर्ड कनवर्टर एक उपयोगिता है जो पीडीएफ से टेक्स्ट, लेआउट और छवियों को निकालती है और उन्हें पूरी तरह से संपादन योग्य माइक्रोसॉफ्ट वर्ड दस्तावेज़ के रूप में दोबारा बनाती है।हमारा प्रीमियम रूपांतरण इंजन फ़ॉन्ट, लेआउट, टेबल और छवियों को संरक्षित करता है ताकि आपका वर्ड दस्तावेज़ बिल्कुल मूल पीडीएफ जैसा दिखे।`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `क्या मैं स्कैन की गई पीडीएफ़ को संपादन योग्य वर्ड दस्तावेज़ों में बदल सकता हूँ?`,
+        "answer": `बिल्कुल।हमारी अंतर्निहित OCR (ऑप्टिकल कैरेक्टर रिकॉग्निशन) तकनीक स्वचालित रूप से स्कैन किए गए टेक्स्ट का पता लगाती है और परिणामी DOCX फ़ाइल में इसे पूरी तरह से संपादन योग्य बनाती है।`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `क्या मेरी गोपनीय पीडीएफ रूपांतरण के दौरान सुरक्षित है?`,
+        "answer": `हम गोपनीयता को गंभीरता से लेते हैं।स्थानांतरण के दौरान आपकी फ़ाइलें 256-बिट एसएसएल के माध्यम से एन्क्रिप्ट की जाती हैं, और 2 घंटे के भीतर स्वचालित रूप से हमारे सर्वर से स्थायी रूप से हटा दी जाती हैं।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `शब्द से पीडीएफ`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `DOC और DOCX फ़ाइलों को पीडीएफ में परिवर्तित करके पढ़ने में आसान बनाएं।`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `अपने कंप्यूटर से अपनी DOC या DOCX फ़ाइल चुनें या उसे पृष्ठ पर खींचें।`,
+      `टूल तुरंत फ़ॉर्मेटिंग को लॉक कर देगा और वर्ड दस्तावेज़ को एक सार्वभौमिक पीडीएफ प्रारूप में परिवर्तित कर देगा।`,
+      `अपना नया पीडीएफ डाउनलोड करें.लेआउट हर डिवाइस पर समान दिखेगा.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `मुझे वर्ड को पीडीएफ में क्यों बदलना चाहिए?`,
+        "answer": `पीडीएफ में कनवर्ट करने से यह सुनिश्चित होता है कि आपके दस्तावेज़ का लेआउट, फ़ॉन्ट और छवियां किसी भी डिवाइस पर बिल्कुल एक जैसी दिखें, जिससे दूसरों के साथ साझा करते समय फ़ॉर्मेटिंग त्रुटियों को रोका जा सके।`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `क्या मेरे हाशिए और फ़ॉन्ट संरक्षित हैं?`,
+        "answer": `हां, हमारा वर्ड टू पीडीएफ कनवर्टर आपके सटीक लेआउट को लॉक कर देता है, जिसमें कस्टम फ़ॉन्ट और सटीक मार्जिन सेटिंग्स शामिल हैं।`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `क्या मैं एक साथ अनेक Word फ़ाइलें परिवर्तित कर सकता हूँ?`,
+        "answer": `हाँ, आप एकाधिक DOC/DOCX फ़ाइलें अपलोड कर सकते हैं, और हम उच्च गति रूपांतरण के लिए उन्हें एक साथ संसाधित करेंगे।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `पीडीएफ से एक्सेल`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `पीडीएफ से एक्सेल स्प्रेडशीट में टेबल और डेटा निकालें।पाठ-आधारित पीडीएफ़ के साथ सर्वोत्तम परिणाम।स्कैन की गई पीडीएफ ओसीआर के माध्यम से समर्थित हैं - सटीकता भिन्न हो सकती है।`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `वह पीडीएफ फ़ाइल अपलोड करें जिसमें वे तालिकाएँ और डेटा हों जिन्हें आप निकालना चाहते हैं।`,
+      `हमारा सिस्टम दस्तावेज़ को स्कैन करेगा, सारणीबद्ध डेटा की पहचान करेगा, और उसे स्प्रेडशीट कोशिकाओं में सटीक रूप से प्रारूपित करेगा।`,
+      `अपनी संपादन योग्य एक्सेल (XLSX) फ़ाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `क्या मेरी पीडीएफ तालिकाएं एक्सेल में सही ढंग से फ़ॉर्मेट की जाएंगी?`,
+        "answer": `हाँ, हमारा बुद्धिमान निष्कर्षण उपकरण पंक्तियों और स्तंभों को पहचानता है, यह सुनिश्चित करते हुए कि आपका सारणीबद्ध डेटा एक्सेल कोशिकाओं में बड़े करीने से व्यवस्थित है।`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `क्या यह स्कैन की गई पीडीएफ़ से डेटा निकाल सकता है?`,
+        "answer": `हाँ, हमारी OCR तकनीक स्कैन की गई छवियों से तालिकाएँ पढ़ सकती है और उन्हें संपादन योग्य एक्सेल स्प्रेडशीट में परिवर्तित कर सकती है।`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `क्या सूत्र आगे बढ़ाए गए हैं?`,
+        "answer": `पीडीएफ़ फ़ॉर्मूले संग्रहीत नहीं करते, केवल कच्चा डेटा संग्रहीत करते हैं।निकाली गई एक्सेल फ़ाइल में पीडीएफ में दिखाई देने वाले सटीक मान होंगे।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `एक्सेल से पीडीएफ`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `EXCEL स्प्रेडशीट को पीडीएफ में परिवर्तित करके पढ़ने में आसान बनाएं।`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `अपनी एक्सेल (XLS या XLSX) स्प्रेडशीट अपलोड करें।`,
+      `हमारा टूल कॉलम को काटे बिना पीडीएफ पृष्ठों पर पूरी तरह से फिट होने के लिए स्प्रेडशीट के लेआउट को अनुकूलित करेगा।`,
+      `अंतिम रूप दिया गया पीडीएफ दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `क्या मेरी विस्तृत स्प्रैडशीट काट दी जाएंगी?`,
+        "answer": `हमारा कनवर्टर आपकी स्प्रैडशीट को बुद्धिमानी से मापता है और प्रारूपित करता है ताकि यह सुनिश्चित हो सके कि कॉलम पीडीएफ पृष्ठों पर तार्किक रूप से फिट हों।`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `क्या यह सभी कार्यपत्रकों को रूपांतरित करता है?`,
+        "answer": `हां, आपकी एक्सेल फ़ाइल में सभी सक्रिय वर्कशीट अंतिम पीडीएफ में अनुक्रमिक पृष्ठों में परिवर्तित हो जाएंगी।`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `क्या मेरा वित्तीय डेटा सुरक्षित है?`,
+        "answer": `100%.हम एंड-टू-एंड एन्क्रिप्शन का उपयोग करते हैं, और सभी फ़ाइलें 2 घंटे के भीतर हमारे सिस्टम से स्थायी रूप से मिटा दी जाती हैं।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `पीडीएफ से जेपीजी`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `प्रत्येक पीडीएफ पेज को जेपीजी में बदलें या उसमें मौजूद सभी छवियों को निकालें।`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `वह पीडीएफ दस्तावेज़ अपलोड करें जिसे आप छवियों में बदलना चाहते हैं।`,
+      `चुनें कि एम्बेडेड छवियों को निकालना है या संपूर्ण पीडीएफ पृष्ठों को उच्च-रिज़ॉल्यूशन जेपीजी में परिवर्तित करना है।`,
+      `JPGs को व्यक्तिगत रूप से या संपीड़ित ज़िप फ़ाइल के रूप में डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `क्या JPG गुणवत्ता उच्च होगी?`,
+        "answer": `हां, हम उच्च रिज़ॉल्यूशन पर पृष्ठों को निकालते और परिवर्तित करते हैं, जिससे परिणामी JPG फ़ाइलों में स्पष्ट पाठ और स्पष्ट छवियां सुनिश्चित होती हैं।`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `क्या मैं पीडीएफ से केवल छवियाँ निकाल सकता हूँ?`,
+        "answer": `बिल्कुल।आप पूरे पृष्ठ को परिवर्तित करने के बजाय केवल पीडीएफ में एम्बेड की गई तस्वीरों को निकालना चुन सकते हैं।`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `क्या इसकी कोई सीमा है कि मैं कितने पेज परिवर्तित कर सकता हूँ?`,
+        "answer": `निःशुल्क उपयोगकर्ता 10 एमबी मूल्य तक की पीडीएफ़ परिवर्तित कर सकते हैं।प्रो उपयोगकर्ता 2GB तक की बड़ी फ़ाइलों को संसाधित कर सकते हैं।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `जेपीजी से पीडीएफ`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `सेकंडों में JPG छवियों को पीडीएफ में बदलें।ओरिएंटेशन और मार्जिन को आसानी से समायोजित करें।`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `अपने डिवाइस से एक या एकाधिक JPG छवियाँ चुनें।`,
+      `उनके क्रम को पुनर्व्यवस्थित करने के लिए खींचें और छोड़ें, पृष्ठ अभिविन्यास समायोजित करें, और यदि आवश्यक हो तो मार्जिन सेट करें।`,
+      `'कन्वर्ट' पर क्लिक करें और अपना संयुक्त पीडीएफ दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `क्या मैं एकाधिक JPG को एक PDF में जोड़ सकता हूँ?`,
+        "answer": `हां, बस कई छवियां अपलोड करें, उन्हें अपने पसंदीदा क्रम में व्यवस्थित करें, और हम उन्हें एक एकल पीडीएफ दस्तावेज़ में मर्ज कर देंगे।`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `क्या मेरी छवियाँ गुणवत्ता खो देंगी?`,
+        "answer": `नहीं, हम आपकी JPG छवियों को पीडीएफ में एम्बेड करते समय उनके मूल रिज़ॉल्यूशन और गुणवत्ता को सुरक्षित रखते हैं।`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `क्या मैं मार्जिन और ओरिएंटेशन समायोजित कर सकता हूँ?`,
+        "answer": `हां, हमारा टूल आपको रूपांतरण से पहले पेज ओरिएंटेशन (पोर्ट्रेट या लैंडस्केप) और मार्जिन आकार को अनुकूलित करने की अनुमति देता है।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `पीडीएफ से पावरपॉइंट`,
+    "desc": `अपनी पीडीएफ फाइलों को संपादित करने में आसान पीपीटी और पीपीटीएक्स स्लाइडशो में बदलें।`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `वह पीडीएफ अपलोड करें जिसे आप प्रेजेंटेशन में बदलना चाहते हैं।`,
+      `हमारा एआई इंजन स्लाइडों का विश्लेषण करेगा और उन्हें संपादन योग्य पीपीटीएक्स प्रारूपों में परिवर्तित करेगा।`,
+      `अपना नया पावरपॉइंट प्रेजेंटेशन डाउनलोड करें.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `क्या मेरे PowerPoint में पाठ संपादन योग्य होगा?`,
+        "answer": `हां, परिणामी पीपीटीएक्स फ़ाइल में सभी पाठ, आकार और छवियां पूरी तरह से संपादन योग्य होंगी।`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `क्या यह स्कैन की गई प्रस्तुतियों के साथ काम करता है?`,
+        "answer": `हाँ, OCR का उपयोग करके, हम स्कैन की गई स्लाइड से टेक्स्ट निकाल सकते हैं और इसे PowerPoint में संपादन योग्य बना सकते हैं।`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `क्या स्लाइड लेआउट संरक्षित है?`,
+        "answer": `हमारी उन्नत रूपांतरण तकनीक यह सुनिश्चित करती है कि आपके मूल पीडीएफ का लेआउट पावरपॉइंट में यथासंभव बारीकी से मेल खाता हो।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `पीडीएफ के लिए पावरपॉइंट`,
+    "desc": `पीपीटी और पीपीटीएक्स स्लाइडशो को पीडीएफ में परिवर्तित करके देखना आसान बनाएं।`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `अपनी पीपीटी या पीपीटीएक्स फ़ाइल चुनें।`,
+      `टूल तुरंत आपकी स्लाइड्स को एक सुरक्षित, सार्वभौमिक पीडीएफ प्रारूप में बदल देगा।`,
+      `अपनी प्रस्तुति को पीडीएफ के रूप में डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `PowerPoint को PDF में क्यों बदलें?`,
+        "answer": `कनवर्ट करना यह सुनिश्चित करता है कि आपकी प्रस्तुति किसी भी डिवाइस पर समान दिखे, किसी भिन्न कंप्यूटर पर प्रस्तुत करते समय गायब फ़ॉन्ट या टूटे हुए लेआउट को रोका जा सके।`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `क्या मेरे स्लाइड ट्रांज़िशन सहेजे गए हैं?`,
+        "answer": `नहीं, पीडीएफ एक स्थिर दस्तावेज़ प्रारूप है, इसलिए एनिमेशन और स्लाइड ट्रांज़िशन को आगे नहीं बढ़ाया जाएगा।`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `क्या स्पीकर नोट्स शामिल हैं?`,
+        "answer": `वर्तमान में, हमारा टूल मुख्य स्लाइड विज़ुअल को परिवर्तित करता है।स्पीकर नोट्स मानक पीडीएफ आउटपुट में शामिल नहीं हैं।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `पीडीएफ से एचटीएमएल`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `अपने पीडीएफ दस्तावेजों को एचटीएमएल वेब पेजों में पूरी तरह से परिवर्तित करें।`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `अपनी पीडीएफ फाइल अपलोड करें.`,
+      `हमारा सिस्टम दस्तावेज़ को वेब-तैयार HTML, CSS और छवियों में परिवर्तित कर देगा।`,
+      `अपने नए वेबपेज वाली ज़िप फ़ाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `क्या HTML उत्तरदायी होगा?`,
+        "answer": `सटीकता के लिए पूर्ण स्थिति बनाए रखते हुए HTML आपके पीडीएफ के स्थिर लेआउट से निकटता से मेल खाएगा।`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `क्या छवियाँ स्वचालित रूप से निकाली जाती हैं?`,
+        "answer": `हां, सभी एम्बेडेड छवियां निकाली गई हैं और जेनरेट किए गए HTML कोड में उचित रूप से संदर्भित हैं।`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `क्या इसका उपयोग करने के लिए मुझे कोडिंग कौशल की आवश्यकता है?`,
+        "answer": `बिल्कुल नहीं।आपको उपयोग के लिए तैयार HTML फ़ाइल प्राप्त होगी जिसे आप तुरंत किसी भी वेब ब्राउज़र में खोल सकते हैं।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML से पीडीएफ`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `एचटीएमएल में वेबपेजों को सीधे यूआरएल या फ़ाइल से पीडीएफ प्रारूप में कनवर्ट करें।`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `अपनी HTML फ़ाइल अपलोड करें या एक वेबपेज URL दर्ज करें।`,
+      `हमारा रेंडरिंग इंजन पेज को लोड करेगा, स्टाइल लागू करेगा और इसे पीडीएफ दस्तावेज़ के रूप में कैप्चर करेगा।`,
+      `अपना पूर्णतः स्वरूपित पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `क्या मैं लाइव यूआरएल को पीडीएफ में बदल सकता हूँ?`,
+        "answer": `हां, आप एक यूआरएल इनपुट कर सकते हैं, और हमारा टूल लाइव वेबपेज लाएगा और इसे उच्च गुणवत्ता वाले पीडीएफ में बदल देगा।`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `क्या सीएसएस शैलियाँ लागू हैं?`,
+        "answer": `बिल्कुल।हमारा रेंडरिंग इंजन पूरी तरह से सीएसएस का समर्थन करता है, यह सुनिश्चित करते हुए कि पीडीएफ बिल्कुल लाइव वेबपेज जैसा दिखता है।`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `जावास्क्रिप्ट भारी पृष्ठों के बारे में क्या?`,
+        "answer": `हमारा टूल पृष्ठ कैप्चर करने से पहले जावास्क्रिप्ट निष्पादित करता है, यह सुनिश्चित करता है कि अंतिम पीडीएफ में गतिशील सामग्री ठीक से प्रस्तुत की गई है।`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `पाठ के लिए पीडीएफ`,
+    "desc": `संपादन योग्य TXT दस्तावेज़ बनाने के लिए अपनी पीडीएफ फाइलों से टेक्स्ट निकालें।`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `अपना पीडीएफ दस्तावेज़ अपलोड करें.`,
+      `हमारा सिस्टम फ़ॉर्मेटिंग हटा देगा और शुद्ध, सादा पाठ निकाल देगा।`,
+      `अपनी कच्ची TXT फ़ाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `क्या यह छवियों से पाठ निकालता है?`,
+        "answer": `हां, यदि पीडीएफ में स्कैन की गई छवियां हैं, तो हमारी ओसीआर तकनीक पाठ को पढ़ेगी और इसे TXT फ़ाइल में शामिल करेगी।`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `क्या फ़ॉर्मेटिंग रखी गई है?`,
+        "answer": `नहीं, यह टूल विशेष रूप से आपको कच्चा, बिना स्टाइल वाला सादा पाठ प्रदान करने के लिए सभी फ़ॉर्मेटिंग को हटा देता है।`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `क्या मेरा डेटा सुरक्षित है?`,
+        "answer": `हाँ, सभी फ़ाइलें प्रसंस्करण के दौरान एन्क्रिप्ट की जाती हैं और 2 घंटे के भीतर स्वचालित रूप से हटा दी जाती हैं।`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `पीडीएफ मर्ज करें`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `उपलब्ध सबसे आसान पीडीएफ विलय के साथ पीडीएफ को अपने इच्छित क्रम में संयोजित करें।`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `अपने डिवाइस से एकाधिक पीडीएफ फाइलों का चयन करें।`,
+      `फ़ाइलों को अपने इच्छित क्रम में व्यवस्थित करने के लिए थंबनेल खींचें और छोड़ें।`,
+      `'मर्ज' पर क्लिक करें और अपना संयुक्त, एकल पीडीएफ दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `पीडीएफ मर्जर क्या है?`,
+        "answer": `पीडीएफ विलय एक उपयोगिता है जो कई पीडीएफ फाइलों को एक एकल, निरंतर दस्तावेज़ में जोड़ती है।निःशुल्क उपयोगकर्ता एक बार में अधिकतम 20 फ़ाइलें मर्ज कर सकते हैं।प्रो उपयोगकर्ता असीमित संख्या में दस्तावेज़ मर्ज कर सकते हैं।`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `क्या मैं फ़ाइलों का क्रम बदल सकता हूँ?`,
+        "answer": `हाँ!अपलोड करने के बाद, बस फ़ाइल थंबनेल को खींचें और छोड़ें ताकि आप उन्हें ठीक उसी तरह से व्यवस्थित कर सकें जैसा आप चाहते हैं।`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `क्या विलय से गुणवत्ता कम हो जाती है?`,
+        "answer": `बिल्कुल नहीं।विलय प्रक्रिया आपके सभी दस्तावेज़ों की मूल गुणवत्ता और स्वरूपण को सुरक्षित रखती है।`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `पीडीएफ को विभाजित करें`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `स्वतंत्र पीडीएफ फाइलों में आसान रूपांतरण के लिए एक पेज या पूरे सेट को अलग करें।`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `वह पीडीएफ अपलोड करें जिसे आप विभाजित करना चाहते हैं।`,
+      `चुनें कि क्या विशिष्ट पृष्ठ निकालना है या दस्तावेज़ को निश्चित श्रेणियों में विभाजित करना है।`,
+      `अपनी नई, अलग की गई पीडीएफ फाइलों को ज़िप संग्रह के रूप में डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `क्या मैं एक बड़ी पीडीएफ से सिर्फ एक पेज निकाल सकता हूँ?`,
+        "answer": `हाँ, आप निकालने के लिए आसानी से एक पृष्ठ संख्या या एक कस्टम श्रेणी (उदाहरण के लिए, पृष्ठ 4-7) निर्दिष्ट कर सकते हैं।`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `क्या विभाजित फ़ाइलें मूल गुणवत्ता बरकरार रखेंगी?`,
+        "answer": `हां, अलग-अलग पेज रिज़ॉल्यूशन या टेक्स्ट गुणवत्ता में किसी भी हानि के बिना त्रुटिपूर्ण ढंग से निकाले जाते हैं।`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `मैं एकाधिक विभाजित फ़ाइलें कैसे डाउनलोड करूं?`,
+        "answer": `जब आप किसी दस्तावेज़ को कई भागों में विभाजित करते हैं, तो हम उन्हें आसानी से डाउनलोड करने के लिए एक ही ज़िप फ़ाइल में पैकेज कर देंगे।`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `पीडीएफ घुमाएँ`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `अपनी पीडीएफ़ को अपनी आवश्यकतानुसार घुमाएँ।आप एक साथ कई पीडीएफ़ भी घुमा सकते हैं।`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `अपना पीडीएफ दस्तावेज़ अपलोड करें.`,
+      `जिन पृष्ठों को आप घुमाना चाहते हैं उन पर होवर करें और घुमाएँ आइकन पर क्लिक करें, या सभी पृष्ठों को एक साथ घुमाएँ।`,
+      `अप्लाई पर क्लिक करें और अपनी स्थायी रूप से घुमाई गई पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `क्या मैं केवल विशिष्ट पृष्ठ ही घुमा सकता हूँ?`,
+        "answer": `हां, आप अलग-अलग पेजों का चयन कर सकते हैं और बाकी दस्तावेज़ को प्रभावित किए बिना उन्हें 90, 180 या 270 डिग्री तक घुमा सकते हैं।`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `क्या घूर्णन स्थायी है?`,
+        "answer": `हां, एक बार जब आप नई फ़ाइल डाउनलोड कर लेते हैं, तो ओरिएंटेशन परिवर्तन पीडीएफ के मेटाडेटा में स्थायी रूप से सहेजे जाते हैं।`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `क्या गोपनीय दस्तावेज़ अपलोड करना सुरक्षित है?`,
+        "answer": `बिल्कुल।सभी अपलोड HTTPS के माध्यम से एन्क्रिप्ट किए जाते हैं और प्रसंस्करण के 2 घंटे बाद हमारे सर्वर से मिटा दिए जाते हैं।`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `पन्ने हटाएँ`,
+    "desc": `एक फ्लैश में पीडीएफ दस्तावेज़ से पेज हटाएं।`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `अपनी पीडीएफ फाइल अपलोड करें.`,
+      `उन पृष्ठों का चयन करें जिन्हें आप उनके थंबनेल पर क्लिक करके हटाना चाहते हैं।`,
+      `'पेज हटाएं' पर क्लिक करें और अपना नया सुव्यवस्थित दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `मुझे कैसे पता चलेगा कि कौन से पेज हटाने हैं?`,
+        "answer": `हमारा टूल प्रत्येक पृष्ठ के उच्च-गुणवत्ता वाले थंबनेल बनाता है, जिससे आप उन सटीक पृष्ठों को दृष्टिगत रूप से पहचान और चुन सकते हैं जिन्हें आप हटाना चाहते हैं।`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `क्या मैं एक साथ अनेक पृष्ठ हटा सकता हूँ?`,
+        "answer": `हां, आप एक साथ कई पेज हटाने के लिए कई थंबनेल पर क्लिक कर सकते हैं या पेज रेंज टाइप कर सकते हैं।`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `क्या शेष दस्तावेज़ प्रभावित हुआ है?`,
+        "answer": `नहीं, शेष सभी पृष्ठ अपना मूल स्वरूपण, गुणवत्ता और रिज़ॉल्यूशन बनाए रखेंगे।`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `पृष्ठों को पुनः व्यवस्थित करें`,
+    "desc": `ड्रैग और ड्रॉप के माध्यम से अपने पीडीएफ दस्तावेज़ का पृष्ठ क्रम बदलें।`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `अपना पीडीएफ दस्तावेज़ अपलोड करें.`,
+      `बस पेज थंबनेल का क्रम बदलने के लिए उन्हें खींचें और छोड़ें।`,
+      `एक बार व्यवस्थित हो जाने पर, परिवर्तन लागू करें और अपना पुनर्गठित पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `क्या किसी बड़े दस्तावेज़ को पुनः व्यवस्थित करना आसान है?`,
+        "answer": `हां, हमारा सहज ज्ञान युक्त ड्रैग-एंड-ड्रॉप इंटरफ़ेस आपको बड़े दस्तावेज़ों में भी पृष्ठों को तेज़ी से इधर-उधर ले जाने की अनुमति देता है।`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `क्या मैं कोई इंटरैक्टिव तत्व खो दूंगा?`,
+        "answer": `अधिकांश मानक इंटरैक्टिव तत्व संरक्षित हैं, हालांकि कई पृष्ठों को जोड़ने वाले जटिल फॉर्म फ़ील्ड अलग-अलग व्यवहार कर सकते हैं।`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `क्या मैं सहेजने से पहले किसी कदम को पूर्ववत कर सकता हूँ?`,
+        "answer": `हां, अंतिम प्रक्रिया बटन पर क्लिक करने से पहले आप जितनी बार चाहें पृष्ठों को पुनर्व्यवस्थित कर सकते हैं।`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `रिक्त पृष्ठ जोड़ें`,
+    "desc": `अपने पीडीएफ दस्तावेज़ में कहीं भी एक खाली पृष्ठ डालें।`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `अपनी पीडीएफ फाइल अपलोड करें.`,
+      `ठीक उसी स्थान का चयन करें जहाँ आप एक नया रिक्त पृष्ठ सम्मिलित करना चाहते हैं।`,
+      `परिवर्तन लागू करें और अपना अद्यतन पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `मुझे एक खाली पृष्ठ जोड़ने की आवश्यकता क्यों होगी?`,
+        "answer": `एक खाली पृष्ठ जोड़ना दो तरफा दस्तावेजों को प्रिंट करने, भविष्य के नोट्स डालने, या पेजिनेशन फ़ॉर्मेटिंग को सही करने के लिए उपयोगी है।`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `क्या मैं अनेक रिक्त पृष्ठ जोड़ सकता हूँ?`,
+        "answer": `हाँ, आप दस्तावेज़ में कहीं भी, जितने चाहें उतने रिक्त पृष्ठ सम्मिलित कर सकते हैं।`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `क्या रिक्त पृष्ठ दस्तावेज़ के आकार से मेल खाएगा?`,
+        "answer": `हां, नया रिक्त पृष्ठ स्वचालित रूप से आसपास के पृष्ठों के आयाम और अभिविन्यास से मेल खाएगा।`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `पीडीएफ को कंप्रेस करें`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `अधिकतम पीडीएफ गुणवत्ता के लिए अनुकूलन करते हुए फ़ाइल का आकार कम करें।`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `अपनी भारी पीडीएफ फाइल अपलोड करें।`,
+      `अपना वांछित संपीड़न स्तर चुनें (अत्यधिक, अनुशंसित, या कम संपीड़न)।`,
+      `अपनी अनुकूलित, बहुत छोटी पीडीएफ फाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `क्या संपीड़न मेरे पीडीएफ की गुणवत्ता को बर्बाद कर देगा?`,
+        "answer": `हमारे उन्नत अनुकूलन एल्गोरिदम छवियों को संपीड़ित करके और अनावश्यक डेटा को हटाकर फ़ाइल आकार को कम करते हैं जबकि पाठ को तेज और छवियों को दृश्यमान रूप से स्पष्ट रखते हैं।`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `मुझे कौन सा संपीड़न स्तर चुनना चाहिए?`,
+        "answer": `हम सही संतुलन के लिए 'अनुशंसित' का सुझाव देते हैं।'एक्सट्रीम' का उपयोग केवल तभी करें जब आपको ईमेल अनुलग्नकों के लिए यथासंभव न्यूनतम फ़ाइल आकार की तत्काल आवश्यकता हो।`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `क्या मैं उस पीडीएफ को संपीड़ित कर सकता हूं जो पहले से ही छोटा है?`,
+        "answer": `आप कर सकते हैं, लेकिन फ़ाइल आकार में कमी न्यूनतम होगी क्योंकि डेटा संभवतः पहले से ही अनुकूलित है।`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `पीडीएफ की मरम्मत करें`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `क्षतिग्रस्त पीडीएफ की मरम्मत करें और भ्रष्ट फाइलों से डेटा पुनर्प्राप्त करें।`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `अपनी दूषित या क्षतिग्रस्त पीडीएफ फाइल अपलोड करें।`,
+      `हमारा सिस्टम फ़ाइल संरचना का विश्लेषण करेगा और टूटे हुए डेटा को फिर से बनाने का प्रयास करेगा।`,
+      `मरम्मत किया गया पीडीएफ दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `क्या सभी दूषित PDF को ठीक किया जा सकता है?`,
+        "answer": `हालाँकि हमारा टूल संरचनात्मक त्रुटियों और टूटे हुए हेडर को ठीक करने में अत्यधिक प्रभावी है, लेकिन गायब कच्चे डेटा वाली गंभीर रूप से क्षतिग्रस्त फ़ाइलें पूरी तरह से पुनर्प्राप्त करने योग्य नहीं हो सकती हैं।`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `मरम्मत में कितना समय लगता है?`,
+        "answer": `क्षति की जटिलता के आधार पर अधिकांश फ़ाइलों का विश्लेषण और मरम्मत कुछ ही सेकंड में कर ली जाती है।`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `क्या अंदर का डेटा सुरक्षित है?`,
+        "answer": `हाँ।हम क्लाउड में सुरक्षित रूप से मरम्मत की प्रक्रिया करते हैं, और आपका दस्तावेज़ कुछ ही समय बाद स्थायी रूप से हटा दिया जाता है।`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `ओसीआर पीडीएफ`,
+    "desc": `स्कैन की गई पीडीएफ़ में टेक्स्ट को चयन योग्य, खोजने योग्य और संपादन योग्य बनाएं।`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `अपना स्कैन किया हुआ पीडीएफ दस्तावेज़ अपलोड करें।`,
+      `बेहतर सटीकता के लिए दस्तावेज़ के अंदर पाठ की भाषा का चयन करें।`,
+      `अपना नया, पूरी तरह से खोजने योग्य और चयन योग्य पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `ओसीआर क्या है?`,
+        "answer": `OCR का मतलब ऑप्टिकल कैरेक्टर रिकॉग्निशन है।यह एक ऐसी तकनीक है जो छवियों या स्कैन किए गए दस्तावेज़ों के अंदर पाठ को पढ़ती है और इसे चयन योग्य, खोजने योग्य कंप्यूटर टेक्स्ट में परिवर्तित करती है।`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `क्या ओसीआर हस्तलिखित पाठ पर काम करता है?`,
+        "answer": `हमारा OCR इंजन मुद्रित पाठ के लिए अत्यधिक सटीक है।हस्तलिखित पाठ सुपाठ्यता के आधार पर अलग-अलग परिणाम दे सकता है।`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `क्या मैं OCR'd दस्तावेज़ से टेक्स्ट कॉपी कर सकता हूँ?`,
+        "answer": `बिल्कुल।एक बार संसाधित होने के बाद, आप सामान्य दस्तावेज़ की तरह सीधे पीडीएफ से टेक्स्ट को हाइलाइट, कॉपी और पेस्ट कर सकते हैं।`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `पीडीएफ को समतल करें`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `सभी परतों, रूपों और एनोटेशन को एक गैर-संपादन योग्य परत में मर्ज करें।`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `फॉर्म, परतें या एनोटेशन वाली पीडीएफ अपलोड करें।`,
+      `हमारा सिस्टम सभी दृश्य तत्वों को स्थायी रूप से एक ही सपाट परत में मर्ज कर देगा।`,
+      `चपटी, प्रिंट के लिए तैयार पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `मुझे पीडीएफ़ को फ़्लैट क्यों करना चाहिए?`,
+        "answer": `पीडीएफ को समतल करने से फॉर्म डेटा लॉक हो जाता है, एनोटेशन के आगे संपादन को रोकता है, और यह सुनिश्चित करता है कि दस्तावेज़ ठीक उसी तरह प्रिंट हो जैसा वह स्क्रीन पर दिखाई देता है।`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `क्या एक चपटी पीडीएफ को बिना चपटा किया जा सकता है?`,
+        "answer": `नहीं, चपटा होना एक स्थायी प्रक्रिया है।हम आपके मूल इंटरैक्टिव पीडीएफ का बैकअप रखने की सलाह देते हैं।`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `क्या फ़्लैटनिंग से फ़ाइल का आकार कम हो जाता है?`,
+        "answer": `अक्सर, हाँ.परतों को मर्ज करने और इंटरैक्टिव फॉर्म फ़ील्ड को हटाने से, समग्र संरचना सरल और छोटी हो जाती है।`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `पीडीएफ को सुरक्षित रखें`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `अनधिकृत पहुंच को रोकने के लिए अपने पीडीएफ को पासवर्ड से एन्क्रिप्ट करें।`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `वह पीडीएफ अपलोड करें जिसे आप सुरक्षित करना चाहते हैं।`,
+      `एक मजबूत पासवर्ड टाइप करें और इसकी पुष्टि करें।`,
+      `अपनी नई एन्क्रिप्टेड पीडीएफ फाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `किस प्रकार का एन्क्रिप्शन प्रयोग किया जाता है?`,
+        "answer": `हम मजबूत एईएस 256-बिट एन्क्रिप्शन का उपयोग करते हैं, जो अत्यधिक संवेदनशील और गोपनीय दस्तावेजों को सुरक्षित करने के लिए उद्योग मानक है।`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `यदि मैं अपना पासवर्ड भूल जाऊं तो क्या वे लवपीडीएफ मेरा पासवर्ड पुनर्प्राप्त कर सकता है?`,
+        "answer": `नहीं, आपका पासवर्ड हमारे सर्वर पर कभी भी सहेजा नहीं जाता है।यदि आप इसे खो देते हैं, तो दस्तावेज़ को डिक्रिप्ट नहीं किया जा सकता है।कृपया इसे सुरक्षित रखें!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `क्या पीडीएफ को सुरक्षित रखने से मुद्रण रुक जाता है?`,
+        "answer": `हाँ, एन्क्रिप्शन दस्तावेज़ को सही पासवर्ड के बिना खोले, मुद्रित या संपादित होने से रोकता है।`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `पीडीएफ अनलॉक करें`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `पीडीएफ पासवर्ड सुरक्षा हटा दें, जिससे आपको अपनी पीडीएफ को अपनी इच्छानुसार उपयोग करने की आजादी मिलेगी।`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `अपना पासवर्ड-सुरक्षित पीडीएफ अपलोड करें।`,
+      `यदि फ़ाइल में संपादन को प्रतिबंधित करने वाला 'स्वामी पासवर्ड' है, तो हम इसे तुरंत हटा देंगे।यदि इसमें उद्घाटन को प्रतिबंधित करने वाला 'उपयोगकर्ता पासवर्ड' है, तो आपको पहले इसे दर्ज करना होगा।`,
+      `अपनी अनलॉक की गई पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `क्या आप बिना पासवर्ड के पीडीएफ को अनलॉक कर सकते हैं?`,
+        "answer": `हम पासवर्ड की आवश्यकता के बिना 'संपादन/प्रिंट प्रतिबंध' (मालिक पासवर्ड) को आसानी से हटा सकते हैं।हालाँकि, यदि फ़ाइल को खोलने के लिए पासवर्ड (उपयोगकर्ता पासवर्ड) की आवश्यकता है, तो आपको इसे प्रदान करना होगा।`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `क्या पीडीएफ को अनलॉक करना कानूनी है?`,
+        "answer": `आपको केवल उन दस्तावेज़ों से सुरक्षा हटानी चाहिए जिनके पास कानूनी रूप से आपका स्वामित्व है या जिन्हें संशोधित करने की अनुमति आपके पास है।`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `क्या अनलॉक करने से दस्तावेज़ की सामग्री बदल जाएगी?`,
+        "answer": `नहीं, सामग्री, स्वरूपण और गुणवत्ता पूरी तरह से अछूती रहती है।केवल सुरक्षा परत हटाई गई है.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `रिएक्ट पीडीएफ`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `अपनी पीडीएफ़ से संवेदनशील जानकारी या छिपा हुआ डेटा स्थायी रूप से हटा दें।`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `अपनी पीडीएफ फाइल अपलोड करें.`,
+      `संवेदनशील पाठ, छवियों या व्यक्तिगत जानकारी पर ब्लैक बॉक्स बनाएं।`,
+      `डेटा को स्थायी रूप से साफ़ करने के लिए संशोधन लागू करें, फिर फ़ाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `क्या संशोधित पाठ सचमुच चला गया है?`,
+        "answer": `हाँ।केवल पाठ पर काली आकृति बनाने के विपरीत, हमारा रिडक्शन टूल अंतर्निहित पाठ डेटा को स्थायी रूप से हटा देता है ताकि इसे मशीनों द्वारा कॉपी या पढ़ा न जा सके।`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `क्या मैं छवियों को भी संपादित कर सकता हूँ?`,
+        "answer": `बिल्कुल।आप ग्राफ़िक्स और फ़ोटो सहित पृष्ठ के किसी भी क्षेत्र को स्थायी रूप से ब्लैक आउट करने के लिए चुन सकते हैं।`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `क्या रिडक्शन प्रतिवर्ती है?`,
+        "answer": `नहीं, आपकी सुरक्षा के लिए, रिडक्शन छिपे हुए डेटा को स्थायी रूप से नष्ट कर देता है।यदि आवश्यक हो तो हमेशा एक असंपादित बैकअप रखें।`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `पीडीएफ पर हस्ताक्षर करें`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `स्वयं हस्ताक्षर करें या दूसरों से इलेक्ट्रॉनिक हस्ताक्षर का अनुरोध करें।`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `हस्ताक्षर की आवश्यकता वाला दस्तावेज़ अपलोड करें.`,
+      `चित्र बनाकर, टाइप करके या छवि अपलोड करके अपना हस्ताक्षर बनाएं।`,
+      `दस्तावेज़ पर अपना हस्ताक्षर करें, लागू करें पर क्लिक करें और इसे डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `क्या इलेक्ट्रॉनिक हस्ताक्षर कानूनी हैं?`,
+        "answer": `हाँ, TheLovePDF के साथ बनाए गए इलेक्ट्रॉनिक हस्ताक्षर अधिकांश देशों और न्यायक्षेत्रों में कानूनी रूप से बाध्यकारी हैं।`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `क्या मैं अपना हस्ताक्षर बाद के लिए सहेज सकता हूँ?`,
+        "answer": `हाँ, यदि आप एक खाता बनाते हैं, तो आप भविष्य में तेज़, 1-क्लिक हस्ताक्षर के लिए अपने हस्ताक्षर सुरक्षित रूप से सहेज सकते हैं।`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `क्या मैं पाठ दिनांक और आद्याक्षर जोड़ सकता हूँ?`,
+        "answer": `बिल्कुल।अपने हस्ताक्षर के साथ, आप दिनांक, आद्याक्षर और कस्टम टेक्स्ट फ़ील्ड को आसानी से खींच और छोड़ सकते हैं।`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `हस्ताक्षर का अनुरोध करें`,
+    "desc": `कानूनी रूप से ऑनलाइन हस्ताक्षरित होने के लिए ग्राहकों को दस्तावेज़ भेजें।`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `जिस पीडीएफ पर आपको हस्ताक्षर करना है उसे अपलोड करें।`,
+      `प्राप्तकर्ताओं के ईमेल पते जोड़ें और उनके लिए हस्ताक्षर फ़ील्ड निर्दिष्ट करें।`,
+      `अनुरोध भेजें.दस्तावेज़ पर ऑनलाइन हस्ताक्षर करने के लिए हम उन्हें एक सुरक्षित लिंक ईमेल करेंगे।`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `क्या प्राप्तकर्ताओं को हस्ताक्षर करने के लिए किसी खाते की आवश्यकता है?`,
+        "answer": `नहीं, प्राप्तकर्ता वे लवपीडीएफ खाता बनाने की आवश्यकता के बिना सीधे अपने ईमेल लिंक से दस्तावेज़ पर सुरक्षित रूप से हस्ताक्षर कर सकते हैं।`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `मुझे कैसे पता चलेगा कि इस पर कब हस्ताक्षर किया गया है?`,
+        "answer": `जैसे ही सभी पक्ष दस्तावेज़ पर हस्ताक्षर करना पूरा कर लेंगे, आपको एक स्वचालित ईमेल सूचना प्राप्त होगी।`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `क्या कोई ऑडिट ट्रेल है?`,
+        "answer": `हां, प्रो उपयोगकर्ताओं को पूर्ण कानूनी अनुपालन के लिए आईपी पते और टाइमस्टैम्प का विवरण देने वाला एक व्यापक ऑडिट ट्रेल प्राप्त होता है।`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `प्रमाणपत्र चिह्न`,
+    "desc": `अपने पीडीएफ में एक क्रिप्टोग्राफ़िक डिजिटल हस्ताक्षर जोड़ें।`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `अपनी पीडीएफ और अपनी डिजिटल प्रमाणपत्र फ़ाइल (.pfx या .p12) अपलोड करें।`,
+      `प्रमाणपत्र पासवर्ड दर्ज करें.`,
+      `क्रिप्टोग्राफ़िक हस्ताक्षर लागू करें और सत्यापित पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `प्रमाणपत्र हस्ताक्षर क्या है?`,
+        "answer": `विज़ुअल इलेक्ट्रॉनिक हस्ताक्षर के विपरीत, एक प्रमाणपत्र हस्ताक्षर दस्तावेज़ पर एक क्रिप्टोग्राफ़िक हैश लागू करता है, गणितीय रूप से इसकी प्रामाणिकता साबित करता है और यह सुनिश्चित करता है कि इसमें कोई बदलाव नहीं किया गया है।`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `क्या आप मेरा प्रमाणपत्र पासवर्ड संग्रहीत करते हैं?`,
+        "answer": `कभी नहीं।आपका पासवर्ड केवल हस्ताक्षर करने के ठीक क्षण के दौरान अस्थायी मेमोरी में रखा जाता है और तुरंत नष्ट कर दिया जाता है।`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `क्या लोग हस्ताक्षर सत्यापित कर सकते हैं?`,
+        "answer": `हां, जब एडोब एक्रोबैट जैसे मानक पीडीएफ रीडर में खोला जाता है, तो एक हरा चेकमार्क दिखाई देगा जो दर्शाता है कि दस्तावेज़ डिजिटल रूप से सत्यापित और अपरिवर्तित है।`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `पीडीएफ के साथ चैट करें`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `अपने पीडीएफ से बात करें.AI का उपयोग करके तुरंत प्रश्न पूछें, सारांश प्राप्त करें और अंतर्दृष्टि निकालें।`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `ऐ` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `अपना लंबा या जटिल पीडीएफ दस्तावेज़ अपलोड करें।`,
+      `चैट बॉक्स में एक प्रश्न टाइप करें, जैसे 'अध्याय 2 का सारांश' या 'मुख्य तर्क क्या है?'`,
+      `हमारा AI तुरंत दस्तावेज़ को पढ़ेगा और आपको सटीक उत्तर प्रदान करेगा।`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `पीडीएफ के साथ चैट कैसे काम करती है?`,
+        "answer": `हम आपके दस्तावेज़ के पाठ को स्कैन करने, उसके संदर्भ को समझने और दस्तावेज़ की सामग्री के आधार पर आपके द्वारा पूछे गए किसी भी प्रश्न का उत्तर देने के लिए उन्नत बड़े भाषा मॉडल (एलएलएम) का उपयोग करते हैं।`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `क्या यह स्कैन किए गए दस्तावेज़ पढ़ सकता है?`,
+        "answer": `यदि दस्तावेज़ पूरी तरह से एक छवि है, तो आपको पहले इसे हमारे OCR टूल के माध्यम से चलाना होगा।यदि इसमें चयन योग्य पाठ है, तो AI इसे तुरंत पढ़ सकता है।`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `क्या मेरे दस्तावेज़ों का उपयोग AI को प्रशिक्षित करने के लिए किया जाता है?`,
+        "answer": `कदापि नहीं।आपकी गोपनीयता हमारी प्राथमिकता है।दस्तावेज़ों को एक सुरक्षित वातावरण में संसाधित किया जाता है और सार्वजनिक एआई मॉडल को प्रशिक्षित करने के लिए कभी भी इसका उपयोग नहीं किया जाता है।`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `पीडीएफ संपादित करें`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `पीडीएफ दस्तावेज़ में टेक्स्ट, चित्र, आकार या फ्रीहैंड एनोटेशन जोड़ें।`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `लोकप्रिय` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `वह पीडीएफ अपलोड करें जिसे आप संशोधित करना चाहते हैं।`,
+      `टेक्स्ट जोड़ने, चित्र सम्मिलित करने, आकृतियाँ बनाने या मौजूदा क्षेत्रों में व्हाइटआउट लागू करने के लिए टूलबार का उपयोग करें।`,
+      `अपने संपादन सहेजें और अद्यतन पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `क्या मैं पीडीएफ में मौजूदा पाठ को बदल सकता हूँ?`,
+        "answer": `वर्तमान में, आप पुराने टेक्स्ट को कवर करने और उसके ऊपर नया टेक्स्ट टाइप करने के लिए 'व्हाइटआउट' टूल का उपयोग कर सकते हैं।मूल पाठ संपादन एक अत्यधिक जटिल सुविधा है जिसे हम सक्रिय रूप से विकसित कर रहे हैं।`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `क्या मैं पीडीएफ में छवियां जोड़ सकता हूं?`,
+        "answer": `हां, आप अपने दस्तावेज़ पर कहीं भी पीएनजी या जेपीजी छवियों को आसानी से अपलोड और स्टाम्प कर सकते हैं।`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `क्या संपादन से दस्तावेज़ की गुणवत्ता कम हो जाती है?`,
+        "answer": `नहीं, हमारा संपादक मूल छवियों या पाठ को दोबारा संपीड़ित किए बिना मौजूदा दस्तावेज़ संरचना के शीर्ष पर आपकी टिप्पणियां जोड़ता है।`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `वॉटरमार्क पीडीएफ`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `कुछ ही सेकंड में अपने पीडीएफ पर एक छवि या टेक्स्ट की मुहर लगा दें।टाइपोग्राफी, पारदर्शिता और स्थिति चुनें।`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `अपनी पीडीएफ फाइल अपलोड करें.`,
+      `अपना वॉटरमार्क टेक्स्ट टाइप करें या लोगो छवि अपलोड करें।अपारदर्शिता, रोटेशन और प्लेसमेंट समायोजित करें।`,
+      `अप्लाई पर क्लिक करें और अपना वॉटरमार्क दस्तावेज़ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `क्या मैं सभी पेजों को एक साथ वॉटरमार्क कर सकता हूँ?`,
+        "answer": `हां, डिफ़ॉल्ट रूप से आपका वॉटरमार्क दस्तावेज़ के प्रत्येक पृष्ठ पर लगातार लागू किया जाएगा।`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `क्या मैं पारदर्शिता समायोजित कर सकता हूँ?`,
+        "answer": `बिल्कुल।आप वॉटरमार्क को बहुत हल्का बना सकते हैं ताकि यह दस्तावेज़ से ध्यान न भटकाए, या अधिकतम दृश्यता के लिए पूरी तरह से अपारदर्शी बना सकते हैं।`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `क्या वॉटरमार्क हटाया जा सकता है?`,
+        "answer": `हम वॉटरमार्क को दस्तावेज़ संरचना में समतल कर देते हैं ताकि इसे हटाना जितना संभव हो उतना कठिन हो सके, यह सुनिश्चित करते हुए कि आपकी बौद्धिक संपदा सुरक्षित है।`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `पीडीएफ फॉर्म`,
+    "desc": `पीडीएफ फॉर्म जल्दी और सटीक रूप से ऑनलाइन भरें।`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `एक इंटरैक्टिव पीडीएफ फॉर्म अपलोड करें।`,
+      `अपनी जानकारी भरने के लिए टेक्स्ट फ़ील्ड, चेकबॉक्स या रेडियो बटन पर क्लिक करें।`,
+      `पूर्ण रूप से भरा हुआ फॉर्म डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `क्या मैं आंशिक रूप से भरा हुआ फॉर्म सहेज सकता हूँ?`,
+        "answer": `यदि आपके पास प्रो खाता है, तो आपके सत्र स्वचालित रूप से सहेजे जाते हैं, जिससे आप बाद में वापस आकर फ़ॉर्म भरना समाप्त कर सकते हैं।`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `क्या यह सभी पीडीएफ फॉर्मों के साथ काम करता है?`,
+        "answer": `हमारा टूल मानक एक्रोफॉर्म का समर्थन करता है, जो 99% इंटरैक्टिव पीडीएफ बनाते हैं।पुराने XFA प्रपत्रों का समर्थन सीमित हो सकता है।`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `क्या मैं फॉर्म भरने के बाद उसे फ़्लैट कर सकता हूँ?`,
+        "answer": `हां, एक बार डाउनलोड होने के बाद, आप डेटा को लॉक करने के लिए इसे हमारे 'फ़्लैटन पीडीएफ' टूल के माध्यम से चला सकते हैं ताकि प्राप्तकर्ता द्वारा इसे बदला न जा सके।`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `पेज नंबर जोड़ें`,
+    "desc": `आसानी से पीडीएफ में पेज नंबर जोड़ें।अपनी स्थिति, आयाम, टाइपोग्राफी चुनें।`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `मुक्त` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `अपना दस्तावेज़ अपलोड करें.`,
+      `स्थिति का चयन करें (उदाहरण के लिए, नीचे-दाएं), फ़ॉन्ट शैली और प्रारंभिक संख्या।`,
+      `नंबरिंग लागू करें और अपना पूर्णतः स्वरूपित पीडीएफ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `क्या मैं कवर पेज छोड़ सकता हूँ?`,
+        "answer": `हाँ!आप यह निर्दिष्ट कर सकते हैं कि नंबरिंग वास्तव में किस पृष्ठ पर शुरू होनी चाहिए, जिससे आप शीर्षक पृष्ठों को साफ रख सकते हैं।`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `क्या मैं प्रारूप को अनुकूलित कर सकता हूँ?`,
+        "answer": `बिल्कुल।आप 'पेज 1', '10 में से 1', या सिर्फ '1' जैसे प्रारूप चुन सकते हैं, और फ़ॉन्ट, आकार और रंग का चयन कर सकते हैं।`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `क्या संरेखण सटीक है?`,
+        "answer": `हां, हमारा टूल यह सुनिश्चित करने के लिए सटीक मार्जिन की गणना करता है कि आपके पेज नंबर हर एक पेज पर पूरी तरह से संरेखित हैं।`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `एनोटेट पीडीएफ`,
+    "desc": `टेक्स्ट को हाइलाइट करें, रेखांकित करें, स्ट्राइकथ्रू करें और टिप्पणियाँ जोड़ें।`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `नया` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `अपना पीडीएफ अपलोड करें.`,
+      `दस्तावेज़ की समीक्षा करने के लिए हाइलाइटर, अंडरलाइन, स्ट्राइकथ्रू और स्टिकी नोट टूल का उपयोग करें।`,
+      `अपनी टीम के साथ साझा करने के लिए एनोटेटेड फ़ाइल डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `क्या मेरी टिप्पणियाँ मानक पाठकों में दिखाई देंगी?`,
+        "answer": `हां, हम मानक पीडीएफ एनोटेशन प्रोटोकॉल का उपयोग करते हैं, जिसका अर्थ है कि आपके हाइलाइट्स और नोट्स एडोब एक्रोबैट, क्रोम और ऐप्पल पूर्वावलोकन में दिखाई देंगे।`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `क्या मैं हाइलाइट रंग बदल सकता हूँ?`,
+        "answer": `हां, आप अपने नोट्स और हाइलाइट्स को रंग-कोड करने के लिए रंगों के विस्तृत पैलेट से चयन कर सकते हैं।`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `क्या किसी एनोटेशन को हटाना आसान है?`,
+        "answer": `बहुत आसान.बस आपके द्वारा बनाए गए किसी भी एनोटेशन पर क्लिक करें और उसे तुरंत हटाने के लिए डिलीट बटन दबाएं।`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `साहित्यिक चोरी की जाँच`,
+    "desc": `अपने दस्तावेज़ की तुलना अरबों वेब पेजों और अकादमिक डेटाबेस से करें।`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `प्रो` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `वह निबंध या दस्तावेज़ अपलोड करें जिसे आप सत्यापित करना चाहते हैं।`,
+      `हमारा AI इंजन मिलान खोजने के लिए अरबों वेब पेजों और अकादमिक डेटाबेस को स्कैन करेगा।`,
+      `किसी भी कॉपी किए गए पाठ को हाइलाइट करते हुए विस्तृत समानता रिपोर्ट की समीक्षा करें।`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `साहित्यिक चोरी जाँचकर्ता कितना सटीक है?`,
+        "answer": `यह अत्यधिक सटीक है.हम एंटरप्राइज़-ग्रेड एआई का उपयोग करते हैं जो ऑनलाइन सामग्री के एक विशाल, लगातार अद्यतन डेटाबेस के विरुद्ध आपके टेक्स्ट को क्रॉस-रेफरेंस करता है।`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `क्या यह ऑफ़लाइन शैक्षणिक पेपरों की जाँच करता है?`,
+        "answer": `यह प्रमुख ओपन-एक्सेस अकादमिक पत्रिकाओं और ऑनलाइन उपलब्ध भारी उद्धृत स्रोतों की जाँच करता है।`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `क्या मेरा दस्तावेज़ डेटाबेस में सहेजा गया है?`,
+        "answer": `नहीं, कुछ विश्वविद्यालयों की प्रणालियों के विपरीत, हम आपके दस्तावेज़ को वैश्विक डेटाबेस में नहीं जोड़ते हैं, यह सुनिश्चित करते हुए कि आपका मूल कार्य पूरी तरह से आपका ही रहेगा।`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `पीडीएफ को सारांशित करें`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `सेकंडों में लंबे दस्तावेज़ों का त्वरित, सटीक सारांश तैयार करें।`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `एआई+नया` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `एक लंबा दस्तावेज़, रिपोर्ट, या पुस्तक अध्याय अपलोड करें।`,
+      `हमारे एआई को मूल अवधारणाओं का विश्लेषण करने देने के लिए 'सारांश' पर क्लिक करें।`,
+      `बुलेट-प्वाइंट सारांश पढ़ें और यदि आवश्यक हो तो इसे डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `क्या यह पूरी किताब का सारांश प्रस्तुत कर सकता है?`,
+        "answer": `एआई अत्यधिक सक्षम है, लेकिन सर्वोत्तम परिणामों और अधिकतम विवरण के लिए, हम एक समय में एक अध्याय या अनुभाग को सारांशित करने की सलाह देते हैं।`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `क्या सारांश में प्रमुख आँकड़े शामिल हैं?`,
+        "answer": `हां, हमारे एलएलएम को महत्वपूर्ण डेटा बिंदुओं, आंकड़ों और प्राथमिक तर्कों को पहचानने और उजागर करने का निर्देश दिया गया है।`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `कौन सी भाषाएँ समर्थित हैं?`,
+        "answer": `सारांश अंग्रेजी में सबसे अच्छा काम करता है, लेकिन यह मूल रूप से 50 से अधिक वैश्विक भाषाओं का समर्थन करता है और समझता है।`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `पीडीएफ का अनुवाद करें`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `मूल स्वरूपण और लेआउट को संरक्षित करते हुए संपूर्ण दस्तावेज़ों का अनुवाद करें।`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `एआई+नया` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `अपना दस्तावेज़ अपलोड करें.`,
+      `मूल भाषा और लक्ष्य भाषा का चयन करें जिसमें आप अनुवाद करना चाहते हैं।`,
+      `नए अनुवादित पीडीएफ को उसके मूल स्वरूपण के साथ डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `क्या अनुवाद के बाद लेआउट टूट जाएगा?`,
+        "answer": `हमारा उन्नत इंजन सटीक लेआउट को संरक्षित करने का प्रयास करता है, हालांकि पाठ विस्तार (उदाहरण के लिए, अंग्रेजी से जर्मन) मामूली, अपरिहार्य दृश्य बदलाव का कारण बन सकता है।`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `अनुवाद कितना सटीक है?`,
+        "answer": `हम एआई द्वारा संचालित अत्याधुनिक न्यूरल मशीन ट्रांसलेशन (एनएमटी) का उपयोग करते हैं, जो कठोर शब्द-दर-शब्द अनुवाद के बजाय अत्यधिक सटीक, संदर्भ-जागरूक अनुवाद प्रदान करता है।`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `क्या मैं स्कैन किए गए दस्तावेज़ों का अनुवाद कर सकता हूँ?`,
+        "answer": `हाँ!यदि आप कोई स्कैन किया हुआ दस्तावेज़ अपलोड करते हैं, तो हमारा सिस्टम अनुवाद करने से पहले पाठ को पढ़ने के लिए स्वचालित रूप से OCR चलाएगा।`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `डेटा निकालें`,
+    "desc": `चालान और प्रपत्रों से तालिकाओं, मूल्यों और संस्थाओं को बुद्धिमानी से निकालें।`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `एआई+नया` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `चालान, रसीदें, या संरचित प्रपत्र अपलोड करें।`,
+      `हमारा AI दिनांक, योग, नाम और पते जैसे प्रमुख क्षेत्रों की पहचान करेगा।`,
+      `निकाले गए डेटा को एक साफ़ CSV या JSON फ़ाइल के रूप में डाउनलोड करें।`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `डेटा निष्कर्षण का उपयोग किस लिए किया जाता है?`,
+        "answer": `यह लेखांकन और प्रशासन के लिए बिल्कुल उपयुक्त है।100 चालानों से डेटा को मैन्युअल रूप से टाइप करने के बजाय, हमारा AI इसे सेकंडों में स्वचालित रूप से टाइप करता है।`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `क्या दस्तावेज़ को किसी विशिष्ट लेआउट की आवश्यकता है?`,
+        "answer": `नहीं!हमारा AI 'कुल राशि' का पता लगाने में काफी बुद्धिमान है, चाहे वह पृष्ठ के ऊपर, नीचे या मध्य में हो।`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `क्या मैं Excel में डेटा निकाल सकता हूँ?`,
+        "answer": `हाँ, निकाले गए डेटा को सीधे CSV फ़ाइल के रूप में निर्यात किया जा सकता है, जो Microsoft Excel या Google शीट में पूरी तरह से खुलती है।`
+      },
     ]
-  }
+  },
 ];

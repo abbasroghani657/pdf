@@ -1,1135 +1,1051 @@
+// Auto-generated translation file for ca
 export const TOOLS_DATA_CA = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF a Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Converteix els teus fitxers PDF en documents DOC i DOCX fàcils d'editar.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Carregueu el vostre document PDF arrossegant-lo a la zona de llançament o fent clic al botó "Selecciona un fitxer".`,
+      `El nostre avançat OCR i motor de conversió començarà a extreure el text, el disseny i el format de manera instantània.`,
+      `Baixeu el document de Word (DOC/DOCX) perfectament convertit, llest per editar.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Què és un convertidor de PDF a Word?`,
+        "answer": `Un convertidor de PDF a Word és una utilitat que extreu text, dissenys i imatges d'un PDF i els recrea com a document de Microsoft Word totalment editable.El nostre motor de conversió premium conserva tipus de lletra, dissenys, taules i imatges perquè el vostre document de Word sembli exactament com el PDF original.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Puc convertir PDF escanejats en documents de Word editables?`,
+        "answer": `Absolutament.La nostra tecnologia OCR (reconeixement òptic de caràcters) integrada detecta automàticament el text escanejat i el fa totalment editable al fitxer DOCX resultant.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `El meu PDF confidencial és segur durant la conversió?`,
+        "answer": `Ens prenem seriosament la privadesa.Els vostres fitxers s'encripten mitjançant SSL de 256 bits durant la transferència i s'eliminen permanentment dels nostres servidors automàticament en 2 hores.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word a PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Feu que els fitxers DOC i DOCX siguin fàcils de llegir convertint-los a PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Seleccioneu el vostre fitxer DOC o DOCX des de l'ordinador o arrossegueu-lo a la pàgina.`,
+      `L'eina bloquejarà instantàniament el format i convertirà el document de Word a un format PDF universal.`,
+      `Descarrega el teu nou PDF.El disseny es veurà idèntic a tots els dispositius.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Per què hauria de convertir Word a PDF?`,
+        "answer": `La conversió a PDF garanteix que la disposició, els tipus de lletra i les imatges del document es vegin exactament iguals en qualsevol dispositiu, evitant errors de format quan es comparteixin amb altres persones.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Es conserven els meus marges i tipus de lletra?`,
+        "answer": `Sí, el nostre convertidor de Word a PDF bloqueja el vostre disseny exacte, inclosos els tipus de lletra personalitzats i la configuració precisa dels marges.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Puc convertir diversos fitxers de Word alhora?`,
+        "answer": `Sí, podeu carregar diversos fitxers DOC/DOCX i els processarem simultàniament per a una conversió d'alta velocitat.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF a Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Extraieu taules i dades dels PDF a fulls de càlcul Excel.Millors resultats amb PDF basats en text.Els PDF escanejats són compatibles amb OCR; la precisió pot variar.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Carregueu el fitxer PDF que conté les taules i les dades que voleu extreure.`,
+      `El nostre sistema escanejarà el document, identificarà les dades tabulars i el formatarà amb precisió en cel·les del full de càlcul.`,
+      `Baixeu el vostre fitxer editable d'Excel (XLSX).`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Les meves taules PDF tindran el format correcte a Excel?`,
+        "answer": `Sí, la nostra eina d'extracció intel·ligent reconeix files i columnes, assegurant-vos que les vostres dades tabulars estiguin ben organitzades en cel·les d'Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Pot extreure dades dels PDF escanejats?`,
+        "answer": `Sí, la nostra tecnologia OCR pot llegir taules a partir d'imatges escanejades i convertir-les en fulls de càlcul d'Excel editables.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Es transmeten les fórmules?`,
+        "answer": `Els PDF no emmagatzemen fórmules, només dades en brut.El fitxer Excel extret contindrà els valors exactes visibles al PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel a PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Feu que els fulls de càlcul EXCEL siguin fàcils de llegir convertint-los a PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Carregueu el vostre full de càlcul Excel (XLS o XLSX).`,
+      `La nostra eina optimitzarà la disposició del full de càlcul per adaptar-se perfectament a les pàgines PDF sense tallar columnes.`,
+      `Descarrega el document PDF finalitzat.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Es tallaran els meus fulls de càlcul amples?`,
+        "answer": `El nostre convertidor escala i forma de manera intel·ligent el vostre full de càlcul per garantir que les columnes s'ajustin de manera lògica a les pàgines PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Converteix tots els fulls de treball?`,
+        "answer": `Sí, tots els fulls de treball actius del vostre fitxer Excel es convertiran en pàgines seqüencials al PDF final.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Les meves dades financeres són segures?`,
+        "answer": `100%.Utilitzem el xifratge d'extrem a extrem i tots els fitxers s'esborren permanentment dels nostres sistemes en 2 hores.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF a JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Converteix cada pàgina PDF en un JPG o extreu totes les imatges contingudes.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Carregueu el document PDF que voleu convertir en imatges.`,
+      `Trieu si voleu extreure imatges incrustades o convertir pàgines PDF senceres en JPG d'alta resolució.`,
+      `Baixeu els JPG individualment o com a fitxer ZIP comprimit.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `La qualitat JPG serà alta?`,
+        "answer": `Sí, extraïm i convertim pàgines en alta resolució, garantint un text nítid i imatges clares als fitxers JPG resultants.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Puc extreure només les imatges del PDF?`,
+        "answer": `Absolutament.Podeu optar per extreure només les fotos incrustades al PDF en lloc de convertir tota la pàgina.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Hi ha un límit a quantes pàgines puc convertir?`,
+        "answer": `Els usuaris gratuïts poden convertir fins a 10 MB de PDF.Els usuaris professionals poden processar fitxers massius de fins a 2 GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG a PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Converteix imatges JPG a PDF en segons.Ajusteu fàcilment l'orientació i els marges.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Seleccioneu una o diverses imatges JPG del vostre dispositiu.`,
+      `Arrossegueu i deixeu anar per reordenar l'ordre, ajustar l'orientació de la pàgina i establir els marges si cal.`,
+      `Feu clic a "Convertir" i descarregueu el vostre document PDF combinat.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Puc combinar diversos JPG en un sol PDF?`,
+        "answer": `Sí, simplement carregueu diverses imatges, organitzeu-les en l'ordre que preferiu i les combinarem en un sol document PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Les meves imatges perdran qualitat?`,
+        "answer": `No, conservem la resolució i la qualitat originals de les vostres imatges JPG quan les incrustem al PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Puc ajustar els marges i l'orientació?`,
+        "answer": `Sí, la nostra eina us permet personalitzar l'orientació de la pàgina (vertical o horitzontal) i les mides dels marges abans de la conversió.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF a PowerPoint`,
+    "desc": `Converteix els teus fitxers PDF en presentacions de diapositives PPT i PPTX fàcils d'editar.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Carregueu el PDF que voleu convertir en una presentació.`,
+      `El nostre motor d'IA analitzarà les diapositives i les convertirà en formats PPTX editables.`,
+      `Descarrega la teva nova presentació de PowerPoint.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `El text del meu PowerPoint serà editable?`,
+        "answer": `Sí, tot el text, les formes i les imatges es podran editar completament al fitxer PPTX resultant.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Funciona amb presentacions escanejades?`,
+        "answer": `Sí, utilitzant OCR, podem extreure text de diapositives escanejades i fer-lo editable a PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Es conserva la disposició de la diapositiva?`,
+        "answer": `La nostra tecnologia de conversió avançada garanteix que el disseny del vostre PDF original coincideixi el més possible amb PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint a PDF`,
+    "desc": `Feu que les presentacions de diapositives PPT i PPTX siguin fàcils de veure convertint-les a PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Seleccioneu el vostre fitxer PPT o PPTX.`,
+      `L'eina convertirà instantàniament les vostres diapositives en un format PDF segur i universal.`,
+      `Descarrega la teva presentació com a PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Per què convertir PowerPoint a PDF?`,
+        "answer": `La conversió garanteix que la presentació sembli idèntica a qualsevol dispositiu, evitant que faltin tipus de lletra o dissenys trencats quan es presenta en un ordinador diferent.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Les meves transicions de diapositives estan desades?`,
+        "answer": `No, el PDF és un format de document estàtic, de manera que les animacions i les transicions de diapositives no es transferiran.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `S'inclouen les notes de l'orador?`,
+        "answer": `Actualment, la nostra eina converteix les imatges principals de la diapositiva.Les notes de l'orador no s'inclouen a la sortida estàndard del PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF a HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Converteix perfectament els teus documents PDF a pàgines web HTML.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Carregueu el vostre fitxer PDF.`,
+      `El nostre sistema convertirà el document en HTML, CSS i imatges preparats per a la web.`,
+      `Baixeu el fitxer ZIP que conté la vostra nova pàgina web.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `L'HTML serà responsiu?`,
+        "answer": `L'HTML coincidirà molt amb el disseny estàtic del vostre PDF, mantenint el posicionament absolut per a la precisió.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Les imatges s'extreuen automàticament?`,
+        "answer": `Sí, totes les imatges incrustades s'extreuen i es fan referència correctament al codi HTML generat.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Necessito habilitats de codificació per utilitzar això?`,
+        "answer": `En absolut.Rebràs un fitxer HTML llest per utilitzar que pots obrir a l'instant en qualsevol navegador web.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML a PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Converteix pàgines web en format HTML a PDF directament des d'URL o fitxer.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Carregueu el vostre fitxer HTML o introduïu l'URL d'una pàgina web.`,
+      `El nostre motor de renderització carregarà la pàgina, aplicarà estils i la capturarà com a document PDF.`,
+      `Descarrega el teu PDF perfectament format.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Puc convertir URL en directe a PDF?`,
+        "answer": `Sí, podeu introduir un URL i la nostra eina recuperarà la pàgina web en directe i la convertirà en un PDF d'alta qualitat.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `S'apliquen estils CSS?`,
+        "answer": `Absolutament.El nostre motor de renderització és totalment compatible amb CSS, de manera que el PDF s'assembla exactament a la pàgina web en directe.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Què passa amb les pàgines pesades de JavaScript?`,
+        "answer": `La nostra eina executa JavaScript abans de capturar la pàgina, assegurant-se que el contingut dinàmic es representa correctament al PDF final.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF a text`,
+    "desc": `Extreu text dels teus fitxers PDF per crear documents TXT editables.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Carregueu el vostre document PDF.`,
+      `El nostre sistema eliminarà el format i extreu text pur i senzill.`,
+      `Baixeu el vostre fitxer TXT en brut.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Extreu text de les imatges?`,
+        "answer": `Sí, si el PDF conté imatges escanejades, la nostra tecnologia OCR llegirà el text i l'inclourà al fitxer TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Es manté el format?`,
+        "answer": `No, aquesta eina elimina específicament tot el format per oferir-vos text sense estil i sense estil.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Les meves dades són segures?`,
+        "answer": `Sí, tots els fitxers es xifren durant el processament i s'eliminen automàticament en 2 hores.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Combina PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Combina els PDF en l'ordre que vulguis amb la fusió de PDF més fàcil disponible.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Seleccioneu diversos fitxers PDF del vostre dispositiu.`,
+      `Arrossegueu i deixeu anar les miniatures per organitzar els fitxers en l'ordre desitjat.`,
+      `Feu clic a "Combina" i descarregueu el vostre document PDF únic i combinat.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Què és una fusió de PDF?`,
+        "answer": `Una fusió de PDF és una utilitat que combina diversos fitxers PDF en un sol document continu.Els usuaris gratuïts poden combinar fins a 20 fitxers alhora.Els usuaris professionals poden combinar un nombre il·limitat de documents.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Puc canviar l'ordre dels fitxers?`,
+        "answer": `Sí!Després de pujar, arrossegueu i deixeu anar les miniatures dels fitxers per reordenar-les exactament com voleu.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `La fusió redueix la qualitat?`,
+        "answer": `En absolut.El procés de fusió conserva la qualitat i el format originals de tots els vostres documents.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `PDF dividit`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Separeu una pàgina o un conjunt sencer per convertir-los fàcilment en fitxers PDF independents.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Carregueu el PDF que voleu dividir.`,
+      `Trieu si voleu extreure pàgines específiques o dividir el document en intervals fixos.`,
+      `Baixeu els vostres fitxers PDF nous separats com a arxiu ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Puc extreure només una pàgina d'un PDF gran?`,
+        "answer": `Sí, podeu especificar fàcilment un número de pàgina únic o un rang personalitzat (p. ex., pàgines 4-7) per extreure.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Els fitxers dividits conservaran la qualitat original?`,
+        "answer": `Sí, les pàgines individuals s'extreuen perfectament sense cap pèrdua de resolució o qualitat del text.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Com puc baixar diversos fitxers dividits?`,
+        "answer": `Quan dividiu un document en diverses parts, les empaquetarem còmodament en un únic fitxer ZIP per poder descarregar-lo fàcilment.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Gira PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Gireu els vostres PDF com els necessiteu.Fins i tot podeu girar diversos PDF alhora.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Carregueu el vostre document PDF.`,
+      `Passeu el cursor per sobre de les pàgines que voleu girar i feu clic a la icona de rotació o gireu totes les pàgines alhora.`,
+      `Fes clic a Aplica i baixa el teu PDF girat permanentment.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Puc girar només pàgines específiques?`,
+        "answer": `Sí, podeu seleccionar pàgines individuals i girar-les 90, 180 o 270 graus sense afectar la resta del document.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `La rotació és permanent?`,
+        "answer": `Sí, un cop baixeu el fitxer nou, els canvis d'orientació es desaran permanentment a les metadades del PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `És segur penjar documents confidencials?`,
+        "answer": `Absolutament.Totes les càrregues s'encripten mitjançant HTTPS i s'esborren dels nostres servidors 2 hores després del processament.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Suprimeix pàgines`,
+    "desc": `Elimina pàgines d'un document PDF en un instant.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Carregueu el vostre fitxer PDF.`,
+      `Seleccioneu les pàgines que voleu eliminar fent clic a les seves miniatures.`,
+      `Feu clic a "Suprimeix pàgines" i descarregueu el vostre document simplificat recentment.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Com sé quines pàgines he d'esborrar?`,
+        "answer": `La nostra eina genera miniatures d'alta qualitat de cada pàgina, la qual cosa us permet identificar i seleccionar visualment les pàgines exactes que voleu eliminar.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Puc suprimir diverses pàgines alhora?`,
+        "answer": `Sí, podeu fer clic a diverses miniatures o escriure un interval de pàgines per eliminar diverses pàgines simultàniament.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `La resta del document està afectat?`,
+        "answer": `No, totes les pàgines restants mantindran el format, la qualitat i la resolució originals.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Reordena les pàgines`,
+    "desc": `Canvieu l'ordre de les pàgines del vostre document PDF arrossegant i deixant anar.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Carregueu el vostre document PDF.`,
+      `Simplement arrossegueu i deixeu anar les miniatures de la pàgina per canviar-ne la seqüència.`,
+      `Un cop organitzat, apliqueu els canvis i descarregueu el vostre PDF reorganitzat.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `És fàcil reordenar un document gran?`,
+        "answer": `Sí, la nostra interfície intuïtiva d'arrossegar i deixar anar us permet moure pàgines ràpidament, fins i tot en documents grans.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Perdré algun element interactiu?`,
+        "answer": `La majoria dels elements interactius estàndard es conserven, tot i que els camps de formulari complexos que connecten diverses pàgines poden comportar-se de manera diferent.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Puc desfer un moviment abans de desar-lo?`,
+        "answer": `Sí, podeu reorganitzar les pàgines tantes vegades com vulgueu abans de fer clic al botó del procés final.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Afegeix una pàgina en blanc`,
+    "desc": `Inseriu una pàgina en blanc a qualsevol lloc del vostre document PDF.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Carregueu el vostre fitxer PDF.`,
+      `Seleccioneu la ubicació exacta on voleu inserir una pàgina en blanc nova.`,
+      `Apliqueu els canvis i descarregueu el vostre PDF actualitzat.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Per què hauria d'afegir una pàgina en blanc?`,
+        "answer": `Afegir una pàgina en blanc és útil per imprimir documents a doble cara, inserir notes futures o corregir el format de la paginació.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Puc afegir diverses pàgines en blanc?`,
+        "answer": `Sí, podeu inserir tantes pàgines en blanc com necessiteu, a qualsevol part del document.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `La pàgina en blanc coincidirà amb la mida del document?`,
+        "answer": `Sí, la nova pàgina en blanc coincidirà automàticament amb les dimensions i l'orientació de les pàgines circumdants.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Comprimir PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Reduïu la mida del fitxer alhora que optimitzeu per obtenir la màxima qualitat de PDF.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Carregueu el vostre fitxer PDF voluminós.`,
+      `Trieu el nivell de compressió desitjat (compressió extrema, recomanada o menys).`,
+      `Baixeu el vostre fitxer PDF optimitzat i molt més petit.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `La compressió arruïnarà la qualitat del meu PDF?`,
+        "answer": `Els nostres algorismes d'optimització avançats redueixen la mida dels fitxers comprimint imatges i eliminant dades redundants alhora que mantenen el text nítid i les imatges visualment clares.`
       },
-      {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
-      },
-      {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Reparar PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Repareu un PDF danyat i recupereu les dades dels fitxers corruptes.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Carregueu el vostre fitxer PDF danyat o danyat.`,
+      `El nostre sistema analitzarà l'estructura del fitxer i intentarà reconstruir les dades trencades.`,
+      `Descarrega el document PDF reparat.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Es poden arreglar tots els PDF danyats?`,
+        "answer": `Tot i que la nostra eina és molt eficaç per solucionar errors estructurals i capçaleres trencades, és possible que els fitxers molt danyats amb dades en brut que falten no es puguin recuperar completament.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Quant de temps triga la reparació?`,
+        "answer": `La majoria dels fitxers s'analitzen i es reparen en pocs segons, depenent de la complexitat del dany.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Les dades dins són segures?`,
+        "answer": `Sí.Processem la reparació de manera segura al núvol i el vostre document s'eliminarà permanentment poc després.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Feu que el text dels PDF escanejats sigui seleccionable, cercable i editable.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `What is OCR?`,
+        "answer": `OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Does OCR work on handwritten text?`,
+        "answer": `Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Can I copy text from the OCR'd document?`,
+        "answer": `Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Aplanar PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Combina totes les capes, formularis i anotacions en una única capa no editable.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Carregueu el PDF que conté formularis, capes o anotacions.`,
+      `El nostre sistema fusionarà permanentment tots els elements visuals en una sola capa plana.`,
+      `Descarrega el PDF aplanat i llest per imprimir.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Per què hauria d'aplanar un PDF?`,
+        "answer": `L'aplanament d'un PDF bloqueja les dades del formulari, impedeix l'edició posterior de les anotacions i garanteix que el document s'imprimeixi exactament tal com apareix a la pantalla.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Es pot desaplanar un PDF aplanat?`,
+        "answer": `No, l'aplanament és un procés permanent.Us recomanem que feu una còpia de seguretat del vostre PDF interactiu original.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `L'aplanament redueix la mida del fitxer?`,
+        "answer": `Sovint, sí.En combinar capes i eliminar camps de formulari interactius, l'estructura general es fa més senzilla i petita.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Protegeix PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Xifra el teu PDF amb una contrasenya per evitar l'accés no autoritzat.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Carregueu el PDF que voleu assegurar.`,
+      `Escriviu una contrasenya segura i confirmeu-la.`,
+      `Baixeu el vostre nou fitxer PDF xifrat.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Quin tipus de xifratge s'utilitza?`,
+        "answer": `Utilitzem un xifratge robust AES de 256 bits, que és l'estàndard del sector per protegir documents molt sensibles i confidencials.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Pot TheyLovePDF recuperar la meva contrasenya si l'oblido?`,
+        "answer": `No. La vostra contrasenya mai es desa als nostres servidors.Si el perd, el document no es pot desxifrar.Si us plau, mantingueu-lo segur!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Protegir un PDF impedeix la impressió?`,
+        "answer": `Sí, el xifratge impedeix que el document s'obri, s'imprimeixi o s'editi sense la contrasenya correcta.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Desbloqueja PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Elimineu la seguretat de la contrasenya de PDF, donant-vos la llibertat d'utilitzar els vostres PDF com vulgueu.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Carregueu el vostre PDF protegit amb contrasenya.`,
+      `Si el fitxer té una "contrasenya del propietari" que restringeix les edicions, l'eliminarem a l'instant.Si té una "contrasenya d'usuari" que restringeix l'obertura, primer l'has d'introduir.`,
+      `Descarrega el teu PDF desbloquejat.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Es pot desbloquejar un PDF sense la contrasenya?`,
+        "answer": `Podem eliminar fàcilment les "restriccions d'edició/impressió" (contrasenyes del propietari) sense necessitat de la contrasenya.Tanmateix, si el fitxer requereix una contrasenya només per obrir-lo (contrasenya d'usuari), l'heu de proporcionar.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `És legal desbloquejar un PDF?`,
+        "answer": `Només hauríeu d'eliminar la seguretat dels documents que legalment teniu o que teniu permís per modificar-los.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `El desbloqueig canviarà el contingut del document?`,
+        "answer": `No, el contingut, el format i la qualitat romanen completament intactes.Només s'elimina la capa de seguretat.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Redacta PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Elimina permanentment la informació sensible o les dades ocultes dels teus PDF.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Carregueu el vostre fitxer PDF.`,
+      `Dibuixa requadres negres sobre el text sensible, les imatges o la informació personal.`,
+      `Apliqueu les redaccions per netejar permanentment les dades i, a continuació, baixeu el fitxer.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `El text redactat ha desaparegut realment?`,
+        "answer": `Sí.A diferència de dibuixar una forma negra sobre el text, la nostra eina de redacció elimina permanentment les dades de text subjacents perquè les màquines no puguin copiar-les ni llegir-les.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Puc redactar imatges també?`,
+        "answer": `Absolutament.Podeu seleccionar qualsevol àrea de la pàgina, inclosos els gràfics i les fotografies, per tal que quedin enfosquides permanentment.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `La redacció és reversible?`,
+        "answer": `No. Per a la vostra seguretat, la redacció destrueix permanentment les dades ocultes.Mantingueu sempre una còpia de seguretat sense redacció si cal.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Signar PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Signa tu mateix o sol·licita signatures electròniques als altres.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Carregueu el document que requereixi una signatura.`,
+      `Creeu la vostra signatura dibuixant, escrivint o penjant una imatge.`,
+      `Col·loqueu la vostra signatura al document, feu clic a Aplicar i descarregueu-lo.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Són legals les signatures electròniques?`,
+        "answer": `Sí, les signatures electròniques creades amb TheyLovePDF són legalment vinculants a la majoria de països i jurisdiccions.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Puc desar la meva signatura per a més tard?`,
+        "answer": `Sí, si creeu un compte, podeu desar de manera segura la vostra signatura per a una sessió ràpida i amb 1 clic en el futur.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Puc afegir dates de text i inicials?`,
+        "answer": `Absolutament.Juntament amb la vostra signatura, podeu arrossegar i deixar anar fàcilment dates, inicials i camps de text personalitzats.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Demana signatura`,
+    "desc": `Envieu documents als clients perquè els signin legalment en línia.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Carregueu el PDF que necessiteu signat.`,
+      `Afegiu les adreces de correu electrònic dels destinataris i assigneu-hi camps de signatura.`,
+      `Envieu la sol·licitud.Els enviarem per correu electrònic un enllaç segur per signar el document en línia.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Els destinataris necessiten un compte per signar?`,
+        "answer": `No, els destinataris poden signar el document de manera segura directament des del seu enllaç de correu electrònic sense necessitat de crear un compte TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Com sé quan està signat?`,
+        "answer": `Rebràs una notificació automàtica per correu electrònic en el moment que totes les parts hagin acabat de signar el document.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Hi ha una pista d'auditoria?`,
+        "answer": `Sí, els usuaris de Pro reben una pista d'auditoria completa que detalla les adreces IP i les marques de temps per a un compliment legal total.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Signe de certificat`,
+    "desc": `Afegiu una signatura digital criptogràfica al vostre PDF.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Carregueu el vostre PDF i el vostre fitxer de certificat digital (.pfx o .p12).`,
+      `Introduïu la contrasenya del certificat.`,
+      `Apliqueu la signatura criptogràfica i descarregueu el PDF verificat.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Què és una signatura de certificat?`,
+        "answer": `A diferència d'una signatura electrònica visual, una signatura de certificat aplica un hash criptogràfic al document, demostrant matemàticament la seva autenticitat i assegurant que no s'hagi alterat.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Deseu la contrasenya del meu certificat?`,
+        "answer": `Mai.La vostra contrasenya només es conserva a la memòria temporal durant el moment exacte de la signatura i es destrueix immediatament.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `La gent pot verificar la signatura?`,
+        "answer": `Sí, quan s'obre en lectors de PDF estàndard com Adobe Acrobat, apareixerà una marca de verificació verda que indica que el document està verificat digitalment i sense alteracions.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Xateja amb PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Parla amb el teu PDF.Feu preguntes, obteniu resums i extreu informació a l'instant amb IA.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Carregueu el vostre document PDF llarg o complex.`,
+      `Escriviu una pregunta al quadre de xat, com ara "Resumeix el capítol 2" o "Quin és l'argument principal?"`,
+      `La nostra IA llegirà el document a l'instant i us proporcionarà una resposta precisa.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Com funciona el xat amb PDF?`,
+        "answer": `Utilitzem models d'idiomes grans (LLM) avançats per escanejar el text del vostre document, entendre'n el context i respondre a qualsevol pregunta que feu en funció estrictament del contingut del document.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Pot llegir documents escanejats?`,
+        "answer": `Si el document és purament una imatge, primer heu d'executar-lo a través de la nostra eina OCR.Si conté text seleccionable, l'IA pot llegir-lo immediatament.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `S'utilitzen els meus documents per entrenar la IA?`,
+        "answer": `Absolutament no.La vostra privadesa és la nostra prioritat.Els documents es processen en un entorn segur i mai s'utilitzen per entrenar models públics d'IA.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Edita PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Afegiu text, imatges, formes o anotacions a mà alçada a un document PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Carregueu el PDF que voleu modificar.`,
+      `Utilitzeu la barra d'eines per afegir text, inserir imatges, dibuixar formes o aplicar blanqueig a les àrees existents.`,
+      `Deseu les modificacions i descarregueu el PDF actualitzat.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Puc canviar el text existent al PDF?`,
+        "answer": `Actualment, podeu utilitzar l'eina "blanquejar" per cobrir text antic i escriure-hi text nou.L'edició de text nativa és una característica molt complexa que estem desenvolupant activament.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Puc afegir imatges al PDF?`,
+        "answer": `Sí, podeu carregar i estampar fàcilment imatges PNG o JPG a qualsevol lloc del vostre document.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `L'edició redueix la qualitat del document?`,
+        "answer": `No, el nostre editor afegeix les vostres anotacions a la part superior de l'estructura del document existent sense tornar a comprimir les imatges o el text originals.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Filigrana PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Estampa una imatge o un text al teu PDF en qüestió de segons.Trieu tipografia, transparència i posició.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Carregueu el vostre fitxer PDF.`,
+      `Escriviu el text de la vostra marca d'aigua o pengeu una imatge de logotip.Ajusteu l'opacitat, la rotació i la ubicació.`,
+      `Feu clic a Aplica i descarregueu el vostre document amb filigrana.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Puc marca d'aigua totes les pàgines alhora?`,
+        "answer": `Sí, de manera predeterminada, la vostra marca d'aigua s'aplicarà de manera coherent a cada pàgina del document.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Puc ajustar la transparència?`,
+        "answer": `Absolutament.Podeu fer que la marca d'aigua sigui molt tènue perquè no distregui l'atenció del document, o completament opaca per a la màxima visibilitat.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Es pot eliminar una marca d'aigua?`,
+        "answer": `Aplanem la marca d'aigua a l'estructura del document perquè sigui tan difícil d'eliminar com sigui possible, garantint que la vostra propietat intel·lectual estigui protegida.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Formularis PDF`,
+    "desc": `Ompliu formularis PDF de manera ràpida i precisa en línia.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Carregueu un formulari PDF interactiu.`,
+      `Feu clic als camps de text, caselles de verificació o botons d'opció per omplir la vostra informació.`,
+      `Descarrega el formulari emplenat i emplenat.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Puc desar un formulari parcialment emplenat?`,
+        "answer": `Si teniu un compte Pro, les vostres sessions es desaran automàticament, cosa que us permetrà tornar i acabar d'omplir el formulari més tard.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Funciona amb tots els formularis PDF?`,
+        "answer": `La nostra eina admet AcroForms estàndard, que constitueixen el 99% dels PDF interactius.Els formularis XFA anteriors poden tenir un suport limitat.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Puc aplanar el formulari després d'omplir-lo?`,
+        "answer": `Sí, un cop descarregat, podeu executar-lo mitjançant la nostra eina "Aplanar PDF" per bloquejar les dades perquè el destinatari no les modifiqui.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Afegeix números de pàgina`,
+    "desc": `Afegiu números de pàgina als PDF amb facilitat.Trieu les vostres posicions, dimensions, tipografia.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuït` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Carregueu el vostre document.`,
+      `Seleccioneu la posició (p. ex., a la part inferior dreta), l'estil de lletra i el número inicial.`,
+      `Aplica la numeració i baixa el teu PDF perfectament format.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Puc saltar la portada?`,
+        "answer": `Sí!Podeu especificar en quina pàgina hauria de començar la numeració, cosa que us permetrà mantenir netes les pàgines de títol.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Puc personalitzar el format?`,
+        "answer": `Absolutament.Podeu triar formats com ara "Pàgina 1", "1 de 10" o només "1" i seleccionar el tipus de lletra, la mida i el color.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `L'alineació és precisa?`,
+        "answer": `Sí, la nostra eina calcula els marges exactes per garantir que els números de pàgina estiguin perfectament alineats a cada pàgina.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Anotar PDF`,
+    "desc": `Ressalta, subratlla, ratlla el text i afegeix comentaris.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Carrega el teu PDF.`,
+      `Utilitzeu les eines de ressaltat, subratllat, ratllat i notes adhesives per revisar el document.`,
+      `Baixeu el fitxer anotat per compartir-lo amb el vostre equip.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Les meves anotacions seran visibles als lectors estàndard?`,
+        "answer": `Sí, utilitzem protocols d'anotació PDF estàndard, és a dir, els vostres aspectes destacats i notes seran visibles a Adobe Acrobat, Chrome i Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Puc canviar els colors destacats?`,
+        "answer": `Sí, podeu seleccionar entre una àmplia paleta de colors per codificar amb colors les vostres notes i ressaltats.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `És fàcil suprimir una anotació?`,
+        "answer": `Molt fàcil.Només cal que feu clic a qualsevol anotació que hàgiu fet i premeu el botó d'eliminació per eliminar-la a l'instant.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Comprovació de plagi`,
+    "desc": `Compareu el vostre document amb milers de milions de pàgines web i bases de dades acadèmiques.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Carregueu l'assaig o el document que voleu verificar.`,
+      `El nostre motor d'IA escanejarà milers de milions de pàgines web i bases de dades acadèmiques per trobar coincidències.`,
+      `Reviseu l'informe de similitud detallat destacant qualsevol text copiat.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Quina precisió té el verificador de plagi?`,
+        "answer": `És altament precís.Utilitzem IA de nivell empresarial que creua el vostre text amb una base de dades massiva i contínuament actualitzada de contingut en línia.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Es contrasta amb documents acadèmics fora de línia?`,
+        "answer": `Es compara amb les principals revistes acadèmiques d'accés obert i fonts molt citades disponibles en línia.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `El meu document està desat en una base de dades?`,
+        "answer": `No. A diferència dels sistemes d'algunes universitats, no afegim el vostre document a una base de dades global, garantint-nos que el vostre treball original sigui estrictament vostre.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Resum en PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Genereu resums ràpids i precisos de documents llargs en qüestió de segons.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nou` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Pengeu un document llarg, un informe o un capítol de llibre.`,
+      `Feu clic a "Resumeix" per permetre que la nostra IA analitzi els conceptes bàsics.`,
+      `Llegiu el resum del punt i descarregueu-lo si cal.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Pot resumir un llibre sencer?`,
+        "answer": `L'IA és molt capaç, però per obtenir els millors resultats i el màxim detall, recomanem resumir un capítol o secció alhora.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `El resum recull estadístiques clau?`,
+        "answer": `Sí, el nostre LLM té instruccions per identificar i destacar punts de dades crítics, estadístiques i arguments principals.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Quins idiomes s'admeten?`,
+        "answer": `El resum funciona millor en anglès, però admet i entén de manera nativa més de 50 idiomes globals.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Tradueix PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Tradueix documents complets tot conservant el format i la disposició originals.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nou` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Carregueu el vostre document.`,
+      `Seleccioneu l'idioma original i l'idioma d'arribada al qual voleu traduir.`,
+      `Descarrega el PDF recentment traduït, complet amb el seu format original.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Es trencarà el disseny després de la traducció?`,
+        "answer": `El nostre motor avançat intenta conservar el disseny exacte, tot i que l'expansió del text (p. ex., de l'anglès a l'alemany) pot provocar canvis visuals lleugers i inevitables.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Què tan precisa és la traducció?`,
+        "answer": `Utilitzem la traducció automàtica neuronal (NMT) d'última generació impulsada per AI, que proporciona traduccions molt precises i conscients del context en lloc de traducció rígida paraula per paraula.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Puc traduir documents escanejats?`,
+        "answer": `Sí!Si pengeu un document escanejat, el nostre sistema executarà automàticament l'OCR per llegir el text abans de traduir-lo.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Extreure dades`,
+    "desc": `Extraieu de manera intel·ligent taules, valors i entitats de factures i formularis.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nou` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Pengeu factures, rebuts o formularis estructurats.`,
+      `La nostra IA identificarà camps clau com dates, totals, noms i adreces.`,
+      `Baixeu les dades extretes com a fitxer CSV o JSON net.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Per a què serveix l'extracció de dades?`,
+        "answer": `És perfecte per a la comptabilitat i l'administració.En lloc d'escriure manualment dades de 100 factures, la nostra IA ho fa automàticament en segons.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `El document necessita un disseny específic?`,
+        "answer": `No!La nostra intel·ligència intel·ligent és prou intel·ligent com per trobar "Quantitat total", tant si es troba a la part superior, inferior o mitjana de la pàgina.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Puc extreure dades a Excel?`,
+        "answer": `Sí, les dades extretes es poden exportar directament com a fitxer CSV, que s'obre perfectament a Microsoft Excel o Google Sheets.`
+      },
     ]
-  }
+  },
 ];

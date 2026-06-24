@@ -1,497 +1,468 @@
+// Auto-generated blog translation for tr
 export const BLOG_POSTS_TR = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Mac'te PDF Nasıl Sıkıştırılır (2026 Kılavuzu)`,
+    date: `2026-06-20`,
+    excerpt: `Kaliteyi kaybetmeden Mac'teki PDF dosyanızın boyutunu küçültmenin en hızlı ve en kolay yollarını öğrenin.Önizleme, Automator ve Web araçlarını karşılaştırıyoruz.`,
+    content: `<p>Mac'inizde büyük PDF dosyalarıyla uğraşmak sinir bozucu olabilir, özellikle de standart 25 MB ek boyutu sınırını aşan bir belgeyi e-postayla göndermeniz gerektiğinde.İster ödev teslim eden bir öğrenci olun ister portföy gönderen bir profesyonel olun, PDF'nin nasıl düzgün şekilde sıkıştırılacağını bilmek önemli bir beceridir.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Yöntem 1: Yerleşik Önizleme Uygulaması (Ücretsiz ancak Temel)</h2>
+<p>Apple'ın Önizleme uygulaması, PDF'lerinizi küçültebilen yerleşik bir "Kuvars Filtresi" ile birlikte gelir.Hızlıdır ve internet bağlantısı gerektirmez.</p>
+<ol>
+<li><strong>Önizleme</strong> uygulamasını kullanarak PDF'nizi açın.</li>
+<li>Üst menü çubuğunda <strong>Dosya</strong>'yı tıklayın ve ardından <strong>Dışa Aktar</strong>'ı seçin ("PDF Olarak Dışa Aktar" seçeneğini seçmeyin).</li>
+<li>Dışa aktarma penceresinde <strong>Kuvars Filtresi</strong> açılır menüsünü arayın.</li>
+<li><strong>Dosya Boyutunu Küçült</strong>'ü seçin ve Kaydet'i tıklayın.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+<p class="text-red-700 m-0"><strong>Uyarı:</strong> Bu yöntem ücretsiz olsa da, Apple'ın varsayılan sıkıştırma algoritması inanılmaz derecede agresiftir.Genellikle görüntülerin kalitesini bozar ve vektör metnini bulanıklaştırır.Bunu profesyonel belgeler için önermiyoruz.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>2. Yöntem: TheyLovePDF'yi Kullanma (Profesyonel ve Yüksek Kalite)</h2>
+<p>Dosya boyutunu önemli ölçüde azaltırken metin ve görsellerinizin net kalitesini korumak istiyorsanız, yapay zeka destekli özel bir sıkıştırma aracı kullanmak en iyi seçenektir.</p>
+<ol>
+<li><a href="/tools/compress-pdf" class="text-blue-600 hover:underline">OnyLovePDF'deki PDF Sıkıştırma aracına</a> gidin.</li>
+<li>PDF dosyanızı sayfaya sürükleyip bırakın.</li>
+<li>Sıkıştırma düzeyinizi seçin:
+<ul class="mt-2 space-y-1 text-gray-600">
+<li><strong>Aşırı Sıkıştırma:</strong> E-posta göndermek için en iyisi (en düşük kalite).</li>
+<li><strong>Önerilen Sıkıştırma:</strong> Boyut ve kalite arasındaki hassas nokta.</li>
+<li><strong>Daha Az Sıkıştırma:</strong> Yüksek kalite, yazdırma için mükemmeldir.</li>
+</ul>
+</li>
+<li><strong>PDF'yi Sıkıştır</strong>'ı tıklayın ve optimize edilmiş dosyanızı indirin.</li>
+</ol>
+<p>Akıllı sıkıştırma algoritmalarımız, gereksiz meta verileri ortadan kaldırır ve modern web standartlarını kullanarak görüntüleri sıkıştırarak, depolama alanının bir kısmını kaplarken belgenizin tamamen aynı görünmesini sağlar!</p>
+
+<h2>Sonuç</h2>
+<p>Mac'in yerleşik araçları çevrimdışı durumlarda mükemmel olsa da, modern belgeler için gereken ayrıntılı kontrolden ciddi şekilde yoksundurlar.Önemli herhangi bir şey için her zaman özel bir sıkıştırma motoruna güvenin.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `iPhone'unuzda Birden Çok PDF Dosyasını Birleştirme`,
+    date: `2026-06-19`,
+    excerpt: `Birkaç PDF belgesini doğrudan iOS aygıtınızdan tek bir dosyada birleştirmenin en basit yolunu keşfedin.`,
+    content: `<p>iPhone'ların iş ve ders çalışırken birincil cihazlarımız haline gelmesiyle birlikte, hareket halindeyken PDF dosyalarını nasıl birleştireceğinizi bilmek önemli bir beceri haline geliyor.İster bir gider raporu için makbuz derliyor ister ders notlarını birleştiriyor olun, bunu bilgisayar olmadan tam olarak nasıl yapabileceğinizi burada bulabilirsiniz.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>iOS'un Zorlukları</h2>
+<p>iOS, güçlü bir yerleşik Dosyalar uygulamasına sahip olsa da, birden fazla PDF seçip bunları sorunsuz bir şekilde bir araya getirmek için yerel ve basit bir yol sunmaz.Belgeleri tek bir PDF'ye tarayabilirsiniz ancak mevcut dosyaları birleştirmek şaşırtıcı derecede zordur.</p>
+
+<h2>Çözüm: TheyLovePDF Web Uygulaması</h2>
+<p>App Store'dan ağır, abonelik tabanlı uygulamalar indirmenize gerek yok.Bulut mimarimizi kullanarak bunu doğrudan Safari veya Chrome'dan yapabilirsiniz.</p>
+
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Adım Adım Kılavuz</h3>
+<ol class = "space-y-3 mb-0">
+<li>iPhone'unuzda Safari'yi açın ve <a href="/tools/merge-pdf" class="text-blue-600 hover:underline"> TheyLovePDF Birleştirme Aracı</a>'na gidin.</li>
+<li>Büyük <strong>PDF dosyalarını seç</strong> düğmesine dokunun.</li>
+<li>Dosyaları iPhone'unuzun <em>Dosyalar</em> uygulamasından veya <em>Fotoğraf Kitaplığınızdan</em> seçin.Aynı anda birden fazla dosya seçebilirsiniz.</li>
+<li>Yüklendikten sonra dosyalarınızın görsel bir ızgarasını göreceksiniz.Herhangi bir dosyayı tam istediğiniz gibi sürükleyip yeniden sıralamak için basılı tutun.</li>
+<li><strong>PDF'yi Birleştir</strong>'e dokunun.Sunucularımız dosyaları milisaniyeler içinde işleyecektir.</li>
+<li><strong>İndir</strong>'e dokunun ve yeni, birleştirilmiş belgeyi doğrudan cihazınıza kaydedin.</li>
+</ol>
+</div>
+
+<h2>Neden Bir Uygulama Kullanmıyorsunuz?</h2>
+<p>App Store'daki pek çok PDF uygulamasını indirmek ücretsizdir, ancak dosyaları birleştirmeye çalıştığınızda sizden para isterler.Bir bulut aracı kullanarak bu App Store ücretlerinden kurtulursunuz ve telefonunuzdaki depolama alanından tasarruf edersiniz.</p>
+<p>Bu kadar basit, hızlı ve tamamen güvenli!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `PDF'nizi Parolayla Nasıl Güvenceye Alırsınız?`,
+    date: `2026-06-18`,
+    excerpt: `PDF dosyalarınıza güvenli, kırılmaz 256 bit AES şifreleme şifresi ekleyerek hassas bilgileri koruyun.`,
+    content: `<p>Günümüzün dijital çağında veri gizliliği her zamankinden daha kritik.İster finansal tablolar, ister tıbbi kayıtlar, ister gizli bir iş sözleşmesi gönderiyor olun, PDF'yi korumasız bırakmak büyük bir güvenlik riski oluşturur.</p>
+<p>Bu kılavuzda, PDF belgelerinizi askeri düzeyde şifreleme kullanarak nasıl kilitleyeceğinizi göstereceğiz.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>256 bit AES Şifreleme nedir?</h2>
+<p>Gelişmiş Şifreleme Standardı (AES), ABD hükümeti tarafından gizli bilgilerin güvenliğini sağlamak için kullanılan şifreleme algoritmasıdır.256 bitlik bir şifreleme anahtarı, 2<sup>256</sup> olası kombinasyonun olduğu anlamına gelir; bu sayı o kadar büyüktür ki, dünyanın en güçlü süper bilgisayarları bile onu bir milyar yıl içinde kıramaz.</p>
+<p>Aracımızı kullandığınızda, yalnızca kolayca atlanabilecek bir "şifre eklemiyoruz".Dosyanızın içeriğini AES-256 kullanarak matematiksel olarak karıştırıyoruz.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>PDF'nizi Nasıl Korursunuz</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+<ol class = "mb-0 text-blue-900">
+<li><a href="/tools/protect-pdf" class="font-bold hover:underline">PDF'yi Koruma</a> aracına gidin.</li>
+<li>Hassas belgenizi güvenli TLS 1.3 bağlantımız üzerinden yükleyin.</li>
+<li>Güçlü bir şifre girin.(Harf, sayı ve sembollerin karıştırılarak en az 12 karakter kullanılmasını öneririz).</li>
+<li><strong>PDF'yi Koru</strong>'yu tıklayın.</li>
+<li>Yeni şifrelenmiş dosyanızı indirin.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Şifre Güvenliğine İlişkin En İyi Uygulamalar</h2>
+<ul class = "list-disc pl-5 space-y-2">
+<li><strong>Şifreyi asla aynı e-postayla göndermeyin:</strong> PDF'yi e-postayla gönderiyorsanız, şifreyi farklı bir kanal (SMS veya Signal gibi güvenli bir mesajlaşma uygulaması gibi) aracılığıyla gönderin.</li>
+<li><strong>Şifre yöneticisi kullanın:</strong> Sözlükte bulunabilecek bir kelimeyi kullanmak yerine rastgele bir karakter dizisi oluşturun.</li>
+<li><strong>Kişisel bilgileri kullanmayın:</strong> Doğum tarihlerinden, evcil hayvan adlarından veya şirket adlarından kaçının.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Dosyanız şifrelendikten sonra orijinal içerikler 2 saat içinde sunucularımızdan kalıcı olarak silinir.Gizliliğiniz mutlak önceliğimizdir.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `OCR nedir?Taranmış PDF'leri Aranabilir Hale Getirme`,
+    date: `2026-06-17`,
+    excerpt: `Optik Karakter Tanıma (OCR) teknolojisinin nasıl çalıştığını ve seçilebilir metni düz görüntülerden nasıl çıkarabildiğini öğrenin.`,
+    content: `<p>Hiç belgeye benzeyen bir PDF aldınız mı, ancak metni vurgulamaya çalıştığınızda hiçbir şey olmuyor mu?"Düz" veya "taranmış" bir PDF ile karşılaştınız.Aslında bu, bir kağıt parçasının dijital fotoğrafıdır.</p>
+<p>Bu metinle etkileşim kurmak için <strong>Optik Karakter Tanıma'nın (OCR)</strong> büyüsüne ihtiyacınız var.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>OCR Nasıl Çalışır?</h2>
+<p>Bir dosyayı OCR motoru aracılığıyla çalıştırdığınızda, yazılım yüksek eğitimli bir insan gözü gibi davranır.Görüntüyü piksel piksel tarayarak harf ve rakamlara benzeyen desenler arar.</p>
+<p>Modern OCR yalnızca şekilleri eşleştirmekle kalmıyor;bağlamı anlamak için karmaşık Yapay Zeka ve Makine Öğrenimi modellerini kullanır.Örneğin, büyük "I" ile küçük "l" harfi arasındaki farkı, kelimenin etrafındaki harflere göre anlayabilir.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>OCR'nin Faydaları</h2>
+<ul class = "uzay-y-2">
+<li><strong>Aranabilirlik:</strong> 500 sayfalık taranmış bir sözleşmede belirli bir maddeyi bulmak, tamamını okumadan imkansızdır.OCR, tam olarak ihtiyacınız olanı anında bulmanız için CTRL+F tuşlarını kullanmanıza olanak tanır.</li>
+<li><strong>Düzenlenebilirlik:</strong> Metin tanındıktan sonra onu Word veya Google Dokümanlar'da kopyalayabilir, yapıştırabilir ve düzenleyebilirsiniz.</li>
+<li><strong>Erişilebilirlik:</strong> Görme engelli kullanıcılara yönelik ekran okuyucular düz görüntüleri okuyamaz.OCR, belgelerinizin herkes tarafından erişilebilir olmasını sağlar.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Bir Belgeye OCR Nasıl Yapılır</h2>
+<p>Taranan belgelerinizi dönüştürmek TheyLovePDF ile inanılmaz derecede basittir:</p>
+<ol>
+<li><a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF aracına</a> gidin.</li>
+<li>Taranan belgenizi yükleyin.</li>
+<li>Belgenin dilini seçin.Bu çok önemlidir; yapay zekaya hangi dilin bekleneceğini söylemek, özellikle benzersiz karakterlere veya aksanlara sahip diller için doğruluğu büyük ölçüde artırır.</li>
+<li>İşlemi vur.Yapay zeka, orijinal görüntülerin üzerine görünmez bir metin katmanı katmanlayarak belgenizi yeniden oluşturacaktır.</li>
+</ol>
+
+<blockquote class = "border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italik bg-gray-50 rounded-r-lg">
+Belgeleri manuel olarak yeniden yazmayı bırakın.Yapay zekanın sizin için ağır işleri yapmasına izin verin!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Windows 11'de PDF Metni Nasıl Düzenlenir (Adobe Acrobat Olmadan)`,
+    date: `2026-06-16`,
+    excerpt: `Pahalı yazılımlara para ödemeyi bırakın.Windows PC'nizde PDF metinlerini ve resimlerini doğrudan düzenlemenin en verimli, ücretsiz ve akıllı yollarını keşfedin.`,
+    content: `<p>Yıllardır Windows kullanıcıları PDF'lerle uğraştı.Word belgelerinden farklı olarak PDF'ler "sonlandırılmış" dijital baskılar olacak şekilde tasarlandı.Bir sözleşmede yazım hatası fark ettiğinizde veya bir faturadaki tarihi güncellemeniz gerektiğinde genellikle Adobe Acrobat gibi büyük bir ödeme duvarıyla karşılaşırsınız.</p>
+<p>Neyse ki, 2026'da temel düzenlemeleri yapmak için Windows 11 makinenizde pahalı yazılımların yüklü olmasına gerek yok.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Akıllı Web Yaklaşımı</h2>
+<p>Bulut tabanlı düzenleyiciler, ağır, yavaş masaüstü uygulamalarını indirmek yerine, PDF yapısını doğrudan tarayıcınızda ayrıştırmak için uzak sunucuların işlem gücünden yararlanır.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Doğrudan Nasıl Düzenleme Yapılır</h3>
+<ol class = "space-y-2 mb-0">
+<li>Windows 11'de Microsoft Edge'i veya Google Chrome'u açın.</li>
+<li><a href="/tools/edit-pdf" class="text-indigo-600 font-semibold vurgulu:underline">PDF düzenleme aracına</a> gidin.</li>
+<li>Belgenizi yükleyin.Motorumuz metin katmanlarının kodunu anında çözecektir.</li>
+<li>Metni değiştirmek, yazı tipini değiştirmek veya boyutu ayarlamak için herhangi bir metin kutusunu tıklayın.</li>
+<li>Ayrıca yeni resimler, şekiller ekleyebilir veya hassas bilgileri karartabilirsiniz.</li>
+<li><strong>Değişiklikleri Uygula</strong>'yı tıklayın ve güncellenen dosyayı indirin.</li>
+</ol>
+</div>
+
+<h2>Neden Microsoft Edge Kullanmıyorsunuz?</h2>
+<p>Microsoft Edge'in çizim araçları (mürekkep) içeren yerleşik bir PDF görüntüleyicisi olsa da, <strong>mevcut metni düzenleyemez</strong>.Yalnızca üstüne çizim yapmanıza veya yeni metin kutuları eklemenize olanak tanır.Orijinal metin katmanındaki bir yazım hatasını gerçekten değiştirmek için gerçek bir PDF düzenleyiciye ihtiyacınız vardır.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Profesyonel İpucu:</p>
+<p class="text-sm text-gray-600">PDF'niz taranmış bir resimse standart metin düzenleme çalışmaz.Resmi okunabilir bir metin katmanına dönüştürmek için öncelikle bir <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR aracı</a> kullanmanız gerekir.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Android'de Ücretsiz PDF İmzalamanın Nihai Kılavuzu`,
+    date: `2026-06-15`,
+    excerpt: `Acilen bir belge imzalamanız mı gerekiyor?Elektronik imzanızı doğrudan Android telefonunuzdan nasıl çizeceğinizi, yazacağınızı veya yükleyeceğinizi öğrenin.`,
+    content: `<p>Hepimiz oradaydık: Masanızdan uzaktayken e-posta yoluyla önemli bir belge alırsınız.Hemen imzanıza ihtiyacı var.Yazdırmak, imzalamak ve tekrar taramak artık geçmişte kaldı.</p>
+<p>Günümüzde Android akıllı telefonunuz, elektronik imzaları yasal olarak bağlama kapasitesine sahip güçlü bir dijital iş istasyonudur.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Elektronik İmzalar Yasal mı?</h2>
+<p>Evet.ESIGN Yasası (ABD) ve eIDAS (Avrupa) kapsamında, elektronik imzalar neredeyse tüm ticari ve kişisel işlemler için ıslak mürekkepli imzayla aynı yasal ağırlığa sahiptir.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Android'de Nasıl Oturum Açılır (Uygulamaya Gerek Yok)</h2>
+<p>Android cihazınızı birinci sınıf PDF uygulamalarıyla doldurmanıza gerek yok.Mobil tarayıcınızı kullanmanız yeterli.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li><strong>Aracı açın:</strong> Chrome'da <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">PDF İmzalama aracını</a> açmak için bağlantıya dokunun.</li>
+<li><strong>Dokümanı Yükle:</strong> Dosyayı doğrudan Android İndirilenler klasörünüzden veya Google Drive'dan yüklemek için dokunun.</li>
+<li><strong>İmzanızı Oluşturun:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Çizim:</em> İmzanızı doğrudan ekrana çizmek için parmağınızı veya kalemi kullanın.</li>
+<li><em>Tür:</em> Adınızı yazın ve bir el yazısı yazı tipi seçin.</li>
+<li><em>Yükleme:</em> Beyaz bir kağıt parçasına gerçek imzanızın fotoğrafını yükleyin (aracımız arka planı otomatik olarak kaldırır).</li>
+</ul>
+</li>
+<li><strong>Yerleştirin:</strong> İmzayı tam olarak imza satırına sürükleyip bırakın.Yeniden boyutlandırmak için parmaklarınızı kıstırabilirsiniz.</li>
+<li><strong>Sonlandır:</strong> İmzayı kalıcı olarak belge mimarisine eklemek için "İmzala"ya dokunun.</li>
+</ol>
+
+<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
+<p class="text-yellow-800 text-sm m-0"><strong>Güvenlik Notu:</strong> Hassas belgeleri imzalarken her zaman güvenli, HTTPS şifreli bir platform kullandığınızdan emin olun.Tüm dosyaları sunucularımızdan otomatik olarak sileriz.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Öğrenciler Neden PDF'leri Düzenlemek İçin Her Zaman Word'e Dönüştürmeli?`,
+    date: `2026-06-14`,
+    excerpt: `Tez yazmak mı yoksa not almak mı?Bir Word Belgesine metin çıkarmanın neden PDF'yi doğrudan düzenlemekten daha iyi olduğunu keşfedin.`,
+    content: `<p>Öğrenci olarak her dönem yüzlerce PDF'yle karşılaşırsınız: ders slaytları, araştırma makaleleri ve dijital ders kitapları.Alıntıları ayıklamanız, içeriği özetlemeniz veya bölümleri yeniden yazmanız gerektiğinde, bir PDF düzenleyici kullanmak isteyebilirsiniz.Ancak daha akıllıca ve çok daha profesyonel bir yol var.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>PDF Mimarisindeki Sorun</h2>
+<p>PDF'ler (Taşınabilir Belge Formatı), kompozisyon için değil <em>sunum</em> için tasarlanmıştır.PDF'nin içinde metin normal bir belge gibi akmaz;her bir kelime sayfadaki belirli X ve Y koordinatlarına sabitlenmiştir.</p>
+<p>PDF düzenleyicide bir paragrafı silmeye çalışırsanız, altındaki metin boşluğu dolduracak şekilde yukarı doğru <strong>hareket etmeyecektir</strong>.Çok büyük bir boşluk bırakıyor.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Çözüm: PDF'den Word'e Dönüştürme</h2>
+<p>Akıllı motorumuz, belgeyi tekrar Microsoft Word'e (.docx) dönüştürerek akıcı düzeni yeniden oluşturur.Paragraflar yeniden paragraflara, başlıklar başlıklara ve resimler hareketli bloklara dönüşüyor.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 boşluk-6 my-8">
+<div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">PDF Düzenleyici</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ Metin yeniden akıtılmıyor</li>
+<li>❌ Genel yazı tiplerini değiştirmek zor</li>
+<li>❌ Kenar boşlukları kilitli</li>
+<li>❌ Tablolarda değişiklik yapmak zordur</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Word Belgesi</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li>✅ Metin doğal bir şekilde akıyor</li>
+<li>✅ Kolay yazım denetimi ve dil bilgisi</li>
+<li>✅ Dinamik sayfa sonları</li>
+<li>✅ Kopyala-yapıştır işlemi kusursuzdur</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Kusursuz bir şekilde nasıl yapılır</h2>
+<p>Yapay zeka destekli <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF'den Word'e dönüştürücümüz</a> gelişmiş düzen tanımayı kullanır.Sadece dosyanızı yükleyin ve saniyeler içinde tamamen düzenlenebilir bir Word belgesine sahip olacaksınız.Ödevinizi veya notlarınızı yazmayı bitirdikten sonra, profesörünüze göndermeden önce istediğiniz zaman tekrar PDF'ye aktarabilirsiniz.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Windows 10'da Birden Çok PDF'yi Birleştirme: Adım Adım`,
+    date: `2026-06-13`,
+    excerpt: `İlgili PDF belgelerini doğrudan Windows masaüstünüzden tek, uyumlu dosyalar halinde birleştirerek dağınık klasörlerinizi düzenleyin.`,
+    content: `<p>Tek bir proje için 15 farklı PDF dosyasına sahip olmak bir kabustur.Aylık faturalar, bir kitabın bölümleri veya taranmış tıbbi kayıtlar olsun, bunları tek bir uyumlu dosyada birleştirmek Windows 10 organizasyonu için çok önemlidir.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Yerleşik Windows Sınırlaması</h2>
+<p>Windows 10 güçlü bir işletim sistemidir ancak yerel PDF birleştirme özelliğinden yoksun olduğu bilinmektedir."Microsoft Print to PDF" özelliğini içermesine rağmen bu, mevcut PDF'leri birleştirmeye değil, yalnızca diğer formatlardan PDF'ler oluşturmaya yardımcı olur.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Akıllı İş Akışı (Tarayıcı Tabanlı)</h2>
+<p>Kötü amaçlı yazılım içerebilecek veya dosyalarınıza büyük filigranlar yerleştirebilecek şüpheli ücretsiz yazılımlar indirmeyin.En profesyonel yöntem şifrelenmiş bir tarayıcı aracı kullanmaktır.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>1. Adım: Dosyalarınızı toplayın.</strong> Birleştirmek istediğiniz tüm PDF'leri masaüstünüzdeki tek bir klasöre yerleştirin.Bu, yüklemeyi kolaylaştırır.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>2. Adım: Birleştirmeyi açın.</strong> TheyLovePDF'de <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">PDF Birleştirme aracına</a> gidin.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>3. Adım: Seçin ve Sıralayın.</strong> Dosyalarınızı ekrana sürükleyin.Önizleme küçük resimlerini göreceksiniz.Mükemmel kronolojik sırada olduklarından emin olmak için bu küçük resimleri sola veya sağa sürükleyebilirsiniz.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>4. Adım: Birleştir.</strong> Birleştir düğmesine basın.Sunucu, PDF'lerin ikili kodunu herhangi bir kalite kaybı olmadan anında birleştirir.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Bu yöntem Windows 10'daki Chrome, Edge, Firefox ve Brave'de çalışır ve bilgisayarınızda kesinlikle sıfır kurulum veya yönetici ayrıcalığı gerektirir.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Hukuk Uzmanları Neden PDF'leri Şifrelerle Korumalı?`,
+    date: `2026-06-12`,
+    excerpt: `Belge güvenliği, uyumluluk ve açık PDF'leri e-posta yoluyla göndermenin neden hukuk firmaları için büyük bir sorumluluk olduğu konularına derinlemesine bir bakış.`,
+    content: `<p>Hukuk mesleğinde gizlilik yalnızca en iyi uygulama değildir; katı bir etik ve çoğu zaman yasal bir gerekliliktir.Ancak sayısız hukuk firması ve avukat yardımcısı hâlâ hassas özetleri, sözleşmeleri ve uzlaşma tekliflerini standart e-posta üzerinden ham, şifrelenmemiş PDF ekleri olarak gönderiyor.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Ele Geçirilme Riski</h2>
+<p>Standart e-postanın (SMTP) güvensiz olduğu biliniyor.Bir e-posta güvenli olmayan sunucular üzerinden yönlendirilirse veya bir gelen kutusu ele geçirilirse, şifrelenmemiş PDF, onu ele geçiren herkes tarafından tamamen okunabilir.Bu, müşteri ayrıcalıklarının ihlal edilmesine ve büyük sorumluluklara yol açabilir.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Şifreleme ve Şifreler</h2>
+<p>Farkı anlamak önemlidir.Basit bir "izin şifresi" yazdırmayı veya düzenlemeyi engeller ancak dosyayı şifrelemez.Herkes hâlâ okuyabilir.</p>
+<p>İhtiyacınız olan şey, <strong>AES-256 Şifreleme</strong> ile desteklenen bir <strong>Açık Şifre</strong>'dir.Uygulandığında dosyanın ikili verileri karıştırılır.Şifre olmadan belgenin okunması matematiksel olarak imkansızdır.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Uyumluluk Gereksinimleri</h4>
+<p class="text-red-800 text-sm m-0">HIPAA (Tıbbi) ve GDPR (Avrupa Verileri) gibi düzenlemeler, aktarım sırasında PII'yi (Kişisel Olarak Tanımlanabilir Bilgiler) şifrelemede başarısız olan kuruluşları ağır şekilde cezalandırmaktadır.Şifrelenmiş PDF, aktarım halindeki verilerin güvenliğinin sağlanması için kabul edilen bir yöntemdir.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Profesyonel İş Akışı</h2>
+<ol>
+<li>Belgeyi Word'de tasarlayın ve PDF'ye aktarın.</li>
+<li><a href="/tools/protect-pdf" class="text-blue-600 hover:underline">OnlarLovePDF Güvenliği</a> gibi güvenli, sıfır saklama platformuna yükleyin.</li>
+<li>Oluşturulmuş 16 karakterlik bir şifre uygulayın.</li>
+<li>Şifrelenmiş PDF'yi istemciye e-postayla gönderin.</li>
+<li>Şifreyi istemciye ayrı, güvenli bir kanal (ör. telefon görüşmesi veya şifreli mesajlaşma uygulaması) aracılığıyla sağlayın.</li>
+</ol>
+<p>Hukuk profesyonelleri bu iş akışını uygulayarak kendilerini veri ihlali yükümlülüklerinden korur ve tam müşteri gizliliğini sağlar.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Android'de WhatsApp ile Göndermek İçin PDF Nasıl Sıkıştırılır`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp'ın büyük belgeleri engelleyen dosya boyutu sınırları vardır.Anında paylaşmak için PDF boyutunuzu Android telefonunuzda nasıl küçülteceğinizi öğrenin.`,
+    content: `<p>WhatsApp, hem işletmeler hem de öğrenciler tarafından belge paylaşmak için yoğun olarak kullanılan, hızlı iletişim için küresel standarttır.Ancak WhatsApp katı dosya boyutu sınırları uygular.150 MB'lık bir mimari plan veya büyük miktarda taranmış bir ders kitabı göndermeye çalışırsanız uygulama, aktarımı doğrudan engeller.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Android İkilemi</h2>
+<p>Fotoğraf sıkıştırmanın aksine Android işletim sistemi, PDF belgelerini sıkıştırmak için yerleşik bir özelliğe sahip değildir.Google Play Store'da arama yaparsanız dosya kalitenizi bozan, izinsiz giren reklamlarla dolu uygulamalarla karşılaşacaksınız.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Akıllı Sıkıştırma Tekniği</h2>
+<p>Yüksek hızlı bulut altyapımızı doğrudan Android cihazınızdaki Google Chrome'dan kullanarak uygulama mağazalarını tamamen atlayabilirsiniz.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="esnek boşluk-4 öğe-başlangıç">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center küçült-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Kompresörü açın</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Tarayıcınızda <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Sıkıştırıcısını</a> açmak için bu bağlantıya dokunun.</p>
+</div>
+</div>
+<div class="esnek boşluk-4 öğe-başlangıç">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center küçült-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Dosyalardan Yükleme</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Yüklemek için dokunun ve büyük PDF'nizi bulmak için Android cihazınızda 'Dosyalar' veya 'Belgeler' uygulamasını seçin.</p>
+</div>
+</div>
+<div class="esnek boşluk-4 öğe-başlangıç">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center küçült-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">'Aşırı Sıkıştırma'yı seçin</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">WhatsApp için en yüksek sıkıştırma düzeyini seçin.Bu, yüksek çözünürlüklü resim verilerini ortadan kaldırır ancak metnin mobil ekranlarda mükemmel şekilde okunabilmesini sağlar.</p>
+</div>
+</div>
+<div class="esnek boşluk-4 öğe-başlangıç">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center küçültme-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">İndirin ve Paylaşın</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">İşlendikten sonra İndir'e dokunun.WhatsApp'ı açın, ataç simgesine dokunun, Belge'yi seçin ve yeni küçültülmüş dosyanızı paylaşın!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Tüm bu süreç 30 saniyeden kısa sürüyor, mobil verilerinizin çok azını kullanıyor ve WhatsApp limit sorununu kalıcı olarak çözüyor.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Büyük Bir PDF'den Belirli Sayfalar Nasıl Çıkarılır`,
+    date: `2026-06-10`,
+    excerpt: `Birisinin yalnızca 3. bölüme ihtiyacı varsa 500 sayfalık bir kılavuz göndermeyin. İşte PDF sayfalarını çıkarmanın ve bölmenin en akıllı yolu.`,
+    content: `<p>Hepimiz bunları aldık: 500 sayfalık kurumsal kılavuz, devasa yasal keşif dosyası veya tüm yarıyılın ders kitabı.Peki ya bir iş arkadaşınıza yalnızca 45 ila 52. sayfaları göndermeniz gerekiyorsa?</p>
+<p>Belgenin tamamının gönderilmesi profesyonelliğe aykırıdır, bant genişliğini boşa harcar ve alıcıyı ilgili bilgileri aramaya zorlar.PDF'yi bölmeniz gerekiyor.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>Hacky Way, Pro Way'e Karşı</h2>
+<p>Yaygın bir "hack", Yazdır iletişim kutusunu kullanmak, "PDF'ye Yazdır"ı seçmek ve bir sayfa aralığı seçmektir.Bu işe yarasa da çoğu zaman belgeyi düzleştirir; etkileşimli bağlantıları ve yer imlerini yok eder ve bazen dosya boyutunu önemli ölçüde artırır.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Profesyonel yöntem, çıkarılan sayfaların orijinal kalitesini ve meta verilerini tam olarak koruyarak belgeyi ikili düzeyde bölmektir.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Profesyonel Bir Ayırıcı Kullanma</h2>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class = "space-y-3 mb-0">
+<li><a href="/tools/split-pdf" class="text-blue-600 font-semibold vurgulu:underline">PDF'yi Böl Aracı</a>'na gidin.</li>
+<li>Devasa belgenizi yükleyin.Sunucularımız 2 GB'a kadar dosyaları anında yönetir.</li>
+<li>Modunuzu seçin:
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
+<li><strong>Sayfaları Çıkart:</strong> Sayfaları veya aralıkları tam olarak yazın (ör. <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Aralıklara Göre Böl:</strong> Belgeyi otomatik olarak birden fazla küçük belgeye bölün.</li>
+</ul>
+</li>
+<li>İşlemi Başlat.Yalnızca seçtiğiniz sayfaları içeren, tüm orijinal bağlantıların ve kalitenin bozulmadığı, derli toplu, yüksek odaklı bir PDF alacaksınız.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Yalnızca önemli olanı çıkararak alıcınızın zamanına ve gelen kutusu alanına saygı duyarsınız.Bu, profesyonel anlamda büyük kazançlar sağlayan küçük bir teknik beceridir.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `PDF ile Sohbet: Yapay Zeka Uzun Belgeleri Okuma Şeklimizi Nasıl Değiştiriyor?`,
+    date: `2026-06-09`,
+    excerpt: `100 sayfalık raporları okumayı bırakın.Büyük Dil Modellerinin (LLM'ler), yanıtları anında almak için belgelerinizle tam anlamıyla 'konuşmanıza' nasıl olanak tanıdığını öğrenin.`,
+    content: `<p>150 sayfalık bir mali raporu veya yoğun bir akademik makaleyi okumak eskiden saatlerce altını çizmek, not almak ve aramakla geçiyordu.2026 yılında o dönem resmen sona erdi.Yapay Zeka Belge Sohbeti çağına hoş geldiniz.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>"PDF ile Sohbet" nedir?</h2>
+<p>Belgenin yazarının yanınızda oturduğunu ve ona soru sorabildiğinizi hayal edin.<em>"3. Çeyrek için toplam gelir nedir?"</em> veya <em>"Bu deneyin metodolojisini 3 madde işaretiyle özetleyin."</em></p>
+<p><a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">PDF ile sohbet aracımız</a> gelişmiş Büyük Dil Modellerini (LLM'ler) kullanır.Bir dosyayı yüklediğinizde, AI belgenin tamamını saniyeler içinde "okur" ve onu vektör belleğinde saklar.Daha sonra metinle ilgili sorular sormak için bir sohbet arayüzü (tıpkı ChatGPT gibi) kullanırsınız.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Aslında Nasıl Çalışıyor (Gelişmiş Durumda)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>Metin Çıkarma:</strong> Sistem PDF'yi ayrıştırarak tüm metin ve tabloları çıkarır.</li>
+<li><strong>Vektörleştirme:</strong> Metin "parçalara" bölünür ve yerleştirme adı verilen matematiksel sayılara dönüştürülür.</li>
+<li><strong>Anlamsal Arama:</strong> Bir soru sorduğunuzda yapay zeka, sorunuzla en alakalı paragrafları tam olarak bulmak için matematikte arama yapar.</li>
+<li><strong>Nesil:</strong> LLM bu belirli paragrafları okur ve genellikle bilgiyi bulduğu sayfa numarasını tam olarak belirterek doğal, konuşmaya benzer bir yanıt yazar!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Kullanım Durumları</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Öğrenciler:</strong> Anında çalışma kılavuzları ve bilgi kartları oluşturmak için ders kitapları yükleyin.<br><strong>Avukatlar:</strong> CTRL+F olmadan emsalleri anında bulmak için vaka dosyaları yükleyin.<br><strong>Analistler:</strong> Belirli finansal ölçümleri anında çıkarmak için 10-K raporlar yükleyin.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Önce Gizlilik</h2>
+<p>Yapay zekayla ilgili en büyük endişe veri gizliliğidir.TheyLovePDF gibi profesyonel araçları kullanırken belge verileriniz kesinlikle korumalı alana alınır.Hiçbir zaman küresel yapay zeka modellerini eğitmek için kullanılmaz ve oturumunuz sona erdikten sonra veriler sunuculardan otomatik olarak silinir.</p>
+<p>Geride kalmayın.Bugün belgelerinizle sohbet etmeye başlayın ve okuma hızınızı 10 kat artırın.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `PDF Boyutunu Küçültmek için En İyi iLovePDF Alternatifi`,
+    date: `2026-06-23`,
+    excerpt: `Kaliteyi kaybetmeden veya agresif reklamlarla uğraşmadan bir PDF'yi sıkıştırmak mı istiyorsunuz?İşte bu nedenle TheyLovePDF, iLovePDF'e üstün bir alternatiftir.`,
+    content: `<p>Bunu okuyorsanız muhtemelen PDF boyutunuzu küçültmenin bir yolunu aradınız ve iLovePDF kullanmayı düşündünüz.Popüler bir araç olmasına rağmen birçok kullanıcı, belgelerinin görsel kalitesinden ödün vermeyen, daha hızlı, reklamsız bir alternatif arıyor.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Neden Bir Alternatif Aramalısınız?</h2>
+<p>Eski PDF araçlarının çoğu, görsellerinizin ve vektör grafiklerinizin kalitesini bozan agresif sıkıştırma algoritmalarına dayanır.Üstelik, ücretsiz katmanlar genellikle günlük sınırlarla ciddi şekilde sınırlandırılıyor ve araya giren reklamlarla dolduruluyor.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>OnlarLovePDF Avantajı</h2>
+<p><a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Sıkıştırma aracımızı</a> sektördeki mutlak en iyi araç olacak şekilde tasarladık.Kullanıcıların geçiş yapmasının nedeni şu:</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>Akıllı Yapay Zeka Sıkıştırma:</strong> Motorumuz yalnızca görüntü çözünürlüğünü düşürmek yerine belgenizi matematiksel olarak analiz eder ve görünmez meta verileri, referans verilmeyen yazı tiplerini ve yinelenen veri yapılarını kaldırır.</li>
+<li><strong>Sıfır Reklam:</strong> Yardımcı araçların temiz ve dikkat dağıtıcı olmaması gerektiğine inanıyoruz.Sıkıştırma aracımızda tek bir banner reklam bulamazsınız.</li>
+<li><strong>Katı Gizlilik:</strong> Dosyalarınız 256 bit SSL şifrelemeyle korunur ve 2 saat sonra sunucularımızdan kalıcı olarak silinir.Verilerinizi okumuyoruz veya satmıyoruz.</li>
+</ul>
+
+<p>Bir dahaki sefere bir e-posta eki veya WhatsApp mesajı için devasa bir dosyayı küçültmeniz gerektiğinde eski araçları atlayın.Dosyanızı TheyLovePDF'e sürükleyip bırakın ve farkı yaşayın.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `iPhone'unuzda PowerPoint'i (PPT) PDF'ye Dönüştürme`,
+    date: `2026-06-23`,
+    excerpt: `Telefonunuzdan bir sunum göndermeniz mi gerekiyor?Bir .ppt veya .pptx dosyasını doğrudan iOS'ta profesyonel bir PDF'ye dönüştürmenin en hızlı yolunu öğrenin.`,
+    content: `<p>İster otobüste ödevini teslim etmeye çalışan bir öğrenci olun, ister havaalanından müşteriye bir desteyi e-postayla gönderen bir profesyonel olun, iPhone'unuzda bir PowerPoint dosyasını PDF'ye dönüştürmek çok önemli bir mobil beceridir.</p>
+<p>PDF'ler, alıcının kullandığı cihaz ne olursa olsun, yazı tiplerinizin, biçimlendirmenizin ve düzenlerinizin alıcının ekranında tamamen aynı görüneceğini garanti eder.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Sorunsuz Yöntem</h2>
+<p>Yalnızca bir dosyayı dönüştürmek için ağır bir sunum uygulaması indirmeyin.Bunu Safari aracılığıyla saniyeler içinde güvenli bir şekilde yapabilirsiniz.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class = "space-y-3 mb-0">
+<li>Safari'yi açın ve <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office'ten PDF'ye Dönüştürücü</a>'ye gidin (bu araç Word, Excel ve PowerPoint'i destekler).</li>
+<li>Yükle düğmesine dokunun ve <strong>Dosya Seç</strong>'i seçin.</li>
+<li>İndirdiğiniz <em>.pptx</em> dosyasını iPhone'unuzun Dosyalar uygulamasında veya iCloud Drive'da bulun.</li>
+<li>Dönüştür'e dokunun.Kurumsal düzeydeki görüntü oluşturma motorumuz, tüm slayt düzenlerinizi ve vektör grafiklerinizi mükemmel şekilde koruyacaktır.</li>
+<li>İndir'e dokunun ve net, yeni PDF'yi cihazınıza kaydedin.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Tüm bu süreç bulutta gerçekleşiyor; yani iPhone'unuzun pilini tüketmiyor veya herhangi bir yerel depolama alanı kaplamıyor!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Windows 10 ve 11'de PDF'yi Dijital Olarak İmzalama`,
+    date: `2026-06-23`,
+    excerpt: `Sözleşmeleri yazdırmayı ve taramayı bırakın.İşte Windows PC'nizde bir belgeyi imzalamanın yasal olarak bağlayıcı, profesyonel yolu.`,
+    content: `<p>Bir sözleşmenin e-posta yoluyla alınması, bunun yazdırılması, bir kalemle imzalanması, tekrar bilgisayara taranması ve bozulmuş, çarpık bir görüntünün gönderene e-postayla gönderilmesi anlamına geliyordu.2026'da bu iş akışı resmi olarak sona erecek.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Windows'ta Oturum Açmanın Modern Yolu</h2>
+<p>Yasal olarak bağlayıcı bir elektronik imzayı yürütmek için Adobe Acrobat'ın veya Windows makinenizde herhangi bir ücretli yazılımın yüklü olması gerekmez.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li>Chrome veya Edge'i açın ve <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">PDF İmzalama aracına</a> gidin.</li>
+<li>Sözleşmenizi sayfaya sürükleyip bırakın.</li>
+<li>Araç çubuğunda <strong>İmza</strong> simgesini tıklayın.</li>
+<li>Nasıl imzalamak istediğinizi seçin:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Çizim:</strong> İmzanızı yazmak için farenizi veya Windows dokunmatik ekranını/kalemini kullanın.</li>
+<li><strong>Tür:</strong> Adınızı yazın ve profesyonel bir el yazısı yazı tipi seçin.</li>
+<li><strong>Yükle:</strong> Gerçek imzanızın temiz bir fotoğrafı varsa yükleyin.Aracımız beyaz arka planı otomatik olarak kaldıracaktır!</li>
+</ul>
+</li>
+<li>İmzanızı noktalı çizginin üzerine sürükleyin, yeniden boyutlandırın ve <strong>Uygula</strong>'yı tıklayın.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Bu imzalar yasal mı?</strong> Evet!Başlıca uluslararası çerçeveler (ABD ESIGN Yasası ve Avrupa eIDAS gibi) kapsamında, elektronik imzalar neredeyse tüm standart iş anlaşmaları için ıslak mürekkepli imzayla tamamen aynı yasal ağırlığa sahiptir.</p>
+</div>`
+  },
 ];

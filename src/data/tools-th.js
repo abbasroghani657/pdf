@@ -1,1135 +1,1058 @@
+// Auto-generated translation file for th
 export const TOOLS_DATA_TH = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF เป็น Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `แปลงไฟล์ PDF ของคุณให้เป็นเอกสาร DOC และ DOCX ที่แก้ไขได้ง่าย`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `เป็นที่นิยม` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `อัปโหลดเอกสาร PDF ของคุณโดยลากไปที่โซนวางหรือคลิกปุ่ม 'เลือกไฟล์'`,
+      `OCR และเครื่องมือการแปลงขั้นสูงของเราจะเริ่มแยกข้อความ เค้าโครง และการจัดรูปแบบทันที`,
+      `ดาวน์โหลดเอกสาร Word (DOC/DOCX) ที่แปลงอย่างสมบูรณ์แบบแล้ว พร้อมสำหรับการแก้ไข`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `ตัวแปลง PDF เป็น Word คืออะไร?`,
+        "answer": `ตัวแปลง PDF เป็น Word เป็นยูทิลิตี้ที่แยกข้อความ เลย์เอาต์ และรูปภาพจาก PDF แล้วสร้างใหม่เป็นเอกสาร Microsoft Word ที่สามารถแก้ไขได้อย่างสมบูรณ์โปรแกรมการแปลงระดับพรีเมียมของเราจะรักษาแบบอักษร เค้าโครง ตาราง และรูปภาพ เพื่อให้เอกสาร Word ของคุณดูเหมือน PDF ต้นฉบับทุกประการ`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `ฉันสามารถแปลง PDF ที่สแกนเป็นเอกสาร Word ที่แก้ไขได้หรือไม่`,
+        "answer": `อย่างแน่นอน.เทคโนโลยี OCR (การรู้จำอักขระด้วยแสง) ในตัวของเราจะตรวจจับข้อความที่สแกนโดยอัตโนมัติและทำให้สามารถแก้ไขได้อย่างสมบูรณ์ในไฟล์ DOCX ที่ได้`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `PDF ที่เป็นความลับของฉันปลอดภัยหรือไม่ระหว่างการแปลง?`,
+        "answer": `เราให้ความสำคัญกับความเป็นส่วนตัวอย่างจริงจังไฟล์ของคุณจะถูกเข้ารหัสผ่าน SSL 256 บิตระหว่างการถ่ายโอน และถูกลบออกจากเซิร์ฟเวอร์ของเราอย่างถาวรโดยอัตโนมัติภายใน 2 ชั่วโมง`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `คำเป็น PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `ทำให้ไฟล์ DOC และ DOCX อ่านได้ง่ายด้วยการแปลงเป็น PDF`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `เป็นที่นิยม` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `เลือกไฟล์ DOC หรือ DOCX จากคอมพิวเตอร์ของคุณ หรือลากไปไว้บนหน้า`,
+      `เครื่องมือจะล็อคการจัดรูปแบบทันทีและแปลงเอกสาร Word เป็นรูปแบบ PDF สากล`,
+      `ดาวน์โหลดไฟล์ PDF ใหม่ของคุณเค้าโครงจะมีลักษณะเหมือนกันในทุกอุปกรณ์`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `เหตุใดฉันจึงควรแปลง Word เป็น PDF`,
+        "answer": `การแปลงเป็น PDF ช่วยให้มั่นใจได้ว่าเค้าโครง แบบอักษร และรูปภาพของเอกสารของคุณจะเหมือนกันทุกประการบนอุปกรณ์ใดๆ ก็ตาม ป้องกันข้อผิดพลาดในการจัดรูปแบบเมื่อแชร์กับผู้อื่น`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `ขอบและแบบอักษรของฉันจะยังคงอยู่หรือไม่`,
+        "answer": `ใช่ ตัวแปลง Word เป็น PDF ของเราจะล็อครูปแบบที่แน่นอนของคุณ รวมถึงแบบอักษรที่กำหนดเองและการตั้งค่าระยะขอบที่แม่นยำ`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `ฉันสามารถแปลงไฟล์ Word หลายไฟล์พร้อมกันได้หรือไม่`,
+        "answer": `ใช่ คุณสามารถอัปโหลดไฟล์ DOC/DOCX ได้หลายไฟล์ และเราจะประมวลผลไฟล์เหล่านั้นพร้อมกันเพื่อการแปลงความเร็วสูง`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF เป็น Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `แยกตารางและข้อมูลจาก PDF ลงในสเปรดชีต Excelผลลัพธ์ที่ดีที่สุดด้วย PDF แบบข้อความรองรับ PDF ที่สแกนผ่าน OCR — ความแม่นยำอาจแตกต่างกันไป`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `อัปโหลดไฟล์ PDF ที่มีตารางและข้อมูลที่คุณต้องการแยก`,
+      `ระบบของเราจะสแกนเอกสาร ระบุข้อมูลแบบตาราง และจัดรูปแบบลงในเซลล์สเปรดชีตอย่างแม่นยำ`,
+      `ดาวน์โหลดไฟล์ Excel (XLSX) ที่แก้ไขได้ของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `ตาราง PDF ของฉันจะได้รับการจัดรูปแบบอย่างถูกต้องใน Excel หรือไม่`,
+        "answer": `ใช่ เครื่องมือแยกข้อมูลอัจฉริยะของเราจะจดจำแถวและคอลัมน์ เพื่อให้มั่นใจว่าข้อมูลแบบตารางของคุณได้รับการจัดระเบียบไว้ในเซลล์ Excel อย่างเรียบร้อย`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `สามารถดึงข้อมูลจาก PDF ที่สแกนได้หรือไม่`,
+        "answer": `ใช่ เทคโนโลยี OCR ของเราสามารถอ่านตารางจากรูปภาพที่สแกน และแปลงเป็นสเปรดชีต Excel ที่แก้ไขได้`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `มีการนำสูตรไปใช้หรือไม่`,
+        "answer": `PDF ไม่ได้จัดเก็บสูตร แต่จะเก็บเฉพาะข้อมูลดิบเท่านั้นไฟล์ Excel ที่แตกออกมาจะมีค่าที่แน่นอนซึ่งมองเห็นได้ใน PDF`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel เป็น PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `ทำให้สเปรดชีต EXCEL อ่านง่ายโดยแปลงเป็น PDF`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `อัปโหลดสเปรดชีต Excel (XLS หรือ XLSX) ของคุณ`,
+      `เครื่องมือของเราจะปรับเค้าโครงของสเปรดชีตให้พอดีกับหน้า PDF โดยไม่ต้องตัดคอลัมน์`,
+      `ดาวน์โหลดเอกสาร PDF ที่สรุปผลแล้ว`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `สเปรดชีตแบบกว้างของฉันจะถูกตัดออกหรือไม่`,
+        "answer": `โปรแกรมแปลงไฟล์ของเราจะปรับขนาดและจัดรูปแบบสเปรดชีตของคุณอย่างชาญฉลาด เพื่อให้แน่ใจว่าคอลัมน์จะพอดีกับหน้า PDF`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `มันแปลงแผ่นงานทั้งหมดหรือไม่?`,
+        "answer": `ใช่ แผ่นงานที่ใช้งานอยู่ทั้งหมดในไฟล์ Excel ของคุณจะถูกแปลงเป็นหน้าต่อเนื่องกันในรูปแบบ PDF สุดท้าย`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `ข้อมูลทางการเงินของฉันปลอดภัยหรือไม่?`,
+        "answer": `100%.เราใช้การเข้ารหัสจากต้นทางถึงปลายทาง และไฟล์ทั้งหมดจะถูกลบออกจากระบบของเราอย่างถาวรภายใน 2 ชั่วโมง`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF เป็น JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `แปลงหน้า PDF แต่ละหน้าเป็น JPG หรือแยกรูปภาพทั้งหมดที่มีอยู่`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `อัปโหลดเอกสาร PDF ที่คุณต้องการแปลงเป็นรูปภาพ`,
+      `เลือกว่าจะแยกภาพที่ฝังไว้หรือแปลงหน้า PDF ทั้งหมดเป็น JPG ที่มีความละเอียดสูง`,
+      `ดาวน์โหลด JPG ทีละไฟล์หรือเป็นไฟล์ ZIP ที่บีบอัด`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `คุณภาพ JPG จะสูงหรือไม่?`,
+        "answer": `ใช่ เราแยกและแปลงหน้าที่ความละเอียดสูง เพื่อให้มั่นใจว่าข้อความที่คมชัดและภาพที่ชัดเจนในไฟล์ JPG ที่ได้`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `ฉันสามารถแยกเฉพาะรูปภาพจาก PDF ได้หรือไม่`,
+        "answer": `อย่างแน่นอน.คุณสามารถเลือกที่จะแยกเฉพาะรูปภาพที่ฝังอยู่ใน PDF แทนที่จะแปลงทั้งหน้า`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `มีการจำกัดจำนวนหน้าที่ฉันสามารถแปลงได้หรือไม่?`,
+        "answer": `ผู้ใช้ฟรีสามารถแปลงไฟล์ PDF มูลค่าสูงสุด 10MBผู้ใช้มืออาชีพสามารถประมวลผลไฟล์ขนาดใหญ่ได้ถึง 2GB`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG เป็น PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `แปลงรูปภาพ JPG เป็น PDF ในไม่กี่วินาทีปรับการวางแนวและระยะขอบได้อย่างง่ายดาย`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `เลือกภาพ JPG หนึ่งภาพหรือหลายภาพจากอุปกรณ์ของคุณ`,
+      `ลากและวางเพื่อจัดเรียงลำดับใหม่ ปรับการวางแนวหน้า และตั้งค่าระยะขอบหากจำเป็น`,
+      `คลิก 'แปลง' และดาวน์โหลดเอกสาร PDF แบบรวมของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `ฉันสามารถรวม JPG หลาย ๆ ไฟล์เป็น PDF เดียวได้หรือไม่`,
+        "answer": `ใช่ เพียงอัปโหลดภาพหลายภาพ จัดเรียงตามลำดับที่คุณต้องการ แล้วเราจะรวมภาพเหล่านั้นเป็นเอกสาร PDF เดียว`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `รูปภาพของฉันจะสูญเสียคุณภาพหรือไม่?`,
+        "answer": `ไม่ เรารักษาความละเอียดและคุณภาพดั้งเดิมของรูปภาพ JPG ของคุณไว้เมื่อฝังลงใน PDF`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `ฉันสามารถปรับระยะขอบและการวางแนวได้หรือไม่?`,
+        "answer": `ใช่ เครื่องมือของเราช่วยให้คุณปรับแต่งการวางแนวหน้า (แนวตั้งหรือแนวนอน) และขนาดระยะขอบก่อนการแปลง`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF เป็น PowerPoint`,
+    "desc": `เปลี่ยนไฟล์ PDF ของคุณให้เป็นสไลด์โชว์ PPT และ PPTX ที่แก้ไขได้ง่าย`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `อัปโหลด PDF ที่คุณต้องการเปลี่ยนเป็นงานนำเสนอ`,
+      `กลไก AI ของเราจะวิเคราะห์สไลด์และแปลงเป็นรูปแบบ PPTX ที่แก้ไขได้`,
+      `ดาวน์โหลดงานนำเสนอ PowerPoint ใหม่ของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `ข้อความใน PowerPoint ของฉันจะสามารถแก้ไขได้หรือไม่`,
+        "answer": `ใช่ ข้อความ รูปร่าง และรูปภาพทั้งหมดจะสามารถแก้ไขได้อย่างสมบูรณ์ในไฟล์ PPTX ที่ได้`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `ใช้งานได้กับงานนำเสนอที่สแกนหรือไม่`,
+        "answer": `ใช่ การใช้ OCR ทำให้เราสามารถแยกข้อความจากสไลด์ที่สแกนและทำให้สามารถแก้ไขได้ใน PowerPoint`
       },
-      {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `พาวเวอร์พอยต์เป็น PDF`,
+    "desc": `ทำให้สไลด์โชว์ PPT และ PPTX ง่ายต่อการดูโดยแปลงเป็น PDF`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `เลือกไฟล์ PPT หรือ PPTX ของคุณ`,
+      `เครื่องมือนี้จะแปลงสไลด์ของคุณเป็นรูปแบบ PDF ที่ปลอดภัยและเป็นสากลทันที`,
+      `ดาวน์โหลดงานนำเสนอของคุณเป็น PDF`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `เหตุใดจึงแปลง PowerPoint เป็น PDF`,
+        "answer": `การแปลงทำให้มั่นใจว่างานนำเสนอของคุณมีลักษณะเหมือนกันบนอุปกรณ์ใดๆ ก็ตาม ป้องกันแบบอักษรที่หายไปหรือเค้าโครงที่เสียหายเมื่อนำเสนอบนคอมพิวเตอร์เครื่องอื่น`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `การเปลี่ยนสไลด์ของฉันได้รับการบันทึกไว้หรือไม่`,
+        "answer": `ไม่ PDF เป็นรูปแบบเอกสารคงที่ ดังนั้นภาพเคลื่อนไหวและการเปลี่ยนสไลด์จะไม่ถูกส่งต่อ`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `รวมบันทึกของผู้บรรยายด้วยหรือไม่`,
+        "answer": `ในปัจจุบัน เครื่องมือของเราจะแปลงภาพสไลด์หลักบันทึกของผู้บรรยายไม่รวมอยู่ในเอาต์พุต PDF มาตรฐาน`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF เป็น HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `แปลงเอกสาร PDF ของคุณให้เป็นเว็บเพจ HTML ได้อย่างสมบูรณ์แบบ`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `อัปโหลดไฟล์ PDF ของคุณ`,
+      `ระบบของเราจะแปลงเอกสารเป็น HTML, CSS และรูปภาพที่พร้อมใช้งานบนเว็บ`,
+      `ดาวน์โหลดไฟล์ ZIP ที่มีหน้าเว็บใหม่ของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `HTML จะตอบสนองหรือไม่?`,
+        "answer": `HTML จะจับคู่เค้าโครงคงที่ของ PDF ของคุณอย่างใกล้ชิด โดยรักษาตำแหน่งที่แน่นอนเพื่อความถูกต้อง`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `รูปภาพถูกดึงออกมาโดยอัตโนมัติหรือไม่?`,
+        "answer": `ใช่ รูปภาพที่ฝังไว้ทั้งหมดจะถูกแยกออกมาและมีการอ้างอิงอย่างถูกต้องในโค้ด HTML ที่สร้างขึ้น`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `ฉันจำเป็นต้องมีทักษะการเขียนโค้ดเพื่อใช้สิ่งนี้หรือไม่?`,
+        "answer": `ไม่เลย.คุณจะได้รับไฟล์ HTML ที่พร้อมใช้งานซึ่งคุณสามารถเปิดได้ทันทีในเว็บเบราว์เซอร์ใดก็ได้`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML เป็น PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `แปลงหน้าเว็บในรูปแบบ HTML เป็น PDF โดยตรงจาก URL หรือไฟล์`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `อัปโหลดไฟล์ HTML ของคุณหรือป้อน URL ของหน้าเว็บ`,
+      `เอ็นจิ้นการเรนเดอร์ของเราจะโหลดเพจ ใช้สไตล์ และบันทึกเป็นเอกสาร PDF`,
+      `ดาวน์โหลด PDF ที่มีรูปแบบสมบูรณ์แบบของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `ฉันสามารถแปลง URL สดเป็น PDF ได้หรือไม่`,
+        "answer": `ใช่ คุณสามารถป้อน URL และเครื่องมือของเราจะดึงหน้าเว็บที่ใช้งานอยู่และแปลงเป็น PDF คุณภาพสูง`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `มีการใช้สไตล์ CSS หรือไม่`,
+        "answer": `อย่างแน่นอน.เครื่องมือเรนเดอร์ของเรารองรับ CSS อย่างสมบูรณ์ ทำให้มั่นใจได้ว่า PDF จะดูเหมือนหน้าเว็บที่ใช้งานจริงทุกประการ`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `แล้วหน้าที่หนักของ JavaScript ล่ะ?`,
+        "answer": `เครื่องมือของเราจะรัน JavaScript ก่อนที่จะบันทึกเพจ เพื่อให้มั่นใจว่าเนื้อหาไดนามิกจะแสดงผลอย่างเหมาะสมในรูปแบบ PDF สุดท้าย`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF เป็นข้อความ`,
+    "desc": `แยกข้อความจากไฟล์ PDF ของคุณเพื่อสร้างเอกสาร TXT ที่แก้ไขได้`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `อัปโหลดเอกสาร PDF ของคุณ`,
+      `ระบบของเราจะตัดการจัดรูปแบบออกและแยกข้อความธรรมดาออกมา`,
+      `ดาวน์โหลดไฟล์ TXT ดิบของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `มันดึงข้อความจากรูปภาพหรือไม่?`,
+        "answer": `ใช่ หาก PDF มีรูปภาพที่สแกน เทคโนโลยี OCR ของเราจะอ่านข้อความและรวมไว้ในไฟล์ TXT`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `การจัดรูปแบบถูกเก็บไว้หรือไม่?`,
+        "answer": `ไม่ เครื่องมือนี้จะลบการจัดรูปแบบทั้งหมดออกโดยเฉพาะเพื่อให้คุณได้รับข้อความธรรมดาที่ไม่มีสไตล์`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `ข้อมูลของฉันปลอดภัยหรือไม่?`,
+        "answer": `ใช่ ไฟล์ทั้งหมดจะถูกเข้ารหัสระหว่างการประมวลผลและถูกลบโดยอัตโนมัติภายใน 2 ชั่วโมง`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `รวม PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `รวม PDF ตามลำดับที่คุณต้องการด้วยการรวม PDF ที่ง่ายที่สุด`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `เป็นที่นิยม` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `เลือกไฟล์ PDF หลายไฟล์จากอุปกรณ์ของคุณ`,
+      `ลากและวางภาพขนาดย่อเพื่อจัดเรียงไฟล์ตามลำดับที่คุณต้องการ`,
+      `คลิก 'รวม' และดาวน์โหลดเอกสาร PDF เดียวที่รวมกันของคุณ`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `การควบรวมกิจการ PDF คืออะไร?`,
+        "answer": `การรวม PDF เป็นโปรแกรมอรรถประโยชน์ที่รวมไฟล์ PDF หลายไฟล์ไว้ในเอกสารเดียวที่ต่อเนื่องกันผู้ใช้ฟรีสามารถรวมไฟล์ได้สูงสุด 20 ไฟล์ในคราวเดียวผู้ใช้มืออาชีพสามารถรวมเอกสารได้ไม่จำกัดจำนวน`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `ฉันสามารถเปลี่ยนลำดับของไฟล์ได้หรือไม่?`,
+        "answer": `ใช่!หลังจากอัปโหลด เพียงลากและวางภาพขนาดย่อของไฟล์เพื่อจัดเรียงใหม่ตามที่คุณต้องการ`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `การรวมลดคุณภาพหรือไม่`,
+        "answer": `ไม่เลย.กระบวนการผสานจะรักษาคุณภาพต้นฉบับและการจัดรูปแบบเอกสารทั้งหมดของคุณ`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `แยก PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Separate one page or a whole set for easy conversion into independent PDF files.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Upload the PDF you wish to split.`,
+      `Choose whether to extract specific pages or split the document into fixed ranges.`,
+      `Download your new, separated PDF files as a ZIP archive.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Can I extract just one page from a large PDF?`,
+        "answer": `Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Will the split files retain original quality?`,
+        "answer": `Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `How do I download multiple split files?`,
+        "answer": `When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `หมุน PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `หมุน PDF ของคุณตามที่คุณต้องการคุณสามารถหมุน PDF หลายไฟล์พร้อมกันได้`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `อัปโหลดเอกสาร PDF ของคุณ`,
+      `วางเมาส์เหนือหน้าที่คุณต้องการหมุนแล้วคลิกไอคอนหมุน หรือหมุนหน้าทั้งหมดในครั้งเดียว`,
+      `คลิกนำไปใช้และดาวน์โหลดไฟล์ PDF ที่หมุนเวียนอย่างถาวรของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `ฉันสามารถหมุนเวียนเฉพาะหน้าใดหน้าหนึ่งได้หรือไม่`,
+        "answer": `ได้ คุณสามารถเลือกแต่ละหน้าและหมุนได้ 90, 180 หรือ 270 องศา โดยไม่กระทบต่อส่วนที่เหลือของเอกสาร`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `การหมุนเป็นแบบถาวรหรือไม่?`,
+        "answer": `ใช่ เมื่อคุณดาวน์โหลดไฟล์ใหม่ การเปลี่ยนแปลงการวางแนวจะถูกบันทึกลงในข้อมูลเมตาของ PDF อย่างถาวร`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `การอัพโหลดเอกสารที่เป็นความลับปลอดภัยหรือไม่?`,
+        "answer": `อย่างแน่นอน.การอัปโหลดทั้งหมดจะถูกเข้ารหัสผ่าน HTTPS และถูกล้างออกจากเซิร์ฟเวอร์ของเรา 2 ชั่วโมงหลังการประมวลผล`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `ลบหน้า`,
+    "desc": `ลบหน้าออกจากเอกสาร PDF ได้ในพริบตา`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `อัปโหลดไฟล์ PDF ของคุณ`,
+      `เลือกหน้าที่คุณต้องการลบโดยคลิกที่ภาพขนาดย่อ`,
+      `คลิก 'ลบเพจ' และดาวน์โหลดเอกสารที่ได้รับการปรับปรุงใหม่ของคุณ`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `ฉันจะรู้ได้อย่างไรว่าเพจไหนควรลบ?`,
+        "answer": `เครื่องมือของเราสร้างภาพขนาดย่อคุณภาพสูงของทุกหน้า ช่วยให้คุณสามารถระบุและเลือกหน้าที่คุณต้องการลบด้วยภาพได้`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `ฉันสามารถลบหลายหน้าพร้อมกันได้หรือไม่?`,
+        "answer": `ได้ คุณสามารถคลิกภาพขนาดย่อหลายภาพหรือพิมพ์ช่วงหน้าเพื่อลบหลายหน้าพร้อมกันได้`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `เอกสารส่วนที่เหลือได้รับผลกระทบหรือไม่?`,
+        "answer": `ไม่ หน้าที่เหลือทั้งหมดจะคงรูปแบบ คุณภาพ และความละเอียดดั้งเดิมไว้`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `จัดลำดับหน้าใหม่`,
+    "desc": `เปลี่ยนลำดับหน้าของเอกสาร PDF ของคุณด้วยการลากและวาง`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `อัปโหลดเอกสาร PDF ของคุณ`,
+      `เพียงลากและวางภาพขนาดย่อของหน้าเพื่อเปลี่ยนลำดับ`,
+      `เมื่อจัดเตรียมแล้ว ให้ใช้การเปลี่ยนแปลงและดาวน์โหลดไฟล์ PDF ที่จัดระเบียบใหม่ของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `การจัดเรียงเอกสารขนาดใหญ่ใหม่ทำได้ง่ายหรือไม่?`,
+        "answer": `ใช่ อินเทอร์เฟซแบบลากและวางที่ใช้งานง่ายของเราช่วยให้คุณย้ายหน้าต่างๆ ได้อย่างรวดเร็ว แม้ในเอกสารขนาดใหญ่`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `ฉันจะสูญเสียองค์ประกอบเชิงโต้ตอบใดๆ หรือไม่`,
+        "answer": `องค์ประกอบเชิงโต้ตอบมาตรฐานส่วนใหญ่จะยังคงอยู่ แม้ว่าฟิลด์ฟอร์มที่ซับซ้อนที่เชื่อมโยงหลายเพจอาจมีพฤติกรรมแตกต่างออกไป`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `ฉันสามารถยกเลิกการย้ายก่อนที่จะบันทึกได้หรือไม่?`,
+        "answer": `ใช่ คุณสามารถจัดเรียงหน้าใหม่ได้บ่อยเท่าที่คุณต้องการก่อนที่จะคลิกปุ่มกระบวนการขั้นสุดท้าย`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `เพิ่มหน้าว่าง`,
+    "desc": `แทรกหน้าว่างที่ใดก็ได้ภายในเอกสาร PDF ของคุณ`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `อัปโหลดไฟล์ PDF ของคุณ`,
+      `เลือกตำแหน่งที่แน่นอนที่คุณต้องการแทรกหน้าว่างใหม่`,
+      `ใช้การเปลี่ยนแปลงและดาวน์โหลดไฟล์ PDF ที่อัปเดตของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `เหตุใดฉันจึงต้องเพิ่มหน้าว่าง?`,
+        "answer": `การเพิ่มหน้าว่างมีประโยชน์สำหรับการพิมพ์เอกสารสองด้าน การแทรกบันทึกย่อในอนาคต หรือการแก้ไขการจัดรูปแบบการแบ่งหน้า`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `ฉันสามารถเพิ่มหน้าว่างหลายหน้าได้หรือไม่`,
+        "answer": `ได้ คุณสามารถแทรกหน้าว่างได้มากเท่าที่คุณต้องการ ทุกที่ในเอกสาร`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `หน้าว่างจะตรงกับขนาดของเอกสารหรือไม่`,
+        "answer": `ใช่ หน้าว่างใหม่จะจับคู่ขนาดและการวางแนวของหน้ารอบๆ โดยอัตโนมัติ`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `บีบอัด PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `ลดขนาดไฟล์ในขณะที่ปรับให้เหมาะสมเพื่อคุณภาพ PDF สูงสุด`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `เป็นที่นิยม` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `อัปโหลดไฟล์ PDF ขนาดใหญ่ของคุณ`,
+      `เลือกระดับการบีบอัดที่คุณต้องการ (การบีบอัดสูงสุด แนะนำ หรือน้อยกว่า)`,
+      `ดาวน์โหลดไฟล์ PDF ที่ปรับให้เหมาะสมและมีขนาดเล็กลงมาก`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `การบีบอัดจะทำลายคุณภาพของ PDF ของฉันหรือไม่`,
+        "answer": `อัลกอริธึมการปรับให้เหมาะสมขั้นสูงของเราลดขนาดไฟล์โดยการบีบอัดรูปภาพและลบข้อมูลที่ซ้ำซ้อน ในขณะเดียวกันก็รักษาข้อความให้คมชัดและรูปภาพก็ชัดเจน`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `ฉันควรเลือกระดับการบีบอัดใด`,
+        "answer": `เราขอแนะนำ 'แนะนำ' เพื่อความสมดุลที่สมบูรณ์แบบใช้ 'Extreme' เฉพาะในกรณีที่คุณต้องการขนาดไฟล์ที่เล็กที่สุดเท่าที่จะเป็นไปได้สำหรับไฟล์แนบในอีเมลอย่างเร่งด่วน`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `ฉันสามารถบีบอัด PDF ที่มีขนาดเล็กอยู่แล้วได้หรือไม่`,
+        "answer": `คุณสามารถทำได้ แต่การลดขนาดไฟล์จะน้อยที่สุดเนื่องจากข้อมูลน่าจะได้รับการปรับให้เหมาะสมแล้ว`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `ซ่อมแซม PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `ซ่อมแซม PDF ที่เสียหายและกู้คืนข้อมูลจากไฟล์ที่เสียหาย`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `อัปโหลดไฟล์ PDF ที่เสียหายหรือเสียหาย`,
+      `ระบบของเราจะวิเคราะห์โครงสร้างไฟล์และพยายามสร้างข้อมูลที่เสียหายขึ้นมาใหม่`,
+      `ดาวน์โหลดเอกสาร PDF ที่ได้รับการซ่อมแซม`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `PDF ที่เสียหายทั้งหมดสามารถแก้ไขได้หรือไม่`,
+        "answer": `แม้ว่าเครื่องมือของเราจะมีประสิทธิภาพสูงในการแก้ไขข้อผิดพลาดทางโครงสร้างและส่วนหัวที่เสียหาย แต่ไฟล์ที่เสียหายอย่างรุนแรงโดยมีข้อมูลดิบหายไปอาจไม่สามารถกู้คืนได้ทั้งหมด`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `การซ่อมใช้เวลานานเท่าใด?`,
+        "answer": `ไฟล์ส่วนใหญ่ได้รับการวิเคราะห์และซ่อมแซมภายในไม่กี่วินาที ขึ้นอยู่กับความซับซ้อนของความเสียหาย`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `ข้อมูลภายในปลอดภัยหรือไม่?`,
+        "answer": `ใช่.เราดำเนินการซ่อมแซมอย่างปลอดภัยในระบบคลาวด์ และเอกสารของคุณจะถูกลบอย่างถาวรหลังจากนั้นไม่นาน`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `โอซีอาร์ PDF`,
+    "desc": `ทำให้ข้อความใน PDF ที่สแกนสามารถเลือก ค้นหาได้ และแก้ไขได้`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `อัปโหลดเอกสาร PDF ที่สแกนของคุณ`,
+      `เลือกภาษาของข้อความภายในเอกสารเพื่อความแม่นยำยิ่งขึ้น`,
+      `ดาวน์โหลด PDF ใหม่ที่สามารถค้นหาและเลือกได้อย่างสมบูรณ์`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `โอซีอาร์คืออะไร?`,
+        "answer": `OCR ย่อมาจาก Optical Character Recognitionเป็นเทคโนโลยีที่อ่านข้อความภายในรูปภาพหรือเอกสารที่สแกนแล้วแปลงเป็นข้อความคอมพิวเตอร์ที่เลือกและค้นหาได้`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `OCR ทำงานกับข้อความที่เขียนด้วยลายมือหรือไม่`,
+        "answer": `เครื่องมือ OCR ของเรามีความแม่นยำสูงสำหรับข้อความที่พิมพ์ข้อความที่เขียนด้วยลายมืออาจให้ผลลัพธ์ที่แตกต่างกันไปขึ้นอยู่กับความสามารถในการอ่าน`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `ฉันสามารถคัดลอกข้อความจากเอกสาร OCR ได้หรือไม่`,
+        "answer": `อย่างแน่นอน.เมื่อประมวลผลแล้ว คุณสามารถเน้น คัดลอก และวางข้อความได้โดยตรงจาก PDF เช่นเดียวกับเอกสารปกติ`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `แผ่ PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `รวมเลเยอร์ แบบฟอร์ม และคำอธิบายประกอบทั้งหมดไว้ในเลเยอร์เดียวที่ไม่สามารถแก้ไขได้`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `อัปโหลด PDF ที่มีแบบฟอร์ม เลเยอร์ หรือคำอธิบายประกอบ`,
+      `ระบบของเราจะรวมองค์ประกอบภาพทั้งหมดไว้ในเลเยอร์เดียวอย่างถาวร`,
+      `ดาวน์โหลดไฟล์ PDF ที่เรียบและพร้อมพิมพ์`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `เหตุใดฉันจึงควรทำให้ PDF แบนลง`,
+        "answer": `การทำให้ PDF แบนราบจะล็อคข้อมูลในแบบฟอร์ม ป้องกันการแก้ไขคำอธิบายประกอบเพิ่มเติม และทำให้แน่ใจว่าเอกสารจะพิมพ์ตรงตามที่ปรากฏบนหน้าจอทุกประการ`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `PDF ที่แบนแล้วสามารถไม่ทำให้แบนได้หรือไม่`,
+        "answer": `ไม่ การแบนเป็นกระบวนการถาวรเราขอแนะนำให้สำรองข้อมูล PDF แบบโต้ตอบต้นฉบับของคุณไว้`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `การทำให้แบนราบจะลดขนาดไฟล์หรือไม่?`,
+        "answer": `บ่อยครั้งใช่ด้วยการผสานเลเยอร์และการลบฟิลด์ฟอร์มแบบโต้ตอบ โครงสร้างโดยรวมจะง่ายขึ้นและเล็กลง`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `ป้องกัน PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `เข้ารหัส PDF ของคุณด้วยรหัสผ่านเพื่อป้องกันการเข้าถึงโดยไม่ได้รับอนุญาต`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `อัปโหลด PDF ที่คุณต้องการรักษาความปลอดภัย`,
+      `พิมพ์รหัสผ่านที่รัดกุมและยืนยัน`,
+      `ดาวน์โหลดไฟล์ PDF ที่เข้ารหัสใหม่ของคุณ`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `ใช้การเข้ารหัสประเภทใด?`,
+        "answer": `เราใช้การเข้ารหัส AES 256 บิตที่แข็งแกร่ง ซึ่งเป็นมาตรฐานอุตสาหกรรมสำหรับการรักษาความปลอดภัยเอกสารที่มีความละเอียดอ่อนและเป็นความลับสูง`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `TheyLovePDF สามารถกู้คืนรหัสผ่านของฉันได้หรือไม่หากฉันลืม`,
+        "answer": `ไม่ รหัสผ่านของคุณจะไม่ถูกบันทึกไว้บนเซิร์ฟเวอร์ของเราหากคุณทำหาย เอกสารจะไม่สามารถถอดรหัสได้โปรดเก็บไว้อย่างปลอดภัย!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `การป้องกัน PDF ป้องกันการพิมพ์หรือไม่`,
+        "answer": `ใช่ การเข้ารหัสจะล็อคเอกสารไม่ให้เปิด พิมพ์ หรือแก้ไขโดยไม่ต้องใช้รหัสผ่านที่ถูกต้อง`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `ปลดล็อค PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `ลบการรักษาความปลอดภัยด้วยรหัสผ่าน PDF ทำให้คุณมีอิสระในการใช้ PDF ตามที่คุณต้องการ`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `อัปโหลด PDF ที่มีการป้องกันด้วยรหัสผ่านของคุณ`,
+      `หากไฟล์มี 'รหัสผ่านของเจ้าของ' ที่จำกัดการแก้ไข เราจะลบออกทันทีหากมีการจำกัดการเปิด 'รหัสผ่านผู้ใช้' คุณต้องป้อนก่อน`,
+      `ดาวน์โหลด PDF ที่ปลดล็อคของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `คุณสามารถปลดล็อค PDF โดยไม่ต้องใช้รหัสผ่านได้หรือไม่?`,
+        "answer": `เราสามารถลบ 'ข้อจำกัดในการแก้ไข/พิมพ์' (รหัสผ่านของเจ้าของ) ได้อย่างง่ายดายโดยไม่ต้องใช้รหัสผ่านอย่างไรก็ตาม หากไฟล์ต้องการรหัสผ่านเพียงเพื่อเปิดไฟล์ (รหัสผ่านผู้ใช้) คุณต้องระบุรหัสผ่าน`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `การปลดล็อค PDF ถูกกฎหมายหรือไม่?`,
+        "answer": `คุณควรลบการรักษาความปลอดภัยออกจากเอกสารที่คุณเป็นเจ้าของตามกฎหมายหรือได้รับอนุญาตให้แก้ไขเท่านั้น`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `การปลดล็อคจะเปลี่ยนเนื้อหาของเอกสารหรือไม่?`,
+        "answer": `ไม่ เนื้อหา การจัดรูปแบบ และคุณภาพยังคงไม่มีการเปลี่ยนแปลงใดๆ ทั้งสิ้นเฉพาะชั้นความปลอดภัยเท่านั้นที่ถูกลบออก`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `แก้ไข PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `ลบข้อมูลที่ละเอียดอ่อนหรือข้อมูลที่ซ่อนไว้ออกจาก PDF ของคุณอย่างถาวร`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `อัปโหลดไฟล์ PDF ของคุณ`,
+      `วาดกล่องดำเหนือข้อความ รูปภาพ หรือข้อมูลส่วนบุคคลที่ละเอียดอ่อน`,
+      `ใช้การแก้ไขเพื่อขัดข้อมูลอย่างถาวร จากนั้นดาวน์โหลดไฟล์`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `ข้อความที่แก้ไขหายไปแล้วจริงหรือ?`,
+        "answer": `ใช่.แตกต่างจากการวาดรูปสีดำเหนือข้อความ เครื่องมือแก้ไขของเราจะลบข้อมูลข้อความที่ซ่อนอยู่อย่างถาวร ดังนั้นจึงไม่สามารถคัดลอกหรืออ่านโดยเครื่องได้`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `ฉันสามารถแก้ไขภาพด้วยได้หรือไม่?`,
+        "answer": `อย่างแน่นอน.คุณสามารถเลือกพื้นที่ใดก็ได้ของหน้า รวมถึงกราฟิกและภาพถ่าย เพื่อปิดทับอย่างถาวร`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `การทำซ้ำสามารถย้อนกลับได้หรือไม่?`,
+        "answer": `ไม่ เพื่อความปลอดภัยของคุณ การแก้ไขจะทำลายข้อมูลที่ซ่อนไว้อย่างถาวรเก็บข้อมูลสำรองที่ยังไม่ได้แก้ไขเสมอหากจำเป็น`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `ลงชื่อ PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `ลงชื่อด้วยตนเองหรือขอลายเซ็นอิเล็กทรอนิกส์จากผู้อื่น`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `เป็นที่นิยม` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `อัปโหลดเอกสารที่ต้องการลายเซ็น`,
+      `สร้างลายเซ็นของคุณด้วยการวาด พิมพ์ หรืออัพโหลดรูปภาพ`,
+      `วางลายเซ็นของคุณบนเอกสาร คลิกนำไปใช้ และดาวน์โหลด`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `ลายเซ็นอิเล็กทรอนิกส์ถูกกฎหมายหรือไม่`,
+        "answer": `ใช่ ลายเซ็นอิเล็กทรอนิกส์ที่สร้างด้วย TheyLovePDF มีผลผูกพันทางกฎหมายในประเทศและเขตอำนาจศาลส่วนใหญ่`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `ฉันสามารถบันทึกลายเซ็นไว้ใช้ภายหลังได้หรือไม่?`,
+        "answer": `ใช่ หากคุณสร้างบัญชี คุณสามารถบันทึกลายเซ็นของคุณได้อย่างปลอดภัยเพื่อการลงนามที่รวดเร็วในคลิกเดียวในอนาคต`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `ฉันสามารถเพิ่มวันที่และชื่อย่อของข้อความได้หรือไม่`,
+        "answer": `อย่างแน่นอน.นอกจากลายเซ็นของคุณแล้ว คุณยังสามารถลากและวางวันที่ ชื่อย่อ และช่องข้อความที่กำหนดเองได้อย่างง่ายดาย`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `ขอลายเซ็น`,
+    "desc": `ส่งเอกสารให้ลูกค้าเพื่อลงนามอย่างถูกกฎหมายทางออนไลน์`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `อัปโหลด PDF ที่คุณต้องการลงนาม`,
+      `เพิ่มที่อยู่อีเมลของผู้รับและกำหนดฟิลด์ลายเซ็นให้พวกเขา`,
+      `ส่งคำขอเราจะส่งลิงก์ที่ปลอดภัยให้พวกเขาทางอีเมลเพื่อลงนามในเอกสารทางออนไลน์`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `ผู้รับจำเป็นต้องมีบัญชีเพื่อลงนามหรือไม่?`,
+        "answer": `ไม่ ผู้รับสามารถลงนามในเอกสารได้อย่างปลอดภัยโดยตรงจากลิงก์อีเมลของตนโดยไม่จำเป็นต้องสร้างบัญชี TheyLovePDF`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `ฉันจะรู้ได้อย่างไรว่าลงนามแล้ว?`,
+        "answer": `คุณจะได้รับการแจ้งเตือนทางอีเมลอัตโนมัติทันทีที่ทุกฝ่ายลงนามในเอกสารเสร็จแล้ว`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `มีเส้นทางการตรวจสอบหรือไม่?`,
+        "answer": `ใช่ ผู้ใช้ระดับ Pro ได้รับเส้นทางการตรวจสอบที่ครอบคลุมซึ่งมีรายละเอียดที่อยู่ IP และการประทับเวลาเพื่อการปฏิบัติตามกฎหมายอย่างสมบูรณ์`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `เครื่องหมายรับรอง`,
+    "desc": `เพิ่มลายเซ็นดิจิทัลที่เข้ารหัสลงใน PDF ของคุณ`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `อัปโหลดไฟล์ PDF และไฟล์ใบรับรองดิจิทัล (.pfx หรือ .p12)`,
+      `ป้อนรหัสผ่านใบรับรอง`,
+      `ใช้ลายเซ็นเข้ารหัสและดาวน์โหลดไฟล์ PDF ที่ตรวจสอบแล้ว`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `ลายเซ็นใบรับรองคืออะไร?`,
+        "answer": `แตกต่างจากลายเซ็นอิเล็กทรอนิกส์แบบเห็นภาพ ลายเซ็นใบรับรองจะใช้แฮชที่เข้ารหัสลับกับเอกสาร โดยพิสูจน์ทางคณิตศาสตร์ว่าเป็นของแท้และรับรองว่าไม่มีการเปลี่ยนแปลงใดๆ`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `คุณเก็บรหัสผ่านใบรับรองของฉันหรือไม่?`,
+        "answer": `ไม่เคย.รหัสผ่านของคุณจะถูกเก็บไว้ในหน่วยความจำชั่วคราวในช่วงเวลาของการลงนามเท่านั้น และจะถูกทำลายทันที`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `ผู้คนสามารถตรวจสอบลายเซ็นได้หรือไม่?`,
+        "answer": `ใช่ เมื่อเปิดในโปรแกรมอ่าน PDF มาตรฐาน เช่น Adobe Acrobat เครื่องหมายถูกสีเขียวจะปรากฏขึ้นเพื่อระบุว่าเอกสารได้รับการตรวจสอบแบบดิจิทัลและไม่มีการเปลี่ยนแปลง`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `แชทด้วย PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `พูดคุยกับ PDF ของคุณถามคำถาม รับข้อมูลสรุป และดึงข้อมูลเชิงลึกได้ทันทีโดยใช้ AI`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `อัปโหลดเอกสาร PDF ที่ยาวหรือซับซ้อนของคุณ`,
+      `พิมพ์คำถามในกล่องแชท เช่น 'สรุปบทที่ 2' หรือ 'ข้อโต้แย้งหลักคืออะไร'`,
+      `AI ของเราจะอ่านเอกสารทันทีและให้คำตอบที่ถูกต้องแก่คุณ`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `การแชทด้วย PDF ทำงานอย่างไร`,
+        "answer": `เราใช้ Large Language Models (LLM) ขั้นสูงเพื่อสแกนข้อความในเอกสารของคุณ ทำความเข้าใจบริบทของเอกสาร และตอบคำถามใดๆ ที่คุณถามตามเนื้อหาของเอกสารอย่างเคร่งครัด`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `สามารถอ่านเอกสารที่สแกนได้หรือไม่?`,
+        "answer": `หากเอกสารเป็นรูปภาพเพียงอย่างเดียว คุณต้องเรียกใช้ผ่านเครื่องมือ OCR ของเราก่อนหากมีข้อความให้เลือก AI ก็สามารถอ่านได้ทันที`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `เอกสารของฉันใช้เพื่อฝึก AI หรือไม่`,
+        "answer": `ไม่อย่างแน่นอนความเป็นส่วนตัวของคุณคือสิ่งที่เราให้ความสำคัญเอกสารได้รับการประมวลผลในสภาพแวดล้อมที่ปลอดภัยและไม่เคยใช้เพื่อฝึกโมเดล AI สาธารณะ`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `แก้ไข PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `เพิ่มข้อความ รูปภาพ รูปร่าง หรือคำอธิบายประกอบด้วยมือเปล่าลงในเอกสาร PDF`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `เป็นที่นิยม` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `อัปโหลด PDF ที่คุณต้องการแก้ไข`,
+      `ใช้แถบเครื่องมือเพื่อเพิ่มข้อความ แทรกรูปภาพ วาดรูปร่าง หรือใช้ไวท์เอาท์กับพื้นที่ที่มีอยู่`,
+      `บันทึกการแก้ไขของคุณและดาวน์โหลดไฟล์ PDF ที่อัปเดตแล้ว`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `ฉันสามารถเปลี่ยนข้อความที่มีอยู่ใน PDF ได้หรือไม่`,
+        "answer": `ในปัจจุบัน คุณสามารถใช้เครื่องมือ 'whiteout' เพื่อปกปิดข้อความเก่าและพิมพ์ข้อความใหม่ทับได้การแก้ไขข้อความแบบเนทิฟเป็นคุณลักษณะที่ซับซ้อนมากที่เรากำลังพัฒนาอย่างต่อเนื่อง`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `ฉันสามารถเพิ่มรูปภาพลงใน PDF ได้หรือไม่`,
+        "answer": `ใช่ คุณสามารถอัปโหลดและประทับตราภาพ PNG หรือ JPG ลงในเอกสารของคุณได้ทุกที่`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `การแก้ไขทำให้คุณภาพของเอกสารลดลงหรือไม่?`,
+        "answer": `ไม่ โปรแกรมแก้ไขของเราจะเพิ่มคำอธิบายประกอบของคุณไว้ด้านบนของโครงสร้างเอกสารที่มีอยู่ โดยไม่ต้องบีบอัดรูปภาพหรือข้อความต้นฉบับใหม่`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `ลายน้ำ PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `ประทับตรารูปภาพหรือข้อความบน PDF ของคุณในไม่กี่วินาทีเลือกการพิมพ์ ความโปร่งใส และตำแหน่ง`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `อัปโหลดไฟล์ PDF ของคุณ`,
+      `พิมพ์ข้อความลายน้ำของคุณหรืออัปโหลดรูปภาพโลโก้ปรับความทึบ การหมุน และตำแหน่ง`,
+      `คลิกใช้และดาวน์โหลดเอกสารลายน้ำของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `ฉันสามารถใส่ลายน้ำทุกหน้าพร้อมกันได้หรือไม่`,
+        "answer": `ใช่ ตามค่าเริ่มต้น ลายน้ำของคุณจะถูกนำไปใช้อย่างสม่ำเสมอในทุกหน้าของเอกสาร`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `ฉันสามารถปรับความโปร่งใสได้หรือไม่?`,
+        "answer": `อย่างแน่นอน.คุณสามารถทำให้ลายน้ำจางมากได้เพื่อไม่ให้เบี่ยงเบนไปจากเอกสาร หรือทำให้ลายน้ำทึบแสงเพื่อให้มองเห็นได้ชัดเจนที่สุด`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `ลายน้ำสามารถลบออกได้หรือไม่?`,
+        "answer": `เราทำให้ลายน้ำเรียบลงในโครงสร้างเอกสารเพื่อทำให้การลบออกทำได้ยากที่สุด เพื่อให้มั่นใจว่าทรัพย์สินทางปัญญาของคุณจะได้รับการคุ้มครอง`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `แบบฟอร์ม PDF`,
+    "desc": `กรอกแบบฟอร์ม PDF อย่างรวดเร็วและแม่นยำทางออนไลน์`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `อัปโหลดแบบฟอร์ม PDF แบบโต้ตอบ`,
+      `คลิกที่ช่องข้อความ ช่องทำเครื่องหมาย หรือปุ่มตัวเลือกเพื่อกรอกข้อมูลของคุณ`,
+      `ดาวน์โหลดแบบฟอร์มที่กรอกเรียบร้อยแล้ว`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `ฉันสามารถบันทึกแบบฟอร์มที่กรอกไว้บางส่วนได้หรือไม่`,
+        "answer": `หากคุณมีบัญชี Pro เซสชันของคุณจะถูกบันทึกโดยอัตโนมัติ ช่วยให้คุณสามารถกลับมาและกรอกแบบฟอร์มให้เสร็จสิ้นในภายหลังได้`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `ใช้งานได้กับแบบฟอร์ม PDF ทั้งหมดหรือไม่`,
+        "answer": `เครื่องมือของเรารองรับ AcroForms มาตรฐาน ซึ่งคิดเป็น 99% ของ PDF แบบโต้ตอบแบบฟอร์ม XFA รุ่นเก่าอาจมีการสนับสนุนที่จำกัด`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `ฉันสามารถทำให้แบบฟอร์มเรียบหลังจากกรอกแล้วได้หรือไม่`,
+        "answer": `ใช่ เมื่อดาวน์โหลดแล้ว คุณสามารถเรียกใช้ผ่านเครื่องมือ 'Flatten PDF' ของเราเพื่อล็อคข้อมูลเพื่อไม่ให้ผู้รับแก้ไขได้`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `เพิ่มหมายเลขหน้า`,
+    "desc": `เพิ่มหมายเลขหน้าลงใน PDF ได้อย่างง่ายดายเลือกตำแหน่ง ขนาด และการพิมพ์ของคุณ`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `ฟรี` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `อัปโหลดเอกสารของคุณ`,
+      `เลือกตำแหน่ง (เช่น ขวาล่าง) รูปแบบตัวอักษร และหมายเลขเริ่มต้น`,
+      `ใช้การเรียงลำดับหมายเลขและดาวน์โหลดไฟล์ PDF ที่มีรูปแบบสมบูรณ์แบบของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `ฉันสามารถข้ามหน้าปกได้หรือไม่?`,
+        "answer": `ใช่!คุณสามารถระบุได้ว่าหน้าใดควรเริ่มต้นด้วยการลำดับเลข เพื่อให้หน้าชื่อเรื่องสะอาดตา`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `ฉันสามารถปรับแต่งรูปแบบได้หรือไม่?`,
+        "answer": `อย่างแน่นอน.คุณสามารถเลือกรูปแบบ เช่น 'หน้า 1', '1 จาก 10' หรือเพียง '1' และเลือกแบบอักษร ขนาด และสี`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `การจัดตำแหน่งถูกต้องหรือไม่?`,
+        "answer": `ใช่ เครื่องมือของเราจะคำนวณระยะขอบที่แน่นอนเพื่อให้แน่ใจว่าหมายเลขหน้าของคุณสอดคล้องกันอย่างสมบูรณ์ในทุกหน้า`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `คำอธิบายประกอบ PDF`,
+    "desc": `เน้น ขีดเส้นใต้ ขีดทับข้อความ และเพิ่มความคิดเห็น`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `ใหม่` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `อัปโหลด PDF ของคุณ`,
+      `ใช้เครื่องมือเน้นข้อความ ขีดเส้นใต้ ขีดทับ และบันทึกย่อช่วยเตือนเพื่อตรวจสอบเอกสาร`,
+      `ดาวน์โหลดไฟล์ที่มีคำอธิบายประกอบเพื่อแชร์กับทีมของคุณ`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `คำอธิบายประกอบของฉันจะปรากฏในโปรแกรมอ่านมาตรฐานหรือไม่`,
+        "answer": `ใช่ เราใช้โปรโตคอลคำอธิบายประกอบ PDF มาตรฐาน ซึ่งหมายความว่าไฮไลท์และบันทึกย่อของคุณจะมองเห็นได้ใน Adobe Acrobat, Chrome และ Apple Preview`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `ฉันสามารถเปลี่ยนสีไฮไลท์ได้หรือไม่?`,
+        "answer": `ใช่ คุณสามารถเลือกจากจานสีที่หลากหลายเพื่อกำหนดรหัสสีให้กับโน้ตและไฮไลท์ของคุณได้`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `การลบคำอธิบายประกอบทำได้ง่ายหรือไม่?`,
+        "answer": `ง่ายมาก.เพียงคลิกที่คำอธิบายประกอบที่คุณสร้างขึ้นแล้วกดปุ่มลบเพื่อลบออกทันที`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `การตรวจสอบการลอกเลียนแบบ`,
+    "desc": `เปรียบเทียบเอกสารของคุณกับหน้าเว็บและฐานข้อมูลทางวิชาการนับพันล้านหน้า`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `โปร` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `อัปโหลดเรียงความหรือเอกสารที่คุณต้องการตรวจสอบ`,
+      `เอ็นจิ้น AI ของเราจะสแกนหน้าเว็บและฐานข้อมูลทางวิชาการหลายพันล้านหน้าเพื่อค้นหารายการที่ตรงกัน`,
+      `ตรวจสอบรายงานความคล้ายคลึงโดยละเอียดที่เน้นข้อความที่คัดลอก`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `เครื่องตรวจสอบการลอกเลียนแบบมีความแม่นยำเพียงใด?`,
+        "answer": `มีความแม่นยำสูงเราใช้ AI ระดับองค์กรที่อ้างอิงข้อความของคุณกับฐานข้อมูลเนื้อหาออนไลน์ขนาดใหญ่ที่อัปเดตอย่างต่อเนื่อง`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `ตรวจสอบกับเอกสารทางวิชาการแบบออฟไลน์หรือไม่`,
+        "answer": `โดยจะตรวจสอบกับวารสารทางวิชาการที่เปิดกว้างและแหล่งข้อมูลที่มีการอ้างอิงจำนวนมากทางออนไลน์`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `เอกสารของฉันถูกบันทึกลงในฐานข้อมูลหรือไม่?`,
+        "answer": `ไม่ เราไม่เพิ่มเอกสารของคุณลงในฐานข้อมูลทั่วโลก ซึ่งต่างจากระบบของมหาวิทยาลัยบางแห่ง เพื่อให้มั่นใจว่างานต้นฉบับของคุณยังคงเป็นของคุณอย่างเคร่งครัด`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `สรุป PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `สร้างข้อมูลสรุปที่รวดเร็วและแม่นยำของเอกสารขนาดยาวในไม่กี่วินาที`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `เอไอ+ใหม่` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `อัปโหลดเอกสาร รายงาน หรือบทหนังสือที่มีความยาว`,
+      `คลิก 'สรุป' เพื่อให้ AI ของเราวิเคราะห์แนวคิดหลัก`,
+      `อ่านสรุปหัวข้อย่อยและดาวน์โหลดหากจำเป็น`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `สามารถสรุปหนังสือทั้งเล่มได้หรือไม่?`,
+        "answer": `AI มีความสามารถสูง แต่เพื่อให้ได้ผลลัพธ์ที่ดีที่สุดและรายละเอียดสูงสุด เราขอแนะนำให้สรุปทีละบทหรือส่วนต่างๆ`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `สรุปรวบรวมสถิติที่สำคัญหรือไม่`,
+        "answer": `ใช่ LLM ของเราได้รับคำสั่งให้ระบุและเน้นจุดข้อมูลที่สำคัญ สถิติ และข้อโต้แย้งหลัก`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `รองรับภาษาใดบ้าง?`,
+        "answer": `ตัวสรุปทำงานได้ดีที่สุดในภาษาอังกฤษ แต่รองรับและเข้าใจภาษาทั่วโลกมากกว่า 50 ภาษา`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `แปล PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `แปลเอกสารฉบับเต็มโดยยังคงรักษารูปแบบและเค้าโครงดั้งเดิมไว้`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `เอไอ+ใหม่` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `อัปโหลดเอกสารของคุณ`,
+      `เลือกภาษาต้นฉบับและภาษาเป้าหมายที่คุณต้องการแปล`,
+      `ดาวน์โหลด PDF ที่ได้รับการแปลใหม่ พร้อมด้วยรูปแบบต้นฉบับ`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `เค้าโครงจะพังหลังจากการแปลหรือไม่`,
+        "answer": `เอ็นจิ้นขั้นสูงของเราพยายามรักษารูปแบบที่แน่นอน แม้ว่าการขยายข้อความ (เช่น ภาษาอังกฤษเป็นภาษาเยอรมัน) อาจทำให้ภาพเปลี่ยนไปเล็กน้อยและหลีกเลี่ยงไม่ได้`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `การแปลมีความแม่นยำแค่ไหน?`,
+        "answer": `เราใช้การแปลด้วยเครื่องประสาทเทียม (NMT) ที่ล้ำสมัยซึ่งขับเคลื่อนโดย AI ซึ่งให้การแปลที่แม่นยำและคำนึงถึงบริบทมากกว่าการแปลแบบคำต่อคำที่เข้มงวด`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `ฉันสามารถแปลเอกสารที่สแกนได้หรือไม่`,
+        "answer": `ใช่!หากคุณอัปโหลดเอกสารที่สแกน ระบบของเราจะเรียกใช้ OCR โดยอัตโนมัติเพื่ออ่านข้อความก่อนแปล`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `ดึงข้อมูล`,
+    "desc": `แยกตาราง ค่า และเอนทิตีออกจากใบแจ้งหนี้และแบบฟอร์มอย่างชาญฉลาด`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `เอไอ+ใหม่` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `อัปโหลดใบแจ้งหนี้ ใบเสร็จรับเงิน หรือแบบฟอร์มที่มีโครงสร้าง`,
+      `AI ของเราจะระบุฟิลด์สำคัญ เช่น วันที่ ผลรวม ชื่อ และที่อยู่`,
+      `ดาวน์โหลดข้อมูลที่แยกออกมาเป็นไฟล์ CSV หรือ JSON ที่ปลอดภัย`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `การดึงข้อมูลใช้เพื่ออะไร?`,
+        "answer": `เหมาะสำหรับการบัญชีและการบริหารแทนที่จะพิมพ์ข้อมูลจากใบแจ้งหนี้ 100 ใบด้วยตนเอง AI ของเราจะดำเนินการโดยอัตโนมัติในไม่กี่วินาที`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `เอกสารจำเป็นต้องมีรูปแบบเฉพาะหรือไม่?`,
+        "answer": `เลขที่!AI ของเราฉลาดพอที่จะค้นหา 'จำนวนเงินทั้งหมด' ไม่ว่าจะอยู่ที่ด้านบน ด้านล่าง หรือตรงกลางของหน้า`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `ฉันสามารถดึงข้อมูลไปยัง Excel ได้หรือไม่`,
+        "answer": `ใช่ ข้อมูลที่แยกออกมาสามารถส่งออกเป็นไฟล์ CSV ได้โดยตรง ซึ่งเปิดได้อย่างสมบูรณ์แบบใน Microsoft Excel หรือ Google ชีต`
+      },
     ]
-  }
+  },
 ];

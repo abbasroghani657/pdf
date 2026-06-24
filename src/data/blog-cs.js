@@ -1,497 +1,468 @@
+// Auto-generated blog translation for cs
 export const BLOG_POSTS_CS = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Jak komprimovat PDF na Macu (průvodce 2026)`,
+    date: `2026-06-20`,
+    excerpt: `Naučte se nejrychlejší a nejsnadnější způsoby, jak zmenšit velikost souboru PDF na počítači Mac bez ztráty kvality.Porovnáváme nástroje Preview, Automator a Web.`,
+    content: `<p>Zacházení s velkými soubory PDF na vašem Macu může být frustrující, zvláště když potřebujete poslat e-mailem dokument, který přesahuje standardní limit velikosti 25 MB.Ať už jste student odevzdávající úkol nebo profesionál zasílající portfolio, znalost, jak správně komprimovat PDF, je základní dovedností.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Metoda 1: Vestavěná aplikace náhledu (zdarma, ale základní)</h2>
+<p>Aplikace Apple Preview je dodávána s vestavěným „křemenným filtrem“, který dokáže zmenšit vaše soubory PDF.Je to rychlé a nevyžaduje připojení k internetu.</p>
+<ol>
+<li>Otevřete soubor PDF pomocí aplikace <strong>Náhled</strong>.</li>
+<li>Klikněte na <strong>Soubor</strong> v horní liště nabídky a vyberte možnost <strong>Exportovat</strong> (nevybírejte možnost „Exportovat jako PDF“).</li>
+<li>V okně exportu vyhledejte rozbalovací nabídku <strong>Křemenný filtr</strong>.</li>
+<li>Vyberte <strong>Zmenšit velikost souboru</strong> a klikněte na Uložit.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
+<p class="text-red-700 m-0"><strong>Upozornění:</strong> I když je tato metoda zdarma, výchozí kompresní algoritmus společnosti Apple je neuvěřitelně agresivní.Často to ničí kvalitu obrázků a vektorový text je rozmazaný.Nedoporučujeme to pro profesionální dokumenty.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Metoda 2: Použití TheyLovePDF (profesionální a vysoce kvalitní)</h2>
+<p>Chcete-li zachovat ostrou kvalitu textu a obrázků a zároveň výrazně zmenšit velikost souboru, je nejlepší volbou speciální nástroj pro kompresi s umělou inteligencí.</p>
+<ol>
+<li>Přejděte na <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">nástroj Komprimovat PDF na TheyLovePDF</a>.</li>
+<li>Přetáhněte soubor PDF na stránku.</li>
+<li>Vyberte úroveň komprese:
+<ul class="mt-2 mezera-y-1 text-gray-600">
+<li><strong>Extrémní komprese:</strong> Nejlepší pro zasílání e-mailů (nejnižší kvalita).</li>
+<li><strong>Doporučená komprese:</strong> Ideální místo mezi velikostí a kvalitou.</li>
+<li><strong>Menší komprese:</strong> Vysoká kvalita, ideální pro tisk.</li>
+</ul>
+</li>
+<li>Klikněte na <strong>Komprimovat PDF</strong> a stáhněte si optimalizovaný soubor.</li>
+</ol>
+<p>Naše inteligentní kompresní algoritmy odstraňují nepotřebná metadata a komprimují obrázky pomocí moderních webových standardů, čímž zajistí, že váš dokument bude vypadat přesně stejně a zabere jen zlomek úložného prostoru!</p>
+
+<h2>Závěr</h2>
+<p>Zatímco vestavěné nástroje Macu jsou skvělé v režimu offline, výrazně jim chybí podrobné ovládání potřebné pro moderní dokumenty.U všeho důležitého se vždy spoléhejte na vyhrazený kompresní engine.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Jak sloučit více souborů PDF na vašem iPhone`,
+    date: `2026-06-19`,
+    excerpt: `Objevte nejjednodušší způsob, jak spojit několik dokumentů PDF do jednoho souboru přímo z vašeho iOS zařízení.`,
+    content: `<p>Vzhledem k tomu, že se telefony iPhone stávají našimi primárními zařízeními pro práci a studium, znalost, jak sloučit soubory PDF na cestách, je základní dovedností.Ať už sestavujete účtenky pro výkaz výdajů nebo slučujete poznámky k přednáškám, zde je přesně návod, jak to udělat bez počítače.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>Výzva s iOS</h2>
+<p>I když má iOS vestavěnou robustní aplikaci Soubory, nenabízí nativní a přímočarý způsob výběru více souborů PDF a jejich bezproblémového spojení.Dokumenty můžete naskenovat do jednoho PDF, ale sloučení existujících souborů je překvapivě obtížné.</p>
+
+<h2>Řešení: Webová aplikace TheyLovePDF</h2>
+<p>Nemusíte stahovat žádné náročné aplikace založené na předplatném z App Store.Můžete to udělat přímo ze Safari nebo Chrome pomocí naší cloudové architektury.</p>
+
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Podrobný průvodce</h3>
+<ol class="space-y-3 mb-0">
+<li>Otevřete Safari na svém iPhonu a přejděte na <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Nástroj pro sloučení TheyLovePDF</a>.</li>
+<li>Klepněte na velké tlačítko <strong>Vybrat soubory PDF</strong>.</li>
+<li>Vyberte soubory z aplikace <em>Soubory</em> pro iPhone nebo z <em>Knihovny fotografií</em>.Můžete vybrat více souborů najednou.</li>
+<li>Po nahrání se zobrazí vizuální mřížka vašich souborů.Stisknutím a podržením libovolného souboru jej přetáhnete a uspořádáte přesně tak, jak chcete.</li>
+<li>Klepněte na <strong>Sloučit PDF</strong>.Naše servery zpracují soubory během milisekund.</li>
+<li>Klepněte na <strong>Stáhnout</strong> a uložte nový kombinovaný dokument přímo do svého zařízení.</li>
+</ol>
+</div>
+
+<h2>Proč nepoužít aplikaci?</h2>
+<p>Mnoho aplikací PDF v App Storu je ke stažení zdarma, ale jakmile se pokusíte sloučit soubory, žádají vás o peníze.Používáním cloudového nástroje se vyhnete poplatkům za App Store a ušetříte úložný prostor v telefonu.</p>
+<p>Je to tak jednoduché, rychlé a zcela bezpečné!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Jak zabezpečit PDF pomocí hesla`,
+    date: `2026-06-18`,
+    excerpt: `Chraňte citlivé informace přidáním bezpečného, ​​neprolomitelného 256bitového šifrovacího hesla AES do souborů PDF.`,
+    content: `<p>V dnešní digitální době je ochrana osobních údajů důležitější než kdy jindy.Ať už posíláte finanční výkazy, lékařské záznamy nebo důvěrnou obchodní smlouvu, ponechání souboru PDF bez ochrany představuje obrovské bezpečnostní riziko.</p>
+<p>V této příručce vám ukážeme, jak uzamknout dokumenty PDF pomocí šifrování na vojenské úrovni.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Co je 256bitové šifrování AES?</h2>
+<p>Advanced Encryption Standard (AES) je šifrovací algoritmus používaný vládou USA k zabezpečení utajovaných informací.256bitový šifrovací klíč znamená, že existuje 2<sup>256</sup> možných kombinací – číslo tak obrovské, že ho ani nejvýkonnější superpočítače světa nedokázaly prolomit za miliardu let.</p>
+<p>Když používáte náš nástroj, nepřidáváme pouze heslo, které lze snadno obejít.Matematicky zakódujeme obsah vašeho souboru pomocí AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Jak chránit své PDF</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Přejděte na nástroj <a href="/tools/protect-pdf" class="font-bold hover:underline">Ochrana PDF</a>.</li>
+<li>Nahrajte svůj citlivý dokument přes naše zabezpečené připojení TLS 1.3.</li>
+<li>Zadejte silné heslo.(Doporučujeme alespoň 12 znaků, kombinace písmen, číslic a symbolů).</li>
+<li>Klikněte na <strong>Chránit PDF</strong>.</li>
+<li>Stáhněte si nově zašifrovaný soubor.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Osvědčené postupy pro zabezpečení heslem</h2>
+<ul class="list-disc pl-5 mezera-y-2">
+<li><strong>Nikdy neposílejte heslo stejným e-mailem:</strong> Pokud posíláte PDF e-mailem, odešlete heslo prostřednictvím jiného kanálu (např. SMS nebo aplikace pro bezpečné zasílání zpráv, jako je Signal).</li>
+<li><strong>Používejte správce hesel:</strong> Vygenerujte náhodný řetězec znaků namísto použití slova, které lze nalézt ve slovníku.</li>
+<li><strong>Nepoužívejte osobní údaje:</strong> Vyhněte se datům narození, jménům domácích zvířat nebo jménům společností.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Jakmile bude váš soubor zašifrován, bude původní obsah trvale smazán z našich serverů do 2 hodin.Vaše soukromí je naší absolutní prioritou.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `Co je OCR?Jak zajistit, aby naskenované soubory PDF bylo možné prohledávat`,
+    date: `2026-06-17`,
+    excerpt: `Zjistěte, jak funguje technologie optického rozpoznávání znaků (OCR) a jak dokáže extrahovat volitelný text z plochých obrázků.`,
+    content: `<p>Obdrželi jste někdy PDF, které vypadá jako dokument, ale když se pokusíte zvýraznit text, nic se nestane?Setkali jste se s „plochým“ nebo „naskenovaným“ PDF.Je to v podstatě jen digitální fotografie kusu papíru.</p>
+<p>Abyste mohli s tímto textem pracovat, potřebujete kouzlo <strong>Optického rozpoznávání znaků (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>Jak funguje OCR</h2>
+<p>Když spustíte soubor prostřednictvím nástroje OCR, software se chová jako vysoce trénované lidské oko.Skenuje obraz pixel po pixelu a hledá vzory, které připomínají písmena a čísla.</p>
+<p>Moderní OCR neodpovídá pouze tvarům;k pochopení kontextu využívá komplexní modely umělé inteligence a strojového učení.Dokáže například rozeznat rozdíl mezi velkým „I“ a malým písmenem „l“ na základě okolních písmen ve slově.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>Výhody OCR</h2>
+<ul class="space-y-2">
+<li><strong>Vyhledatelnost:</strong> Najít konkrétní klauzuli v 500stránkové naskenované smlouvě je nemožné bez přečtení celé věci.OCR vám umožňuje pomocí CTRL+F okamžitě najít přesně to, co potřebujete.</li>
+<li><strong>Upravitelnost:</strong> Jakmile je text rozpoznán, můžete jej kopírovat, vkládat a upravovat ve Wordu nebo Dokumentech Google.</li>
+<li><strong>Přístupnost:</strong> Čtečky obrazovky pro zrakově postižené uživatele nemohou číst ploché obrázky.OCR zpřístupní vaše dokumenty všem.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Jak OCR dokument</h2>
+<p>Transformace naskenovaných dokumentů je s TheyLovePDF neuvěřitelně jednoduchá:</p>
+<ol>
+<li>Přejděte na <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">nástroj OCR PDF</a>.</li>
+<li>Nahrajte naskenovaný dokument.</li>
+<li>Vyberte jazyk dokumentu.To je zásadní – sdělit AI, jaký jazyk má očekávat, výrazně zlepšuje přesnost, zejména u jazyků s jedinečnými znaky nebo přízvuky.</li>
+<li>Proces požadavku.Umělá inteligence váš dokument zrekonstruuje a na původní obrázky navrství vrstvu neviditelného textu.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 kurzíva bg-gray-50 rounded-r-lg">
+Zastavte ruční přepisování dokumentů.Nechte AI, aby za vás udělala těžkou práci!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Jak upravit text PDF v systému Windows 11 (bez Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Přestaňte platit za drahý software.Objevte nejúčinnější, bezplatné a nejchytřejší způsoby přímé úpravy textu a obrázků PDF na počítači se systémem Windows.`,
+    content: `<p>Už roky mají uživatelé Windows problémy se soubory PDF.Na rozdíl od dokumentů aplikace Word byly soubory PDF navrženy tak, aby byly „finalizovanými“ digitálními tisky.Když si všimnete překlepu ve smlouvě nebo potřebujete aktualizovat datum na faktuře, obvykle narazíte na masivní paywall, jako je Adobe Acrobat.</p>
+<p>Naštěstí v roce 2026 nebudete potřebovat drahý software nainstalovaný na vašem počítači s Windows 11 k provádění základních úprav.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Inteligentní webový přístup</h2>
+<p>Spíše než stahování těžkých a pomalých desktopových aplikací využívají cloudové editory výpočetní výkon vzdálených serverů k analýze struktury PDF přímo ve vašem prohlížeči.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Jak přímo upravovat</h3>
+<ol class="space-y-2 mb-0">
+<li>V systému Windows 11 otevřete Microsoft Edge nebo Google Chrome.</li>
+<li>Přejděte na <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">nástroj Upravit PDF</a>.</li>
+<li>Nahrajte dokument.Náš engine okamžitě dekóduje textové vrstvy.</li>
+<li>Kliknutím na libovolné textové pole můžete upravit text, změnit písmo nebo upravit velikost.</li>
+<li>Můžete také vložit nové obrázky, tvary nebo zatemnit citlivé informace.</li>
+<li>Klikněte na <strong>Použít změny</strong> a stáhněte aktualizovaný soubor.</li>
+</ol>
+</div>
+
+<h2>Proč nepoužívat Microsoft Edge?</h2>
+<p>I když má Microsoft Edge vestavěný prohlížeč PDF s nástroji pro kreslení (inkoust), <strong>nemůže upravovat stávající text</strong>.Umožňuje pouze kreslit přes horní část nebo přidávat nová textová pole.Chcete-li skutečně změnit překlep v původní textové vrstvě, potřebujete skutečný editor PDF.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Tip pro profesionály:</p>
+<p class="text-sm text-gray-600">Pokud je soubor PDF naskenovaný obrázek, standardní úpravy textu nebudou fungovat.Nejprve musíte použít <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">nástroj OCR</a> k převedení obrázku na čitelnou textovou vrstvu.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Nejlepší průvodce podepisováním PDF na Androidu zdarma`,
+    date: `2026-06-15`,
+    excerpt: `Potřebujete urgentně podepsat dokument?Naučte se kreslit, psát nebo nahrávat svůj elektronický podpis přímo z telefonu Android.`,
+    content: `<p>Všichni jsme tam byli: když nejste u svého stolu, dostanete e-mailem důležitý dokument.Okamžitě potřebuje váš podpis.Tisk, podepisování a skenování je pozůstatkem minulosti.</p>
+<p>Váš chytrý telefon Android je dnes výkonnou digitální pracovní stanicí schopnou právně vázat elektronické podpisy.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Jsou elektronické podpisy legální?</h2>
+<p>Ano.Podle zákona ESIGN Act (USA) a eIDAS (Evropa) mají elektronické podpisy stejnou právní váhu jako podpis vlhkým inkoustem pro téměř všechny obchodní a osobní transakce.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Jak se přihlásit v systému Android (nevyžaduje se žádná aplikace)</h2>
+<p>Nemusíte své zařízení Android naplňovat prémiovými aplikacemi PDF.Stačí použít mobilní prohlížeč.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="list-decimal pl-5 mezera-y-3 mt-6">
+<li><strong>Otevření nástroje:</strong> Klepnutím na odkaz otevřete <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">nástroj Podepsat PDF</a> v prohlížeči Chrome.</li>
+<li><strong>Nahrát dokument:</strong> Klepnutím nahrajete soubor přímo ze složky Stažené soubory pro Android nebo z Disku Google.</li>
+<li><strong>Vytvořte svůj podpis:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Kreslení:</em> Pomocí prstu nebo stylusu nakreslete podpis přímo na obrazovku.</li>
+<li><em>Typ:</em> Napište své jméno a zvolte kurzívní písmo.</li>
+<li><em>Nahrát:</em> Nahrajte fotku svého skutečného podpisu na bílý papír (náš nástroj automaticky odstraní pozadí).</li>
+</ul>
+</li>
+<li><strong>Umístění:</strong> Přetáhněte podpis přesně na řádek podpisu.Velikost můžete změnit stažením prstů.</li>
+<li><strong>Dokončit:</strong> Klepnutím na „Podepsat“ trvale vložíte podpis do architektury dokumentu.</li>
+</ol>
+
+<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
+<p class="text-yellow-800 text-sm m-0"><strong>Poznámka k zabezpečení:</strong> Při podepisování citlivých dokumentů se vždy ujistěte, že používáte zabezpečenou platformu šifrovanou HTTPS.Automaticky odstraňujeme všechny soubory z našich serverů.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Proč by studenti měli vždy převádět PDF do Wordu pro úpravy`,
+    date: `2026-06-14`,
+    excerpt: `Psaní diplomové práce nebo psaní poznámek?Zjistěte, proč je extrahování textu do dokumentu aplikace Word zásadně lepší než přímé úpravy PDF.`,
+    content: `<p>Jako student se každý semestr setkáváte se stovkami souborů PDF: prezentace z přednášek, výzkumné práce a digitální učebnice.Když potřebujete extrahovat citace, shrnout obsah nebo přepsat oddíly, můžete být v pokušení použít editor PDF.Existuje však chytřejší a mnohem profesionálnější způsob.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Problém s architekturou PDF</h2>
+<p>Soubory PDF (Portable Document Format) byly navrženy pro <em>prezentaci</em>, nikoli pro kompozici.Uvnitř PDF text neteče jako běžný dokument;každé jednotlivé slovo je připnuto ke konkrétním souřadnicím X a Y na stránce.</p>
+<p>Pokud se pokusíte odstranit odstavec v editoru PDF, text pod ním se <strong>neposune</strong> nahoru, aby zaplnil mezeru.Ponechává obrovské prázdné místo.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Řešení: Převod PDF do Wordu</h2>
+<p>Převedením dokumentu zpět do aplikace Microsoft Word (.docx) náš inteligentní modul rekonstruuje plynulé rozvržení.Z odstavců se znovu stanou odstavce, ze záhlaví se stanou záhlaví a z obrázků se stanou pohyblivé bloky.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+<div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">Editor PDF</h4>
+<ul class="text-sm text-gray-600 mezera-y-1 mb-0">
+<li>❌ Text se nepřeformátuje</li>
+<li>❌ Je obtížné změnit globální písma</li>
+<li>❌ Okraje jsou uzamčeny</li>
+<li>❌ Tabulky se obtížně upravují</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">dokument aplikace Word</h4>
+<ul class="text-sm text-blue-800 mezera-y-1 mb-0">
+<li>✅ Text plyne přirozeně</li>
+<li>✅ Snadná kontrola pravopisu a gramatiky</li>
+<li>✅ Dynamické konce stránek</li>
+<li>✅ Kopírování a vkládání je bezchybné</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Jak to udělat bezchybně</h2>
+<p>Náš <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">převaděč PDF do Wordu</a> využívající umělou inteligenci používá pokročilé rozpoznávání rozvržení.Stačí nahrát soubor a během několika sekund budete mít plně upravitelný dokument aplikace Word.Jakmile dokončíte psaní úkolu nebo poznámek, můžete je kdykoli exportovat zpět do PDF, než je odešlete svému profesorovi.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Kombinace více souborů PDF ve Windows 10: Krok za krokem`,
+    date: `2026-06-13`,
+    excerpt: `Uspořádejte své chaotické složky spojením souvisejících dokumentů PDF do jednotlivých soudržných souborů přímo z plochy Windows.`,
+    content: `<p>Mít 15 různých souborů PDF pro jeden projekt je noční můra.Ať už se jedná o měsíční faktury, kapitoly knihy nebo naskenované lékařské záznamy, jejich spojení do jednoho uceleného souboru je pro organizaci Windows 10 zásadní.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Omezení vestavěného systému Windows</h2>
+<p>Windows 10 je výkonný operační systém, ale skvěle mu chybí nativní sloučení PDF.I když obsahuje „Microsoft Print to PDF“, pomáhá pouze vytvářet soubory PDF z jiných formátů, nikoli kombinovat stávající.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Inteligentní pracovní postup (založený na prohlížeči)</h2>
+<p>Nestahujte stinný freeware, který by mohl obsahovat malware nebo do vašich souborů zalepil masivní vodoznaky.Nejprofesionálnější metodou je použití šifrovaného nástroje prohlížeče.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Krok 1: Shromážděte své soubory.</strong> Všechny soubory PDF, které chcete sloučit, umístěte do jedné složky na plochu.To usnadňuje nahrávání.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Krok 2: Otevřete sloučení.</strong> Přejděte na <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">nástroj Sloučit PDF</a> na TheyLovePDF.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Krok 3: Vyberte a objednejte.</strong> Přetáhněte soubory na obrazovku.Zobrazí se náhledové miniatury.Tyto miniatury můžete přetáhnout doleva nebo doprava, abyste zajistili, že budou v dokonalém chronologickém pořadí.
+</li>
+<li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
+<strong>Krok 4: Sloučení.</strong> Stiskněte tlačítko sloučení.Server okamžitě spojí binární kód PDF bez ztráty kvality.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Tato metoda funguje v prohlížečích Chrome, Edge, Firefox a Brave v systému Windows 10 a nevyžaduje absolutně žádná oprávnění k instalaci nebo správě na vašem počítači.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Proč musí právníci chránit soubory PDF hesly`,
+    date: `2026-06-12`,
+    excerpt: `Hluboký ponor do zabezpečení dokumentů, dodržování předpisů a toho, proč je odesílání otevřených souborů PDF prostřednictvím e-mailu hlavní odpovědností právnických firem.`,
+    content: `<p>V právnické profesi není důvěrnost pouze osvědčeným postupem – je to přísný etický a často zákonný požadavek.Bezpočet právnických firem a asistentů přesto stále zasílá citlivé informace, smlouvy a nabídky na vyrovnání jako nezpracované, nešifrované přílohy PDF prostřednictvím standardního e-mailu.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Riziko zachycení</h2>
+<p>Standardní e-mail (SMTP) je notoricky nezabezpečený.Pokud je e-mail směrován přes nezabezpečené servery nebo je prolomena doručená pošta, nešifrovaný soubor PDF je plně čitelný pro každého, kdo jej zachytí.To může vést k porušení práv klienta a masivním závazkům.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Šifrování vs. hesla</h2>
+<p>Je důležité pochopit rozdíl.Jednoduché „heslo pro oprávnění“ brání tisku nebo úpravám, ale nešifruje soubor.Stále si to může přečíst kdokoli.</p>
+<p>Potřebujete <strong>Otevřené heslo</strong> podporované <strong>AES-256 Encryption</strong>.Při použití jsou binární data souboru zakódována.Bez hesla je dokument matematicky nečitelný.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Požadavky na shodu</h4>
+<p class="text-red-800 text-sm m-0">Předpisy jako HIPAA (lékařská) a GDPR (evropská data) silně penalizují organizace, které při přenosu nezašifrují PII (osobně identifikovatelné informace).Šifrovaný soubor PDF je uznávanou metodou zabezpečení dat při přenosu.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Profesionální pracovní postup</h2>
+<ol>
+<li>Nakreslete dokument ve Wordu a exportujte do PDF.</li>
+<li>Nahrajte jej na zabezpečenou platformu s nulovým uchováváním, jako je <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
+<li>Použijte vygenerované 16místné heslo.</li>
+<li>Pošlete zašifrované PDF klientovi e-mailem.</li>
+<li>Poskytněte heslo klientovi prostřednictvím samostatného zabezpečeného kanálu (např. telefonní hovor nebo aplikace pro šifrované zprávy).</li>
+</ol>
+<p>Prosazováním tohoto pracovního postupu se právníci chrání před odpovědností za porušení dat a zajišťují úplnou důvěrnost klienta.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Jak zkomprimovat PDF na Androidu k odeslání přes WhatsApp`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp má limity velikosti souborů, které blokují velké dokumenty.Naučte se, jak zmenšit velikost souboru PDF v telefonu Android, abyste jej mohli okamžitě sdílet.`,
+    content: `<p>WhatsApp je globální standard pro rychlou komunikaci, který často využívají podniky i studenti ke sdílení dokumentů.WhatsApp však prosazuje přísné limity velikosti souborů.Pokud se pokusíte odeslat 150 MB architektonický plán nebo masivní naskenovanou učebnici, aplikace přenos přímo zablokuje.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Dilema Androidu</h2>
+<p>Na rozdíl od komprese fotografie nemá operační systém Android vestavěnou funkci pro kompresi dokumentů PDF.Pokud prohledáváte Obchod Google Play, budete bombardováni aplikacemi plnými rušivých reklam, které ničí kvalitu vašeho souboru.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Technika chytré komprese</h2>
+<p>Obchody s aplikacemi můžete zcela obejít pomocí naší vysokorychlostní cloudové infrastruktury přímo z Google Chrome na vašem zařízení Android.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Otevřít kompresor</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Klepnutím na tento odkaz otevřete <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF kompresor</a> ve svém prohlížeči.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Nahrát ze souborů</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Klepnutím nahrajete a výběrem aplikace 'Soubory' nebo 'Dokumenty' na svém Androidu najdete své velké PDF.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Vyberte „Extrémní komprese“</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Pro WhatsApp vyberte nejvyšší úroveň komprese.Tím se odstraní obrazová data ve vysokém rozlišení, ale text zůstane dokonale čitelný na mobilních obrazovkách.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Stáhnout a sdílet</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Po zpracování klepněte na Stáhnout.Otevřete WhatsApp, klepněte na ikonu kancelářské sponky, vyberte Dokument a sdílejte svůj nově zmenšený soubor!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Celý tento proces trvá méně než 30 sekund, využívá velmi málo vašich mobilních dat a trvale řeší problém s limitem WhatsApp.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Jak extrahovat konkrétní stránky z velkého PDF`,
+    date: `2026-06-10`,
+    excerpt: `Neposílejte 500stránkový manuál, když někdo potřebuje pouze kapitolu 3. Zde je nejchytřejší způsob, jak extrahovat a rozdělit stránky PDF.`,
+    content: `<p>Všichni jsme je dostali: 500stránkový podnikový manuál, rozsáhlý soubor právních objevů nebo učebnici na celý semestr.Co když ale potřebujete poslat pouze stránky 45 až 52 kolegovi?</p>
+<p>Odeslání celého dokumentu je neprofesionální, plýtvá šířkou pásma a nutí příjemce pátrat po relevantních informacích.Potřebujete rozdělit PDF.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>The Hacky Way vs. The Pro Way</h2>
+<p>Obvyklým „hackem“ je použití dialogového okna Tisk, výběr „Tisk do PDF“ a výběr rozsahu stránek.I když to funguje, často to dokument zplošťuje – ničí interaktivní odkazy, záložky a někdy výrazně zvětšuje velikost souboru.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Profesionálním způsobem je rozdělit dokument na binární úrovni, přičemž se zachová přesná původní kvalita a metadata extrahovaných stránek.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Použití profesionálního rozdělovače</h2>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Přejděte na <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Nástroj Split PDF</a>.</li>
+<li>Nahrajte svůj rozsáhlý dokument.Naše servery okamžitě zpracují soubory až do 2 GB.</li>
+<li>Vyberte si režim:
+<ul class="list-disc pl-5 mt-2 mezera-y-1 text-sm text-grey-700">
+<li><strong>Extrahovat stránky:</strong> Zadejte přesné stránky nebo rozsahy (např. <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Rozdělit podle rozsahů:</strong> Dokument se automaticky rozdělí na několik menších dokumentů.</li>
+</ul>
+</li>
+<li>Proces požadavku.Obdržíte úhledné, hyper-zaměřené PDF obsahující pouze stránky, které jste vybrali, se všemi původními odkazy a nedotčenou kvalitou.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Vyjmutím pouze toho, na čem záleží, respektujete čas a prostor doručené pošty příjemce.Je to malá technická dovednost, která přináší obrovské profesionální dividendy.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Chat s PDF: Jak AI mění způsob, jakým čteme dlouhé dokumenty`,
+    date: `2026-06-09`,
+    excerpt: `Stop reading 100-page reports.Zjistěte, jak vám velké jazykové modely (LLM) umožňují doslova „mluvit“ s vašimi dokumenty a okamžitě získat odpovědi.`,
+    content: `<p>Čtení 150stránkové finanční zprávy nebo obsáhlé akademické práce zabralo hodiny zvýrazňování, psaní poznámek a vyhledávání.In 2026, that era is officially over.Welcome to the age of AI Document Chat.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>Co je to "Chat s PDF"?</h2>
+<p>Představte si, že autor dokumentu seděl vedle vás a vy byste mu mohli klást otázky.<em>„Jaké jsou celkové tržby za 3. čtvrtletí?“</em> nebo <em>„Shrňte metodologii tohoto experimentu do 3 odrážek.“</em></p>
+<p>Náš <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">nástroj Chat s PDF</a> využívá pokročilé modely velkých jazyků (LLM).Když nahrajete soubor, AI „přečte“ celý dokument během několika sekund a uloží jej do vektorové paměti.Poté použijete rozhraní chatu (přesně jako ChatGPT) k položení otázek k textu.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>How It Actually Works (Under the Hood)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>Extrakce textu:</strong> Systém analyzuje soubor PDF a extrahuje veškerý text a tabulky.</li>
+<li><strong>Vektorizace:</strong> Text je rozsekán na „kousky“ a převeden na matematická čísla nazývaná vložení.</li>
+<li><strong>Sémantické vyhledávání:</strong> Když položíte otázku, AI prohledá matematiku, aby našla přesné odstavce, které jsou pro vaši otázku nejrelevantnější.</li>
+<li><strong>Generace:</strong> LLM tyto konkrétní odstavce přečte a vypíše přirozenou, konverzační odpověď, často cituje přesné číslo stránky, na které našel informace!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Případy použití</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Studenti:</strong> Nahrajte učebnice a vytvořte okamžité studijní příručky a kartičky.<br><strong>Právníci:</strong> Nahrajte soubory případů, abyste okamžitě našli precedenty bez CTRL+F.<br><strong>Analytici:</strong> Nahrajte 10-Kp konkrétní finanční přehledy okamžitě.
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Soukromí především</h2>
+<p>The biggest concern with AI is data privacy.Při použití profesionálních nástrojů, jako je TheyLovePDF, jsou data vašich dokumentů přísně umístěna v sandboxu.Nikdy se nepoužívá k trénování globálních modelů umělé inteligence a data se po skončení relace automaticky vymažou ze serverů.</p>
+<p>Don't get left behind.Začněte chatovat se svými dokumenty ještě dnes a zrychlete čtení 10x.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Nejlepší iLovePDF alternativa pro zmenšení velikosti PDF`,
+    date: `2026-06-23`,
+    excerpt: `Chcete komprimovat PDF bez ztráty kvality nebo se zabývat agresivními reklamami?Zde je důvod, proč je TheyLovePDF vynikající alternativou k iLovePDF.`,
+    content: `<p>Pokud toto čtete, pravděpodobně jste hledali způsob, jak zmenšit velikost souboru PDF, a napadlo vás použít iLovePDF.I když je to oblíbený nástroj, mnoho uživatelů hledá rychlejší alternativu bez reklam, která nenaruší vizuální věrnost jejich dokumentu.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Proč hledat alternativu?</h2>
+<p>Mnoho starších nástrojů PDF se spoléhá na agresivní kompresní algoritmy, které ničí kvalitu vašich obrázků a vektorové grafiky.Kromě toho jsou bezplatné úrovně často silně omezeny denními limity a pokryty rušivými reklamami.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>Výhoda TheyLovePDF</h2>
+<p>Náš <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">nástroj pro kompresi PDF</a> jsme navrhli tak, aby byl absolutně nejlepší v oboru.Zde je důvod, proč uživatelé přecházejí:</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>Inteligentní AI komprese:</strong> Namísto pouhého snížení rozlišení obrazu náš modul matematicky analyzuje váš dokument a odstraní neviditelná metadata, nereferencovaná písma a duplicitní datové struktury.</li>
+<li><strong>Nulové reklamy:</strong> Věříme, že nástroje by měly být čisté a bez rušivých vlivů.V našem nástroji pro kompresi nenajdete jedinou bannerovou reklamu.</li>
+<li><strong>Přísné soukromí:</strong> Vaše soubory jsou chráněny 256bitovým šifrováním SSL a po 2 hodinách jsou trvale smazány z našich serverů.Vaše data nečteme ani neprodáváme.</li>
+</ul>
+
+<p>Příště budete muset zmenšit velký soubor pro přílohu e-mailu nebo zprávu WhatsApp, přeskočte starší nástroje.Přetáhněte soubor do TheyLovePDF a zažijte rozdíl.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Jak převést PowerPoint (PPT) do PDF na vašem iPhone`,
+    date: `2026-06-23`,
+    excerpt: `Potřebujete odeslat prezentaci ze svého telefonu?Naučte se nejrychlejší způsob, jak převést soubor .ppt nebo .pptx na profesionální PDF přímo v iOS.`,
+    content: `<p>Ať už jste student, který se snaží odeslat úkol v autobuse, nebo profesionál, který posílá balíček e-mailem klientovi z letiště, převod PowerPointu do PDF na vašem iPhonu je zásadní mobilní dovedností.</p>
+<p>Soubory PDF zaručují, že vaše písma, formátování a rozvržení budou na obrazovce příjemce vypadat naprosto stejně, bez ohledu na to, jaké zařízení používá.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Bezproblémová metoda</h2>
+<p>Nestahujte náročnou prezentační aplikaci, jen abyste převedli jeden soubor.Můžete to udělat bezpečně přes Safari během několika sekund.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Otevřete Safari a přejděte na <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Převaděč Office do PDF</a> (tento nástroj pracuje s Wordem, Excelem a PowerPointem).</li>
+<li>Klepněte na tlačítko nahrát a vyberte <strong>Vybrat soubory</strong>.</li>
+<li>Vyhledejte svůj stažený soubor <em>.pptx</em> v aplikaci Soubory na iPhonu nebo na iCloud Drive.</li>
+<li>Klepněte na Převést.Náš vykreslovací modul na podnikové úrovni dokonale zachová všechna rozvržení snímků a vektorovou grafiku.</li>
+<li>Klepněte na Stáhnout a uložte ostrý, nový soubor PDF do svého zařízení.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Celý tento proces se odehrává v cloudu, což znamená, že nebude vybíjet baterii vašeho iPhonu ani nezabírat žádný místní úložný prostor!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Jak digitálně podepsat PDF v systému Windows 10 a 11`,
+    date: `2026-06-23`,
+    excerpt: `Zastavte tisk a skenování smluv.Zde je právně závazný profesionální způsob, jak podepsat dokument na počítači se systémem Windows.`,
+    content: `<p>Přijetí smlouvy e-mailem dříve znamenalo její vytištění, podepsání perem, naskenování zpět do počítače a odeslání znehodnoceného, ​​křivého obrázku e-mailem zpět odesílateli.V roce 2026 je tento pracovní postup oficiálně mrtvý.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Moderní způsob přihlašování v systému Windows</h2>
+<p>K provedení právně závazného elektronického podpisu nepotřebujete Adobe Acrobat ani žádný placený software nainstalovaný na vašem počítači se systémem Windows.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="list-decimal pl-5 mezera-y-3 mt-6">
+<li>Otevřete Chrome nebo Edge a přejděte k <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">nástroji Podepsat PDF</a>.</li>
+<li>Přetáhněte smlouvu na stránku.</li>
+<li>Klikněte na ikonu <strong>Podpis</strong> na panelu nástrojů.</li>
+<li>Vyberte, jak se chcete podepsat:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Kreslení:</strong> K napsání podpisu použijte myš nebo dotykovou obrazovku/stylus systému Windows.</li>
+<li><strong>Typ:</strong> Napište své jméno a vyberte profesionální kurzívní písmo.</li>
+<li><strong>Nahrát:</strong> Pokud máte čistou fotku svého skutečného podpisu, nahrajte ji.Náš nástroj automaticky odstraní bílé pozadí!</li>
+</ul>
+</li>
+<li>Přetáhněte podpis na tečkovanou čáru, změňte jeho velikost a klikněte na <strong>Použít</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Jsou tyto podpisy legální?</strong> Ano!V rámci hlavních mezinárodních rámců (jako je americký zákon ESIGN Act a evropský eIDAS) mají elektronické podpisy u téměř všech standardních obchodních dohod přesně stejnou právní váhu jako podpis mokrým inkoustem.</p>
+</div>`
+  },
 ];

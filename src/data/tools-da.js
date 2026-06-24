@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for da
 export const TOOLS_DATA_DA = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF til Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Konverter dine PDF-filer til lette at redigere DOC- og DOCX-dokumenter.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Upload dit PDF-dokument ved at trække det ind i dropzonen eller klikke på knappen 'Vælg fil'.`,
+      `Vores avancerede OCR- og konverteringsmotor begynder øjeblikkeligt at udtrække tekst, layout og formatering.`,
+      `Download det perfekt konverterede Word (DOC/DOCX) dokument, klar til redigering.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Hvad er en PDF til Word-konverter?`,
+        "answer": `En PDF til Word-konverter er et værktøj, der udtrækker tekst, layout og billeder fra en PDF og genskaber dem som et fuldt redigerbart Microsoft Word-dokument.Vores førsteklasses konverteringsmotor bevarer skrifttyper, layouts, tabeller og billeder, så dit Word-dokument ser nøjagtigt ud som den originale PDF.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Kan jeg konvertere scannede PDF-filer til redigerbare Word-dokumenter?`,
+        "answer": `Absolut.Vores indbyggede OCR-teknologi (Optical Character Recognition) registrerer automatisk scannet tekst og gør den fuldt redigerbar i den resulterende DOCX-fil.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Er min fortrolige PDF sikker under konvertering?`,
+        "answer": `Vi tager privatlivets fred alvorligt.Dine filer krypteres via 256-bit SSL under overførsel og slettes permanent fra vores servere automatisk inden for 2 timer.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word til PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Gør DOC- og DOCX-filer nemme at læse ved at konvertere dem til PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Vælg din DOC- eller DOCX-fil fra din computer, eller træk den til siden.`,
+      `Værktøjet vil øjeblikkeligt låse formateringen og konvertere Word-dokumentet til et universelt PDF-format.`,
+      `Download din nye PDF.Layoutet vil se identisk ud på hver enhed.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Hvorfor skal jeg konvertere Word til PDF?`,
+        "answer": `Konvertering til PDF sikrer, at dit dokuments layout, skrifttyper og billeder ser nøjagtigt ens ud på enhver enhed, hvilket forhindrer formateringsfejl ved deling med andre.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Er mine marginer og skrifttyper bevaret?`,
+        "answer": `Ja, vores Word til PDF-konverter låser dit nøjagtige layout, inklusive brugerdefinerede skrifttyper og præcise margenindstillinger.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Kan jeg konvertere flere Word-filer på én gang?`,
+        "answer": `Ja, du kan uploade flere DOC/DOCX-filer, og vi behandler dem samtidigt til højhastighedskonvertering.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF til Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Udtræk tabeller og data fra PDF-filer til Excel-regneark.Bedste resultater med tekstbaserede PDF'er.Scannede PDF'er understøttes via OCR - nøjagtigheden kan variere.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Upload PDF-filen, der indeholder de tabeller og data, du vil udtrække.`,
+      `Vores system scanner dokumentet, identificerer tabeldata og formaterer det nøjagtigt til regnearksceller.`,
+      `Download din redigerbare Excel-fil (XLSX).`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Vil mine PDF-tabeller blive formateret korrekt i Excel?`,
+        "answer": `Ja, vores intelligente udtræksværktøj genkender rækker og kolonner og sikrer, at dine tabeldata er pænt organiseret i Excel-celler.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Kan den udtrække data fra scannede PDF'er?`,
+        "answer": `Ja, vores OCR-teknologi kan læse tabeller fra scannede billeder og konvertere dem til redigerbare Excel-regneark.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Er formlerne overført?`,
+        "answer": `PDF'er gemmer ikke formler, kun rådata.Den udpakkede Excel-fil vil indeholde de nøjagtige værdier, der er synlige i PDF'en.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel til PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Gør EXCEL-regneark nemme at læse ved at konvertere dem til PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Upload dit Excel (XLS eller XLSX) regneark.`,
+      `Vores værktøj vil optimere regnearkets layout, så det passer perfekt til PDF-sider uden at afskære kolonner.`,
+      `Download det færdige PDF-dokument.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Bliver mine brede regneark skåret af?`,
+        "answer": `Vores konverter skalerer og formaterer dit regneark intelligent for at sikre, at kolonner passer logisk på PDF-siderne.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Konverterer det alle regneark?`,
+        "answer": `Ja, alle aktive regneark i din Excel-fil vil blive konverteret til sekventielle sider i den endelige PDF.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Er mine økonomiske data sikre?`,
+        "answer": `100 %.Vi bruger ende-til-ende-kryptering, og alle filer slettes permanent fra vores systemer inden for 2 timer.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF til JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Konverter hver PDF-side til en JPG eller udtræk alle indeholdte billeder.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Upload det PDF-dokument, du vil konvertere til billeder.`,
+      `Vælg, om du vil udtrække indlejrede billeder eller konvertere hele PDF-sider til JPG'er i høj opløsning.`,
+      `Download JPG'erne enkeltvis eller som en komprimeret ZIP-fil.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Vil JPG-kvaliteten være høj?`,
+        "answer": `Ja, vi udpakker og konverterer sider i høj opløsning, hvilket sikrer skarp tekst og klare billeder i de resulterende JPG-filer.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Kan jeg kun udtrække billederne fra PDF'en?`,
+        "answer": `Absolut.Du kan vælge kun at udtrække de billeder, der er indlejret i PDF'en, i stedet for at konvertere hele siden.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Er der en grænse for, hvor mange sider jeg kan konvertere?`,
+        "answer": `Gratis brugere kan konvertere op til 10 MB PDF-filer.Pro-brugere kan behandle massive filer op til 2 GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG til PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Konverter JPG-billeder til PDF på få sekunder.Juster let orientering og margener.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Vælg et eller flere JPG-billeder fra din enhed.`,
+      `Træk og slip for at omarrangere deres rækkefølge, justere sideretningen og indstille margener, hvis det er nødvendigt.`,
+      `Klik på 'Konverter' og download dit kombinerede PDF-dokument.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Kan jeg kombinere flere JPG'er til én PDF?`,
+        "answer": `Ja, du skal blot uploade flere billeder, arrangere dem i din foretrukne rækkefølge, og vi vil flette dem til et enkelt PDF-dokument.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Vil mine billeder miste kvalitet?`,
+        "answer": `Nej, vi bevarer den originale opløsning og kvalitet af dine JPG-billeder, når vi indlejrer dem i PDF'en.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Kan jeg justere margener og retning?`,
+        "answer": `Ja, vores værktøj giver dig mulighed for at tilpasse sideretningen (stående eller liggende) og margenstørrelser før konvertering.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF til PowerPoint`,
+    "desc": `Gør dine PDF-filer til PPT- og PPTX-diasshows, der er nemme at redigere.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Upload den PDF, du vil lave om til en præsentation.`,
+      `Vores AI-motor vil analysere slides og konvertere dem til redigerbare PPTX-formater.`,
+      `Download din nye PowerPoint-præsentation.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Kan teksten i min PowerPoint redigeres?`,
+        "answer": `Ja, al tekst, former og billeder vil være fuldt redigerbare i den resulterende PPTX-fil.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Fungerer det med scannede præsentationer?`,
+        "answer": `Ja, ved at bruge OCR kan vi udtrække tekst fra scannede dias og gøre den redigerbar i PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Er diaslayoutet bevaret?`,
+        "answer": `Vores avancerede konverteringsteknologi sikrer, at layoutet af din originale PDF matches så tæt som muligt i PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint til PDF`,
+    "desc": `Gør PPT- og PPTX-diasshows nemme at se ved at konvertere dem til PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Vælg din PPT- eller PPTX-fil.`,
+      `Værktøjet vil øjeblikkeligt konvertere dine dias til et sikkert, universelt PDF-format.`,
+      `Download din præsentation som PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Hvorfor konvertere PowerPoint til PDF?`,
+        "answer": `Konvertering sikrer, at din præsentation ser identisk ud på enhver enhed, hvilket forhindrer manglende skrifttyper eller ødelagte layouts, når du præsenterer på en anden computer.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Er mine diasovergange gemt?`,
+        "answer": `Nej, PDF er et statisk dokumentformat, så animationer og diasovergange overføres ikke.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Er talerens noter inkluderet?`,
+        "answer": `I øjeblikket konverterer vores værktøj de vigtigste diasvisuals.Talernoter er ikke inkluderet i standard PDF-output.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF til HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Konverter dine PDF-dokumenter til HTML-websider perfekt.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Upload din PDF-fil.`,
+      `Vores system vil konvertere dokumentet til webklar HTML, CSS og billeder.`,
+      `Download ZIP-filen, der indeholder din nye webside.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Vil HTML'en være responsiv?`,
+        "answer": `HTML'en vil nøje matche det statiske layout af din PDF og bibeholde den absolutte positionering for nøjagtighed.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Udtrækkes billeder automatisk?`,
+        "answer": `Ja, alle indlejrede billeder udtrækkes og refereres korrekt i den genererede HTML-kode.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Har jeg brug for kodningsfærdigheder for at bruge dette?`,
+        "answer": `Slet ikke.Du modtager en HTML-fil, der er klar til brug, som du øjeblikkeligt kan åbne i enhver webbrowser.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML til PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Konverter websider i HTML til PDF-format direkte fra URL eller fil.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Upload din HTML-fil, eller indtast en webside-URL.`,
+      `Vores gengivelsesmotor indlæser siden, anvender typografier og fanger den som et PDF-dokument.`,
+      `Download din perfekt formaterede PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Kan jeg konvertere live URL'er til PDF?`,
+        "answer": `Ja, du kan indtaste en URL, og vores værktøj henter den levende webside og konverterer den til en PDF af høj kvalitet.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Anvendes CSS-stile?`,
+        "answer": `Absolut.Vores gengivelsesmotor understøtter fuldt ud CSS, hvilket sikrer, at PDF-filen ser nøjagtig ud som den live-webside.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Hvad med JavaScript tunge sider?`,
+        "answer": `Vores værktøj udfører JavaScript, før siden indfanges, og sikrer, at dynamisk indhold gengives korrekt i den endelige PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF til tekst`,
+    "desc": `Uddrag tekst fra dine PDF-filer for at oprette redigerbare TXT-dokumenter.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Upload dit PDF-dokument.`,
+      `Vores system fjerner formatering og udtrækker ren, almindelig tekst.`,
+      `Download din rå TXT-fil.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Udtrækker den tekst fra billeder?`,
+        "answer": `Ja, hvis PDF'en indeholder scannede billeder, vil vores OCR-teknologi læse teksten og inkludere den i TXT-filen.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Bliver formateringen bevaret?`,
+        "answer": `Nej, dette værktøj fjerner specifikt al formatering for at give dig rå, ustilet almindelig tekst.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Er mine data sikre?`,
+        "answer": `Ja, alle filer krypteres under behandlingen og slettes automatisk inden for 2 timer.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Flet PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Kombiner PDF-filer i den rækkefølge, du ønsker, med den nemmeste PDF-fusion, der findes.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Vælg flere PDF-filer fra din enhed.`,
+      `Træk og slip miniaturebillederne for at arrangere filerne i den ønskede rækkefølge.`,
+      `Klik på 'Merge' og download dit kombinerede, enkelt PDF-dokument.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Hvad er en PDF-fusion?`,
+        "answer": `En PDF-fusion er et værktøj, der kombinerer flere PDF-filer til et enkelt, kontinuerligt dokument.Gratis brugere kan flette op til 20 filer på én gang.Pro-brugere kan flette et ubegrænset antal dokumenter.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Kan jeg ændre rækkefølgen af ​​filerne?`,
+        "answer": `Ja!Efter upload skal du blot trække og slippe filens miniaturebilleder for at omarrangere dem præcis, som du ønsker.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Forringer sammenlægningen kvaliteten?`,
+        "answer": `Slet ikke.Sammenfletningsprocessen bevarer den originale kvalitet og formatering af alle dine dokumenter.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Opdel PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Adskil en side eller et helt sæt for nem konvertering til uafhængige PDF-filer.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Upload den PDF, du ønsker at opdele.`,
+      `Vælg, om du vil udtrække bestemte sider eller opdele dokumentet i faste områder.`,
+      `Download dine nye, adskilte PDF-filer som et ZIP-arkiv.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Kan jeg kun udtrække én side fra en stor PDF?`,
+        "answer": `Ja, du kan nemt angive et enkelt sidetal eller et brugerdefineret område (f.eks. side 4-7) for at udtrække.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Vil de opdelte filer bevare den originale kvalitet?`,
+        "answer": `Ja, de enkelte sider udtrækkes fejlfrit uden tab i opløsning eller tekstkvalitet.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Hvordan downloader jeg flere opdelte filer?`,
+        "answer": `Når du opdeler et dokument i flere dele, vil vi bekvemt pakke dem ind i en enkelt ZIP-fil for nem download.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Roter PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Roter dine PDF'er, som du har brug for dem.Du kan endda rotere flere PDF-filer på én gang.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Upload dit PDF-dokument.`,
+      `Hold markøren over de sider, du vil rotere, og klik på roterikonet, eller roter alle sider på én gang.`,
+      `Klik på ansøg og download din permanent roterede PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Kan jeg kun rotere bestemte sider?`,
+        "answer": `Ja, du kan vælge individuelle sider og rotere dem 90, 180 eller 270 grader uden at påvirke resten af ​​dokumentet.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Er rotationen permanent?`,
+        "answer": `Ja, når du har downloadet den nye fil, gemmes retningsændringerne permanent i PDF-filens metadata.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Er det sikkert at uploade fortrolige dokumenter?`,
+        "answer": `Absolut.Alle uploads krypteres via HTTPS og slettes fra vores servere 2 timer efter behandling.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Slet sider`,
+    "desc": `Fjern sider fra et PDF-dokument lynhurtigt.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Upload din PDF-fil.`,
+      `Vælg de sider, du vil fjerne, ved at klikke på deres thumbnails.`,
+      `Klik på 'Slet sider' og download dit nyligt strømlinede dokument.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Hvordan ved jeg, hvilke sider jeg skal slette?`,
+        "answer": `Vores værktøj genererer thumbnails af høj kvalitet af hver side, så du visuelt kan identificere og vælge de nøjagtige sider, du vil fjerne.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Kan jeg slette flere sider på én gang?`,
+        "answer": `Ja, du kan klikke på flere miniaturebilleder eller skrive i et sideområde for at fjerne flere sider samtidigt.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Er resten af ​​dokumentet berørt?`,
+        "answer": `Nej, alle resterende sider beholder deres originale formatering, kvalitet og opløsning.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Omarranger sider`,
+    "desc": `Skift siderækkefølgen af ​​dit PDF-dokument ved at trække og slippe.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Upload dit PDF-dokument.`,
+      `Du skal blot trække og slippe sideminiaturerne for at ændre deres rækkefølge.`,
+      `Når det er arrangeret, skal du anvende ændringerne og downloade din omorganiserede PDF.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Er det nemt at genbestille et stort dokument?`,
+        "answer": `Ja, vores intuitive træk-og-slip-grænseflade giver dig mulighed for hurtigt at flytte rundt på sider, selv i store dokumenter.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Vil jeg miste nogen interaktive elementer?`,
+        "answer": `De fleste interaktive standardelementer er bevaret, selvom komplekse formularfelter, der bygger bro mellem flere sider, kan opføre sig anderledes.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Kan jeg fortryde en flytning, før jeg gemmer?`,
+        "answer": `Ja, du kan omarrangere siderne så mange gange du vil, før du klikker på knappen til den endelige proces.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Tilføj tom side`,
+    "desc": `Indsæt en tom side hvor som helst i dit PDF-dokument.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Upload din PDF-fil.`,
+      `Vælg den nøjagtige placering, hvor du vil indsætte en ny tom side.`,
+      `Anvend ændringerne og download din opdaterede PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Hvorfor skulle jeg tilføje en tom side?`,
+        "answer": `Tilføjelse af en tom side er nyttig til at udskrive dobbeltsidede dokumenter, indsætte fremtidige noter eller rette pagineringsformatering.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Kan jeg tilføje flere tomme sider?`,
+        "answer": `Ja, du kan indsætte så mange tomme sider, som du har brug for, hvor som helst i dokumentet.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Vil den tomme side matche dokumentets størrelse?`,
+        "answer": `Ja, den nye tomme side vil automatisk matche dimensionerne og orienteringen af ​​de omkringliggende sider.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Komprimer PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Reducer filstørrelsen, mens du optimerer for maksimal PDF-kvalitet.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Upload din omfangsrige PDF-fil.`,
+      `Vælg dit ønskede kompressionsniveau (Ekstrem, Anbefalet eller Mindre kompression).`,
+      `Download din optimerede, meget mindre PDF-fil.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Vil komprimering ødelægge kvaliteten af ​​min PDF?`,
+        "answer": `Vores avancerede optimeringsalgoritmer reducerer filstørrelsen ved at komprimere billeder og fjerne overflødige data, mens teksten holdes skarp og billederne visuelt klare.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Hvilket kompressionsniveau skal jeg vælge?`,
+        "answer": `Vi foreslår 'Anbefalet' for en perfekt balance.Brug kun 'Ekstrem', hvis du akut har brug for den mindst mulige filstørrelse for e-mail-vedhæftede filer.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Kan jeg komprimere en PDF, der allerede er lille?`,
+        "answer": `Du kan, men filstørrelsesreduktionen vil være minimal, da dataene sandsynligvis allerede er optimeret.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Reparation af pdf`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Reparer en beskadiget PDF og gendan data fra korrupte filer.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Upload din korrupte eller beskadigede PDF-fil.`,
+      `Vores system vil analysere filstrukturen og forsøge at genopbygge de ødelagte data.`,
+      `Download det reparerede PDF-dokument.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Kan alle beskadigede PDF'er rettes?`,
+        "answer": `Selvom vores værktøj er yderst effektivt til at rette strukturelle fejl og ødelagte overskrifter, kan alvorligt beskadigede filer med manglende rådata muligvis ikke gendannes fuldt ud.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Hvor lang tid tager reparationen?`,
+        "answer": `De fleste filer analyseres og repareres inden for få sekunder, afhængigt af skadens kompleksitet.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Er dataene inde sikre?`,
+        "answer": `Ja.Vi behandler reparationen sikkert i skyen, og dit dokument slettes permanent kort efter.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Gør tekst i scannede PDF'er valgbar, søgbar og redigerbar.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Upload dit scannede PDF-dokument.`,
+      `Vælg sproget for teksten inde i dokumentet for bedre nøjagtighed.`,
+      `Download din nye, fuldt søgbare og valgbare PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Hvad er OCR?`,
+        "answer": `OCR står for Optical Character Recognition.Det er en teknologi, der læser tekst inde i billeder eller scannede dokumenter og konverterer den til valgbar, søgbar computertekst.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Virker OCR på håndskrevet tekst?`,
+        "answer": `Vores OCR-motor er meget nøjagtig til trykt tekst.Håndskrevet tekst kan give forskellige resultater afhængigt af læsbarheden.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Kan jeg kopiere tekst fra OCR-dokumentet?`,
+        "answer": `Absolut.Når den er behandlet, kan du fremhæve, kopiere og indsætte tekst direkte fra PDF'en ligesom et normalt dokument.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Udglat PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Flet alle lag, formularer og anmærkninger til et enkelt ikke-redigerbart lag.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Upload PDF'en, der indeholder formularer, lag eller anmærkninger.`,
+      `Vores system vil permanent flette alle visuelle elementer til et enkelt fladt lag.`,
+      `Download den fladtrykte, printklare PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Hvorfor skal jeg udglatte en PDF?`,
+        "answer": `Udfladning af en PDF låser formulardata, forhindrer yderligere redigering af annoteringer og sikrer, at dokumentet udskrives nøjagtigt, som det vises på skærmen.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Kan en fladtrykt PDF fjernes?`,
+        "answer": `Nej, udfladning er en permanent proces.Vi anbefaler, at du opbevarer en sikkerhedskopi af din originale interaktive PDF.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Reducerer fladning filstørrelsen?`,
+        "answer": `Ofte, ja.Ved at flette lag og fjerne interaktive formularfelter bliver den overordnede struktur enklere og mindre.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Beskyt PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Krypter din PDF med en adgangskode for at forhindre uautoriseret adgang.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Upload den PDF, du vil sikre.`,
+      `Indtast en stærk adgangskode og bekræft den.`,
+      `Download din nye krypterede PDF-fil.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Hvilken slags kryptering bruges?`,
+        "answer": `Vi bruger robust AES 256-bit kryptering, som er industristandarden til sikring af meget følsomme og fortrolige dokumenter.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Kan TheyLovePDF gendanne min adgangskode, hvis jeg glemmer den?`,
+        "answer": `Nej. Din adgangskode gemmes aldrig på vores servere.Hvis du mister det, kan dokumentet ikke dekrypteres.Opbevar det venligst!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Forhindrer beskyttelse af en PDF udskrivning?`,
+        "answer": `Ja, kryptering låser dokumentet fra at blive åbnet, udskrevet eller redigeret uden den korrekte adgangskode.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Lås PDF op`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Fjern PDF-adgangskodesikkerhed, hvilket giver dig frihed til at bruge dine PDF-filer, som du vil.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Upload din adgangskodebeskyttede PDF.`,
+      `Hvis filen har en 'ejeradgangskode', der begrænser redigeringer, fjerner vi den med det samme.Hvis den har en 'brugeradgangskode', der begrænser åbningen, skal du indtaste den først.`,
+      `Download din ulåste PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Kan du låse en PDF op uden adgangskoden?`,
+        "answer": `Vi kan nemt fjerne 'edit/print restrictions' (ejeradgangskoder) uden at have brug for adgangskoden.Men hvis filen kræver en adgangskode bare for at åbne den (brugeradgangskode), skal du angive den.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Er det lovligt at låse en PDF op?`,
+        "answer": `Du bør kun fjerne sikkerhed fra dokumenter, som du lovligt ejer eller har tilladelse til at ændre.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Vil oplåsning ændre dokumentets indhold?`,
+        "answer": `Nej, indholdet, formateringen og kvaliteten forbliver fuldstændig uberørt.Kun sikkerhedslaget fjernes.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Rediger PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Fjern permanent følsomme oplysninger eller skjulte data fra dine PDF'er.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Upload din PDF-fil.`,
+      `Tegn sorte bokse over den følsomme tekst, billeder eller personlige oplysninger.`,
+      `Anvend redaktionerne for permanent at skrubbe dataene, og download derefter filen.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Er den redigerede tekst virkelig væk?`,
+        "answer": `Ja.I modsætning til blot at tegne en sort form over tekst, sletter vores redigeringsværktøj permanent de underliggende tekstdata, så de ikke kan kopieres eller læses af maskiner.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Kan jeg også redigere billeder?`,
+        "answer": `Absolut.Du kan vælge et hvilket som helst område på siden, inklusive grafik og fotos, der skal være permanent mørklagt.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Er redaktion reversibel?`,
+        "answer": `Nej. Af hensyn til din sikkerhed ødelægger redaktion permanent de skjulte data.Opbevar altid en uredigeret sikkerhedskopi, hvis det er nødvendigt.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Signer PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Skriv selv under eller anmod om elektroniske signaturer fra andre.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Upload det dokument, der kræver en signatur.`,
+      `Opret din signatur ved at tegne, skrive eller uploade et billede.`,
+      `Placer din signatur på dokumentet, klik på anvend, og download det.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Er elektroniske signaturer lovlige?`,
+        "answer": `Ja, elektroniske signaturer oprettet med TheyLovePDF er juridisk bindende i de fleste lande og jurisdiktioner.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Kan jeg gemme min signatur til senere?`,
+        "answer": `Ja, hvis du opretter en konto, kan du sikkert gemme din signatur til hurtig 1-kliks signering i fremtiden.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Kan jeg tilføje tekstdatoer og initialer?`,
+        "answer": `Absolut.Sammen med din signatur kan du nemt trække og slippe datoer, initialer og tilpassede tekstfelter.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Anmod om underskrift`,
+    "desc": `Send dokumenter til kunder for at blive underskrevet lovligt online.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Upload den PDF, du skal have underskrevet.`,
+      `Tilføj modtagernes e-mailadresser, og tildel signaturfelter til dem.`,
+      `Send anmodningen.Vi sender dem et sikkert link til at underskrive dokumentet online.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Har modtagerne brug for en konto for at underskrive?`,
+        "answer": `Nej, modtagere kan sikkert underskrive dokumentet direkte fra deres e-mail-link uden at skulle oprette en TheyLovePDF-konto.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Hvordan ved jeg, hvornår den er underskrevet?`,
+        "answer": `Du vil modtage en automatisk e-mail-meddelelse i det øjeblik, alle parter har underskrevet dokumentet.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Er der et revisionsspor?`,
+        "answer": `Ja, Pro-brugere modtager et omfattende revisionsspor med oplysninger om IP-adresser og tidsstempler for fuld lovlig overholdelse.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Certifikat tegn`,
+    "desc": `Tilføj en kryptografisk digital signatur til din PDF.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Upload din PDF og din digitale certifikatfil (.pfx eller .p12).`,
+      `Indtast certifikatets adgangskode.`,
+      `Anvend den kryptografiske signatur og download den verificerede PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Hvad er en certifikatsignatur?`,
+        "answer": `I modsætning til en visuel elektronisk signatur anvender en certifikatsignatur en kryptografisk hash på dokumentet, der matematisk beviser dets ægthed og sikrer, at det ikke er blevet ændret.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Gemmer du mit certifikatkodeord?`,
+        "answer": `Aldrig.Din adgangskode opbevares kun i den midlertidige hukommelse på det nøjagtige tidspunkt, hvor du underskriver og bliver øjeblikkeligt ødelagt.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Kan folk bekræfte signaturen?`,
+        "answer": `Ja, når det åbnes i standard PDF-læsere som Adobe Acrobat, vises et grønt flueben, der angiver, at dokumentet er digitalt verificeret og uændret.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Chat med PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Tal til din PDF.Stil spørgsmål, få resuméer og uddrag øjeblikkeligt indsigt ved hjælp af AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Upload dit lange eller komplekse PDF-dokument.`,
+      `Indtast et spørgsmål i chatboksen, såsom 'Opsummer kapitel 2' eller 'Hvad er hovedargumentet?'`,
+      `Vores AI vil øjeblikkeligt læse dokumentet og give dig et præcist svar.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Hvordan fungerer Chat med PDF?`,
+        "answer": `Vi bruger avancerede store sprogmodeller (LLM'er) til at scanne teksten i dit dokument, forstå dets kontekst og besvare eventuelle spørgsmål, du stiller udelukkende baseret på dokumentets indhold.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Kan den læse scannede dokumenter?`,
+        "answer": `Hvis dokumentet udelukkende er et billede, skal du først køre det gennem vores OCR-værktøj.Hvis den indeholder valgbar tekst, kan AI læse den med det samme.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Bruges mine dokumenter til at træne AI?`,
+        "answer": `Absolut ikke.Dit privatliv er vores prioritet.Dokumenter behandles i et sikkert miljø og bruges aldrig til at træne offentlige AI-modeller.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Rediger PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Tilføj tekst, billeder, figurer eller frihåndsanmærkninger til et PDF-dokument.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Populær` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Upload den PDF, du vil ændre.`,
+      `Brug værktøjslinjen til at tilføje tekst, indsætte billeder, tegne figurer eller anvende whiteout på eksisterende områder.`,
+      `Gem dine redigeringer og download den opdaterede PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Kan jeg ændre eksisterende tekst i PDF'en?`,
+        "answer": `I øjeblikket kan du bruge 'whiteout'-værktøjet til at dække gammel tekst og skrive ny tekst over den.Indbygget tekstredigering er en meget kompleks funktion, som vi aktivt udvikler.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Kan jeg tilføje billeder til PDF'en?`,
+        "answer": `Ja, du kan nemt uploade og stemple PNG- eller JPG-billeder hvor som helst på dit dokument.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Reducerer redigering dokumentkvaliteten?`,
+        "answer": `Nej, vores redaktør tilføjer dine annoteringer oven på den eksisterende dokumentstruktur uden at genkomprimere de originale billeder eller tekst.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Vandmærke pdf`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Stempler et billede eller en tekst over din PDF på få sekunder.Vælg typografi, gennemsigtighed og position.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Upload din PDF-fil.`,
+      `Indtast din vandmærketekst eller upload et logobillede.Juster opacitet, rotation og placering.`,
+      `Klik på anvend og download dit vandmærkedokument.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Kan jeg vandmærke alle sider på én gang?`,
+        "answer": `Ja, dit vandmærke vil som standard blive anvendt konsekvent på hver enkelt side i dokumentet.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Kan jeg justere gennemsigtigheden?`,
+        "answer": `Absolut.Du kan gøre vandmærket meget svagt, så det ikke distraherer fra dokumentet, eller helt uigennemsigtigt for maksimal synlighed.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Kan et vandmærke fjernes?`,
+        "answer": `Vi flader vandmærket ind i dokumentstrukturen for at gøre det så svært som muligt at fjerne, hvilket sikrer, at din intellektuelle ejendom er beskyttet.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF formularer`,
+    "desc": `Udfyld PDF-formularer hurtigt og præcist online.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Upload en interaktiv PDF-formular.`,
+      `Klik på tekstfelterne, afkrydsningsfelterne eller alternativknapperne for at udfylde dine oplysninger.`,
+      `Download den udfyldte, udfyldte formular.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Kan jeg gemme en delvist udfyldt formular?`,
+        "answer": `Hvis du har en Pro-konto, gemmes dine sessioner automatisk, så du kan vende tilbage og afslutte formularen senere.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Virker det med alle PDF-formularer?`,
+        "answer": `Vores værktøj understøtter standard AcroForms, som udgør 99 % af interaktive PDF-filer.Ældre XFA-formularer kan have begrænset support.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Kan jeg flade formularen ud efter at have udfyldt den?`,
+        "answer": `Ja, når den er downloadet, kan du køre den gennem vores 'Flaten PDF'-værktøj for at låse dataene, så de ikke kan ændres af modtageren.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Tilføj sidetal`,
+    "desc": `Tilføj sidetal til PDF-filer med lethed.Vælg dine positioner, dimensioner, typografi.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratis` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Upload dit dokument.`,
+      `Vælg positionen (f.eks. nederst til højre), skrifttypestil og startnummer.`,
+      `Anvend nummereringen og download din perfekt formaterede PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Kan jeg springe forsiden over?`,
+        "answer": `Ja!Du kan angive, hvilken side nummereringen egentlig skal begynde på, så du kan holde titelsider rene.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Kan jeg tilpasse formatet?`,
+        "answer": `Absolut.Du kan vælge formater som 'Side 1', '1 af 10' eller bare '1' og vælge skrifttype, størrelse og farve.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Er justeringen nøjagtig?`,
+        "answer": `Ja, vores værktøj beregner de nøjagtige marginer for at sikre, at dine sidetal er perfekt justeret på hver enkelt side.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Anmærk PDF`,
+    "desc": `Fremhæv, understreg, gennemstreg tekst og tilføj kommentarer.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Ny` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Upload din PDF.`,
+      `Brug værktøjet highlighter, understregning, gennemstregning og sticky notes til at gennemgå dokumentet.`,
+      `Download den kommenterede fil for at dele med dit team.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Vil mine annoteringer være synlige i standardlæsere?`,
+        "answer": `Ja, vi bruger standard PDF-annotationsprotokoller, hvilket betyder, at dine højdepunkter og noter vil være synlige i Adobe Acrobat, Chrome og Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Kan jeg ændre highlight-farver?`,
+        "answer": `Ja, du kan vælge fra en bred palet af farver til at farvekode dine noter og højlys.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Er det nemt at slette en anmærkning?`,
+        "answer": `Meget let.Bare klik på en annotering, du har lavet, og tryk på slet-knappen for at fjerne den med det samme.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Plagiatkontrol`,
+    "desc": `Sammenlign dit dokument med milliarder af websider og akademiske databaser.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Upload det essay eller dokument, du vil bekræfte.`,
+      `Vores AI-motor vil scanne milliarder af websider og akademiske databaser for at finde matches.`,
+      `Gennemgå den detaljerede lighedsrapport, der fremhæver enhver kopieret tekst.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Hvor nøjagtig er plagiatkontrollen?`,
+        "answer": `Det er meget præcist.Vi bruger AI i virksomhedskvalitet, der krydsreferencer din tekst mod en massiv, løbende opdateret database med onlineindhold.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Tjekker det mod offline akademiske artikler?`,
+        "answer": `Den kontrollerer mod store akademiske tidsskrifter med åben adgang og stærkt citerede kilder, der er tilgængelige online.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Er mit dokument gemt i en database?`,
+        "answer": `Nej. I modsætning til nogle universiteters systemer tilføjer vi ikke dit dokument til en global database, hvilket sikrer, at dit originale arbejde forbliver udelukkende dit.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Opsummer PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Generer hurtige, nøjagtige opsummeringer af lange dokumenter på få sekunder.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Ny` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Upload et langt dokument, rapport eller bogkapitel.`,
+      `Klik på 'Summarize' for at lade vores AI analysere kernekoncepterne.`,
+      `Læs punktoversigten og download den, hvis det er nødvendigt.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Kan det opsummere en hel bog?`,
+        "answer": `AI'en er yderst kapabel, men for de bedste resultater og maksimale detaljer anbefaler vi at opsummere et kapitel eller afsnit ad gangen.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Indfanger oversigten nøglestatistikker?`,
+        "answer": `Ja, vores LLM er instrueret i at identificere og fremhæve kritiske datapunkter, statistikker og primære argumenter.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Hvilke sprog understøttes?`,
+        "answer": `Opsummeringen fungerer bedst på engelsk, men den understøtter og forstår over 50 globale sprog.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Oversæt PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Oversæt hele dokumenter, mens original formatering og layout bevares.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Ny` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Upload dit dokument.`,
+      `Vælg originalsproget og det målsprog, du ønsker at oversætte til.`,
+      `Download den nyligt oversatte PDF, komplet med dens originale formatering.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Vil layoutet bryde efter oversættelse?`,
+        "answer": `Vores avancerede motor forsøger at bevare det nøjagtige layout, selvom tekstudvidelse (f.eks. engelsk til tysk) kan forårsage små, uundgåelige visuelle ændringer.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Hvor nøjagtig er oversættelsen?`,
+        "answer": `Vi bruger state-of-the-art Neural Machine Translation (NMT) drevet af AI, som giver meget nøjagtige, kontekstbevidste oversættelser snarere end stiv ord-til-ord-oversættelse.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Kan jeg oversætte scannede dokumenter?`,
+        "answer": `Ja!Hvis du uploader et scannet dokument, vil vores system automatisk køre OCR for at læse teksten, før den oversættes.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Udtræk data`,
+    "desc": `Udtræk intelligent tabeller, værdier og enheder fra fakturaer og formularer.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Ny` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Upload fakturaer, kvitteringer eller strukturerede formularer.`,
+      `Vores AI vil identificere nøglefelter som datoer, totaler, navne og adresser.`,
+      `Download de udpakkede data som en ren CSV- eller JSON-fil.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Hvad bruges dataudtræk til?`,
+        "answer": `Den er perfekt til regnskab og administration.I stedet for manuelt at indtaste data fra 100 fakturaer, gør vores AI det automatisk på få sekunder.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Har dokumentet brug for et specifikt layout?`,
+        "answer": `Ingen!Vores AI er intelligent nok til at finde 'Total Amount' uanset om det er øverst, nederst eller midt på siden.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Kan jeg udtrække data til Excel?`,
+        "answer": `Ja, de udpakkede data kan eksporteres direkte som en CSV-fil, som åbner perfekt i Microsoft Excel eller Google Sheets.`
+      },
     ]
-  }
+  },
 ];

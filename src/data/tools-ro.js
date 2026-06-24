@@ -1,1135 +1,1058 @@
+// Auto-generated translation file for ro
 export const TOOLS_DATA_RO = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF în Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Transformați fișierele PDF în documente DOC și DOCX ușor de editat.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Încărcați documentul PDF trăgându-l în zona de plasare sau făcând clic pe butonul „Selectați fișierul”.`,
+      `Motorul nostru avansat de OCR și conversie va începe instantaneu să extragă textul, aspectul și formatarea.`,
+      `Descărcați documentul Word perfect convertit (DOC/DOCX), gata pentru editare.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Ce este un convertor PDF în Word?`,
+        "answer": `Un convertor PDF în Word este un utilitar care extrage text, machete și imagini dintr-un PDF și le recreează ca document Microsoft Word complet editabil.Motorul nostru de conversie premium păstrează fonturile, machetele, tabelele și imaginile, astfel încât documentul dvs. Word să arate exact ca PDF-ul original.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Pot converti PDF-urile scanate în documente Word editabile?`,
+        "answer": `Absolut.Tehnologia noastră încorporată OCR (recunoaștere optică a caracterelor) detectează automat textul scanat și îl face pe deplin editabil în fișierul DOCX rezultat.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `PDF-ul meu confidențial este sigur în timpul conversiei?`,
+        "answer": `Luăm în serios confidențialitatea.Fișierele dvs. sunt criptate prin SSL pe 256 de biți în timpul transferului și șterse definitiv de pe serverele noastre automat în decurs de 2 ore.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word în PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Faceți fișierele DOC și DOCX ușor de citit conversia lor în PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Selectați fișierul DOC sau DOCX de pe computer sau trageți-l pe pagină.`,
+      `Instrumentul va bloca instantaneu formatarea și va converti documentul Word într-un format PDF universal.`,
+      `Descărcați noul dumneavoastră PDF.Aspectul va arăta identic pe fiecare dispozitiv.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `De ce ar trebui să convertesc Word în PDF?`,
+        "answer": `Convertirea în PDF asigură aspectul documentului, fonturile și imaginile arată exact la fel pe orice dispozitiv, prevenind erorile de formatare atunci când partajați cu alții.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Sunt păstrate marginile și fonturile mele?`,
+        "answer": `Da, convertorul nostru Word în PDF se blochează în aspectul dvs. exact, inclusiv fonturi personalizate și setări precise de marjă.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Pot converti mai multe fișiere Word simultan?`,
+        "answer": `Da, puteți încărca mai multe fișiere DOC/DOCX și le vom procesa simultan pentru conversie de mare viteză.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF în Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Extrageți tabele și date din PDF-uri în foi de calcul Excel.Cele mai bune rezultate cu PDF-uri bazate pe text.PDF-urile scanate sunt acceptate prin OCR — precizia poate varia.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Încărcați fișierul PDF care conține tabelele și datele pe care doriți să le extrageți.`,
+      `Sistemul nostru va scana documentul, va identifica datele tabulare și le va formata cu precizie în celule de foi de calcul.`,
+      `Descărcați fișierul Excel (XLSX) editabil.`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Tabelele mele PDF vor fi formatate corect în Excel?`,
+        "answer": `Da, instrumentul nostru inteligent de extragere recunoaște rândurile și coloanele, asigurându-vă că datele dvs. tabelare sunt organizate ordonat în celule Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Poate extrage date din PDF-urile scanate?`,
+        "answer": `Da, tehnologia noastră OCR poate citi tabele din imaginile scanate și le poate converti în foi de calcul Excel editabile.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Formulele sunt transferate?`,
+        "answer": `PDF-urile nu stochează formule, ci doar date brute.Fișierul Excel extras va conține valorile exacte vizibile în PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel în PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Faceți foile de calcul EXCEL ușor de citit conversia lor în PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Încărcați foaia de calcul Excel (XLS sau XLSX).`,
+      `Instrumentul nostru va optimiza aspectul foii de calcul pentru a se potrivi perfect pe paginile PDF fără a tăia coloanele.`,
+      `Descărcați documentul PDF finalizat.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Vor fi tăiate foile mele de calcul largi?`,
+        "answer": `Convertorul nostru scalează și formatează în mod inteligent foaia de calcul pentru a se asigura că coloanele se potrivesc în mod logic în paginile PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Convertește toate foile de lucru?`,
+        "answer": `Da, toate foile de lucru active din fișierul dvs. Excel vor fi convertite în pagini secvențiale în PDF-ul final.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Sunt datele mele financiare în siguranță?`,
+        "answer": `100%.Folosim criptare end-to-end, iar toate fișierele sunt șterse definitiv de pe sistemele noastre în decurs de 2 ore.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF în JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Convertiți fiecare pagină PDF într-un JPG sau extrageți toate imaginile conținute.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Încărcați documentul PDF pe care doriți să îl convertiți în imagini.`,
+      `Alegeți dacă să extrageți imaginile încorporate sau să convertiți pagini întregi PDF în JPG-uri de înaltă rezoluție.`,
+      `Descărcați fișierele JPG individual sau ca fișier ZIP comprimat.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Calitatea JPG va fi ridicată?`,
+        "answer": `Da, extragem și convertim pagini la rezoluție înaltă, asigurând text clar și imagini clare în fișierele JPG rezultate.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Pot extrage doar imaginile din PDF?`,
+        "answer": `Absolut.Puteți alege să extrageți numai fotografiile încorporate în PDF, mai degrabă decât să convertiți întreaga pagină.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Există o limită la câte pagini pot converti?`,
+        "answer": `Utilizatorii gratuiti pot converti fișiere PDF în valoare de până la 10 MB.Utilizatorii pro pot procesa fișiere masive de până la 2 GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG în PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Convertiți imaginile JPG în PDF în câteva secunde.Reglați cu ușurință orientarea și marginile.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Selectați una sau mai multe imagini JPG de pe dispozitiv.`,
+      `Trageți și plasați pentru a le rearanja ordinea, ajustați orientarea paginii și setați marginile dacă este necesar.`,
+      `Faceți clic pe „Convertire” și descărcați documentul PDF combinat.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Pot combina mai multe JPG-uri într-un singur PDF?`,
+        "answer": `Da, pur și simplu încărcați mai multe imagini, aranjați-le în ordinea preferată și le vom îmbina într-un singur document PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Imaginile mele își vor pierde calitatea?`,
+        "answer": `Nu, păstrăm rezoluția și calitatea originală a imaginilor dvs. JPG atunci când le încorporam în PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Pot ajusta marginile și orientarea?`,
+        "answer": `Da, instrumentul nostru vă permite să personalizați orientarea paginii (portret sau peisaj) și dimensiunile marginilor înainte de conversie.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF în PowerPoint`,
+    "desc": `Transformați fișierele PDF în prezentări de diapozitive PPT și PPTX ușor de editat.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Încărcați PDF-ul pe care doriți să îl transformați într-o prezentare.`,
+      `Motorul nostru AI va analiza diapozitivele și le va converti în formate PPTX editabile.`,
+      `Descărcați noua prezentare PowerPoint.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Textul din PowerPoint va fi editabil?`,
+        "answer": `Da, tot textul, formele și imaginile vor fi complet editabile în fișierul PPTX rezultat.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Funcționează cu prezentările scanate?`,
+        "answer": `Da, folosind OCR, putem extrage text din diapozitive scanate și îl putem edita în PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Este păstrat aspectul diapozitivului?`,
+        "answer": `Tehnologia noastră avansată de conversie asigură că aspectul PDF-ului original se potrivește cât mai bine în PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint în PDF`,
+    "desc": `Faceți prezentările de diapozitive PPT și PPTX ușor de vizualizat conversia lor în PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Selectați fișierul dvs. PPT sau PPTX.`,
+      `Instrumentul vă va converti instantaneu diapozitivele într-un format PDF securizat, universal.`,
+      `Descărcați prezentarea în format PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `De ce să convertești PowerPoint în PDF?`,
+        "answer": `Conversia asigură că prezentarea dvs. arată identic pe orice dispozitiv, prevenind lipsa fonturilor sau aspectul rupt atunci când prezentați pe un alt computer.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Tranzițiile mele de diapozitive sunt salvate?`,
+        "answer": `Nu, PDF este un format de document static, așa că animațiile și tranzițiile de diapozitive nu vor fi transferate.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Sunt incluse notele vorbitorului?`,
+        "answer": `În prezent, instrumentul nostru convertește elementele vizuale principale ale diapozitivelor.Notele vorbitorului nu sunt incluse în ieșirea standard PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF în HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Convertiți perfect documentele PDF în pagini web HTML.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Încărcați fișierul PDF.`,
+      `Sistemul nostru va converti documentul în HTML, CSS și imagini pregătite pentru web.`,
+      `Descărcați fișierul ZIP care conține noua dvs. pagină web.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `HTML-ul va fi receptiv?`,
+        "answer": `HTML-ul se va potrivi îndeaproape cu aspectul static al PDF-ului, menținând poziționarea absolută pentru acuratețe.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Imaginile sunt extrase automat?`,
+        "answer": `Da, toate imaginile încorporate sunt extrase și menționate corect în codul HTML generat.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Am nevoie de abilități de codare pentru a folosi acest lucru?`,
+        "answer": `Deloc.Veți primi un fișier HTML gata de utilizat pe care îl puteți deschide instantaneu în orice browser web.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML în PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Convertiți paginile web în format HTML în format PDF direct din URL sau fișier.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Încărcați fișierul HTML sau introduceți adresa URL a unei pagini web.`,
+      `Motorul nostru de randare va încărca pagina, va aplica stiluri și o va captura ca document PDF.`,
+      `Descărcați PDF-ul perfect formatat.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Pot converti adresele URL live în PDF?`,
+        "answer": `Da, puteți introduce o adresă URL, iar instrumentul nostru va prelua pagina web live și o va converti într-un PDF de înaltă calitate.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Sunt aplicate stilurile CSS?`,
+        "answer": `Absolut.Motorul nostru de randare acceptă pe deplin CSS, asigurându-se că PDF-ul arată exact ca pagina web live.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Dar paginile grele JavaScript?`,
+        "answer": `Instrumentul nostru execută JavaScript înainte de a captura pagina, asigurându-se că conținutul dinamic este redat corect în PDF-ul final.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF în text`,
+    "desc": `Extrageți text din fișierele PDF pentru a crea documente TXT editabile.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Încărcați documentul PDF.`,
+      `Sistemul nostru va elimina formatarea și va extrage text pur și simplu.`,
+      `Descărcați fișierul TXT brut.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Extrage text din imagini?`,
+        "answer": `Da, dacă PDF-ul conține imagini scanate, tehnologia noastră OCR va citi textul și îl va include în fișierul TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Se păstrează formatarea?`,
+        "answer": `Nu, acest instrument elimină în mod special toate formatările pentru a vă oferi text simplu brut, fără stil.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Sunt datele mele securizate?`,
+        "answer": `Da, toate fișierele sunt criptate în timpul procesării și șterse automat în decurs de 2 ore.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Îmbinați PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Combinați fișierele PDF în ordinea dorită cu cea mai simplă fuziune PDF disponibilă.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Selectați mai multe fișiere PDF de pe dispozitiv.`,
+      `Trageți și plasați miniaturile pentru a aranja fișierele în ordinea dorită.`,
+      `Faceți clic pe „Îmbinare” și descărcați documentul PDF unic, combinat.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Ce este o fuziune PDF?`,
+        "answer": `O fuziune PDF este un utilitar care combină mai multe fișiere PDF într-un singur document continuu.Utilizatorii gratuiti pot îmbina până la 20 de fișiere simultan.Utilizatorii pro pot îmbina un număr nelimitat de documente.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Pot schimba ordinea fișierelor?`,
+        "answer": `Da!După încărcare, pur și simplu trageți și plasați miniaturile fișierelor pentru a le reordona exact așa cum doriți.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Fuziunea reduce calitatea?`,
+        "answer": `Deloc.Procesul de îmbinare păstrează calitatea originală și formatarea tuturor documentelor dvs.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Divizarea PDF-ului`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Separați o pagină sau un întreg set pentru o conversie ușoară în fișiere PDF independente.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Încărcați PDF-ul pe care doriți să îl împărțiți.`,
+      `Alegeți dacă extrageți anumite pagini sau împărțiți documentul în intervale fixe.`,
+      `Descărcați noile fișiere PDF separate ca arhivă ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Pot extrage doar o pagină dintr-un PDF mare?`,
+        "answer": `Da, puteți specifica cu ușurință un singur număr de pagină sau un interval personalizat (de exemplu, paginile 4-7) pentru extragere.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Fișierele divizate vor păstra calitatea originală?`,
+        "answer": `Da, paginile individuale sunt extrase impecabil, fără nicio pierdere a rezoluției sau a calității textului.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Cum descarc mai multe fișiere împărțite?`,
+        "answer": `Când împărțiți un document în mai multe părți, le vom împacheta convenabil într-un singur fișier ZIP pentru descărcare ușoară.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Rotiți PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Rotiți fișierele PDF așa cum aveți nevoie de ele.Puteți chiar să rotiți mai multe PDF-uri simultan.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Încărcați documentul PDF.`,
+      `Plasați cursorul peste paginile pe care doriți să le rotiți și faceți clic pe pictograma de rotire sau rotiți toate paginile simultan.`,
+      `Faceți clic pe Aplicați și descărcați PDF-ul rotit permanent.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Pot roti numai anumite pagini?`,
+        "answer": `Da, puteți selecta pagini individuale și le puteți roti la 90, 180 sau 270 de grade fără a afecta restul documentului.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Rotația este permanentă?`,
+        "answer": `Da, odată ce descărcați noul fișier, modificările de orientare sunt salvate permanent în metadatele PDF-ului.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Este sigur să încărcați documente confidențiale?`,
+        "answer": `Absolut.Toate încărcările sunt criptate prin HTTPS și șterse de pe serverele noastre la 2 ore de la procesare.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Șterge pagini`,
+    "desc": `Eliminați rapid pagini dintr-un document PDF.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Încărcați fișierul PDF.`,
+      `Selectați paginile pe care doriți să le eliminați făcând clic pe miniaturile acestora.`,
+      `Faceți clic pe „Ștergeți paginile” și descărcați documentul nou simplificat.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Cum știu ce pagini să șterg?`,
+        "answer": `Instrumentul nostru generează miniaturi de înaltă calitate pentru fiecare pagină, permițându-vă să identificați vizual și să selectați paginile exacte pe care doriți să le eliminați.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Pot șterge mai multe pagini simultan?`,
+        "answer": `Da, puteți face clic pe mai multe miniaturi sau puteți introduce un interval de pagini pentru a elimina mai multe pagini simultan.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Restul documentului este afectat?`,
+        "answer": `Nu, toate paginile rămase își vor păstra formatarea, calitatea și rezoluția inițiale.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Reordonați paginile`,
+    "desc": `Schimbați ordinea paginilor documentului PDF prin glisare și plasare.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Încărcați documentul PDF.`,
+      `Pur și simplu trageți și plasați miniaturile paginilor pentru a le schimba secvența.`,
+      `Odată aranjat, aplicați modificările și descărcați PDF-ul reorganizat.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Este ușor să reordonezi un document mare?`,
+        "answer": `Da, interfața noastră intuitivă de tip drag-and-drop vă permite să mutați rapid paginile, chiar și în documente mari.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Voi pierde elemente interactive?`,
+        "answer": `Cele mai multe elemente interactive standard sunt păstrate, deși câmpurile de formular complexe care unesc mai multe pagini se pot comporta diferit.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Pot anula o mișcare înainte de a salva?`,
+        "answer": `Da, puteți rearanja paginile de câte ori doriți înainte de a face clic pe butonul procesului final.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Adăugați o pagină goală`,
+    "desc": `Inserați o pagină goală oriunde în documentul PDF.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Încărcați fișierul PDF.`,
+      `Selectați locația exactă în care doriți să introduceți o nouă pagină goală.`,
+      `Aplicați modificările și descărcați PDF-ul actualizat.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `De ce ar trebui să adaug o pagină goală?`,
+        "answer": `Adăugarea unei pagini goale este utilă pentru tipărirea documentelor față-verso, inserarea unor note viitoare sau corectarea formatării paginației.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Pot adăuga mai multe pagini goale?`,
+        "answer": `Da, puteți introduce câte pagini goale aveți nevoie, oriunde în document.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Se va potrivi pagina goală cu dimensiunea documentului?`,
+        "answer": `Da, noua pagină goală se va potrivi automat cu dimensiunile și orientarea paginilor din jur.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Comprimați PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Reduceți dimensiunea fișierului optimizând în același timp pentru o calitate maximă a PDF-ului.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Încărcați fișierul PDF voluminos.`,
+      `Alegeți nivelul de compresie dorit (compresie extremă, recomandată sau mai mică).`,
+      `Descărcați fișierul PDF optimizat, mult mai mic.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Va distruge compresia calitatea PDF-ului meu?`,
+        "answer": `Algoritmii noștri avansati de optimizare reduc dimensiunea fișierului prin comprimarea imaginilor și eliminarea datelor redundante, păstrând în același timp textul clar și imaginile clare vizual.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Ce nivel de compresie ar trebui să aleg?`,
+        "answer": `Vă sugerăm „Recomandat” pentru un echilibru perfect.Utilizați „Extreme” numai dacă aveți nevoie urgent de cea mai mică dimensiune posibilă a fișierului pentru atașamentele de e-mail.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Pot comprima un PDF care este deja mic?`,
+        "answer": `Puteți, dar reducerea dimensiunii fișierului va fi minimă, deoarece datele sunt probabil deja optimizate.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Repara PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Reparați un PDF deteriorat și recuperați datele din fișiere corupte.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Încărcați fișierul PDF corupt sau deteriorat.`,
+      `Sistemul nostru va analiza structura fișierului și va încerca să reconstruiască datele rupte.`,
+      `Descărcați documentul PDF reparat.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Pot fi remediate toate PDF-urile corupte?`,
+        "answer": `Deși instrumentul nostru este extrem de eficient în remedierea erorilor structurale și a antetelor sparte, fișierele grav deteriorate cu date brute lipsă pot să nu poată fi recuperate complet.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Cât durează reparația?`,
+        "answer": `Majoritatea fișierelor sunt analizate și reparate în câteva secunde, în funcție de complexitatea daunelor.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Datele din interior sunt în siguranță?`,
+        "answer": `Da.Procesăm reparația în siguranță în cloud, iar documentul dvs. este șters definitiv la scurt timp după.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Faceți textul din PDF-urile scanate selectabil, căutat și editabil.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Încărcați documentul PDF scanat.`,
+      `Selectați limba textului din interiorul documentului pentru o mai bună acuratețe.`,
+      `Descărcați noul dvs. PDF, complet căutabil și selectabil.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Ce este OCR?`,
+        "answer": `OCR înseamnă Recunoaștere optică a caracterelor.Este o tehnologie care citește textul din imagini sau documente scanate și îl convertește în text selectabil și căutat pe computer.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Funcționează OCR pe textul scris de mână?`,
+        "answer": `Motorul nostru OCR este foarte precis pentru textul tipărit.Textul scris de mână poate da rezultate diferite, în funcție de lizibilitate.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Pot copia textul din documentul OCR?`,
+        "answer": `Absolut.Odată procesat, puteți evidenția, copia și lipi text direct din PDF, la fel ca un document normal.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Aplatizați PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Îmbinați toate straturile, formularele și adnotările într-un singur strat care nu poate fi editat.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Încărcați PDF-ul care conține formulare, straturi sau adnotări.`,
+      `Sistemul nostru va îmbina permanent toate elementele vizuale într-un singur strat plat.`,
+      `Descărcați PDF-ul aplatizat, gata de imprimat.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `De ce ar trebui să aplatizez un PDF?`,
+        "answer": `Aplatizarea unui PDF blochează datele din formular, previne editarea ulterioară a adnotărilor și asigură tipărirea documentului exact așa cum apare pe ecran.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Un PDF aplatizat poate fi neaplatizat?`,
+        "answer": `Nu, aplatizarea este un proces permanent.Vă recomandăm să păstrați o copie de rezervă a PDF-ului interactiv original.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Aplatizarea reduce dimensiunea fișierului?`,
+        "answer": `Adesea, da.Prin îmbinarea straturilor și eliminarea câmpurilor de formular interactive, structura generală devine mai simplă și mai mică.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Protejați PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Criptați PDF-ul cu o parolă pentru a preveni accesul neautorizat.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Încărcați PDF-ul pe care doriți să îl securizați.`,
+      `Introduceți o parolă puternică și confirmați-o.`,
+      `Descărcați noul fișier PDF criptat.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Ce fel de criptare este folosit?`,
+        "answer": `Folosim criptare robustă AES pe 256 de biți, care este standardul industrial pentru securizarea documentelor extrem de sensibile și confidențiale.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Îmi pot recupera parola TheyLovePDF dacă o uit?`,
+        "answer": `Nu. Parola dvs. nu este niciodată salvată pe serverele noastre.Dacă îl pierdeți, documentul nu poate fi decriptat.Vă rugăm să-l păstrați în siguranță!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Protejarea unui PDF împiedică imprimarea?`,
+        "answer": `Da, criptarea împiedică deschiderea, imprimarea sau editarea documentului fără parola corectă.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Deblocați PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Eliminați securitatea parolei PDF, oferindu-vă libertatea de a utiliza fișierele PDF așa cum doriți.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Încărcați PDF-ul protejat prin parolă.`,
+      `Dacă fișierul are o „parolă de proprietar” care restricționează editările, îl vom elimina instantaneu.Dacă are o „parolă de utilizator” care restricționează deschiderea, trebuie să o introduceți mai întâi.`,
+      `Descărcați PDF-ul deblocat.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Puteți debloca un PDF fără parolă?`,
+        "answer": `Putem elimina cu ușurință „restricțiile de editare/printare” (parole de proprietar) fără a avea nevoie de parolă.Cu toate acestea, dacă fișierul necesită o parolă doar pentru a-l deschide (parola utilizator), trebuie să o furnizați.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Este legal să deblochezi un PDF?`,
+        "answer": `Ar trebui să eliminați securitatea doar din documentele pe care le dețineți legal sau pe care aveți permisiunea de a le modifica.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Deblocarea va schimba conținutul documentului?`,
+        "answer": `Nu, conținutul, formatarea și calitatea rămân complet neatinse.Doar stratul de securitate este eliminat.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Redact PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Eliminați definitiv informațiile sensibile sau datele ascunse din PDF-urile dvs.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Încărcați fișierul PDF.`,
+      `Desenați casete negre peste text sensibil, imagini sau informații personale.`,
+      `Aplicați redactările pentru a curăța definitiv datele, apoi descărcați fișierul.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Textul redactat a dispărut cu adevărat?`,
+        "answer": `Da.Spre deosebire de simpla desenare a unei forme negre peste text, instrumentul nostru de redactare șterge definitiv datele de text subiacente, astfel încât să nu poată fi copiate sau citite de mașini.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Pot redacta și imaginile?`,
+        "answer": `Absolut.Puteți selecta orice zonă a paginii, inclusiv grafică și fotografii, pentru a fi negru permanent.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Redactarea este reversibilă?`,
+        "answer": `Nu. Pentru securitatea dvs., redactarea distruge definitiv datele ascunse.Păstrați întotdeauna o copie de rezervă neredatata, dacă este necesar.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Semnează PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Semnați-vă sau solicitați semnături electronice de la alții.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Încărcați documentul care necesită semnătură.`,
+      `Creați-vă semnătura desenând, tastând sau încărcând o imagine.`,
+      `Puneți semnătura pe document, faceți clic pe aplicați și descărcați-l.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Sunt semnăturile electronice legale?`,
+        "answer": `Da, semnăturile electronice create cu TheyLovePDF sunt obligatorii din punct de vedere juridic în majoritatea țărilor și jurisdicțiilor.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Îmi pot păstra semnătura pentru mai târziu?`,
+        "answer": `Da, dacă vă creați un cont, vă puteți salva în siguranță semnătura pentru o semnare rapidă cu 1 clic în viitor.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Pot adăuga datele și inițialele textului?`,
+        "answer": `Absolut.Împreună cu semnătura dvs., puteți glisa și plasa cu ușurință datele, inițialele și câmpurile de text personalizate.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Solicitați semnătura`,
+    "desc": `Trimiteți documente clienților pentru a fi semnate legal online.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Încărcați PDF-ul de care aveți nevoie să fie semnat.`,
+      `Adăugați adresele de e-mail ale destinatarilor și atribuiți-le câmpuri de semnătură.`,
+      `Trimiteți cererea.Le vom trimite prin e-mail un link securizat pentru a semna documentul online.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Destinatarii au nevoie de un cont pentru a semna?`,
+        "answer": `Nu, destinatarii pot semna în siguranță documentul direct din linkul lor de e-mail, fără a fi nevoie să creeze un cont TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `De unde știu când este semnat?`,
+        "answer": `Veți primi o notificare automată prin e-mail în momentul în care toate părțile au încheiat semnarea documentului.`
       },
-      {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Semn de certificat`,
+    "desc": `Adăugați o semnătură digitală criptografică la PDF.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Încărcați PDF-ul și fișierul certificat digital (.pfx sau .p12).`,
+      `Introduceți parola certificatului.`,
+      `Aplicați semnătura criptografică și descărcați PDF-ul verificat.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Ce este o semnătură de certificat?`,
+        "answer": `Spre deosebire de semnătura electronică vizuală, o semnătură de certificat aplică un hash criptografic documentului, dovedind matematic autenticitatea acestuia și asigurându-se că nu a fost modificat.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Îmi stocați parola certificatului?`,
+        "answer": `Nu.Parola dvs. este păstrată în memoria temporară doar în momentul exact al semnării și este imediat distrusă.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Oamenii pot verifica semnătura?`,
+        "answer": `Da, când este deschis în cititoare PDF standard, cum ar fi Adobe Acrobat, va apărea o bifă verde care indică faptul că documentul este verificat digital și nemodificat.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Chat cu PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Vorbește cu PDF-ul tău.Puneți întrebări, obțineți rezumate și extrageți instantaneu informații folosind AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Încărcați documentul PDF lung sau complex.`,
+      `Introduceți o întrebare în caseta de chat, cum ar fi „Rezumați capitolul 2” sau „Care este argumentul principal?”`,
+      `AI-ul nostru va citi instantaneu documentul și vă va oferi un răspuns precis.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Cum funcționează Chat cu PDF?`,
+        "answer": `Folosim modele de limbă mari (LLM) avansate pentru a scana textul documentului, a înțelege contextul acestuia și a răspunde la orice întrebări pe care le puneți pe baza strict conținutului documentului.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Poate citi documentele scanate?`,
+        "answer": `Dacă documentul este pur o imagine, trebuie să îl rulați mai întâi prin instrumentul nostru OCR.Dacă conține text selectabil, AI îl poate citi imediat.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Sunt documentele mele folosite pentru a antrena AI?`,
+        "answer": `Absolut nu.Intimitatea ta este prioritatea noastră.Documentele sunt procesate într-un mediu securizat și nu sunt niciodată folosite pentru a antrena modele AI publice.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Editați PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Adăugați text, imagini, forme sau adnotări cu mână liberă la un document PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Popular` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Încărcați PDF-ul pe care doriți să îl modificați.`,
+      `Utilizați bara de instrumente pentru a adăuga text, a insera imagini, a desena forme sau pentru a aplica zonele existente.`,
+      `Salvați editările și descărcați PDF-ul actualizat.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Pot schimba textul existent în PDF?`,
+        "answer": `În prezent, puteți folosi instrumentul „albire” pentru a acoperi textul vechi și pentru a introduce text nou peste el.Editarea nativă a textului este o caracteristică extrem de complexă pe care o dezvoltăm în mod activ.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Pot adăuga imagini în PDF?`,
+        "answer": `Da, puteți încărca și ștampila cu ușurință imagini PNG sau JPG oriunde pe documentul dvs.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Editarea reduce calitatea documentului?`,
+        "answer": `Nu, editorul nostru adaugă adnotările dvs. peste structura documentului existent fără a recomprima imaginile sau textul original.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Filigran PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Ștampilați o imagine sau un text peste PDF în câteva secunde.Alegeți tipografia, transparența și poziția.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Încărcați fișierul PDF.`,
+      `Introduceți textul filigranului sau încărcați o imagine cu logo.Ajustați opacitatea, rotația și plasarea.`,
+      `Faceți clic pe Aplicați și descărcați documentul cu filigran.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Pot filigrana toate paginile simultan?`,
+        "answer": `Da, în mod implicit, filigranul dvs. va fi aplicat în mod constant pe fiecare pagină a documentului.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Pot ajusta transparența?`,
+        "answer": `Absolut.Puteți face filigranul foarte slab, astfel încât să nu distragă atenția de la document, sau complet opac pentru o vizibilitate maximă.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Se poate elimina un filigran?`,
+        "answer": `Aplatizăm filigranul în structura documentului pentru a-l face cât mai dificil de îndepărtat, asigurându-ne că proprietatea dvs. intelectuală este protejată.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Formulare PDF`,
+    "desc": `Completați online formulare PDF rapid și precis.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Încărcați un formular PDF interactiv.`,
+      `Faceți clic pe câmpurile de text, casetele de selectare sau butoanele radio pentru a completa informațiile dvs.`,
+      `Descărcați formularul completat, completat.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Pot salva un formular parțial completat?`,
+        "answer": `Dacă aveți un cont Pro, sesiunile sunt salvate automat, permițându-vă să reveniți și să finalizați completarea formularului mai târziu.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Funcționează cu toate formularele PDF?`,
+        "answer": `Instrumentul nostru acceptă AcroForms standard, care reprezintă 99% din PDF-urile interactive.Formele XFA mai vechi pot avea suport limitat.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Pot aplatiza formularul după ce îl umplu?`,
+        "answer": `Da, odată descărcat, îl puteți rula prin instrumentul nostru „Flatten PDF” pentru a bloca datele, astfel încât să nu poată fi modificate de către destinatar.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Adăugați numere de pagină`,
+    "desc": `Adăugați cu ușurință numerele de pagină în fișiere PDF.Alegeți-vă pozițiile, dimensiunile, tipografia.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Încărcați documentul dvs.`,
+      `Selectați poziția (de exemplu, în dreapta jos), stilul fontului și numărul de început.`,
+      `Aplicați numerotarea și descărcați PDF-ul perfect formatat.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Pot sări peste pagina de copertă?`,
+        "answer": `Da!Puteți specifica pe ce pagină ar trebui să înceapă numerotarea, permițându-vă să păstrați paginile de titlu curate.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Pot personaliza formatul?`,
+        "answer": `Absolut.Puteți alege formate precum „Pagina 1”, „1 din 10” sau doar „1” și puteți selecta fontul, dimensiunea și culoarea.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Este corectă alinierea?`,
+        "answer": `Da, instrumentul nostru calculează marjele exacte pentru a se asigura că numerele paginilor dvs. sunt aliniate perfect pe fiecare pagină.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Adnotă PDF`,
+    "desc": `Evidențiați, subliniați, barați textul și adăugați comentarii.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Nou` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Încărcați PDF-ul.`,
+      `Utilizați instrumentele de evidențiere, subliniere, baraj și note lipicioase pentru a examina documentul.`,
+      `Descărcați fișierul adnotat pentru a-l distribui echipei dvs.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Adnotările mele vor fi vizibile în cititorii standard?`,
+        "answer": `Da, folosim protocoale standard de adnotare PDF, ceea ce înseamnă că evidențierile și notele dvs. vor fi vizibile în Adobe Acrobat, Chrome și Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Pot schimba culorile de evidențiere?`,
+        "answer": `Da, puteți selecta dintr-o paletă largă de culori pentru a vă codifica culorile notele și evidențierile.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Este ușor să ștergi o adnotare?`,
+        "answer": `Foarte usor.Doar faceți clic pe orice adnotare pe care ați făcut-o și apăsați butonul de ștergere pentru a o elimina instantaneu.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Verificarea plagiatului`,
+    "desc": `Comparați documentul dvs. cu miliarde de pagini web și baze de date academice.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Încărcați eseul sau documentul pe care doriți să îl verificați.`,
+      `Motorul nostru AI va scana miliarde de pagini web și baze de date academice pentru a găsi potriviri.`,
+      `Examinați raportul detaliat de similitudine care evidențiază orice text copiat.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Cât de precis este verificatorul de plagiat?`,
+        "answer": `Este extrem de precis.Folosim AI de nivel enterprise care face referințe încrucișate textului dvs. cu o bază de date masivă, actualizată continuu, de conținut online.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Se verifică cu lucrările academice offline?`,
+        "answer": `Se verifică cu reviste academice majore cu acces deschis și surse puternic citate disponibile online.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Este documentul meu salvat într-o bază de date?`,
+        "answer": `Nu. Spre deosebire de sistemele unor universități, nu adăugăm documentul dumneavoastră la o bază de date globală, asigurându-ne că munca dumneavoastră originală rămâne strict a dumneavoastră.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Rezumat PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Generați rezumate rapide și precise ale documentelor lungi în câteva secunde.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nou` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Încărcați un document lung, un raport sau un capitol de carte.`,
+      `Faceți clic pe „Rezumat” pentru a permite AI-ului nostru să analizeze conceptele de bază.`,
+      `Citiți rezumatul cu marcatori și descărcați-l dacă este necesar.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Poate rezuma o carte întreagă?`,
+        "answer": `AI este foarte capabil, dar pentru cele mai bune rezultate și detalii maxime, vă recomandăm să rezumați câte un capitol sau secțiune la un moment dat.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Rezumatul captează statistici cheie?`,
+        "answer": `Da, LLM-ul nostru este instruit să identifice și să evidențieze punctele critice de date, statisticile și argumentele principale.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Ce limbi sunt acceptate?`,
+        "answer": `Rezumatorul funcționează cel mai bine în limba engleză, dar acceptă și înțelege în mod nativ peste 50 de limbi globale.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Traduceți PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Traduceți documente complete, păstrând în același timp formatarea și aspectul original.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nou` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Încărcați documentul dvs.`,
+      `Selectați limba inițială și limba țintă în care doriți să traduceți.`,
+      `Descărcați PDF-ul nou tradus, complet cu formatarea sa originală.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Se va rupe layout-ul după traducere?`,
+        "answer": `Motorul nostru avansat încearcă să păstreze aspectul exact, deși extinderea textului (de exemplu, din engleză în germană) poate provoca modificări vizuale ușoare, inevitabile.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Cât de exactă este traducerea?`,
+        "answer": `Folosim traducere automată neuronală (NMT) de ultimă generație, bazată pe inteligență artificială, care oferă traduceri extrem de precise, conștiente de context, mai degrabă decât traduceri rigide cuvânt cu cuvânt.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Pot traduce documente scanate?`,
+        "answer": `Da!Dacă încărcați un document scanat, sistemul nostru va rula automat OCR pentru a citi textul înainte de a-l traduce.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Extrageți date`,
+    "desc": `Extrageți inteligent tabele, valori și entități din facturi și formulare.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nou` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Încărcați facturi, chitanțe sau formulare structurate.`,
+      `AI-ul nostru va identifica câmpuri cheie precum Date, Totaluri, Nume și Adrese.`,
+      `Descărcați datele extrase ca fișier CSV sau JSON curat.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Pentru ce este folosită extragerea datelor?`,
+        "answer": `Este perfect pentru contabilitate și administrare.În loc să tasteze manual datele din 100 de facturi, AI-ul nostru o face automat în câteva secunde.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Documentul are nevoie de un aspect specific?`,
+        "answer": `Nu!AI-ul nostru este suficient de inteligent pentru a găsi „Suma totală”, indiferent dacă este în partea de sus, de jos sau la mijlocul paginii.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Pot extrage date în Excel?`,
+        "answer": `Da, datele extrase pot fi exportate direct ca fișier CSV, care se deschide perfect în Microsoft Excel sau Google Sheets.`
+      },
     ]
-  }
+  },
 ];

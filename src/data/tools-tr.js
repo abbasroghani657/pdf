@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for tr
 export const TOOLS_DATA_TR = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF'den Word'e`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `PDF dosyalarınızı düzenlenmesi kolay DOC ve DOCX belgelerine dönüştürün.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `PDF belgenizi bırakma bölgesine sürükleyerek veya 'Dosya Seç' düğmesini tıklayarak yükleyin.`,
+      `Gelişmiş OCR ve dönüştürme motorumuz metni, düzeni ve biçimlendirmeyi anında çıkarmaya başlayacaktır.`,
+      `Düzenlemeye hazır, mükemmel bir şekilde dönüştürülmüş Word (DOC/DOCX) belgesini indirin.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `PDF'den Word'e dönüştürücü nedir?`,
+        "answer": `PDF'den Word'e dönüştürücü, PDF'den metin, düzen ve görseller çıkaran ve bunları tamamen düzenlenebilir bir Microsoft Word belgesi olarak yeniden oluşturan bir yardımcı programdır.Premium dönüştürme motorumuz yazı tiplerini, düzenleri, tabloları ve görselleri koruyarak Word belgenizin orijinal PDF'ye tamamen benzemesini sağlar.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Taranmış PDF'leri düzenlenebilir Word belgelerine dönüştürebilir miyim?`,
+        "answer": `Kesinlikle.Yerleşik OCR (Optik Karakter Tanıma) teknolojimiz, taranan metni otomatik olarak algılar ve ortaya çıkan DOCX dosyasında tamamen düzenlenebilir hale getirir.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Gizli PDF'im dönüştürme sırasında güvende mi?`,
+        "answer": `Gizliliği ciddiye alıyoruz.Dosyalarınız aktarım sırasında 256 bit SSL ile şifrelenir ve 2 saat içerisinde otomatik olarak sunucularımızdan kalıcı olarak silinir.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word'den PDF'ye`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `DOC ve DOCX dosyalarını PDF'ye dönüştürerek okunmasını kolaylaştırın.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Bilgisayarınızdan DOC veya DOCX dosyanızı seçin veya sayfaya sürükleyin.`,
+      `Araç, biçimlendirmeyi anında kilitleyecek ve Word belgesini evrensel bir PDF biçimine dönüştürecektir.`,
+      `Yeni PDF'nizi indirin.Düzen her cihazda aynı görünecektir.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Word'ü neden PDF'ye dönüştürmeliyim?`,
+        "answer": `PDF'ye dönüştürmek, belgenizin düzeninin, yazı tiplerinin ve görsellerinin herhangi bir cihazda tam olarak aynı görünmesini sağlayarak başkalarıyla paylaşırken biçimlendirme hatalarını önler.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Kenar boşluklarım ve yazı tiplerim korunuyor mu?`,
+        "answer": `Evet, Word'den PDF'ye dönüştürücümüz, özel yazı tipleri ve hassas kenar boşluğu ayarları da dahil olmak üzere tam düzeninizde kilitlenir.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Birden fazla Word dosyasını aynı anda dönüştürebilir miyim?`,
+        "answer": `Evet, birden fazla DOC/DOCX dosyası yükleyebilirsiniz; bunları yüksek hızlı dönüşüm için aynı anda işleyeceğiz.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF'den Excel'e`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Tabloları ve verileri PDF'lerden Excel elektronik tablolarına çıkarın.Metin tabanlı PDF'lerle en iyi sonuçlar.Taranan PDF'ler OCR aracılığıyla desteklenir; doğruluk farklılık gösterebilir.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Çıkarmak istediğiniz tabloları ve verileri içeren PDF dosyasını yükleyin.`,
+      `Sistemimiz belgeyi tarayacak, tablo halindeki verileri tanımlayacak ve elektronik tablo hücrelerine doğru şekilde biçimlendirecektir.`,
+      `Düzenlenebilir Excel (XLSX) dosyanızı indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `PDF tablolarım Excel'de doğru şekilde biçimlendirilecek mi?`,
+        "answer": `Evet, akıllı çıkarma aracımız satırları ve sütunları tanıyarak tablo halindeki verilerinizin Excel hücrelerinde düzgün bir şekilde düzenlenmesini sağlar.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Taranan PDF'lerden veri çıkarabilir mi?`,
+        "answer": `Evet, OCR teknolojimiz taranan görüntülerdeki tabloları okuyabilir ve bunları düzenlenebilir Excel elektronik tablolarına dönüştürebilir.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Formüller aktarılıyor mu?`,
+        "answer": `PDF'ler formülleri saklamaz, yalnızca ham verileri depolar.Çıkarılan Excel dosyası, PDF'de görünen değerlerin aynısını içerecektir.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel'den PDF'ye`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `EXCEL elektronik tablolarını PDF'ye dönüştürerek okunmasını kolaylaştırın.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Excel (XLS veya XLSX) e-tablonuzu yükleyin.`,
+      `Aracımız, e-tablonun düzenini, sütunları kesmeden PDF sayfalarına mükemmel şekilde sığacak şekilde optimize edecektir.`,
+      `Sonlandırılmış PDF belgesini indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Geniş e-tablolarım kesilecek mi?`,
+        "answer": `Dönüştürücümüz, sütunların PDF sayfalarına mantıksal olarak sığmasını sağlamak için e-tablonuzu akıllıca ölçeklendirir ve biçimlendirir.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Tüm çalışma sayfalarını dönüştürüyor mu?`,
+        "answer": `Evet, Excel dosyanızdaki tüm etkin çalışma sayfaları son PDF'de sıralı sayfalara dönüştürülecektir.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Finansal verilerim güvende mi?`,
+        "answer": `%100.Uçtan uca şifreleme kullanıyoruz ve tüm dosyalar 2 saat içerisinde sistemlerimizden kalıcı olarak siliniyor.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF'den JPG'ye`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Her PDF sayfasını JPG'ye dönüştürün veya içerdiği tüm görüntüleri çıkarın.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Resimlere dönüştürmek istediğiniz PDF belgesini yükleyin.`,
+      `Gömülü görüntüleri çıkartmayı veya PDF sayfalarının tamamını yüksek çözünürlüklü JPG'lere dönüştürmeyi seçin.`,
+      `JPG'leri tek tek veya sıkıştırılmış ZIP ​​dosyası olarak indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `JPG kalitesi yüksek olacak mı?`,
+        "answer": `Evet, sayfaları yüksek çözünürlükte çıkartıp dönüştürüyoruz, böylece ortaya çıkan JPG dosyalarında net metinler ve net görüntüler sağlıyoruz.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `PDF'den yalnızca görüntüleri çıkarabilir miyim?`,
+        "answer": `Kesinlikle.Sayfanın tamamını dönüştürmek yerine yalnızca PDF'ye gömülü fotoğrafları çıkarmayı seçebilirsiniz.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Kaç sayfayı dönüştürebileceğimin bir sınırı var mı?`,
+        "answer": `Ücretsiz kullanıcılar 10MB değerine kadar PDF'leri dönüştürebilir.Profesyonel kullanıcılar 2 GB'a kadar büyük dosyaları işleyebilir.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG'den PDF'ye`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `JPG görsellerini saniyeler içinde PDF'ye dönüştürün.Yönü ve kenar boşluklarını kolayca ayarlayın.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Cihazınızdan bir veya daha fazla JPG resmi seçin.`,
+      `Sıralarını yeniden düzenlemek, sayfa yönünü ayarlamak ve gerekirse kenar boşluklarını ayarlamak için sürükleyip bırakın.`,
+      `'Dönüştür'ü tıklayın ve birleştirilmiş PDF belgenizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Birden fazla JPG'yi tek bir PDF'de birleştirebilir miyim?`,
+        "answer": `Evet, birden fazla görsel yükleyin, bunları tercih ettiğiniz sıraya göre düzenleyin; biz bunları tek bir PDF belgesinde birleştirelim.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Görsellerimin kalitesi düşer mi?`,
+        "answer": `Hayır, JPG görsellerinizi PDF'ye yerleştirirken orijinal çözünürlüğünü ve kalitesini koruyoruz.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Kenar boşluklarını ve yönlendirmeyi ayarlayabilir miyim?`,
+        "answer": `Evet, aracımız dönüştürmeden önce sayfa yönünü (dikey veya yatay) ve kenar boşluğu boyutlarını özelleştirmenize olanak tanır.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF'den PowerPoint'e`,
+    "desc": `PDF dosyalarınızı düzenlenmesi kolay PPT ve PPTX slayt gösterilerine dönüştürün.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Sunuma dönüştürmek istediğiniz PDF'yi yükleyin.`,
+      `Yapay zeka motorumuz slaytları analiz edecek ve bunları düzenlenebilir PPTX formatlarına dönüştürecektir.`,
+      `Yeni PowerPoint sunumunuzu indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `PowerPoint'imdeki metin düzenlenebilir mi?`,
+        "answer": `Evet, ortaya çıkan PPTX dosyasındaki tüm metinler, şekiller ve resimler tamamen düzenlenebilir olacaktır.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Taranan sunumlarla çalışır mı?`,
+        "answer": `Evet, OCR'yi kullanarak taranan slaytlardan metin çıkarabilir ve bunu PowerPoint'te düzenlenebilir hale getirebiliriz.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Slayt düzeni korunuyor mu?`,
+        "answer": `Gelişmiş dönüştürme teknolojimiz, orijinal PDF'nizin düzeninin PowerPoint'te mümkün olduğunca yakından eşleşmesini sağlar.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint'ten PDF'ye`,
+    "desc": `PPT ve PPTX slayt gösterilerini PDF'ye dönüştürerek görüntülemeyi kolaylaştırın.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `PPT veya PPTX dosyanızı seçin.`,
+      `Araç, slaytlarınızı anında güvenli, evrensel bir PDF formatına dönüştürecektir.`,
+      `Sununuzu PDF olarak indirin.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Neden PowerPoint'i PDF'ye dönüştürmelisiniz?`,
+        "answer": `Dönüştürme, farklı bir bilgisayarda sunum yaparken eksik yazı tiplerini veya bozuk düzenleri önleyerek sunumunuzun tüm cihazlarda aynı görünmesini sağlar.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Slayt geçişlerim kaydedildi mi?`,
+        "answer": `Hayır, PDF statik bir belge formatıdır, dolayısıyla animasyonlar ve slayt geçişleri aktarılmayacaktır.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Konuşmacı notları dahil mi?`,
+        "answer": `Şu anda aracımız ana slayt görsellerini dönüştürüyor.Konuşmacı notları standart PDF çıktısına dahil edilmez.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF'den HTML'ye`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `PDF belgelerinizi mükemmel bir şekilde HTML web sayfalarına dönüştürün.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `PDF dosyanızı yükleyin.`,
+      `Sistemimiz belgeyi web'e hazır HTML, CSS ve resimlere dönüştürecektir.`,
+      `Yeni web sayfanızı içeren ZIP dosyasını indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `HTML duyarlı olacak mı?`,
+        "answer": `HTML, doğruluk açısından mutlak konumlandırmayı koruyarak PDF'nizin statik düzeniyle yakından eşleşecektir.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Görüntüler otomatik olarak mı çıkartılıyor?`,
+        "answer": `Evet, tüm gömülü görseller çıkartılır ve oluşturulan HTML kodunda uygun şekilde referans verilir.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Bunu kullanmak için kodlama becerilerine ihtiyacım var mı?`,
+        "answer": `Hiç de bile.Herhangi bir web tarayıcısında anında açabileceğiniz, kullanıma hazır bir HTML dosyası alacaksınız.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML'den PDF'ye`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `HTML'deki web sayfalarını doğrudan URL'den veya dosyadan PDF formatına dönüştürün.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `HTML dosyanızı yükleyin veya bir web sayfası URL'si girin.`,
+      `Oluşturma motorumuz sayfayı yükleyecek, stilleri uygulayacak ve onu bir PDF belgesi olarak yakalayacaktır.`,
+      `Mükemmel biçimlendirilmiş PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Canlı URL'leri PDF'ye dönüştürebilir miyim?`,
+        "answer": `Evet, bir URL girdiğinizde aracımız canlı web sayfasını getirecek ve onu yüksek kaliteli bir PDF'ye dönüştürecektir.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `CSS stilleri uygulanıyor mu?`,
+        "answer": `Kesinlikle.Oluşturma motorumuz CSS'yi tamamen destekleyerek PDF'nin tam olarak canlı web sayfası gibi görünmesini sağlar.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `JavaScript ağırlıklı sayfalara ne dersiniz?`,
+        "answer": `Aracımız sayfayı yakalamadan önce JavaScript'i çalıştırarak dinamik içeriğin son PDF'de düzgün şekilde oluşturulmasını sağlar.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF'yi Metne Dönüştürme`,
+    "desc": `Düzenlenebilir TXT belgeleri oluşturmak için PDF dosyalarınızdan metin çıkarın.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `PDF belgenizi yükleyin.`,
+      `Sistemimiz biçimlendirmeyi ortadan kaldıracak ve saf, düz metni çıkaracaktır.`,
+      `Ham TXT dosyanızı indirin.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Resimlerden metin çıkarıyor mu?`,
+        "answer": `Evet, PDF taranmış resimler içeriyorsa OCR teknolojimiz metni okuyacak ve TXT dosyasına ekleyecektir.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Biçimlendirme korunuyor mu?`,
+        "answer": `Hayır, bu araç size ham, stillendirilmemiş düz metin sağlamak için özellikle tüm biçimlendirmeyi kaldırır.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Verilerim güvende mi?`,
+        "answer": `Evet, tüm dosyalar işlem sırasında şifrelenir ve 2 saat içinde otomatik olarak silinir.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `PDF'yi birleştir`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Mevcut en kolay PDF birleştirme yöntemiyle PDF'leri istediğiniz sırayla birleştirin.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Cihazınızdan birden fazla PDF dosyası seçin.`,
+      `Dosyaları istediğiniz sıraya göre düzenlemek için küçük resimleri sürükleyip bırakın.`,
+      `'Birleştir'i tıklayın ve birleştirilmiş, tek PDF belgenizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `PDF Birleşmesi nedir?`,
+        "answer": `PDF birleştirme, birden fazla PDF dosyasını tek, sürekli bir belgede birleştiren bir yardımcı programdır.Ücretsiz kullanıcılar aynı anda en fazla 20 dosyayı birleştirebilir.Pro kullanıcıları sınırsız sayıda belgeyi birleştirebilir.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Dosyaların sırasını değiştirebilir miyim?`,
+        "answer": `Evet!Yüklemeden sonra, dosya küçük resimlerini tam olarak istediğiniz şekilde yeniden sıralamak için sürükleyip bırakmanız yeterlidir.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Birleştirme kaliteyi düşürür mü?`,
+        "answer": `Hiç de bile.Birleştirme işlemi tüm belgelerinizin orijinal kalitesini ve biçimlendirmesini korur.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `PDF'yi böl`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Bağımsız PDF dosyalarına kolayca dönüştürmek için bir sayfayı veya tüm seti ayırın.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Bölmek istediğiniz PDF'yi yükleyin.`,
+      `Belirli sayfaların mı çıkarılacağını yoksa belgenin sabit aralıklara mı bölüneceğini seçin.`,
+      `Yeni, ayrılmış PDF dosyalarınızı ZIP arşivi olarak indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Büyük bir PDF'den yalnızca bir sayfayı çıkarabilir miyim?`,
+        "answer": `Evet, çıkarmak için kolayca tek bir sayfa numarası veya özel bir aralık (örneğin, sayfa 4-7) belirtebilirsiniz.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Bölünmüş dosyalar orijinal kaliteyi koruyacak mı?`,
+        "answer": `Evet, tek tek sayfalar, çözünürlük veya metin kalitesinde herhangi bir kayıp olmaksızın kusursuz bir şekilde çıkarılır.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Birden fazla bölünmüş dosyayı nasıl indirebilirim?`,
+        "answer": `Bir belgeyi birden fazla parçaya böldüğünüzde, kolay indirme için bunları tek bir ZIP dosyası halinde paketleyeceğiz.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `PDF'yi döndür`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `PDF'lerinizi ihtiyaç duyduğunuz şekilde döndürün.Hatta birden fazla PDF'yi aynı anda döndürebilirsiniz.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `PDF belgenizi yükleyin.`,
+      `Döndürmek istediğiniz sayfaların üzerine gelin ve döndür simgesine tıklayın veya tüm sayfaları aynı anda döndürün.`,
+      `Uygula'yı tıklayın ve kalıcı olarak döndürülen PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Yalnızca belirli sayfaları döndürebilir miyim?`,
+        "answer": `Evet, tek tek sayfaları seçip belgenin geri kalanını etkilemeden bunları 90, 180 veya 270 derece döndürebilirsiniz.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Rotasyon kalıcı mı?`,
+        "answer": `Evet, yeni dosyayı indirdiğinizde yön değişiklikleri kalıcı olarak PDF'nin meta verilerine kaydedilir.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Gizli belgeleri yüklemek güvenli midir?`,
+        "answer": `Kesinlikle.Tüm yüklemeler HTTPS aracılığıyla şifrelenir ve işlendikten 2 saat sonra sunucularımızdan silinir.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Sayfaları sil`,
+    "desc": `Bir PDF belgesindeki sayfaları anında kaldırın.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `PDF dosyanızı yükleyin.`,
+      `Kaldırmak istediğiniz sayfaları küçük resimlerine tıklayarak seçin.`,
+      `'Sayfaları Sil'i tıklayın ve yeni geliştirilmiş belgenizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Hangi sayfaların silineceğini nasıl bilebilirim?`,
+        "answer": `Aracımız her sayfanın yüksek kaliteli küçük resimlerini oluşturarak kaldırmak istediğiniz sayfaları görsel olarak tanımlamanıza ve seçmenize olanak tanır.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Birden fazla sayfayı aynı anda silebilir miyim?`,
+        "answer": `Evet, birden fazla küçük resmi tıklayabilir veya birkaç sayfayı aynı anda kaldırmak için bir sayfa aralığı yazabilirsiniz.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Belgenin geri kalanı etkilendi mi?`,
+        "answer": `Hayır, kalan tüm sayfalar orijinal biçimlendirmesini, kalitesini ve çözünürlüğünü koruyacaktır.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Sayfaları yeniden sıralayın`,
+    "desc": `Sürükle ve bırak yöntemiyle PDF belgenizin sayfa sırasını değiştirin.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `PDF belgenizi yükleyin.`,
+      `Sıralarını değiştirmek için sayfa küçük resimlerini sürükleyip bırakmanız yeterlidir.`,
+      `Düzenlendikten sonra değişiklikleri uygulayın ve yeniden düzenlenen PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Büyük bir belgeyi yeniden sıralamak kolay mı?`,
+        "answer": `Evet, sezgisel sürükle ve bırak arayüzümüz, büyük belgelerde bile sayfaları hızlı bir şekilde taşımanıza olanak tanır.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Etkileşimli öğeleri kaybedecek miyim?`,
+        "answer": `Çoğu standart etkileşimli öğe korunur, ancak birden çok sayfa arasında köprü oluşturan karmaşık form alanları farklı davranabilir.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Kaydetmeden önce bir hareketi geri alabilir miyim?`,
+        "answer": `Evet, son işlem düğmesine basmadan önce sayfaları istediğiniz kadar yeniden düzenleyebilirsiniz.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Boş sayfa ekle`,
+    "desc": `PDF belgenizin herhangi bir yerine boş bir sayfa ekleyin.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `PDF dosyanızı yükleyin.`,
+      `Yeni bir boş sayfa eklemek istediğiniz yeri tam olarak seçin.`,
+      `Değişiklikleri uygulayın ve güncellenmiş PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Neden boş bir sayfa eklemem gerekiyor?`,
+        "answer": `Boş bir sayfa eklemek, çift taraflı belgeleri yazdırmak, gelecekteki notları eklemek veya sayfalandırma biçimlendirmesini düzeltmek için kullanışlıdır.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Birden fazla boş sayfa ekleyebilir miyim?`,
+        "answer": `Evet, belgenin herhangi bir yerine istediğiniz kadar boş sayfa ekleyebilirsiniz.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Boş sayfa belgenin boyutuyla eşleşecek mi?`,
+        "answer": `Evet, yeni boş sayfa, çevredeki sayfaların boyutlarına ve yönüne otomatik olarak eşleşecektir.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `PDF'yi sıkıştır`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Maksimum PDF kalitesi için optimizasyon yaparken dosya boyutunu küçültün.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Hacimli PDF dosyanızı yükleyin.`,
+      `İstediğiniz sıkıştırma düzeyini seçin (Aşırı, Önerilen veya Daha Az sıkıştırma).`,
+      `Optimize edilmiş, çok daha küçük PDF dosyanızı indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Sıkıştırma PDF'imin kalitesini bozar mı?`,
+        "answer": `Gelişmiş optimizasyon algoritmalarımız, metni keskin ve görsel olarak net tutarken, görüntüleri sıkıştırarak ve gereksiz verileri kaldırarak dosya boyutunu azaltır.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Hangi sıkıştırma düzeyini seçmeliyim?`,
+        "answer": `Mükemmel bir denge için 'Önerilir' seçeneğini öneriyoruz.'Extreme' seçeneğini yalnızca e-posta ekleri için mümkün olan en küçük dosya boyutuna acilen ihtiyacınız varsa kullanın.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Zaten küçük olan bir PDF'yi sıkıştırabilir miyim?`,
+        "answer": `Yapabilirsiniz, ancak veriler muhtemelen zaten optimize edilmiş olduğundan dosya boyutunun küçültülmesi minimum düzeyde olacaktır.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `PDF'yi onar`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Hasarlı bir PDF'yi onarın ve bozuk dosyalardan verileri kurtarın.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Bozuk veya hasarlı PDF dosyanızı yükleyin.`,
+      `Sistemimiz dosya yapısını analiz edecek ve bozuk verileri yeniden oluşturmaya çalışacaktır.`,
+      `Onarılan PDF belgesini indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Tüm bozuk PDF'ler düzeltilebilir mi?`,
+        "answer": `Aracımız yapısal hataları ve bozuk başlıkları düzeltmede son derece etkili olsa da, eksik ham verilere sahip ciddi şekilde hasar görmüş dosyalar tamamen kurtarılamayabilir.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Onarım ne kadar sürer?`,
+        "answer": `Çoğu dosya, hasarın karmaşıklığına bağlı olarak birkaç saniye içinde analiz edilir ve onarılır.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `İçerideki veriler güvende mi?`,
+        "answer": `Evet.Onarımı bulutta güvenli bir şekilde işliyoruz ve belgeniz kısa süre sonra kalıcı olarak siliniyor.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF'si`,
+    "desc": `Taranan PDF'lerdeki metni seçilebilir, aranabilir ve düzenlenebilir hale getirin.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Taranmış PDF belgenizi yükleyin.`,
+      `Daha iyi doğruluk için belge içindeki metnin dilini seçin.`,
+      `Yeni, tamamen aranabilir ve seçilebilir PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `OCR nedir?`,
+        "answer": `OCR, Optik Karakter Tanıma anlamına gelir.Görüntülerin veya taranmış belgelerin içindeki metni okuyan ve onu seçilebilir, aranabilir bilgisayar metnine dönüştüren bir teknolojidir.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `OCR el yazısı metinlerde çalışıyor mu?`,
+        "answer": `OCR motorumuz basılı metinler için son derece hassastır.El yazısı metin, okunabilirliğe bağlı olarak farklı sonuçlar doğurabilir.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `OCR'lanmış belgeden metin kopyalayabilir miyim?`,
+        "answer": `Kesinlikle.İşlendikten sonra normal bir belge gibi doğrudan PDF'deki metni vurgulayabilir, kopyalayabilir ve yapıştırabilirsiniz.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `PDF'yi düzleştir`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Tüm katmanları, formları ve açıklamaları düzenlenemeyen tek bir katmanda birleştirin.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Formları, katmanları veya ek açıklamaları içeren PDF'yi yükleyin.`,
+      `Sistemimiz tüm görsel öğeleri kalıcı olarak tek bir düz katmanda birleştirecektir.`,
+      `Düzleştirilmiş, baskıya hazır PDF'yi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `PDF'yi neden düzleştirmeliyim?`,
+        "answer": `PDF'yi düzleştirmek form verilerini kilitler, ek açıklamaların daha fazla düzenlenmesini önler ve belgenin tam olarak ekranda göründüğü gibi yazdırılmasını sağlar.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Düzleştirilmiş bir PDF'nin düzleştirilmesi kaldırılabilir mi?`,
+        "answer": `Hayır, düzleşme kalıcı bir işlemdir.Orijinal etkileşimli PDF'nizin yedeğini saklamanızı öneririz.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Düzleştirme dosya boyutunu küçültür mü?`,
+        "answer": `Çoğu zaman evet.Katmanların birleştirilmesi ve etkileşimli form alanlarının kaldırılmasıyla genel yapı daha basit ve daha küçük hale gelir.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `PDF'yi koruyun`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Yetkisiz erişimi önlemek için PDF'nizi bir parola ile şifreleyin.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Koruma altına almak istediğiniz PDF'yi yükleyin.`,
+      `Güçlü bir şifre yazın ve onaylayın.`,
+      `Yeni şifrelenmiş PDF dosyanızı indirin.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Ne tür bir şifreleme kullanılıyor?`,
+        "answer": `Son derece hassas ve gizli belgelerin güvenliğini sağlamak için endüstri standardı olan sağlam AES 256 bit şifreleme kullanıyoruz.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Şifremi unutursam TheyLovePDF şifremi kurtarabilir mi?`,
+        "answer": `Hayır. Şifreniz hiçbir zaman sunucularımıza kaydedilmez.Kaybederseniz belgenin şifresi çözülemez.Lütfen onu güvende tutun!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `PDF'yi korumak yazdırmayı engeller mi?`,
+        "answer": `Evet, şifreleme, belgenin doğru parola olmadan açılmasını, yazdırılmasını veya düzenlenmesini engeller.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `PDF'nin kilidini aç`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `PDF şifre güvenliğini kaldırın, size PDF'lerinizi istediğiniz gibi kullanma özgürlüğü verin.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Parola korumalı PDF'nizi yükleyin.`,
+      `Dosyada düzenlemeleri kısıtlayan bir 'sahip şifresi' varsa, onu anında kaldıracağız.Eğer açılmayı kısıtlayan bir 'kullanıcı şifresi' varsa, önce onu girmelisiniz.`,
+      `Kilitlenmemiş PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Şifre olmadan bir PDF'nin kilidini açabilir misiniz?`,
+        "answer": `Parolaya ihtiyaç duymadan 'düzenleme/yazdırma kısıtlamalarını' (sahip parolaları) kolayca kaldırabiliriz.Ancak, dosya yalnızca açmak için bir parola gerektiriyorsa (kullanıcı parolası), bunu sağlamanız gerekir.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `PDF'nin kilidini açmak yasal mı?`,
+        "answer": `Güvenliği yalnızca yasal olarak sahip olduğunuz veya değiştirme iznine sahip olduğunuz belgelerden kaldırmalısınız.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Kilidi açmak belgenin içeriğini değiştirir mi?`,
+        "answer": `Hayır, içerik, biçimlendirme ve kalite hiçbir şekilde değişmeden kalır.Yalnızca güvenlik katmanı kaldırılır.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `PDF'yi düzelt`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Hassas bilgileri veya gizli verileri PDF'lerinizden kalıcı olarak kaldırın.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `PDF dosyanızı yükleyin.`,
+      `Hassas metnin, görsellerin veya kişisel bilgilerin üzerine kara kutular çizin.`,
+      `Verileri kalıcı olarak temizlemek için düzenlemeleri uygulayın ve ardından dosyayı indirin.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Düzenlenen metin gerçekten gitti mi?`,
+        "answer": `Evet.Redaksiyon aracımız, metnin üzerine basitçe siyah bir şekil çizmenin aksine, alttaki metin verilerini kalıcı olarak siler, böylece makineler tarafından kopyalanamaz veya okunamaz.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Görüntüleri de düzeltebilir miyim?`,
+        "answer": `Kesinlikle.Grafikler ve fotoğraflar da dahil olmak üzere sayfanın herhangi bir alanının kalıcı olarak karartılmasını seçebilirsiniz.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Redaksiyon geri döndürülebilir mi?`,
+        "answer": `Hayır. Güvenliğiniz için, düzenleme gizli verileri kalıcı olarak yok eder.Gerekirse her zaman üzerinde değişiklik yapılmamış bir yedek bulundurun.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `PDF'yi imzala`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Kendiniz imzalayın veya başkalarından elektronik imza isteyin.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `İmza gerektiren belgeyi yükleyin.`,
+      `İmzanızı çizerek, yazarak veya bir resim yükleyerek oluşturun.`,
+      `İmzanızı belgeye yerleştirin, uygula'ya tıklayın ve indirin.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Elektronik imzalar yasal mı?`,
+        "answer": `Evet, TheyLovePDF ile oluşturulan elektronik imzalar çoğu ülkede ve yargı bölgesinde yasal olarak bağlayıcıdır.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `İmzamı daha sonra kullanmak üzere kaydedebilir miyim?`,
+        "answer": `Evet, bir hesap oluşturursanız gelecekte tek tıklamayla hızlı bir şekilde imzalamak için imzanızı güvenli bir şekilde kaydedebilirsiniz.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Metin tarihlerini ve baş harflerini ekleyebilir miyim?`,
+        "answer": `Kesinlikle.İmzanızın yanı sıra tarihleri, baş harfleri ve özel metin alanlarını kolayca sürükleyip bırakabilirsiniz.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `İmza iste`,
+    "desc": `Yasal olarak çevrimiçi olarak imzalanacak belgeleri müşterilerinize gönderin.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `İmzalamanız gereken PDF'yi yükleyin.`,
+      `Alıcıların e-posta adreslerini ekleyin ve onlar için imza alanları atayın.`,
+      `Talebi gönderin.Belgeyi çevrimiçi olarak imzalamaları için onlara güvenli bir bağlantı e-postası göndereceğiz.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Alıcıların imzalamak için bir hesaba ihtiyacı var mı?`,
+        "answer": `Hayır, alıcılar bir TheyLovePDF hesabı oluşturmalarına gerek kalmadan belgeyi doğrudan e-posta bağlantılarından güvenli bir şekilde imzalayabilirler.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `İmzalandığını nasıl bileceğim?`,
+        "answer": `Tüm tarafların belgeyi imzalamayı tamamladığı anda otomatik bir e-posta bildirimi alacaksınız.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Denetim izi var mı?`,
+        "answer": `Evet, Pro kullanıcıları, tam yasal uyumluluk için IP adreslerini ve zaman damgalarını ayrıntılandıran kapsamlı bir denetim takibi alır.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Sertifika işareti`,
+    "desc": `PDF'nize kriptografik bir dijital imza ekleyin.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `PDF'nizi ve dijital sertifika dosyanızı (.pfx veya .p12) yükleyin.`,
+      `Sertifika şifresini girin.`,
+      `Şifreleme imzasını uygulayın ve doğrulanmış PDF'yi indirin.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Sertifika imzası nedir?`,
+        "answer": `Görsel elektronik imzadan farklı olarak, sertifika imzası belgeye kriptografik bir karma uygulayarak orijinalliğini matematiksel olarak kanıtlar ve değiştirilmemesini sağlar.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Sertifika şifremi saklıyor musunuz?`,
+        "answer": `Asla.Şifreniz yalnızca tam imzalama anında geçici hafızada tutulur ve hemen imha edilir.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `İnsanlar imzayı doğrulayabilir mi?`,
+        "answer": `Evet, Adobe Acrobat gibi standart PDF okuyucularda açıldığında belgenin dijital olarak doğrulandığını ve değiştirilmediğini belirten yeşil bir onay işareti görünecektir.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `PDF ile sohbet et`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `PDF'nizle konuşun.Yapay zekayı kullanarak anında sorular sorun, özetler alın ve içgörüler elde edin.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `yapay zeka` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Uzun veya karmaşık PDF belgenizi yükleyin.`,
+      `Sohbet kutusuna 'Bölüm 2'yi özetleyin' veya 'Ana argüman nedir?' gibi bir soru yazın.`,
+      `Yapay zekamız belgeyi anında okuyacak ve size doğru bir yanıt verecektir.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `PDF ile Sohbet nasıl çalışır?`,
+        "answer": `Belgenizin metnini taramak, içeriğini anlamak ve sorduğunuz soruları tam olarak belgenin içeriğine göre yanıtlamak için gelişmiş Büyük Dil Modelleri (LLM'ler) kullanıyoruz.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Taranan belgeleri okuyabilir mi?`,
+        "answer": `Belge yalnızca bir resimse, önce onu OCR aracımızla çalıştırmalısınız.Seçilebilir metin içeriyorsa yapay zeka bunu hemen okuyabilir.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Belgelerim yapay zekayı eğitmek için mi kullanılıyor?`,
+        "answer": `Kesinlikle hayır.Gizliliğiniz bizim önceliğimizdir.Belgeler güvenli bir ortamda işlenir ve hiçbir zaman genel yapay zeka modellerini eğitmek için kullanılmaz.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `PDF'yi düzenle`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `PDF belgesine metin, görseller, şekiller veya serbest el açıklamaları ekleyin.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Popüler` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Değiştirmek istediğiniz PDF'yi yükleyin.`,
+      `Metin eklemek, resim eklemek, şekil çizmek veya mevcut alanlara beyazlatma uygulamak için araç çubuğunu kullanın.`,
+      `Düzenlemelerinizi kaydedin ve güncellenmiş PDF'yi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `PDF'deki mevcut metni değiştirebilir miyim?`,
+        "answer": `Şu anda eski metni kaplamak ve üzerine yeni metin yazmak için 'beyazlatma' aracını kullanabilirsiniz.Yerel metin düzenleme, aktif olarak geliştirmekte olduğumuz oldukça karmaşık bir özelliktir.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `PDF'ye resim ekleyebilir miyim?`,
+        "answer": `Evet, PNG veya JPG resimlerini belgenizin herhangi bir yerine kolayca yükleyebilir ve damgalayabilirsiniz.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Düzenleme belge kalitesini düşürür mü?`,
+        "answer": `Hayır, editörümüz, orijinal görselleri veya metni yeniden sıkıştırmadan, ek açıklamalarınızı mevcut belge yapısının üzerine ekler.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Filigran PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Saniyeler içinde PDF'nizin üzerine bir resim veya metin damgalayın.Tipografiyi, şeffaflığı ve konumu seçin.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `PDF dosyanızı yükleyin.`,
+      `Filigran metninizi yazın veya bir logo resmi yükleyin.Opaklığı, döndürmeyi ve yerleşimi ayarlayın.`,
+      `Uygula'yı tıklayın ve filigranlı belgenizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Tüm sayfalara aynı anda filigran ekleyebilir miyim?`,
+        "answer": `Evet, varsayılan olarak filigranınız belgenin her sayfasına tutarlı bir şekilde uygulanacaktır.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Şeffaflığı ayarlayabilir miyim?`,
+        "answer": `Kesinlikle.Filigranı, dikkati belgeden ayırmaması için çok soluk veya maksimum görünürlük için tamamen opak yapabilirsiniz.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Filigran kaldırılabilir mi?`,
+        "answer": `Fikri mülkiyetinizin korunmasını sağlamak amacıyla filigranı, kaldırılmasını mümkün olduğunca zorlaştırmak için belge yapısına düzleştiriyoruz.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF formları`,
+    "desc": `PDF formlarını çevrimiçi olarak hızlı ve doğru bir şekilde doldurun.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Etkileşimli bir PDF formu yükleyin.`,
+      `Bilgilerinizi doldurmak için metin alanlarına, onay kutularına veya radyo düğmelerine tıklayın.`,
+      `Doldurulmuş formu indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Kısmen doldurulmuş bir formu kaydedebilir miyim?`,
+        "answer": `Pro hesabınız varsa oturumlarınız otomatik olarak kaydedilir ve daha sonra geri dönüp formu doldurmayı tamamlamanıza olanak tanır.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Tüm PDF formlarıyla çalışır mı?`,
+        "answer": `Aracımız, etkileşimli PDF'lerin %99'unu oluşturan standart AcroForm'ları destekler.Eski XFA formlarının desteği sınırlı olabilir.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Formu doldurduktan sonra düzleştirebilir miyim?`,
+        "answer": `Evet, indirdikten sonra, verileri alıcı tarafından değiştirilemeyecek şekilde kilitlemek için 'PDF'yi Düzleştir' aracımızı kullanarak çalıştırabilirsiniz.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Sayfa numaraları ekleyin`,
+    "desc": `Sayfa numaralarını PDF'lere kolaylıkla ekleyin.Konumlarınızı, boyutlarınızı ve tipografinizi seçin.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Özgür` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Belgenizi yükleyin.`,
+      `Konumu (ör. sağ alt), yazı tipi stilini ve başlangıç ​​numarasını seçin.`,
+      `Numaralandırmayı uygulayın ve mükemmel biçimlendirilmiş PDF'nizi indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Kapak sayfasını atlayabilir miyim?`,
+        "answer": `Evet!Numaralandırmanın gerçekte hangi sayfada başlaması gerektiğini belirleyerek başlık sayfalarını temiz tutmanıza olanak tanıyabilirsiniz.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Formatı özelleştirebilir miyim?`,
+        "answer": `Kesinlikle.'Sayfa 1', '1/10' veya yalnızca '1' gibi formatları seçebilir ve yazı tipini, boyutunu ve rengini seçebilirsiniz.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Hizalama doğru mu?`,
+        "answer": `Evet, aracımız sayfa numaralarınızın her sayfada mükemmel şekilde hizalanmasını sağlamak için kenar boşluklarını tam olarak hesaplar.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `PDF'ye açıklama ekle`,
+    "desc": `Metni vurgulayın, altını çizin, üstünü çizin ve yorum ekleyin.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Yeni` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `PDF'nizi yükleyin.`,
+      `Belgeyi gözden geçirmek için vurgulayıcı, altı çizili, üstü çizili ve yapışkan not araçlarını kullanın.`,
+      `Ekibinizle paylaşmak için açıklamalı dosyayı indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Ek açıklamalarım standart okuyucularda görünecek mi?`,
+        "answer": `Evet, standart PDF açıklama protokolleri kullanıyoruz; bu, vurgularınızın ve notlarınızın Adobe Acrobat, Chrome ve Apple Preview'da görüneceği anlamına gelir.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Vurgu renklerini değiştirebilir miyim?`,
+        "answer": `Evet, notlarınızı ve vurgularınızı renk kodlaması yapmak için geniş bir renk paleti arasından seçim yapabilirsiniz.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Bir ek açıklamayı silmek kolay mı?`,
+        "answer": `Çok kolay.Yaptığınız herhangi bir açıklamaya tıklayın ve anında kaldırmak için sil düğmesine basın.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `İntihal kontrolü`,
+    "desc": `Belgenizi milyarlarca web sayfası ve akademik veri tabanıyla karşılaştırın.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Profesyonel` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Doğrulamak istediğiniz makaleyi veya belgeyi yükleyin.`,
+      `Yapay zeka motorumuz, eşleşme bulmak için milyarlarca web sayfasını ve akademik veri tabanını tarayacaktır.`,
+      `Kopyalanan herhangi bir metni vurgulayan ayrıntılı benzerlik raporunu inceleyin.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `İntihal denetleyicisi ne kadar doğrudur?`,
+        "answer": `Son derece doğrudur.Metninizi devasa, sürekli güncellenen bir çevrimiçi içerik veritabanıyla çapraz referanslayan kurumsal düzeyde yapay zeka kullanıyoruz.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Çevrimdışı akademik makalelerle karşılaştırma yapıyor mu?`,
+        "answer": `Büyük açık erişimli akademik dergileri ve çevrimiçi olarak yoğun şekilde alıntı yapılan kaynakları karşılaştırır.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Belgem bir veritabanına kaydedildi mi?`,
+        "answer": `Hayır. Bazı üniversitelerin sistemlerinden farklı olarak belgenizi küresel bir veritabanına eklemiyoruz, böylece orijinal çalışmanızın tamamen size ait kalmasını sağlıyoruz.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `PDF'yi Özetle`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Uzun belgelerin hızlı ve doğru özetlerini saniyeler içinde oluşturun.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Yeni` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Uzun bir belge, rapor veya kitap bölümü yükleyin.`,
+      `Yapay zekamızın temel kavramları analiz etmesine izin vermek için 'Özet'i tıklayın.`,
+      `Madde işareti özetini okuyun ve gerekirse indirin.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Bütün bir kitabı özetleyebilir mi?`,
+        "answer": `Yapay zeka son derece yeteneklidir ancak en iyi sonuçlar ve maksimum ayrıntı için her seferinde bir bölümü özetlemenizi öneririz.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Özet önemli istatistikleri kapsıyor mu?`,
+        "answer": `Evet, Yüksek Lisansımıza kritik veri noktalarını, istatistikleri ve birincil argümanları tanımlama ve vurgulama talimatı verilmiştir.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Hangi diller destekleniyor?`,
+        "answer": `Özetleyici en iyi İngilizce dilinde çalışır, ancak yerel olarak 50'den fazla küresel dili destekler ve anlar.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `PDF'yi çevir`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Orijinal biçimlendirmeyi ve düzeni koruyarak tüm belgeleri çevirin.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Yeni` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Belgenizi yükleyin.`,
+      `Orijinal dili ve tercüme etmek istediğiniz hedef dili seçin.`,
+      `Yeni çevrilmiş PDF'yi orijinal formatıyla birlikte indirin.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Çeviri sonrasında düzen bozulur mu?`,
+        "answer": `Gelişmiş motorumuz tam düzeni korumaya çalışır, ancak metin genişletme (örneğin, İngilizce'den Almanca'ya) hafif, kaçınılmaz görsel değişikliklere neden olabilir.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Çeviri ne kadar doğru?`,
+        "answer": `Kelimesi kelimesine katı çeviri yerine son derece doğru, bağlama duyarlı çeviriler sağlayan, yapay zeka tarafından desteklenen son teknoloji ürünü Nöral Makine Çevirisi'ni (NMT) kullanıyoruz.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Taranan belgeleri çevirebilir miyim?`,
+        "answer": `Evet!Taranmış bir belge yüklerseniz sistemimiz, metni tercüme etmeden önce okumak için otomatik olarak OCR'yi çalıştıracaktır.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Verileri çıkar`,
+    "desc": `Faturalardan ve formlardan tabloları, değerleri ve varlıkları akıllıca çıkarın.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Yeni` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Faturaları, makbuzları veya yapılandırılmış formları yükleyin.`,
+      `Yapay zekamız Tarihler, Toplamlar, İsimler ve Adresler gibi önemli alanları tanımlayacaktır.`,
+      `Çıkarılan verileri temiz bir CSV veya JSON dosyası olarak indirin.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Veri çıkarma ne için kullanılır?`,
+        "answer": `Muhasebe ve yönetim için mükemmeldir.100 faturadaki verileri manuel olarak yazmak yerine yapay zekamız bunu saniyeler içinde otomatik olarak yapar.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Belgenin belirli bir düzene ihtiyacı var mı?`,
+        "answer": `HAYIR!Yapay zekamız sayfanın üstünde, altında veya ortasında 'Toplam Tutar'ı bulabilecek kadar akıllıdır.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Verileri Excel'e çıkarabilir miyim?`,
+        "answer": `Evet, çıkarılan veriler doğrudan Microsoft Excel veya Google E-Tablolar'da mükemmel şekilde açılan bir CSV dosyası olarak dışa aktarılabilir.`
+      },
     ]
-  }
+  },
 ];

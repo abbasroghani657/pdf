@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for it
 export const TOOLS_DATA_IT = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Da PDF a Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Converti i tuoi file PDF in documenti DOC e DOCX facili da modificare.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Carica il tuo documento PDF trascinandolo nella zona di rilascio o facendo clic sul pulsante "Seleziona file".`,
+      `Il nostro motore OCR e di conversione avanzato inizierà immediatamente a estrarre il testo, il layout e la formattazione.`,
+      `Scarica il documento Word (DOC/DOCX) perfettamente convertito, pronto per la modifica.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Cos'è un convertitore da PDF a Word?`,
+        "answer": `Un convertitore da PDF a Word è un'utilità che estrae testo, layout e immagini da un PDF e li ricrea come un documento Microsoft Word completamente modificabile.Il nostro motore di conversione premium conserva caratteri, layout, tabelle e immagini in modo che il tuo documento Word abbia esattamente l'aspetto del PDF originale.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Posso convertire i PDF scansionati in documenti Word modificabili?`,
+        "answer": `Assolutamente.La nostra tecnologia OCR (riconoscimento ottico dei caratteri) integrata rileva automaticamente il testo scansionato e lo rende completamente modificabile nel file DOCX risultante.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Il mio PDF riservato è al sicuro durante la conversione?`,
+        "answer": `Prendiamo sul serio la privacy.I tuoi file vengono crittografati tramite SSL a 256 bit durante il trasferimento ed eliminati definitivamente dai nostri server automaticamente entro 2 ore.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Da Word a PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Rendi i file DOC e DOCX facili da leggere convertendoli in PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Seleziona il tuo file DOC o DOCX dal tuo computer o trascinalo sulla pagina.`,
+      `Lo strumento bloccherà immediatamente la formattazione e convertirà il documento Word in un formato PDF universale.`,
+      `Scarica il tuo nuovo PDF.Il layout apparirà identico su ogni dispositivo.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Perché dovrei convertire Word in PDF?`,
+        "answer": `La conversione in PDF garantisce che il layout, i caratteri e le immagini del documento siano esattamente gli stessi su qualsiasi dispositivo, evitando errori di formattazione durante la condivisione con altri.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `I miei margini e i miei caratteri vengono conservati?`,
+        "answer": `Sì, il nostro convertitore da Word a PDF blocca il tuo layout esatto, inclusi caratteri personalizzati e impostazioni precise dei margini.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Posso convertire più file Word contemporaneamente?`,
+        "answer": `Sì, puoi caricare più file DOC/DOCX e li elaboreremo contemporaneamente per la conversione ad alta velocità.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Da PDF a Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Estrai tabelle e dati dai PDF in fogli di calcolo Excel.Risultati migliori con PDF basati su testo.I PDF scansionati sono supportati tramite OCR: la precisione può variare.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Carica il file PDF contenente le tabelle e i dati che desideri estrarre.`,
+      `Il nostro sistema eseguirà la scansione del documento, identificherà i dati tabulari e li formatterà accuratamente nelle celle del foglio di calcolo.`,
+      `Scarica il tuo file Excel modificabile (XLSX).`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Le mie tabelle PDF verranno formattate correttamente in Excel?`,
+        "answer": `Sì, il nostro strumento di estrazione intelligente riconosce righe e colonne, garantendo che i tuoi dati tabulari siano organizzati in modo ordinato in celle Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Può estrarre dati da PDF scansionati?`,
+        "answer": `Sì, la nostra tecnologia OCR può leggere tabelle da immagini scansionate e convertirle in fogli di calcolo Excel modificabili.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Le formule vengono trasferite?`,
+        "answer": `I PDF non memorizzano formule, solo dati grezzi.Il file Excel estratto conterrà i valori esatti visibili nel PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel in PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Rendi i fogli di calcolo EXCEL facili da leggere convertendoli in PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Carica il tuo foglio di calcolo Excel (XLS o XLSX).`,
+      `Il nostro strumento ottimizzerà il layout del foglio di calcolo per adattarlo perfettamente alle pagine PDF senza tagliare le colonne.`,
+      `Scarica il documento PDF definitivo.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `I miei fogli di calcolo larghi verranno tagliati?`,
+        "answer": `Il nostro convertitore ridimensiona e formatta in modo intelligente il tuo foglio di calcolo per garantire che le colonne si adattino logicamente alle pagine PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Converte tutti i fogli di lavoro?`,
+        "answer": `Sì, tutti i fogli di lavoro attivi nel tuo file Excel verranno convertiti in pagine sequenziali nel PDF finale.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `I miei dati finanziari sono al sicuro?`,
+        "answer": `100%.Utilizziamo la crittografia end-to-end e tutti i file vengono cancellati definitivamente dai nostri sistemi entro 2 ore.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Da PDF a JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Converti ogni pagina PDF in JPG o estrai tutte le immagini contenute.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Carica il documento PDF che desideri convertire in immagini.`,
+      `Scegli se estrarre immagini incorporate o convertire intere pagine PDF in JPG ad alta risoluzione.`,
+      `Scarica i JPG singolarmente o come file ZIP compresso.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `La qualità JPG sarà alta?`,
+        "answer": `Sì, estraiamo e convertiamo le pagine ad alta risoluzione, garantendo testo nitido e immagini chiare nei file JPG risultanti.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Posso estrarre solo le immagini dal PDF?`,
+        "answer": `Assolutamente.Puoi scegliere di estrarre solo le foto incorporate nel PDF anziché convertire l'intera pagina.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `C'è un limite al numero di pagine che posso convertire?`,
+        "answer": `Gli utenti gratuiti possono convertire fino a 10 MB di PDF.Gli utenti Pro possono elaborare file di grandi dimensioni fino a 2 GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG in PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Converti immagini JPG in PDF in pochi secondi.Regola facilmente l'orientamento e i margini.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Seleziona una o più immagini JPG dal tuo dispositivo.`,
+      `Trascina e rilascia per riorganizzare l'ordine, regolare l'orientamento della pagina e impostare i margini, se necessario.`,
+      `Fai clic su "Converti" e scarica il documento PDF combinato.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Posso combinare più JPG in un unico PDF?`,
+        "answer": `Sì, carica semplicemente più immagini, disponile nell'ordine che preferisci e noi le uniremo in un unico documento PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Le mie immagini perderanno qualità?`,
+        "answer": `No, conserviamo la risoluzione e la qualità originali delle tue immagini JPG quando le incorporiamo nel PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Posso regolare i margini e l'orientamento?`,
+        "answer": `Sì, il nostro strumento ti consente di personalizzare l'orientamento della pagina (verticale o orizzontale) e le dimensioni dei margini prima della conversione.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF in PowerPoint`,
+    "desc": `Trasforma i tuoi file PDF in presentazioni PPT e PPTX facili da modificare.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Carica il PDF che desideri trasformare in una presentazione.`,
+      `Il nostro motore AI analizzerà le diapositive e le convertirà in formati PPTX modificabili.`,
+      `Scarica la tua nuova presentazione PowerPoint.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Il testo nel mio PowerPoint sarà modificabile?`,
+        "answer": `Sì, tutto il testo, le forme e le immagini saranno completamente modificabili nel file PPTX risultante.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Funziona con presentazioni digitalizzate?`,
+        "answer": `Sì, utilizzando l'OCR possiamo estrarre il testo dalle diapositive scansionate e renderlo modificabile in PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Il layout della diapositiva viene conservato?`,
+        "answer": `La nostra tecnologia di conversione avanzata garantisce che il layout del tuo PDF originale corrisponda il più fedelmente possibile in PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint in PDF`,
+    "desc": `Rendi le presentazioni PPT e PPTX facili da visualizzare convertendole in PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Seleziona il tuo file PPT o PPTX.`,
+      `Lo strumento convertirà istantaneamente le tue diapositive in un formato PDF sicuro e universale.`,
+      `Scarica la tua presentazione in formato PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Perché convertire PowerPoint in PDF?`,
+        "answer": `La conversione garantisce che la tua presentazione appaia identica su qualsiasi dispositivo, evitando caratteri mancanti o layout interrotti durante la presentazione su un computer diverso.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Le transizioni delle mie diapositive vengono salvate?`,
+        "answer": `No, il PDF è un formato di documento statico, quindi le animazioni e le transizioni delle diapositive non verranno trasferite.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Sono incluse le note del relatore?`,
+        "answer": `Attualmente, il nostro strumento converte le immagini principali della diapositiva.Le note del relatore non sono incluse nell'output PDF standard.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `Da PDF a HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Converti perfettamente i tuoi documenti PDF in pagine Web HTML.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Carica il tuo file PDF.`,
+      `Il nostro sistema convertirà il documento in HTML, CSS e immagini pronti per il web.`,
+      `Scarica il file ZIP contenente la tua nuova pagina web.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `L'HTML sarà reattivo?`,
+        "answer": `L'HTML corrisponderà fedelmente al layout statico del tuo PDF, mantenendo il posizionamento assoluto per la precisione.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Le immagini vengono estratte automaticamente?`,
+        "answer": `Sì, tutte le immagini incorporate vengono estratte e referenziate correttamente nel codice HTML generato.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Ho bisogno di competenze di codifica per usarlo?`,
+        "answer": `Affatto.Riceverai un file HTML pronto all'uso che potrai aprire immediatamente in qualsiasi browser web.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `Da HTML a PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Converti pagine web in formato HTML in PDF direttamente da URL o file.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Carica il tuo file HTML o inserisci l'URL di una pagina web.`,
+      `Il nostro motore di rendering caricherà la pagina, applicherà gli stili e la catturerà come documento PDF.`,
+      `Scarica il tuo PDF perfettamente formattato.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Posso convertire gli URL live in PDF?`,
+        "answer": `Sì, puoi inserire un URL e il nostro strumento recupererà la pagina web live e la convertirà in un PDF di alta qualità.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Vengono applicati gli stili CSS?`,
+        "answer": `Assolutamente.Il nostro motore di rendering supporta pienamente i CSS, garantendo che il PDF abbia esattamente l'aspetto della pagina web live.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Che dire delle pagine pesanti JavaScript?`,
+        "answer": `Il nostro strumento esegue JavaScript prima di acquisire la pagina, garantendo che il contenuto dinamico venga visualizzato correttamente nel PDF finale.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF in testo`,
+    "desc": `Estrai testo dai tuoi file PDF per creare documenti TXT modificabili.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Carica il tuo documento PDF.`,
+      `Il nostro sistema eliminerà la formattazione ed estrarrà testo puro e semplice.`,
+      `Scarica il tuo file TXT non elaborato.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Estrae il testo dalle immagini?`,
+        "answer": `Sì, se il PDF contiene immagini scansionate, la nostra tecnologia OCR leggerà il testo e lo includerà nel file TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `La formattazione viene mantenuta?`,
+        "answer": `No, questo strumento rimuove specificamente tutta la formattazione per fornirti testo semplice e non elaborato.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `I miei dati sono al sicuro?`,
+        "answer": `Sì, tutti i file vengono crittografati durante l'elaborazione e cancellati automaticamente entro 2 ore.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Unisci PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Combina i PDF nell'ordine che desideri con la fusione PDF più semplice disponibile.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Seleziona più file PDF dal tuo dispositivo.`,
+      `Trascina e rilascia le miniature per disporre i file nell'ordine desiderato.`,
+      `Fai clic su "Unisci" e scarica il tuo unico documento PDF combinato.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Cos'è una fusione PDF?`,
+        "answer": `Una fusione PDF è un'utilità che combina più file PDF in un unico documento continuo.Gli utenti gratuiti possono unire fino a 20 file contemporaneamente.Gli utenti Pro possono unire un numero illimitato di documenti.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Posso cambiare l'ordine dei file?`,
+        "answer": `SÌ!Dopo il caricamento, trascina e rilascia semplicemente le miniature dei file per riordinarle esattamente come desideri.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `La fusione riduce la qualità?`,
+        "answer": `Affatto.Il processo di fusione preserva la qualità e la formattazione originali di tutti i tuoi documenti.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `PDF diviso`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Separa una pagina o un intero set per una facile conversione in file PDF indipendenti.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Carica il PDF che desideri dividere.`,
+      `Scegli se estrarre pagine specifiche o dividere il documento in intervalli fissi.`,
+      `Scarica i tuoi nuovi file PDF separati come archivio ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Posso estrarre solo una pagina da un PDF di grandi dimensioni?`,
+        "answer": `Sì, puoi facilmente specificare un singolo numero di pagina o un intervallo personalizzato (ad esempio, pagine 4-7) da estrarre.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `I file divisi manterranno la qualità originale?`,
+        "answer": `Sì, le singole pagine vengono estratte in modo impeccabile senza alcuna perdita di risoluzione o qualità del testo.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Come faccio a scaricare più file divisi?`,
+        "answer": `Quando dividi un documento in più parti, le impacchetteremo comodamente in un unico file ZIP per un facile download.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Ruota PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Ruota i tuoi PDF nel modo in cui ne hai bisogno.Puoi anche ruotare più PDF contemporaneamente.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Carica il tuo documento PDF.`,
+      `Passa il mouse sopra le pagine che desideri ruotare e fai clic sull'icona di rotazione oppure ruota tutte le pagine contemporaneamente.`,
+      `Fai clic su Applica e scarica il PDF ruotato in modo permanente.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Posso ruotare solo pagine specifiche?`,
+        "answer": `Sì, puoi selezionare singole pagine e ruotarle di 90, 180 o 270 gradi senza influire sul resto del documento.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `La rotazione è permanente?`,
+        "answer": `Sì, una volta scaricato il nuovo file, le modifiche all'orientamento vengono salvate in modo permanente nei metadati del PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `È sicuro caricare documenti riservati?`,
+        "answer": `Assolutamente.Tutti i caricamenti vengono crittografati tramite HTTPS e cancellati dai nostri server 2 ore dopo l'elaborazione.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Elimina pagine`,
+    "desc": `Rimuovi le pagine da un documento PDF in un lampo.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Carica il tuo file PDF.`,
+      `Seleziona le pagine che desideri rimuovere facendo clic sulle relative miniature.`,
+      `Fai clic su "Elimina pagine" e scarica il documento appena ottimizzato.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Come faccio a sapere quali pagine eliminare?`,
+        "answer": `Il nostro strumento genera miniature di alta qualità di ogni pagina, consentendoti di identificare visivamente e selezionare le pagine esatte che desideri rimuovere.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Posso eliminare più pagine contemporaneamente?`,
+        "answer": `Sì, puoi fare clic su più miniature o digitare un intervallo di pagine per rimuovere più pagine contemporaneamente.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Il resto del documento è interessato?`,
+        "answer": `No, tutte le pagine rimanenti manterranno la formattazione, la qualità e la risoluzione originali.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Riordina le pagine`,
+    "desc": `Modifica l'ordine delle pagine del tuo documento PDF tramite trascinamento.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Carica il tuo documento PDF.`,
+      `È sufficiente trascinare e rilasciare le miniature delle pagine per modificarne la sequenza.`,
+      `Una volta sistemato, applica le modifiche e scarica il tuo PDF riorganizzato.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `È facile riordinare un documento di grandi dimensioni?`,
+        "answer": `Sì, la nostra intuitiva interfaccia drag-and-drop ti consente di spostare rapidamente le pagine, anche in documenti di grandi dimensioni.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Perderò qualche elemento interattivo?`,
+        "answer": `La maggior parte degli elementi interattivi standard vengono conservati, sebbene i campi modulo complessi che collegano più pagine potrebbero comportarsi diversamente.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Posso annullare una mossa prima di salvare?`,
+        "answer": `Sì, puoi riorganizzare le pagine quante volte vuoi prima di fare clic sul pulsante del processo finale.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Aggiungi una pagina vuota`,
+    "desc": `Inserisci una pagina vuota ovunque all'interno del tuo documento PDF.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Carica il tuo file PDF.`,
+      `Seleziona la posizione esatta in cui desideri inserire una nuova pagina vuota.`,
+      `Applica le modifiche e scarica il PDF aggiornato.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Perché dovrei aggiungere una pagina vuota?`,
+        "answer": `L'aggiunta di una pagina vuota è utile per stampare documenti fronte-retro, inserire note future o correggere la formattazione dell'impaginazione.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Posso aggiungere più pagine vuote?`,
+        "answer": `Sì, puoi inserire tutte le pagine bianche di cui hai bisogno, in qualsiasi punto del documento.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `La pagina vuota corrisponderà alle dimensioni del documento?`,
+        "answer": `Sì, la nuova pagina vuota corrisponderà automaticamente alle dimensioni e all'orientamento delle pagine circostanti.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Comprimi PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Riduci le dimensioni del file ottimizzando per la massima qualità PDF.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Carica il tuo voluminoso file PDF.`,
+      `Scegli il livello di compressione desiderato (compressione estrema, consigliata o inferiore).`,
+      `Scarica il tuo file PDF ottimizzato e molto più piccolo.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `La compressione rovinerà la qualità del mio PDF?`,
+        "answer": `I nostri algoritmi di ottimizzazione avanzati riducono le dimensioni del file comprimendo le immagini e rimuovendo i dati ridondanti mantenendo il testo nitido e le immagini visivamente chiare.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Quale livello di compressione dovrei scegliere?`,
+        "answer": `Suggeriamo 'Consigliato' per un equilibrio perfetto.Utilizza "Estremo" solo se hai urgentemente bisogno della dimensione di file più piccola possibile per gli allegati e-mail.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Posso comprimere un PDF già piccolo?`,
+        "answer": `Puoi, ma la riduzione delle dimensioni del file sarà minima poiché probabilmente i dati sono già ottimizzati.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Ripara PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Ripara un PDF danneggiato e recupera i dati dai file corrotti.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Carica il tuo file PDF corrotto o danneggiato.`,
+      `Il nostro sistema analizzerà la struttura del file e tenterà di ricostruire i dati danneggiati.`,
+      `Scarica il documento PDF riparato.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `È possibile riparare tutti i PDF danneggiati?`,
+        "answer": `Anche se il nostro strumento è molto efficace nel correggere errori strutturali e intestazioni danneggiate, i file gravemente danneggiati con dati grezzi mancanti potrebbero non essere completamente recuperabili.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Quanto tempo richiede la riparazione?`,
+        "answer": `La maggior parte dei file viene analizzata e riparata in pochi secondi, a seconda della complessità del danno.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `I dati all'interno sono al sicuro?`,
+        "answer": `SÌ.Elaboriamo la riparazione in modo sicuro nel cloud e il tuo documento verrà eliminato definitivamente poco dopo.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `PDF OCR`,
+    "desc": `Rendi il testo nei PDF scansionati selezionabile, ricercabile e modificabile.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Carica il tuo documento PDF scansionato.`,
+      `Seleziona la lingua del testo all'interno del documento per una migliore precisione.`,
+      `Scarica il tuo nuovo PDF completamente ricercabile e selezionabile.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Cos'è l'OCR?`,
+        "answer": `OCR sta per riconoscimento ottico dei caratteri.È una tecnologia che legge il testo all'interno di immagini o documenti scansionati e lo converte in testo informatico selezionabile e ricercabile.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `L'OCR funziona sul testo scritto a mano?`,
+        "answer": `Il nostro motore OCR è estremamente accurato per il testo stampato.Il testo scritto a mano può produrre risultati diversi a seconda della leggibilità.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Posso copiare il testo dal documento sottoposto a OCR?`,
+        "answer": `Assolutamente.Una volta elaborato, puoi evidenziare, copiare e incollare il testo direttamente dal PDF proprio come un normale documento.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Appiattisci PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Unisci tutti i livelli, i moduli e le annotazioni in un unico livello non modificabile.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Carica il PDF contenente moduli, livelli o annotazioni.`,
+      `Il nostro sistema unirà permanentemente tutti gli elementi visivi in ​​un unico livello piatto.`,
+      `Scarica il PDF appiattito e pronto per la stampa.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Perché dovrei appiattire un PDF?`,
+        "answer": `L'appiattimento di un PDF blocca i dati del modulo, impedisce ulteriori modifiche alle annotazioni e garantisce che il documento venga stampato esattamente come appare sullo schermo.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `È possibile annullare l'appiattimento di un PDF appiattito?`,
+        "answer": `No, l'appiattimento è un processo permanente.Ti consigliamo di conservare un backup del tuo PDF interattivo originale.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `L'appiattimento riduce le dimensioni del file?`,
+        "answer": `Spesso sì.Unendo i livelli e rimuovendo i campi del modulo interattivi, la struttura complessiva diventa più semplice e più piccola.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Proteggi PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Crittografa il tuo PDF con una password per impedire l'accesso non autorizzato.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Carica il PDF che desideri proteggere.`,
+      `Digita una password complessa e confermala.`,
+      `Scarica il tuo nuovo file PDF crittografato.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Che tipo di crittografia viene utilizzata?`,
+        "answer": `Utilizziamo la robusta crittografia AES a 256 bit, che è lo standard del settore per proteggere documenti altamente sensibili e riservati.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `TheyLovePDF può recuperare la mia password se la dimentico?`,
+        "answer": `No. La tua password non viene mai salvata sui nostri server.Se lo perdi, il documento non potrà essere decifrato.Per favore, tienilo al sicuro!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `La protezione di un PDF impedisce la stampa?`,
+        "answer": `Sì, la crittografia impedisce l'apertura, la stampa o la modifica del documento senza la password corretta.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Sblocca PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Rimuovi la sicurezza tramite password dei PDF, dandoti la libertà di utilizzare i tuoi PDF come desideri.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Carica il tuo PDF protetto da password.`,
+      `Se il file ha una "password del proprietario" che limita le modifiche, lo rimuoveremo immediatamente.Se è presente una "password utente" che ne limita l'apertura, è necessario prima inserirla.`,
+      `Scarica il tuo PDF sbloccato.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `È possibile sbloccare un PDF senza la password?`,
+        "answer": `Possiamo rimuovere facilmente le "restrizioni di modifica/stampa" (password del proprietario) senza bisogno della password.Tuttavia, se il file richiede una password solo per aprirlo (password utente), è necessario fornirla.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `È legale sbloccare un PDF?`,
+        "answer": `Dovresti rimuovere la sicurezza solo dai documenti che possiedi legalmente o che sei autorizzato a modificare.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Lo sblocco modificherà il contenuto del documento?`,
+        "answer": `No, il contenuto, la formattazione e la qualità rimangono completamente invariati.Viene rimosso solo il livello di sicurezza.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Redigere PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Rimuovi definitivamente informazioni sensibili o dati nascosti dai tuoi PDF.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Carica il tuo file PDF.`,
+      `Disegna riquadri neri sul testo sensibile, sulle immagini o sulle informazioni personali.`,
+      `Applica le revisioni per cancellare in modo permanente i dati, quindi scarica il file.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Il testo redatto è davvero scomparso?`,
+        "answer": `SÌ.A differenza del semplice disegno di una forma nera sul testo, il nostro strumento di redazione elimina permanentemente i dati di testo sottostanti in modo che non possano essere copiati o letti dalle macchine.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Posso oscurare anche le immagini?`,
+        "answer": `Assolutamente.È possibile selezionare qualsiasi area della pagina, inclusa la grafica e le foto, da oscurare in modo permanente.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `La redazione è reversibile?`,
+        "answer": `No. Per la tua sicurezza, la redazione distrugge permanentemente i dati nascosti.Se necessario, conserva sempre un backup non oscurato.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Firma PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Firma te stesso o richiedi firme elettroniche ad altri.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Carica il documento che richiede una firma.`,
+      `Crea la tua firma disegnando, digitando o caricando un'immagine.`,
+      `Posiziona la tua firma sul documento, fai clic su Applica e scaricalo.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Le firme elettroniche sono legali?`,
+        "answer": `Sì, le firme elettroniche create con TheyLovePDF sono legalmente vincolanti nella maggior parte dei paesi e delle giurisdizioni.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Posso salvare la mia firma per dopo?`,
+        "answer": `Sì, se crei un account, puoi salvare in modo sicuro la tua firma per firmare velocemente con 1 clic in futuro.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Posso aggiungere date e iniziali nel testo?`,
+        "answer": `Assolutamente.Insieme alla tua firma, puoi facilmente trascinare e rilasciare date, iniziali e campi di testo personalizzati.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Richiedi la firma`,
+    "desc": `Invia documenti ai clienti da firmare legalmente online.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Carica il PDF che devi firmare.`,
+      `Aggiungi gli indirizzi email dei destinatari e assegna loro i campi per la firma.`,
+      `Invia la richiesta.Invieremo loro via email un collegamento sicuro per firmare il documento online.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `I destinatari hanno bisogno di un account per firmare?`,
+        "answer": `No, i destinatari possono firmare in modo sicuro il documento direttamente dal proprio collegamento e-mail senza dover creare un account TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Come faccio a sapere quando è firmato?`,
+        "answer": `Riceverai una notifica automatica via email nel momento in cui tutte le parti avranno completato la firma del documento.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Esiste una traccia di controllo?`,
+        "answer": `Sì, gli utenti Pro ricevono un audit trail completo che dettaglia gli indirizzi IP e i timestamp per la piena conformità legale.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Segno del certificato`,
+    "desc": `Aggiungi una firma digitale crittografica al tuo PDF.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Carica il tuo PDF e il file del tuo certificato digitale (.pfx o .p12).`,
+      `Immettere la password del certificato.`,
+      `Applica la firma crittografica e scarica il PDF verificato.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Cos'è una firma di certificato?`,
+        "answer": `A differenza di una firma elettronica visiva, una firma di certificato applica un hash crittografico al documento, dimostrandone matematicamente l'autenticità e garantendo che non sia stato alterato.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Memorizzi la password del mio certificato?`,
+        "answer": `Mai.La tua password viene conservata solo in memoria temporanea durante il momento esatto della firma e viene immediatamente distrutta.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Le persone possono verificare la firma?`,
+        "answer": `Sì, quando viene aperto in lettori PDF standard come Adobe Acrobat, verrà visualizzato un segno di spunta verde che indica che il documento è verificato digitalmente e inalterato.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Chatta con PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Parla con il tuo PDF.Poni domande, ottieni riepiloghi ed estrai informazioni dettagliate istantaneamente utilizzando l'intelligenza artificiale.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AIE` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Carica il tuo documento PDF lungo o complesso.`,
+      `Digita una domanda nella casella di chat, ad esempio "Riassumi il capitolo 2" o "Qual è l'argomento principale?"`,
+      `La nostra IA leggerà immediatamente il documento e ti fornirà una risposta accurata.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Come funziona Chat con PDF?`,
+        "answer": `Utilizziamo modelli LLM (Large Language Models) avanzati per scansionare il testo del documento, comprenderne il contesto e rispondere a qualsiasi domanda posta basandosi rigorosamente sul contenuto del documento.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Può leggere documenti scansionati?`,
+        "answer": `Se il documento è puramente un'immagine, devi prima eseguirlo tramite il nostro strumento OCR.Se contiene testo selezionabile, l'IA può leggerlo immediatamente.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `I miei documenti vengono utilizzati per addestrare l'IA?`,
+        "answer": `Assolutamente no.La tua privacy è la nostra priorità.I documenti vengono elaborati in un ambiente sicuro e non vengono mai utilizzati per addestrare modelli di intelligenza artificiale pubblici.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Modifica PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Aggiungi testo, immagini, forme o annotazioni a mano libera a un documento PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Popolare` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Carica il PDF che desideri modificare.`,
+      `Utilizza la barra degli strumenti per aggiungere testo, inserire immagini, disegnare forme o applicare il bianco alle aree esistenti.`,
+      `Salva le modifiche e scarica il PDF aggiornato.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Posso modificare il testo esistente nel PDF?`,
+        "answer": `Attualmente puoi utilizzare lo strumento 'whiteout' per coprire il vecchio testo e sovrascriverne uno nuovo.La modifica del testo nativo è una funzionalità molto complessa che stiamo sviluppando attivamente.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Posso aggiungere immagini al PDF?`,
+        "answer": `Sì, puoi caricare e timbrare facilmente immagini PNG o JPG ovunque sul tuo documento.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `La modifica riduce la qualità del documento?`,
+        "answer": `No, il nostro editor aggiunge le tue annotazioni alla struttura del documento esistente senza ricomprimere le immagini o il testo originali.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF con filigrana`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Timbra un'immagine o un testo sul tuo PDF in pochi secondi.Scegli tipografia, trasparenza e posizione.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Carica il tuo file PDF.`,
+      `Digita il testo della filigrana o carica un'immagine del logo.Regola l'opacità, la rotazione e il posizionamento.`,
+      `Fai clic su Applica e scarica il documento con filigrana.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Posso filigranare tutte le pagine contemporaneamente?`,
+        "answer": `Sì, per impostazione predefinita la filigrana verrà applicata in modo coerente su ogni singola pagina del documento.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Posso regolare la trasparenza?`,
+        "answer": `Assolutamente.Puoi rendere la filigrana molto sbiadita in modo che non distragga dal documento o completamente opaca per la massima visibilità.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `È possibile rimuovere una filigrana?`,
+        "answer": `Appiattiamo la filigrana nella struttura del documento per renderne il più difficile possibile la rimozione, garantendo la protezione della tua proprietà intellettuale.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Moduli PDF`,
+    "desc": `Compila moduli PDF online in modo rapido e accurato.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Carica un modulo PDF interattivo.`,
+      `Fai clic sui campi di testo, sulle caselle di controllo o sui pulsanti di opzione per inserire le tue informazioni.`,
+      `Scarica il modulo compilato e compilato.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Posso salvare un modulo parzialmente compilato?`,
+        "answer": `Se hai un account Pro, le tue sessioni vengono salvate automaticamente, permettendoti di tornare e completare la compilazione del modulo in un secondo momento.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Funziona con tutti i moduli PDF?`,
+        "answer": `Il nostro strumento supporta gli AcroForm standard, che costituiscono il 99% dei PDF interattivi.I moduli XFA precedenti potrebbero avere un supporto limitato.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Posso appiattire il modulo dopo averlo compilato?`,
+        "answer": `Sì, una volta scaricato, puoi eseguirlo tramite il nostro strumento "Unisci PDF" per bloccare i dati in modo che non possano essere modificati dal destinatario.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Aggiungi i numeri di pagina`,
+    "desc": `Aggiungi facilmente i numeri di pagina ai PDF.Scegli le tue posizioni, dimensioni, tipografia.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Gratuita` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Carica il tuo documento.`,
+      `Seleziona la posizione (ad esempio, in basso a destra), lo stile del carattere e il numero iniziale.`,
+      `Applica la numerazione e scarica il tuo PDF perfettamente formattato.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Posso saltare la copertina?`,
+        "answer": `SÌ!Puoi specificare da quale pagina deve effettivamente iniziare la numerazione, consentendoti di mantenere pulite le pagine del titolo.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Posso personalizzare il formato?`,
+        "answer": `Assolutamente.Puoi scegliere formati come "Pagina 1", "1 di 10" o semplicemente "1" e selezionare il carattere, la dimensione e il colore.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `L'allineamento è accurato?`,
+        "answer": `Sì, il nostro strumento calcola i margini esatti per garantire che i numeri di pagina siano perfettamente allineati su ogni singola pagina.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Annota PDF`,
+    "desc": `Evidenzia, sottolinea, barra il testo e aggiungi commenti.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Nuova` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Carica il tuo PDF.`,
+      `Utilizza gli strumenti evidenziatore, sottolineato, barrato e nota adesiva per rivedere il documento.`,
+      `Scarica il file con le annotazioni da condividere con il tuo team.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Le mie annotazioni saranno visibili nei lettori standard?`,
+        "answer": `Sì, utilizziamo protocolli di annotazione PDF standard, il che significa che le evidenziazioni e le note saranno visibili in Adobe Acrobat, Chrome e Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Posso cambiare i colori di evidenziazione?`,
+        "answer": `Sì, puoi scegliere da un'ampia tavolozza di colori per codificare a colori le tue note e le tue evidenziazioni.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `È facile eliminare un'annotazione?`,
+        "answer": `Molto facile.Basta fare clic su qualsiasi annotazione creata e premere il pulsante Elimina per rimuoverla immediatamente.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Controllo del plagio`,
+    "desc": `Confronta il tuo documento con miliardi di pagine web e database accademici.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Carica il saggio o il documento che desideri verificare.`,
+      `Il nostro motore AI analizzerà miliardi di pagine web e database accademici per trovare corrispondenze.`,
+      `Esamina il rapporto dettagliato sulle somiglianze evidenziando qualsiasi testo copiato.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Quanto è accurato il controllo del plagio?`,
+        "answer": `È estremamente accurato.Utilizziamo un'intelligenza artificiale di livello aziendale che confronta il tuo testo con un enorme database di contenuti online continuamente aggiornato.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Confronta i documenti accademici offline?`,
+        "answer": `Viene confrontato con le principali riviste accademiche ad accesso aperto e con fonti ampiamente citate disponibili online.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Il mio documento è salvato in un database?`,
+        "answer": `No. A differenza dei sistemi di alcune università, non aggiungiamo il tuo documento a un database globale, garantendo che il tuo lavoro originale rimanga strettamente tuo.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Riepiloga PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Genera riepiloghi rapidi e accurati di documenti lunghi in pochi secondi.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `IA+Nuovo` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Carica un lungo documento, un rapporto o un capitolo di un libro.`,
+      `Fai clic su "Riepiloga" per consentire alla nostra intelligenza artificiale di analizzare i concetti fondamentali.`,
+      `Leggi il riepilogo puntato e scaricalo se necessario.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Può riassumere un intero libro?`,
+        "answer": `L'intelligenza artificiale è altamente capace, ma per i migliori risultati e il massimo dettaglio, ti consigliamo di riassumere un capitolo o una sezione alla volta.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Il riepilogo cattura le statistiche chiave?`,
+        "answer": `Sì, il nostro LLM è incaricato di identificare ed evidenziare punti dati critici, statistiche e argomenti principali.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Quali lingue sono supportate?`,
+        "answer": `Il riepilogo funziona meglio in inglese, ma supporta e comprende nativamente oltre 50 lingue globali.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Traduci PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Traduci documenti interi preservando la formattazione e il layout originali.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `IA+Nuovo` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Carica il tuo documento.`,
+      `Seleziona la lingua originale e la lingua di destinazione in cui desideri tradurre.`,
+      `Scarica il PDF appena tradotto, completo della sua formattazione originale.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Il layout si romperà dopo la traduzione?`,
+        "answer": `Il nostro motore avanzato tenta di preservare il layout esatto, sebbene l'espansione del testo (ad esempio, dall'inglese al tedesco) potrebbe causare lievi e inevitabili cambiamenti visivi.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Quanto è accurata la traduzione?`,
+        "answer": `Utilizziamo la traduzione automatica neurale (NMT) all'avanguardia basata sull'intelligenza artificiale, che fornisce traduzioni altamente accurate e sensibili al contesto anziché una rigida traduzione parola per parola.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Posso tradurre documenti scansionati?`,
+        "answer": `SÌ!Se carichi un documento scansionato, il nostro sistema eseguirà automaticamente l'OCR per leggere il testo prima di tradurlo.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Estrai dati`,
+    "desc": `Estrai in modo intelligente tabelle, valori ed entità da fatture e moduli.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `IA+Nuovo` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Carica fatture, ricevute o moduli strutturati.`,
+      `La nostra intelligenza artificiale identificherà campi chiave come date, totali, nomi e indirizzi.`,
+      `Scarica i dati estratti come file CSV o JSON pulito.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `A cosa serve l'estrazione dei dati?`,
+        "answer": `È perfetto per la contabilità e l'amministrazione.Invece di digitare manualmente i dati di 100 fatture, la nostra intelligenza artificiale lo fa automaticamente in pochi secondi.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Il documento necessita di un layout specifico?`,
+        "answer": `NO!La nostra intelligenza artificiale è abbastanza intelligente da trovare l'"Importo totale" sia che si trovi in ​​alto, in basso o al centro della pagina.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Posso estrarre i dati in Excel?`,
+        "answer": `Sì, i dati estratti possono essere esportati direttamente come file CSV, che si apre perfettamente in Microsoft Excel o Fogli Google.`
+      },
     ]
-  }
+  },
 ];

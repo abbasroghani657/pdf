@@ -1,497 +1,468 @@
+// Auto-generated blog translation for nl
 export const BLOG_POSTS_NL = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Een PDF comprimeren op Mac (handleiding 2026)`,
+    date: `2026-06-20`,
+    excerpt: `Leer de snelste en gemakkelijkste manieren om uw PDF-bestandsgrootte op een Mac te verkleinen zonder kwaliteitsverlies.We vergelijken Preview-, Automator- en webtools.`,
+    content: `<p>Omgaan met grote PDF-bestanden op uw Mac kan frustrerend zijn, vooral als u een document moet e-mailen en het document de standaardlimiet van 25 MB voor bijlagen overschrijdt.Of je nu een student bent die een opdracht inlevert of een professional die een portfolio verzendt, weten hoe je een PDF op de juiste manier comprimeert, is een essentiële vaardigheid.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Methode 1: de ingebouwde Preview-app (gratis maar eenvoudig)</h2>
+<p>De Preview-app van Apple wordt geleverd met een ingebouwd "Quartz-filter" waarmee u uw PDF's kunt verkleinen.Het is snel en vereist geen internetverbinding.</p>
+<ol>
+<li>Open uw PDF met de app <strong>Preview</strong>.</li>
+<li>Klik op <strong>Bestand</strong> in de bovenste menubalk en selecteer vervolgens <strong>Exporteren</strong> (selecteer niet "Exporteren als PDF").</li>
+<li>Zoek in het exportvenster naar het vervolgkeuzemenu <strong>Quartz Filter</strong>.</li>
+<li>Selecteer <strong>Bestandsgrootte verkleinen</strong> en klik op Opslaan.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 afgerond-r-lg">
+<p class="text-red-700 m-0"><strong>Waarschuwing:</strong> hoewel deze methode gratis is, is het standaardcompressie-algoritme van Apple ongelooflijk agressief.Het verpest vaak de kwaliteit van afbeeldingen en maakt vectortekst wazig.Voor professionele documenten raden wij dit niet aan.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Methode 2: TheyLovePDF gebruiken (professioneel en van hoge kwaliteit)</h2>
+<p>Als je de scherpe kwaliteit van je tekst en afbeeldingen wilt behouden en tegelijkertijd de bestandsgrootte aanzienlijk wilt verkleinen, is het gebruik van een speciaal door AI aangedreven compressietool de beste optie.</p>
+<ol>
+<li>Ga naar de <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF-tool comprimeren op TheyLovePDF</a>.</li>
+<li>Sleep uw PDF-bestand naar de pagina.</li>
+<li>Selecteer uw compressieniveau:
+<ul class="mt-2 spatie-y-1 tekst-grijs-600">
+<li><strong>Extreme compressie:</strong> het beste voor e-mailen (laagste kwaliteit).</li>
+<li><strong>Aanbevolen compressie:</strong> De balans tussen grootte en kwaliteit.</li>
+<li><strong>Minder compressie:</strong> Hoge kwaliteit, perfect voor afdrukken.</li>
+</ul>
+</li>
+<li>Klik op <strong>PDF comprimeren</strong> en download uw geoptimaliseerde bestand.</li>
+</ol>
+<p>Onze intelligente compressie-algoritmen verwijderen onnodige metagegevens en comprimeren afbeeldingen met behulp van moderne webstandaarden, zodat uw document er precies hetzelfde uitziet terwijl het een fractie van de opslagruimte in beslag neemt!</p>
+
+<h2>Conclusie</h2>
+<p>Hoewel de ingebouwde tools van Mac geweldig zijn in offline omstandigheden, missen ze ernstig de gedetailleerde controle die nodig is voor moderne documenten.Vertrouw voor alles wat belangrijk is altijd op een speciale compressie-engine.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Hoe u meerdere PDF-bestanden op uw iPhone kunt samenvoegen`,
+    date: `2026-06-19`,
+    excerpt: `Ontdek de eenvoudigste manier om meerdere PDF-documenten rechtstreeks vanaf uw iOS-apparaat in één bestand te combineren.`,
+    content: `<p>Omdat iPhones onze belangrijkste apparaten voor werk en studie worden, is het een essentiële vaardigheid om te weten hoe u onderweg PDF-bestanden kunt samenvoegen.Of u nu bonnen voor een onkostendeclaratie opstelt of collegeaantekeningen samenvoegt, hier leest u precies hoe u dat zonder computer kunt doen.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>De uitdaging met iOS</h2>
+<p>Hoewel iOS een robuuste ingebouwde Bestanden-app heeft, biedt het geen native, eenvoudige manier om meerdere PDF's te selecteren en deze naadloos aan elkaar te plakken.U kunt documenten naar één PDF scannen, maar het samenvoegen van bestaande bestanden is verrassend moeilijk.</p>
+
+<h2>De oplossing: TheyLovePDF-webapp</h2>
+<p>Je hoeft geen zware, op abonnementen gebaseerde apps uit de App Store te downloaden.U kunt dit rechtstreeks vanuit Safari of Chrome doen met behulp van onze cloudarchitectuur.</p>
+
+<div class="bg-gray-50 rand rand-grijs-200 p-6 afgerond-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Stapsgewijze handleiding</h3>
+<ol class="spatie-y-3 mb-0">
+<li>Open Safari op uw iPhone en navigeer naar de <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
+<li>Tik op de enorme knop <strong>PDF-bestanden selecteren</strong>.</li>
+<li>Kies de bestanden uit de app <em>Bestanden</em> op uw iPhone of uw <em>Fotobibliotheek</em>.U kunt meerdere bestanden tegelijk selecteren.</li>
+<li>Na het uploaden ziet u een visueel raster van uw bestanden.Houd een bestand ingedrukt om ze te slepen en opnieuw te ordenen, precies zoals u dat wilt.</li>
+<li>Tik op <strong>PDF samenvoegen</strong>.Onze servers verwerken de bestanden in milliseconden.</li>
+<li>Tik op <strong>Downloaden</strong> en sla het nieuwe, gecombineerde document rechtstreeks op uw apparaat op.</li>
+</ol>
+</div>
+
+<h2>Waarom geen app gebruiken?</h2>
+<p>Veel PDF-apps in de App Store zijn gratis te downloaden, maar ze vragen je om geld zodra je bestanden probeert samen te voegen.Door een cloudtool te gebruiken, vermijdt u deze App Store-kosten en bespaart u opslagruimte op uw telefoon.</p>
+<p>Zo eenvoudig, snel en volkomen veilig is het!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Hoe u uw PDF kunt beveiligen met een wachtwoord`,
+    date: `2026-06-18`,
+    excerpt: `Bescherm gevoelige informatie door een veilig, onbreekbaar 256-bit AES-coderingswachtwoord toe te voegen aan uw PDF-bestanden.`,
+    content: `<p>In het huidige digitale tijdperk is gegevensprivacy belangrijker dan ooit.Of u nu financiële overzichten, medische dossiers of een vertrouwelijk zakelijk contract verzendt, het onbeschermd achterlaten van een PDF vormt een enorm veiligheidsrisico.</p>
+<p>In deze handleiding laten we u zien hoe u uw PDF-documenten kunt vergrendelen met behulp van versleuteling op militair niveau.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Wat is 256-bit AES-codering?</h2>
+<p>Advanced Encryption Standard (AES) is het versleutelingsalgoritme dat door de Amerikaanse overheid wordt gebruikt om geheime informatie te beveiligen.Een 256-bits coderingssleutel betekent dat er 2<sup>256</sup> mogelijke combinaties zijn. Een aantal dat zo groot is dat zelfs de krachtigste supercomputers ter wereld deze in een miljard jaar niet zouden kunnen kraken.</p>
+<p>Als je onze tool gebruikt, voegen we niet zomaar een wachtwoord toe dat gemakkelijk kan worden omzeild.We vervormen de inhoud van uw bestand wiskundig met behulp van AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Hoe u uw PDF kunt beveiligen</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 afgerond-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Navigeer naar de tool <a href="/tools/protect-pdf" class="font-bold hover:underline">PDF beveiligen</a>.</li>
+<li>Upload uw gevoelige document via onze beveiligde TLS 1.3-verbinding.</li>
+<li>Voer een sterk wachtwoord in.(We raden minimaal 12 tekens aan, waarbij letters, cijfers en symbolen worden gecombineerd).</li>
+<li>Klik op <strong>PDF beveiligen</strong>.</li>
+<li>Download uw nieuw gecodeerde bestand.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Beste praktijken voor wachtwoordbeveiliging</h2>
+<ul class="lijst-schijf pl-5 spatie-y-2">
+<li><strong>Verzend het wachtwoord nooit in dezelfde e-mail:</strong> Als u de pdf e-mailt, verzendt u het wachtwoord via een ander kanaal (zoals sms of een beveiligde berichtenapp zoals Signal).</li>
+<li><strong>Gebruik een wachtwoordbeheerder:</strong> genereer een willekeurige reeks tekens in plaats van een woord te gebruiken dat in een woordenboek te vinden is.</li>
+<li><strong>Gebruik geen persoonlijke informatie:</strong> vermijd geboortedata, koosnaampjes of bedrijfsnamen.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Zodra uw bestand is gecodeerd, wordt de originele inhoud binnen 2 uur permanent van onze servers verwijderd.Uw privacy is onze absolute prioriteit.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `Wat is OCR?Gescande PDF's doorzoekbaar maken`,
+    date: `2026-06-17`,
+    excerpt: `Leer hoe Optical Character Recognition (OCR)-technologie werkt en hoe deze selecteerbare tekst uit platte afbeeldingen kan extraheren.`,
+    content: `<p>Heeft u ooit een PDF ontvangen die op een document lijkt, maar wanneer u de tekst probeert te markeren, gebeurt er niets?U bent een "platte" of "gescande" PDF tegengekomen.Het is in wezen gewoon een digitale foto van een stuk papier.</p>
+<p>Om met die tekst te kunnen communiceren, heb je de magie van <strong>Optische tekenherkenning (OCR)</strong> nodig.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>Hoe OCR werkt</h2>
+<p>Wanneer u een bestand door een OCR-engine laat lopen, gedraagt de software zich als een goed getraind menselijk oog.Het scant de afbeelding pixel voor pixel, op zoek naar patronen die op letters en cijfers lijken.</p>
+<p>Moderne OCR zoekt niet alleen naar vormen;het maakt gebruik van complexe kunstmatige intelligentie- en machine learning-modellen om de context te begrijpen.Het kan bijvoorbeeld het verschil zien tussen een hoofdletter 'I' en een kleine letter 'l' op basis van de omringende letters in het woord.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>De voordelen van OCR</h2>
+<ul class="spatie-y-2">
+<li><strong>Doorzoekbaarheid:</strong> het vinden van een specifieke clausule in een gescand contract van 500 pagina's is onmogelijk zonder het hele document te lezen.Met OCR kunt u CTRL+F gebruiken om direct precies te vinden wat u nodig heeft.</li>
+<li><strong>Bewerkbaarheid:</strong> zodra de tekst wordt herkend, kunt u deze kopiëren, plakken en bewerken in Word of Google Documenten.</li>
+<li><strong>Toegankelijkheid:</strong> schermlezers voor visueel beperkte gebruikers kunnen geen platte afbeeldingen lezen.OCR maakt uw documenten voor iedereen toegankelijk.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Een document OCRen</h2>
+<p>Het transformeren van uw gescande documenten is ongelooflijk eenvoudig met TheyLovePDF:</p>
+<ol>
+<li>Ga naar de <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF-tool</a>.</li>
+<li>Upload uw gescande document.</li>
+<li>Selecteer de taal van het document.Dit is cruciaal: door de AI te vertellen welke taal hij kan verwachten, wordt de nauwkeurigheid drastisch verbeterd, vooral voor talen met unieke karakters of accenten.</li>
+<li>Trefferproces.De AI reconstrueert uw document en legt een onzichtbare tekstlaag over de originele afbeeldingen.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 cursief bg-gray-50 afgerond-r-lg">
+Stop met het handmatig overtypen van documenten.Laat AI het zware werk voor u doen!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Hoe PDF-tekst bewerken op Windows 11 (zonder Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Stop met betalen voor dure software.Ontdek de meest efficiënte, gratis en slimme manieren om PDF-tekst en afbeeldingen rechtstreeks op uw Windows-pc te bewerken.`,
+    content: `<p>Jarenlang hebben Windows-gebruikers moeite gehad met PDF's.In tegenstelling tot Word-documenten zijn PDF's ontworpen als "afgeronde" digitale afdrukken.Wanneer u een typefout in een contract opmerkt of een datum op een factuur moet bijwerken, loopt u meestal tegen een enorme betaalmuur aan, zoals Adobe Acrobat.</p>
+<p>Gelukkig hoef je in 2026 geen dure software op je Windows 11-computer te installeren om basisbewerkingen uit te voeren.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>De slimme webaanpak</h2>
+<p>In plaats van zware, langzame desktopapplicaties te downloaden, gebruiken cloudgebaseerde editors de verwerkingskracht van externe servers om de PDF-structuur rechtstreeks in uw browser te parseren.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 border border-indigo-100 p-6 afgerond-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Direct bewerken</h3>
+<ol class="spatie-y-2 mb-0">
+<li>Open Microsoft Edge of Google Chrome op Windows 11.</li>
+<li>Navigeer naar de <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">PDF-tool bewerken</a>.</li>
+<li>Upload uw document.Onze engine decodeert de tekstlagen onmiddellijk.</li>
+<li>Klik op een tekstvak om de tekst te wijzigen, het lettertype te wijzigen of de grootte aan te passen.</li>
+<li>Je kunt ook nieuwe afbeeldingen, vormen invoegen of gevoelige informatie onleesbaar maken.</li>
+<li>Klik op <strong>Wijzigingen toepassen</strong> en download het bijgewerkte bestand.</li>
+</ol>
+</div>
+
+<h2>Waarom zou u Microsoft Edge niet gebruiken?</h2>
+<p>Hoewel Microsoft Edge een ingebouwde PDF-viewer met tekenhulpmiddelen (inkt) heeft, <strong>kan het bestaande tekst niet bewerken</strong>.Hiermee kunt u alleen over de bovenkant tekenen of nieuwe tekstvakken toevoegen.Om daadwerkelijk een typefout in de originele tekstlaag te wijzigen, heb je een echte PDF-editor nodig.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Pro-tip:</p>
+<p class="text-sm text-gray-600">Als uw PDF een gescande afbeelding is, werkt standaard tekstbewerking niet.U moet eerst een <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR-tool</a> gebruiken om de afbeelding om te zetten in een leesbare tekstlaag.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `De ultieme gids voor het gratis ondertekenen van PDF's op Android`,
+    date: `2026-06-15`,
+    excerpt: `Moet u met spoed een document ondertekenen?Leer hoe u uw elektronische handtekening rechtstreeks vanaf uw Android-telefoon kunt tekenen, typen of uploaden.`,
+    content: `<p>We kennen het allemaal: u ontvangt een belangrijk document via e-mail terwijl u niet achter uw bureau zit.Het heeft onmiddellijk uw handtekening nodig.Afdrukken, ondertekenen en opnieuw scannen behoort tot het verleden.</p>
+<p>Tegenwoordig is uw Android-smartphone een krachtig digitaal werkstation dat juridisch bindende elektronische handtekeningen kan plaatsen.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Zijn elektronische handtekeningen legaal?</h2>
+<p>Ja.Volgens de ESIGN Act (VS) en eIDAS (Europa) hebben elektronische handtekeningen hetzelfde juridische gewicht als een handtekening met natte inkt voor bijna alle zakelijke en persoonlijke transacties.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Aanmelden op Android (geen app vereist)</h2>
+<p>Je hoeft je Android-apparaat niet te vullen met premium PDF-apps.Gebruik gewoon uw mobiele browser.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="lijst-decimaal pl-5 spatie-y-3 mt-6">
+<li><strong>Open de tool:</strong> tik op de link om de <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">PDF-tool ondertekenen</a> in Chrome te openen.</li>
+<li><strong>Het document uploaden:</strong> tik om het bestand rechtstreeks vanuit uw Android Downloads-map of Google Drive te uploaden.</li>
+<li><strong>Maak uw handtekening:</strong>
+<ul class="lijst-schijf pl-5 mt-2 text-gray-600">
+<li><em>Tekenen:</em> gebruik uw vinger of een stylus om uw handtekening rechtstreeks op het scherm te tekenen.</li>
+<li><em>Type:</em> typ uw naam en kies een cursief lettertype.</li>
+<li><em>Uploaden:</em> Upload een foto van uw daadwerkelijke handtekening op een wit stuk papier (onze tool verwijdert automatisch de achtergrond).</li>
+</ul>
+</li>
+<li><strong>Plaats deze:</strong> Sleep de handtekening precies op de handtekeningregel.U kunt knijpen om het formaat te wijzigen.</li>
+<li><strong>Voltooien:</strong> tik op 'Ondertekenen' om de handtekening permanent in de documentarchitectuur in te sluiten.</li>
+</ol>
+
+<div class="bg-geel-50 rand-l-4 rand-geel-500 p-4 mijn-6">
+<p class="text-gold-800 text-sm m-0"><strong>Beveiligingsopmerking:</strong> zorg er altijd voor dat u een veilig, HTTPS-gecodeerd platform gebruikt wanneer u gevoelige documenten ondertekent.We verwijderen automatisch alle bestanden van onze servers.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Waarom studenten PDF's altijd naar Word moeten converteren om te bewerken`,
+    date: `2026-06-14`,
+    excerpt: `Een scriptie schrijven of aantekeningen maken?Ontdek waarom het extraheren van tekst naar een Word-document fundamenteel beter is dan het rechtstreeks bewerken van een PDF.`,
+    content: `<p>Als student kom je elk semester honderden pdf's tegen: dia's van colleges, onderzoekspapers en digitale studieboeken.Wanneer u citaten moet extraheren, inhoud moet samenvatten of secties moet herschrijven, komt u misschien in de verleiding om een ​​PDF-editor te gebruiken.Maar er is een slimmere, veel professionelere manier.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Het probleem met PDF-architectuur</h2>
+<p>PDF's (Portable Document Format) zijn ontworpen voor <em>presentatie</em>, niet voor compositie.In een PDF loopt de tekst niet door zoals in een normaal document;elk woord wordt vastgemaakt aan specifieke X- en Y-coördinaten op de pagina.</p>
+<p>Als u een alinea in een PDF-editor probeert te verwijderen, zal de tekst eronder <strong>niet</strong> omhoog schuiven om het gat op te vullen.Het laat een enorme lege ruimte achter.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>De oplossing: conversie van PDF naar Word</h2>
+<p>Door het document terug te converteren naar Microsoft Word (.docx), reconstrueert onze intelligente engine de vloeiende lay-out.Paragrafen worden weer paragrafen, kopteksten worden kopteksten en afbeeldingen worden verplaatsbare blokken.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mijn-8">
+<div class="bg-gray-50 p-5 afgeronde-lg randrand-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">PDF-editor</h4>
+<ul class="text-sm tekst-grijs-600 spatie-y-1 mb-0">
+<li>❌ Tekst wordt niet opnieuw geplaatst</li>
+<li>❌ Moeilijk om algemene lettertypen te wijzigen</li>
+<li>❌ Marges zijn vergrendeld</li>
+<li>❌ Tabellen zijn moeilijk aan te passen</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 round-lg border border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Word-document</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li>✅ Tekst stroomt op natuurlijke wijze</li>
+<li>✅ Eenvoudige spellingcontrole en grammatica</li>
+<li>✅ Dynamische pagina-einden</li>
+<li>✅ Kopiëren en plakken gaat vlekkeloos</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Hoe je het feilloos kunt doen</h2>
+<p>Onze AI-aangedreven <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF naar Word-converter</a> maakt gebruik van geavanceerde lay-outherkenning.Upload gewoon uw bestand en binnen enkele seconden heeft u een volledig bewerkbaar Word-document.Zodra u klaar bent met het schrijven van uw opdracht of aantekeningen, kunt u deze altijd terug exporteren naar PDF voordat u deze naar uw docent verzendt.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Combineer meerdere PDF's op Windows 10: stap voor stap`,
+    date: `2026-06-13`,
+    excerpt: `Organiseer uw rommelige mappen door gerelateerde PDF-documenten samen te voegen tot enkele, samenhangende bestanden, rechtstreeks vanaf uw Windows-bureaublad.`,
+    content: `<p>Het hebben van 15 verschillende PDF-bestanden voor één project is een nachtmerrie.Of het nu gaat om maandelijkse facturen, hoofdstukken uit een boek of gescande medische dossiers, het combineren ervan in één samenhangend bestand is essentieel voor de organisatie van Windows 10.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>De ingebouwde Windows-beperking</h2>
+<p>Windows 10 is een krachtig besturingssysteem, maar het ontbreekt zoals bekend aan een native PDF-fusie.Hoewel het "Microsoft Print to PDF" bevat, helpt dit alleen bij het maken van PDF's vanuit andere formaten, en niet bij het combineren van bestaande formaten.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>De slimme workflow (op browserbasis)</h2>
+<p>Download geen dubieuze freeware die mogelijk malware bevat of enorme watermerken op uw bestanden plakt.De meest professionele methode is het gebruik van een gecodeerde browsertool.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="spatie-y-4 mt-6">
+<li class="bg-witte randrand-grijs-100 schaduw-sm p-4 afgerond-lg">
+<strong>Stap 1: Verzamel uw bestanden.</strong> Plaats alle PDF's die u wilt samenvoegen in één map op uw bureaublad.Dit maakt het uploaden eenvoudiger.
+</li>
+<li class="bg-witte randrand-grijs-100 schaduw-sm p-4 afgerond-lg">
+<strong>Stap 2: Open de fusie.</strong> Ga naar de <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">PDF-tool samenvoegen</a> op TheyLovePDF.
+</li>
+<li class="bg-witte randrand-grijs-100 schaduw-sm p-4 afgerond-lg">
+<strong>Stap 3: Selecteer en bestel.</strong> Sleep uw bestanden naar het scherm.Je ziet voorbeeldminiaturen.U kunt deze miniaturen naar links of rechts slepen om ervoor te zorgen dat ze in de perfecte chronologische volgorde staan.
+</li>
+<li class="bg-witte randrand-grijs-100 schaduw-sm p-4 afgerond-lg">
+<strong>Stap 4: Combineren.</strong> Druk op de samenvoegknop.De server voegt de binaire code van de PDF's onmiddellijk samen zonder kwaliteitsverlies.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Deze methode werkt op Chrome, Edge, Firefox en Brave op Windows 10 en vereist absoluut geen installatie- of beheerdersrechten op uw pc.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Waarom juridische professionals PDF's moeten beveiligen met wachtwoorden`,
+    date: `2026-06-12`,
+    excerpt: `Een diepgaande duik in documentbeveiliging, compliance en waarom het verzenden van open PDF's via e-mail een grote risico voor advocatenkantoren is.`,
+    content: `<p>In de advocatuur is vertrouwelijkheid niet alleen een best practice: het is een strikte ethische en vaak wettelijke vereiste.Toch sturen talloze advocatenkantoren en paralegals nog steeds gevoelige documenten, contracten en schikkingsaanbiedingen als ruwe, niet-versleutelde PDF-bijlagen via standaard e-mail.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Het onderscheppingsrisico</h2>
+<p>Standaard e-mail (SMTP) is notoir onveilig.Als een e-mail via onbeveiligde servers wordt gerouteerd of als een inbox wordt gehackt, is een niet-gecodeerde PDF volledig leesbaar voor iedereen die deze onderschept.Dit kan leiden tot inbreuken op de privileges van de klant en enorme aansprakelijkheid.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Versleuteling versus wachtwoorden</h2>
+<p>Het is belangrijk om het verschil te begrijpen.Een eenvoudig "machtigingswachtwoord" voorkomt afdrukken of bewerken, maar codeert het bestand niet.Iedereen kan het nog steeds lezen.</p>
+<p>Wat je nodig hebt is een <strong>open wachtwoord</strong> ondersteund door <strong>AES-256-codering</strong>.Wanneer toegepast, worden de binaire gegevens van het bestand gecodeerd.Zonder het wachtwoord is het document wiskundig gezien onmogelijk te lezen.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Compliantievereisten</h4>
+<p class="text-red-800 text-sm m-0">Regelgeving zoals HIPAA (medisch) en GDPR (Europese gegevens) bestraffen organisaties die er niet in slagen PII (persoonlijk identificeerbare informatie) tijdens de overdracht te versleutelen.Een gecodeerde PDF is een geaccepteerde methode om gegevens tijdens het transport te beveiligen.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>De professionele workflow</h2>
+<ol>
+<li>Maak het document op in Word en exporteer het naar PDF.</li>
+<li>Upload het naar een veilig platform zonder retentie, zoals <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
+<li>Pas een gegenereerd wachtwoord van 16 tekens toe.</li>
+<li>E-mail de gecodeerde PDF naar de klant.</li>
+<li>Geef het wachtwoord aan de klant via een apart, beveiligd kanaal (bijvoorbeeld een telefoontje of een gecodeerde berichten-app).</li>
+</ol>
+<p>Door deze workflow af te dwingen, beschermen juridische professionals zichzelf tegen aansprakelijkheden op het gebied van datalekken en garanderen ze de volledige vertrouwelijkheid van de klant.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Hoe een PDF op Android te comprimeren om via WhatsApp te verzenden`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp heeft limieten voor de bestandsgrootte die grote documenten blokkeren.Leer hoe u uw PDF-formaat op uw Android-telefoon kunt verkleinen om deze direct te delen.`,
+    content: `<p>WhatsApp is de wereldwijde standaard voor snelle communicatie en wordt intensief gebruikt door zowel bedrijven als studenten om documenten te delen.WhatsApp hanteert echter strikte limieten voor de bestandsgrootte.Als je een architectonisch plan van 150 MB of een enorm gescand leerboek probeert te verzenden, blokkeert de app de overdracht regelrecht.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Het Android-dilemma</h2>
+<p>In tegenstelling tot het comprimeren van een foto heeft Android OS geen ingebouwde functie om PDF-documenten te comprimeren.Als u in de Google Play Store zoekt, wordt u gebombardeerd met apps vol opdringerige advertenties die uw bestandskwaliteit verpesten.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>De slimme compressietechniek</h2>
+<p>Je kunt appstores volledig omzeilen door onze snelle cloudinfrastructuur rechtstreeks vanuit Google Chrome op je Android-apparaat te gebruiken.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="spatie-y-4 mijn-8">
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 afgerond-full flex items-center justify-center krimp-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Open de compressor</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Tik op deze link om de <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF-compressor</a> in uw browser te openen.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 afgerond-full flex items-center justify-center krimp-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Uploaden vanuit bestanden</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Tik om te uploaden en selecteer de app 'Bestanden' of 'Documenten' op je Android om je grote pdf te vinden.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 afgerond-full flex items-center justify-center krimp-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Kies 'Extreme compressie'</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Selecteer voor WhatsApp het hoogste compressieniveau.Hierdoor worden de afbeeldingsgegevens met hoge resolutie verwijderd, maar blijft de tekst perfect leesbaar op mobiele schermen.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 afgerond-full flex items-center justify-center krimp-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Downloaden en delen</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Tik na verwerking op Downloaden.Open WhatsApp, tik op het paperclippictogram, selecteer Document en deel je nieuw verkleinde bestand!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Dit hele proces duurt minder dan 30 seconden, gebruikt heel weinig van je mobiele data en lost het WhatsApp-limietprobleem permanent op.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Hoe u specifieke pagina's uit een enorme PDF kunt extraheren`,
+    date: `2026-06-10`,
+    excerpt: `Stuur geen handleiding van 500 pagina's als iemand alleen hoofdstuk 3 nodig heeft. Dit is de slimste manier om PDF-pagina's te extraheren en te splitsen.`,
+    content: `<p>We hebben ze allemaal ontvangen: de bedrijfshandleiding van 500 pagina's, het enorme juridische ontdekkingsdossier of het leerboek van het hele semester.Maar wat als u pagina's 45 tot en met 52 alleen naar een collega hoeft te sturen?</p>
+<p>Het hele document verzenden is onprofessioneel, verspilt bandbreedte en dwingt de ontvanger op zoek te gaan naar de relevante informatie.U moet de PDF splitsen.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>De Hacky-manier versus de Pro-manier</h2>
+<p>Een veel voorkomende "hack" is om het dialoogvenster Afdrukken te gebruiken, "Afdrukken naar PDF" te selecteren en een paginabereik te kiezen.Hoewel dit werkt, wordt het document vaak platter, waardoor interactieve links en bladwijzers worden vernietigd en soms de bestandsgrootte aanzienlijk wordt vergroot.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>De professionele manier is om het document op binair niveau te splitsen, waarbij de exacte originele kwaliteit en metagegevens van de geëxtraheerde pagina's behouden blijven.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Een professionele splitter gebruiken</h2>
+<div class="bg-gray-50 rand rand-grijs-200 p-6 afgerond-xl my-6">
+<ol class="spatie-y-3 mb-0">
+<li>Navigeer naar de <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">PDF-tool splitsen</a>.</li>
+<li>Upload uw enorme document.Onze servers verwerken bestanden tot 2 GB onmiddellijk.</li>
+<li>Kies uw modus:
+<ul class="lijst-schijf pl-5 mt-2 spatie-y-1 tekst-sm tekst-grijs-700">
+<li><strong>Pagina's extraheren:</strong> typ exacte pagina's of bereiken (bijvoorbeeld <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Splitsen op bereik:</strong> Verdeel het document automatisch in meerdere kleinere documenten.</li>
+</ul>
+</li>
+<li>Trefferproces.Je ontvangt een nette, hypergerichte PDF met alleen de pagina's die je hebt geselecteerd, waarbij alle originele links en kwaliteit intact zijn.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Door er alleen uit te halen wat belangrijk is, respecteer je de tijd en de ruimte in de inbox van je ontvanger.Het is een kleine technische vaardigheid die enorme professionele voordelen oplevert.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Chatten met PDF: hoe AI de manier verandert waarop we lange documenten lezen`,
+    date: `2026-06-09`,
+    excerpt: `Stop met het lezen van rapporten van 100 pagina's.Ontdek hoe u met Large Language Models (LLM's) letterlijk tegen uw documenten kunt 'praten' om er direct antwoorden uit te halen.`,
+    content: `<p>Het lezen van een financieel rapport van 150 pagina's of een dik academisch artikel kostte vroeger uren van markeren, aantekeningen maken en zoeken.In 2026 is dat tijdperk officieel voorbij.Welkom in het tijdperk van AI Document Chat.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>Wat is "Chatten met PDF"?</h2>
+<p>Stel je voor dat de auteur van het document naast je zit en dat je hem gewoon vragen kunt stellen.<em>"Wat is de totale opbrengst voor het derde kwartaal?"</em> of <em>"Vat de methodologie van dit experiment samen in drie punten."</em></p>
+<p>Onze <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat met PDF-tool</a> maakt gebruik van geavanceerde Large Language Models (LLM's).Wanneer u een bestand uploadt, "leest" de AI het hele document in enkele seconden en slaat het op in een vectorgeheugen.Je gebruikt dan een chatinterface (precies zoals ChatGPT) om vragen te stellen over de tekst.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Hoe het feitelijk werkt (onder de motorkap)</h2>
+<ul class="spatie-y-3 mijn-6">
+<li><strong>Tekstextractie:</strong> Het systeem parseert de PDF en extraheert alle tekst en tabellen.</li>
+<li><strong>Vectorisering:</strong> de tekst wordt in "brokken" opgedeeld en omgezet in wiskundige getallen die insluitingen worden genoemd.</li>
+<li><strong>Semantisch zoeken:</strong> wanneer u een vraag stelt, doorzoekt de AI de wiskunde om de exacte alinea's te vinden die het meest relevant zijn voor uw vraag.</li>
+<li><strong>Generatie:</strong> De LLM leest die specifieke paragrafen en typt een natuurlijk, gemoedelijk antwoord, waarbij vaak het exacte paginanummer wordt vermeld waarop de informatie is gevonden!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Gebruiksvoorbeelden</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Studenten:</strong> Upload studieboeken om direct studiegidsen en flashcards te maken.<br><strong>Advocaten:</strong> Upload casusbestanden om direct precedenten te vinden zonder CTRL+F.<br><strong>Analisten:</strong> Upload 10.000 rapporten om direct specifieke financiële statistieken te extraheren.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Privacy voorop</h2>
+<p>De grootste zorg bij AI is gegevensprivacy.Wanneer u professionele tools zoals TheyLovePDF gebruikt, worden uw documentgegevens strikt in een sandbox geplaatst.Het wordt nooit gebruikt om mondiale AI-modellen te trainen en de gegevens worden automatisch van de servers gewist nadat uw sessie is beëindigd.</p>
+<p>Blijf niet achter.Begin vandaag nog met chatten met uw documenten en 10x uw leessnelheid.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Het beste iLovePDF-alternatief voor het verkleinen van de PDF-grootte`,
+    date: `2026-06-23`,
+    excerpt: `Wilt u een PDF comprimeren zonder kwaliteitsverlies of te maken krijgen met agressieve advertenties?Dit is de reden waarom TheyLovePDF het superieure alternatief is voor iLovePDF.`,
+    content: `<p>Als je dit leest, heb je waarschijnlijk gezocht naar een manier om je PDF-formaat te verkleinen en heb je gedacht aan het gebruik van iLovePDF.Hoewel het een populaire tool is, zijn veel gebruikers op zoek naar een sneller, advertentievrij alternatief dat de visuele betrouwbaarheid van hun document niet in gevaar brengt.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Waarom zoeken naar een alternatief?</h2>
+<p>Veel oudere PDF-tools zijn afhankelijk van agressieve compressie-algoritmen die de kwaliteit van uw afbeeldingen en vectorafbeeldingen vernietigen.Bovendien zijn gratis niveaus vaak zwaar beperkt met dagelijkse limieten en bezaaid met opdringerige advertenties.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>Het TheyLovePDF-voordeel</h2>
+<p>We hebben onze <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF-tool voor het comprimeren</a> ontworpen om absoluut de beste in de branche te zijn.Dit is de reden waarom gebruikers de overstap maken:</p>
+
+<ul class="spatie-y-3 mijn-6">
+<li><strong>Slimme AI-compressie:</strong> in plaats van alleen maar de afbeeldingsresolutie te verlagen, analyseert onze engine uw document wiskundig en verwijdert onzichtbare metagegevens, lettertypen zonder referentie en dubbele gegevensstructuren.</li>
+<li><strong>Zero Ads:</strong> Wij zijn van mening dat hulpprogramma's schoon en zonder afleiding moeten zijn.U zult geen enkele banneradvertentie vinden in onze compressietool.</li>
+<li><strong>Strikte privacy:</strong> uw bestanden zijn beveiligd met 256-bit SSL-codering en worden na 2 uur permanent van onze servers verwijderd.Wij lezen of verkopen uw gegevens niet.</li>
+</ul>
+
+<p>De volgende keer dat je een enorm bestand moet verkleinen voor een e-mailbijlage of een WhatsApp-bericht, kun je de oudere tools overslaan.Sleep uw bestand naar TheyLovePDF en ervaar het verschil.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Hoe u PowerPoint (PPT) naar PDF converteert op uw iPhone`,
+    date: `2026-06-23`,
+    excerpt: `Wilt u een presentatie indienen vanaf uw telefoon?Leer de snelste manier om een ​​.ppt- of .pptx-bestand rechtstreeks op iOS om te zetten in een professionele PDF.`,
+    content: `<p>Of je nu een student bent die in de bus een opdracht probeert in te leveren of een professional die vanaf een luchthaven een kaartspel naar een klant e-mailt, het converteren van een PowerPoint naar een PDF op je iPhone is een cruciale mobiele vaardigheid.</p>
+<p>PDF's garanderen dat uw lettertypen, opmaak en lay-outs er precies hetzelfde uitzien op het scherm van de ontvanger, ongeacht welk apparaat deze gebruikt.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>De probleemloze methode</h2>
+<p>Download geen zware presentatie-app om slechts één bestand te converteren.U kunt dit binnen enkele seconden veilig via Safari doen.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 rand rand-grijs-200 p-6 afgerond-xl my-6">
+<ol class="spatie-y-3 mb-0">
+<li>Open Safari en ga naar de <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office naar PDF Converter</a> (deze tool verwerkt Word, Excel en PowerPoint).</li>
+<li>Tik op de uploadknop en selecteer <strong>Bestanden kiezen</strong>.</li>
+<li>Zoek uw gedownloade <em>.pptx</em>-bestand in de Bestanden-app of iCloud Drive van uw iPhone.</li>
+<li>Tik op converteren.Onze rendering-engine op ondernemingsniveau behoudt perfect al uw dia-indelingen en vectorafbeeldingen.</li>
+<li>Tik op Downloaden en sla de scherpe, nieuwe PDF op uw apparaat op.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Dit hele proces vindt plaats in de cloud, wat betekent dat de batterij van je iPhone niet leegraakt en geen lokale opslagruimte in beslag neemt!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Hoe u een PDF digitaal kunt ondertekenen op Windows 10 en 11`,
+    date: `2026-06-23`,
+    excerpt: `Stop met het printen en scannen van contracten.Hier vindt u de juridisch bindende, professionele manier om een ​​document op uw Windows-pc te ondertekenen.`,
+    content: `<p>Het ontvangen van een contract via e-mail betekende vroeger dat je het moest afdrukken, ondertekenen met een pen, het terug naar de computer moest scannen en een verslechterde, kromme afbeelding terug naar de afzender moest e-mailen.In 2026 is deze workflow officieel dood.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>De moderne manier om in te loggen op Windows</h2>
+<p>Je hebt geen Adobe Acrobat of andere betaalde software nodig die op je Windows-computer is geïnstalleerd om een juridisch bindende elektronische handtekening uit te voeren.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="lijst-decimaal pl-5 spatie-y-3 mt-6">
+<li>Open Chrome of Edge en navigeer naar de <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">PDF-tool ondertekenen</a>.</li>
+<li>Sleep uw contract naar de pagina.</li>
+<li>Klik op het pictogram <strong>Handtekening</strong> in de werkbalk.</li>
+<li>Kies hoe je wilt ondertekenen:
+<ul class="lijst-schijf pl-5 mt-2 text-gray-600">
+<li><strong>Tekenen:</strong> gebruik uw muis of een Windows-touchscreen/stylus om uw handtekening te schrijven.</li>
+<li><strong>Type:</strong> typ uw naam en selecteer een professioneel cursief lettertype.</li>
+<li><strong>Uploaden:</strong> als je een schone foto hebt van je daadwerkelijke handtekening, upload deze dan.Onze tool verwijdert automatisch de witte achtergrond!</li>
+</ul>
+</li>
+<li>Sleep uw handtekening naar de stippellijn, wijzig het formaat en klik op <strong>Toepassen</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm-0"><strong>Zijn deze handtekeningen legaal?</strong> Ja!Binnen belangrijke internationale kaders (zoals de Amerikaanse ESIGN Act en de Europese eIDAS) hebben elektronische handtekeningen voor bijna alle standaard zakelijke overeenkomsten exact hetzelfde juridische gewicht als een handtekening met natte inkt.</p>
+</div>`
+  },
 ];

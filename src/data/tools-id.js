@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for id
 export const TOOLS_DATA_ID = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF ke Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Konversikan file PDF Anda menjadi dokumen DOC dan DOCX yang mudah diedit.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Unggah dokumen PDF Anda dengan menyeretnya ke zona pelepasan atau mengklik tombol 'Pilih File'.`,
+      `OCR dan mesin konversi kami yang canggih akan segera mulai mengekstraksi teks, tata letak, dan pemformatan.`,
+      `Unduh dokumen Word (DOC/DOCX) yang telah dikonversi sempurna, siap untuk diedit.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Apa itu konverter PDF ke Word?`,
+        "answer": `Konverter PDF ke Word adalah utilitas yang mengekstrak teks, tata letak, dan gambar dari PDF dan membuatnya kembali sebagai dokumen Microsoft Word yang dapat diedit sepenuhnya.Mesin konversi premium kami mempertahankan font, tata letak, tabel, dan gambar sehingga dokumen Word Anda terlihat persis seperti PDF asli.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Bisakah saya mengonversi PDF yang dipindai menjadi dokumen Word yang dapat diedit?`,
+        "answer": `Sangat.Teknologi OCR (Pengenalan Karakter Optik) bawaan kami secara otomatis mendeteksi teks yang dipindai dan membuatnya dapat diedit sepenuhnya dalam file DOCX yang dihasilkan.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Apakah PDF rahasia saya aman selama konversi?`,
+        "answer": `Kami menjaga privasi dengan serius.File Anda dienkripsi melalui SSL 256-bit selama transfer, dan dihapus secara permanen dari server kami secara otomatis dalam waktu 2 jam.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Kata ke PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Jadikan file DOC dan DOCX mudah dibaca dengan mengonversinya ke PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Pilih file DOC atau DOCX Anda dari komputer atau seret ke halaman.`,
+      `Alat ini akan langsung mengunci pemformatan dan mengonversi dokumen Word ke format PDF universal.`,
+      `Unduh PDF baru Anda.Tata letaknya akan terlihat sama di setiap perangkat.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Mengapa saya harus mengonversi Word ke PDF?`,
+        "answer": `Mengonversi ke PDF memastikan tata letak, font, dan gambar dokumen Anda terlihat sama persis di perangkat apa pun, mencegah kesalahan pemformatan saat berbagi dengan orang lain.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Apakah margin dan font saya dipertahankan?`,
+        "answer": `Ya, konverter Word ke PDF kami mengunci tata letak persis Anda, termasuk font khusus dan pengaturan margin tepat.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Bisakah saya mengonversi beberapa file Word sekaligus?`,
+        "answer": `Ya, Anda dapat mengunggah beberapa file DOC/DOCX, dan kami akan memprosesnya secara bersamaan untuk konversi berkecepatan tinggi.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF ke Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Ekstrak tabel dan data dari PDF ke dalam spreadsheet Excel.Hasil terbaik dengan PDF berbasis teks.PDF yang dipindai didukung melalui OCR — keakuratannya mungkin berbeda.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Unggah file PDF berisi tabel dan data yang ingin Anda ekstrak.`,
+      `Sistem kami akan memindai dokumen, mengidentifikasi data tabular, dan memformatnya secara akurat ke dalam sel spreadsheet.`,
+      `Unduh file Excel (XLSX) Anda yang dapat diedit.`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Apakah tabel PDF saya akan diformat dengan benar di Excel?`,
+        "answer": `Ya, alat ekstraksi cerdas kami mengenali baris dan kolom, memastikan data tabular Anda tertata rapi ke dalam sel Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Bisakah itu mengekstrak data dari PDF yang dipindai?`,
+        "answer": `Ya, teknologi OCR kami dapat membaca tabel dari gambar yang dipindai dan mengubahnya menjadi spreadsheet Excel yang dapat diedit.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Apakah formula terbawa?`,
+        "answer": `PDF tidak menyimpan rumus, hanya data mentah.File Excel yang diekstraksi akan berisi nilai persis yang terlihat di PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel ke PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Jadikan spreadsheet EXCEL mudah dibaca dengan mengonversinya ke PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Unggah spreadsheet Excel (XLS atau XLSX) Anda.`,
+      `Alat kami akan mengoptimalkan tata letak spreadsheet agar pas dengan halaman PDF tanpa memotong kolom.`,
+      `Unduh dokumen PDF yang telah diselesaikan.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Apakah spreadsheet saya yang lebar akan terpotong?`,
+        "answer": `Konverter kami secara cerdas menskalakan dan memformat spreadsheet Anda untuk memastikan kolom-kolomnya pas secara logis pada halaman PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Apakah itu mengonversi semua lembar kerja?`,
+        "answer": `Ya, semua lembar kerja aktif di file Excel Anda akan diubah menjadi halaman berurutan di PDF akhir.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Apakah data keuangan saya aman?`,
+        "answer": `100%.Kami menggunakan enkripsi ujung ke ujung, dan semua file dihapus secara permanen dari sistem kami dalam waktu 2 jam.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF ke JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Ubah setiap halaman PDF menjadi JPG atau ekstrak semua gambar yang ada di dalamnya.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Unggah dokumen PDF yang ingin Anda konversi menjadi gambar.`,
+      `Pilih apakah akan mengekstrak gambar yang disematkan atau mengonversi seluruh halaman PDF menjadi JPG resolusi tinggi.`,
+      `Unduh JPG satu per satu atau sebagai file ZIP terkompresi.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Apakah kualitas JPGnya akan tinggi?`,
+        "answer": `Ya, kami mengekstrak dan mengonversi halaman dengan resolusi tinggi, memastikan teks yang tajam dan gambar yang jelas dalam file JPG yang dihasilkan.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Bisakah saya mengekstrak gambar saja dari PDF?`,
+        "answer": `Sangat.Anda dapat memilih untuk mengekstrak hanya foto yang tertanam dalam PDF daripada mengonversi seluruh halaman.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Apakah ada batasan berapa banyak halaman yang dapat saya konversi?`,
+        "answer": `Pengguna gratis dapat mengonversi PDF senilai hingga 10 MB.Pengguna pro dapat memproses file berukuran besar hingga 2GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG ke PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Konversi gambar JPG ke PDF dalam hitungan detik.Sesuaikan orientasi dan margin dengan mudah.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Pilih satu atau beberapa gambar JPG dari perangkat Anda.`,
+      `Seret dan lepas untuk mengatur ulang urutannya, menyesuaikan orientasi halaman, dan mengatur margin jika diperlukan.`,
+      `Klik 'Konversi' dan unduh dokumen PDF gabungan Anda.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Bisakah saya menggabungkan beberapa JPG menjadi satu PDF?`,
+        "answer": `Ya, cukup unggah beberapa gambar, susun sesuai urutan pilihan Anda, dan kami akan menggabungkannya menjadi satu dokumen PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Apakah gambar saya akan kehilangan kualitasnya?`,
+        "answer": `Tidak, kami mempertahankan resolusi asli dan kualitas gambar JPG Anda saat menyematkannya ke dalam PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Bisakah saya menyesuaikan margin dan orientasi?`,
+        "answer": `Ya, alat kami memungkinkan Anda menyesuaikan orientasi halaman (potret atau lanskap) dan ukuran margin sebelum konversi.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF ke PowerPoint`,
+    "desc": `Ubah file PDF Anda menjadi tayangan slide PPT dan PPTX yang mudah diedit.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Unggah PDF yang ingin Anda ubah menjadi presentasi.`,
+      `Mesin AI kami akan menganalisis slide dan mengubahnya menjadi format PPTX yang dapat diedit.`,
+      `Unduh presentasi PowerPoint baru Anda.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Apakah teks di PowerPoint saya dapat diedit?`,
+        "answer": `Ya, semua teks, bentuk, dan gambar akan dapat diedit sepenuhnya di file PPTX yang dihasilkan.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Apakah ini berfungsi dengan presentasi yang dipindai?`,
+        "answer": `Ya, dengan menggunakan OCR, kita dapat mengekstrak teks dari slide yang dipindai dan membuatnya dapat diedit di PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Apakah tata letak slide dipertahankan?`,
+        "answer": `Teknologi konversi canggih kami memastikan tata letak PDF asli Anda sedekat mungkin dengan PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint ke PDF`,
+    "desc": `Jadikan tayangan slide PPT dan PPTX mudah dilihat dengan mengonversinya ke PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Pilih file PPT atau PPTX Anda.`,
+      `Alat ini akan langsung mengubah slide Anda menjadi format PDF universal yang aman.`,
+      `Unduh presentasi Anda sebagai PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Mengapa mengonversi PowerPoint ke PDF?`,
+        "answer": `Konversi memastikan presentasi Anda terlihat identik di perangkat apa pun, mencegah font hilang atau tata letak rusak saat presentasi di komputer lain.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Apakah transisi slide saya disimpan?`,
+        "answer": `Tidak, PDF adalah format dokumen statis, jadi animasi dan transisi slide tidak akan terbawa.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Apakah catatan pembicara disertakan?`,
+        "answer": `Saat ini, alat kami mengonversi visual slide utama.Catatan pembicara tidak disertakan dalam keluaran PDF standar.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF ke HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Konversikan dokumen PDF Anda ke halaman web HTML dengan sempurna.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Unggah file PDF Anda.`,
+      `Sistem kami akan mengonversi dokumen menjadi HTML, CSS, dan gambar siap pakai web.`,
+      `Unduh file ZIP yang berisi halaman web baru Anda.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Apakah HTML akan responsif?`,
+        "answer": `HTML akan sangat cocok dengan tata letak statis PDF Anda, menjaga posisi absolut demi keakuratan.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Apakah gambar diekstraksi secara otomatis?`,
+        "answer": `Ya, semua gambar yang disematkan diekstraksi dan direferensikan dengan benar dalam kode HTML yang dihasilkan.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Apakah saya memerlukan keterampilan pengkodean untuk menggunakan ini?`,
+        "answer": `Sama sekali tidak.Anda akan menerima file HTML siap pakai yang dapat langsung Anda buka di browser web apa pun.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML ke PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Konversi halaman web dalam format HTML ke PDF langsung dari URL atau file.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Unggah file HTML Anda atau masukkan URL halaman web.`,
+      `Mesin rendering kami akan memuat halaman, menerapkan gaya, dan menangkapnya sebagai dokumen PDF.`,
+      `Unduh PDF Anda yang diformat dengan sempurna.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Bisakah saya mengonversi URL langsung ke PDF?`,
+        "answer": `Ya, Anda dapat memasukkan URL, dan alat kami akan mengambil halaman web aktif dan mengubahnya menjadi PDF berkualitas tinggi.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Apakah gaya CSS diterapkan?`,
+        "answer": `Sangat.Mesin rendering kami sepenuhnya mendukung CSS, memastikan PDF terlihat persis seperti halaman web yang aktif.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Bagaimana dengan halaman berat JavaScript?`,
+        "answer": `Alat kami mengeksekusi JavaScript sebelum mengambil halaman, memastikan konten dinamis dirender dengan benar dalam PDF akhir.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF ke Teks`,
+    "desc": `Ekstrak teks dari file PDF Anda untuk membuat dokumen TXT yang dapat diedit.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Unggah dokumen PDF Anda.`,
+      `Sistem kami akan menghapus pemformatan dan mengekstrak teks biasa dan murni.`,
+      `Unduh file TXT mentah Anda.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Apakah itu mengekstrak teks dari gambar?`,
+        "answer": `Ya, jika PDF berisi gambar yang dipindai, teknologi OCR kami akan membaca teks dan memasukkannya ke dalam file TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Apakah formatnya dipertahankan?`,
+        "answer": `Tidak, alat ini secara khusus menghapus semua pemformatan untuk memberi Anda teks biasa mentah tanpa gaya.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Apakah data saya aman?`,
+        "answer": `Ya, semua file dienkripsi selama pemrosesan dan dihapus secara otomatis dalam waktu 2 jam.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Gabungkan PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Gabungkan PDF sesuai urutan yang Anda inginkan dengan penggabungan PDF termudah yang tersedia.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Pilih beberapa file PDF dari perangkat Anda.`,
+      `Seret dan lepas thumbnail untuk menyusun file sesuai urutan yang Anda inginkan.`,
+      `Klik 'Gabung' dan unduh gabungan dokumen PDF tunggal Anda.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Apa itu Penggabungan PDF?`,
+        "answer": `Penggabungan PDF adalah utilitas yang menggabungkan beberapa file PDF menjadi satu dokumen yang berkesinambungan.Pengguna gratis dapat menggabungkan hingga 20 file sekaligus.Pengguna Pro dapat menggabungkan dokumen dalam jumlah tidak terbatas.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Bisakah saya mengubah urutan file?`,
+        "answer": `Ya!Setelah mengunggah, cukup seret dan lepas thumbnail file untuk menyusun ulang sesuai keinginan Anda.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Apakah penggabungan mengurangi kualitas?`,
+        "answer": `Sama sekali tidak.Proses penggabungan menjaga kualitas dan format asli semua dokumen Anda.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Pisahkan PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Pisahkan satu halaman atau seluruh rangkaian untuk memudahkan konversi menjadi file PDF independen.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Unggah PDF yang ingin Anda bagi.`,
+      `Pilih apakah akan mengekstrak halaman tertentu atau membagi dokumen menjadi rentang tetap.`,
+      `Unduh file PDF baru Anda yang terpisah sebagai arsip ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Bisakah saya mengekstrak satu halaman saja dari PDF berukuran besar?`,
+        "answer": `Ya, Anda dapat dengan mudah menentukan satu nomor halaman atau rentang khusus (misalnya halaman 4-7) yang akan diekstraksi.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Apakah file yang dipecah akan mempertahankan kualitas aslinya?`,
+        "answer": `Ya, setiap halaman diekstraksi dengan sempurna tanpa kehilangan resolusi atau kualitas teks.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Bagaimana cara mengunduh banyak file terpisah?`,
+        "answer": `Saat Anda membagi dokumen menjadi beberapa bagian, kami akan dengan mudah mengemasnya ke dalam satu file ZIP agar mudah diunduh.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Putar PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Putar PDF Anda sesuai kebutuhan Anda.Anda bahkan dapat memutar beberapa PDF sekaligus.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Unggah dokumen PDF Anda.`,
+      `Arahkan kursor ke halaman yang ingin Anda putar dan klik ikon putar, atau putar semua halaman sekaligus.`,
+      `Klik terapkan dan unduh PDF Anda yang diputar secara permanen.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Bisakah saya merotasi halaman tertentu saja?`,
+        "answer": `Ya, Anda dapat memilih halaman satu per satu dan memutarnya 90, 180, atau 270 derajat tanpa memengaruhi keseluruhan dokumen.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Apakah rotasinya permanen?`,
+        "answer": `Ya, setelah Anda mengunduh file baru, perubahan orientasi disimpan secara permanen ke dalam metadata PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Apakah aman mengunggah dokumen rahasia?`,
+        "answer": `Sangat.Semua unggahan dienkripsi melalui HTTPS dan dihapus dari server kami 2 jam setelah pemrosesan.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Hapus halaman`,
+    "desc": `Hapus halaman dari dokumen PDF dalam sekejap.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Unggah file PDF Anda.`,
+      `Pilih halaman yang ingin Anda hapus dengan mengklik thumbnail-nya.`,
+      `Klik 'Hapus Halaman' dan unduh dokumen Anda yang baru disederhanakan.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Bagaimana saya tahu halaman mana yang harus dihapus?`,
+        "answer": `Alat kami menghasilkan thumbnail berkualitas tinggi dari setiap halaman, memungkinkan Anda mengidentifikasi secara visual dan memilih halaman yang ingin Anda hapus.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Bisakah saya menghapus beberapa halaman sekaligus?`,
+        "answer": `Ya, Anda dapat mengklik beberapa thumbnail atau mengetikkan rentang halaman untuk menghapus beberapa halaman secara bersamaan.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Apakah sisa dokumen terpengaruh?`,
+        "answer": `Tidak, semua halaman yang tersisa akan mempertahankan format, kualitas, dan resolusi aslinya.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Susun ulang halaman`,
+    "desc": `Ubah urutan halaman dokumen PDF Anda melalui drag and drop.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Unggah dokumen PDF Anda.`,
+      `Cukup drag dan drop thumbnail halaman untuk mengubah urutannya.`,
+      `Setelah diatur, terapkan perubahan dan unduh PDF Anda yang telah diatur ulang.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Apakah mudah untuk menyusun ulang dokumen berukuran besar?`,
+        "answer": `Ya, antarmuka drag-and-drop kami yang intuitif memungkinkan Anda memindahkan halaman dengan cepat, bahkan dalam dokumen berukuran besar.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Apakah saya akan kehilangan elemen interaktif?`,
+        "answer": `Sebagian besar elemen interaktif standar dipertahankan, meskipun bidang formulir kompleks yang menjembatani beberapa halaman mungkin berperilaku berbeda.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Bisakah saya membatalkan suatu gerakan sebelum menyimpannya?`,
+        "answer": `Ya, Anda dapat mengatur ulang halaman sebanyak yang Anda suka sebelum mengklik tombol proses terakhir.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Tambahkan halaman kosong`,
+    "desc": `Sisipkan halaman kosong di mana saja dalam dokumen PDF Anda.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Unggah file PDF Anda.`,
+      `Pilih lokasi persis di mana Anda ingin menyisipkan halaman kosong baru.`,
+      `Terapkan perubahan dan unduh PDF Anda yang diperbarui.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Mengapa saya perlu menambahkan halaman kosong?`,
+        "answer": `Menambahkan halaman kosong berguna untuk mencetak dokumen dua sisi, menyisipkan catatan berikutnya, atau mengoreksi format penomoran halaman.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Bisakah saya menambahkan beberapa halaman kosong?`,
+        "answer": `Ya, Anda dapat menyisipkan halaman kosong sebanyak yang diperlukan, di mana pun dalam dokumen.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Apakah halaman kosong akan sesuai dengan ukuran dokumen?`,
+        "answer": `Ya, halaman kosong baru akan otomatis sesuai dengan dimensi dan orientasi halaman di sekitarnya.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Kompres PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Kurangi ukuran file sambil mengoptimalkan kualitas PDF maksimal.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Unggah file PDF besar Anda.`,
+      `Pilih tingkat kompresi yang Anda inginkan (Kompresi Ekstrim, Direkomendasikan, atau Kurang).`,
+      `Unduh file PDF Anda yang dioptimalkan dan jauh lebih kecil.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Apakah kompresi akan merusak kualitas PDF saya?`,
+        "answer": `Algoritme pengoptimalan tingkat lanjut kami mengurangi ukuran file dengan mengompresi gambar dan menghapus data yang berlebihan sekaligus menjaga teks tetap tajam dan gambar jelas secara visual.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Tingkat kompresi mana yang harus saya pilih?`,
+        "answer": `Kami menyarankan 'Direkomendasikan' untuk keseimbangan sempurna.Gunakan 'Ekstrim' hanya jika Anda sangat membutuhkan ukuran file sekecil mungkin untuk lampiran email.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Bisakah saya mengompres PDF yang ukurannya sudah kecil?`,
+        "answer": `Bisa, tetapi pengurangan ukuran file akan minimal karena kemungkinan besar datanya sudah dioptimalkan.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Perbaiki PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Perbaiki PDF yang rusak dan pulihkan data dari file yang rusak.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Unggah file PDF Anda yang rusak atau rusak.`,
+      `Sistem kami akan menganalisis struktur file dan mencoba membangun kembali data yang rusak.`,
+      `Unduh dokumen PDF yang diperbaiki.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Bisakah semua PDF yang rusak diperbaiki?`,
+        "answer": `Meskipun alat kami sangat efektif dalam memperbaiki kesalahan struktural dan header yang rusak, file yang rusak parah dengan data mentah yang hilang mungkin tidak dapat dipulihkan sepenuhnya.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Berapa lama perbaikannya?`,
+        "answer": `Sebagian besar file dianalisis dan diperbaiki dalam beberapa detik, tergantung pada kompleksitas kerusakannya.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Apakah data di dalamnya aman?`,
+        "answer": `Ya.Kami memproses perbaikan dengan aman di cloud, dan dokumen Anda akan segera dihapus secara permanen setelahnya.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `PDF OCR`,
+    "desc": `Jadikan teks dalam PDF yang dipindai dapat dipilih, dicari, dan diedit.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Unggah dokumen PDF Anda yang dipindai.`,
+      `Pilih bahasa teks di dalam dokumen untuk akurasi yang lebih baik.`,
+      `Unduh PDF Anda yang baru, dapat dicari sepenuhnya, dan dapat dipilih.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Apa itu OCR?`,
+        "answer": `OCR adalah singkatan Pengenalan Karakter Optik.Ini adalah teknologi yang membaca teks di dalam gambar atau dokumen yang dipindai dan mengubahnya menjadi teks komputer yang dapat dipilih dan dicari.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Apakah OCR berfungsi pada teks tulisan tangan?`,
+        "answer": `Mesin OCR kami sangat akurat untuk teks cetak.Teks tulisan tangan mungkin memberikan hasil yang berbeda-beda tergantung pada keterbacaannya.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Bisakah saya menyalin teks dari dokumen OCR?`,
+        "answer": `Sangat.Setelah diproses, Anda dapat menyorot, menyalin, dan menempelkan teks langsung dari PDF seperti dokumen biasa.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Ratakan PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Gabungkan semua lapisan, formulir, dan anotasi ke dalam satu lapisan yang tidak dapat diedit.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Unggah PDF yang berisi formulir, lapisan, atau anotasi.`,
+      `Sistem kami akan menggabungkan semua elemen visual secara permanen ke dalam satu lapisan datar.`,
+      `Unduh PDF yang sudah diratakan dan siap dicetak.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Mengapa saya harus meratakan PDF?`,
+        "answer": `Meratakan PDF mengunci data formulir, mencegah pengeditan anotasi lebih lanjut, dan memastikan dokumen dicetak persis seperti yang muncul di layar.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Bisakah PDF yang diratakan tidak diratakan?`,
+        "answer": `Tidak, perataan adalah proses permanen.Kami menyarankan Anda menyimpan cadangan PDF interaktif asli Anda.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Apakah perataan mengurangi ukuran file?`,
+        "answer": `Seringkali ya.Dengan menggabungkan lapisan dan menghapus bidang formulir interaktif, keseluruhan struktur menjadi lebih sederhana dan lebih kecil.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Lindungi PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Enkripsi PDF Anda dengan kata sandi untuk mencegah akses tidak sah.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Unggah PDF yang ingin Anda amankan.`,
+      `Ketik kata sandi yang kuat dan konfirmasikan.`,
+      `Unduh file PDF terenkripsi baru Anda.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Jenis enkripsi apa yang digunakan?`,
+        "answer": `Kami menggunakan enkripsi AES 256-bit yang kuat, yang merupakan standar industri untuk mengamankan dokumen yang sangat sensitif dan rahasia.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Bisakah TheyLovePDF memulihkan kata sandi saya jika saya lupa?`,
+        "answer": `Tidak. Kata sandi Anda tidak pernah disimpan di server kami.Jika Anda kehilangannya, dokumen tersebut tidak dapat didekripsi.Tolong simpan dengan aman!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Apakah melindungi PDF mencegah pencetakan?`,
+        "answer": `Ya, enkripsi mengunci dokumen agar tidak dibuka, dicetak, atau diedit tanpa kata sandi yang benar.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Buka kunci PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Hapus keamanan kata sandi PDF, memberi Anda kebebasan untuk menggunakan PDF sesuai keinginan Anda.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Unggah PDF Anda yang dilindungi kata sandi.`,
+      `Jika file memiliki 'kata sandi pemilik' yang membatasi pengeditan, kami akan segera menghapusnya.Jika ada 'kata sandi pengguna' yang membatasi pembukaannya, Anda harus memasukkannya terlebih dahulu.`,
+      `Unduh PDF Anda yang tidak terkunci.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Bisakah Anda membuka kunci PDF tanpa kata sandi?`,
+        "answer": `Kita dapat dengan mudah menghapus 'pembatasan edit/cetak' (kata sandi pemilik) tanpa memerlukan kata sandi.Namun, jika file memerlukan kata sandi hanya untuk membukanya (kata sandi pengguna), Anda harus memberikannya.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Apakah legal untuk membuka kunci PDF?`,
+        "answer": `Anda hanya boleh menghapus keamanan dari dokumen yang Anda miliki secara sah atau memiliki izin untuk memodifikasinya.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Apakah membuka kunci akan mengubah konten dokumen?`,
+        "answer": `Tidak, konten, format, dan kualitasnya tetap tidak tersentuh.Hanya lapisan keamanan yang dihilangkan.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Sunting PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Hapus informasi sensitif atau data tersembunyi dari PDF Anda secara permanen.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Unggah file PDF Anda.`,
+      `Gambar kotak hitam di atas teks, gambar, atau informasi pribadi yang sensitif.`,
+      `Terapkan redaksi untuk menghapus data secara permanen, lalu unduh file.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Apakah teks yang disunting benar-benar hilang?`,
+        "answer": `Ya.Tidak seperti sekadar menggambar bentuk hitam di atas teks, alat redaksi kami menghapus secara permanen data teks yang mendasarinya sehingga tidak dapat disalin atau dibaca oleh mesin.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Bisakah saya menyunting gambar juga?`,
+        "answer": `Sangat.Anda dapat memilih area mana pun pada halaman, termasuk grafik dan foto, untuk digelapkan secara permanen.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Apakah redaksi dapat dibalik?`,
+        "answer": `Tidak. Demi keamanan Anda, redaksi akan menghancurkan data tersembunyi secara permanen.Selalu simpan cadangan yang belum disunting jika diperlukan.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Tanda tangani PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Tanda tangani diri Anda sendiri atau minta tanda tangan elektronik dari orang lain.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Unggah dokumen yang memerlukan tanda tangan.`,
+      `Buat tanda tangan Anda dengan menggambar, mengetik, atau mengunggah gambar.`,
+      `Tempatkan tanda tangan Anda pada dokumen, klik terapkan, dan unduh.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Apakah tanda tangan elektronik legal?`,
+        "answer": `Ya, tanda tangan elektronik yang dibuat dengan TheyLovePDF mengikat secara hukum di sebagian besar negara dan yurisdiksi.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Bisakah saya menyimpan tanda tangan saya untuk nanti?`,
+        "answer": `Ya, jika Anda membuat akun, Anda dapat menyimpan tanda tangan Anda dengan aman untuk penandatanganan 1-klik yang cepat di masa mendatang.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Bisakah saya menambahkan tanggal teks dan inisial?`,
+        "answer": `Sangat.Bersamaan dengan tanda tangan Anda, Anda dapat dengan mudah menarik dan melepas tanggal, inisial, dan bidang teks khusus.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Minta tanda tangan`,
+    "desc": `Kirim dokumen ke klien untuk ditandatangani secara online.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Unggah PDF yang perlu Anda tandatangani.`,
+      `Tambahkan alamat email penerima dan tetapkan kolom tanda tangan untuk mereka.`,
+      `Kirim permintaan.Kami akan mengirimkan tautan aman melalui email untuk menandatangani dokumen secara online.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Apakah penerima memerlukan akun untuk menandatangani?`,
+        "answer": `Tidak, penerima dapat menandatangani dokumen dengan aman langsung dari tautan email mereka tanpa perlu membuat akun TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Bagaimana saya tahu kalau sudah ditandatangani?`,
+        "answer": `Anda akan menerima pemberitahuan email otomatis setelah semua pihak selesai menandatangani dokumen.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Apakah ada jejak audit?`,
+        "answer": `Ya, pengguna Pro menerima jejak audit komprehensif yang merinci alamat IP dan stempel waktu untuk kepatuhan hukum penuh.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Tanda sertifikat`,
+    "desc": `Tambahkan tanda tangan digital kriptografi ke PDF Anda.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Unggah PDF dan file sertifikat digital Anda (.pfx atau .p12).`,
+      `Masukkan kata sandi sertifikat.`,
+      `Terapkan tanda tangan kriptografi dan unduh PDF terverifikasi.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Apa itu tanda tangan sertifikat?`,
+        "answer": `Berbeda dengan tanda tangan elektronik visual, tanda tangan sertifikat menerapkan hash kriptografi pada dokumen, yang secara matematis membuktikan keasliannya dan memastikan dokumen tersebut tidak diubah.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Apakah Anda menyimpan kata sandi sertifikat saya?`,
+        "answer": `Tidak pernah.Kata sandi Anda hanya disimpan dalam memori sementara pada saat penandatanganan dan segera dimusnahkan.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Bisakah orang memverifikasi tanda tangannya?`,
+        "answer": `Ya, ketika dibuka di pembaca PDF standar seperti Adobe Acrobat, tanda centang hijau akan muncul yang menunjukkan bahwa dokumen tersebut diverifikasi secara digital dan tidak diubah.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Mengobrol dengan PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Bicaralah dengan PDF Anda.Ajukan pertanyaan, dapatkan ringkasan, dan ekstrak wawasan secara instan menggunakan AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Unggah dokumen PDF Anda yang panjang atau rumit.`,
+      `Ketik pertanyaan di kotak chat, misalnya 'Ringkas bab 2' atau 'Apa argumen utamanya?'`,
+      `AI kami akan langsung membaca dokumen tersebut dan memberi Anda jawaban yang akurat.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Bagaimana cara kerja Obrolan dengan PDF?`,
+        "answer": `Kami menggunakan Model Bahasa Besar (LLM) tingkat lanjut untuk memindai teks dokumen Anda, memahami konteksnya, dan menjawab pertanyaan apa pun yang Anda ajukan berdasarkan konten dokumen.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Bisakah itu membaca dokumen yang dipindai?`,
+        "answer": `Jika dokumen tersebut murni berupa gambar, Anda harus menjalankannya melalui alat OCR kami terlebih dahulu.Jika berisi teks yang dapat dipilih, AI dapat langsung membacanya.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Apakah dokumen saya digunakan untuk melatih AI?`,
+        "answer": `Sama sekali tidak.Privasi Anda adalah prioritas kami.Dokumen diproses di lingkungan yang aman dan tidak pernah digunakan untuk melatih model AI publik.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Sunting PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Tambahkan teks, gambar, bentuk, atau anotasi tangan ke dokumen PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Populer` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Unggah PDF yang ingin Anda modifikasi.`,
+      `Gunakan toolbar untuk menambahkan teks, menyisipkan gambar, menggambar bentuk, atau menerapkan whiteout ke area yang ada.`,
+      `Simpan hasil edit Anda dan unduh PDF yang diperbarui.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Bisakah saya mengubah teks yang ada di PDF?`,
+        "answer": `Saat ini, Anda dapat menggunakan alat 'whiteout' untuk menutupi teks lama dan mengetik teks baru di atasnya.Pengeditan teks asli adalah fitur yang sangat kompleks yang kami kembangkan secara aktif.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Bisakah saya menambahkan gambar ke PDF?`,
+        "answer": `Ya, Anda dapat dengan mudah mengunggah dan mencap gambar PNG atau JPG di mana saja ke dalam dokumen Anda.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Apakah pengeditan mengurangi kualitas dokumen?`,
+        "answer": `Tidak, editor kami menambahkan anotasi Anda di atas struktur dokumen yang ada tanpa mengompresi ulang gambar atau teks asli.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF tanda air`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Cap gambar atau teks di PDF Anda dalam hitungan detik.Pilih tipografi, transparansi, dan posisi.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Unggah file PDF Anda.`,
+      `Ketik teks tanda air Anda atau unggah gambar logo.Sesuaikan opacity, rotasi, dan penempatan.`,
+      `Klik terapkan dan unduh dokumen yang diberi watermark.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Bisakah saya memberi tanda air pada semua halaman sekaligus?`,
+        "answer": `Ya, secara default, tanda air Anda akan diterapkan secara konsisten di setiap halaman dokumen.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Bisakah saya menyesuaikan transparansi?`,
+        "answer": `Sangat.Anda dapat membuat tanda air sangat samar sehingga tidak mengganggu dokumen, atau buram sepenuhnya untuk visibilitas maksimal.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Bisakah tanda air dihilangkan?`,
+        "answer": `Kami menempelkan tanda air ke dalam struktur dokumen untuk mempersulit penghapusannya, sehingga memastikan kekayaan intelektual Anda terlindungi.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Formulir PDF`,
+    "desc": `Isi formulir PDF dengan cepat dan akurat secara online.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Unggah formulir PDF interaktif.`,
+      `Klik pada kolom teks, kotak centang, atau tombol radio untuk mengisi informasi Anda.`,
+      `Unduh formulir yang sudah diisi dan diisi.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Bisakah saya menyimpan formulir yang sudah diisi sebagian?`,
+        "answer": `Jika Anda memiliki akun Pro, sesi Anda disimpan secara otomatis, sehingga Anda dapat kembali dan menyelesaikan pengisian formulir nanti.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Apakah ini berfungsi dengan semua formulir PDF?`,
+        "answer": `Alat kami mendukung AcroForms standar, yang merupakan 99% PDF interaktif.Formulir XFA yang lebih lama mungkin memiliki dukungan terbatas.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Bisakah saya meratakan formulir setelah mengisinya?`,
+        "answer": `Ya, setelah diunduh, Anda dapat menjalankannya melalui alat 'Ratakan PDF' kami untuk mengunci data sehingga tidak dapat diubah oleh penerima.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Tambahkan nomor halaman`,
+    "desc": `Tambahkan nomor halaman ke PDF dengan mudah.Pilih posisi, dimensi, tipografi Anda.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Bebas` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Unggah dokumen Anda.`,
+      `Pilih posisi (misalnya, kanan bawah), gaya font, dan nomor awal.`,
+      `Terapkan penomoran dan unduh PDF Anda yang diformat dengan sempurna.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Bisakah saya melewati halaman sampul?`,
+        "answer": `Ya!Anda dapat menentukan di halaman mana penomoran harus dimulai, sehingga Anda dapat menjaga halaman judul tetap bersih.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Bisakah saya menyesuaikan formatnya?`,
+        "answer": `Sangat.Anda dapat memilih format seperti 'Halaman 1', '1 dari 10', atau hanya '1', lalu memilih font, ukuran, dan warna.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Apakah penyelarasannya akurat?`,
+        "answer": `Ya, alat kami menghitung margin yang tepat untuk memastikan nomor halaman Anda selaras sempurna di setiap halaman.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Beri anotasi pada PDF`,
+    "desc": `Sorot, garis bawahi, coret teks, dan tambahkan komentar.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Baru` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Unggah PDF Anda.`,
+      `Gunakan alat penyorot, garis bawah, coretan, dan catatan tempel untuk meninjau dokumen.`,
+      `Unduh file beranotasi untuk dibagikan dengan tim Anda.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Apakah anotasi saya akan terlihat di pembaca standar?`,
+        "answer": `Ya, kami menggunakan protokol anotasi PDF standar, artinya sorotan dan catatan Anda akan terlihat di Adobe Acrobat, Chrome, dan Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Bisakah saya mengubah warna highlight?`,
+        "answer": `Ya, Anda dapat memilih dari beragam palet warna untuk memberi kode warna pada catatan dan sorotan Anda.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Apakah mudah untuk menghapus anotasi?`,
+        "answer": `Sangat mudah.Cukup klik pada anotasi apa pun yang Anda buat dan tekan tombol hapus untuk menghapusnya secara instan.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Pemeriksaan plagiarisme`,
+    "desc": `Bandingkan dokumen Anda dengan miliaran halaman web dan database akademis.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Unggah esai atau dokumen yang ingin Anda verifikasi.`,
+      `Mesin AI kami akan memindai miliaran halaman web dan database akademis untuk menemukan kecocokan.`,
+      `Tinjau laporan kesamaan terperinci yang menyorot setiap teks yang disalin.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Seberapa akurat pemeriksa plagiarisme?`,
+        "answer": `Ini sangat akurat.Kami menggunakan AI tingkat perusahaan yang melakukan referensi silang teks Anda dengan database konten online yang besar dan terus diperbarui.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Apakah ini cocok dengan makalah akademis offline?`,
+        "answer": `Ia memeriksa jurnal akademis utama dengan akses terbuka dan sumber-sumber yang banyak dikutip dan tersedia secara online.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Apakah dokumen saya disimpan ke database?`,
+        "answer": `Tidak. Tidak seperti sistem beberapa universitas, kami tidak menambahkan dokumen Anda ke database global, untuk memastikan karya asli Anda tetap menjadi milik Anda.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Ringkaslah PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Hasilkan ringkasan dokumen panjang yang cepat dan akurat dalam hitungan detik.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Baru` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Unggah dokumen, laporan, atau bab buku yang panjang.`,
+      `Klik 'Ringkasan' agar AI kami dapat menganalisis konsep inti.`,
+      `Baca ringkasan poin-poin dan unduh jika diperlukan.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Bisakah itu meringkas keseluruhan buku?`,
+        "answer": `AI-nya sangat mumpuni, namun untuk hasil terbaik dan detail maksimal, sebaiknya rangkum satu bab atau bagian dalam satu waktu.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Apakah ringkasan tersebut mencakup statistik penting?`,
+        "answer": `Ya, LLM kami diinstruksikan untuk mengidentifikasi dan menyoroti poin data penting, statistik, dan argumen utama.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Bahasa apa saja yang didukung?`,
+        "answer": `Peringkas berfungsi paling baik dalam bahasa Inggris, namun secara asli mendukung dan memahami lebih dari 50 bahasa global.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Terjemahkan PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Terjemahkan dokumen lengkap dengan tetap mempertahankan format dan tata letak asli.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Baru` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Unggah dokumen Anda.`,
+      `Pilih bahasa asli dan bahasa target yang ingin Anda terjemahkan.`,
+      `Unduh PDF yang baru diterjemahkan, lengkap dengan format aslinya.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Apakah tata letaknya akan rusak setelah terjemahan?`,
+        "answer": `Mesin canggih kami berupaya mempertahankan tata letak persisnya, meskipun perluasan teks (mis., Bahasa Inggris ke Bahasa Jerman) mungkin menyebabkan sedikit perubahan visual yang tidak dapat dihindari.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Seberapa akurat terjemahannya?`,
+        "answer": `Kami menggunakan Neural Machine Translation (NMT) canggih yang didukung oleh AI, yang menyediakan terjemahan yang sangat akurat dan peka konteks, bukan terjemahan kata demi kata yang kaku.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Bisakah saya menerjemahkan dokumen yang dipindai?`,
+        "answer": `Ya!Jika Anda mengunggah dokumen yang dipindai, sistem kami akan secara otomatis menjalankan OCR untuk membaca teks sebelum menerjemahkannya.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Ekstrak data`,
+    "desc": `Ekstrak tabel, nilai, dan entitas dengan cerdas dari faktur dan formulir.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Baru` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Unggah faktur, tanda terima, atau formulir terstruktur.`,
+      `AI kami akan mengidentifikasi bidang utama seperti Tanggal, Total, Nama, dan Alamat.`,
+      `Unduh data yang diekstraksi sebagai file CSV atau JSON yang bersih.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Untuk apa ekstraksi data digunakan?`,
+        "answer": `Ini sempurna untuk akuntansi dan administrasi.Daripada mengetik data secara manual dari 100 faktur, AI kami melakukannya secara otomatis dalam hitungan detik.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Apakah dokumen memerlukan tata letak tertentu?`,
+        "answer": `TIDAK!AI kami cukup cerdas untuk menemukan 'Jumlah Total' baik di bagian atas, bawah, atau tengah halaman.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Bisakah saya mengekstrak data ke Excel?`,
+        "answer": `Ya, data yang diekstraksi dapat diekspor langsung sebagai file CSV, yang dapat dibuka dengan sempurna di Microsoft Excel atau Google Sheets.`
+      },
     ]
-  }
+  },
 ];

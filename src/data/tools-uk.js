@@ -1,1135 +1,1053 @@
+// Auto-generated translation file for uk
 export const TOOLS_DATA_UK = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF в Word`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Перетворюйте файли PDF на документи DOC і DOCX, які легко редагувати.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Завантажте PDF-документ, перетягнувши його в зону розвантаження або натиснувши кнопку «Вибрати файл».`,
+      `Наш передовий механізм розпізнавання тексту та перетворення миттєво почне витягувати текст, макет і форматування.`,
+      `Завантажте ідеально конвертований документ Word (DOC/DOCX), готовий до редагування.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Що таке конвертер PDF у Word?`,
+        "answer": `Конвертер PDF у Word — це утиліта, яка витягує текст, макети та зображення з PDF-файлу та відтворює їх як повністю редагований документ Microsoft Word.Наш преміальний механізм перетворення зберігає шрифти, макети, таблиці та зображення, щоб ваш документ Word виглядав точно так само, як оригінальний PDF.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Чи можу я конвертувати відскановані PDF-файли в редаговані документи Word?`,
+        "answer": `Абсолютно.Наша вбудована технологія OCR (оптичне розпізнавання символів) автоматично виявляє сканований текст і робить його повністю доступним для редагування в отриманому файлі DOCX.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Чи безпечний мій конфіденційний PDF під час конвертації?`,
+        "answer": `Ми серйозно ставимося до конфіденційності.Ваші файли шифруються за допомогою 256-бітного SSL під час передачі та остаточно видаляються з наших серверів автоматично протягом 2 годин.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word в PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Зробіть файли DOC і DOCX легкими для читання, конвертувавши їх у PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Виберіть файл DOC або DOCX на комп’ютері або перетягніть його на сторінку.`,
+      `Інструмент миттєво зафіксує форматування та перетворить документ Word в універсальний формат PDF.`,
+      `Завантажте свій новий PDF.Макет виглядатиме однаково на кожному пристрої.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Чому я повинен конвертувати Word у PDF?`,
+        "answer": `Перетворення на PDF гарантує, що макет вашого документа, шрифти та зображення виглядатимуть однаково на будь-якому пристрої, запобігаючи помилкам форматування під час обміну з іншими.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Чи збережено мої поля та шрифти?`,
+        "answer": `Так, наш конвертер Word у PDF зафіксує ваш точний макет, включаючи власні шрифти та точні налаштування полів.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Чи можу я конвертувати кілька файлів Word одночасно?`,
+        "answer": `Так, ви можете завантажити декілька файлів DOC/DOCX, і ми оброблятимемо їх одночасно для високошвидкісного перетворення.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF в Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Витягуйте таблиці та дані з PDF-файлів в електронні таблиці Excel.Найкращі результати з текстовими PDF-файлами.Відскановані PDF-файли підтримуються за допомогою OCR — точність може відрізнятися.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Завантажте PDF-файл, що містить таблиці та дані, які потрібно витягти.`,
+      `Наша система відсканує документ, визначить табличні дані та точно відформатує їх у клітинки електронної таблиці.`,
+      `Завантажте редагований файл Excel (XLSX).`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Чи будуть мої PDF-таблиці правильно відформатовані в Excel?`,
+        "answer": `Так, наш інтелектуальний інструмент вилучення розпізнає рядки та стовпці, гарантуючи, що ваші табличні дані акуратно організовані в клітинки Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Чи можна отримати дані зі сканованих PDF-файлів?`,
+        "answer": `Так, наша технологія OCR може зчитувати таблиці зі сканованих зображень і перетворювати їх на редаговані електронні таблиці Excel.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Чи переносяться формули?`,
+        "answer": `PDF-файли не зберігають формули, лише необроблені дані.Витягнутий файл Excel міститиме точні значення, видимі в PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel в PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Зробіть електронні таблиці EXCEL легкими для читання, конвертувавши їх у PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Завантажте свою електронну таблицю Excel (XLS або XLSX).`,
+      `Наш інструмент оптимізує макет електронної таблиці, щоб ідеально відповідати на сторінках PDF без обрізання стовпців.`,
+      `Завантажте остаточний PDF-документ.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Чи будуть мої широкі електронні таблиці обрізані?`,
+        "answer": `Наш конвертер інтелектуально масштабує та форматує вашу електронну таблицю, щоб забезпечити логічне розміщення стовпців на сторінках PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Чи перетворює він усі аркуші?`,
+        "answer": `Так, усі активні аркуші у вашому файлі Excel буде перетворено на послідовні сторінки в остаточному PDF-файлі.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Чи мої фінансові дані захищені?`,
+        "answer": `100%.Ми використовуємо наскрізне шифрування, і всі файли назавжди видаляються з наших систем протягом 2 годин.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF в JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Перетворіть кожну сторінку PDF у JPG або витягніть усі зображення, які містяться.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Завантажте PDF-документ, який потрібно перетворити на зображення.`,
+      `Виберіть, чи видобувати вбудовані зображення, чи конвертувати цілі PDF-сторінки у JPG з високою роздільною здатністю.`,
+      `Завантажте файли JPG окремо або як стиснений файл ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Якість JPG буде високою?`,
+        "answer": `Так, ми видобуємо та конвертуємо сторінки з високою роздільною здатністю, забезпечуючи чіткий текст і чіткі зображення в отриманих файлах JPG.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Чи можна отримати лише зображення з PDF-файлу?`,
+        "answer": `Абсолютно.Ви можете витягнути лише фотографії, вбудовані в PDF, а не конвертувати всю сторінку.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Чи є обмеження щодо кількості сторінок, які я можу конвертувати?`,
+        "answer": `Безкоштовні користувачі можуть конвертувати PDF-файли розміром до 10 Мб.Професійні користувачі можуть обробляти великі файли розміром до 2 ГБ.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG в PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Перетворіть зображення JPG на PDF за лічені секунди.Легко регулюйте орієнтацію та поля.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Виберіть одне або кілька зображень у форматі JPG зі свого пристрою.`,
+      `Перетягніть їх, щоб змінити їх порядок, налаштувати орієнтацію сторінки та встановити поля, якщо потрібно.`,
+      `Натисніть «Перетворити» та завантажте об’єднаний PDF-документ.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Чи можу я об’єднати декілька файлів JPG в один PDF?`,
+        "answer": `Так, просто завантажте кілька зображень, розташуйте їх у бажаному порядку, і ми об’єднаємо їх в один документ PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Чи втратять мої зображення якість?`,
+        "answer": `Ні, ми зберігаємо оригінальну роздільну здатність і якість ваших зображень у форматі JPG під час вбудовування їх у PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Чи можу я налаштувати поля та орієнтацію?`,
+        "answer": `Так, наш інструмент дозволяє налаштувати орієнтацію сторінки (книжкову або альбомну) і розмір полів перед перетворенням.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF в PowerPoint`,
+    "desc": `Перетворіть свої PDF-файли на слайд-шоу PPT і PPTX, які легко редагувати.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Завантажте PDF-файл, який хочете перетворити на презентацію.`,
+      `Наш механізм штучного інтелекту аналізуватиме слайди та перетворюватиме їх у редаговані формати PPTX.`,
+      `Завантажте нову презентацію PowerPoint.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Чи можна редагувати текст у моєму PowerPoint?`,
+        "answer": `Так, увесь текст, фігури та зображення можна буде повністю редагувати в отриманому файлі PPTX.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Чи працює зі сканованими презентаціями?`,
+        "answer": `Так, за допомогою OCR ми можемо витягти текст зі сканованих слайдів і зробити його придатним для редагування в PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Чи збережено макет слайда?`,
+        "answer": `Наша передова технологія перетворення гарантує, що макет вашого оригінального PDF-файлу максимально точно відповідає PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint в PDF`,
+    "desc": `Зробіть слайд-шоу PPT і PPTX легкими для перегляду, конвертувавши їх у PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Виберіть файл PPT або PPTX.`,
+      `Інструмент миттєво перетворить ваші слайди в безпечний універсальний формат PDF.`,
+      `Завантажте свою презентацію у форматі PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Навіщо конвертувати PowerPoint у PDF?`,
+        "answer": `Перетворення гарантує, що ваша презентація виглядає ідентично на будь-якому пристрої, запобігаючи відсутнім шрифтам або несправним макетам під час презентації на іншому комп’ютері.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Чи збережено мої переходи між слайдами?`,
+        "answer": `Ні, PDF — це статичний формат документа, тому анімації та переходи між слайдами не переносяться.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Чи включені нотатки доповідача?`,
+        "answer": `Наразі наш інструмент перетворює візуальні елементи основного слайда.Нотатки доповідача не включені в стандартний PDF-файл.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF в HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Ідеально перетворюйте ваші документи PDF на веб-сторінки HTML.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Завантажте PDF-файл.`,
+      `Наша система перетворить документ у веб-готовий HTML, CSS і зображення.`,
+      `Завантажте ZIP-файл, що містить вашу нову веб-сторінку.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Чи буде HTML адаптивним?`,
+        "answer": `HTML точно відповідатиме статичному макету вашого PDF-файлу, зберігаючи абсолютне позиціонування для точності.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Чи витягуються зображення автоматично?`,
+        "answer": `Так, усі вбудовані зображення витягуються та належним чином посилаються на створений HTML-код.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Чи потрібні мені навички кодування, щоб використовувати це?`,
+        "answer": `Зовсім ні.Ви отримаєте готовий до використання файл HTML, який можна миттєво відкрити в будь-якому веб-браузері.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML в PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Перетворюйте веб-сторінки у форматі HTML у формат PDF безпосередньо з URL-адреси чи файлу.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Завантажте свій HTML-файл або введіть URL-адресу веб-сторінки.`,
+      `Наш механізм візуалізації завантажить сторінку, застосує стилі та захопить її як документ PDF.`,
+      `Завантажте ідеально відформатований PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Чи можу я конвертувати живі URL-адреси в PDF?`,
+        "answer": `Так, ви можете ввести URL-адресу, і наш інструмент отримає активну веб-сторінку та перетворить її на високоякісний PDF-файл.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Чи застосовуються стилі CSS?`,
+        "answer": `Абсолютно.Наш механізм візуалізації повністю підтримує CSS, гарантуючи, що PDF-файл виглядає точно так само, як інтерактивна веб-сторінка.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Як щодо важких сторінок JavaScript?`,
+        "answer": `Наш інструмент виконує JavaScript перед захопленням сторінки, забезпечуючи належне відтворення динамічного вмісту в остаточному PDF-файлі.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF в текст`,
+    "desc": `Витягніть текст із файлів PDF, щоб створити документи TXT, які можна редагувати.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Завантажте PDF-документ.`,
+      `Наша система видалить форматування та витягне чистий звичайний текст.`,
+      `Завантажте необроблений файл TXT.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Чи витягує текст із зображень?`,
+        "answer": `Так, якщо PDF-файл містить відскановані зображення, наша технологія OCR прочитає текст і включить його у файл TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Чи збережено форматування?`,
+        "answer": `Ні, цей інструмент спеціально видаляє все форматування, щоб надати вам необроблений звичайний текст без стилів.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Чи мої дані захищені?`,
+        "answer": `Так, усі файли шифруються під час обробки та автоматично видаляються протягом 2 годин.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Об’єднати PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Об’єднайте PDF-файли в потрібному порядку за допомогою найпростішого доступного об’єднання PDF-файлів.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Виберіть кілька файлів PDF зі свого пристрою.`,
+      `Перетягніть мініатюри, щоб розташувати файли в потрібному порядку.`,
+      `Натисніть «Об’єднати» та завантажте об’єднаний єдиний PDF-документ.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Що таке PDF Merger?`,
+        "answer": `Об’єднання PDF-файлів — це утиліта, яка об’єднує кілька PDF-файлів в один безперервний документ.Безкоштовні користувачі можуть об’єднати до 20 файлів одночасно.Користувачі Pro можуть об’єднувати необмежену кількість документів.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Чи можу я змінити порядок файлів?`,
+        "answer": `так!Після завантаження просто перетягніть мініатюри файлів, щоб змінити їх порядок у потрібному порядку.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Чи знижує якість об’єднання?`,
+        "answer": `Зовсім ні.Процес об’єднання зберігає оригінальну якість і форматування всіх ваших документів.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Розділити PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Відокремте одну сторінку або цілий набір для легкого перетворення на окремі PDF-файли.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Завантажте PDF-файл, який потрібно розділити.`,
+      `Виберіть, чи потрібно витягувати певні сторінки чи розділити документ на фіксовані діапазони.`,
+      `Завантажте ваші нові PDF-файли як ZIP-архів.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Чи можна витягнути лише одну сторінку з великого PDF-файлу?`,
+        "answer": `Так, ви можете легко вказати номер окремої сторінки або настроюваний діапазон (наприклад, сторінки 4-7) для вилучення.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Чи збережуть розділені файли оригінальну якість?`,
+        "answer": `Так, окремі сторінки витягуються бездоганно без втрати роздільної здатності чи якості тексту.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Як завантажити кілька розділених файлів?`,
+        "answer": `Якщо ви розділите документ на кілька частин, ми зручно запакуємо їх в один ZIP-файл для легкого завантаження.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Повернути PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Обертайте PDF-файли так, як вам потрібно.Ви навіть можете обертати кілька PDF-файлів одночасно.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Завантажте PDF-документ.`,
+      `Наведіть вказівник миші на сторінки, які потрібно повернути, і клацніть піктограму обертання або поверніть усі сторінки одночасно.`,
+      `Натисніть «Застосувати» та завантажте свій постійно повернутий PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Чи можу я обертати лише певні сторінки?`,
+        "answer": `Так, ви можете вибрати окремі сторінки та повернути їх на 90, 180 або 270 градусів, не впливаючи на решту документа.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Чи постійна ротація?`,
+        "answer": `Так, коли ви завантажуєте новий файл, зміни орієнтації назавжди зберігаються в метаданих PDF-файлу.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Чи безпечно завантажувати конфіденційні документи?`,
+        "answer": `Абсолютно.Усі завантаження шифруються через HTTPS і видаляються з наших серверів через 2 години після обробки.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Видалити сторінки`,
+    "desc": `Миттєво видаляйте сторінки з документа PDF.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Завантажте PDF-файл.`,
+      `Виберіть сторінки, які ви хочете видалити, натиснувши на їхні мініатюри.`,
+      `Клацніть «Видалити сторінки» та завантажте свій нещодавно спрощений документ.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Як дізнатися, які сторінки потрібно видалити?`,
+        "answer": `Наш інструмент створює високоякісні мініатюри кожної сторінки, що дозволяє візуально визначити та вибрати саме ті сторінки, які ви хочете видалити.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Чи можу я видалити кілька сторінок одночасно?`,
+        "answer": `Так, ви можете натиснути кілька мініатюр або ввести діапазон сторінок, щоб видалити кілька сторінок одночасно.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Чи це стосується решти документа?`,
+        "answer": `Ні, усі інші сторінки збережуть оригінальне форматування, якість і роздільну здатність.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Змінити порядок сторінок`,
+    "desc": `Змініть порядок сторінок PDF-документа за допомогою перетягування.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Завантажте PDF-документ.`,
+      `Просто перетягніть мініатюри сторінок, щоб змінити їх послідовність.`,
+      `Після впорядкування застосуйте зміни та завантажте реорганізований PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Чи легко змінити порядок великого документа?`,
+        "answer": `Так, наш інтуїтивно зрозумілий інтерфейс перетягування дозволяє швидко переміщувати сторінки навіть у великих документах.`
       },
-      {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
-      },
-      {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Додати порожню сторінку`,
+    "desc": `Вставте порожню сторінку будь-де в PDF-документ.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Завантажте PDF-файл.`,
+      `Виберіть точне місце, куди ви хочете вставити нову порожню сторінку.`,
+      `Застосуйте зміни та завантажте оновлений PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Навіщо мені додавати порожню сторінку?`,
+        "answer": `Додавання порожньої сторінки корисно для друку двосторонніх документів, вставлення майбутніх нотаток або виправлення форматування розбивки сторінок.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Чи можу я додати кілька порожніх сторінок?`,
+        "answer": `Так, ви можете вставити скільки завгодно порожніх сторінок у будь-яке місце документа.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Чи відповідатиме порожня сторінка розміру документа?`,
+        "answer": `Так, нова порожня сторінка автоматично відповідатиме розмірам і орієнтації навколишніх сторінок.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Стиснути PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Зменшіть розмір файлу, одночасно оптимізуючи для максимальної якості PDF.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Завантажте об’ємний PDF-файл.`,
+      `Виберіть бажаний рівень стиснення (Надзвичайне, Рекомендоване або Менше стиснення).`,
+      `Завантажте свій оптимізований PDF-файл набагато меншого розміру.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Чи погіршить стиснення якість мого PDF-файлу?`,
+        "answer": `Наші розширені алгоритми оптимізації зменшують розмір файлу, стискаючи зображення та видаляючи зайві дані, зберігаючи чіткість тексту та чіткість зображень.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Який рівень стиснення вибрати?`,
+        "answer": `Ми пропонуємо «Рекомендовано» для ідеального балансу.Використовуйте «Надзвичайний», лише якщо вам терміново потрібен найменший можливий розмір файлу для вкладень електронної пошти.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Чи можу я стиснути PDF-файл, який і так невеликий?`,
+        "answer": `Ви можете, але зменшення розміру файлу буде мінімальним, оскільки дані, швидше за все, уже оптимізовано.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Відремонтувати PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Відновіть пошкоджений PDF-файл і відновіть дані з пошкоджених файлів.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Завантажте свій пошкоджений PDF-файл.`,
+      `Наша система проаналізує структуру файлу та спробує відновити пошкоджені дані.`,
+      `Завантажте відремонтований PDF-документ.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Чи можна виправити всі пошкоджені PDF-файли?`,
+        "answer": `Хоча наш інструмент дуже ефективний у виправленні структурних помилок і зламаних заголовків, сильно пошкоджені файли з відсутніми необробленими даними можуть бути не повністю відновлені.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Скільки часу займає ремонт?`,
+        "answer": `Більшість файлів аналізуються та відновлюються протягом кількох секунд, залежно від складності пошкодження.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Чи безпечні дані всередині?`,
+        "answer": `такМи безпечно обробляємо ремонт у хмарі, і ваш документ незабаром видаляється назавжди.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Зробіть текст у відсканованих PDF-файлах доступним для вибору, пошуку та редагування.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Завантажте відсканований PDF-документ.`,
+      `Для кращої точності виберіть мову тексту всередині документа.`,
+      `Завантажте свій новий PDF-файл із можливістю пошуку та вибору.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Що таке OCR?`,
+        "answer": `OCR означає оптичне розпізнавання символів.Це технологія, яка зчитує текст всередині зображень або сканованих документів і перетворює його на комп’ютерний текст, доступний для вибору та пошуку.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Чи працює OCR з рукописним текстом?`,
+        "answer": `Наша система OCR дуже точна для друкованого тексту.Рукописний текст може давати різні результати залежно від розбірливості.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Чи можу я скопіювати текст із документа, що розпізнається?`,
+        "answer": `Абсолютно.Після обробки ви можете виділяти, копіювати та вставляти текст безпосередньо з PDF-файлу, як із звичайного документа.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Звести PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Об’єднайте всі шари, форми та анотації в один нередагований шар.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Завантажте PDF-файл, що містить форми, шари або анотації.`,
+      `Наша система назавжди об’єднає всі візуальні елементи в один плоский шар.`,
+      `Завантажте зведений PDF-файл, готовий до друку.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Навіщо мені зводити PDF?`,
+        "answer": `Зведення PDF-файлу блокує дані форми, запобігає подальшому редагуванню анотацій і гарантує, що документ друкується точно так, як він виглядає на екрані.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Чи можна розвести зведений PDF-файл?`,
+        "answer": `Ні, вирівнювання — це постійний процес.Ми рекомендуємо зберігати резервну копію оригінального інтерактивного PDF-файлу.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Чи зменшує зведення розмір файлу?`,
+        "answer": `Часто, так.Завдяки об’єднанню шарів і видаленню інтерактивних полів форми загальна структура стає простішою та меншою.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Захист PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Зашифруйте свій PDF паролем, щоб запобігти несанкціонованому доступу.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Завантажте PDF-файл, який потрібно захистити.`,
+      `Введіть надійний пароль і підтвердьте його.`,
+      `Завантажте новий зашифрований PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Який тип шифрування використовується?`,
+        "answer": `Ми використовуємо надійне 256-бітне шифрування AES, яке є галузевим стандартом для захисту дуже чутливих і конфіденційних документів.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Чи може TheyLovePDF відновити мій пароль, якщо я його забув?`,
+        "answer": `Ні. Ваш пароль ніколи не зберігається на наших серверах.Якщо ви його втратите, документ не можна буде розшифрувати.Будь ласка, бережіть його!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Чи запобігає захист PDF-файлу друку?`,
+        "answer": `Так, шифрування блокує документ від відкриття, друку чи редагування без правильного пароля.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Розблокувати PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Скасуйте захист PDF-файлів паролем, що дасть вам свободу використовувати свої PDF-файли як завгодно.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Завантажте PDF-файл, захищений паролем.`,
+      `Якщо файл має «пароль власника», який забороняє редагування, ми миттєво видалимо його.Якщо він має «пароль користувача», який обмежує відкриття, ви повинні спочатку ввести його.`,
+      `Завантажте свій розблокований PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Чи можна розблокувати PDF без пароля?`,
+        "answer": `Ми можемо легко видалити «обмеження на редагування/друк» (паролі власників), не потребуючи пароля.Однак, якщо для відкриття файлу потрібен пароль (пароль користувача), ви повинні вказати його.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Чи законно розблокувати PDF?`,
+        "answer": `Вам слід знімати захист лише з документів, якими ви законно володієте або маєте дозвіл на зміну.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Чи змінить розблокування вміст документа?`,
+        "answer": `Ні, вміст, форматування та якість залишаються повністю недоторканими.Видаляється лише захисний шар.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Редагувати PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Назавжди видаліть конфіденційну інформацію або приховані дані зі своїх PDF-файлів.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Завантажте PDF-файл.`,
+      `Намалюйте чорні рамки над конфіденційним текстом, зображеннями чи особистою інформацією.`,
+      `Застосуйте редагування, щоб остаточно очистити дані, а потім завантажте файл.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Чи справді відредагований текст зник?`,
+        "answer": `такНа відміну від простого малювання чорної форми поверх тексту, наш інструмент редагування назавжди видаляє базові текстові дані, тому їх неможливо скопіювати чи прочитати машинами.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Чи можу я також редагувати зображення?`,
+        "answer": `Абсолютно.Ви можете вибрати будь-яку область сторінки, включно з графікою та фотографіями, яка буде затемнена назавжди.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Чи можна редагувати?`,
+        "answer": `Ні. Для вашої безпеки редагування остаточно знищує приховані дані.За потреби завжди зберігайте резервну копію без редагування.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Підписати PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Підпишіть себе або вимагайте електронних підписів від інших.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Завантажте документ, який вимагає підпису.`,
+      `Створіть свій підпис, намалювавши, набравши або завантаживши зображення.`,
+      `Поставте свій підпис на документі, натисніть «Застосувати» та завантажте його.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Чи законні електронні підписи?`,
+        "answer": `Так, електронні підписи, створені за допомогою TheyLovePDF, мають юридичну силу в більшості країн і юрисдикцій.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Чи можу я зберегти свій підпис на потім?`,
+        "answer": `Так, якщо ви створите обліковий запис, ви зможете безпечно зберегти свій підпис для швидкого підписання в один клік у майбутньому.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Чи можу я додати текстові дати та ініціали?`,
+        "answer": `Абсолютно.Разом із підписом ви можете легко перетягувати дати, ініціали та власні текстові поля.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Запит на підпис`,
+    "desc": `Надсилайте документи клієнтам на законний підпис онлайн.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Завантажте потрібний підписаний PDF-файл.`,
+      `Додайте електронні адреси одержувачів і призначте для них поля для підпису.`,
+      `Надіслати запит.Ми надішлемо їм електронною поштою безпечне посилання для підписання документа онлайн.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Чи потрібен одержувачам обліковий запис для підпису?`,
+        "answer": `Ні, одержувачі можуть безпечно підписати документ безпосередньо за посиланням електронної пошти без необхідності створювати обліковий запис TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Як дізнатися, коли воно підписано?`,
+        "answer": `Ви отримаєте автоматичне сповіщення електронною поштою, коли всі сторони завершать підписання документа.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Чи існує аудиторський слід?`,
+        "answer": `Так, користувачі Pro отримують вичерпний контрольний журнал із детальною інформацією про IP-адреси та часові позначки для повної відповідності законодавству.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Сертифікат знак`,
+    "desc": `Додайте криптографічний цифровий підпис до PDF-файлу.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Завантажте PDF-файл і файл цифрового сертифіката (.pfx або .p12).`,
+      `Введіть пароль сертифіката.`,
+      `Застосуйте криптографічний підпис і завантажте перевірений PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Що таке підпис сертифіката?`,
+        "answer": `На відміну від візуального електронного підпису, підпис сертифіката застосовує до документа криптографічний хеш, математично підтверджуючи його автентичність і гарантуючи, що він не був змінений.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Ви зберігаєте мій пароль сертифіката?`,
+        "answer": `Ніколи.Ваш пароль зберігається в тимчасовій пам’яті лише в момент підписання та негайно знищується.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Чи можуть люди перевірити підпис?`,
+        "answer": `Так, під час відкриття в стандартних програмах для читання PDF-файлів, таких як Adobe Acrobat, з’явиться зелена позначка, яка вказує на те, що документ цифрово перевірено та не змінено.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Чат із PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Поговоріть зі своїм PDF.Ставте запитання, отримуйте підсумки та миттєво витягуйте інформацію за допомогою ШІ.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `ШІ` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Завантажте довгий або складний PDF-документ.`,
+      `Введіть запитання у вікні чату, наприклад «Підсумуйте розділ 2» або «Який основний аргумент?»`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `How does Chat with PDF work?`,
+        "answer": `We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Can it read scanned documents?`,
+        "answer": `If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Are my documents used to train the AI?`,
+        "answer": `Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Редагувати PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Додайте текст, зображення, фігури або анотації від руки до документа PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Популярний` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Завантажте PDF-файл, який потрібно змінити.`,
+      `Використовуйте панель інструментів, щоб додати текст, вставити зображення, намалювати фігури або застосувати біле до існуючих областей.`,
+      `Збережіть свої зміни та завантажте оновлений PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Чи можу я змінити існуючий текст у PDF?`,
+        "answer": `Наразі ви можете використати інструмент «висвітлення», щоб закрити старий текст і ввести новий текст поверх нього.Редагування рідного тексту – це дуже складна функція, яку ми активно розробляємо.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Чи можу я додати зображення до PDF?`,
+        "answer": `Так, ви можете легко завантажувати та штампувати зображення у форматі PNG або JPG у будь-якому місці свого документа.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Чи знижує редагування якість документа?`,
+        "answer": `Ні, наш редактор додає ваші анотації поверх існуючої структури документа без повторного стиснення оригінальних зображень чи тексту.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Водяний знак PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Нанесіть зображення або текст на PDF-файл за лічені секунди.Виберіть типографіку, прозорість і положення.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Завантажте PDF-файл.`,
+      `Введіть текст водяного знака або завантажте зображення логотипу.Налаштуйте непрозорість, обертання та розміщення.`,
+      `Натисніть «Застосувати» та завантажте документ із водяним знаком.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Чи можу я поставити водяний знак на всі сторінки одночасно?`,
+        "answer": `Так, за замовчуванням водяний знак буде застосовано на кожній сторінці документа.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Чи можу я налаштувати прозорість?`,
+        "answer": `Абсолютно.Ви можете зробити водяний знак дуже тьмяним, щоб він не відволікав увагу від документа, або повністю непрозорим для максимальної видимості.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Чи можна видалити водяний знак?`,
+        "answer": `Ми вирівнюємо водяний знак у структурі документа, щоб максимально ускладнити його видалення, забезпечуючи захист вашої інтелектуальної власності.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF форми`,
+    "desc": `Швидко й точно заповнюйте PDF-форми онлайн.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Завантажте інтерактивну форму PDF.`,
+      `Натисніть на текстові поля, прапорці або перемикачі, щоб заповнити інформацію.`,
+      `Завантажте заповнену форму.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Чи можна зберегти частково заповнену форму?`,
+        "answer": `Якщо у вас є обліковий запис Pro, ваші сеанси зберігаються автоматично, що дозволяє повернутися та завершити заповнення форми пізніше.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Чи працює він з усіма формами PDF?`,
+        "answer": `Наш інструмент підтримує стандартні AcroForms, які складають 99% інтерактивних PDF-файлів.Старіші форми XFA можуть мати обмежену підтримку.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Чи можу я вирівняти форму після її заповнення?`,
+        "answer": `Так, після завантаження ви можете запустити його за допомогою нашого інструменту «Flatten PDF», щоб заблокувати дані, щоб одержувач не міг їх змінити.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Додайте номери сторінок`,
+    "desc": `З легкістю додавайте номери сторінок у PDF-файли.Виберіть позиції, розміри, типографіку.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `безкоштовно` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Завантажте свій документ.`,
+      `Виберіть позицію (наприклад, унизу праворуч), стиль шрифту та початковий номер.`,
+      `Застосуйте нумерацію та завантажте ідеально відформатований PDF-файл.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Чи можу я пропустити титульну сторінку?`,
+        "answer": `так!Ви можете вказати, з якої сторінки фактично повинна починатися нумерація, що дозволить зберегти титульні сторінки чистими.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Чи можу я налаштувати формат?`,
+        "answer": `Абсолютно.Ви можете вибрати такі формати, як «Сторінка 1», «1 з 10» або просто «1», а також вибрати шрифт, розмір і колір.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Чи точне вирівнювання?`,
+        "answer": `Так, наш інструмент обчислює точні поля, щоб гарантувати ідеальне вирівнювання номерів сторінок на кожній сторінці.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Додати анотації до PDF`,
+    "desc": `Виділіть, підкресліть, закресліть текст і додайте коментарі.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `новий` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Завантажте свій PDF.`,
+      `Для перегляду документа використовуйте інструменти виділення, підкреслення, закреслення та наліпки.`,
+      `Завантажте анотований файл, щоб поділитися ним зі своєю командою.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Чи будуть мої анотації видимі в стандартних програмах для читання?`,
+        "answer": `Так, ми використовуємо стандартні протоколи анотації PDF, тобто ваші виділення та примітки будуть видимі в Adobe Acrobat, Chrome і Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Чи можу я змінити кольори виділення?`,
+        "answer": `Так, ви можете вибрати з широкої палітри кольорів, щоб позначити кольором свої примітки та виділення.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Чи легко видалити анотацію?`,
+        "answer": `Дуже легко.Просто клацніть будь-яку анотацію, яку ви зробили, і натисніть кнопку видалення, щоб миттєво видалити її.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Перевірка на плагіат`,
+    "desc": `Порівняйте свій документ із мільярдами веб-сторінок і академічними базами даних.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Завантажте есе або документ, який потрібно підтвердити.`,
+      `Наш механізм ШІ скануватиме мільярди веб-сторінок і академічних баз даних, щоб знайти збіги.`,
+      `Перегляньте докладний звіт про схожість, виділивши будь-який скопійований текст.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Наскільки точна перевірка на плагіат?`,
+        "answer": `Він дуже точний.Ми використовуємо штучний інтелект корпоративного рівня, який порівнює ваш текст із величезною, постійно оновлюваною базою даних онлайн-вмісту.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Чи перевіряється він на офлайн-академічні роботи?`,
+        "answer": `Він перевіряє основні академічні журнали з відкритим доступом і часто цитовані джерела, доступні в Інтернеті.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Чи збережено мій документ у базі даних?`,
+        "answer": `Ні. На відміну від систем деяких університетів, ми не додаємо ваш документ до глобальної бази даних, гарантуючи, що ваша оригінальна робота залишається виключно вашою.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Резюмуйте PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Створюйте швидкі та точні підсумки довгих документів за лічені секунди.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `ШІ+Нове` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Завантажте великий документ, звіт або розділ книги.`,
+      `Натисніть «Підсумувати», щоб наш ШІ проаналізував основні концепції.`,
+      `Прочитайте резюме та завантажте його, якщо потрібно.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Чи можна підсумувати цілу книгу?`,
+        "answer": `Штучний інтелект має високі можливості, але для отримання найкращих результатів і максимальної деталізації ми рекомендуємо підсумовувати по одній главі чи розділу.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Чи охоплює підсумок ключову статистику?`,
+        "answer": `Так, нашому LLM доручено ідентифікувати та виділяти критичні точки даних, статистичні дані та основні аргументи.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Які мови підтримуються?`,
+        "answer": `Резюме найкраще працює англійською мовою, але він підтримує та розуміє понад 50 мов світу.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Перекласти PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Translate full documents while preserving original formatting and layout.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI + New` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Upload your document.`,
+      `Select the original language and the target language you wish to translate into.`,
+      `Download the newly translated PDF, complete with its original formatting.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Will the layout break after translation?`,
+        "answer": `Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `How accurate is the translation?`,
+        "answer": `We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Can I translate scanned documents?`,
+        "answer": `Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Витяг даних`,
+    "desc": `Інтелектуально витягуйте таблиці, значення та сутності з рахунків-фактур і форм.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `ШІ+Нове` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Завантажте рахунки-фактури, квитанції або структуровані форми.`,
+      `Наш штучний інтелект визначить такі ключові поля, як дати, підсумки, імена та адреси.`,
+      `Завантажте витягнуті дані як чистий файл CSV або JSON.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Для чого використовується вилучення даних?`,
+        "answer": `Ідеально підходить для бухгалтерії та адміністрування.Замість того, щоб вручну вводити дані зі 100 рахунків-фактур, наш штучний інтелект робить це автоматично за лічені секунди.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Чи потрібен документу певний макет?`,
+        "answer": `ні!Наш штучний інтелект достатньо розумний, щоб знайти «Загальну суму» вгорі, внизу чи посередині сторінки.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Чи можна отримати дані в Excel?`,
+        "answer": `Так, витягнуті дані можна експортувати безпосередньо як файл CSV, який ідеально відкривається в Microsoft Excel або Google Sheets.`
+      },
     ]
-  }
+  },
 ];

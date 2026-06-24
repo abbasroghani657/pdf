@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for sw
 export const TOOLS_DATA_SW = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF kwa Neno`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Badilisha faili zako za PDF kuwa rahisi kuhariri hati za DOC na DOCX.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Pakia hati yako ya PDF kwa kuiburuta kwenye eneo la kushuka au kubofya kitufe cha 'Chagua Faili'.`,
+      `OCR yetu ya hali ya juu na injini ya ubadilishaji itaanza kutoa maandishi, mpangilio na uumbizaji papo hapo.`,
+      `Pakua hati ya Neno (DOC/DOCX) iliyogeuzwa kikamilifu, tayari kwa kuhaririwa.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Je, ni kubadilisha PDF kwa Word?`,
+        "answer": `Kigeuzi cha PDF hadi Neno ni matumizi ambayo hutoa maandishi, mipangilio, na picha kutoka kwa PDF na kuziunda upya kama hati ya Microsoft Word inayoweza kuhaririwa kikamilifu.Injini yetu ya ubadilishaji inayolipishwa huhifadhi fonti, miundo, majedwali na picha ili hati yako ya Word ifanane kabisa na PDF asili.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Ninaweza kubadilisha PDF zilizochanganuliwa kuwa hati za Neno zinazoweza kuhaririwa?`,
+        "answer": `Kabisa.Teknolojia yetu iliyojengewa ndani ya OCR (Optical Character Recognition) hutambua kiotomatiki maandishi yaliyochanganuliwa na kuyafanya yaweze kuhaririwa kikamilifu katika faili inayotokana ya DOCX.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Je, PDF yangu ya siri iko salama wakati wa ubadilishaji?`,
+        "answer": `Tunachukua faragha kwa uzito.Faili zako husimbwa kwa njia fiche kupitia 256-bit SSL wakati wa kuhamisha, na kufutwa kabisa kutoka kwa seva zetu kiotomatiki ndani ya saa 2.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Neno kwa PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Fanya faili za DOC na DOCX ziwe rahisi kusoma kwa kuzibadilisha kuwa PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Chagua faili yako ya DOC au DOCX kutoka kwa kompyuta yako au iburute hadi kwenye ukurasa.`,
+      `Zana itafunga uumbizaji papo hapo na kubadilisha hati ya Neno kuwa umbizo la jumla la PDF.`,
+      `Pakua PDF yako mpya.Mpangilio utaonekana sawa kwenye kila kifaa.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Kwa nini nibadilishe Neno kuwa PDF?`,
+        "answer": `Kugeuza hadi PDF huhakikisha mpangilio, fonti na picha za hati yako zinafanana kabisa kwenye kifaa chochote, hivyo kuzuia hitilafu za umbizo wakati wa kushiriki na wengine.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Pembezoni na fonti zangu zimehifadhiwa?`,
+        "answer": `Ndiyo, kigeuzi chetu cha Neno hadi PDF hufunga katika mpangilio wako halisi, ikijumuisha fonti maalum na mipangilio sahihi ya ukingo.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Ninaweza kubadilisha faili nyingi za Neno mara moja?`,
+        "answer": `Ndiyo, unaweza kupakia faili nyingi za DOC/DOCX, na tutazichakata kwa wakati mmoja kwa ubadilishaji wa kasi ya juu.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF hadi Excel`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Toa majedwali na data kutoka kwa PDF hadi lahajedwali za Excel.Matokeo bora zaidi kwa kutumia PDFs za maandishi.PDF zilizochanganuliwa zinaauniwa kupitia OCR - usahihi unaweza kutofautiana.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Pakia faili ya PDF iliyo na majedwali na data unayotaka kutoa.`,
+      `Mfumo wetu utachanganua hati, kutambua data ya jedwali, na kuiumbiza kwa usahihi katika visanduku vya lahajedwali.`,
+      `Pakua faili yako ya Excel (XLSX) inayoweza kuhaririwa.`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Jedwali zangu za PDF zitaundwa kwa usahihi katika Excel?`,
+        "answer": `Ndiyo, zana yetu mahiri ya uchimbaji inatambua safu mlalo na safu wima, na kuhakikisha kwamba data yako ya jedwali imepangwa vizuri katika visanduku vya Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Je, inaweza kutoa data kutoka kwa PDF zilizochanganuliwa?`,
+        "answer": `Ndiyo, teknolojia yetu ya OCR inaweza kusoma majedwali kutoka kwa picha zilizochanganuliwa na kuzibadilisha kuwa lahajedwali za Excel zinazoweza kuhaririwa.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Je, fomula zimebebwa?`,
+        "answer": `PDF hazihifadhi fomula, data ghafi pekee.Faili ya Excel iliyotolewa itakuwa na thamani halisi zinazoonekana kwenye PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel hadi PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Rahisisha kusoma lahajedwali za EXCEL kwa kuzibadilisha kuwa PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Pakia lahajedwali yako ya Excel (XLS au XLSX).`,
+      `Zana yetu itaboresha mpangilio wa lahajedwali ili kutoshea kikamilifu kwenye kurasa za PDF bila kukata safu wima.`,
+      `Pakua hati iliyokamilishwa ya PDF.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Je, lahajedwali zangu pana zitakatwa?`,
+        "answer": `Kigeuzi chetu hukadiria na kuunda lahajedwali yako kwa akili ili kuhakikisha safu wima zinafaa kimantiki kwenye kurasa za PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Je, inabadilisha laha kazi zote?`,
+        "answer": `Ndiyo, laha kazi zote zinazotumika katika faili yako ya Excel zitabadilishwa kuwa kurasa zinazofuatana katika PDF ya mwisho.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Je, data yangu ya kifedha ni salama?`,
+        "answer": `100%.Tunatumia usimbaji fiche kutoka mwanzo hadi mwisho, na faili zote zitafutwa kabisa kwenye mifumo yetu ndani ya saa 2.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF kwa JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Badilisha kila ukurasa wa PDF kuwa JPG au toa picha zote zilizomo.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Pakia hati ya PDF unayotaka kubadilisha kuwa picha.`,
+      `Chagua ikiwa utatoa picha zilizopachikwa au ubadilishe kurasa zote za PDF kuwa JPG zenye msongo wa juu.`,
+      `Pakua JPG kibinafsi au kama faili ya ZIP iliyobanwa.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Je, ubora wa JPG utakuwa wa juu?`,
+        "answer": `Ndiyo, tunatoa na kubadilisha kurasa kwa ubora wa juu, kuhakikisha maandishi safi na picha wazi katika faili za JPG zinazosababisha.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Je! ninaweza kutoa picha tu kutoka kwa PDF?`,
+        "answer": `Kabisa.Unaweza kuchagua kutoa tu picha zilizopachikwa kwenye PDF badala ya kubadilisha ukurasa mzima.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Je, kuna kikomo kwa kurasa ngapi ninazoweza kubadilisha?`,
+        "answer": `Watumiaji bila malipo wanaweza kubadilisha hadi PDFs zenye thamani ya MB 10.Watumiaji wa Pro wanaweza kuchakata faili kubwa hadi 2GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG hadi PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Badilisha picha za JPG kuwa PDF kwa sekunde.Rekebisha mwelekeo na kando kwa urahisi.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Chagua picha moja au nyingi za JPG kutoka kwa kifaa chako.`,
+      `Buruta na uangushe ili kupanga upya mpangilio wao, rekebisha mwelekeo wa ukurasa, na uweke kando ikihitajika.`,
+      `Bofya 'Geuza' na upakue hati yako ya PDF iliyounganishwa.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Je, ninaweza kuchanganya JPG nyingi kwenye PDF moja?`,
+        "answer": `Ndiyo, pakia tu picha nyingi, zipange kwa mpangilio unaopendelea, na tutaziunganisha kuwa hati moja ya PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Je, picha zangu zitapoteza ubora?`,
+        "answer": `Hapana, tunahifadhi ubora asilia na ubora wa picha zako za JPG tunapozipachika kwenye PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Je, ninaweza kurekebisha kando na mwelekeo?`,
+        "answer": `Ndiyo, zana yetu hukuruhusu kubinafsisha mwelekeo wa ukurasa (picha au mlalo) na saizi za ukingo kabla ya kugeuza.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF hadi PowerPoint`,
+    "desc": `Geuza faili zako za PDF ziwe rahisi kuhariri maonyesho ya slaidi ya PPT na PPTX.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Pakia PDF unayotaka kugeuza kuwa wasilisho.`,
+      `Injini yetu ya AI itachanganua slaidi na kuzibadilisha kuwa fomati za PPTX zinazoweza kuhaririwa.`,
+      `Pakua wasilisho lako jipya la PowerPoint.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Je, maandishi katika PowerPoint yangu yatahaririwa?`,
+        "answer": `Ndiyo, maandishi, maumbo na picha zote zitaweza kuhaririwa kikamilifu katika faili inayotokana ya PPTX.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Je, inafanya kazi na mawasilisho yaliyochanganuliwa?`,
+        "answer": `Ndiyo, kwa kutumia OCR, tunaweza kutoa maandishi kutoka kwa slaidi zilizochanganuliwa na kuifanya iweze kuhaririwa katika PowerPoint.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Je, mpangilio wa slaidi umehifadhiwa?`,
+        "answer": `Teknolojia yetu ya hali ya juu ya ubadilishaji inahakikisha mpangilio wa PDF yako asili inalinganishwa kwa karibu iwezekanavyo katika PowerPoint.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint kwa PDF`,
+    "desc": `Fanya maonyesho ya slaidi ya PPT na PPTX yawe rahisi kutazamwa kwa kuyageuza kuwa PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Chagua faili yako ya PPT au PPTX.`,
+      `Zana itabadilisha slaidi zako papo hapo kuwa umbizo salama la zima la PDF.`,
+      `Pakua wasilisho lako kama PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Kwa nini ubadilishe PowerPoint kuwa PDF?`,
+        "answer": `Kubadilisha huhakikisha wasilisho lako linafanana kwenye kifaa chochote, hivyo kuzuia kukosa fonti au mpangilio uliovunjika wakati wa kuwasilisha kwenye kompyuta tofauti.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Je, mabadiliko yangu ya slaidi yamehifadhiwa?`,
+        "answer": `Hapana, PDF ni umbizo la hati tuli, kwa hivyo uhuishaji na mageuzi ya slaidi hayataendelezwa.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Je, vidokezo vya mzungumzaji vimejumuishwa?`,
+        "answer": `Hivi sasa, zana yetu inabadilisha taswira kuu za slaidi.Vidokezo vya mzungumzaji hazijajumuishwa katika towe la kawaida la PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF kwa HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Badilisha hati zako za PDF kuwa kurasa za wavuti za HTML kikamilifu.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Pakia faili yako ya PDF.`,
+      `Mfumo wetu utabadilisha hati kuwa HTML, CSS na picha zilizo tayari kwenye wavuti.`,
+      `Pakua faili ya ZIP iliyo na ukurasa wako mpya wa wavuti.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Je, HTML itajibu?`,
+        "answer": `HTML italingana kwa karibu na mpangilio tuli wa PDF yako, ikidumisha nafasi kamili kwa usahihi.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Je, picha hutolewa kiotomatiki?`,
+        "answer": `Ndiyo, picha zote zilizopachikwa hutolewa na kurejelewa ipasavyo katika msimbo wa HTML uliozalishwa.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Je, ninahitaji ujuzi wa kuandika ili kutumia hii?`,
+        "answer": `Sivyo kabisa.Utapokea faili ya HTML iliyo tayari kutumia ambayo unaweza kufungua papo hapo kwenye kivinjari chochote cha wavuti.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML hadi PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Badilisha kurasa za wavuti katika HTML hadi umbizo la PDF moja kwa moja kutoka kwa URL au faili.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Pakia faili yako ya HTML au weka URL ya ukurasa wa tovuti.`,
+      `Injini yetu ya uwasilishaji itapakia ukurasa, kutumia mitindo, na kuikamata kama hati ya PDF.`,
+      `Pakua PDF yako iliyoumbizwa kikamilifu.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Je, ninaweza kubadilisha URL za moja kwa moja kuwa PDF?`,
+        "answer": `Ndiyo, unaweza kuweka URL, na zana yetu itachukua ukurasa wa tovuti wa moja kwa moja na kuubadilisha kuwa PDF ya ubora wa juu.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Je, mitindo ya CSS inatumika?`,
+        "answer": `Kabisa.Injini yetu ya uwasilishaji inasaidia kikamilifu CSS, na kuhakikisha kuwa PDF inaonekana kama ukurasa wa moja kwa moja wa wavuti.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `Vipi kuhusu kurasa nzito za JavaScript?`,
+        "answer": `Zana yetu hutekeleza JavaScript kabla ya kunasa ukurasa, na kuhakikisha kuwa maudhui yanayobadilika yametolewa ipasavyo katika PDF ya mwisho.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF kwa Maandishi`,
+    "desc": `Toa maandishi kutoka kwa faili zako za PDF ili kuunda hati za TXT zinazoweza kuhaririwa.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Pakia hati yako ya PDF.`,
+      `Mfumo wetu utaondoa uumbizaji na kutoa maandishi safi, wazi.`,
+      `Pakua faili yako ghafi ya TXT.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Je, inatoa maandishi kutoka kwa picha?`,
+        "answer": `Ndiyo, ikiwa PDF ina picha zilizochanganuliwa, teknolojia yetu ya OCR itasoma maandishi na kuyajumuisha kwenye faili ya TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Je, umbizo limehifadhiwa?`,
+        "answer": `Hapana, zana hii huondoa uumbizaji wote ili kukupa maandishi ghafi, yasiyo na mtindo.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Je, data yangu ni salama?`,
+        "answer": `Ndiyo, faili zote husimbwa kwa njia fiche wakati wa kuchakatwa na kufutwa kiotomatiki ndani ya saa 2.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Unganisha PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Changanya PDF kwa mpangilio unaotaka na muunganisho rahisi zaidi wa PDF unaopatikana.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Chagua faili nyingi za PDF kutoka kwa kifaa chako.`,
+      `Buruta na udondoshe vijipicha ili kupanga faili katika mpangilio unaotaka.`,
+      `Bofya 'Unganisha' na upakue hati yako ya PDF iliyounganishwa.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Muunganisho wa PDF ni nini?`,
+        "answer": `Muunganisho wa PDF ni matumizi ambayo huchanganya faili nyingi za PDF kuwa hati moja inayoendelea.Watumiaji bila malipo wanaweza kuunganisha hadi faili 20 kwa wakati mmoja.Watumiaji wa Pro wanaweza kuunganisha idadi isiyo na kikomo ya hati.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Je, ninaweza kubadilisha mpangilio wa faili?`,
+        "answer": `Ndiyo!Baada ya kupakia, buruta tu na udondoshe vijipicha vya faili ili kuvipanga upya jinsi unavyotaka.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Je, kuunganisha kunapunguza ubora?`,
+        "answer": `Sivyo kabisa.Mchakato wa kuunganisha huhifadhi ubora asilia na umbizo la hati zako zote.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Gawanya PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Tenganisha ukurasa mmoja au seti nzima kwa ubadilishaji rahisi kuwa faili huru za PDF.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Pakia PDF unayotaka kugawanyika.`,
+      `Chagua ikiwa utatoa kurasa mahususi au ugawanye hati katika safu zisizobadilika.`,
+      `Pakua faili zako mpya za PDF zilizotenganishwa kama kumbukumbu ya ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Ninaweza kutoa ukurasa mmoja tu kutoka kwa PDF kubwa?`,
+        "answer": `Ndiyo, unaweza kubainisha kwa urahisi nambari moja ya ukurasa au safu maalum (k.m., kurasa 4-7) ili kutoa.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Je, faili zilizogawanyika zitahifadhi ubora asili?`,
+        "answer": `Ndiyo, kurasa za kibinafsi hutolewa bila dosari bila hasara yoyote katika azimio au ubora wa maandishi.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Ninawezaje kupakua faili nyingi za mgawanyiko?`,
+        "answer": `Unapogawanya hati katika sehemu nyingi, tutazifunga kwa urahisi katika faili moja ya ZIP kwa upakuaji rahisi.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Zungusha PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Zungusha PDF zako jinsi unavyozihitaji.Unaweza hata kuzungusha PDF nyingi mara moja.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Pakia hati yako ya PDF.`,
+      `Elea juu ya kurasa unazotaka kuzungusha na ubofye ikoni ya kuzungusha, au zungusha kurasa zote mara moja.`,
+      `Bofya tuma na upakue PDF yako iliyozungushwa kabisa.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Je, ninaweza kuzungusha kurasa mahususi pekee?`,
+        "answer": `Ndiyo, unaweza kuchagua kurasa binafsi na kuzizungusha digrii 90, 180, au 270 bila kuathiri hati nyingine.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Je, mzunguko huo ni wa kudumu?`,
+        "answer": `Ndiyo, mara tu unapopakua faili mpya, mabadiliko ya mwelekeo yanahifadhiwa kabisa kwenye metadata ya PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Je, ni salama kupakia hati za siri?`,
+        "answer": `Kabisa.Vipakiwa vyote husimbwa kwa njia fiche kupitia HTTPS na kufutwa kutoka kwa seva zetu saa 2 baada ya kuchakatwa.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Futa kurasa`,
+    "desc": `Ondoa kurasa kutoka kwa hati ya PDF kwa haraka.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Pakia faili yako ya PDF.`,
+      `Chagua kurasa unazotaka kuondoa kwa kubofya vijipicha vyao.`,
+      `Bofya 'Futa Kurasa' na upakue hati yako mpya iliyoratibiwa.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Nitajuaje kurasa za kufuta?`,
+        "answer": `Zana yetu hutengeneza vijipicha vya ubora wa juu vya kila ukurasa, huku kuruhusu kutambua na kuchagua kurasa halisi unazotaka kuondoa.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Je, ninaweza kufuta kurasa nyingi mara moja?`,
+        "answer": `Ndiyo, unaweza kubofya vijipicha vingi au kuandika katika safu ya kurasa ili kuondoa kurasa kadhaa kwa wakati mmoja.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Je, hati iliyosalia imeathirika?`,
+        "answer": `Hapana, kurasa zote zilizosalia zitahifadhi umbizo la asili, ubora na mwonekano wao.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Panga upya kurasa`,
+    "desc": `Badilisha mpangilio wa ukurasa wa hati yako ya PDF kupitia kuburuta na kuangusha.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Pakia hati yako ya PDF.`,
+      `Buruta tu na udondoshe vijipicha vya ukurasa ili kubadilisha mlolongo wao.`,
+      `Baada ya kupangwa, tumia mabadiliko na upakue PDF yako iliyopangwa upya.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Je, ni rahisi kupanga upya hati kubwa?`,
+        "answer": `Ndiyo, kiolesura chetu cha angavu cha kuburuta na kudondosha hukuruhusu kusogeza kurasa kwa haraka, hata katika hati kubwa.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Je, nitapoteza vipengele vyovyote vya maingiliano?`,
+        "answer": `Vipengele vingi vya kawaida vya mwingiliano huhifadhiwa, ingawa sehemu za fomu ngumu zinazounganisha kurasa nyingi zinaweza kuwa tofauti.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Je, ninaweza kutendua hatua kabla ya kuhifadhi?`,
+        "answer": `Ndiyo, unaweza kupanga upya kurasa mara nyingi upendavyo kabla ya kubofya kitufe cha mwisho cha mchakato.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Ongeza ukurasa tupu`,
+    "desc": `Chomeka ukurasa tupu popote ndani ya hati yako ya PDF.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Pakia faili yako ya PDF.`,
+      `Chagua eneo halisi ambapo ungependa kuingiza ukurasa mpya usio na kitu.`,
+      `Tekeleza mabadiliko na upakue PDF yako iliyosasishwa.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Kwa nini ninahitaji kuongeza ukurasa tupu?`,
+        "answer": `Kuongeza ukurasa usio na kitu ni muhimu kwa kuchapisha hati zenye pande mbili, kuingiza madokezo ya siku zijazo, au kusahihisha umbizo la kurasa.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Je, ninaweza kuongeza kurasa nyingi tupu?`,
+        "answer": `Ndiyo, unaweza kuingiza kurasa nyingi tupu kadri unavyohitaji, popote kwenye hati.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Je, ukurasa usio na kitu utalingana na saizi ya hati?`,
+        "answer": `Ndiyo, ukurasa mpya usio na kitu utalingana kiotomatiki na vipimo na mwelekeo wa kurasa zinazozunguka.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Finya PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Punguza ukubwa wa faili huku ukiboresha ubora wa juu zaidi wa PDF.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Pakia faili yako kubwa ya PDF.`,
+      `Chagua kiwango chako cha mgandamizo unachotaka (Mfinyazo Mkubwa, Unaopendekezwa, au Mfinyazo Chini).`,
+      `Pakua faili yako ya PDF iliyoboreshwa, ndogo zaidi.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Mfinyazo utaharibu ubora wa PDF yangu?`,
+        "answer": `Kanuni zetu za uboreshaji wa hali ya juu hupunguza saizi ya faili kwa kubana picha na kuondoa data isiyohitajika huku tukiweka maandishi makali na picha zionekane wazi.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Je, ni kiwango gani cha ukandamizaji ninapaswa kuchagua?`,
+        "answer": `Tunapendekeza 'Inapendekezwa' kwa usawa kamili.Tumia 'Extreme' tu ikiwa unahitaji haraka saizi ndogo zaidi ya faili kwa viambatisho vya barua pepe.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Ninaweza kushinikiza PDF ambayo tayari ni ndogo?`,
+        "answer": `Unaweza, lakini upunguzaji wa saizi ya faili utakuwa mdogo kwani data tayari imeboreshwa.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Rekebisha PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Rekebisha PDF iliyoharibika na urejeshe data kutoka kwa faili mbovu.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Pakia faili yako ya PDF iliyoharibika au iliyoharibika.`,
+      `Mfumo wetu utachanganua muundo wa faili na kujaribu kuunda upya data iliyovunjika.`,
+      `Pakua hati ya PDF iliyorekebishwa.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Je, PDF zote zilizoharibika zinaweza kusasishwa?`,
+        "answer": `Ingawa zana yetu ni nzuri sana katika kurekebisha hitilafu za kimuundo na vichwa vilivyovunjika, faili zilizoharibiwa vibaya na data ghafi zinazokosekana zinaweza zisiweze kurejeshwa kikamilifu.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Ukarabati huchukua muda gani?`,
+        "answer": `Faili nyingi huchambuliwa na kurekebishwa ndani ya sekunde chache, kulingana na ugumu wa uharibifu.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Je, data iliyo ndani ni salama?`,
+        "answer": `Ndiyo.Tunachakata urekebishaji kwa usalama katika wingu, na hati yako itafutwa kabisa muda mfupi baadaye.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Fanya maandishi katika PDF zilizochanganuliwa ziweze kuchaguliwa, kutafutwa na kuhaririwa.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Pakia hati yako ya PDF iliyochanganuliwa.`,
+      `Chagua lugha ya maandishi ndani ya hati kwa usahihi bora.`,
+      `Pakua PDF yako mpya, inayoweza kutafutwa kabisa na inayoweza kuchaguliwa.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `OCR ni nini?`,
+        "answer": `OCR stands for Optical Character Recognition.Ni teknolojia inayosoma maandishi ndani ya picha au hati zilizochanganuliwa na kuzibadilisha kuwa maandishi ya kompyuta yanayoweza kuchaguliwa na kutafutwa.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Je, OCR inafanya kazi kwenye maandishi yaliyoandikwa kwa mkono?`,
+        "answer": `Injini yetu ya OCR ni sahihi sana kwa maandishi yaliyochapishwa.Maandishi yaliyoandikwa kwa mkono yanaweza kutoa matokeo tofauti kulingana na uhalali.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Ninaweza kunakili maandishi kutoka kwa hati ya OCR'd?`,
+        "answer": `Kabisa.Baada ya kuchakatwa, unaweza kuangazia, kunakili, na kubandika maandishi moja kwa moja kutoka kwa PDF kama hati ya kawaida.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Bapa PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Unganisha safu, fomu na vidokezo vyote kwenye safu moja isiyoweza kuhaririwa.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Pakia PDF iliyo na fomu, safu, au maelezo.`,
+      `Mfumo wetu utaunganisha kabisa vipengele vyote vya kuona kwenye safu moja bapa.`,
+      `Pakua PDF bapa, iliyo tayari kuchapishwa.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Kwa nini ninafaa kubandika PDF?`,
+        "answer": `Kusawazisha kufuli za PDF katika data ya fomu, huzuia uhariri zaidi wa vidokezo, na kuhakikisha hati inachapishwa jinsi inavyoonekana kwenye skrini.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Je, PDF iliyo bapa inaweza kubatilishwa?`,
+        "answer": `Hapana, kujaa ni mchakato wa kudumu.Tunapendekeza uhifadhi nakala ya PDF yako asili inayoingiliana.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Je, gorofa hupunguza saizi ya faili?`,
+        "answer": `Mara nyingi, ndiyo.Kwa kuunganisha tabaka na kuondoa nyanja za fomu zinazoingiliana, muundo wa jumla unakuwa rahisi na mdogo.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Linda PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Simba PDF yako kwa nenosiri ili kuzuia ufikiaji usioidhinishwa.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Pakia PDF unayotaka kulinda.`,
+      `Andika nenosiri kali na uthibitishe.`,
+      `Pakua faili yako mpya ya PDF iliyosimbwa kwa njia fiche.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Ni aina gani ya usimbaji fiche inatumika?`,
+        "answer": `Tunatumia usimbaji fiche thabiti wa AES 256-bit, ambao ndio kiwango cha sekta ya kupata hati nyeti na za siri.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Je, TheyLovePDF wanaweza kurejesha nenosiri langu nikisahau?`,
+        "answer": `Hapana. Nenosiri lako halihifadhiwi kamwe kwenye seva zetu.Ukiipoteza, hati haiwezi kusimbwa.Tafadhali weka salama!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Je, kulinda PDF huzuia uchapishaji?`,
+        "answer": `Ndiyo, usimbaji fiche hufunga hati kufunguliwa, kuchapishwa au kuhaririwa bila nenosiri sahihi.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Fungua PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Ondoa usalama wa nenosiri la PDF, kukupa uhuru wa kutumia PDF zako unavyotaka.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Pakia PDF yako iliyolindwa na nenosiri.`,
+      `Ikiwa faili ina 'nenosiri la mmiliki' linalozuia uhariri, tutaiondoa papo hapo.Ikiwa ina 'nenosiri la mtumiaji' linalozuia ufunguzi, lazima uiweke kwanza.`,
+      `Pakua PDF yako ambayo haijafunguliwa.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Je, unaweza kufungua PDF bila nenosiri?`,
+        "answer": `Tunaweza kuondoa 'vizuizi vya kuhariri/kuchapisha' (manenosiri ya mmiliki) kwa urahisi bila kuhitaji nenosiri.Hata hivyo, ikiwa faili inahitaji nenosiri ili tu kuifungua (nenosiri la mtumiaji), lazima uipe.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Je, ni halali kufungua PDF?`,
+        "answer": `Unapaswa kuondoa tu usalama kutoka kwa hati ambazo unamiliki kihalali au una ruhusa ya kurekebisha.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Je, kufungua kutabadilisha maudhui ya hati?`,
+        "answer": `Hapana, yaliyomo, uumbizaji, na ubora hubakia bila kuguswa kabisa.Safu ya usalama pekee ndiyo inayoondolewa.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Rekebisha PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Ondoa kabisa taarifa nyeti au data iliyofichwa kwenye PDF zako.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Pakia faili yako ya PDF.`,
+      `Chora visanduku vyeusi juu ya maandishi nyeti, picha au maelezo ya kibinafsi.`,
+      `Tekeleza marekebisho ili kusugua kabisa data, kisha upakue faili.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Je, maandishi yaliyorekebishwa yamepita kweli?`,
+        "answer": `Ndiyo.Tofauti na kuchora tu umbo jeusi juu ya maandishi, zana yetu ya kurekebisha upya hufuta kabisa data ya maandishi ya msingi kwa hivyo haiwezi kunakiliwa au kusomwa na mashine.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Je, ninaweza kurekebisha picha pia?`,
+        "answer": `Kabisa.Unaweza kuchagua eneo lolote la ukurasa, ikijumuisha michoro na picha, ili kufutwa kabisa.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Je, urekebishaji unaweza kutenduliwa?`,
+        "answer": `Hapana. Kwa usalama wako, urekebishaji upya huharibu kabisa data iliyofichwa.Weka nakala rudufu ambayo haijarekebishwa kila wakati ikiwa inahitajika.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Saini PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Jiandikishe au uombe saini za kielektroniki kutoka kwa wengine.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Pakia hati inayohitaji saini.`,
+      `Unda sahihi yako kwa kuchora, kuandika, au kupakia picha.`,
+      `Weka sahihi yako kwenye hati, bofya tuma, na uipakue.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Je, sahihi za kielektroniki ni halali?`,
+        "answer": `Ndiyo, sahihi za kielektroniki zilizoundwa na TheyLovePDF zinashurutishwa kisheria katika nchi na mamlaka nyingi.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Je, ninaweza kuhifadhi saini yangu kwa ajili ya baadaye?`,
+        "answer": `Ndiyo, ukifungua akaunti, unaweza kuhifadhi saini yako kwa usalama ili uingie haraka, kwa kubofya 1 katika siku zijazo.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Je, ninaweza kuongeza tarehe za maandishi na vianzilishi?`,
+        "answer": `Kabisa.Pamoja na sahihi yako, unaweza kuburuta na kuacha kwa urahisi tarehe, herufi za kwanza na sehemu maalum za maandishi.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Omba saini`,
+    "desc": `Tuma hati kwa wateja ili zisainiwe kisheria mtandaoni.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Pakia PDF unayohitaji isainiwe.`,
+      `Ongeza anwani za barua pepe za wapokeaji na uwape sehemu za sahihi.`,
+      `Tuma ombi.Tutawatumia barua pepe kiungo salama cha kusaini hati mtandaoni.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Je, wapokeaji wanahitaji akaunti ili kutia sahihi?`,
+        "answer": `Hapana, wapokeaji wanaweza kutia sahihi hati moja kwa moja kutoka kwa kiungo chao cha barua pepe bila kuhitaji kuunda akaunti ya TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Nitajuaje wakati imetiwa saini?`,
+        "answer": `Utapokea arifa ya barua pepe ya kiotomatiki pindi wahusika wote watakapokamilisha kusaini hati.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Je, kuna njia ya ukaguzi?`,
+        "answer": `Ndiyo, watumiaji wa Pro hupokea ufuatiliaji wa kina unaoeleza anwani za IP na mihuri ya muda kwa utii kamili wa kisheria.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Alama ya cheti`,
+    "desc": `Ongeza sahihi ya dijitali ya kriptografia kwenye PDF yako.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Pakia PDF yako na faili yako ya cheti cha dijiti (.pfx au .p12).`,
+      `Ingiza nenosiri la cheti.`,
+      `Tumia sahihi ya kriptografia na upakue PDF iliyothibitishwa.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Saini ya cheti ni nini?`,
+        "answer": `Tofauti na sahihi ya kielektroniki inayoonekana, saini ya cheti huweka heshi ya siri kwenye hati, ikithibitisha kihisabati uhalisi wake na kuhakikisha kuwa haijabadilishwa.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Je, unahifadhi nenosiri langu la cheti?`,
+        "answer": `Kamwe.Nenosiri lako huhifadhiwa kwenye kumbukumbu ya muda tu wakati halisi wa kusaini na huharibiwa mara moja.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Je, watu wanaweza kuthibitisha sahihi?`,
+        "answer": `Ndiyo, inapofunguliwa katika visomaji vya kawaida vya PDF kama vile Adobe Acrobat, alama ya tiki ya kijani itaonekana inayoonyesha kuwa hati imethibitishwa kidijitali na haijabadilishwa.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Piga gumzo na PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Zungumza na PDF yako.Uliza maswali, pata muhtasari, na utoe maarifa papo hapo kwa kutumia AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Pakia hati yako ndefu au changamano ya PDF.`,
+      `Andika swali katika kisanduku cha gumzo, kama vile 'Fanya muhtasari wa sura ya 2' au 'Hoja kuu ni ipi?'`,
+      `AI yetu itasoma hati papo hapo na kukupa jibu sahihi.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Je! Gumzo na PDF hufanya kazi vipi?`,
+        "answer": `Tunatumia Miundo ya hali ya juu ya Lugha Kubwa (LLM) kuchanganua maandishi ya hati yako, kuelewa muktadha wake, na kujibu maswali yoyote unayouliza kulingana na yaliyomo kwenye hati.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Je, inaweza kusoma hati zilizochanganuliwa?`,
+        "answer": `Ikiwa hati ni picha tu, lazima uiendeshe kupitia zana yetu ya OCR kwanza.Ikiwa ina maandishi yanayoweza kuchaguliwa, AI inaweza kuisoma mara moja.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Je, hati zangu zinatumika kutoa mafunzo kwa AI?`,
+        "answer": `Sivyo kabisa.Faragha yako ndiyo kipaumbele chetu.Hati huchakatwa katika mazingira salama na hazitumiwi kamwe kufunza miundo ya umma ya AI.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Hariri PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Ongeza maandishi, picha, maumbo au maelezo ya bure kwa hati ya PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Maarufu` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Pakia PDF unayotaka kurekebisha.`,
+      `Tumia upau wa vidhibiti kuongeza maandishi, kuingiza picha, kuchora maumbo, au kuweka rangi nyeupe kwenye maeneo yaliyopo.`,
+      `Hifadhi mabadiliko yako na upakue PDF iliyosasishwa.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Ninaweza kubadilisha maandishi yaliyopo kwenye PDF?`,
+        "answer": `Kwa sasa, unaweza kutumia zana ya 'whiteout' kufunika maandishi ya zamani na kuandika maandishi mapya juu yake.Uhariri wa maandishi asilia ni kipengele changamani sana tunachoendeleza kikamilifu.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Je! ninaweza kuongeza picha kwenye PDF?`,
+        "answer": `Ndiyo, unaweza kupakia na kuweka mhuri picha za PNG au JPG kwa urahisi mahali popote kwenye hati yako.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Je, kuhariri kunapunguza ubora wa hati?`,
+        "answer": `Hapana, mhariri wetu anaongeza maelezo yako juu ya muundo wa hati uliopo bila kubana tena picha asili au maandishi.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Watermark PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Piga picha au maandishi juu ya PDF yako kwa sekunde.Chagua uchapaji, uwazi na msimamo.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Pakia faili yako ya PDF.`,
+      `Andika maandishi yako ya watermark au pakia picha ya nembo.Rekebisha uwazi, mzunguko na uwekaji.`,
+      `Bofya tuma na upakue hati yako iliyotiwa alama.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Je! ninaweza kuweka alama kwenye kurasa zote mara moja?`,
+        "answer": `Ndiyo, kwa chaguo-msingi watermark yako itatumika mara kwa mara katika kila ukurasa wa hati.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Je, ninaweza kurekebisha uwazi?`,
+        "answer": `Kabisa.Unaweza kufanya watermark kuzimia sana ili isisumbue kutoka kwa hati, au isiyo wazi kabisa kwa mwonekano wa juu zaidi.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Je, watermark inaweza kuondolewa?`,
+        "answer": `Tunasawazisha alama ya maji kwenye muundo wa hati ili kuifanya iwe ngumu iwezekanavyo kuondoa, kuhakikisha kuwa mali yako ya kiakili inalindwa.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Fomu za PDF`,
+    "desc": `Jaza fomu za PDF haraka na kwa usahihi mtandaoni.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Pakia fomu ya mwingiliano ya PDF.`,
+      `Bofya sehemu za maandishi, visanduku vya kuteua, au vitufe vya redio ili kujaza maelezo yako.`,
+      `Pakua fomu iliyojazwa, iliyojazwa.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Je, ninaweza kuhifadhi fomu iliyojazwa kiasi?`,
+        "answer": `Ikiwa una akaunti ya Pro, vipindi vyako huhifadhiwa kiotomatiki, hivyo kukuwezesha kurejea na kumaliza kujaza fomu baadaye.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Inafanya kazi na fomu zote za PDF?`,
+        "answer": `Zana yetu inaauni AcroForm za kawaida, ambazo zinaunda 99% ya PDFs zinazoingiliana.Fomu za zamani za XFA zinaweza kuwa na usaidizi mdogo.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Je, ninaweza kubandika fomu baada ya kuijaza?`,
+        "answer": `Ndiyo, ikishapakuliwa, unaweza kuiendesha kupitia zana yetu ya 'Flatten PDF' ili kufunga data ili isiweze kubadilishwa na mpokeaji.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Ongeza nambari za ukurasa`,
+    "desc": `Ongeza nambari za ukurasa kwenye PDF kwa urahisi.Chagua nafasi zako, vipimo, uchapaji.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Bure` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Pakia hati yako.`,
+      `Chagua nafasi (k.m., chini kulia), mtindo wa fonti, na nambari ya kuanzia.`,
+      `Tumia nambari na upakue PDF yako iliyoumbizwa kikamilifu.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Je, ninaweza kuruka ukurasa wa jalada?`,
+        "answer": `Ndiyo!Unaweza kubainisha ni ukurasa gani uwekaji nambari unapaswa kuanza, kukuruhusu kuweka kurasa za mada zikiwa safi.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Je, ninaweza kubinafsisha umbizo?`,
+        "answer": `Kabisa.Unaweza kuchagua miundo kama vile 'Ukurasa wa 1', '1 kati ya 10', au '1' tu, na uchague fonti, saizi na rangi.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Mpangilio ni sahihi?`,
+        "answer": `Ndiyo, zana yetu hukokotoa kando kamili ili kuhakikisha nambari za ukurasa wako zimepangwa kikamilifu kwenye kila ukurasa mmoja.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Fafanua PDF`,
+    "desc": `Angazia, pigia mstari, upitishe maandishi na uongeze maoni.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Mpya` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Pakia PDF yako.`,
+      `Tumia kiangazia, kupigia mstari, upekee, na zana za vidokezo vinavyonata ili kukagua hati.`,
+      `Pakua faili ya maelezo ili kushiriki na timu yako.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Ufafanuzi wangu utaonekana katika visomaji vya kawaida?`,
+        "answer": `Ndiyo, tunatumia itifaki za kawaida za ufafanuzi wa PDF, kumaanisha vivutio na madokezo yako yataonekana katika Adobe Acrobat, Chrome na Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Je, ninaweza kubadilisha rangi zinazoangaziwa?`,
+        "answer": `Ndiyo, unaweza kuchagua kutoka kwa ubao mpana wa rangi ili kuweka rangi madokezo na vivutio vyako.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Je, ni rahisi kufuta kidokezo?`,
+        "answer": `Rahisi sana.Bofya tu kwenye kidokezo chochote ulichotengeneza na ubonyeze kitufe cha kufuta ili kuiondoa papo hapo.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Uchunguzi wa wizi`,
+    "desc": `Linganisha hati yako dhidi ya mabilioni ya kurasa za wavuti na hifadhidata za kitaaluma.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Pakia insha au hati unayotaka kuthibitisha.`,
+      `Injini yetu ya AI itachanganua mabilioni ya kurasa za wavuti na hifadhidata za kitaaluma ili kupata zinazolingana.`,
+      `Kagua ripoti ya kina ya ufanano inayoangazia maandishi yoyote yaliyonakiliwa.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Kikagua wizi ni sahihi kwa kiasi gani?`,
+        "answer": `Ni sahihi sana.Tunatumia AI ya kiwango cha biashara ambayo hurejelea maandishi yako dhidi ya hifadhidata kubwa, iliyosasishwa kila mara ya maudhui ya mtandaoni.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Je, inaangalia dhidi ya karatasi za masomo za nje ya mtandao?`,
+        "answer": `Hukagua dhidi ya majarida kuu ya kitaaluma yenye ufikiaji huria na vyanzo vilivyotajwa sana vinavyopatikana mtandaoni.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Je, hati yangu imehifadhiwa kwenye hifadhidata?`,
+        "answer": `Hapana. Tofauti na mifumo ya baadhi ya vyuo vikuu, hatuongezi hati yako kwenye hifadhidata ya kimataifa, tukihakikisha kwamba kazi yako asili inasalia kuwa yako kabisa.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Fanya muhtasari wa PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Tengeneza muhtasari wa haraka na sahihi wa hati ndefu kwa sekunde.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Mpya` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Pakia hati ndefu, ripoti au sura ya kitabu.`,
+      `Bofya 'Fanya muhtasari' ili kuruhusu AI yetu kuchanganua dhana za msingi.`,
+      `Soma muhtasari wa pointi na upakue ikiwa inahitajika.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Je, inaweza kufanya muhtasari wa kitabu kizima?`,
+        "answer": `AI ina uwezo wa hali ya juu, lakini kwa matokeo bora na maelezo ya juu, tunapendekeza muhtasari wa sura moja au sehemu kwa wakati mmoja.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Je, muhtasari unanasa takwimu muhimu?`,
+        "answer": `Ndiyo, LLM yetu imeagizwa kutambua na kuangazia pointi muhimu za data, takwimu na hoja za msingi.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Lugha gani zinaungwa mkono?`,
+        "answer": `Muhtasari hufanya kazi vyema zaidi katika Kiingereza, lakini kwa asili inasaidia na kuelewa zaidi ya lugha 50 za kimataifa.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Tafsiri PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Tafsiri hati kamili huku ukihifadhi umbizo asili na mpangilio.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Mpya` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Pakia hati yako.`,
+      `Chagua lugha asili na lugha lengwa unayotaka kutafsiri.`,
+      `Pakua PDF iliyotafsiriwa upya, kamili na umbizo lake asili.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Je, mpangilio utavunjika baada ya tafsiri?`,
+        "answer": `Injini yetu ya hali ya juu inajaribu kuhifadhi mpangilio kamili, ingawa upanuzi wa maandishi (k.m., Kiingereza hadi Kijerumani) unaweza kusababisha mabadiliko madogo yasiyoweza kuepukika.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Tafsiri ni sahihi kadiri gani?`,
+        "answer": `Tunatumia Tafsiri ya kisasa ya Mashine ya Neural (NMT) inayoendeshwa na AI, ambayo hutoa tafsiri sahihi zaidi, zinazofahamu muktadha badala ya tafsiri ngumu ya neno kwa neno.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Je, ninaweza kutafsiri hati zilizochanganuliwa?`,
+        "answer": `Ndiyo!Ukipakia hati iliyochanganuliwa, mfumo wetu utaendesha OCR kiotomatiki ili kusoma maandishi kabla ya kuyatafsiri.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Dondoo data`,
+    "desc": `Toa majedwali, thamani na huluki kwa busara kutoka kwa ankara na fomu.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Mpya` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Pakia ankara, risiti au fomu zilizopangwa.`,
+      `AI yetu itatambua sehemu muhimu kama Tarehe, Jumla, Majina na Anwani.`,
+      `Pakua data iliyotolewa kama faili safi ya CSV au JSON.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `Uchimbaji wa data unatumika kwa nini?`,
+        "answer": `Ni kamili kwa uhasibu na utawala.Badala ya kuandika mwenyewe data kutoka kwa ankara 100, AI yetu huifanya kiotomatiki kwa sekunde.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Je, hati inahitaji mpangilio maalum?`,
+        "answer": `Hapana!AI yetu ina akili ya kutosha kupata 'Jumla ya Kiasi' iwe iko juu, chini, au katikati ya ukurasa.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Je, ninaweza kutoa data kwa Excel?`,
+        "answer": `Ndiyo, data iliyotolewa inaweza kusafirishwa moja kwa moja kama faili ya CSV, ambayo inafunguliwa kikamilifu katika Microsoft Excel au Majedwali ya Google.`
+      },
     ]
-  }
+  },
 ];

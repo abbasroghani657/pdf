@@ -1,497 +1,468 @@
+// Auto-generated blog translation for vi
 export const BLOG_POSTS_VI = [
   {
-    slug: "how-to-compress-pdf-mac-2026",
-    title: "How to Compress a PDF on Mac (2026 Guide)",
-    date: "2026-06-20",
-    excerpt: "Learn the fastest and easiest ways to reduce your PDF file size on a Mac without losing quality. We compare Preview, Automator, and Web tools.",
-    content: `
-      <p>Dealing with large PDF files on your Mac can be frustrating, especially when you need to email a document and it exceeds the standard 25MB attachment size limit. Whether you're a student submitting an assignment or a professional sending a portfolio, knowing how to properly compress a PDF is an essential skill.</p>
-      
-      <h2>Method 1: The Built-in Preview App (Free but Basic)</h2>
-      <p>Apple's Preview app comes with a built-in "Quartz Filter" that can shrink your PDFs. It's fast and requires no internet connection.</p>
-      <ol>
-        <li>Open your PDF using the <strong>Preview</strong> app.</li>
-        <li>Click on <strong>File</strong> in the top menu bar, then select <strong>Export</strong> (Don't select "Export as PDF").</li>
-        <li>In the export window, look for the <strong>Quartz Filter</strong> dropdown menu.</li>
-        <li>Select <strong>Reduce File Size</strong> and click Save.</li>
-      </ol>
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 rounded-r-lg">
-        <p class="text-red-700 m-0"><strong>Warning:</strong> While this method is free, Apple's default compression algorithm is incredibly aggressive. It often ruins the quality of images and makes vector text blurry. We do not recommend this for professional documents.</p>
-      </div>
+    slug: `how-to-compress-pdf-mac-2026`,
+    title: `Cách nén tệp PDF trên máy Mac (Hướng dẫn năm 2026)`,
+    date: `2026-06-20`,
+    excerpt: `Tìm hiểu các cách nhanh nhất và dễ dàng nhất để giảm kích thước tệp PDF của bạn trên máy Mac mà không làm giảm chất lượng.Chúng tôi so sánh các công cụ Xem trước, Tự động hóa và Web.`,
+    content: `<p>Việc xử lý các tệp PDF lớn trên máy Mac có thể khiến bạn khó chịu, đặc biệt là khi bạn cần gửi tài liệu qua email và tài liệu đó vượt quá giới hạn kích thước tệp đính kèm tiêu chuẩn 25MB.Cho dù bạn là sinh viên đang nộp bài tập hay một chuyên gia gửi hồ sơ năng lực thì việc biết cách nén tệp PDF đúng cách là một kỹ năng cần thiết.</p>
 
-      <h2>Method 2: Using TheyLovePDF (Professional & High Quality)</h2>
-      <p>If you want to maintain the crisp quality of your text and images while significantly reducing the file size, using a dedicated AI-powered compression tool is the best option.</p>
-      <ol>
-        <li>Go to the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool on TheyLovePDF</a>.</li>
-        <li>Drag and drop your PDF file onto the page.</li>
-        <li>Select your compression level:
-          <ul class="mt-2 space-y-1 text-gray-600">
-            <li><strong>Extreme Compression:</strong> Best for emailing (lowest quality).</li>
-            <li><strong>Recommended Compression:</strong> The sweet spot between size and quality.</li>
-            <li><strong>Less Compression:</strong> High quality, perfect for printing.</li>
-          </ul>
-        </li>
-        <li>Click <strong>Compress PDF</strong> and download your optimized file.</li>
-      </ol>
-      <p>Our intelligent compression algorithms strip out unnecessary metadata and compress images using modern web standards, ensuring your document looks exactly the same while taking up a fraction of the storage space!</p>
+<h2>Phương pháp 1: Ứng dụng xem trước tích hợp (Miễn phí nhưng cơ bản)</h2>
+<p>Ứng dụng Preview của Apple đi kèm với "Bộ lọc thạch anh" tích hợp có thể thu nhỏ tệp PDF của bạn.Nó nhanh và không cần kết nối internet.</p>
+<ol>
+<li>Mở tệp PDF của bạn bằng ứng dụng <strong>Xem trước</strong>.</li>
+<li>Nhấp vào <strong>Tệp</strong> ở thanh menu trên cùng, sau đó chọn <strong>Xuất</strong> (Không chọn "Xuất dưới dạng PDF").</li>
+<li>Trong cửa sổ xuất, hãy tìm menu thả xuống <strong>Bộ lọc thạch anh</strong>.</li>
+<li>Chọn <strong>Giảm kích thước tệp</strong> và nhấp vào Lưu.</li>
+</ol>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 my-6 round-r-lg">
+<p class="text-red-700 m-0"><strong>Cảnh báo:</strong> Mặc dù phương pháp này miễn phí nhưng thuật toán nén mặc định của Apple cực kỳ mạnh mẽ.Nó thường làm hỏng chất lượng hình ảnh và làm cho văn bản vector bị mờ.Chúng tôi không khuyến nghị điều này đối với các tài liệu chuyên nghiệp.</p>
+</div>
 
-      <h2>Conclusion</h2>
-      <p>While Mac's built-in tools are great in an offline pinch, they severely lack the granular control required for modern documents. For anything important, always rely on a dedicated compression engine.</p>
-    `
+<h2>Phương pháp 2: Sử dụng TheyLovePDF (Chuyên nghiệp & Chất lượng cao)</h2>
+<p>Nếu bạn muốn duy trì chất lượng sắc nét của văn bản và hình ảnh trong khi giảm đáng kể kích thước tệp thì sử dụng công cụ nén chuyên dụng hỗ trợ AI là lựa chọn tốt nhất.</p>
+<ol>
+<li>Truy cập <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Công cụ nén PDF trên TheyLovePDF</a>.</li>
+<li>Kéo và thả tệp PDF của bạn vào trang.</li>
+<li>Chọn mức độ nén của bạn:
+<ul class="mt-2 space-y-1 text-gray-600">
+<li><strong>Nén cực độ:</strong> Tốt nhất để gửi email (chất lượng thấp nhất).</li>
+<li><strong>Nén được đề xuất:</strong> Điểm cân bằng giữa kích thước và chất lượng.</li>
+<li><strong>Ít nén hơn:</strong> Chất lượng cao, hoàn hảo cho việc in ấn.</li>
+</ul>
+</li>
+<li>Nhấp vào <strong>Nén PDF</strong> và tải xuống tệp được tối ưu hóa của bạn.</li>
+</ol>
+<p>Các thuật toán nén thông minh của chúng tôi loại bỏ siêu dữ liệu không cần thiết và nén hình ảnh bằng các tiêu chuẩn web hiện đại, đảm bảo tài liệu của bạn trông giống hệt nhau trong khi chỉ chiếm một phần dung lượng lưu trữ!</p>
+
+<h2>Kết luận</h2>
+<p>Mặc dù các công cụ tích hợp sẵn của Mac rất hữu ích trong tình huống ngoại tuyến nhưng chúng thiếu khả năng kiểm soát chi tiết cần thiết cho các tài liệu hiện đại.Đối với bất kỳ điều gì quan trọng, hãy luôn dựa vào công cụ nén chuyên dụng.</p>`
   },
   {
-    slug: "merge-pdf-files-iphone",
-    title: "How to Merge Multiple PDF Files on Your iPhone",
-    date: "2026-06-19",
-    excerpt: "Discover the simplest way to combine several PDF documents into one single file directly from your iOS device.",
-    content: `
-      <p>With iPhones becoming our primary devices for work and study, knowing how to merge PDF files on the go is an essential skill. Whether you are compiling receipts for an expense report or merging lecture notes, here is exactly how you can do it without a computer.</p>
-      
-      <h2>The Challenge with iOS</h2>
-      <p>While iOS has a robust built-in Files app, it doesn't offer a native, straightforward way to select multiple PDFs and stitch them together seamlessly. You can scan documents into a single PDF, but merging existing files is surprisingly difficult.</p>
-      
-      <h2>The Solution: TheyLovePDF Web App</h2>
-      <p>You don't need to download any heavy, subscription-based apps from the App Store. You can do this directly from Safari or Chrome using our cloud architecture.</p>
-      
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-8">
-        <h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Step-by-Step Guide</h3>
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari on your iPhone and navigate to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">TheyLovePDF Merge Tool</a>.</li>
-          <li>Tap the massive <strong>Select PDF files</strong> button.</li>
-          <li>Choose the files from your iPhone's <em>Files</em> app or your <em>Photo Library</em>. You can select multiple files at once.</li>
-          <li>Once uploaded, you will see a visual grid of your files. Press and hold any file to drag and reorder them exactly how you want.</li>
-          <li>Tap <strong>Merge PDF</strong>. Our servers will process the files in milliseconds.</li>
-          <li>Tap <strong>Download</strong> and save the new, combined document straight to your device.</li>
-        </ol>
-      </div>
+    slug: `merge-pdf-files-iphone`,
+    title: `Cách hợp nhất nhiều tệp PDF trên iPhone của bạn`,
+    date: `2026-06-19`,
+    excerpt: `Khám phá cách đơn giản nhất để kết hợp nhiều tài liệu PDF thành một tệp duy nhất trực tiếp từ thiết bị iOS của bạn.`,
+    content: `<p>Với việc iPhone trở thành thiết bị chính cho công việc và học tập của chúng ta, việc biết cách hợp nhất các tệp PDF khi đang di chuyển là một kỹ năng thiết yếu.Cho dù bạn đang biên soạn biên lai cho báo cáo chi phí hay hợp nhất các ghi chú bài giảng, đây chính xác là cách bạn có thể thực hiện mà không cần máy tính.</p>
 
-      <h2>Why Not Use an App?</h2>
-      <p>A lot of PDF apps on the App Store are free to download, but they ask you for money as soon as you try to merge files. By using a cloud tool, you avoid these App Store fees and save storage space on your phone.</p>
-      <p>It's that simple, fast, and entirely secure!</p>
-    `
+<h2>Thử thách với iOS</h2>
+<p>Mặc dù iOS có ứng dụng Tệp tích hợp sẵn mạnh mẽ nhưng ứng dụng này không cung cấp cách nguyên gốc, đơn giản để chọn nhiều tệp PDF và ghép chúng lại với nhau một cách liền mạch.Bạn có thể quét tài liệu thành một tệp PDF duy nhất, nhưng việc hợp nhất các tệp hiện có lại cực kỳ khó khăn.</p>
+
+<h2>Giải pháp: Ứng dụng web TheyLovePDF</h2>
+<p>Bạn không cần tải xuống bất kỳ ứng dụng nặng, dựa trên đăng ký nào từ App Store.Bạn có thể thực hiện việc này trực tiếp từ Safari hoặc Chrome bằng kiến trúc đám mây của chúng tôi.</p>
+
+<div class="bg-gray-50 viền border-gray-200 p-6 round-xl my-8">
+<h3 class="text-lg font-bold text-gray-900 mt-0 mb-4">Hướng dẫn từng bước</h3>
+<ol class="space-y-3 mb-0">
+<li>Mở Safari trên iPhone của bạn và điều hướng đến <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Công cụ hợp nhất TheyLovePDF</a>.</li>
+<li>Nhấn vào nút <strong>Chọn tệp PDF</strong> lớn.</li>
+<li>Chọn tệp từ ứng dụng <em>Tệp</em> trên iPhone hoặc <em>Thư viện ảnh</em> của bạn.Bạn có thể chọn nhiều tệp cùng một lúc.</li>
+<li>Sau khi tải lên, bạn sẽ thấy một lưới trực quan các tệp của mình.Nhấn và giữ bất kỳ tệp nào để kéo và sắp xếp lại chúng theo cách bạn muốn.</li>
+<li>Nhấn vào <strong>Hợp nhất PDF</strong>.Máy chủ của chúng tôi sẽ xử lý tệp trong một phần nghìn giây.</li>
+<li>Nhấn vào <strong>Tải xuống</strong> và lưu tài liệu kết hợp mới vào thẳng thiết bị của bạn.</li>
+</ol>
+</div>
+
+<h2>Tại sao không sử dụng ứng dụng?</h2>
+<p>Rất nhiều ứng dụng PDF trên App Store được tải xuống miễn phí nhưng chúng sẽ yêu cầu bạn trả tiền ngay khi bạn cố gắng hợp nhất các tệp.Bằng cách sử dụng công cụ đám mây, bạn tránh được các khoản phí này trên App Store và tiết kiệm dung lượng lưu trữ trên điện thoại của mình.</p>
+<p>Thật đơn giản, nhanh chóng và hoàn toàn an toàn!</p>`
   },
   {
-    slug: "password-protect-pdf-guide",
-    title: "How to Secure Your PDF with a Password",
-    date: "2026-06-18",
-    excerpt: "Protect sensitive information by adding a secure, unbreakable 256-bit AES encryption password to your PDF files.",
-    content: `
-      <p>In today's digital age, data privacy is more critical than ever. Whether you're sending financial statements, medical records, or a confidential business contract, leaving a PDF unprotected is a massive security risk.</p>
-      <p>In this guide, we'll show you how to lock down your PDF documents using military-grade encryption.</p>
+    slug: `password-protect-pdf-guide`,
+    title: `Cách bảo mật tệp PDF của bạn bằng mật khẩu`,
+    date: `2026-06-18`,
+    excerpt: `Bảo vệ thông tin nhạy cảm bằng cách thêm mật khẩu mã hóa AES 256-bit an toàn, không thể phá vỡ vào tệp PDF của bạn.`,
+    content: `<p>Trong thời đại kỹ thuật số ngày nay, quyền riêng tư dữ liệu trở nên quan trọng hơn bao giờ hết.Cho dù bạn đang gửi báo cáo tài chính, hồ sơ y tế hay hợp đồng kinh doanh bí mật thì việc để tệp PDF không được bảo vệ là một rủi ro bảo mật lớn.</p>
+<p>Trong hướng dẫn này, chúng tôi sẽ chỉ cho bạn cách khóa tài liệu PDF của bạn bằng mã hóa cấp quân sự.</p>
 
-      <h2>What is 256-bit AES Encryption?</h2>
-      <p>Advanced Encryption Standard (AES) is the encryption algorithm used by the U.S. government to secure classified information. A 256-bit encryption key means there are 2<sup>256</sup> possible combinations - a number so massive that not even the world's most powerful supercomputers could crack it in a billion years.</p>
-      <p>When you use our tool, we don't just "add a password" that can be easily bypassed. We mathematically scramble the contents of your file using AES-256.</p>
+<h2>Mã hóa AES 256-bit là gì?</h2>
+<p>Tiêu chuẩn mã hóa nâng cao (AES) là thuật toán mã hóa được chính phủ Hoa Kỳ sử dụng để bảo mật thông tin mật.Khóa mã hóa 256 bit có nghĩa là có thể có 2<sup>256</sup> kết hợp - một con số lớn đến mức ngay cả siêu máy tính mạnh nhất thế giới cũng không thể giải mã được trong một tỷ năm.</p>
+<p>Khi bạn sử dụng công cụ của chúng tôi, chúng tôi không chỉ "thêm mật khẩu" để bạn có thể dễ dàng vượt qua.Chúng tôi xáo trộn nội dung tệp của bạn một cách toán học bằng AES-256.</p>
 
-      <h2>How to Protect Your PDF</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
-        <ol class="mb-0 text-blue-900">
-          <li>Navigate to the <a href="/tools/protect-pdf" class="font-bold hover:underline">Protect PDF</a> tool.</li>
-          <li>Upload your sensitive document over our secure TLS 1.3 connection.</li>
-          <li>Enter a strong password. (We recommend at least 12 characters, mixing letters, numbers, and symbols).</li>
-          <li>Click <strong>Protect PDF</strong>.</li>
-          <li>Download your newly encrypted file.</li>
-        </ol>
-      </div>
+<h2>Cách bảo vệ tệp PDF của bạn</h2>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 round-r-lg">
+<ol class="mb-0 text-blue-900">
+<li>Điều hướng đến công cụ <a href="/tools/protect-pdf" class="font-bold hover:underline">Bảo vệ PDF</a>.</li>
+<li>Tải tài liệu nhạy cảm của bạn lên qua kết nối TLS 1.3 an toàn của chúng tôi.</li>
+<li>Nhập mật khẩu mạnh.(Chúng tôi khuyên dùng ít nhất 12 ký tự, kết hợp các chữ cái, số và ký hiệu).</li>
+<li>Nhấp vào <strong>Bảo vệ PDF</strong>.</li>
+<li>Tải xuống tệp mới được mã hóa của bạn.</li>
+</ol>
+</div>
 
-      <h2>Best Practices for Password Security</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Never send the password in the same email:</strong> If you're emailing the PDF, send the password via a different channel (like SMS or a secure messaging app like Signal).</li>
-        <li><strong>Use a password manager:</strong> Generate a random string of characters rather than using a word that can be found in a dictionary.</li>
-        <li><strong>Don't use personal info:</strong> Avoid birth dates, pet names, or company names.</li>
-      </ul>
+<h2>Các phương pháp hay nhất để bảo mật mật khẩu</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>Không bao giờ gửi mật khẩu trong cùng một email:</strong> Nếu bạn gửi bản PDF qua email, hãy gửi mật khẩu qua một kênh khác (như SMS hoặc ứng dụng nhắn tin an toàn như Signal).</li>
+<li><strong>Sử dụng trình quản lý mật khẩu:</strong> Tạo một chuỗi ký tự ngẫu nhiên thay vì sử dụng một từ có thể tìm thấy trong từ điển.</li>
+<li><strong>Không sử dụng thông tin cá nhân:</strong> Tránh ngày sinh, tên thú cưng hoặc tên công ty.</li>
+</ul>
 
-      <p class="mt-6 italic text-gray-500">Once your file is encrypted, the original contents are permanently deleted from our servers within 2 hours. Your privacy is our absolute priority.</p>
-    `
+<p class="mt-6 italic text-gray-500">Sau khi tệp của bạn được mã hóa, nội dung gốc sẽ bị xóa vĩnh viễn khỏi máy chủ của chúng tôi trong vòng 2 giờ.Quyền riêng tư của bạn là ưu tiên tuyệt đối của chúng tôi.</p>`
   },
   {
-    slug: "ocr-technology-explained",
-    title: "What is OCR? How to Make Scanned PDFs Searchable",
-    date: "2026-06-17",
-    excerpt: "Learn how Optical Character Recognition (OCR) technology works and how it can extract selectable text from flat images.",
-    content: `
-      <p>Have you ever received a PDF that looks like a document, but when you try to highlight the text, nothing happens? You've encountered a "flat" or "scanned" PDF. It's essentially just a digital photograph of a piece of paper.</p>
-      <p>To interact with that text, you need the magic of <strong>Optical Character Recognition (OCR)</strong>.</p>
+    slug: `ocr-technology-explained`,
+    title: `OCR là gì?Cách làm cho các tệp PDF được quét có thể tìm kiếm được`,
+    date: `2026-06-17`,
+    excerpt: `Tìm hiểu cách hoạt động của công nghệ Nhận dạng Ký tự Quang học (OCR) và cách công nghệ này có thể trích xuất văn bản có thể chọn từ hình ảnh phẳng.`,
+    content: `<p>Bạn đã bao giờ nhận được một tệp PDF trông giống như một tài liệu nhưng khi bạn cố gắng đánh dấu văn bản thì không có gì xảy ra?Bạn đã gặp phải tệp PDF "phẳng" hoặc "được quét".Về cơ bản nó chỉ là một bức ảnh kỹ thuật số của một tờ giấy.</p>
+<p>Để tương tác với văn bản đó, bạn cần có sự kỳ diệu của <strong>Nhận dạng ký tự quang học (OCR)</strong>.</p>
 
-      <h2>How OCR Works</h2>
-      <p>When you run a file through an OCR engine, the software acts like a highly trained human eye. It scans the image pixel by pixel, looking for patterns that resemble letters and numbers.</p>
-      <p>Modern OCR doesn't just match shapes; it uses complex Artificial Intelligence and Machine Learning models to understand context. For example, it can tell the difference between a capital 'I' and a lowercase 'l' based on the surrounding letters in the word.</p>
+<h2>OCR hoạt động như thế nào</h2>
+<p>Khi bạn chạy tệp thông qua công cụ OCR, phần mềm sẽ hoạt động giống như mắt người được đào tạo chuyên sâu.Nó quét từng pixel hình ảnh, tìm kiếm các mẫu giống với chữ cái và số.</p>
+<p>OCR hiện đại không chỉ khớp với hình dạng;nó sử dụng các mô hình Trí tuệ nhân tạo và Học máy phức tạp để hiểu ngữ cảnh.Ví dụ: nó có thể cho biết sự khác biệt giữa chữ 'I' viết hoa và chữ 'l' viết thường dựa trên các chữ cái xung quanh trong từ.</p>
 
-      <h2>The Benefits of OCR</h2>
-      <ul class="space-y-2">
-        <li><strong>Searchability:</strong> Finding a specific clause in a 500-page scanned contract is impossible without reading the whole thing. OCR lets you use CTRL+F to find exactly what you need instantly.</li>
-        <li><strong>Editability:</strong> Once the text is recognized, you can copy, paste, and edit it in Word or Google Docs.</li>
-        <li><strong>Accessibility:</strong> Screen readers for visually impaired users cannot read flat images. OCR makes your documents accessible to everyone.</li>
-      </ul>
+<h2>Lợi ích của OCR</h2>
+<ul class="space-y-2">
+<li><strong>Khả năng tìm kiếm:</strong> Không thể tìm thấy một điều khoản cụ thể trong hợp đồng được quét 500 trang nếu không đọc toàn bộ nội dung.OCR cho phép bạn sử dụng CTRL+F để tìm thấy chính xác những gì bạn cần ngay lập tức.</li>
+<li><strong>Khả năng chỉnh sửa:</strong> Sau khi văn bản được nhận dạng, bạn có thể sao chép, dán và chỉnh sửa văn bản đó trong Word hoặc Google Tài liệu.</li>
+<li><strong>Khả năng truy cập:</strong> Trình đọc màn hình dành cho người dùng khiếm thị không thể đọc được hình ảnh phẳng.OCR giúp mọi người có thể truy cập tài liệu của bạn.</li>
+</ul>
 
-      <h2>How to OCR a Document</h2>
-      <p>Transforming your scanned documents is incredibly simple with TheyLovePDF:</p>
-      <ol>
-        <li>Go to the <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR PDF tool</a>.</li>
-        <li>Upload your scanned document.</li>
-        <li>Select the language of the document. This is crucial - telling the AI what language to expect drastically improves accuracy, especially for languages with unique characters or accents.</li>
-        <li>Hit process. The AI will reconstruct your document, layering an invisible text layer over the original images.</li>
-      </ol>
-      
-      <blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 italic bg-gray-50 rounded-r-lg">
-        Stop re-typing documents manually. Let AI do the heavy lifting for you!
-      </blockquote>
-    `
+<h2>Cách OCR tài liệu</h2>
+<p>Việc chuyển đổi tài liệu được quét của bạn cực kỳ đơn giản với TheyLovePDF:</p>
+<ol>
+<li>Truy cập <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">công cụ OCR PDF</a>.</li>
+<li>Tải tài liệu đã quét của bạn lên.</li>
+<li>Chọn ngôn ngữ của tài liệu.Điều này rất quan trọng - việc cho AI biết ngôn ngữ nào sẽ được sử dụng sẽ cải thiện đáng kể độ chính xác, đặc biệt đối với những ngôn ngữ có ký tự hoặc dấu trọng âm độc đáo.</li>
+<li>Quy trình truy cập.AI sẽ tái tạo lại tài liệu của bạn, xếp lớp văn bản vô hình lên trên hình ảnh gốc.</li>
+</ol>
+
+<blockquote class="border-l-4 border-gray-300 pl-4 py-2 mt-6 text-gray-600 in nghiêng bg-gray-50 round-r-lg">
+Dừng việc gõ lại tài liệu theo cách thủ công.Hãy để AI thực hiện công việc nặng nhọc cho bạn!
+</blockquote>`
   },
   {
-    slug: "edit-pdf-windows-11",
-    title: "How to Edit PDF Text on Windows 11 (Without Adobe Acrobat)",
-    date: "2026-06-16",
-    excerpt: "Stop paying for expensive software. Discover the most efficient, free, and smart ways to directly edit PDF text and images on your Windows PC.",
-    content: `
-      <p>For years, Windows users have struggled with PDFs. Unlike Word documents, PDFs were designed to be "finalized" digital prints. When you notice a typo in a contract or need to update a date on an invoice, you usually hit a massive paywall like Adobe Acrobat.</p>
-      <p>Fortunately, in 2026, you don't need expensive software installed on your Windows 11 machine to make basic edits.</p>
-      
-      <h2>The Smart Web Approach</h2>
-      <p>Rather than downloading heavy, slow desktop applications, cloud-based editors utilize the processing power of remote servers to parse the PDF structure directly in your browser.</p>
-      
-      <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl my-8">
-        <h3 class="text-indigo-900 font-bold mb-3 mt-0">How to Edit Directly</h3>
-        <ol class="space-y-2 mb-0">
-          <li>Open Microsoft Edge or Google Chrome on Windows 11.</li>
-          <li>Navigate to the <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Edit PDF tool</a>.</li>
-          <li>Upload your document. Our engine will decode the text layers instantly.</li>
-          <li>Click on any text box to modify the text, change the font, or adjust the size.</li>
-          <li>You can also insert new images, shapes, or blackout sensitive information.</li>
-          <li>Click <strong>Apply Changes</strong> and download the updated file.</li>
-        </ol>
-      </div>
+    slug: `edit-pdf-windows-11`,
+    title: `Cách chỉnh sửa văn bản PDF trên Windows 11 (Không cần Adobe Acrobat)`,
+    date: `2026-06-16`,
+    excerpt: `Ngừng trả tiền cho phần mềm đắt tiền.Khám phá những cách hiệu quả, miễn phí và thông minh nhất để chỉnh sửa trực tiếp văn bản và hình ảnh PDF trên PC Windows của bạn.`,
+    content: `<p>Trong nhiều năm, người dùng Windows đã gặp khó khăn với các tệp PDF.Không giống như tài liệu Word, các tệp PDF được thiết kế để trở thành bản in kỹ thuật số "hoàn thiện".Khi bạn nhận thấy lỗi đánh máy trong hợp đồng hoặc cần cập nhật ngày trên hóa đơn, bạn thường gặp phải một bức tường phí khổng lồ như Adobe Acrobat.</p>
+<p>May mắn thay, vào năm 2026, bạn không cần cài đặt phần mềm đắt tiền trên máy Windows 11 để thực hiện các chỉnh sửa cơ bản.</p>
 
-      <h2>Why Not Use Microsoft Edge?</h2>
-      <p>While Microsoft Edge has a built-in PDF viewer with drawing tools (ink), it <strong>cannot edit existing text</strong>. It only allows you to draw over the top or add new text boxes. To actually change a typo in the original text layer, you need a true PDF editor.</p>
+<h2>Phương pháp tiếp cận web thông minh</h2>
+<p>Thay vì tải xuống các ứng dụng máy tính để bàn nặng và chậm, trình chỉnh sửa dựa trên đám mây tận dụng sức mạnh xử lý của máy chủ từ xa để phân tích cú pháp cấu trúc PDF trực tiếp trong trình duyệt của bạn.</p>
 
-      <p class="font-semibold text-gray-900 mt-6">Pro Tip:</p>
-      <p class="text-sm text-gray-600">If your PDF is a scanned image, standard text editing won't work. You must first use an <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">OCR tool</a> to convert the image into a readable text layer.</p>
-    `
+<div class="bg-indigo-50 viền border-indigo-100 p-6 round-xl my-8">
+<h3 class="text-indigo-900 font-bold mb-3 mt-0">Cách chỉnh sửa trực tiếp</h3>
+<ol class="space-y-2 mb-0">
+<li>Mở Microsoft Edge hoặc Google Chrome trên Windows 11.</li>
+<li>Điều hướng đến <a href="/tools/edit-pdf" class="text-indigo-600 font-semibold hover:underline">Công cụ chỉnh sửa PDF</a>.</li>
+<li>Tải tài liệu của bạn lên.Công cụ của chúng tôi sẽ giải mã các lớp văn bản ngay lập tức.</li>
+<li>Nhấp vào bất kỳ hộp văn bản nào để sửa đổi văn bản, thay đổi phông chữ hoặc điều chỉnh kích thước.</li>
+<li>Bạn cũng có thể chèn hình ảnh, hình dạng mới hoặc bôi đen thông tin nhạy cảm.</li>
+<li>Nhấp vào <strong>Áp dụng thay đổi</strong> và tải xuống tệp đã cập nhật.</li>
+</ol>
+</div>
+
+<h2>Tại sao không sử dụng Microsoft Edge?</h2>
+<p>Mặc dù Microsoft Edge có trình xem PDF tích hợp sẵn với các công cụ vẽ (mực) nhưng nó <strong>không thể chỉnh sửa văn bản hiện có</strong>.Nó chỉ cho phép bạn vẽ lên trên hoặc thêm hộp văn bản mới.Để thực sự thay đổi lỗi đánh máy trong lớp văn bản gốc, bạn cần một trình chỉnh sửa PDF thực sự.</p>
+
+<p class="font-semibold text-gray-900 mt-6">Mẹo chuyên nghiệp:</p>
+<p class="text-sm text-gray-600">Nếu tệp PDF của bạn là hình ảnh được quét thì tính năng chỉnh sửa văn bản tiêu chuẩn sẽ không hoạt động.Trước tiên, bạn phải sử dụng <a href="/tools/ocr-pdf" class="text-blue-600 hover:underline">công cụ OCR</a> để chuyển đổi hình ảnh thành lớp văn bản có thể đọc được.</p>`
   },
   {
-    slug: "sign-pdf-android-free",
-    title: "The Ultimate Guide to Signing PDFs on Android for Free",
-    date: "2026-06-15",
-    excerpt: "Need to sign a document urgently? Learn how to draw, type, or upload your electronic signature directly from your Android phone.",
-    content: `
-      <p>We've all been there: you receive an important document via email while you're away from your desk. It needs your signature immediately. Printing, signing, and scanning it back in is a relic of the past.</p>
-      <p>Today, your Android smartphone is a powerful digital workstation capable of legally binding electronic signatures.</p>
+    slug: `sign-pdf-android-free`,
+    title: `Hướng dẫn cơ bản để ký các tệp PDF trên Android miễn phí`,
+    date: `2026-06-15`,
+    excerpt: `Cần ký một văn bản khẩn cấp?Tìm hiểu cách vẽ, nhập hoặc tải chữ ký điện tử lên trực tiếp từ điện thoại Android của bạn.`,
+    content: `<p>Tất cả chúng ta đều đã từng như vậy: bạn nhận được một tài liệu quan trọng qua email khi bạn rời khỏi bàn làm việc.Nó cần chữ ký của bạn ngay lập tức.Việc in, ký và quét lại đã là quá khứ.</p>
+<p>Ngày nay, điện thoại thông minh Android của bạn là một máy trạm kỹ thuật số mạnh mẽ có khả năng ràng buộc về mặt pháp lý đối với chữ ký điện tử.</p>
 
-      <h2>Are Electronic Signatures Legal?</h2>
-      <p>Yes. Under the ESIGN Act (USA) and eIDAS (Europe), electronic signatures hold the same legal weight as a wet-ink signature for almost all business and personal transactions.</p>
+<h2>Chữ ký điện tử có hợp pháp không?</h2>
+<p>Vâng.Theo Đạo luật ESIGN (Hoa Kỳ) và eIDAS (Châu Âu), chữ ký điện tử có giá trị pháp lý tương đương với chữ ký mực ướt đối với hầu hết tất cả các giao dịch kinh doanh và cá nhân.</p>
 
-      <h2>How to Sign on Android (No App Required)</h2>
-      <p>You don't need to bloat your Android device with premium PDF apps. Just use your mobile browser.</p>
-      
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li><strong>Open the Tool:</strong> Tap the link to open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a> in Chrome.</li>
-        <li><strong>Upload the Doc:</strong> Tap to upload the file directly from your Android Downloads folder or Google Drive.</li>
-        <li><strong>Create Your Signature:</strong> 
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><em>Draw:</em> Use your finger or a stylus to draw your signature directly on the screen.</li>
-            <li><em>Type:</em> Type your name and choose a cursive font.</li>
-            <li><em>Upload:</em> Upload a photo of your actual signature on a white piece of paper (our tool automatically removes the background).</li>
-          </ul>
-        </li>
-        <li><strong>Place it:</strong> Drag and drop the signature exactly on the signature line. You can pinch to resize.</li>
-        <li><strong>Finalize:</strong> Tap "Sign" to permanently embed the signature into the document architecture.</li>
-      </ol>
+<h2>Cách đăng nhập trên Android (Không cần ứng dụng)</h2>
+<p>Bạn không cần phải làm cồng kềnh thiết bị Android của mình bằng các ứng dụng PDF cao cấp.Chỉ cần sử dụng trình duyệt trên thiết bị di động của bạn.</p>
 
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-        <p class="text-yellow-800 text-sm m-0"><strong>Security Note:</strong> Always ensure you are using a secure, HTTPS-encrypted platform when signing sensitive documents. We delete all files from our servers automatically.</p>
-      </div>
-    `
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li><strong>Mở công cụ:</strong> Nhấn vào liên kết để mở <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Công cụ ký PDF</a> trong Chrome.</li>
+<li><strong>Tải tài liệu lên:</strong> Nhấn để tải tệp lên trực tiếp từ thư mục Tải xuống Android hoặc Google Drive của bạn.</li>
+<li><strong>Tạo chữ ký của bạn:</strong>
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><em>Vẽ:</em> Sử dụng ngón tay hoặc bút stylus để vẽ chữ ký của bạn trực tiếp trên màn hình.</li>
+<li><em>Loại:</em> Nhập tên của bạn và chọn phông chữ thảo.</li>
+<li><em>Tải lên:</em> Tải ảnh chữ ký thực của bạn lên một tờ giấy trắng (công cụ của chúng tôi tự động xóa nền).</li>
+</ul>
+</li>
+<li><strong>Đặt chữ ký:</strong> Kéo và thả chữ ký chính xác trên dòng chữ ký.Bạn có thể chụm lại để thay đổi kích thước.</li>
+<li><strong>Hoàn thiện:</strong> Nhấn vào "Ký" để nhúng vĩnh viễn chữ ký vào cấu trúc tài liệu.</li>
+</ol>
+
+<div class="bg- yellow-50 border-l-4 border- yellow-500 p-4 my-6">
+<p class="text- yellow-800 text-sm m-0"><strong>Lưu ý bảo mật:</strong> Luôn đảm bảo bạn đang sử dụng nền tảng an toàn, được mã hóa HTTPS khi ký các tài liệu nhạy cảm.Chúng tôi tự động xóa tất cả các tệp khỏi máy chủ của mình.</p>
+</div>`
   },
   {
-    slug: "convert-pdf-to-word-students",
-    title: "Why Students Should Always Convert PDFs to Word for Editing",
-    date: "2026-06-14",
-    excerpt: "Writing a thesis or taking notes? Discover why extracting text to a Word Document is fundamentally better than editing a PDF directly.",
-    content: `
-      <p>As a student, you encounter hundreds of PDFs every semester: lecture slides, research papers, and digital textbooks. When you need to extract quotes, summarize content, or rewrite sections, you might be tempted to use a PDF editor. But there's a smarter, much more professional way.</p>
+    slug: `convert-pdf-to-word-students`,
+    title: `Tại sao sinh viên nên luôn chuyển đổi PDF sang Word để chỉnh sửa`,
+    date: `2026-06-14`,
+    excerpt: `Viết luận văn hay ghi chép?Khám phá lý do tại sao việc trích xuất văn bản sang Tài liệu Word về cơ bản lại tốt hơn việc chỉnh sửa trực tiếp một tệp PDF.`,
+    content: `<p>Khi còn là sinh viên, bạn sẽ gặp hàng trăm tệp PDF mỗi học kỳ: trang bài giảng, tài liệu nghiên cứu và sách giáo khoa điện tử.Khi bạn cần trích xuất các trích dẫn, tóm tắt nội dung hoặc viết lại các phần, bạn có thể muốn sử dụng trình chỉnh sửa PDF.Nhưng có một cách thông minh hơn, chuyên nghiệp hơn nhiều.</p>
 
-      <h2>The Problem with PDF Architecture</h2>
-      <p>PDFs (Portable Document Format) were designed for <em>presentation</em>, not composition. Inside a PDF, text isn't flowing like a normal document; every single word is pinned to specific X and Y coordinates on the page.</p>
-      <p>If you try to delete a paragraph in a PDF editor, the text below it will <strong>not</strong> move up to fill the gap. It leaves a massive blank space.</p>
+<h2>Vấn đề với cấu trúc PDF</h2>
+<p>PDF (Định dạng tài liệu di động) được thiết kế để <em>trình bày</em> chứ không phải để soạn thảo.Bên trong một tệp PDF, văn bản không trôi chảy như một tài liệu thông thường;mỗi từ đều được ghim vào tọa độ X và Y cụ thể trên trang.</p>
+<p>Nếu bạn cố xóa một đoạn văn trong trình chỉnh sửa PDF, văn bản bên dưới đoạn văn đó sẽ <strong>không</strong> di chuyển lên để lấp đầy khoảng trống.Nó để lại một khoảng trống lớn.</p>
 
-      <h2>The Solution: PDF to Word Conversion</h2>
-      <p>By converting the document back to Microsoft Word (.docx), our intelligent engine reconstructs the flowing layout. Paragraphs become paragraphs again, headers become headers, and images become movable blocks.</p>
+<h2>Giải pháp: Chuyển đổi PDF sang Word</h2>
+<p>Bằng cách chuyển đổi tài liệu trở lại Microsoft Word (.docx), công cụ thông minh của chúng tôi sẽ tái tạo lại bố cục trôi chảy.Đoạn văn lại trở thành đoạn văn, tiêu đề trở thành tiêu đề và hình ảnh trở thành khối có thể di chuyển được.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
-          <h4 class="font-bold text-gray-900 mt-0">PDF Editor</h4>
-          <ul class="text-sm text-gray-600 space-y-1 mb-0">
-            <li>❌ Text doesn't reflow</li>
-            <li>❌ Difficult to change global fonts</li>
-            <li>❌ Margins are locked</li>
-            <li>❌ Tables are hard to modify</li>
-          </ul>
-        </div>
-        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 class="font-bold text-blue-900 mt-0">Word Document</h4>
-          <ul class="text-sm text-blue-800 space-y-1 mb-0">
-            <li>✅ Text flows naturally</li>
-            <li>✅ Easy spellcheck and grammar</li>
-            <li>✅ Dynamic page breaks</li>
-            <li>✅ Copy-pasting is flawless</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid Grid-cols-1 md:grid-cols-2 Gap-6 my-8">
+<div class="bg-gray-50 p-5 round-lg viền border-gray-200">
+<h4 class="font-bold text-gray-900 mt-0">Trình chỉnh sửa PDF</h4>
+<ul class="text-sm text-gray-600 space-y-1 mb-0">
+<li>❌ Văn bản không chỉnh lại</li>
+<li>❌ Khó thay đổi phông chữ chung</li>
+<li>❌ Lề bị khóa</li>
+<li>❌ Bảng khó sửa đổi</li>
+</ul>
+</div>
+<div class="bg-blue-50 p-5 round-lg viền border-blue-200">
+<h4 class="font-bold text-blue-900 mt-0">Tài liệu Word</h4>
+<ul class="text-sm text-blue-800 space-y-1 mb-0">
+<li> ✅ Văn bản trôi chảy một cách tự nhiên</li>
+<li> ✅ Kiểm tra chính tả và ngữ pháp dễ dàng</li>
+<li> ✅ Ngắt trang động</li>
+<li> ✅ Sao chép và dán hoàn hảo</li>
+</ul>
+</div>
+</div>
 
-      <h2>How to do it flawlessly</h2>
-      <p>Our AI-powered <a href="/tools/pdf-to-word" class="text-blue-600 hover:underline">PDF to Word converter</a> uses advanced layout recognition. Just upload your file, and within seconds you'll have a fully editable Word document. Once you finish writing your assignment or notes, you can always export it back to PDF before submitting it to your professor.</p>
-    `
+<h2>Làm thế nào để thực hiện điều đó một cách hoàn hảo</h2>
+<p>Trình chuyển đổi PDF sang Word</a> được hỗ trợ bởi AI của chúng tôi sử dụng tính năng nhận dạng bố cục nâng cao.Chỉ cần tải tệp của bạn lên và trong vài giây bạn sẽ có tài liệu Word có thể chỉnh sửa hoàn toàn.Sau khi viết xong bài tập hoặc ghi chú, bạn luôn có thể xuất lại sang dạng PDF trước khi gửi cho giáo sư của mình.</p>`
   },
   {
-    slug: "merge-pdf-windows-10",
-    title: "Combine Multiple PDFs on Windows 10: Step-by-Step",
-    date: "2026-06-13",
-    excerpt: "Organize your messy folders by stitching related PDF documents into single, cohesive files right from your Windows desktop.",
-    content: `
-      <p>Having 15 different PDF files for a single project is a nightmare. Whether it's monthly invoices, chapters of a book, or scanned medical records, combining them into one cohesive file is essential for Windows 10 organization.</p>
+    slug: `merge-pdf-windows-10`,
+    title: `Kết hợp nhiều tệp PDF trên Windows 10: Từng bước`,
+    date: `2026-06-13`,
+    excerpt: `Sắp xếp các thư mục lộn xộn của bạn bằng cách ghép các tài liệu PDF có liên quan thành các tệp duy nhất, gắn kết ngay từ màn hình Windows của bạn.`,
+    content: `<p>Có 15 tệp PDF khác nhau cho một dự án là một cơn ác mộng.Cho dù đó là hóa đơn hàng tháng, chương sách hay hồ sơ y tế được quét, việc kết hợp chúng thành một tệp gắn kết là điều cần thiết đối với tổ chức Windows 10.</p>
 
-      <h2>The Built-in Windows Limitation</h2>
-      <p>Windows 10 is a powerful OS, but it famously lacks a native PDF merger. While it includes "Microsoft Print to PDF", that only helps create PDFs from other formats, not combine existing ones.</p>
+<h2>Giới hạn tích hợp của Windows</h2>
+<p>Windows 10 là một hệ điều hành mạnh mẽ nhưng nổi tiếng là thiếu tính năng hợp nhất PDF gốc.Mặc dù nó bao gồm "Microsoft Print to PDF", nhưng nó chỉ giúp tạo các tệp PDF từ các định dạng khác, không kết hợp các định dạng hiện có.</p>
 
-      <h2>The Smart Workflow (Browser-Based)</h2>
-      <p>Don't download shady freeware that might contain malware or plaster massive watermarks on your files. The most professional method is using an encrypted browser tool.</p>
+<h2>Quy trình làm việc thông minh (Dựa trên trình duyệt)</h2>
+<p>Không tải xuống phần mềm miễn phí mờ ám có thể chứa phần mềm độc hại hoặc dán các hình mờ lớn lên tệp của bạn.Phương pháp chuyên nghiệp nhất là sử dụng công cụ trình duyệt được mã hóa.</p>
 
-      <ol class="space-y-4 mt-6">
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 1: Gather your files.</strong> Put all the PDFs you want to merge into a single folder on your desktop. This makes uploading easier.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 2: Open the Merger.</strong> Go to the <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Merge PDF tool</a> on TheyLovePDF.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 3: Select and Order.</strong> Drag your files onto the screen. You'll see preview thumbnails. You can drag these thumbnails left or right to ensure they are in the perfect chronological order.
-        </li>
-        <li class="bg-white border border-gray-100 shadow-sm p-4 rounded-lg">
-          <strong>Step 4: Combine.</strong> Hit the merge button. The server instantly stitches the binary code of the PDFs together without losing any quality.
-        </li>
-      </ol>
+<ol class="space-y-4 mt-6">
+<li class="bg-white border border-gray-100 Shadow-sm p-4 round-lg">
+<strong>Bước 1: Tập hợp các tệp của bạn.</strong> Đặt tất cả các tệp PDF bạn muốn hợp nhất vào một thư mục duy nhất trên màn hình của bạn.Điều này làm cho việc tải lên dễ dàng hơn.
+</li>
+<li class="bg-white border border-gray-100 Shadow-sm p-4 round-lg">
+<strong>Bước 2: Mở công cụ Hợp nhất.</strong> Đi tới <a href="/tools/merge-pdf" class="text-blue-600 hover:underline">Công cụ Hợp nhất PDF</a> trên TheyLovePDF.
+</li>
+<li class="bg-white border border-gray-100 Shadow-sm p-4 round-lg">
+<strong>Bước 3: Chọn và đặt hàng.</strong> Kéo tệp của bạn lên màn hình.Bạn sẽ thấy hình thu nhỏ xem trước.Bạn có thể kéo các hình thu nhỏ này sang trái hoặc phải để đảm bảo chúng theo thứ tự thời gian hoàn hảo.
+</li>
+<li class="bg-white border border-gray-100 Shadow-sm p-4 round-lg">
+<strong>Bước 4: Kết hợp.</strong> Nhấn nút hợp nhất.Máy chủ ngay lập tức ghép mã nhị phân của các tệp PDF lại với nhau mà không làm giảm bất kỳ chất lượng nào.
+</li>
+</ol>
 
-      <p class="mt-8">This method works on Chrome, Edge, Firefox, and Brave on Windows 10, requiring absolutely zero installation or administrative privileges on your PC.</p>
-    `
+<p class="mt-8">Phương pháp này hoạt động trên Chrome, Edge, Firefox và Brave trên Windows 10, hoàn toàn không yêu cầu cài đặt hoặc đặc quyền quản trị trên PC của bạn.</p>`
   },
   {
-    slug: "legal-documents-pdf-security",
-    title: "Why Legal Professionals Must Protect PDFs with Passwords",
-    date: "2026-06-12",
-    excerpt: "A deep dive into document security, compliance, and why sending open PDFs via email is a major liability for law firms.",
-    content: `
-      <p>In the legal profession, confidentiality is not just a best practice - it's a strict ethical and often statutory requirement. Yet, countless law firms and paralegals still send sensitive briefs, contracts, and settlement offers as raw, unencrypted PDF attachments over standard email.</p>
+    slug: `legal-documents-pdf-security`,
+    title: `Tại sao các chuyên gia pháp lý phải bảo vệ tệp PDF bằng mật khẩu`,
+    date: `2026-06-12`,
+    excerpt: `Đi sâu vào bảo mật tài liệu, tuân thủ và lý do gửi tệp PDF mở qua email là trách nhiệm chính đối với các công ty luật.`,
+    content: `<p>Trong nghề luật, bảo mật không chỉ là phương pháp tốt nhất - đó còn là yêu cầu nghiêm ngặt về mặt đạo đức và thường là theo luật định.Tuy nhiên, vô số công ty luật và trợ lý pháp lý vẫn gửi các bản tóm tắt, hợp đồng và đề nghị giải quyết nhạy cảm dưới dạng tệp đính kèm PDF thô, không được mã hóa qua email tiêu chuẩn.</p>
 
-      <h2>The Interception Risk</h2>
-      <p>Standard email (SMTP) is notoriously insecure. If an email is routed through unsecured servers, or if an inbox is compromised, an unencrypted PDF is fully readable by anyone who intercepts it. This can lead to breaches of client privilege and massive liabilities.</p>
+<h2>Rủi ro bị chặn</h2>
+<p>Email tiêu chuẩn (SMTP) nổi tiếng là không an toàn.Nếu một email được định tuyến qua các máy chủ không bảo mật hoặc nếu hộp thư đến bị xâm phạm thì bất kỳ ai chặn nó đều có thể đọc được một bản PDF không được mã hóa.Điều này có thể dẫn đến vi phạm đặc quyền của khách hàng và dẫn đến các khoản nợ lớn.</p>
 
-      <h2>Encryption vs. Passwords</h2>
-      <p>It's important to understand the difference. A simple "permissions password" prevents printing or editing but doesn't encrypt the file. Anyone can still read it.</p>
-      <p>What you need is an <strong>Open Password</strong> backed by <strong>AES-256 Encryption</strong>. When applied, the file's binary data is scrambled. Without the password, the document is mathematically impossible to read.</p>
+<h2>Mã hóa so với mật khẩu</h2>
+<p>Điều quan trọng là phải hiểu được sự khác biệt.Một "mật khẩu cấp phép" đơn giản ngăn việc in hoặc chỉnh sửa nhưng không mã hóa tệp.Bất cứ ai vẫn có thể đọc nó.</p>
+<p>Thứ bạn cần là <strong>Mật khẩu mở</strong> được hỗ trợ bởi <strong>Mã hóa AES-256</strong>.Khi được áp dụng, dữ liệu nhị phân của tệp sẽ bị xáo trộn.Nếu không có mật khẩu, tài liệu sẽ không thể đọc được về mặt toán học.</p>
 
-      <div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
-        <h4 class="text-red-900 font-bold m-0 mb-2">Compliance Requirements</h4>
-        <p class="text-red-800 text-sm m-0">Regulations like HIPAA (Medical) and GDPR (European Data) heavily penalize organizations that fail to encrypt PII (Personally Identifiable Information) in transit. An encrypted PDF is an accepted method of securing data in transit.</p>
-      </div>
+<div class="bg-red-50 border-l-4 border-red-500 p-5 my-6">
+<h4 class="text-red-900 font-bold m-0 mb-2">Yêu cầu tuân thủ</h4>
+<p class="text-red-800 text-sm m-0">Các quy định như HIPAA (Y tế) và GDPR (Dữ liệu Châu Âu) trừng phạt nặng nề các tổ chức không mã hóa PII (Thông tin nhận dạng cá nhân) trong quá trình truyền.Tệp PDF được mã hóa là phương pháp được chấp nhận để bảo mật dữ liệu khi truyền.</p>
+</div>
 
-      <h2>The Professional Workflow</h2>
-      <ol>
-        <li>Draft the document in Word and export to PDF.</li>
-        <li>Upload it to a secure, zero-retention platform like <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
-        <li>Apply a generated 16-character password.</li>
-        <li>Email the encrypted PDF to the client.</li>
-        <li>Provide the password to the client via a separate, secure channel (e.g., a phone call or an encrypted messaging app).</li>
-      </ol>
-      <p>By enforcing this workflow, legal professionals shield themselves from data breach liabilities and ensure total client confidentiality.</p>
-    `
+<h2>Quy trình làm việc chuyên nghiệp</h2>
+<ol>
+<li>Soạn thảo tài liệu bằng Word và xuất sang PDF.</li>
+<li>Tải nó lên nền tảng an toàn, không lưu giữ như <a href="/tools/protect-pdf" class="text-blue-600 hover:underline">TheyLovePDF Security</a>.</li>
+<li>Áp dụng mật khẩu 16 ký tự đã tạo.</li>
+<li>Gửi bản PDF được mã hóa cho khách hàng qua email.</li>
+<li>Cung cấp mật khẩu cho khách hàng qua một kênh bảo mật, riêng biệt (ví dụ: cuộc gọi điện thoại hoặc ứng dụng nhắn tin được mã hóa).</li>
+</ol>
+<p>Bằng cách thực thi quy trình làm việc này, các chuyên gia pháp lý tự bảo vệ mình khỏi các trách nhiệm pháp lý về hành vi vi phạm dữ liệu và đảm bảo tính bảo mật tuyệt đối của khách hàng.</p>`
   },
   {
-    slug: "compress-pdf-android-whatsapp",
-    title: "How to Compress a PDF on Android to Send via WhatsApp",
-    date: "2026-06-11",
-    excerpt: "WhatsApp has file size limits that block large documents. Learn how to crush your PDF size down on your Android phone to share it instantly.",
-    content: `
-      <p>WhatsApp is the global standard for quick communication, heavily used by businesses and students alike to share documents. However, WhatsApp enforces strict file size limits. If you try to send a 150MB architectural plan or a massive scanned textbook, the app will outright block the transfer.</p>
+    slug: `compress-pdf-android-whatsapp`,
+    title: `Cách nén tệp PDF trên Android để gửi qua WhatsApp`,
+    date: `2026-06-11`,
+    excerpt: `WhatsApp có giới hạn kích thước tệp chặn các tài liệu lớn.Tìm hiểu cách giảm kích thước PDF trên điện thoại Android của bạn để chia sẻ nó ngay lập tức.`,
+    content: `<p>WhatsApp là tiêu chuẩn toàn cầu về giao tiếp nhanh chóng, được các doanh nghiệp cũng như sinh viên sử dụng nhiều để chia sẻ tài liệu.Tuy nhiên, WhatsApp thực thi các giới hạn kích thước tệp nghiêm ngặt.Nếu bạn cố gửi sơ đồ kiến trúc 150 MB hoặc một cuốn sách giáo khoa được quét dung lượng lớn, ứng dụng sẽ chặn hoàn toàn quá trình truyền.</p>
 
-      <h2>The Android Dilemma</h2>
-      <p>Unlike compressing a photo, Android OS does not have a built-in feature to compress PDF documents. If you search the Google Play Store, you'll be bombarded with apps full of intrusive ads that ruin your file quality.</p>
+<h2>Vấn đề nan giải của Android</h2>
+<p>Không giống như nén ảnh, hệ điều hành Android không có tính năng tích hợp để nén tài liệu PDF.Nếu bạn tìm kiếm trên Cửa hàng Google Play, bạn sẽ bị tấn công bởi các ứng dụng chứa đầy quảng cáo xâm nhập làm hỏng chất lượng tệp của bạn.</p>
 
-      <h2>The Smart Compression Technique</h2>
-      <p>You can bypass app stores entirely by using our high-speed cloud infrastructure directly from Google Chrome on your Android device.</p>
+<h2>Kỹ thuật nén thông minh</h2>
+<p>Bạn có thể bỏ qua hoàn toàn các cửa hàng ứng dụng bằng cách sử dụng cơ sở hạ tầng đám mây tốc độ cao của chúng tôi trực tiếp từ Google Chrome trên thiết bị Android của bạn.</p>
 
-      <div class="space-y-4 my-8">
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">1</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Open the Compressor</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap this link to open the <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">PDF Compressor</a> in your browser.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">2</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Upload from Files</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Tap to upload, and select the 'Files' or 'Documents' app on your Android to find your large PDF.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">3</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Choose 'Extreme Compression'</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">For WhatsApp, select the highest compression level. This strips out high-res image data but keeps text perfectly readable on mobile screens.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1">4</div>
-          <div>
-            <h4 class="font-bold text-gray-900 m-0">Download & Share</h4>
-            <p class="text-sm text-gray-600 m-0 mt-1">Once processed, tap Download. Open WhatsApp, tap the paperclip icon, select Document, and share your newly shrunk file!</p>
-          </div>
-        </div>
-      </div>
+<div class="space-y-4 my-8">
+<div class="flex khoảng cách-4 mục-bắt đầu">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 làm tròn-đầy đủ flex items-centerjust-center thu nhỏ-0 mt-1">1</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Mở Trình nén</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Nhấn vào liên kết này để mở <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Trình nén PDF</a> trong trình duyệt của bạn.</p>
+</div>
+</div>
+<div class="flex khoảng cách-4 mục-bắt đầu">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 round-full flex items-center just-center thu nhỏ-0 mt-1">2</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Tải lên từ tệp</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Nhấn để tải lên rồi chọn ứng dụng 'Tệp' hoặc 'Tài liệu' trên Android để tìm bản PDF lớn của bạn.</p>
+</div>
+</div>
+<div class="flex khoảng cách-4 mục-bắt đầu">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 round-full flex items-center just-center thu nhỏ-0 mt-1">3</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Chọn 'Nén cực độ'</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Đối với WhatsApp, hãy chọn mức nén cao nhất.Điều này loại bỏ dữ liệu hình ảnh có độ phân giải cao nhưng vẫn giữ cho văn bản có thể đọc được hoàn hảo trên màn hình thiết bị di động.</p>
+</div>
+</div>
+<div class="flex khoảng cách-4 mục-bắt đầu">
+<div class="bg-blue-100 text-blue-800 font-bold w-8 h-8 làm tròn-đầy đủ flex items-centerjust-center thu nhỏ-0 mt-1">4</div>
+<div>
+<h4 class="font-bold text-gray-900 m-0">Tải xuống và chia sẻ</h4>
+<p class="text-sm text-gray-600 m-0 mt-1">Sau khi xử lý xong, hãy nhấn vào Tải xuống.Hãy mở WhatsApp, nhấn vào biểu tượng kẹp giấy, chọn Tài liệu và chia sẻ tệp mới được thu nhỏ của bạn!</p>
+</div>
+</div>
+</div>
 
-      <p>This entire process takes less than 30 seconds, uses very little of your mobile data, and solves the WhatsApp limit problem permanently.</p>
-    `
+<p>Toàn bộ quá trình này chỉ mất chưa đầy 30 giây, sử dụng rất ít dữ liệu di động của bạn và giải quyết vĩnh viễn vấn đề giới hạn WhatsApp.</p>`
   },
   {
-    slug: "split-pdf-pages-guide",
-    title: "How to Extract Specific Pages from a Massive PDF",
-    date: "2026-06-10",
-    excerpt: "Don't send a 500-page manual when someone only needs chapter 3. Here is the smartest way to extract and split PDF pages.",
-    content: `
-      <p>We've all received them: the 500-page corporate manual, the massive legal discovery file, or the entire semester's textbook. But what if you only need to send pages 45 to 52 to a colleague?</p>
-      <p>Sending the entire document is unprofessional, wastes bandwidth, and forces the recipient to hunt for the relevant information. You need to split the PDF.</p>
+    slug: `split-pdf-pages-guide`,
+    title: `Cách trích xuất các trang cụ thể từ một tệp PDF lớn`,
+    date: `2026-06-10`,
+    excerpt: `Đừng gửi sách hướng dẫn 500 trang khi ai đó chỉ cần chương 3. Đây là cách thông minh nhất để trích xuất và chia nhỏ các trang PDF.`,
+    content: `<p>Tất cả chúng ta đều đã nhận được chúng: sổ tay công ty dày 500 trang, hồ sơ khám phá pháp luật đồ sộ hoặc toàn bộ sách giáo khoa của học kỳ.Nhưng nếu bạn chỉ cần gửi trang 45 đến 52 cho đồng nghiệp thì sao?</p>
+<p>Gửi toàn bộ tài liệu là hành động thiếu chuyên nghiệp, lãng phí băng thông và buộc người nhận phải tìm kiếm thông tin liên quan.Bạn cần tách PDF.</p>
 
-      <h2>The Hacky Way vs. The Pro Way</h2>
-      <p>A common "hack" is to use the Print dialogue, select "Print to PDF", and choose a page range. While this works, it often flattens the document - destroying interactive links, bookmarks, and sometimes significantly increasing the file size.</p>
+<h2>Cách Hacky so với Cách chuyên nghiệp</h2>
+<p>Một cách "hack" phổ biến là sử dụng hộp thoại In, chọn "In thành PDF" và chọn phạm vi trang.Mặc dù tính năng này hoạt động nhưng nó thường làm phẳng tài liệu - phá hủy các liên kết tương tác, dấu trang và đôi khi làm tăng đáng kể kích thước tệp.</p>
 
-      <p>The professional way is to split the document at the binary level, preserving the exact original quality and metadata of the extracted pages.</p>
+<p>Cách chuyên nghiệp là chia tài liệu ở cấp độ nhị phân, giữ nguyên chất lượng gốc và siêu dữ liệu chính xác của các trang được trích xuất.</p>
 
-      <h2>Using a Professional Splitter</h2>
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Navigate to the <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Split PDF Tool</a>.</li>
-          <li>Upload your massive document. Our servers handle files up to 2GB instantly.</li>
-          <li>Choose your mode:
-            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
-              <li><strong>Extract Pages:</strong> Type in exact pages or ranges (e.g., <em>45-52, 88, 102-105</em>).</li>
-              <li><strong>Split by Ranges:</strong> Chop the document into multiple smaller documents automatically.</li>
-            </ul>
-          </li>
-          <li>Hit Process. You'll receive a neat, hyper-focused PDF containing only the pages you selected, with all original links and quality intact.</li>
-        </ol>
-      </div>
+<h2>Sử dụng Bộ chia chuyên nghiệp</h2>
+<div class="bg-gray-50 viền border-gray-200 p-6 round-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Điều hướng đến <a href="/tools/split-pdf" class="text-blue-600 font-semibold hover:underline">Công cụ tách PDF</a>.</li>
+<li>Tải lên tài liệu đồ sộ của bạn.Máy chủ của chúng tôi xử lý các tệp có dung lượng lên tới 2GB ngay lập tức.</li>
+<li>Chọn chế độ của bạn:
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-700">
+<li><strong>Trích xuất trang:</strong> Nhập chính xác các trang hoặc phạm vi (ví dụ: <em>45-52, 88, 102-105</em>).</li>
+<li><strong>Chia theo phạm vi:</strong> Tự động cắt tài liệu thành nhiều tài liệu nhỏ hơn.</li>
+</ul>
+</li>
+<li>Quy trình truy cập.Bạn sẽ nhận được một bản PDF gọn gàng, siêu tập trung chỉ chứa các trang bạn đã chọn, với tất cả các liên kết gốc và chất lượng còn nguyên vẹn.</li>
+</ol>
+</div>
 
-      <p>By extracting only what matters, you respect your recipient's time and inbox space. It's a small technical skill that yields massive professional dividends.</p>
-    `
+<p>Bằng cách chỉ trích xuất những nội dung quan trọng, bạn tôn trọng thời gian và không gian hộp thư đến của người nhận.Đó là một kỹ năng kỹ thuật nhỏ nhưng mang lại lợi ích lớn về mặt chuyên môn.</p>`
   },
   {
-    slug: "chat-pdf-ai-explainer",
-    title: "Chat with PDF: How AI is Changing How We Read Long Documents",
-    date: "2026-06-09",
-    excerpt: "Stop reading 100-page reports. Learn how Large Language Models (LLMs) allow you to literally 'talk' to your documents to extract answers instantly.",
-    content: `
-      <p>Reading a 150-page financial report or a dense academic paper used to take hours of highlighting, note-taking, and searching. In 2026, that era is officially over. Welcome to the age of AI Document Chat.</p>
+    slug: `chat-pdf-ai-explainer`,
+    title: `Trò chuyện bằng PDF: AI đang thay đổi cách chúng ta đọc tài liệu dài`,
+    date: `2026-06-09`,
+    excerpt: `Ngừng đọc báo cáo 100 trang.Tìm hiểu cách Mô hình ngôn ngữ lớn (LLM) cho phép bạn 'nói chuyện' với tài liệu của mình theo đúng nghĩa đen để trích xuất câu trả lời ngay lập tức.`,
+    content: `<p>Việc đọc một báo cáo tài chính dài 150 trang hoặc một bài báo học thuật dày đặc thường mất hàng giờ để đánh dấu, ghi chú và tìm kiếm.Năm 2026, thời đại đó chính thức kết thúc.Chào mừng bạn đến với thời đại Trò chuyện tài liệu AI.</p>
 
-      <h2>What is "Chat with PDF"?</h2>
-      <p>Imagine if the author of the document was sitting next to you, and you could just ask them questions. <em>"What is the total revenue for Q3?"</em> or <em>"Summarize the methodology of this experiment in 3 bullet points."</em></p>
-      <p>Our <a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Chat with PDF tool</a> uses advanced Large Language Models (LLMs). When you upload a file, the AI "reads" the entire document in seconds, storing it in vector memory. You then use a chat interface (exactly like ChatGPT) to ask questions about the text.</p>
+<h2>"Trò chuyện bằng PDF" là gì?</h2>
+<p>Hãy tưởng tượng nếu tác giả của tài liệu đang ngồi cạnh bạn và bạn có thể đặt câu hỏi cho họ.<em>"Tổng doanh thu trong quý 3 là bao nhiêu?"</em> hoặc <em>"Tóm tắt phương pháp của thử nghiệm này trong 3 gạch đầu dòng."</em></p>
+<p><a href="/tools/chat-with-pdf" class="text-blue-600 hover:underline">Công cụ trò chuyện bằng PDF</a> của chúng tôi sử dụng Mô hình ngôn ngữ lớn (LLM) nâng cao.Khi bạn tải một tập tin lên, AI sẽ "đọc" toàn bộ tài liệu trong vài giây, lưu trữ nó vào bộ nhớ vector.Sau đó, bạn sử dụng giao diện trò chuyện (giống hệt ChatGPT) để đặt câu hỏi về văn bản.</p>
 
-      <h2>How It Actually Works (Under the Hood)</h2>
-      <ul class="space-y-3 my-6">
-        <li><strong>Text Extraction:</strong> The system parses the PDF, extracting all text and tables.</li>
-        <li><strong>Vectorization:</strong> The text is chopped into "chunks" and converted into mathematical numbers called embeddings.</li>
-        <li><strong>Semantic Search:</strong> When you ask a question, the AI searches the math to find the exact paragraphs most relevant to your question.</li>
-        <li><strong>Generation:</strong> The LLM reads those specific paragraphs and types out a natural, conversational answer, often citing the exact page number it found the info on!</li>
-      </ul>
+<h2>Nó thực sự hoạt động như thế nào (Dưới mui xe)</h2>
+<ul class="space-y-3 my-6">
+<li><strong>Trích xuất văn bản:</strong> Hệ thống phân tích cú pháp tệp PDF, trích xuất tất cả văn bản và bảng.</li>
+<li><strong>Vector hóa:</strong> Văn bản được cắt thành "khối" và chuyển đổi thành các số toán học được gọi là phần nhúng.</li>
+<li><strong>Tìm kiếm ngữ nghĩa:</strong> Khi bạn đặt câu hỏi, AI sẽ tìm kiếm toán học để tìm ra các đoạn văn chính xác phù hợp nhất với câu hỏi của bạn.</li>
+<li><strong>Thế hệ:</strong> LLM đọc những đoạn văn cụ thể đó và đưa ra câu trả lời mang tính trò chuyện, tự nhiên, thường trích dẫn số trang chính xác mà nó tìm thấy thông tin trên đó!</li>
+</ul>
 
-      <div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
-        <h4 class="text-purple-900 font-bold m-0 mb-2">Use Cases</h4>
-        <p class="text-purple-800 text-sm m-0"><strong>Students:</strong> Upload textbooks to create instant study guides and flashcards.<br><strong>Lawyers:</strong> Upload case files to instantly find precedents without CTRL+F.<br><strong>Analysts:</strong> Upload 10-K reports to instantly extract specific financial metrics.</p>
-      </div>
+<div class="bg-purple-50 border-l-4 border-purple-500 p-5 my-6">
+<h4 class="text-purple-900 font-bold m-0 mb-2">Các trường hợp sử dụng</h4>
+<p class="text-purple-800 text-sm m-0"><strong>Học sinh:</strong> Tải sách giáo khoa lên để tạo hướng dẫn học tập và thẻ ghi chú nhanh.<br><strong>Luật sư:</strong> Tải tệp vụ án lên để tìm ngay các tiền lệ mà không cần CTRL+F.<br><strong>Nhà phân tích:</strong> Tải lên báo cáo 10-K để trích xuất ngay các số liệu tài chính cụ thể.</p>
+</div>
 
-      <h2>Privacy First</h2>
-      <p>The biggest concern with AI is data privacy. When using professional tools like TheyLovePDF, your document data is strictly sandboxed. It is never used to train global AI models, and the data is wiped from the servers automatically after your session ends.</p>
-      <p>Don't get left behind. Start chatting with your documents today and 10x your reading speed.</p>
-    `
+<h2>Quyền riêng tư là trên hết</h2>
+<p>Mối quan tâm lớn nhất với AI là quyền riêng tư dữ liệu.Khi sử dụng các công cụ chuyên nghiệp như TheyLovePDF, dữ liệu tài liệu của bạn sẽ được đóng hộp cát nghiêm ngặt.Nó không bao giờ được sử dụng để đào tạo các mô hình AI toàn cầu và dữ liệu sẽ tự động bị xóa khỏi máy chủ sau khi phiên của bạn kết thúc.</p>
+<p>Đừng để bị bỏ lại phía sau.Bắt đầu trò chuyện với tài liệu của bạn ngay hôm nay và tăng tốc độ đọc của bạn lên gấp 10 lần.</p>`
   },
   {
-    slug: "reduire-pdf-ilovepdf-alternative",
-    title: "The Best iLovePDF Alternative for Reducing PDF Size",
-    date: "2026-06-23",
-    excerpt: "Looking to compress a PDF without losing quality or dealing with aggressive ads? Here is why TheyLovePDF is the superior alternative to iLovePDF.",
-    content: `
-      <p>If you're reading this, you probably searched for a way to reduce your PDF size and thought of using iLovePDF. While it's a popular tool, many users are looking for a faster, ad-free alternative that doesn't compromise their document's visual fidelity.</p>
-      
-      <h2>Why Look for an Alternative?</h2>
-      <p>Many legacy PDF tools rely on aggressive compression algorithms that destroy the quality of your images and vector graphics. On top of that, free tiers are often heavily restricted with daily limits and plastered with intrusive advertisements.</p>
+    slug: `reduire-pdf-ilovepdf-alternative`,
+    title: `Giải pháp thay thế iLovePDF tốt nhất để giảm kích thước PDF`,
+    date: `2026-06-23`,
+    excerpt: `Bạn đang tìm cách nén tệp PDF mà không làm giảm chất lượng hoặc phải đối mặt với các quảng cáo quá khích?Đây là lý do tại sao TheyLovePDF là giải pháp thay thế ưu việt cho iLovePDF.`,
+    content: `<p>Nếu bạn đang đọc nội dung này, có thể bạn đang tìm cách giảm kích thước tệp PDF và đã nghĩ đến việc sử dụng iLovePDF.Mặc dù đây là một công cụ phổ biến nhưng nhiều người dùng đang tìm kiếm một giải pháp thay thế nhanh hơn, không có quảng cáo mà không ảnh hưởng đến độ trung thực hình ảnh của tài liệu của họ.</p>
 
-      <h2>The TheyLovePDF Advantage</h2>
-      <p>We engineered our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF tool</a> to be the absolute best in the industry. Here is why users are making the switch:</p>
-      
-      <ul class="space-y-3 my-6">
-        <li><strong>Smart AI Compression:</strong> Instead of just degrading image resolution, our engine mathematically analyzes your document and removes invisible metadata, unreferenced fonts, and duplicate data structures.</li>
-        <li><strong>Zero Ads:</strong> We believe utility tools should be clean and distraction-free. You won't find a single banner ad on our compression tool.</li>
-        <li><strong>Strict Privacy:</strong> Your files are protected with 256-bit SSL encryption and are permanently deleted from our servers after 2 hours. We don't read or sell your data.</li>
-      </ul>
+<h2>Tại sao phải tìm giải pháp thay thế?</h2>
+<p>Nhiều công cụ PDF cũ dựa vào thuật toán nén phức tạp làm giảm chất lượng hình ảnh và đồ họa vector của bạn.Hơn hết, các cấp độ miễn phí thường bị hạn chế rất nhiều với giới hạn hàng ngày và tràn ngập các quảng cáo xâm nhập.</p>
 
-      <p>Next time you need to shrink a massive file for an email attachment or a WhatsApp message, skip the legacy tools. Drag and drop your file into TheyLovePDF and experience the difference.</p>
-    `
+<h2>Lợi ích của TheyLovePDF</h2>
+<p>Chúng tôi đã thiết kế <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Công cụ nén PDF</a> của mình để trở thành công cụ tốt nhất trong ngành.Đây là lý do tại sao người dùng thực hiện chuyển đổi:</p>
+
+<ul class="space-y-3 my-6">
+<li><strong>Nén AI thông minh:</strong> Thay vì chỉ làm giảm độ phân giải hình ảnh, công cụ của chúng tôi sẽ phân tích tài liệu của bạn một cách toán học và xóa siêu dữ liệu vô hình, phông chữ không được tham chiếu và cấu trúc dữ liệu trùng lặp.</li>
+<li><strong>Không có quảng cáo:</strong> Chúng tôi tin rằng các công cụ tiện ích phải sạch sẽ và không bị phân tâm.Bạn sẽ không tìm thấy một quảng cáo biểu ngữ nào trên công cụ nén của chúng tôi.</li>
+<li><strong>Quyền riêng tư nghiêm ngặt:</strong> Các tệp của bạn được bảo vệ bằng mã hóa SSL 256-bit và sẽ bị xóa vĩnh viễn khỏi máy chủ của chúng tôi sau 2 giờ.Chúng tôi không đọc hoặc bán dữ liệu của bạn.</li>
+</ul>
+
+<p>Lần tới khi bạn cần thu nhỏ một tệp lớn để đính kèm email hoặc tin nhắn WhatsApp, hãy bỏ qua các công cụ cũ.Kéo và thả tệp của bạn vào TheyLovePDF và trải nghiệm sự khác biệt.</p>`
   },
   {
-    slug: "convert-ppt-to-pdf-iphone",
-    title: "How to Convert PowerPoint (PPT) to PDF on Your iPhone",
-    date: "2026-06-23",
-    excerpt: "Need to submit a presentation from your phone? Learn the fastest way to turn a .ppt or .pptx file into a professional PDF directly on iOS.",
-    content: `
-      <p>Whether you're a student trying to submit an assignment on the bus or a professional emailing a deck to a client from an airport, converting a PowerPoint to a PDF on your iPhone is a crucial mobile skill.</p>
-      <p>PDFs guarantee that your fonts, formatting, and layouts will look exactly the same on the recipient's screen, regardless of what device they are using.</p>
+    slug: `convert-ppt-to-pdf-iphone`,
+    title: `Cách chuyển đổi PowerPoint (PPT) sang PDF trên iPhone của bạn`,
+    date: `2026-06-23`,
+    excerpt: `Bạn cần gửi bài thuyết trình từ điện thoại của mình?Tìm hiểu cách nhanh nhất để biến tệp .ppt hoặc .pptx thành tệp PDF chuyên nghiệp trực tiếp trên iOS.`,
+    content: `<p>Cho dù bạn là sinh viên đang cố gắng nộp bài tập trên xe buýt hay một chuyên gia gửi email tài liệu cho khách hàng từ sân bay thì việc chuyển đổi PowerPoint sang PDF trên iPhone là một kỹ năng quan trọng trên thiết bị di động.</p>
+<p>PDF đảm bảo rằng phông chữ, định dạng và bố cục của bạn sẽ trông giống hệt nhau trên màn hình của người nhận, bất kể họ đang sử dụng thiết bị nào.</p>
 
-      <h2>The Hassle-Free Method</h2>
-      <p>Don't download a heavy presentation app just to convert one file. You can do this securely through Safari in seconds.</p>
+<h2>Phương pháp đơn giản</h2>
+<p>Đừng tải xuống ứng dụng thuyết trình nặng chỉ để chuyển đổi một tệp.Bạn có thể thực hiện việc này một cách an toàn thông qua Safari trong vài giây.</p>
 
-      <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl my-6">
-        <ol class="space-y-3 mb-0">
-          <li>Open Safari and go to the <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Office to PDF Converter</a> (this tool handles Word, Excel, and PowerPoint).</li>
-          <li>Tap the upload button and select <strong>Choose Files</strong>.</li>
-          <li>Locate your downloaded <em>.pptx</em> file in your iPhone's Files app or iCloud Drive.</li>
-          <li>Tap convert. Our enterprise-grade rendering engine will perfectly preserve all your slide layouts and vector graphics.</li>
-          <li>Tap Download and save the crisp, new PDF to your device.</li>
-        </ol>
-      </div>
+<div class="bg-gray-50 viền border-gray-200 p-6 round-xl my-6">
+<ol class="space-y-3 mb-0">
+<li>Mở Safari và truy cập <a href="/tools/word-to-pdf" class="text-blue-600 font-semibold hover:underline">Chuyển đổi Office sang PDF</a> (công cụ này xử lý Word, Excel và PowerPoint).</li>
+<li>Nhấn vào nút tải lên và chọn <strong>Chọn tệp</strong>.</li>
+<li>Xác định vị trí tệp <em>.pptx</em> đã tải xuống của bạn trong ứng dụng Tệp trên iPhone hoặc iCloud Drive.</li>
+<li>Nhấn vào chuyển đổi.Công cụ kết xuất cấp doanh nghiệp của chúng tôi sẽ bảo toàn hoàn hảo tất cả bố cục trang trình bày và đồ họa vector của bạn.</li>
+<li>Nhấn vào Tải xuống và lưu bản PDF mới, sắc nét vào thiết bị của bạn.</li>
+</ol>
+</div>
 
-      <p>This entire process happens in the cloud, meaning it won't drain your iPhone's battery or take up any local storage space!</p>
-    `
+<p>Toàn bộ quá trình này diễn ra trên đám mây, nghĩa là nó sẽ không làm hao pin iPhone của bạn hoặc chiếm bất kỳ dung lượng lưu trữ cục bộ nào!</p>`
   },
   {
-    slug: "sign-pdf-windows-11",
-    title: "How to Digitally Sign a PDF on Windows 10 & 11",
-    date: "2026-06-23",
-    excerpt: "Stop printing and scanning contracts. Here is the legally binding, professional way to sign a document on your Windows PC.",
-    content: `
-      <p>Receiving a contract via email used to mean printing it out, signing it with a pen, scanning it back into the computer, and emailing a degraded, crooked image back to the sender. In 2026, this workflow is officially dead.</p>
+    slug: `sign-pdf-windows-11`,
+    title: `Cách ký điện tử vào tệp PDF trên Windows 10 & 11`,
+    date: `2026-06-23`,
+    excerpt: `Dừng in và quét hợp đồng.Đây là cách chuyên nghiệp, ràng buộc về mặt pháp lý để ký một tài liệu trên PC Windows của bạn.`,
+    content: `<p>Nhận hợp đồng qua email trước đây có nghĩa là in ra, dùng bút ký tên, scan lại vào máy tính rồi gửi lại email hình ảnh xấu, vẹo cho người gửi.Vào năm 2026, quy trình làm việc này chính thức ngừng hoạt động.</p>
 
-      <h2>The Modern Way to Sign on Windows</h2>
-      <p>You don't need Adobe Acrobat or any paid software installed on your Windows machine to execute a legally binding electronic signature.</p>
+<h2>Cách đăng nhập hiện đại trên Windows</h2>
+<p>Bạn không cần cài đặt Adobe Acrobat hoặc bất kỳ phần mềm trả phí nào trên máy Windows của mình để thực thi chữ ký điện tử có tính ràng buộc về mặt pháp lý.</p>
 
-      <ol class="list-decimal pl-5 space-y-3 mt-6">
-        <li>Open Chrome or Edge and navigate to the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF tool</a>.</li>
-        <li>Drag and drop your contract onto the page.</li>
-        <li>Click on the <strong>Signature</strong> icon in the toolbar.</li>
-        <li>Choose how you want to sign:
-          <ul class="list-disc pl-5 mt-2 text-gray-600">
-            <li><strong>Draw:</strong> Use your mouse or a Windows touchscreen/stylus to write your signature.</li>
-            <li><strong>Type:</strong> Type your name and select a professional cursive font.</li>
-            <li><strong>Upload:</strong> If you have a clean photo of your actual signature, upload it. Our tool will automatically strip away the white background!</li>
-          </ul>
-        </li>
-        <li>Drag your signature onto the dotted line, resize it, and click <strong>Apply</strong>.</li>
-      </ol>
+<ol class="list-decimal pl-5 space-y-3 mt-6">
+<li>Mở Chrome hoặc Edge và điều hướng đến <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Công cụ Ký PDF</a>.</li>
+<li>Kéo và thả hợp đồng của bạn vào trang.</li>
+<li>Nhấp vào biểu tượng <strong>Chữ ký</strong> trên thanh công cụ.</li>
+<li>Chọn cách bạn muốn ký:
+<ul class="list-disc pl-5 mt-2 text-gray-600">
+<li><strong>Vẽ:</strong> Sử dụng chuột hoặc màn hình cảm ứng/bút cảm ứng Windows để viết chữ ký của bạn.</li>
+<li><strong>Loại:</strong> Nhập tên của bạn và chọn phông chữ thảo chuyên nghiệp.</li>
+<li><strong>Tải lên:</strong> Nếu bạn có ảnh rõ ràng về chữ ký thực của mình, hãy tải ảnh đó lên.Công cụ của chúng tôi sẽ tự động loại bỏ nền trắng!</li>
+</ul>
+</li>
+<li>Kéo chữ ký của bạn vào đường chấm, thay đổi kích thước và nhấp vào <strong>Áp dụng</strong>.</li>
+</ol>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-        <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
-      </div>
-    `
-  }
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+<p class="text-blue-900 text-sm m-0"><strong>Những chữ ký này có hợp pháp không?</strong> Có!Theo các khuôn khổ quốc tế lớn (như Đạo luật ESIGN của Hoa Kỳ và eIDAS của Châu Âu), chữ ký điện tử có giá trị pháp lý giống như chữ ký mực ướt trong hầu hết các thỏa thuận kinh doanh tiêu chuẩn.</p>
+</div>`
+  },
 ];

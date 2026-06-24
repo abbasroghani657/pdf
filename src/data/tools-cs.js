@@ -1,1135 +1,1062 @@
+// Auto-generated translation file for cs
 export const TOOLS_DATA_CS = [
   {
-    "category": "convert",
-    "title": "PDF to Word",
-    "keywords": ["doc", "docx", "text", "convert", "extract"],
-    "desc": "Convert your PDF files into easy to edit DOC and DOCX documents.",
-    "icon": "solar:document-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `PDF do Wordu`,
+    "keywords": ["doc","docx","text","convert","extract"],
+    "desc": `Převeďte své soubory PDF na snadno upravitelné dokumenty DOC a DOCX.`,
+    "icon": `solar:document-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your PDF document by dragging it into the drop zone or clicking the 'Select File' button.",
-      "Our advanced OCR and conversion engine will instantly begin extracting the text, layout, and formatting.",
-      "Download the perfectly converted Word (DOC/DOCX) document, ready for editing."
+      `Nahrajte dokument PDF přetažením do oblasti umístění nebo kliknutím na tlačítko 'Vybrat soubor'.`,
+      `Náš pokročilý OCR a převodní modul začne okamžitě extrahovat text, rozvržení a formátování.`,
+      `Stáhněte si dokonale převedený dokument Word (DOC/DOCX), připravený k úpravám.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF to Word converter?",
-        "answer": "A PDF to Word converter is a utility that extracts text, layouts, and images from a PDF and recreates them as a fully editable Microsoft Word document. Our premium conversion engine preserves fonts, layouts, tables, and images so your Word document looks exactly like the original PDF."
+        "question": `Co je to převodník PDF do Wordu?`,
+        "answer": `Převaděč PDF do Wordu je nástroj, který extrahuje text, rozvržení a obrázky z PDF a znovu je vytvoří jako plně upravitelný dokument Microsoft Word.Náš prémiový převodní modul zachovává písma, rozvržení, tabulky a obrázky, takže váš dokument Word vypadá přesně jako původní PDF.`
       },
       {
-        "question": "Can I convert scanned PDFs to editable Word documents?",
-        "answer": "Absolutely. Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file."
+        "question": `Mohu převést naskenované soubory PDF na upravitelné dokumenty aplikace Word?`,
+        "answer": `Absolutně.Our built-in OCR (Optical Character Recognition) technology automatically detects scanned text and makes it fully editable in the resulting DOCX file.`
       },
       {
-        "question": "Is my confidential PDF safe during conversion?",
-        "answer": "We take privacy seriously. Your files are encrypted via 256-bit SSL during transfer, and permanently deleted from our servers automatically within 2 hours."
-      }
+        "question": `Je můj důvěrný soubor PDF během převodu bezpečný?`,
+        "answer": `Soukromí bereme vážně.Vaše soubory jsou během přenosu zašifrovány pomocí 256bitového SSL a trvale smazány z našich serverů automaticky do 2 hodin.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Word to PDF",
-    "keywords": ["doc", "docx", "create", "convert"],
-    "desc": "Make DOC and DOCX files easy to read by converting them to PDF.",
-    "icon": "solar:file-text-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `convert`,
+    "title": `Word do PDF`,
+    "keywords": ["doc","docx","create","convert"],
+    "desc": `Usnadněte si čtení souborů DOC a DOCX tím, že je převedete do formátu PDF.`,
+    "icon": `solar:file-text-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select your DOC or DOCX file from your computer or drag it onto the page.",
-      "The tool will instantly lock in the formatting and convert the Word document to a universal PDF format.",
-      "Download your new PDF. The layout will look identical on every device."
+      `Vyberte soubor DOC nebo DOCX z počítače nebo jej přetáhněte na stránku.`,
+      `Nástroj okamžitě uzamkne formátování a převede dokument aplikace Word do univerzálního formátu PDF.`,
+      `Stáhněte si svůj nový soubor PDF.The layout will look identical on every device.`,
     ],
     "faqs": [
       {
-        "question": "Why should I convert Word to PDF?",
-        "answer": "Converting to PDF ensures your document's layout, fonts, and images look exactly the same on any device, preventing formatting errors when sharing with others."
+        "question": `Proč bych měl převádět Word do PDF?`,
+        "answer": `Převod do PDF zajistí, že rozvržení, písma a obrázky vašeho dokumentu budou vypadat přesně stejně na jakémkoli zařízení, čímž se zabrání chybám formátování při sdílení s ostatními.`
       },
       {
-        "question": "Are my margins and fonts preserved?",
-        "answer": "Yes, our Word to PDF converter locks in your exact layout, including custom fonts and precise margin settings."
+        "question": `Jsou moje okraje a písma zachovány?`,
+        "answer": `Ano, náš převaděč Word do PDF uzamkne vaše přesné rozvržení, včetně vlastních písem a přesného nastavení okrajů.`
       },
       {
-        "question": "Can I convert multiple Word files at once?",
-        "answer": "Yes, you can upload multiple DOC/DOCX files, and we will process them concurrently for high-speed conversion."
-      }
+        "question": `Mohu převést více souborů aplikace Word najednou?`,
+        "answer": `Ano, můžete nahrát více souborů DOC/DOCX a my je zpracujeme souběžně pro vysokorychlostní převod.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Excel",
-    "keywords": ["xls", "xlsx", "spreadsheet", "table", "data"],
-    "desc": "Extract tables and data from PDFs into Excel spreadsheets. Best results with text-based PDFs. Scanned PDFs are supported via OCR — accuracy may vary.",
-    "icon": "solar:chart-2-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF do Excelu`,
+    "keywords": ["xls","xlsx","spreadsheet","table","data"],
+    "desc": `Extrahujte tabulky a data z PDF do tabulek Excelu.Nejlepší výsledky s textovými soubory PDF.Naskenované soubory PDF jsou podporovány pomocí OCR – přesnost se může lišit.`,
+    "icon": `solar:chart-2-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF file containing the tables and data you want to extract.",
-      "Our system will scan the document, identify tabular data, and accurately format it into spreadsheet cells.",
-      "Download your editable Excel (XLSX) file."
+      `Nahrajte soubor PDF obsahující tabulky a data, která chcete extrahovat.`,
+      `Náš systém naskenuje dokument, identifikuje tabulková data a přesně je naformátuje do buněk tabulky.`,
+      `Stáhněte si upravitelný soubor Excel (XLSX).`,
     ],
     "faqs": [
       {
-        "question": "Will my PDF tables be formatted correctly in Excel?",
-        "answer": "Yes, our intelligent extraction tool recognizes rows and columns, ensuring your tabular data is neatly organized into Excel cells."
+        "question": `Budou moje tabulky PDF v Excelu správně naformátovány?`,
+        "answer": `Ano, náš inteligentní extrakční nástroj rozpoznává řádky a sloupce a zajišťuje, že vaše tabulková data jsou úhledně uspořádána do buněk aplikace Excel.`
       },
       {
-        "question": "Can it extract data from scanned PDFs?",
-        "answer": "Yes, our OCR technology can read tables from scanned images and convert them into editable Excel spreadsheets."
+        "question": `Dokáže extrahovat data z naskenovaných PDF?`,
+        "answer": `Ano, naše technologie OCR dokáže číst tabulky z naskenovaných obrázků a převádět je na upravitelné tabulky aplikace Excel.`
       },
       {
-        "question": "Are formulas carried over?",
-        "answer": "PDFs do not store formulas, only raw data. The extracted Excel file will contain the exact values visible in the PDF."
-      }
+        "question": `Přenášejí se vzorce?`,
+        "answer": `Soubory PDF neukládají vzorce, pouze nezpracovaná data.Extrahovaný soubor Excel bude obsahovat přesné hodnoty viditelné v PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "Excel to PDF",
-    "keywords": ["xls", "xlsx", "spreadsheet", "create"],
-    "desc": "Make EXCEL spreadsheets easy to read by converting them to PDF.",
-    "icon": "solar:chart-square-bold-duotone",
-    "iconColorClass": "bg-emerald-50 text-emerald-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `Excel do PDF`,
+    "keywords": ["xls","xlsx","spreadsheet","create"],
+    "desc": `Usnadněte si čtení tabulek EXCEL tím, že je převedete do formátu PDF.`,
+    "icon": `solar:chart-square-bold-duotone`,
+    "iconColorClass": `bg-emerald-50 text-emerald-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your Excel (XLS or XLSX) spreadsheet.",
-      "Our tool will optimize the spreadsheet's layout to fit perfectly onto PDF pages without cutting off columns.",
-      "Download the finalized PDF document."
+      `Nahrajte svou tabulku Excel (XLS nebo XLSX).`,
+      `Náš nástroj optimalizuje rozložení tabulky tak, aby se perfektně vešlo na stránky PDF bez ořezávání sloupců.`,
+      `Stáhněte si dokončený dokument PDF.`,
     ],
     "faqs": [
       {
-        "question": "Will my wide spreadsheets get cut off?",
-        "answer": "Our converter intelligently scales and formats your spreadsheet to ensure columns fit logically on the PDF pages."
+        "question": `Budou mé široké tabulky oříznuty?`,
+        "answer": `Náš převaděč inteligentně přizpůsobí a naformátuje vaši tabulku, aby se zajistilo, že se sloupce logicky vejdou na stránky PDF.`
       },
       {
-        "question": "Does it convert all worksheets?",
-        "answer": "Yes, all active worksheets in your Excel file will be converted into sequential pages in the final PDF."
+        "question": `Převádí všechny listy?`,
+        "answer": `Ano, všechny aktivní listy ve vašem souboru Excel budou převedeny na sekvenční stránky v konečném PDF.`
       },
       {
-        "question": "Is my financial data secure?",
-        "answer": "100%. We use end-to-end encryption, and all files are permanently wiped from our systems within 2 hours."
-      }
+        "question": `Jsou moje finanční údaje v bezpečí?`,
+        "answer": `100 %.Používáme end-to-end šifrování a všechny soubory jsou trvale vymazány z našich systémů do 2 hodin.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to JPG",
-    "keywords": ["image", "picture", "photo", "convert"],
-    "desc": "Convert each PDF page into a JPG or extract all images contained.",
-    "icon": "solar:gallery-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF do JPG`,
+    "keywords": ["image","picture","photo","convert"],
+    "desc": `Převeďte každou stránku PDF do formátu JPG nebo extrahujte všechny obsažené obrázky.`,
+    "icon": `solar:gallery-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF document you want to convert to images.",
-      "Choose whether to extract embedded images or convert entire PDF pages into high-resolution JPGs.",
-      "Download the JPGs individually or as a compressed ZIP file."
+      `Nahrajte dokument PDF, který chcete převést na obrázky.`,
+      `Vyberte, zda chcete extrahovat vložené obrázky nebo převést celé stránky PDF do souborů JPG s vysokým rozlišením.`,
+      `Stáhněte si soubory JPG jednotlivě nebo jako komprimovaný soubor ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Will the JPG quality be high?",
-        "answer": "Yes, we extract and convert pages at high resolution, ensuring crisp text and clear images in the resulting JPG files."
+        "question": `Bude kvalita JPG vysoká?`,
+        "answer": `Ano, extrahujeme a převádíme stránky ve vysokém rozlišení, což zajišťuje ostrý text a jasné obrázky ve výsledných souborech JPG.`
       },
       {
-        "question": "Can I extract only the images from the PDF?",
-        "answer": "Absolutely. You can choose to extract only the photos embedded in the PDF rather than converting the entire page."
+        "question": `Mohu z PDF extrahovat pouze obrázky?`,
+        "answer": `Absolutně.Můžete se rozhodnout extrahovat pouze fotografie vložené do PDF namísto převodu celé stránky.`
       },
       {
-        "question": "Is there a limit to how many pages I can convert?",
-        "answer": "Free users can convert up to 10MB worth of PDFs. Pro users can process massive files up to 2GB."
-      }
+        "question": `Existuje nějaké omezení počtu stránek, které mohu převést?`,
+        "answer": `Bezplatní uživatelé mohou převádět soubory PDF v hodnotě až 10 MB.Uživatelé Pro mohou zpracovávat velké soubory až do velikosti 2 GB.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "JPG to PDF",
-    "keywords": ["image", "picture", "photo", "create"],
-    "desc": "Convert JPG images to PDF in seconds. Easily adjust orientation and margins.",
-    "icon": "solar:camera-bold-duotone",
-    "iconColorClass": "bg-amber-50 text-amber-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `JPG do PDF`,
+    "keywords": ["image","picture","photo","create"],
+    "desc": `Převeďte obrázky JPG do PDF během několika sekund.Snadno upravte orientaci a okraje.`,
+    "icon": `solar:camera-bold-duotone`,
+    "iconColorClass": `bg-amber-50 text-amber-500`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select one or multiple JPG images from your device.",
-      "Drag and drop to rearrange their order, adjust the page orientation, and set margins if needed.",
-      "Click 'Convert' and download your combined PDF document."
+      `Vyberte jeden nebo více obrázků JPG ze svého zařízení.`,
+      `Přetažením můžete změnit jejich pořadí, upravit orientaci stránky a v případě potřeby nastavit okraje.`,
+      `Klikněte na „Převést“ a stáhněte si kombinovaný dokument PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I combine multiple JPGs into one PDF?",
-        "answer": "Yes, simply upload multiple images, arrange them in your preferred order, and we will merge them into a single PDF document."
+        "question": `Mohu spojit více JPG do jednoho PDF?`,
+        "answer": `Ano, jednoduše nahrajte více obrázků, uspořádejte je v preferovaném pořadí a my je sloučíme do jednoho dokumentu PDF.`
       },
       {
-        "question": "Will my images lose quality?",
-        "answer": "No, we preserve the original resolution and quality of your JPG images when embedding them into the PDF."
+        "question": `Ztratí mé obrázky kvalitu?`,
+        "answer": `Ne, zachováváme původní rozlišení a kvalitu vašich obrázků JPG při jejich vkládání do PDF.`
       },
       {
-        "question": "Can I adjust the margins and orientation?",
-        "answer": "Yes, our tool allows you to customize the page orientation (portrait or landscape) and margin sizes before conversion."
-      }
+        "question": `Mohu upravit okraje a orientaci?`,
+        "answer": `Ano, náš nástroj vám umožňuje přizpůsobit orientaci stránky (na výšku nebo na šířku) a velikosti okrajů před převodem.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to PowerPoint",
-    "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
-    "icon": "solar:presentation-graph-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF do PowerPointu`,
+    "desc": `Proměňte své soubory PDF na snadno upravitelné prezentace PPT a PPTX.`,
+    "icon": `solar:presentation-graph-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to turn into a presentation.",
-      "Our AI engine will analyze the slides and convert them into editable PPTX formats.",
-      "Download your new PowerPoint presentation."
+      `Nahrajte PDF, které chcete přeměnit na prezentaci.`,
+      `Náš AI engine analyzuje snímky a převede je do upravitelných formátů PPTX.`,
+      `Stáhněte si svou novou prezentaci v PowerPointu.`,
     ],
     "faqs": [
       {
-        "question": "Will the text in my PowerPoint be editable?",
-        "answer": "Yes, all text, shapes, and images will be fully editable in the resulting PPTX file."
+        "question": `Bude text v mém PowerPointu upravitelný?`,
+        "answer": `Ano, veškerý text, tvary a obrázky budou ve výsledném souboru PPTX plně upravitelné.`
       },
       {
-        "question": "Does it work with scanned presentations?",
-        "answer": "Yes, utilizing OCR, we can extract text from scanned slides and make it editable in PowerPoint."
+        "question": `Funguje to s naskenovanými prezentacemi?`,
+        "answer": `Ano, pomocí OCR můžeme extrahovat text z naskenovaných snímků a upravit jej v PowerPointu.`
       },
       {
-        "question": "Is the slide layout preserved?",
-        "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
-      }
+        "question": `Je rozložení snímku zachováno?`,
+        "answer": `Naše pokročilá technologie převodu zajišťuje, že rozvržení vašeho původního PDF je co nejpřesněji přizpůsobeno PowerPointu.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PowerPoint to PDF",
-    "desc": "Make PPT and PPTX slideshows easy to view by converting them to PDF.",
-    "icon": "solar:monitor-bold-duotone",
-    "iconColorClass": "bg-orange-50 text-orange-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PowerPoint do PDF`,
+    "desc": `Usnadněte prohlížení prezentací PPT a PPTX jejich převodem do formátu PDF.`,
+    "icon": `solar:monitor-bold-duotone`,
+    "iconColorClass": `bg-orange-50 text-orange-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Select your PPT or PPTX file.",
-      "The tool will instantly convert your slides into a secure, universal PDF format.",
-      "Download your presentation as a PDF."
+      `Vyberte soubor PPT nebo PPTX.`,
+      `Nástroj okamžitě převede vaše snímky do zabezpečeného univerzálního formátu PDF.`,
+      `Stáhněte si prezentaci jako PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why convert PowerPoint to PDF?",
-        "answer": "Converting ensures your presentation looks identical on any device, preventing missing fonts or broken layouts when presenting on a different computer."
+        "question": `Proč převádět PowerPoint do PDF?`,
+        "answer": `Konverze zajistí, že vaše prezentace bude vypadat stejně na jakémkoli zařízení, zabrání chybějícím fontům nebo poškozeným rozvržením při prezentaci na jiném počítači.`
       },
       {
-        "question": "Are my slide transitions saved?",
-        "answer": "No, PDF is a static document format, so animations and slide transitions will not be carried over."
+        "question": `Jsou mé přechody snímků uloženy?`,
+        "answer": `Ne, PDF je statický formát dokumentu, takže animace a přechody snímků nebudou přeneseny.`
       },
       {
-        "question": "Are speaker notes included?",
-        "answer": "Currently, our tool converts the main slide visuals. Speaker notes are not included in the standard PDF output."
-      }
+        "question": `Jsou zahrnuty poznámky řečníka?`,
+        "answer": `V současné době náš nástroj převádí vizuální prvky hlavních snímků.Poznámky řečníka nejsou součástí standardního výstupu PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to HTML",
-    "keywords": ["webpage", "website", "convert"],
-    "desc": "Convert your PDF documents to HTML web pages perfectly.",
-    "icon": "solar:code-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `PDF do HTML`,
+    "keywords": ["webpage","website","convert"],
+    "desc": `Převeďte své dokumenty PDF na webové stránky HTML dokonale.`,
+    "icon": `solar:code-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Our system will convert the document into web-ready HTML, CSS, and images.",
-      "Download the ZIP file containing your new webpage."
+      `Nahrajte svůj soubor PDF.`,
+      `Náš systém převede dokument do HTML, CSS a obrázků připravených pro web.`,
+      `Stáhněte si soubor ZIP obsahující vaši novou webovou stránku.`,
     ],
     "faqs": [
       {
-        "question": "Will the HTML be responsive?",
-        "answer": "The HTML will closely match the static layout of your PDF, maintaining absolute positioning for accuracy."
+        "question": `Bude HTML responzivní?`,
+        "answer": `HTML bude co nejpřesněji odpovídat statickému rozvržení vašeho PDF a zachová absolutní polohu pro přesnost.`
       },
       {
-        "question": "Are images extracted automatically?",
-        "answer": "Yes, all embedded images are extracted and properly referenced in the generated HTML code."
+        "question": `Jsou obrázky extrahovány automaticky?`,
+        "answer": `Ano, všechny vložené obrázky jsou extrahovány a správně odkazovány ve vygenerovaném HTML kódu.`
       },
       {
-        "question": "Do I need coding skills to use this?",
-        "answer": "Not at all. You will receive a ready-to-use HTML file that you can instantly open in any web browser."
-      }
+        "question": `Potřebuji znalosti kódování, abych to mohl používat?`,
+        "answer": `vůbec ne.Obdržíte soubor HTML připravený k použití, který můžete okamžitě otevřít v libovolném webovém prohlížeči.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "HTML to PDF",
-    "keywords": ["webpage", "website", "url", "link"],
-    "desc": "Convert webpages in HTML to PDF format directly from URL or file.",
-    "icon": "solar:global-bold-duotone",
-    "iconColorClass": "bg-indigo-50 text-indigo-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `convert`,
+    "title": `HTML do PDF`,
+    "keywords": ["webpage","website","url","link"],
+    "desc": `Převeďte webové stránky ve formátu HTML do formátu PDF přímo z adresy URL nebo souboru.`,
+    "icon": `solar:global-bold-duotone`,
+    "iconColorClass": `bg-indigo-50 text-indigo-500`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your HTML file or enter a webpage URL.",
-      "Our rendering engine will load the page, apply styles, and capture it as a PDF document.",
-      "Download your perfectly formatted PDF."
+      `Nahrajte svůj soubor HTML nebo zadejte adresu URL webové stránky.`,
+      `Náš vykreslovací modul načte stránku, použije styly a zachytí ji jako dokument PDF.`,
+      `Stáhněte si svůj dokonale formátovaný PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I convert live URLs to PDF?",
-        "answer": "Yes, you can input a URL, and our tool will fetch the live webpage and convert it to a high-quality PDF."
+        "question": `Mohu převést živé adresy URL do PDF?`,
+        "answer": `Ano, můžete zadat adresu URL a náš nástroj načte živou webovou stránku a převede ji do vysoce kvalitního PDF.`
       },
       {
-        "question": "Are CSS styles applied?",
-        "answer": "Absolutely. Our rendering engine fully supports CSS, ensuring the PDF looks exactly like the live webpage."
+        "question": `Jsou použity styly CSS?`,
+        "answer": `Absolutně.Náš vykreslovací modul plně podporuje CSS, což zajišťuje, že PDF vypadá přesně jako živá webová stránka.`
       },
       {
-        "question": "What about JavaScript heavy pages?",
-        "answer": "Our tool executes JavaScript before capturing the page, ensuring dynamic content is properly rendered in the final PDF."
-      }
+        "question": `A co stránky náročné na JavaScript?`,
+        "answer": `Náš nástroj spouští JavaScript před zachycením stránky a zajišťuje správné vykreslení dynamického obsahu v konečném PDF.`
+      },
     ]
   },
   {
-    "category": "convert",
-    "title": "PDF to Text",
-    "desc": "Extract text from your PDF files to create editable TXT documents.",
-    "icon": "solar:text-bold-duotone",
-    "iconColorClass": "bg-gray-100 text-gray-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `convert`,
+    "title": `PDF na text`,
+    "desc": `Extrahujte text ze souborů PDF a vytvořte upravitelné dokumenty TXT.`,
+    "icon": `solar:text-bold-duotone`,
+    "iconColorClass": `bg-gray-100 text-gray-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Our system will strip away formatting and extract pure, plain text.",
-      "Download your raw TXT file."
+      `Nahrajte svůj dokument PDF.`,
+      `Náš systém odstraní formátování a extrahuje čistý, prostý text.`,
+      `Stáhněte si nezpracovaný soubor TXT.`,
     ],
     "faqs": [
       {
-        "question": "Does it extract text from images?",
-        "answer": "Yes, if the PDF contains scanned images, our OCR technology will read the text and include it in the TXT file."
+        "question": `Extrahuje text z obrázků?`,
+        "answer": `Ano, pokud soubor PDF obsahuje naskenované obrázky, naše technologie OCR přečte text a zahrne jej do souboru TXT.`
       },
       {
-        "question": "Is the formatting kept?",
-        "answer": "No, this tool specifically removes all formatting to provide you with raw, unstyled plain text."
+        "question": `Je formátování zachováno?`,
+        "answer": `Ne, tento nástroj konkrétně odstraňuje veškeré formátování, aby vám poskytl nezpracovaný prostý text bez stylu.`
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, all files are encrypted during processing and automatically deleted within 2 hours."
-      }
+        "question": `Jsou moje data v bezpečí?`,
+        "answer": `Ano, všechny soubory jsou během zpracování zašifrovány a automaticky smazány do 2 hodin.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Merge PDF",
-    "keywords": ["combine", "join", "concatenate", "assemble", "connect"],
-    "desc": "Combine PDFs in the order you want with the easiest PDF merger available.",
-    "icon": "solar:layers-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Sloučit PDF`,
+    "keywords": ["combine","join","concatenate","assemble","connect"],
+    "desc": `Kombinujte soubory PDF v požadovaném pořadí pomocí nejjednoduššího sloučení PDF, které je k dispozici.`,
+    "icon": `solar:layers-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Select multiple PDF files from your device.",
-      "Drag and drop the thumbnails to arrange the files in your desired order.",
-      "Click 'Merge' and download your combined, single PDF document."
+      `Vyberte ze svého zařízení více souborů PDF.`,
+      `Přetažením miniatur uspořádejte soubory v požadovaném pořadí.`,
+      `Klikněte na „Sloučit“ a stáhněte si kombinovaný, jeden dokument PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is a PDF Merger?",
-        "answer": "A PDF merger is a utility that combines multiple PDF files into a single, continuous document. Free users can merge up to 20 files at once. Pro users can merge an unlimited number of documents."
+        "question": `Co je sloučení PDF?`,
+        "answer": `Sloučení PDF je nástroj, který kombinuje více souborů PDF do jednoho souvislého dokumentu.Bezplatní uživatelé mohou sloučit až 20 souborů najednou.Uživatelé Pro mohou sloučit neomezený počet dokumentů.`
       },
       {
-        "question": "Can I change the order of the files?",
-        "answer": "Yes! After uploading, simply drag and drop the file thumbnails to reorder them exactly how you want."
+        "question": `Mohu změnit pořadí souborů?`,
+        "answer": `Ano!Po nahrání jednoduše přetáhněte miniatury souborů a uspořádejte je přesně tak, jak chcete.`
       },
       {
-        "question": "Does merging reduce the quality?",
-        "answer": "Not at all. The merging process preserves the original quality and formatting of all your documents."
-      }
+        "question": `Snižuje sloučení kvalitu?`,
+        "answer": `vůbec ne.Proces slučování zachová původní kvalitu a formátování všech vašich dokumentů.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Split PDF",
-    "keywords": ["cut", "divide", "separate", "extract"],
-    "desc": "Separate one page or a whole set for easy conversion into independent PDF files.",
-    "icon": "solar:scissors-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `organize`,
+    "title": `Rozdělit PDF`,
+    "keywords": ["cut","divide","separate","extract"],
+    "desc": `Oddělte jednu stránku nebo celou sadu pro snadný převod do nezávislých souborů PDF.`,
+    "icon": `solar:scissors-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you wish to split.",
-      "Choose whether to extract specific pages or split the document into fixed ranges.",
-      "Download your new, separated PDF files as a ZIP archive."
+      `Nahrajte PDF, které chcete rozdělit.`,
+      `Vyberte, zda chcete extrahovat konkrétní stránky nebo rozdělit dokument do pevných rozsahů.`,
+      `Stáhněte si své nové oddělené soubory PDF jako archiv ZIP.`,
     ],
     "faqs": [
       {
-        "question": "Can I extract just one page from a large PDF?",
-        "answer": "Yes, you can easily specify a single page number or a custom range (e.g., pages 4-7) to extract."
+        "question": `Mohu extrahovat pouze jednu stránku z velkého PDF?`,
+        "answer": `Ano, můžete snadno zadat jedno číslo stránky nebo vlastní rozsah (např. strany 4–7), který chcete extrahovat.`
       },
       {
-        "question": "Will the split files retain original quality?",
-        "answer": "Yes, the individual pages are extracted flawlessly without any loss in resolution or text quality."
+        "question": `Zachovají si rozdělené soubory původní kvalitu?`,
+        "answer": `Ano, jednotlivé stránky jsou extrahovány bezchybně bez ztráty rozlišení nebo kvality textu.`
       },
       {
-        "question": "How do I download multiple split files?",
-        "answer": "When you split a document into multiple parts, we will conveniently package them into a single ZIP file for easy downloading."
-      }
+        "question": `Jak si stáhnu více rozdělených souborů?`,
+        "answer": `Když rozdělíte dokument na více částí, pohodlně je zabalíme do jediného souboru ZIP pro snadné stažení.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Rotate PDF",
-    "keywords": ["turn", "orientation", "pages", "flip"],
-    "desc": "Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once.",
-    "icon": "solar:refresh-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Otočit PDF`,
+    "keywords": ["turn","orientation","pages","flip"],
+    "desc": `Otočte soubory PDF tak, jak je potřebujete.Můžete dokonce otočit více PDF najednou.`,
+    "icon": `solar:refresh-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Hover over the pages you want to rotate and click the rotate icon, or rotate all pages at once.",
-      "Click apply and download your permanently rotated PDF."
+      `Nahrajte svůj dokument PDF.`,
+      `Najeďte myší na stránky, které chcete otočit, a klikněte na ikonu otočení nebo otočte všechny stránky najednou.`,
+      `Klikněte na použít a stáhněte si trvale otočený soubor PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I rotate only specific pages?",
-        "answer": "Yes, you can select individual pages and rotate them 90, 180, or 270 degrees without affecting the rest of the document."
+        "question": `Mohu otáčet pouze určité stránky?`,
+        "answer": `Ano, můžete vybrat jednotlivé stránky a otočit je o 90, 180 nebo 270 stupňů, aniž byste ovlivnili zbytek dokumentu.`
       },
       {
-        "question": "Is the rotation permanent?",
-        "answer": "Yes, once you download the new file, the orientation changes are permanently saved into the PDF's metadata."
+        "question": `Je rotace trvalá?`,
+        "answer": `Ano, jakmile stáhnete nový soubor, změny orientace se trvale uloží do metadat PDF.`
       },
       {
-        "question": "Is it safe to upload confidential documents?",
-        "answer": "Absolutely. All uploads are encrypted via HTTPS and wiped from our servers 2 hours after processing."
-      }
+        "question": `Je bezpečné nahrávat důvěrné dokumenty?`,
+        "answer": `Absolutně.Všechny uploady jsou zašifrovány přes HTTPS a vymazány z našich serverů 2 hodiny po zpracování.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Delete pages",
-    "desc": "Remove pages from a PDF document in a flash.",
-    "icon": "solar:trash-bin-minimalistic-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Odstraňte stránky`,
+    "desc": `Bleskové odstranění stránek z dokumentu PDF.`,
+    "icon": `solar:trash-bin-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the pages you want to remove by clicking on their thumbnails.",
-      "Click 'Delete Pages' and download your newly streamlined document."
+      `Nahrajte svůj soubor PDF.`,
+      `Vyberte stránky, které chcete odstranit, kliknutím na jejich miniatury.`,
+      `Klikněte na „Odstranit stránky“ a stáhněte si svůj nově zjednodušený dokument.`,
     ],
     "faqs": [
       {
-        "question": "How do I know which pages to delete?",
-        "answer": "Our tool generates high-quality thumbnails of every page, allowing you to visually identify and select the exact pages you want to remove."
+        "question": `Jak poznám, které stránky smazat?`,
+        "answer": `Náš nástroj generuje vysoce kvalitní miniatury každé stránky, což vám umožní vizuálně identifikovat a vybrat přesné stránky, které chcete odstranit.`
       },
       {
-        "question": "Can I delete multiple pages at once?",
-        "answer": "Yes, you can click on multiple thumbnails or type in a page range to remove several pages simultaneously."
+        "question": `Mohu smazat více stránek najednou?`,
+        "answer": `Ano, můžete kliknout na více miniatur nebo zadat rozsah stránek a odstranit několik stránek současně.`
       },
       {
-        "question": "Is the rest of the document affected?",
-        "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
-      }
+        "question": `Je ovlivněn zbytek dokumentu?`,
+        "answer": `Ne, všechny zbývající stránky si zachovají původní formátování, kvalitu a rozlišení.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Reorder pages",
-    "desc": "Change the page order of your PDF document via drag and drop.",
-    "icon": "solar:sort-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `organize`,
+    "title": `Změnit pořadí stránek`,
+    "desc": `Změňte pořadí stránek dokumentu PDF přetažením.`,
+    "icon": `solar:sort-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF document.",
-      "Simply drag and drop the page thumbnails to change their sequence.",
-      "Once arranged, apply the changes and download your reorganized PDF."
+      `Nahrajte svůj dokument PDF.`,
+      `Jednoduše přetáhněte miniatury stránek a změňte jejich pořadí.`,
+      `Po uspořádání použijte změny a stáhněte si reorganizovaný soubor PDF.`,
     ],
     "faqs": [
       {
-        "question": "Is it easy to reorder a large document?",
-        "answer": "Yes, our intuitive drag-and-drop interface allows you to quickly move pages around, even in large documents."
+        "question": `Je snadné změnit pořadí velkého dokumentu?`,
+        "answer": `Ano, naše intuitivní rozhraní přetahování umožňuje rychle přesouvat stránky, a to i ve velkých dokumentech.`
       },
       {
-        "question": "Will I lose any interactive elements?",
-        "answer": "Most standard interactive elements are preserved, though complex form fields bridging multiple pages might behave differently."
+        "question": `Přijdu o nějaké interaktivní prvky?`,
+        "answer": `Většina standardních interaktivních prvků je zachována, i když složitá pole formuláře přemosťující více stránek se mohou chovat odlišně.`
       },
       {
-        "question": "Can I undo a move before saving?",
-        "answer": "Yes, you can rearrange the pages as many times as you like before clicking the final process button."
-      }
+        "question": `Mohu přesun před uložením vrátit zpět?`,
+        "answer": `Ano, před kliknutím na tlačítko závěrečného procesu můžete stránky uspořádat kolikrát chcete.`
+      },
     ]
   },
   {
-    "category": "organize",
-    "title": "Add blank page",
-    "desc": "Insert a blank page anywhere within your PDF document.",
-    "icon": "solar:add-square-bold-duotone",
-    "iconColorClass": "bg-cyan-50 text-cyan-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `organize`,
+    "title": `Přidat prázdnou stránku`,
+    "desc": `Vložte prázdnou stránku kamkoli do dokumentu PDF.`,
+    "icon": `solar:add-square-bold-duotone`,
+    "iconColorClass": `bg-cyan-50 text-cyan-600`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Select the exact location where you want to insert a new blank page.",
-      "Apply the changes and download your updated PDF."
+      `Nahrajte svůj soubor PDF.`,
+      `Vyberte přesné umístění, kam chcete vložit novou prázdnou stránku.`,
+      `Použijte změny a stáhněte si aktualizovaný soubor PDF.`,
     ],
     "faqs": [
       {
-        "question": "Why would I need to add a blank page?",
-        "answer": "Adding a blank page is useful for printing double-sided documents, inserting future notes, or correcting pagination formatting."
+        "question": `Proč bych měl přidávat prázdnou stránku?`,
+        "answer": `Přidání prázdné stránky je užitečné pro tisk oboustranných dokumentů, vkládání budoucích poznámek nebo opravu formátování stránkování.`
       },
       {
-        "question": "Can I add multiple blank pages?",
-        "answer": "Yes, you can insert as many blank pages as you need, anywhere in the document."
+        "question": `Mohu přidat více prázdných stránek?`,
+        "answer": `Ano, kamkoli do dokumentu můžete vložit tolik prázdných stránek, kolik potřebujete.`
       },
       {
-        "question": "Will the blank page match the document's size?",
-        "answer": "Yes, the new blank page will automatically match the dimensions and orientation of the surrounding pages."
-      }
+        "question": `Bude prázdná stránka odpovídat velikosti dokumentu?`,
+        "answer": `Ano, nová prázdná stránka bude automaticky odpovídat rozměrům a orientaci okolních stránek.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
-    "desc": "Reduce file size while optimizing for maximal PDF quality.",
-    "icon": "solar:zip-file-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `optimize`,
+    "title": `Komprimovat PDF`,
+    "keywords": ["reduce","shrink","smaller","size"],
+    "desc": `Zmenšete velikost souboru a zároveň optimalizujte pro maximální kvalitu PDF.`,
+    "icon": `solar:zip-file-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload your bulky PDF file.",
-      "Choose your desired compression level (Extreme, Recommended, or Less compression).",
-      "Download your optimized, much smaller PDF file."
+      `Nahrajte svůj objemný soubor PDF.`,
+      `Vyberte požadovanou úroveň komprese (Extrémní, Doporučená nebo Méně kompresní).`,
+      `Stáhněte si optimalizovaný, mnohem menší soubor PDF.`,
     ],
     "faqs": [
       {
-        "question": "Will compression ruin the quality of my PDF?",
-        "answer": "Our advanced optimization algorithms reduce file size by compressing images and removing redundant data while keeping text sharp and images visually clear."
+        "question": `Zničí komprese kvalitu mého PDF?`,
+        "answer": `Naše pokročilé optimalizační algoritmy zmenšují velikost souboru komprimací obrázků a odstraněním nadbytečných dat, přičemž text zůstává ostrý a obrázky jsou vizuálně čisté.`
       },
       {
-        "question": "Which compression level should I choose?",
-        "answer": "We suggest 'Recommended' for a perfect balance. Use 'Extreme' only if you urgently need the smallest file size possible for email attachments."
+        "question": `Jakou úroveň komprese mám zvolit?`,
+        "answer": `Pro dokonalou rovnováhu doporučujeme 'Doporučeno'.„Extrémní“ používejte pouze v případě, že naléhavě potřebujete nejmenší možnou velikost souboru pro přílohy e-mailů.`
       },
       {
-        "question": "Can I compress a PDF that is already small?",
-        "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
-      }
+        "question": `Mohu komprimovat PDF, které je již malé?`,
+        "answer": `Můžete, ale zmenšení velikosti souboru bude minimální, protože data jsou pravděpodobně již optimalizována.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Repair PDF",
-    "keywords": ["fix", "recover", "corrupt", "broken"],
-    "desc": "Repair a damaged PDF and recover data from corrupt files.",
-    "icon": "solar:document-medicine-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `Oprava PDF`,
+    "keywords": ["fix","recover","corrupt","broken"],
+    "desc": `Opravte poškozený PDF a obnovte data z poškozených souborů.`,
+    "icon": `solar:document-medicine-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your corrupted or damaged PDF file.",
-      "Our system will analyze the file structure and attempt to rebuild the broken data.",
-      "Download the repaired PDF document."
+      `Nahrajte svůj poškozený nebo poškozený soubor PDF.`,
+      `Náš systém analyzuje strukturu souborů a pokusí se znovu sestavit poškozená data.`,
+      `Stáhněte si opravený dokument PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can all corrupted PDFs be fixed?",
-        "answer": "While our tool is highly effective at fixing structural errors and broken headers, severely damaged files with missing raw data may not be fully recoverable."
+        "question": `Lze opravit všechny poškozené soubory PDF?`,
+        "answer": `I když je náš nástroj vysoce účinný při opravě strukturálních chyb a poškozených záhlaví, vážně poškozené soubory s chybějícími nezpracovanými daty nemusí být plně obnovitelné.`
       },
       {
-        "question": "How long does repairing take?",
-        "answer": "Most files are analyzed and repaired within a few seconds, depending on the complexity of the damage."
+        "question": `Jak dlouho trvá oprava?`,
+        "answer": `Většina souborů je analyzována a opravena během několika sekund, v závislosti na složitosti poškození.`
       },
       {
-        "question": "Is the data inside safe?",
-        "answer": "Yes. We process the repair securely in the cloud, and your document is permanently deleted shortly after."
-      }
+        "question": `Jsou data uvnitř v bezpečí?`,
+        "answer": `Ano.Opravu zpracujeme bezpečně v cloudu a váš dokument je krátce poté trvale smazán.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "OCR PDF",
-    "desc": "Make text in scanned PDFs selectable, searchable and editable.",
-    "icon": "solar:scanner-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `optimize`,
+    "title": `OCR PDF`,
+    "desc": `Umožněte text v naskenovaných souborech PDF vybrat, prohledávat a upravovat.`,
+    "icon": `solar:scanner-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your scanned PDF document.",
-      "Select the language of the text inside the document for better accuracy.",
-      "Download your new, fully searchable and selectable PDF."
+      `Nahrajte naskenovaný dokument PDF.`,
+      `Pro lepší přesnost vyberte jazyk textu uvnitř dokumentu.`,
+      `Stáhněte si svůj nový, plně prohledávatelný a volitelný soubor PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is OCR?",
-        "answer": "OCR stands for Optical Character Recognition. It's a technology that reads text inside images or scanned documents and converts it into selectable, searchable computer text."
+        "question": `Co je OCR?`,
+        "answer": `OCR je zkratka pro optické rozpoznávání znaků.Je to technologie, která čte text uvnitř obrázků nebo naskenovaných dokumentů a převádí jej na volitelný počítačový text s možností vyhledávání.`
       },
       {
-        "question": "Does OCR work on handwritten text?",
-        "answer": "Our OCR engine is highly accurate for printed text. Handwritten text may yield varying results depending on legibility."
+        "question": `Funguje OCR na ručně psaném textu?`,
+        "answer": `Náš OCR engine je vysoce přesný pro tištěný text.Ručně psaný text může přinést různé výsledky v závislosti na čitelnosti.`
       },
       {
-        "question": "Can I copy text from the OCR'd document?",
-        "answer": "Absolutely. Once processed, you can highlight, copy, and paste text directly from the PDF just like a normal document."
-      }
+        "question": `Mohu zkopírovat text z dokumentu OCR?`,
+        "answer": `Absolutně.Po zpracování můžete zvýrazňovat, kopírovat a vkládat text přímo z PDF stejně jako běžný dokument.`
+      },
     ]
   },
   {
-    "category": "optimize",
-    "title": "Flatten PDF",
-    "keywords": ["flatten", "forms", "merge layers", "uneditable"],
-    "desc": "Merge all layers, forms, and annotations into a single non-editable layer.",
-    "icon": "solar:layers-minimalistic-bold-duotone",
-    "iconColorClass": "bg-green-50 text-green-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `optimize`,
+    "title": `Vyrovnat PDF`,
+    "keywords": ["flatten","forms","merge layers","uneditable"],
+    "desc": `Sloučit všechny vrstvy, formuláře a poznámky do jediné neupravitelné vrstvy.`,
+    "icon": `solar:layers-minimalistic-bold-duotone`,
+    "iconColorClass": `bg-green-50 text-green-600`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF containing forms, layers, or annotations.",
-      "Our system will permanently merge all visual elements into a single flat layer.",
-      "Download the flattened, print-ready PDF."
+      `Nahrajte PDF obsahující formuláře, vrstvy nebo anotace.`,
+      `Náš systém trvale sloučí všechny vizuální prvky do jedné ploché vrstvy.`,
+      `Stáhněte si zploštělý soubor PDF připravený k tisku.`,
     ],
     "faqs": [
       {
-        "question": "Why should I flatten a PDF?",
-        "answer": "Flattening a PDF locks in form data, prevents further editing of annotations, and ensures the document prints exactly as it appears on screen."
+        "question": `Proč bych měl sloučit PDF?`,
+        "answer": `Sloučení PDF uzamkne data formuláře, zabrání dalším úpravám anotací a zajistí, že se dokument vytiskne přesně tak, jak vypadá na obrazovce.`
       },
       {
-        "question": "Can a flattened PDF be un-flattened?",
-        "answer": "No, flattening is a permanent process. We recommend keeping a backup of your original interactive PDF."
+        "question": `Lze sloučený soubor PDF zrušit?`,
+        "answer": `Ne, zploštění je trvalý proces.Doporučujeme ponechat si zálohu původního interaktivního PDF.`
       },
       {
-        "question": "Does flattening reduce file size?",
-        "answer": "Often, yes. By merging layers and removing interactive form fields, the overall structure becomes simpler and smaller."
-      }
+        "question": `Sníží sloučení velikost souboru?`,
+        "answer": `Často ano.Sloučením vrstev a odstraněním interaktivních formulářových polí se celková struktura zjednoduší a zmenší.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Protect PDF",
-    "keywords": ["lock", "encrypt", "password", "secure"],
-    "desc": "Encrypt your PDF with a password to prevent unauthorized access.",
-    "icon": "solar:shield-keyhole-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Chránit PDF`,
+    "keywords": ["lock","encrypt","password","secure"],
+    "desc": `Zašifrujte svůj PDF heslem, abyste zabránili neoprávněnému přístupu.`,
+    "icon": `solar:shield-keyhole-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload the PDF you want to secure.",
-      "Type in a strong password and confirm it.",
-      "Download your new encrypted PDF file."
+      `Nahrajte PDF, které chcete zabezpečit.`,
+      `Zadejte silné heslo a potvrďte jej.`,
+      `Stáhněte si svůj nový zašifrovaný soubor PDF.`,
     ],
     "faqs": [
       {
-        "question": "What kind of encryption is used?",
-        "answer": "We use robust AES 256-bit encryption, which is the industry standard for securing highly sensitive and confidential documents."
+        "question": `Jaký druh šifrování se používá?`,
+        "answer": `Používáme robustní 256bitové šifrování AES, což je průmyslový standard pro zabezpečení vysoce citlivých a důvěrných dokumentů.`
       },
       {
-        "question": "Can TheyLovePDF recover my password if I forget it?",
-        "answer": "No. Your password is never saved on our servers. If you lose it, the document cannot be decrypted. Please keep it safe!"
+        "question": `Mohou TheyLovePDF obnovit mé heslo, pokud ho zapomenu?`,
+        "answer": `Ne. Vaše heslo není nikdy uloženo na našich serverech.Pokud jej ztratíte, dokument nelze dešifrovat.Prosím, uschovejte to!`
       },
       {
-        "question": "Does protecting a PDF prevent printing?",
-        "answer": "Yes, encryption locks the document from being opened, printed, or edited without the correct password."
-      }
+        "question": `Zabraňuje ochrana PDF tisku?`,
+        "answer": `Ano, šifrování zabrání otevření, tisku nebo úpravám dokumentu bez správného hesla.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Unlock PDF",
-    "keywords": ["decrypt", "remove password", "open"],
-    "desc": "Remove PDF password security, giving you the freedom to use your PDFs as you want.",
-    "icon": "solar:lock-unlocked-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `security`,
+    "title": `Odemknout PDF`,
+    "keywords": ["decrypt","remove password","open"],
+    "desc": `Odstraňte zabezpečení heslem PDF, abyste měli svobodu používat soubory PDF, jak chcete.`,
+    "icon": `solar:lock-unlocked-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your password-protected PDF.",
-      "If the file has an 'owner password' restricting edits, we will remove it instantly. If it has a 'user password' restricting opening, you must enter it first.",
-      "Download your unlocked PDF."
+      `Nahrajte soubor PDF chráněný heslem.`,
+      `Pokud má soubor 'heslo vlastníka' omezující úpravy, okamžitě jej odstraníme.Pokud má 'heslo uživatele' omezující otevření, musíte ho nejprve zadat.`,
+      `Stáhněte si odemčené PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can you unlock a PDF without the password?",
-        "answer": "We can easily remove 'edit/print restrictions' (owner passwords) without needing the password. However, if the file requires a password just to open it (user password), you must provide it."
+        "question": `Můžete odemknout PDF bez hesla?`,
+        "answer": `Můžeme snadno odstranit „omezení úprav/tisku“ (hesla vlastníka), aniž bychom potřebovali heslo.Pokud však soubor vyžaduje heslo pouze k jeho otevření (heslo uživatele), musíte jej poskytnout.`
       },
       {
-        "question": "Is it legal to unlock a PDF?",
-        "answer": "You should only remove security from documents that you legally own or have permission to modify."
+        "question": `Je legální odemknout PDF?`,
+        "answer": `Zabezpečení byste měli odstranit pouze z dokumentů, které legálně vlastníte nebo máte oprávnění je upravovat.`
       },
       {
-        "question": "Will unlocking change the document's content?",
-        "answer": "No, the content, formatting, and quality remain completely untouched. Only the security layer is removed."
-      }
+        "question": `Změní odblokování obsah dokumentu?`,
+        "answer": `Ne, obsah, formátování a kvalita zůstávají zcela nedotčeny.Odstraní se pouze vrstva zabezpečení.`
+      },
     ]
   },
   {
-    "category": "security",
-    "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
-    "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
-    "icon": "solar:eye-closed-bold-duotone",
-    "iconColorClass": "bg-red-50 text-red-500",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `security`,
+    "title": `Upravit PDF`,
+    "keywords": ["blacken","hide","censor","sensitive","remove"],
+    "desc": `Trvale odstraňte citlivé informace nebo skrytá data z vašich PDF.`,
+    "icon": `solar:eye-closed-bold-duotone`,
+    "iconColorClass": `bg-red-50 text-red-500`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Draw black boxes over the sensitive text, images, or personal information.",
-      "Apply the redactions to permanently scrub the data, then download the file."
+      `Nahrajte svůj soubor PDF.`,
+      `Přes citlivý text, obrázky nebo osobní údaje nakreslete černá políčka.`,
+      `Použijte redigování k trvalému vyčištění dat a poté soubor stáhněte.`,
     ],
     "faqs": [
       {
-        "question": "Is the redacted text truly gone?",
-        "answer": "Yes. Unlike simply drawing a black shape over text, our redaction tool permanently deletes the underlying text data so it cannot be copied or read by machines."
+        "question": `Je redigovaný text skutečně pryč?`,
+        "answer": `Ano.Na rozdíl od pouhého kreslení černého tvaru přes text náš nástroj pro editaci trvale maže podkladová textová data, takže je nelze kopírovat ani číst stroje.`
       },
       {
-        "question": "Can I redact images as well?",
-        "answer": "Absolutely. You can select any area of the page, including graphics and photos, to be permanently blacked out."
+        "question": `Mohu upravovat i obrázky?`,
+        "answer": `Absolutně.Můžete vybrat jakoukoli oblast stránky, včetně grafiky a fotografií, která bude trvale začerněna.`
       },
       {
-        "question": "Is redaction reversible?",
-        "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
-      }
+        "question": `Je redakce vratná?`,
+        "answer": `Ne. Pro vaši bezpečnost redakce trvale zničí skrytá data.V případě potřeby si vždy ponechejte neredigovanou zálohu.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
-    "desc": "Sign yourself or request electronic signatures from others.",
-    "icon": "solar:pen-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `sign`,
+    "title": `Podepsat PDF`,
+    "keywords": ["signature","esign","sign","document"],
+    "desc": `Podepište se sami nebo si vyžádejte elektronický podpis od ostatních.`,
+    "icon": `solar:pen-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the document requiring a signature.",
-      "Create your signature by drawing, typing, or uploading an image.",
-      "Place your signature on the document, click apply, and download it."
+      `Nahrajte dokument vyžadující podpis.`,
+      `Vytvořte svůj podpis nakreslením, zadáním nebo nahráním obrázku.`,
+      `Umístěte svůj podpis na dokument, klikněte na použít a stáhněte si jej.`,
     ],
     "faqs": [
       {
-        "question": "Are electronic signatures legal?",
-        "answer": "Yes, electronic signatures created with TheyLovePDF are legally binding in most countries and jurisdictions."
+        "question": `Jsou elektronické podpisy legální?`,
+        "answer": `Ano, elektronické podpisy vytvořené pomocí TheyLovePDF jsou právně závazné ve většině zemí a jurisdikcí.`
       },
       {
-        "question": "Can I save my signature for later?",
-        "answer": "Yes, if you create an account, you can securely save your signature for fast, 1-click signing in the future."
+        "question": `Mohu si svůj podpis uložit na později?`,
+        "answer": `Ano, pokud si vytvoříte účet, můžete si bezpečně uložit svůj podpis pro rychlé podepisování jedním kliknutím v budoucnu.`
       },
       {
-        "question": "Can I add text dates and initials?",
-        "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
-      }
+        "question": `Mohu přidat textová data a iniciály?`,
+        "answer": `Absolutně.Spolu s podpisem můžete snadno přetáhnout data, iniciály a vlastní textová pole.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Request signature",
-    "desc": "Send documents to clients to be signed legally online.",
-    "icon": "solar:user-speak-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Vyžádejte si podpis`,
+    "desc": `Odesílejte dokumenty klientům k legálnímu podpisu online.`,
+    "icon": `solar:user-speak-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload the PDF you need signed.",
-      "Add the email addresses of the recipients and assign signature fields for them.",
-      "Send the request. We will email them a secure link to sign the document online."
+      `Nahrajte PDF, které potřebujete podepsat.`,
+      `Přidejte e-mailové adresy příjemců a přiřaďte jim pole pro podpis.`,
+      `Odešlete žádost.Zašleme jim e-mailem zabezpečený odkaz k online podpisu dokumentu.`,
     ],
     "faqs": [
       {
-        "question": "Do recipients need an account to sign?",
-        "answer": "No, recipients can securely sign the document directly from their email link without needing to create a TheyLovePDF account."
+        "question": `Potřebují příjemci k podpisu účet?`,
+        "answer": `Ne, příjemci mohou bezpečně podepsat dokument přímo ze svého e-mailového odkazu, aniž by si museli vytvářet účet TheyLovePDF.`
       },
       {
-        "question": "How do I know when it's signed?",
-        "answer": "You will receive an automated email notification the moment all parties have completed signing the document."
+        "question": `Jak poznám, že je to podepsané?`,
+        "answer": `Jakmile všechny strany dokončí podpis dokumentu, obdržíte automatické e-mailové upozornění.`
       },
       {
-        "question": "Is there an audit trail?",
-        "answer": "Yes, Pro users receive a comprehensive audit trail detailing IP addresses and timestamps for full legal compliance."
-      }
+        "question": `Existuje auditní stopa?`,
+        "answer": `Ano, uživatelé Pro obdrží komplexní auditní záznam s podrobnými IP adresami a časovými razítky pro plnou právní shodu.`
+      },
     ]
   },
   {
-    "category": "sign",
-    "title": "Certificate sign",
-    "desc": "Add a cryptographic digital signature to your PDF.",
-    "icon": "solar:diploma-bold-duotone",
-    "iconColorClass": "bg-violet-50 text-violet-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `sign`,
+    "title": `Znak certifikátu`,
+    "desc": `Přidejte do svého PDF kryptografický digitální podpis.`,
+    "icon": `solar:diploma-bold-duotone`,
+    "iconColorClass": `bg-violet-50 text-violet-600`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF and your digital certificate file (.pfx or .p12).",
-      "Enter the certificate password.",
-      "Apply the cryptographic signature and download the verified PDF."
+      `Nahrajte svůj PDF a soubor digitálního certifikátu (.pfx nebo .p12).`,
+      `Zadejte heslo certifikátu.`,
+      `Použijte kryptografický podpis a stáhněte si ověřený PDF.`,
     ],
     "faqs": [
       {
-        "question": "What is a certificate signature?",
-        "answer": "Unlike a visual electronic signature, a certificate signature applies a cryptographic hash to the document, mathematically proving its authenticity and ensuring it hasn't been altered."
+        "question": `Co je podpis certifikátu?`,
+        "answer": `Na rozdíl od vizuálního elektronického podpisu používá podpis certifikátu na dokument kryptografický hash, který matematicky prokazuje jeho pravost a zajišťuje, že nebyl pozměněn.`
       },
       {
-        "question": "Do you store my certificate password?",
-        "answer": "Never. Your password is only held in temporary memory during the exact moment of signing and is immediately destroyed."
+        "question": `Ukládáte moje heslo k certifikátu?`,
+        "answer": `Nikdy.Vaše heslo je uloženo v dočasné paměti pouze během přesného okamžiku podpisu a je okamžitě zničeno.`
       },
       {
-        "question": "Can people verify the signature?",
-        "answer": "Yes, when opened in standard PDF readers like Adobe Acrobat, a green checkmark will appear indicating the document is digitally verified and unaltered."
-      }
+        "question": `Mohou lidé ověřit podpis?`,
+        "answer": `Ano, při otevření ve standardních čtečkách PDF, jako je Adobe Acrobat, se zobrazí zelené zaškrtnutí označující, že dokument je digitálně ověřen a nezměněn.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Chat with PDF",
-    "keywords": ["ai", "ask", "bot", "assistant", "read"],
-    "desc": "Talk to your PDF. Ask questions, get summaries, and extract insights instantly using AI.",
-    "icon": "solar:chat-round-dots-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI"
-    },
-    "badgeClass": "bg-purple-100 text-purple-700 font-bold",
+    "category": `ai`,
+    "title": `Chat s PDF`,
+    "keywords": ["ai","ask","bot","assistant","read"],
+    "desc": `Promluvte si se svým PDF.Ptejte se, získejte shrnutí a okamžitě extrahujte statistiky pomocí AI.`,
+    "icon": `solar:chat-round-dots-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI` },
+    "badgeClass": `bg-purple-100 text-purple-700 font-bold`,
     "howToSteps": [
-      "Upload your long or complex PDF document.",
-      "Type a question in the chat box, such as 'Summarize chapter 2' or 'What is the main argument?'",
-      "Our AI will instantly read the document and provide you with an accurate answer."
+      `Nahrajte svůj dlouhý nebo složitý dokument PDF.`,
+      `Do pole chatu napište otázku, například 'Shrňte kapitolu 2' nebo 'Jaký je hlavní argument?'`,
+      `Naše AI si dokument okamžitě přečte a poskytne vám přesnou odpověď.`,
     ],
     "faqs": [
       {
-        "question": "How does Chat with PDF work?",
-        "answer": "We use advanced Large Language Models (LLMs) to scan the text of your document, understand its context, and answer any questions you ask based strictly on the document's contents."
+        "question": `Jak funguje chat s PDF?`,
+        "answer": `K naskenování textu vašeho dokumentu, pochopení jeho kontextu a zodpovězení jakýchkoliv dotazů, které položíte, používáme pokročilé modely LLM (Large Language Models) výhradně na základě obsahu dokumentu.`
       },
       {
-        "question": "Can it read scanned documents?",
-        "answer": "If the document is purely an image, you must run it through our OCR tool first. If it contains selectable text, the AI can read it immediately."
+        "question": `Umí číst naskenované dokumenty?`,
+        "answer": `Pokud je dokument čistě obrázek, musíte jej nejprve spustit pomocí našeho nástroje OCR.Pokud obsahuje volitelný text, AI jej může okamžitě přečíst.`
       },
       {
-        "question": "Are my documents used to train the AI?",
-        "answer": "Absolutely not. Your privacy is our priority. Documents are processed in a secure environment and are never used to train public AI models."
-      }
+        "question": `Používají se mé dokumenty k výcviku AI?`,
+        "answer": `rozhodně ne.Vaše soukromí je naší prioritou.Dokumenty jsou zpracovávány v zabezpečeném prostředí a nikdy se nepoužívají k trénování veřejných modelů umělé inteligence.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Edit PDF",
-    "keywords": ["modify", "change", "text", "add"],
-    "desc": "Add text, images, shapes or freehand annotations to a PDF document.",
-    "icon": "solar:pen-new-square-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Popular"
-    },
-    "badgeClass": "bg-red-50 text-red-600",
+    "category": `edit`,
+    "title": `Upravit PDF`,
+    "keywords": ["modify","change","text","add"],
+    "desc": `Přidejte text, obrázky, tvary nebo poznámky od ruky do dokumentu PDF.`,
+    "icon": `solar:pen-new-square-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Populární` },
+    "badgeClass": `bg-red-50 text-red-600`,
     "howToSteps": [
-      "Upload the PDF you want to modify.",
-      "Use the toolbar to add text, insert images, draw shapes, or apply whiteout to existing areas.",
-      "Save your edits and download the updated PDF."
+      `Nahrajte soubor PDF, který chcete upravit.`,
+      `Pomocí panelu nástrojů můžete přidat text, vložit obrázky, nakreslit tvary nebo použít vybělení na existující oblasti.`,
+      `Uložte své úpravy a stáhněte si aktualizované PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I change existing text in the PDF?",
-        "answer": "Currently, you can use the 'whiteout' tool to cover old text and type new text over it. Native text editing is a highly complex feature we are actively developing."
+        "question": `Mohu změnit stávající text v PDF?`,
+        "answer": `V současné době můžete použít nástroj 'vybělení' k zakrytí starého textu a psaní nového textu přes něj.Úprava nativního textu je vysoce komplexní funkce, kterou aktivně vyvíjíme.`
       },
       {
-        "question": "Can I add images to the PDF?",
-        "answer": "Yes, you can easily upload and stamp PNG or JPG images anywhere onto your document."
+        "question": `Mohu do PDF přidat obrázky?`,
+        "answer": `Ano, můžete snadno nahrát a orazítkovat obrázky PNG nebo JPG kamkoli do dokumentu.`
       },
       {
-        "question": "Does editing reduce the document quality?",
-        "answer": "No, our editor adds your annotations on top of the existing document structure without re-compressing the original images or text."
-      }
+        "question": `Snižuje úprava kvalitu dokumentu?`,
+        "answer": `Ne, náš editor přidá vaše anotace nad stávající strukturu dokumentu, aniž by znovu komprimoval původní obrázky nebo text.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Watermark PDF",
-    "keywords": ["logo", "stamp", "mark", "brand"],
-    "desc": "Stamp an image or text over your PDF in seconds. Choose typography, transparency and position.",
-    "icon": "solar:waterdrops-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Vodoznak PDF`,
+    "keywords": ["logo","stamp","mark","brand"],
+    "desc": `Razítko obrázku nebo textu přes PDF během několika sekund.Vyberte typografii, průhlednost a polohu.`,
+    "icon": `solar:waterdrops-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your PDF file.",
-      "Type your watermark text or upload a logo image. Adjust opacity, rotation, and placement.",
-      "Click apply and download your watermarked document."
+      `Nahrajte svůj soubor PDF.`,
+      `Zadejte text vodoznaku nebo nahrajte obrázek loga.Upravte krytí, rotaci a umístění.`,
+      `Klikněte na použít a stáhněte si dokument s vodoznakem.`,
     ],
     "faqs": [
       {
-        "question": "Can I watermark all pages at once?",
-        "answer": "Yes, by default your watermark will be applied consistently across every single page of the document."
+        "question": `Mohu vodoznakem všechny stránky najednou?`,
+        "answer": `Ano, ve výchozím nastavení bude vodoznak aplikován konzistentně na každou stránku dokumentu.`
       },
       {
-        "question": "Can I adjust the transparency?",
-        "answer": "Absolutely. You can make the watermark very faint so it doesn't distract from the document, or completely opaque for maximum visibility."
+        "question": `Mohu upravit průhlednost?`,
+        "answer": `Absolutně.Vodoznak můžete udělat velmi slabým, aby neodváděl pozornost od dokumentu, nebo zcela neprůhledný pro maximální viditelnost.`
       },
       {
-        "question": "Can a watermark be removed?",
-        "answer": "We flatten the watermark into the document structure to make it as difficult as possible to remove, ensuring your intellectual property is protected."
-      }
+        "question": `Lze vodoznak odstranit?`,
+        "answer": `Vodoznak vyrovnáme do struktury dokumentu, aby jeho odstranění bylo co nejobtížnější, a zajistíme tak ochranu vašeho duševního vlastnictví.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "PDF forms",
-    "desc": "Fill out PDF forms quickly and accurately online.",
-    "icon": "solar:clipboard-list-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `PDF formuláře`,
+    "desc": `Vyplňte formuláře PDF rychle a přesně online.`,
+    "icon": `solar:clipboard-list-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload an interactive PDF form.",
-      "Click on the text fields, checkboxes, or radio buttons to fill in your information.",
-      "Download the completed, filled-out form."
+      `Nahrajte interaktivní formulář PDF.`,
+      `Kliknutím na textová pole, zaškrtávací políčka nebo přepínače vyplňte své informace.`,
+      `Stáhněte si vyplněný, vyplněný formulář.`,
     ],
     "faqs": [
       {
-        "question": "Can I save a partially filled form?",
-        "answer": "If you have a Pro account, your sessions are saved automatically, allowing you to return and finish filling out the form later."
+        "question": `Mohu uložit částečně vyplněný formulář?`,
+        "answer": `Pokud máte účet Pro, vaše relace se ukládají automaticky, což vám umožní vrátit se a dokončit vyplňování formuláře později.`
       },
       {
-        "question": "Does it work with all PDF forms?",
-        "answer": "Our tool supports standard AcroForms, which make up 99% of interactive PDFs. Older XFA forms may have limited support."
+        "question": `Funguje to se všemi formuláři PDF?`,
+        "answer": `Náš nástroj podporuje standardní formuláře AcroForms, které tvoří 99 % interaktivních PDF.Starší formuláře XFA mohou mít omezenou podporu.`
       },
       {
-        "question": "Can I flatten the form after filling it?",
-        "answer": "Yes, once downloaded, you can run it through our 'Flatten PDF' tool to lock the data so it cannot be altered by the recipient."
-      }
+        "question": `Mohu formulář po vyplnění vyrovnat?`,
+        "answer": `Ano, jakmile jej stáhnete, můžete jej spustit prostřednictvím našeho nástroje 'Flatten PDF' a uzamknout data, aby je příjemce nemohl změnit.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Add page numbers",
-    "desc": "Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.",
-    "icon": "solar:hashtag-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "Free"
-    },
-    "badgeClass": "bg-emerald-50 text-emerald-600",
+    "category": `edit`,
+    "title": `Přidejte čísla stránek`,
+    "desc": `Snadno přidejte čísla stránek do PDF.Vyberte si pozice, rozměry, typografii.`,
+    "icon": `solar:hashtag-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Uvolnit` },
+    "badgeClass": `bg-emerald-50 text-emerald-600`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the position (e.g., bottom-right), font style, and starting number.",
-      "Apply the numbering and download your perfectly formatted PDF."
+      `Nahrajte dokument.`,
+      `Vyberte pozici (např. vpravo dole), styl písma a počáteční číslo.`,
+      `Použijte číslování a stáhněte si dokonale naformátovaný PDF.`,
     ],
     "faqs": [
       {
-        "question": "Can I skip the cover page?",
-        "answer": "Yes! You can specify which page the numbering should actually begin on, allowing you to keep title pages clean."
+        "question": `Mohu přeskočit titulní stránku?`,
+        "answer": `Ano!Můžete určit, na které stránce má číslování ve skutečnosti začínat, což vám umožní udržovat titulní stránky čisté.`
       },
       {
-        "question": "Can I customize the format?",
-        "answer": "Absolutely. You can choose formats like 'Page 1', '1 of 10', or just '1', and select the font, size, and color."
+        "question": `Mohu přizpůsobit formát?`,
+        "answer": `Absolutně.Můžete si vybrat formáty jako „Strana 1“, „1 z 10“ nebo jen „1“ a vybrat písmo, velikost a barvu.`
       },
       {
-        "question": "Is the alignment accurate?",
-        "answer": "Yes, our tool calculates the exact margins to ensure your page numbers are perfectly aligned on every single page."
-      }
+        "question": `Je zarovnání přesné?`,
+        "answer": `Ano, náš nástroj vypočítá přesné okraje, aby zajistil, že čísla stránek budou na každé stránce dokonale zarovnaná.`
+      },
     ]
   },
   {
-    "category": "edit",
-    "title": "Annotate PDF",
-    "desc": "Highlight, underline, strikethrough text and add comments.",
-    "icon": "solar:notes-bold-duotone",
-    "iconColorClass": "bg-yellow-50 text-yellow-600",
-    "badge": {
-      "text": "New"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600",
+    "category": `edit`,
+    "title": `Anotovat PDF`,
+    "desc": `Zvýrazněte, podtrhněte, přeškrtněte text a přidejte komentáře.`,
+    "icon": `solar:notes-bold-duotone`,
+    "iconColorClass": `bg-yellow-50 text-yellow-600`,
+    "badge": { "text": `Nový` },
+    "badgeClass": `bg-blue-50 text-blue-600`,
     "howToSteps": [
-      "Upload your PDF.",
-      "Use the highlighter, underline, strikethrough, and sticky note tools to review the document.",
-      "Download the annotated file to share with your team."
+      `Nahrajte soubor PDF.`,
+      `Pro kontrolu dokumentu použijte nástroje zvýrazňovače, podtržení, přeškrtnutí a nalepovací poznámky.`,
+      `Stáhněte si anotovaný soubor a sdílejte ho se svým týmem.`,
     ],
     "faqs": [
       {
-        "question": "Will my annotations be visible in standard readers?",
-        "answer": "Yes, we use standard PDF annotation protocols, meaning your highlights and notes will be visible in Adobe Acrobat, Chrome, and Apple Preview."
+        "question": `Budou mé poznámky viditelné ve standardních čtečkách?`,
+        "answer": `Ano, používáme standardní anotační protokoly PDF, což znamená, že vaše zvýraznění a poznámky budou viditelné v aplikacích Adobe Acrobat, Chrome a Apple Preview.`
       },
       {
-        "question": "Can I change highlight colors?",
-        "answer": "Yes, you can select from a wide palette of colors to color-code your notes and highlights."
+        "question": `Mohu změnit barvy zvýraznění?`,
+        "answer": `Ano, můžete si vybrat ze široké palety barev a barevně označit své poznámky a zvýraznění.`
       },
       {
-        "question": "Is it easy to delete an annotation?",
-        "answer": "Very easy. Just click on any annotation you made and press the delete button to remove it instantly."
-      }
+        "question": `Je snadné smazat anotaci?`,
+        "answer": `Velmi snadné.Stačí kliknout na libovolnou anotaci, kterou jste vytvořili, a stisknutím tlačítka Odstranit ji okamžitě odstranit.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Plagiarism check",
-    "desc": "Compare your document against billions of web pages and academic databases.",
-    "icon": "solar:shield-check-bold-duotone",
-    "iconColorClass": "bg-blue-50 text-blue-600",
-    "badge": {
-      "text": "Pro"
-    },
-    "badgeClass": "bg-blue-50 text-blue-600 border border-blue-100",
+    "category": `ai`,
+    "title": `Kontrola plagiátorství`,
+    "desc": `Porovnejte svůj dokument s miliardami webových stránek a akademických databází.`,
+    "icon": `solar:shield-check-bold-duotone`,
+    "iconColorClass": `bg-blue-50 text-blue-600`,
+    "badge": { "text": `Pro` },
+    "badgeClass": `bg-blue-50 text-blue-600 border border-blue-100`,
     "howToSteps": [
-      "Upload the essay or document you want to verify.",
-      "Our AI engine will scan billions of web pages and academic databases to find matches.",
-      "Review the detailed similarity report highlighting any copied text."
+      `Nahrajte esej nebo dokument, který chcete ověřit.`,
+      `Náš AI engine prohledá miliardy webových stránek a akademických databází, aby našel shody.`,
+      `Prohlédněte si podrobnou zprávu o podobnosti se zvýrazněním jakéhokoli zkopírovaného textu.`,
     ],
     "faqs": [
       {
-        "question": "How accurate is the plagiarism checker?",
-        "answer": "It is highly accurate. We utilize enterprise-grade AI that cross-references your text against a massive, continuously updated database of online content."
+        "question": `Jak přesná je kontrola plagiátorství?`,
+        "answer": `Je vysoce přesný.Využíváme AI podnikové úrovně, která křížově odkazuje na váš text s masivní, neustále aktualizovanou databází online obsahu.`
       },
       {
-        "question": "Does it check against offline academic papers?",
-        "answer": "It checks against major open-access academic journals and heavily cited sources available online."
+        "question": `Porovnává se s offline akademickými dokumenty?`,
+        "answer": `Porovnává se s hlavními akademickými časopisy s otevřeným přístupem a silně citovanými zdroji dostupnými online.`
       },
       {
-        "question": "Is my document saved to a database?",
-        "answer": "No. Unlike some universities' systems, we do not add your document to a global database, ensuring your original work remains strictly yours."
-      }
+        "question": `Je můj dokument uložen do databáze?`,
+        "answer": `Ne. Na rozdíl od některých univerzitních systémů nepřidáváme váš dokument do globální databáze, takže vaše původní práce zůstane výhradně vaše.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Summarize PDF",
-    "keywords": ["ai", "shorten", "tldr", "abstract"],
-    "desc": "Generate quick, accurate summaries of long documents in seconds.",
-    "icon": "solar:bill-list-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Shrnout PDF`,
+    "keywords": ["ai","shorten","tldr","abstract"],
+    "desc": `Vytvářejte rychlé a přesné souhrny dlouhých dokumentů během několika sekund.`,
+    "icon": `solar:bill-list-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nové` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload a lengthy document, report, or book chapter.",
-      "Click 'Summarize' to let our AI analyze the core concepts.",
-      "Read the bullet-point summary and download it if needed."
+      `Nahrajte dlouhý dokument, zprávu nebo kapitolu knihy.`,
+      `Klikněte na „Shrnout“ a nechte naši umělou inteligenci analyzovat základní koncepty.`,
+      `Přečtěte si souhrn odrážek a v případě potřeby si jej stáhněte.`,
     ],
     "faqs": [
       {
-        "question": "Can it summarize an entire book?",
-        "answer": "The AI is highly capable, but for the best results and maximum detail, we recommend summarizing one chapter or section at a time."
+        "question": `Může to shrnout celou knihu?`,
+        "answer": `Umělá inteligence je vysoce schopná, ale pro nejlepší výsledky a maximální detaily doporučujeme shrnout jednu kapitolu nebo sekci po druhé.`
       },
       {
-        "question": "Does the summary capture key statistics?",
-        "answer": "Yes, our LLM is instructed to identify and highlight critical data points, statistics, and primary arguments."
+        "question": `Zachycuje souhrn klíčové statistiky?`,
+        "answer": `Ano, naše LLM je instruována k identifikaci a zdůraznění kritických datových bodů, statistik a primárních argumentů.`
       },
       {
-        "question": "What languages are supported?",
-        "answer": "The summarizer works best in English, but it natively supports and understands over 50 global languages."
-      }
+        "question": `Jaké jazyky jsou podporovány?`,
+        "answer": `Sumarizátor funguje nejlépe v angličtině, ale nativně podporuje a rozumí více než 50 globálním jazykům.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Translate PDF",
-    "keywords": ["language", "translate", "localization", "ai"],
-    "desc": "Translate full documents while preserving original formatting and layout.",
-    "icon": "solar:translation-2-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Přeložit PDF`,
+    "keywords": ["language","translate","localization","ai"],
+    "desc": `Přeložte celé dokumenty při zachování původního formátování a rozložení.`,
+    "icon": `solar:translation-2-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nové` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload your document.",
-      "Select the original language and the target language you wish to translate into.",
-      "Download the newly translated PDF, complete with its original formatting."
+      `Nahrajte dokument.`,
+      `Vyberte původní jazyk a cílový jazyk, do kterého chcete překládat.`,
+      `Stáhněte si nově přeložený soubor PDF s původním formátováním.`,
     ],
     "faqs": [
       {
-        "question": "Will the layout break after translation?",
-        "answer": "Our advanced engine attempts to preserve the exact layout, though text expansion (e.g., English to German) might cause slight, unavoidable visual shifts."
+        "question": `Zlomí se rozložení po překladu?`,
+        "answer": `Náš pokročilý modul se snaží zachovat přesné rozvržení, i když rozšíření textu (např. z angličtiny do němčiny) může způsobit drobné, nevyhnutelné vizuální posuny.`
       },
       {
-        "question": "How accurate is the translation?",
-        "answer": "We use state-of-the-art Neural Machine Translation (NMT) powered by AI, which provides highly accurate, context-aware translations rather than rigid word-for-word translation."
+        "question": `Jak přesný je překlad?`,
+        "answer": `Používáme nejmodernější neuronový strojový překlad (NMT) poháněný umělou inteligencí, který poskytuje vysoce přesné, kontextové překlady spíše než rigidní překlady slovo od slova.`
       },
       {
-        "question": "Can I translate scanned documents?",
-        "answer": "Yes! If you upload a scanned document, our system will automatically run OCR to read the text before translating it."
-      }
+        "question": `Mohu přeložit naskenované dokumenty?`,
+        "answer": `Ano!Pokud nahrajete naskenovaný dokument, náš systém automaticky spustí OCR, aby si přečetl text před jeho překladem.`
+      },
     ]
   },
   {
-    "category": "ai",
-    "title": "Extract data",
-    "desc": "Intelligently extract tables, values, and entities from invoices and forms.",
-    "icon": "solar:database-bold-duotone",
-    "iconColorClass": "bg-fuchsia-50 text-fuchsia-600",
-    "badge": {
-      "text": "AI + New"
-    },
-    "badgeClass": "bg-purple-50 text-purple-600 border border-purple-100",
+    "category": `ai`,
+    "title": `Extrahujte data`,
+    "desc": `Inteligentně extrahujte tabulky, hodnoty a entity z faktur a formulářů.`,
+    "icon": `solar:database-bold-duotone`,
+    "iconColorClass": `bg-fuchsia-50 text-fuchsia-600`,
+    "badge": { "text": `AI+Nové` },
+    "badgeClass": `bg-purple-50 text-purple-600 border border-purple-100`,
     "howToSteps": [
-      "Upload invoices, receipts, or structured forms.",
-      "Our AI will identify key fields like Dates, Totals, Names, and Addresses.",
-      "Download the extracted data as a clean CSV or JSON file."
+      `Nahrajte faktury, účtenky nebo strukturované formuláře.`,
+      `Naše AI identifikuje klíčová pole, jako jsou data, součty, jména a adresy.`,
+      `Stáhněte extrahovaná data jako čistý soubor CSV nebo JSON.`,
     ],
     "faqs": [
       {
-        "question": "What is data extraction used for?",
-        "answer": "It is perfect for accounting and administration. Instead of manually typing data from 100 invoices, our AI does it automatically in seconds."
+        "question": `K čemu slouží extrakce dat?`,
+        "answer": `Je ideální pro účetnictví a administrativu.Místo ručního zadávání dat ze 100 faktur to naše umělá inteligence provede automaticky během několika sekund.`
       },
       {
-        "question": "Does the document need a specific layout?",
-        "answer": "No! Our AI is intelligent enough to find 'Total Amount' whether it's at the top, bottom, or middle of the page."
+        "question": `Potřebuje dokument specifické rozvržení?`,
+        "answer": `Žádný!Naše umělá inteligence je dostatečně inteligentní na to, aby našla „Celkové množství“, ať už je nahoře, dole nebo uprostřed stránky.`
       },
       {
-        "question": "Can I extract data to Excel?",
-        "answer": "Yes, the extracted data can be exported directly as a CSV file, which opens perfectly in Microsoft Excel or Google Sheets."
-      }
+        "question": `Mohu extrahovat data do Excelu?`,
+        "answer": `Ano, extrahovaná data lze exportovat přímo jako soubor CSV, který se perfektně otevírá v Microsoft Excel nebo Google Sheets.`
+      },
     ]
-  }
+  },
 ];
