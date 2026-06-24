@@ -56,8 +56,9 @@ function injectPlatformContext(text, platform) {
 
 import { useTranslation } from 'react-i18next';
 
-export default function ToolPage({ lang = 'en', hideSEO = false }) {
+export default function ToolPage({ lang = 'en', hideSEO = false, ui }) {
   const { toolSlug, platform } = useParams();
+  const tg = ui?.tools_generic || {};
   const navigate = useNavigate();
   const { isPro } = useAuth();
   const { t, i18n } = useTranslation();
@@ -365,14 +366,14 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <iconify-icon icon="solar:upload-minimalistic-bold" class="text-3xl"></iconify-icon>
               </div>
               <p className="text-xl font-bold text-gray-900 mb-1 text-center leading-tight">
-                {isDragging ? t('dropFileHere') : t('dragDropHere')}
+                {isDragging ? (tg.dropFileHere || t('dropFileHere')) : (tg.dragDropHere || t('dragDropHere'))}
               </p>
-              <p className="text-sm text-gray-500 mb-6 text-center">{t('orClickBrowse')} {isPro ? '2GB' : '10MB'}</p>
+              <p className="text-sm text-gray-500 mb-6 text-center">{(tg.orClickBrowse || t('orClickBrowse'))} {isPro ? '2GB' : '10MB'}</p>
               <button
                 type="button"
                 className="bg-[#378ADD] text-white hover:bg-[#2b71b8] rounded-xl px-8 py-3 text-sm font-semibold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 active:translate-y-0 relative z-0 pointer-events-none"
               >
-                {t('chooseFile')}
+                {(tg.chooseFile || t('chooseFile'))}
               </button>
               <PrivacyBadge lang={lang} />
             </div>
@@ -433,7 +434,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 className="w-full py-4 bg-[#378ADD] hover:bg-[#2b71b8] text-white rounded-2xl text-base font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2"
               >
                 <iconify-icon icon="solar:magic-stick-3-bold" class="text-xl"></iconify-icon>
-                {t('processWith')} {localizedTitle}
+                {(tg.processWith || t('processWith'))} {localizedTitle}
               </button>
             </div>
           )}
@@ -447,7 +448,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-base font-semibold text-gray-900 truncate">
-                    {selectedFiles.length > 1 ? t('filesCount', { count: selectedFiles.length }) : selectedFiles[0]?.name}
+                    {selectedFiles.length > 1 ? (tg.filesCount || t('filesCount', { count: selectedFiles.length })).replace('{{count}}', selectedFiles.length) : selectedFiles[0]?.name}
                   </p>
                   <p className="text-sm text-gray-500 mt-0.5">
                     {formatFileSize(selectedFiles.reduce((acc, f) => acc + f.size, 0))}
@@ -459,7 +460,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <div className="flex items-center justify-between text-sm font-medium">
                   <span className="text-gray-600 flex items-center gap-2">
                     <span className="pulse-dot w-2.5 h-2.5 bg-[#378ADD] rounded-full inline-block"></span>
-                    {queuePosition ? t('inQueue', { count: queuePosition }) : t('processingMsg')}
+                    {queuePosition ? (tg.inQueue || t('inQueue', { count: queuePosition })).replace('{{count}}', queuePosition) : (tg.processingMsg || t('processingMsg'))}
                   </span>
                   <span className="text-[#378ADD] text-lg font-bold">{Math.round(progress)}%</span>
                 </div>
@@ -470,7 +471,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                   />
                 </div>
                 <p className="text-xs text-gray-400 font-medium pt-1 text-center sm:text-left">
-                  {progress < 30 ? t('uploadingValidating') : progress < 60 ? t('analyzingDoc') : progress < 85 ? t('applyingTransform') : t('finalizingOutput')}
+                  {progress < 30 ? (tg.uploadingValidating || t('uploadingValidating')) : progress < 60 ? (tg.analyzingDoc || t('analyzingDoc')) : progress < 85 ? (tg.applyingTransform || t('applyingTransform')) : (tg.finalizingOutput || t('finalizingOutput'))}
                 </p>
               </div>
             </div>
@@ -483,8 +484,8 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <iconify-icon icon="solar:check-circle-bold" class="text-5xl text-emerald-500"></iconify-icon>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">{t('doneReady')}</p>
-                <p className="text-sm text-gray-500 mt-2">{t('autoDeletePrivacy')}</p>
+                <p className="text-xl font-bold text-gray-900">{(tg.doneReady || t('doneReady'))}</p>
+                <p className="text-sm text-gray-500 mt-2">{(tg.autoDeletePrivacy || t('autoDeletePrivacy'))}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
@@ -503,12 +504,12 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                       </svg>
-                      {t('preparingDownload')}
+                      {(tg.preparingDownload || t('preparingDownload'))}
                     </>
                   ) : (
                     <>
                       <iconify-icon icon="solar:download-minimalistic-bold" class="text-xl"></iconify-icon>
-                      {t('downloadBtn')}
+                      {(tg.downloadBtn || t('downloadBtn'))}
                     </>
                   )}
                 </button>
@@ -516,7 +517,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                   onClick={handleReset}
                   className="flex-1 py-4 border-2 border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 rounded-2xl text-base font-semibold transition-all"
                 >
-                  {t('processAnother')}
+                  {(tg.processAnother || t('processAnother'))}
                 </button>
               </div>
             </div>
@@ -529,7 +530,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                 <iconify-icon icon="solar:close-circle-bold" class="text-5xl text-red-500"></iconify-icon>
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">{t('errorTitle')}</p>
+                <p className="text-xl font-bold text-gray-900">{(tg.errorTitle || t('errorTitle'))}</p>
                 <p className="text-sm text-red-500 mt-2 max-w-sm mx-auto">{errorMsg}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -537,10 +538,10 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
                   onClick={handleReset}
                   className="flex-1 py-4 bg-[#378ADD] hover:bg-[#2b71b8] text-white rounded-2xl text-base font-semibold shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  {t('tryAgain')}
+                  {(tg.tryAgain || t('tryAgain'))}
                 </button>
                 <button className="flex-1 py-4 border-2 border-[#378ADD] text-[#378ADD] hover:bg-blue-50 rounded-2xl text-base font-semibold transition-colors">
-                  {t('goPro')}
+                  {(tg.goPro || t('goPro'))}
                 </button>
               </div>
             </div>
@@ -555,11 +556,11 @@ export default function ToolPage({ lang = 'en', hideSEO = false }) {
               </span>
               <span className="flex items-center gap-1.5">
                 <iconify-icon icon="solar:trash-bin-trash-linear" class="text-base sm:text-lg"></iconify-icon>
-                {t('autoDeleted')}
+                {(tg.autoDeleted || t('autoDeleted'))}
               </span>
               <span className="flex items-center gap-1.5">
                 <iconify-icon icon="solar:eye-closed-linear" class="text-base sm:text-lg"></iconify-icon>
-                {t('private')}
+                {(tg.private || t('private'))}
               </span>
             </div>
           )}

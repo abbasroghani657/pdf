@@ -119,7 +119,7 @@ function ToolRendererInner({ lang = 'en', ui }) {
 
   const Component = customTools[toolSlug] 
     ? React.cloneElement(customTools[toolSlug], { lang, toolSlug, toolData: tool, ui }) 
-    : <ToolPage lang={lang} hideSEO={true} />;
+    : <ToolPage lang={lang} hideSEO={true} ui={ui} />;
     
   const platformName = platform ? platform.charAt(0).toUpperCase() + platform.slice(1) : '';
   const displayTitle = platform ? `${localizedTitle} on ${platformName}` : localizedTitle;
@@ -155,7 +155,7 @@ function ToolRendererInner({ lang = 'en', ui }) {
       {tool && (
         <div className="relative z-0 py-20 px-4 bg-white/50">
           <div className="max-w-4xl mx-auto text-left bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12 mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('howToUse')} {localizedTitle}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{(ui?.tools_generic?.howToUse || t('howToUse'))} {localizedTitle}</h2>
             <div className="space-y-4 mb-12">
               {dynamicSteps.map((step, idx) => (
                 <div key={idx} className="flex gap-4">
@@ -169,7 +169,7 @@ function ToolRendererInner({ lang = 'en', ui }) {
 
             {dynamicFaqs.length > 0 && (
               <>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('faqs')}</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">{(ui?.tools_generic?.faqs || t('faqs'))}</h2>
                 <div className="space-y-4 mb-16">
                   {dynamicFaqs.map((faq, idx) => (
                     <details key={idx} className="group bg-gray-50 rounded-2xl open:bg-blue-50/50 transition-colors border border-gray-100">
@@ -192,7 +192,7 @@ function ToolRendererInner({ lang = 'en', ui }) {
           <div className="mt-10 max-w-4xl mx-auto text-center mb-20">
 
             {/* Related Tools — FIXED: was using rt.color (undefined) causing silent crash */}
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">{t('relatedTools') || 'Related Tools'}</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">{(ui?.tools_generic?.relatedTools || t('relatedTools') || 'Related Tools')}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
               {toolDataList.filter(rt => rt.title !== localizedTitle).slice(0, 6).map((rt, idx) => (
                 <Link
