@@ -159,7 +159,7 @@ export const UI_DICT = {
     passwords_do_not_match: "Passwords do not match."
   },
   home: {
-    hero_title: "The most powerful",
+    hero_title: "TheyLovePDF: The most powerful",
     hero_title_gradient: "PDF toolkit",
     hero_title_suffix: "free",
     pricing_title: "Simple, transparent pricing",

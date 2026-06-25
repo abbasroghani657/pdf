@@ -13,7 +13,7 @@ export default function SEOHead({
   faqs = []
 }) {
   const siteName = 'TheyLovePDF';
-  const defaultDescription = '✓ Free & Secure. ✓ No Watermarks. ✓ Auto-delete in 2 hours. Edit, convert, compress, and sign PDFs in seconds. 100% free online PDF toolkit.';
+  const defaultDescription = 'TheyLovePDF: ✓ Free & Secure. ✓ No Watermarks. ✓ Auto-delete in 2 hours. Edit, convert, compress, and sign PDFs in seconds. 100% free online PDF toolkit.';
   
   const metaTitle = title ? `${title} - ${siteName}` : `Online PDF Editor & Converter - ${siteName}`;
   const altText = lang === 'es' ? ' La mejor alternativa a iLovePDF gratis.' :
