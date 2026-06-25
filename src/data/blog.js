@@ -493,5 +493,75 @@ export const BLOG_POSTS = [
         <p class="text-blue-900 text-sm m-0"><strong>Are these signatures legal?</strong> Yes! Under major international frameworks (like the US ESIGN Act and European eIDAS), electronic signatures carry the exact same legal weight as a wet-ink signature for almost all standard business agreements.</p>
       </div>
     `
+  },
+  {
+    slug: "how-to-compress-pdf-iphone-mac",
+    title: "How to Compress a PDF on iPhone and Mac",
+    date: "2026-06-25",
+    excerpt: "Learn how to quickly reduce your PDF file size on any Apple device using our free online tool.",
+    content: `
+      <p>If you're an Apple user, you might have struggled with sending large PDF files via email or iMessage. Apple devices have great built-in tools, but they don't always offer the best compression options without losing quality.</p>
+      <h2>The Best Way to Compress on Apple Devices</h2>
+      <p>Whether you are on an iPhone, iPad, or Mac, you can compress your PDF files quickly and easily using your Safari browser.</p>
+      <ol class="list-decimal pl-5 space-y-3 mt-4">
+        <li>Open Safari and navigate to our <a href="/tools/compress-pdf" class="text-blue-600 hover:underline">Compress PDF</a> tool.</li>
+        <li>Upload your file directly from your device.</li>
+        <li>Select the compression level that best suits your needs.</li>
+        <li>Tap <strong>Compress</strong> and download your optimized file.</li>
+      </ol>
+      <p>This process reduces your file size significantly, making it easy to share or store on your iCloud Drive.</p>
+    `
+  },
+  {
+    slug: "best-pdf-converter-windows",
+    title: "The Best PDF Converter for Windows",
+    date: "2026-06-25",
+    excerpt: "Discover why a cloud-based PDF converter is the best choice for Windows users looking to convert, edit, and manage PDFs.",
+    content: `
+      <p>Windows users have countless options when it comes to PDF software, but many of them require expensive subscriptions or heavy downloads. A cloud-based solution is often the best choice.</p>
+      <h2>Why Choose Online Converters?</h2>
+      <p>With an online converter, you can convert PDFs to Word, Excel, PowerPoint, and more without installing anything on your PC.</p>
+      <ul class="list-disc pl-5 mt-4 text-gray-600">
+        <li><strong>No Installation Required:</strong> Works directly in Edge or Chrome.</li>
+        <li><strong>Cross-Platform:</strong> Access your tools from any device.</li>
+        <li><strong>Secure:</strong> Files are processed securely and deleted automatically.</li>
+      </ul>
+      <p>Try our <a href="/" class="text-blue-600 hover:underline">free PDF tools</a> today and see why it's the best choice for Windows.</p>
+    `
+  },
+  {
+    slug: "how-to-delete-pages-pdf-mac",
+    title: "How to Delete Pages from a PDF on Mac",
+    date: "2026-06-25",
+    excerpt: "A simple guide to removing unwanted pages from your PDF documents on macOS.",
+    content: `
+      <p>Need to remove a few pages from a PDF on your Mac? While the Preview app offers basic editing, an online tool provides a more intuitive and visual way to manage your pages.</p>
+      <h2>Quick Guide to Removing Pages</h2>
+      <ol class="list-decimal pl-5 space-y-3 mt-4">
+        <li>Head over to our <a href="/tools/delete-pages" class="text-blue-600 hover:underline">Delete Pages</a> tool.</li>
+        <li>Upload your PDF file.</li>
+        <li>Click on the thumbnails of the pages you want to remove.</li>
+        <li>Click <strong>Delete Pages</strong> and download your new document.</li>
+      </ol>
+      <p>It's that easy! No need to struggle with complex software.</p>
+    `
+  },
+  {
+    slug: "how-to-sign-pdf-free-iphone",
+    title: "How to Sign a PDF for Free on iPhone",
+    date: "2026-06-25",
+    excerpt: "Sign any document quickly and securely from your iPhone without paying for an app.",
+    content: `
+      <p>Signing documents on your iPhone shouldn't require a paid subscription. Here is how you can digitally sign any PDF for free.</p>
+      <h2>Sign Documents on the Go</h2>
+      <p>Our online tool works perfectly on mobile Safari, allowing you to sign documents wherever you are.</p>
+      <ol class="list-decimal pl-5 space-y-3 mt-4">
+        <li>Open the <a href="/tools/sign-pdf" class="text-blue-600 hover:underline">Sign PDF</a> tool on your iPhone.</li>
+        <li>Upload your document.</li>
+        <li>Draw your signature using your finger or upload an image of it.</li>
+        <li>Place it on the document and tap <strong>Download</strong>.</li>
+      </ol>
+      <p>Your signed document is legally binding and ready to be emailed back.</p>
+    `
   }
 ];

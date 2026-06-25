@@ -416,6 +416,10 @@ export const TOOLS_DATA_FR = [
       {
         "question": "Le reste du document est-il affecté ?",
         "answer": "Non, les autres pages conserveront leur qualité d'origine."
+      },
+      {
+        "question": "Est-ce gratuit de supprimer des pages d'un PDF ?",
+        "answer": "Oui, vous pouvez facilement supprimer des pages de n'importe quel document PDF en ligne gratuitement."
       }
     ]
   },
@@ -500,6 +504,10 @@ export const TOOLS_DATA_FR = [
       {
         "question": "Puis-je compresser un petit PDF ?",
         "answer": "Oui, mais la réduction de taille sera minime."
+      },
+      {
+        "question": "Comment puis-je réduire la taille d'un PDF gratuitement ?",
+        "answer": "Notre outil est conçu pour compresser et réduire facilement la taille de vos fichiers PDF sans perte de qualité, idéal pour l'envoi par e-mail."
       }
     ]
   },

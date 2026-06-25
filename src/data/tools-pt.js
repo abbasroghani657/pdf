@@ -56,6 +56,10 @@ export const TOOLS_DATA_PT = [
       {
         "question": "Posso converter vários arquivos do Word de uma vez?",
         "answer": "Sim, você pode fazer upload de vários arquivos DOC/DOCX e nós os processaremos simultaneamente para conversão em alta velocidade."
+      },
+      {
+        "question": "Como converter Word em PDF?",
+        "answer": "Você pode converter Word para PDF ou transformar um arquivo Word em PDF diretamente pelo seu navegador, de forma gratuita e rápida."
       }
     ]
   },
@@ -536,6 +540,10 @@ export const TOOLS_DATA_PT = [
       {
         "question": "Posso compactar um PDF que já é pequeno?",
         "answer": "Você pode, mas a redução do tamanho do arquivo será mínima, pois os dados provavelmente já estão otimizados."
+      },
+      {
+        "question": "Como posso diminuir o tamanho de um PDF?",
+        "answer": "Você pode diminuir PDF facilmente usando nossa ferramenta gratuita. Ela reduz o peso do arquivo enquanto mantém a qualidade da imagem e do texto."
       }
     ]
   },

@@ -56,6 +56,10 @@ export const TOOLS_DATA_ES = [
       {
         "question": "¿Puedo convertir varios archivos de Word a la vez?",
         "answer": "Sí, puede cargar varios archivos DOC/DOCX y los procesaremos simultáneamente para una conversión de alta velocidad."
+      },
+      {
+        "question": "¿Cómo puedo pasar de Word a PDF gratis?",
+        "answer": "Nuestro conversor es 100% gratuito. Puede pasar de Word a PDF rápidamente y sin perder calidad ni formato, directamente desde su navegador."
       }
     ]
   },
@@ -446,6 +450,10 @@ export const TOOLS_DATA_ES = [
       {
         "question": "¿Está afectado el resto del documento?",
         "answer": "No, todas las páginas restantes mantendrán su formato, calidad y resolución originales."
+      },
+      {
+        "question": "¿Cómo puedo quitar páginas de un documento PDF?",
+        "answer": "Para quitar páginas no deseadas, simplemente suba su archivo, seleccione las páginas que desea borrar y haga clic en 'Eliminar páginas'. Es así de fácil."
       }
     ]
   },
@@ -536,6 +544,10 @@ export const TOOLS_DATA_ES = [
       {
         "question": "¿Puedo comprimir un PDF que ya es pequeño?",
         "answer": "Puede hacerlo, pero la reducción del tamaño del archivo será mínima ya que es probable que los datos ya estén optimizados."
+      },
+      {
+        "question": "¿Puedo usar esta herramienta para achicar o bajar peso a un PDF?",
+        "answer": "Sí, nuestra herramienta es ideal para achicar, aligerar o bajar el peso de cualquier archivo PDF, asegurando que se pueda enviar fácilmente por correo electrónico o WhatsApp."
       }
     ]
   },

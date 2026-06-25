@@ -188,6 +188,7 @@ export const TOOLS_DATA = [
   {
     "category": "convert",
     "title": "PDF to PowerPoint",
+    "keywords": ["presentation", "ppt", "pptx", "apple", "macbook", "mac"],
     "desc": "Turn your PDF files into easy to edit PPT and PPTX slideshows.",
     "icon": "solar:presentation-graph-bold-duotone",
     "iconColorClass": "bg-orange-50 text-orange-600",
@@ -212,6 +213,10 @@ export const TOOLS_DATA = [
       {
         "question": "Is the slide layout preserved?",
         "answer": "Our advanced conversion technology ensures the layout of your original PDF is matched as closely as possible in PowerPoint."
+      },
+      {
+        "question": "How to convert PDF to PowerPoint on Mac?",
+        "answer": "You can easily convert PDF to PowerPoint on your Mac or MacBook directly through your Safari browser using our free online converter."
       }
     ]
   },
@@ -433,6 +438,7 @@ export const TOOLS_DATA = [
   {
     "category": "organize",
     "title": "Delete pages",
+    "keywords": ["mac", "macbook", "supprimer", "eliminar", "remove"],
     "desc": "Remove pages from a PDF document in a flash.",
     "icon": "solar:trash-bin-minimalistic-bold-duotone",
     "iconColorClass": "bg-cyan-50 text-cyan-600",
@@ -457,6 +463,10 @@ export const TOOLS_DATA = [
       {
         "question": "Is the rest of the document affected?",
         "answer": "No, all remaining pages will keep their original formatting, quality, and resolution."
+      },
+      {
+        "question": "How do I delete pages from a PDF on a Mac?",
+        "answer": "Removing pages from a PDF on your Mac is simple. Just upload your document, select the pages you want to delete, and click process. It works flawlessly on macOS and Safari."
       }
     ]
   },
@@ -523,7 +533,7 @@ export const TOOLS_DATA = [
   {
     "category": "optimize",
     "title": "Compress PDF",
-    "keywords": ["reduce", "shrink", "smaller", "size"],
+    "keywords": ["reduce", "shrink", "smaller", "size", "iphone", "mac", "android", "windows"],
     "desc": "Reduce file size while optimizing for maximal PDF quality.",
     "icon": "solar:zip-file-bold-duotone",
     "iconColorClass": "bg-green-50 text-green-600",
@@ -548,6 +558,10 @@ export const TOOLS_DATA = [
       {
         "question": "Can I compress a PDF that is already small?",
         "answer": "You can, but the file size reduction will be minimal since the data is likely already optimized."
+      },
+      {
+        "question": "How do I compress a PDF on my Mac or iPhone?",
+        "answer": "Our PDF compressor is fully optimized for all devices. You can effortlessly compress and reduce the size of your PDFs on Mac, iPhone, Android, or Windows devices without losing quality."
       }
     ]
   },
@@ -708,7 +722,7 @@ export const TOOLS_DATA = [
   {
     "category": "security",
     "title": "Redact PDF",
-    "keywords": ["blacken", "hide", "censor", "sensitive", "remove"],
+    "keywords": ["blacken", "hide", "censor", "sensitive", "remove", "mac", "macbook", "black out"],
     "desc": "Permanently remove sensitive information or hidden data from your PDFs.",
     "icon": "solar:eye-closed-bold-duotone",
     "iconColorClass": "bg-red-50 text-red-500",
@@ -733,13 +747,17 @@ export const TOOLS_DATA = [
       {
         "question": "Is redaction reversible?",
         "answer": "No. For your security, redaction permanently destroys the hidden data. Always keep an unredacted backup if needed."
+      },
+      {
+        "question": "How to redact a PDF on a Mac?",
+        "answer": "You can permanently black out and redact sensitive information from your PDF files directly on your Mac using our secure web-based tool. No additional software required."
       }
     ]
   },
   {
     "category": "sign",
     "title": "Sign PDF",
-    "keywords": ["signature", "esign", "sign", "document"],
+    "keywords": ["signature", "esign", "sign", "document", "macbook", "iphone", "mac", "free"],
     "desc": "Sign yourself or request electronic signatures from others.",
     "icon": "solar:pen-bold-duotone",
     "iconColorClass": "bg-violet-50 text-violet-600",
@@ -764,6 +782,10 @@ export const TOOLS_DATA = [
       {
         "question": "Can I add text dates and initials?",
         "answer": "Absolutely. Along with your signature, you can easily drag and drop dates, initials, and custom text fields."
+      },
+      {
+        "question": "How to sign a PDF on a Mac or iPhone?",
+        "answer": "Signing a PDF on your Apple devices is completely free and easy. Simply upload your document, draw or type your signature, and save it directly to your Mac or iPhone."
       }
     ]
   },
