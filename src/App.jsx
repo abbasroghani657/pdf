@@ -954,7 +954,7 @@ export default function App() {
                   <span className="capitalize">{uiDict.home.hero_title.replace(/^TheyLovePDF[:\s]*\-?\s*/i, '')}</span> <br className="hidden sm:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-[#8b5cf6]">
                     {uiDict.home.hero_title_gradient}
-                  </span> {uiDict.home.hero_title_suffix}
+                  </span> {uiDict.home.hero_title_suffix.replace(/[—\-]/g, '').trim()}
                 </>
               )}
               {isPricing && uiDict.home.pricing_title}
