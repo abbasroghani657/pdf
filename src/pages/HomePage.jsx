@@ -100,7 +100,12 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
 
   return (
     <div className="space-y-6">
-      <SEOHead />
+      <SEOHead 
+        lang={lang}
+        title={lang === 'es' ? 'Herramientas PDF Gratuitas en Línea' : lang === 'fr' ? 'Outils PDF Gratuits en Ligne' : lang === 'de' ? 'Kostenlose Online-PDF-Tools' : lang === 'pt' ? 'Ferramentas PDF Gratuitas Online' : 'Free Online PDF Tools'}
+        description={lang === 'es' ? 'TheyLovePDF: Más de 37 herramientas PDF gratuitas. Fusionar, comprimir, convertir, editar y firmar PDFs en segundos. Sin marca de agua. Sin registro.' : lang === 'fr' ? 'TheyLovePDF: Plus de 37 outils PDF gratuits. Fusionner, compresser, convertir, éditer et signer des PDF en quelques secondes. Sans filigrane. Sans inscription.' : lang === 'de' ? 'TheyLovePDF: Über 37 kostenlose PDF-Tools. PDF zusammenführen, komprimieren, konvertieren, bearbeiten und unterschreiben in Sekunden. Ohne Wasserzeichen. Ohne Anmeldung.' : lang === 'pt' ? 'TheyLovePDF: Mais de 37 ferramentas PDF gratuitas. Mesclar, comprimir, converter, editar e assinar PDFs em segundos. Sem marca d\'água. Sem cadastro.' : 'TheyLovePDF: 37+ free online PDF tools. Merge, compress, convert, edit, and sign PDFs in seconds. No watermarks. No signup required.'}
+        url="/"
+      />
 
       {/* ── Category Filter Tabs ─────────────────────────────────────────────── */}
       <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">

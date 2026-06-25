@@ -3,12 +3,17 @@ import { TOOLS_DATA_ES } from '../data/tools-es';
 import { slugify } from '../utils/slugify';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function NotFoundPage({ lang = 'en' }) {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>404 - Page Not Found - TheyLovePDF</title>
+      </Helmet>
       <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
         <iconify-icon icon="solar:ghost-broken" class="text-5xl text-gray-400"></iconify-icon>
       </div>

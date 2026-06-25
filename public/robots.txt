@@ -1,5 +1,15 @@
 User-agent: *
 Allow: /
+
+# Admin & private routes
 Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /oauth/
+Disallow: /accept-invite/
+Disallow: /sign/
 
 Sitemap: https://www.theylovepdf.com/sitemap.xml

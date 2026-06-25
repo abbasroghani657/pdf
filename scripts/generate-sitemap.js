@@ -11,6 +11,7 @@ const BASE_URL = 'https://www.theylovepdf.com';
 
 const baseStaticRoutes = [
   '/',
+  '/tools',
   '/pricing',
   '/compare',
   '/about',
@@ -25,23 +26,47 @@ const baseStaticRoutes = [
   '/for/legal' // Use Cases
 ];
 
-const platforms = ['mac', 'windows', 'iphone', 'android'];
 const baseToolRoutes = [];
 
 TOOLS_DATA.forEach(t => {
   const baseSlug = `/tools/${slugify(t.title)}`;
   baseToolRoutes.push(baseSlug);
-  // Platform-specific routes removed from sitemap to prevent duplicate content penalties.
-  // We will target these keywords through FAQs on the main tool page instead.
 });
 
 const allBaseRoutes = [...baseStaticRoutes, ...baseToolRoutes];
+
+// All 30 supported languages
 const languages = [
   { code: 'en', prefix: '' },
   { code: 'es', prefix: '/es' },
   { code: 'fr', prefix: '/fr' },
   { code: 'de', prefix: '/de' },
-  { code: 'pt', prefix: '/pt' }
+  { code: 'pt', prefix: '/pt' },
+  { code: 'hi', prefix: '/hi' },
+  { code: 'ru', prefix: '/ru' },
+  { code: 'zh-cn', prefix: '/zh-cn' },
+  { code: 'zh-tw', prefix: '/zh-tw' },
+  { code: 'ja', prefix: '/ja' },
+  { code: 'ko', prefix: '/ko' },
+  { code: 'it', prefix: '/it' },
+  { code: 'pl', prefix: '/pl' },
+  { code: 'ro', prefix: '/ro' },
+  { code: 'bg', prefix: '/bg' },
+  { code: 'ca', prefix: '/ca' },
+  { code: 'nl', prefix: '/nl' },
+  { code: 'el', prefix: '/el' },
+  { code: 'id', prefix: '/id' },
+  { code: 'ms', prefix: '/ms' },
+  { code: 'sv', prefix: '/sv' },
+  { code: 'th', prefix: '/th' },
+  { code: 'tr', prefix: '/tr' },
+  { code: 'uk', prefix: '/uk' },
+  { code: 'vi', prefix: '/vi' },
+  { code: 'sw', prefix: '/sw' },
+  { code: 'fi', prefix: '/fi' },
+  { code: 'da', prefix: '/da' },
+  { code: 'no', prefix: '/no' },
+  { code: 'cs', prefix: '/cs' },
 ];
 
 let sitemapUrls = '';
@@ -49,9 +74,6 @@ let sitemapUrls = '';
 allBaseRoutes.forEach(baseRoute => {
   // Generate a <url> block for each language version of this route
   languages.forEach(lang => {
-    // Determine the path for this specific language
-    // e.g., if baseRoute is "/", en is "/", es is "/es"
-    // if baseRoute is "/pricing", en is "/pricing", es is "/es/pricing"
     const currentPath = lang.prefix + (baseRoute === '/' && lang.prefix !== '' ? '' : baseRoute);
     const fullUrl = `${BASE_URL}${currentPath}`;
     
@@ -67,7 +89,7 @@ allBaseRoutes.forEach(baseRoute => {
       }
     });
 
-    const priority = baseRoute === '/' ? '1.0' : baseRoute.startsWith('/tools/') ? '0.9' : '0.8';
+    const priority = baseRoute === '/' ? '1.0' : baseRoute === '/tools' ? '0.95' : baseRoute.startsWith('/tools/') ? '0.9' : '0.8';
 
     sitemapUrls += `
   <url>
