@@ -948,13 +948,14 @@ export default function App() {
                 </div>
               </div>
             )}
-            <h1 className="text-3xl sm:text-4xl md:text-[54px] font-extrabold tracking-tight text-gray-900 mb-6 leading-[1.15]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-6 leading-[1.25]">
               {isHome && (
                 <> 
-                  <span className="capitalize">{uiDict.home.hero_title.replace(/^TheyLovePDF[:\s]*\-?\s*/i, '')}</span> <br className="hidden sm:block" />
+                  <span className="capitalize block mb-1 sm:mb-2">{uiDict.home.hero_title.replace(/^TheyLovePDF[:\s]*\-?\s*/i, '')}</span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#378ADD] to-[#8b5cf6]">
                     {uiDict.home.hero_title_gradient}
-                  </span> {uiDict.home.hero_title_suffix.replace(/[—\-]/g, '').trim()}
+                  </span>{" "}
+                  {uiDict.home.hero_title_suffix.replace(/[—\-]/g, '').trim()}
                 </>
               )}
               {isPricing && uiDict.home.pricing_title}
