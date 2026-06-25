@@ -22,6 +22,49 @@ const CATEGORIES = [
   { id: 'ai',       label: 'AI Tools',   icon: 'solar:stars-bold-duotone', isAI: true },
 ];
 
+// ── Translations for Homepage SEO ───────────────────────────────────────────────
+const HOME_TITLES = {
+  en: 'Free Online PDF Tools', es: 'Herramientas PDF Gratuitas en Línea', fr: 'Outils PDF Gratuits en Ligne', de: 'Kostenlose Online-PDF-Tools', pt: 'Ferramentas PDF Gratuitas Online',
+  hi: 'मुफ़्त ऑनलाइन PDF टूल', ru: 'Бесплатные онлайн PDF-инструменты', 'zh-cn': '免费在线 PDF 工具', 'zh-tw': '免費線上 PDF 工具', ja: '無料のオンラインPDFツール',
+  ko: '무료 온라인 PDF 도구', it: 'Strumenti PDF gratuiti online', pl: 'Darmowe narzędzia PDF online', ro: 'Instrumente PDF gratuite online', bg: 'Безплатни онлайн PDF инструменти',
+  ca: 'Eines PDF gratuïtes en línia', nl: 'Gratis online PDF-tools', el: 'Δωρεάν διαδικτυακά εργαλεία PDF', id: 'Alat PDF Online Gratis', ms: 'Alat PDF Dalam Talian Percuma',
+  sv: 'Gratis online PDF-verktyg', th: 'เครื่องมือ PDF ออนไลน์ฟรี', tr: 'Ücretsiz Çevrimiçi PDF Araçları', uk: 'Безкоштовні онлайн-інструменти PDF', vi: 'Công cụ PDF trực tuyến miễn phí',
+  sw: 'Zana za PDF za bure mtandaoni', fi: 'Ilmaiset online-PDF-työkalut', da: 'Gratis online PDF-værktøjer', no: 'Gratis online PDF-verktøy', cs: 'Bezplatné online nástroje PDF'
+};
+
+const HOME_DESCRIPTIONS = {
+  en: 'TheyLovePDF: 37+ free online PDF tools. Merge, compress, convert, edit, and sign PDFs in seconds. No watermarks. No signup required.',
+  es: 'TheyLovePDF: Más de 37 herramientas PDF gratuitas. Fusionar, comprimir, convertir, editar y firmar PDFs en segundos. Sin marca de agua. Sin registro.',
+  fr: 'TheyLovePDF: Plus de 37 outils PDF gratuits. Fusionner, compresser, convertir, éditer et signer des PDF en quelques secondes. Sans filigrane. Sans inscription.',
+  de: 'TheyLovePDF: Über 37 kostenlose PDF-Tools. PDF zusammenführen, komprimieren, konvertieren, bearbeiten und unterschreiben in Sekunden. Ohne Wasserzeichen. Ohne Anmeldung.',
+  pt: 'TheyLovePDF: Mais de 37 ferramentas PDF gratuitas. Mesclar, comprimir, converter, editar e assinar PDFs em segundos. Sem marca d\'água. Sem cadastro.',
+  hi: 'TheyLovePDF: 37+ मुफ़्त ऑनलाइन PDF टूल। सेकंडों में PDF को मर्ज, कंप्रेस, कन्वर्ट, एडिट और साइन करें। कोई वॉटरमार्क नहीं। कोई साइनअप आवश्यक नहीं।',
+  ru: 'TheyLovePDF: 37+ бесплатных онлайн PDF-инструментов. Объединяйте, сжимайте, конвертируйте, редактируйте и подписывайте PDF-файлы за секунды. Без водяных знаков. Без регистрации.',
+  'zh-cn': 'TheyLovePDF：37+ 免费在线 PDF 工具。在几秒钟内合并、压缩、转换、编辑和签名 PDF。无水印。无需注册。',
+  'zh-tw': 'TheyLovePDF：37+ 免費線上 PDF 工具。在幾秒鐘內合併、壓縮、轉換、編輯和簽名 PDF。無浮水印。無需註冊。',
+  ja: 'TheyLovePDF: 37以上の無料オンラインPDFツール。数秒でPDFを結合、圧縮、変換、編集、署名します。透かしなし。登録不要。',
+  ko: 'TheyLovePDF: 37개 이상의 무료 온라인 PDF 도구. 몇 초 만에 PDF 병합, 압축, 변환, 편집 및 서명. 워터마크 없음. 가입 불필요.',
+  it: 'TheyLovePDF: Oltre 37 strumenti PDF gratuiti. Unisci, comprimi, converti, modifica e firma i PDF in pochi secondi. Nessuna filigrana. Nessuna registrazione.',
+  pl: 'TheyLovePDF: Ponad 37 darmowych narzędzi PDF. Łącz, kompresuj, konwertuj, edytuj i podpisuj PDF w kilka sekund. Bez znaków wodnych. Bez rejestracji.',
+  ro: 'TheyLovePDF: 37+ instrumente PDF gratuite online. Îmbină, comprimă, convertește, editează și semnează PDF-uri în câteva secunde. Fără filigrane. Fără înregistrare.',
+  bg: 'TheyLovePDF: 37+ безплатни онлайн PDF инструмента. Обединявайте, компресирайте, конвертирайте, редактирайте и подписвайте PDF файлове за секунди. Без водни знаци. Без регистрация.',
+  ca: 'TheyLovePDF: Més de 37 eines PDF gratuïtes en línia. Combina, comprimeix, converteix, edita i signa PDF en qüestió de segons. Sense filigranes. Sense registre.',
+  nl: 'TheyLovePDF: 37+ gratis online PDF-tools. PDF\'s samenvoegen, comprimeren, converteren, bewerken en ondertekenen in enkele seconden. Geen watermerken. Geen aanmelding vereist.',
+  el: 'TheyLovePDF: 37+ δωρεάν διαδικτυακά εργαλεία PDF. Συγχωνεύστε, συμπιέστε, μετατρέψτε, επεξεργαστείτε και υπογράψτε PDF σε δευτερόλεπτα. Χωρίς υδατογραφήματα. Δεν απαιτείται εγγραφή.',
+  id: 'TheyLovePDF: 37+ alat PDF online gratis. Gabungkan, kompres, konversi, edit, dan tanda tangani PDF dalam hitungan detik. Tanpa tanda air. Tidak perlu mendaftar.',
+  ms: 'TheyLovePDF: 37+ alat PDF dalam talian percuma. Gabungkan, mampatkan, tukar, edit dan tandatangan PDF dalam beberapa saat. Tiada tera air. Tiada pendaftaran diperlukan.',
+  sv: 'TheyLovePDF: 37+ gratis online PDF-verktyg. Slå ihop, komprimera, konvertera, redigera och signera PDF:er på några sekunder. Inga vattenstämplar. Ingen registrering krävs.',
+  th: 'TheyLovePDF: 37+ เครื่องมือ PDF ออนไลน์ฟรี รวม, บีบอัด, แปลง, แก้ไข และเซ็นชื่อ PDF ในไม่กี่วินาที ไม่มีลายน้ำ ไม่ต้องลงทะเบียน',
+  tr: 'TheyLovePDF: 37+ ücretsiz çevrimiçi PDF aracı. PDF\'leri saniyeler içinde birleştirin, sıkıştırın, dönüştürün, düzenleyin ve imzalayın. Filigran yok. Kayıt gerekmez.',
+  uk: 'TheyLovePDF: 37+ безкоштовних онлайн-інструментів PDF. Об\'єднуйте, стискайте, перетворюйте, редагуйте та підписуйте PDF-файли за лічені секунди. Без водяних знаків. Без реєстрації.',
+  vi: 'TheyLovePDF: Hơn 37 công cụ PDF trực tuyến miễn phí. Nối, nén, chuyển đổi, chỉnh sửa và ký tệp PDF trong vài giây. Không có hình mờ. Không cần đăng ký.',
+  sw: 'TheyLovePDF: Zana 37+ za PDF za bure mtandaoni. Unganisha, finyaza, badilisha, hariri na utie saini PDF kwa sekunde. Hakuna alama za maji. Hakuna kujiandikisha.',
+  fi: 'TheyLovePDF: Yli 37 ilmaista online-PDF-työkalua. Yhdistä, pakkaa, muunna, muokkaa ja allekirjoita PDF-tiedostoja sekunneissa. Ei vesileimoja. Ei rekisteröitymistä.',
+  da: 'TheyLovePDF: 37+ gratis online PDF-værktøjer. Flet, komprimer, konverter, rediger og underskriv PDF\'er på få sekunder. Ingen vandmærker. Ingen tilmelding kræves.',
+  no: 'TheyLovePDF: 37+ gratis online PDF-verktøy. Slå sammen, komprimer, konverter, rediger og signer PDF-er på sekunder. Ingen vannmerker. Ingen registrering kreves.',
+  cs: 'TheyLovePDF: Více než 37 bezplatných online nástrojů PDF. Slučujte, komprimujte, převádějte, upravujte a podepisujte PDF během několika sekund. Bez vodoznaků. Není nutná registrace.'
+};
+
 // ── Category gradient themes (iLovePDF style colored headers) ─────────────────
 const CATEGORY_GRADIENTS = {
   convert:  { from: '#4F8EF7', to: '#1D60D4', light: '#EFF6FF', text: '#1D60D4' },
@@ -102,8 +145,8 @@ export default function HomePage({ searchQuery, setSearchQuery, lang = 'en' }) {
     <div className="space-y-6">
       <SEOHead 
         lang={lang}
-        title={lang === 'es' ? 'Herramientas PDF Gratuitas en Línea' : lang === 'fr' ? 'Outils PDF Gratuits en Ligne' : lang === 'de' ? 'Kostenlose Online-PDF-Tools' : lang === 'pt' ? 'Ferramentas PDF Gratuitas Online' : 'Free Online PDF Tools'}
-        description={lang === 'es' ? 'TheyLovePDF: Más de 37 herramientas PDF gratuitas. Fusionar, comprimir, convertir, editar y firmar PDFs en segundos. Sin marca de agua. Sin registro.' : lang === 'fr' ? 'TheyLovePDF: Plus de 37 outils PDF gratuits. Fusionner, compresser, convertir, éditer et signer des PDF en quelques secondes. Sans filigrane. Sans inscription.' : lang === 'de' ? 'TheyLovePDF: Über 37 kostenlose PDF-Tools. PDF zusammenführen, komprimieren, konvertieren, bearbeiten und unterschreiben in Sekunden. Ohne Wasserzeichen. Ohne Anmeldung.' : lang === 'pt' ? 'TheyLovePDF: Mais de 37 ferramentas PDF gratuitas. Mesclar, comprimir, converter, editar e assinar PDFs em segundos. Sem marca d\'água. Sem cadastro.' : 'TheyLovePDF: 37+ free online PDF tools. Merge, compress, convert, edit, and sign PDFs in seconds. No watermarks. No signup required.'}
+        title={HOME_TITLES[lang] || HOME_TITLES['en']}
+        description={HOME_DESCRIPTIONS[lang] || HOME_DESCRIPTIONS['en']}
         url="/"
       />
 

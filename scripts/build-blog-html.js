@@ -82,8 +82,7 @@ async function generateBlogPages() {
     blogListHtml = blogListHtml.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
     blogListHtml = blogListHtml.replace(/<meta name="description" content="[^"]*"\s*\/?>/i, `<meta name="description" content="${meta.desc}" />`);
     
-    const listCanonical = `<link rel="canonical" href="https://www.theylovepdf.com${prefix}/blog" />`;
-    blogListHtml = blogListHtml.replace('</head>', `  ${listCanonical}\n  </head>`);
+    blogListHtml = blogListHtml.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/i, `<link rel="canonical" href="https://www.theylovepdf.com${prefix}/blog" />`);
     
     fs.writeFileSync(path.join(blogDir, 'index.html'), blogListHtml);
 
@@ -112,13 +111,15 @@ async function generateBlogPages() {
         ]
       });
 
-      // Article Schema
+      // Article Schema (with dateModified and image for rich results eligibility)
       schemas.push({
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": post.title,
         "description": post.excerpt,
+        "image": "https://www.theylovepdf.com/og-image.png",
         "datePublished": post.date,
+        "dateModified": post.date,
         "author": { "@type": "Organization", "name": "TheyLovePDF" },
         "publisher": {
           "@type": "Organization",
@@ -128,9 +129,10 @@ async function generateBlogPages() {
       });
 
       const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n</script>`;
-      const canonicalTag = `<link rel="canonical" href="https://www.theylovepdf.com${prefix}/blog/${post.slug}" />`;
       
-      postHtml = postHtml.replace('</head>', `  ${scriptTag}\n  ${canonicalTag}\n  </head>`);
+      // Replace existing canonical (not append) to avoid duplicate canonical tags
+      postHtml = postHtml.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/i, `<link rel="canonical" href="https://www.theylovepdf.com${prefix}/blog/${post.slug}" />`);
+      postHtml = postHtml.replace('</head>', `  ${scriptTag}\n  </head>`);
 
       fs.writeFileSync(path.join(postDir, 'index.html'), postHtml);
     });

@@ -144,6 +144,7 @@ export default function SEOHead({
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": `${toolName} - ${siteName}`,
+      "url": canonicalUrl,
       "description": metaDesc,
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "All",
@@ -179,7 +180,8 @@ export default function SEOHead({
       "step": howToSteps.map((step, idx) => ({
         "@type": "HowToStep",
         "name": `Step ${idx + 1}`,
-        "text": step
+        "text": step,
+        "url": `${canonicalUrl}#step-${idx + 1}`
       }))
     });
   }

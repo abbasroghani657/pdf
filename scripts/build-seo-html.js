@@ -80,8 +80,8 @@ allRoutes.forEach(route => {
   pageHtml = pageHtml.replace(/<meta name="description" content=".*?"\/>/, `<meta name="description" content="${description}"/>`);
   pageHtml = pageHtml.replace(/<meta property="og:title" content=".*?"\/>/, `<meta property="og:title" content="${title}"/>`);
   pageHtml = pageHtml.replace(/<meta property="og:description" content=".*?"\/>/, `<meta property="og:description" content="${description}"/>`);
-  pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?"\/>/, `<meta property="og:url" content="https://theylovepdf.com${routePath}"/>`);
-  pageHtml = pageHtml.replace(/<link rel="canonical" href=".*?"\/>/, `<link rel="canonical" href="https://theylovepdf.com${routePath}"/>`);
+  pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?"\/>/, `<meta property="og:url" content="https://www.theylovepdf.com${routePath}"/>`);
+  pageHtml = pageHtml.replace(/<link rel="canonical" href=".*?"\/>/, `<link rel="canonical" href="https://www.theylovepdf.com${routePath}"/>`);
 
   // Basic HTML lang tag update
   if (lang !== 'en') {
