@@ -28,7 +28,7 @@ const SIGNER_COLORS = [
 ];
 
 export default function RequestSignaturePage({ lang = 'en', ui, toolData }) {
-  const { isPro } = useAuth();
+  const { user, isPro } = useAuth();
   const navigate = useNavigate();
 
   // STAGES: 1_UPLOAD -> 2_SIGNERS -> 3_PLACE_FIELDS -> 4_SETTINGS -> 5_SENDING -> 6_DASHBOARD
@@ -60,6 +60,10 @@ export default function RequestSignaturePage({ lang = 'en', ui, toolData }) {
   const [deadline, setDeadline] = useState('7');
   const [reminder, setReminder] = useState('3');
   const [customMessage, setCustomMessage] = useState('');
+  
+  // Fallbacks for anonymous users
+  const [senderNameFallback, setSenderNameFallback] = useState('');
+  const [senderEmailFallback, setSenderEmailFallback] = useState('');
 
   // Dashboard state
   const [requests, setRequests] = useState([]);
@@ -247,8 +251,8 @@ export default function RequestSignaturePage({ lang = 'en', ui, toolData }) {
           order,
           deadline,
           customMessage,
-          senderName: 'TheyLovePDF User',
-          requesterEmail: 'abbasroghani869@gmail.com',
+          senderName: user?.profile?.name || user?.name || user?.email?.split('@')[0] || senderNameFallback || 'TheyLovePDF User',
+          requesterEmail: user?.email || senderEmailFallback || 'support@theylovepdf.com',
           fileBase64,
           fields
         })
@@ -554,6 +558,22 @@ export default function RequestSignaturePage({ lang = 'en', ui, toolData }) {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              {/* Fallback Inputs for Anonymous Users */}
+              {!user && (
+                <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 mb-2 pb-6 border-b border-gray-100">
+                  <div>
+                    <label className="block text-sm font-bold text-gray-900 mb-2">Your Name</label>
+                    <input type="text" value={senderNameFallback} onChange={e=>setSenderNameFallback(e.target.value)} placeholder="e.g. John Doe" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-violet-500" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                      Your Email
+                      <span className="text-[10px] bg-violet-100 text-violet-600 px-2 py-0.5 rounded-full font-bold">To receive signed PDF</span>
+                    </label>
+                    <input type="email" value={senderEmailFallback} onChange={e=>setSenderEmailFallback(e.target.value)} placeholder="e.g. you@email.com" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-violet-500" />
+                  </div>
+                </div>
+              )}
               <div className="space-y-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-900 mb-2">Signing Order</label>
