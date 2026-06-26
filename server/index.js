@@ -22,7 +22,8 @@ const FormData = require('form-data');
 const fetch = require('node-fetch');
 const AdmZip = require('adm-zip');
 const crypto = require('crypto');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
+const resend = new Resend(process.env.RESEND_API_KEY);
 const rateLimit = require('express-rate-limit');
 const { startSubscriptionCron } = require('./jobs/subscriptionCron');
 const { protect, protectOptional } = require('./middleware/auth');
@@ -1233,14 +1234,10 @@ app.post('/api/send-signature-request', express.json({ limit: '50mb' }), async (
     }
   }
 
-  if (!process.env.EMAIL_USER || process.env.EMAIL_USER === 'your_gmail@gmail.com')
-    return res.status(503).json({ error: 'EMAIL_NOT_CONFIGURED' });
+  if (!process.env.RESEND_API_KEY)
+    return res.status(503).json({ error: 'RESEND_API_KEY_NOT_CONFIGURED' });
 
   try {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
-    });
 
     const fromName = process.env.EMAIL_FROM_NAME || 'TheyLovePDF';
     const doc = fileName || 'Document';
@@ -1275,9 +1272,12 @@ app.post('/api/send-signature-request', express.json({ limit: '50mb' }), async (
       });
 
       // FIRE AND FORGET: Send email asynchronously so we don't block the frontend response
-      transporter.sendMail({
-        from: `"${fromName}" <${process.env.EMAIL_USER}>`,
-        to: `"${signer.name}" <${signer.email}>`,
+      // FIRE AND FORGET: Send email asynchronously so we don't block the frontend response
+      const requesterEmailToUse = requesterEmail || 'support@theylovepdf.com';
+      resend.emails.send({
+        from: `"${sender} via ${fromName}" <noreply@theylovepdf.com>`,
+        reply_to: requesterEmailToUse,
+        to: [signer.email],
         subject: `✍️ Signature Requested: ${doc}`,
         html: `
           <div style="max-width:540px;margin:40px auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);font-family:Arial,sans-serif">
@@ -1370,17 +1370,14 @@ app.post('/api/complete-signing/:token', express.json({ limit: '50mb' }), async 
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
-    });
+    // Resend API is already initialized globally
 
     const fromName = process.env.EMAIL_FROM_NAME || 'TheyLovePDF';
     const signedAt = new Date().toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' });
 
     const mailOptions = {
-      from: `"${fromName}" <${process.env.EMAIL_USER}>`,
-      to: request.requesterEmail,
+      from: `"${fromName}" <noreply@theylovepdf.com>`,
+      to: [request.requesterEmail],
       subject: `✅ Document Signed: ${request.fileName}`,
       html: `
         <div style="max-width:540px;margin:40px auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);font-family:Arial,sans-serif">
@@ -1660,14 +1657,12 @@ app.post('/api/complete-signing/:token', express.json({ limit: '50mb' }), async 
         mailOptions.attachments = [
         {
           filename: request.fileName.replace('.pdf', '_signed.pdf'),
-          content: finalBase64Data,
-          encoding: 'base64',
-          contentType: 'application/pdf'
+          content: Buffer.from(finalBase64Data, 'base64')
         }
       ];
     }
 
-    await transporter.sendMail(mailOptions);
+    await resend.emails.send(mailOptions);
     request.status = 'signed'; // update status instead of deleting immediately
     delete request.fileBase64; // Memory cleanup
     setTimeout(() => pendingRequests.delete(token), 7 * 24 * 60 * 60 * 1000); // Clean up after 7 days

@@ -2,17 +2,11 @@ const express = require('express');
 const router = express.Router();
 const supabase = require('../config/supabase');
 const { protect, admin, superadmin } = require('../middleware/auth');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
 // ─── Shared mail transporter ───────────────────────────────────────────────────
 function getTransporter() {
-  return nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+  return new Resend(process.env.RESEND_API_KEY);
 }
 
 async function sendRoleInvitationEmail({ toEmail, toName, newRole, assignedByName, siteUrl }) {
@@ -63,10 +57,10 @@ async function sendRoleInvitationEmail({ toEmail, toName, newRole, assignedByNam
 </body>
 </html>`;
 
-  const transporter = getTransporter();
-  await transporter.sendMail({
-    from: `"TheyLovePDF Admin" <${process.env.EMAIL_USER}>`,
-    to: toEmail,
+  const resend = getTransporter();
+  await resend.emails.send({
+    from: `"TheyLovePDF Admin" <noreply@theylovepdf.com>`,
+    to: [toEmail],
     subject: `🎉 You've been made a ${roleLabel} on TheyLovePDF`,
     html,
   });
@@ -388,10 +382,10 @@ router.post('/invitations', protect, superadmin, async (req, res) => {
 </html>`;
 
     try {
-      const transporter = getTransporter();
-      await transporter.sendMail({
-        from: `"TheyLovePDF Admin" <${process.env.EMAIL_USER}>`,
-        to: targetUser.email,
+      const resend = getTransporter();
+      await resend.emails.send({
+        from: `"TheyLovePDF Admin" <noreply@theylovepdf.com>`,
+        to: [targetUser.email],
         subject: `🛡️ Admin Invitation: ${assignerName} wants to make you a ${roleLabel} on TheyLovePDF`,
         html,
       });
