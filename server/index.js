@@ -51,7 +51,7 @@ if (!fs.existsSync(avatarsDir)) {
 
 // Middleware
 app.use('/api/payments/webhook', express.raw({ type: 'application/json' }));
-app.use(express.json({ limit: '100mb' }));
+app.use(express.json({ limit: '10mb' }));
 app.use('/api/avatars', express.static(avatarsDir));
 
 app.use(cors({
@@ -113,13 +113,53 @@ const upload = multer({
       'application/vnd.openxmlformats-officedocument.presentationml.presentation',
       'application/msword', 'text/html'
     ];
-    if (allowed.includes(file.mimetype)) {
-      cb(null, true);
-    } else {
-      cb(new Error('Invalid file type. Only PDF, Office Docs, Images, and HTML are allowed.'));
+    // Security: Validate MIME type
+    if (!allowed.includes(file.mimetype)) {
+      return cb(new Error('Invalid file type. Only PDF, Office Docs, Images, and HTML are allowed.'));
     }
+    // Security: Also validate file extension to prevent MIME spoofing
+    const allowedExts = ['.pdf', '.jpg', '.jpeg', '.png', '.webp', '.docx', '.xlsx', '.pptx', '.doc', '.html', '.htm'];
+    const ext = path.extname(file.originalname).toLowerCase();
+    if (!allowedExts.includes(ext)) {
+      return cb(new Error('Invalid file extension.'));
+    }
+    cb(null, true);
   }
 });
+
+// ─── Security: Sanitize filenames to prevent Header Injection ──────────────────
+function sanitizeFilename(name) {
+  if (!name) return 'processed_file';
+  return name.replace(/[^a-zA-Z0-9._\- ]/g, '_').replace(/\s+/g, '_').substring(0, 200);
+}
+
+// ─── Security: SSRF Protection — Block internal/private URLs ──────────────────
+function validateExternalUrl(urlString) {
+  let parsed;
+  try {
+    parsed = new URL(urlString);
+  } catch (e) {
+    throw new Error('Invalid URL format.');
+  }
+  // Only allow http and https protocols
+  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+    throw new Error('Only HTTP and HTTPS URLs are allowed.');
+  }
+  // Block private/internal IP ranges and localhost
+  const hostname = parsed.hostname.toLowerCase();
+  const blockedHosts = ['localhost', '127.0.0.1', '0.0.0.0', '::1', '169.254.169.254', 'metadata.google.internal'];
+  if (blockedHosts.includes(hostname)) {
+    throw new Error('Access to internal resources is not allowed.');
+  }
+  // Block private IP ranges (10.x.x.x, 172.16-31.x.x, 192.168.x.x)
+  const ipParts = hostname.split('.').map(Number);
+  if (ipParts.length === 4 && ipParts.every(n => !isNaN(n))) {
+    if (ipParts[0] === 10) throw new Error('Access to internal resources is not allowed.');
+    if (ipParts[0] === 172 && ipParts[1] >= 16 && ipParts[1] <= 31) throw new Error('Access to internal resources is not allowed.');
+    if (ipParts[0] === 192 && ipParts[1] === 168) throw new Error('Access to internal resources is not allowed.');
+  }
+  return parsed.toString();
+}
 
 // ─── Helper: Gotenberg — Any Office/Image file → PDF (FREE) ───────────────────
 async function convertToPdfWithGotenberg(filePath, originalName) {
@@ -297,7 +337,7 @@ app.get('/api/download/:id', protectOptional, (req, res) => {
 
   const { buffer, contentType, newFilename, customHeaders } = job.result;
   res.setHeader('Content-Type', contentType);
-  res.setHeader('Content-Disposition', `attachment; filename="${newFilename}"`);
+  res.setHeader('Content-Disposition', `attachment; filename="${sanitizeFilename(newFilename)}"`);
   
   if (customHeaders) {
     for (const [k, v] of Object.entries(customHeaders)) {
@@ -566,8 +606,9 @@ async function executeTool(req, res, files, tool, baseName, newFilename, content
         console.log(`  → 🐍 Python Converter: HTML/URL → PDF`);
         const htmlForm = new FormData();
         if (req.body.url) {
-          // URL mode — just pass the URL
-          htmlForm.append('url', req.body.url);
+          // URL mode — validate URL to prevent SSRF attacks
+          const safeUrl = validateExternalUrl(req.body.url);
+          htmlForm.append('url', safeUrl);
         } else {
           // File mode — pass the HTML file
           htmlForm.append('file', fs.createReadStream(file.path), file.originalname);
@@ -1929,7 +1970,11 @@ ${pdfContext.substring(0, 60000)}`;
 // ─── Global Error Handler ─────────────────────────────────────────────────────
 app.use((err, req, res, next) => {
   console.error('Express Error:', err);
-  res.status(500).json({ error: err.message || 'Internal Server Error' });
+  // Security: Don't leak internal error details in production
+  const message = process.env.NODE_ENV === 'production' 
+    ? 'Internal Server Error. Please try again later.' 
+    : err.message || 'Internal Server Error';
+  res.status(500).json({ error: message });
 });
 
 const PORT = process.env.PORT || 3005;

@@ -134,12 +134,6 @@ export default function SEOHead({
       }
     });
   } else if (toolName) {
-    // Generate deterministic high ratings based on tool name for massive SEO Trust
-    let hash = 0;
-    for (let i = 0; i < toolName.length; i++) hash = toolName.charCodeAt(i) + ((hash << 5) - hash);
-    const ratingValue = (4.7 + (Math.abs(hash) % 30) / 100).toFixed(1);
-    const ratingCount = 25000 + (Math.abs(hash) % 150000);
-
     schemas.push({
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -148,13 +142,6 @@ export default function SEOHead({
       "description": metaDesc,
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "All",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": ratingValue,
-        "ratingCount": ratingCount.toString(),
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "offers": {
         "@type": "Offer",
         "price": "0",
