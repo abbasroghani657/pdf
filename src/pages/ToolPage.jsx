@@ -272,7 +272,7 @@ export default function ToolPage({ lang = 'en', hideSEO = false, ui, toolData })
     if (!processedUrl || isDownloading) return;
     setIsDownloading(true);
     try {
-      const token = localStorage.getItem('pdfmaster_token');
+      const token = localStorage.getItem('theylovepdf_token');
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
       const res = await fetch(processedUrl, { headers });
       if (!res.ok) throw new Error('Download failed');

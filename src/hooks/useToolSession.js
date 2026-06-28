@@ -15,7 +15,7 @@ import { toast } from 'react-hot-toast';
 const SESSION_PREFIX = 'toolsession_';
 
 // ─── IndexedDB helpers (for storing actual file bytes) ────────────────────────
-const IDB_NAME = 'pdfmaster_sessions';
+const IDB_NAME = 'theylovepdf_sessions';
 const IDB_STORE = 'files';
 
 const openIDB = () => new Promise((resolve, reject) => {

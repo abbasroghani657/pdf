@@ -23,7 +23,7 @@ const adminApi = axios.create({
 // Attach JWT token on every request
 adminApi.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('pdfmaster_token');
+    const token = localStorage.getItem('theylovepdf_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -37,8 +37,8 @@ adminApi.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      localStorage.removeItem('pdfmaster_token');
-      localStorage.removeItem('pdfmaster_user');
+      localStorage.removeItem('theylovepdf_token');
+      localStorage.removeItem('theylovepdf_user');
       window.location.href = '/login';
     }
     // 403 = logged in but not admin — send to home

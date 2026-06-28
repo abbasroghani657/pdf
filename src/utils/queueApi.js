@@ -1,5 +1,5 @@
 export async function processWithQueue(url, formData, onProgress, returnJson = false, returnUrlOnly = false) {
-  const token = localStorage.getItem('pdfmaster_token');
+  const token = localStorage.getItem('theylovepdf_token');
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
   
   if (token && !formData.has('userId')) {

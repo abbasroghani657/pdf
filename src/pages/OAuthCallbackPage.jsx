@@ -51,7 +51,7 @@ export default function OAuthCallbackPage({ lang = 'en', ui, toolData }) {
   const finishOAuth = async (accessToken) => {
     try {
       // Store our app JWT and sync user to public.users table
-      localStorage.setItem('pdfmaster_token', accessToken);
+      localStorage.setItem('theylovepdf_token', accessToken);
       const syncRes = await api.post('/auth/oauth/sync');
       if (syncRes.data.isNewUser) {
         setNeedsOnboarding(true);

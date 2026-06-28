@@ -10,7 +10,7 @@ const api = axios.create({
 // Request interceptor to attach JWT token
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('pdfmaster_token');
+    const token = localStorage.getItem('theylovepdf_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -25,8 +25,8 @@ api.interceptors.response.use(
   (error) => {
     if (error.response && error.response.status === 401) {
       // Clear token and redirect to login if session expired
-      localStorage.removeItem('pdfmaster_token');
-      localStorage.removeItem('pdfmaster_user');
+      localStorage.removeItem('theylovepdf_token');
+      localStorage.removeItem('theylovepdf_user');
       // Redirect handled by React Router in AuthContext or App component
     }
     return Promise.reject(error);

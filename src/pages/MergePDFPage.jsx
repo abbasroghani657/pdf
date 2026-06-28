@@ -350,7 +350,7 @@ export default function MergePDFPage({ lang = 'en', ui, toolData }) {
       }, false, true);
 
       // Fetch the file and trigger a real browser download
-      const token = localStorage.getItem('pdfmaster_token');
+      const token = localStorage.getItem('theylovepdf_token');
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
       const downloadRes = await fetch(res.url, { headers });
       if (!downloadRes.ok) throw new Error('Download failed');

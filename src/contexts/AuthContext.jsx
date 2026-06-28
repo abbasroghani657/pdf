@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   const fetchUser = async () => {
-    const token = localStorage.getItem('pdfmaster_token');
+    const token = localStorage.getItem('theylovepdf_token');
     if (token) {
       try {
         // Fetch fresh user profile from backend
@@ -36,7 +36,7 @@ export function AuthProvider({ children }) {
       const { user, profile, session } = res.data;
       
       // Store token and set state
-      localStorage.setItem('pdfmaster_token', session.access_token);
+      localStorage.setItem('theylovepdf_token', session.access_token);
       setUser({ ...user, profile });
       
       toast.success('Welcome back!');
@@ -95,7 +95,7 @@ export function AuthProvider({ children }) {
       const formData = new FormData();
       formData.append('avatar', file);
       
-      const token = localStorage.getItem('pdfmaster_token');
+      const token = localStorage.getItem('theylovepdf_token');
       const res = await fetch('/api/auth/upload-avatar', {
         method: 'POST',
         headers: {
@@ -128,7 +128,7 @@ export function AuthProvider({ children }) {
   };
 
   const logout = () => {
-    localStorage.removeItem('pdfmaster_token');
+    localStorage.removeItem('theylovepdf_token');
     setUser(null);
     toast.success('Logged out successfully');
   };
